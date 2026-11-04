@@ -6,6 +6,7 @@ Projektas patvirtintas, todėl demo versijoje yra **visas senosios svetainės tu
 
 ## Peržiūra
 
+- **Gyva versija:** <https://arvydastry.github.io/geslita-v2/> (GitHub Pages iš saugyklos <https://github.com/arvydastry/geslita-v2> `main` šakos šaknies). Atnaujinimas: `python3 build.py`, tada `git add -A && git commit -m "..." && git push`; Pages persigeneruoja per ~1 min. Failas `.nojekyll` reikalingas, kad Pages neapdorotų failų Jekyll.
 - Atidaryti `index.html` naršyklėje arba paleisti `python3 serve.py` ir atverti <http://localhost:8130/> (`.claude/launch.json` sukonfigūruotas; `serve.py` yra paprastas serveris su gijomis).
 - `?static=1` prie bet kurio puslapio adreso išjungia judesio efektus (visos animacijos baigtos): patogu ekrano nuotraukoms ir peržiūrai.
 - Visi puslapiai turi `noindex, nofollow`; užklausos forma yra demonstracinė (tikrina laukus, bet duomenų niekur nesiunčia).
