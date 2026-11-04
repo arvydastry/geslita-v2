@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m %}
+{% block title %}Naudinga informacija | Geslita{% endblock %}
+{% block extra_css %}<style>
+/* Naudinga informacija (.pg-naud-) */
+.pg-naud-docs .doc-sec > h2 { margin-bottom: 12px; }
+.pg-naud-docs .doc-sec > p { margin-bottom: 20px; }
+.pg-naud-docs .doc-list a { align-items: flex-start; line-height: 1.35; }
+.pg-naud-docs .doc-list a > .ic:first-child { margin-top: 1px; }
+.pg-naud-docs .doc-list .ic-out { align-self: center; }
+.pg-naud-docs .side-card strong { font: 700 26px/1 var(--fd); color: var(--ink); }
+.pg-naud-docs .side-card a { display: inline; padding: 0; margin: 0; border: 0; color: var(--ink); font-weight: 600; white-space: nowrap; }
+.pg-naud-videos { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(18px, 2.4vw, 32px); }
+.pg-naud-video { display: block; color: inherit; text-decoration: none; }
+.pg-naud-video figure { position: relative; margin: 0 0 16px; aspect-ratio: 16 / 9; overflow: hidden; border-radius: var(--r-lg); background: var(--navy); box-shadow: var(--shadow-md); }
+/* hqdefault miniatiūros turi juodus kraštus, todėl vaizdas šiek tiek priartinamas */
+.pg-naud-video figure img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); transition: transform 0.9s var(--ease); }
+.pg-naud-video:hover figure img { transform: scale(1.15); }
+.pg-naud-video .play { position: absolute; left: 50%; top: 50%; width: 68px; height: 68px; margin: -34px 0 0 -34px; border-radius: 50%; background: var(--navy); color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 16px 32px -10px rgba(19, 35, 64, 0.6); transition: transform 0.35s var(--ease), background-color 0.35s var(--ease); }
+.pg-naud-video .play .ic { font-size: 26px; fill: currentColor; margin-left: 4px; }
+.pg-naud-video:hover .play { transform: scale(1.08); background: var(--navy-2); }
+.pg-naud-video .no { position: absolute; left: 14px; bottom: 12px; font-family: var(--fd); }
+.pg-naud-video h3 { font-size: 19px; margin-bottom: 4px; transition: color 0.25s var(--ease); }
+.pg-naud-video:hover h3 { color: var(--navy-3); }
+.pg-naud-arch { overflow: clip; }
+.pg-naud-arch .plan { position: absolute; left: -14%; bottom: -34%; width: 54%; min-width: 480px; opacity: 0.07; pointer-events: none; will-change: transform; }
+.pg-naud-arch .wrap-narrow { position: relative; }
+.pg-naud-arch .notice { margin-bottom: 16px; }
+.pg-naud-arch .acc .acc-body .src { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); }
+@media (max-width: 640px) { .pg-naud-videos { grid-template-columns: 1fr; } }
+</style>{% endblock %}
+{% block content %}
+{{ m.page_hero('Naudinga informacija', 'Teisės aktai, taisyklės, instrukcijos ir vaizdo medžiaga apie priešgaisrinę saugą vienoje vietoje.', image=img('foto:planas-brezinys'), alt='Pastato aukšto plano brėžinys su matmenimis stambiu planu', crumbs=[{'label': 'Naudinga informacija'}]) }}
+
+{# Dokumentai skirstomi į dvi grupes pagal pavadinimo raktažodžius: teisės aktai (įstatymas, taisyklės, reikalavimai, nuostatai) ir instrukcijos bei atmintinės (visi kiti) #}
+{% set ns = namespace(legal=[], guides=[]) %}
+{% for d in useful.documents %}
+  {% set t = d.title|lower %}
+  {% if 'įstatymas' in t or 'taisyklės' in t or 'reikalavimai' in t or 'nuostatai' in t %}{% set ns.legal = ns.legal + [d] %}{% else %}{% set ns.guides = ns.guides + [d] %}{% endif %}
+{% endfor %}
+{% macro dok(n) -%}{{ n }} dokument{% if n % 10 == 1 and n % 100 != 11 %}as{% elif n % 10 in [2, 3, 4, 5, 6, 7, 8, 9] and not (10 <= n % 100 <= 20) %}ai{% else %}ų{% endif %}{%- endmacro %}
+{% macro doclist(items) -%}
+<ul class="doc-list">
+  {% for d in items %}<li data-reveal style="--i:{{ loop.index0 % 4 }}"><a href="{{ d.url }}" target="_blank" rel="noopener">{{ m.icon('file') }}<span>{{ d.title }}<span class="sr-only"> (PDF, atsidaro naujame lange)</span></span><svg class="ic ic-out" aria-hidden="true"><use href="#i-out"/></svg></a></li>{% endfor %}
+</ul>
+{%- endmacro %}
+
+{# Dokumentai: lipni šoninė navigacija + dvi grupės #}
+<section class="sec pg-naud-docs" id="dokumentai">
+  <div class="wrap doc">
+    <aside class="doc-nav" data-reveal>
+      <ul>
+        <li><a href="#teises-aktai">Teisės aktai ir taisyklės</a></li>
+        <li><a href="#instrukcijos">Instrukcijos ir atmintinės</a></li>
+        <li><a href="#vaizdo-medziaga">Vaizdo medžiaga</a></li>
+        <li><a href="#archyvas">Straipsnių archyvas</a></li>
+      </ul>
+      <div class="side-card">
+        <strong>{{ useful.documents|length }}</strong>
+        <span>dokumentų PDF formatu. Visi atsidaro naujame lange.</span>
+        <span class="muted">Nerandate reikalingo dokumento? Skambinkite <a href="tel:+37065399977">+370 653 99977</a>.</span>
+      </div>
+    </aside>
+    <div class="doc-body">
+      <div class="doc-sec" id="teises-aktai">
+        <h2 data-reveal>Teisės aktai ir taisyklės</h2>
+        <p class="lead" data-reveal>Priešgaisrinės saugos teisės aktai ir taisyklės įmonėms, įstaigoms, visuomeniniams ir gyvenamiesiems pastatams.</p>
+        <div class="meta" data-reveal><span class="tag">{{ dok(ns.legal|length) }}</span><span class="tag tag-line">PDF</span></div>
+        {{ doclist(ns.legal) }}
+      </div>
+      <div class="doc-sec" id="instrukcijos">
+        <h2 data-reveal>Instrukcijos ir atmintinės</h2>
+        <p class="lead" data-reveal>Praktinė medžiaga: kaip gesinti ugnį, kaip nustatyti gesintuvų skaičių ir prižiūrėti įrangą.</p>
+        <div class="meta" data-reveal><span class="tag">{{ dok(ns.guides|length) }}</span><span class="tag tag-line">PDF</span></div>
+        {{ doclist(ns.guides) }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Vaizdo medžiaga: 2x2 kortelės su YouTube miniatiūromis #}
+<section class="sec sec-tint" id="vaizdo-medziaga">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Vaizdo medžiaga</div>
+      <h2>Kaip gesinti gaisrą</h2>
+      <p class="lead">Vaizdo įrašai apie gesinimą anglies dioksido, vandens putų ir milteliniais gesintuvais bei gaisrine žarna. Įrašai atsidaro „YouTube“ platformoje.</p>
+    </div>
+    <div class="pg-naud-videos">
+      {% for v in useful.videos %}
+      <a class="pg-naud-video" href="{{ v.url }}" target="_blank" rel="noopener" data-reveal style="--i:{{ loop.index0 }}">
+        <figure>
+          <img src="https://img.youtube.com/vi/{{ v.youtube_id }}/hqdefault.jpg" loading="lazy" alt="" width="480" height="360">
+          <span class="play" aria-hidden="true">{{ m.icon('play') }}</span>
+          <span class="tag tag-navy no" aria-hidden="true">0{{ loop.index }}</span>
+        </figure>
+        <h3>{{ v.title }}</h3>
+        <span class="small muted">YouTube, atsidaro naujame lange</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# Archyvinis straipsnis: įspėjimas + akordeonas #}
+{% set a = useful.article_2012 %}
+<section class="sec sec-white pg-naud-arch" id="archyvas" data-parallax-root>
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.15">
+  <div class="wrap-narrow">
+    <div class="sec-head" data-reveal>
+      <h2>Straipsnių archyvas</h2>
+      <p class="lead">Ankstesnė medžiaga apie gaisrinės saugos teisės aktų pakeitimus. Straipsnis paliktas kaip archyvas.</p>
+    </div>
+    {% if a.note == 'archive' %}<div class="notice" data-reveal><strong>Archyvinė medžiaga.</strong> Straipsnis parengtas prieš įsigaliojant 2012 11 01 pakeitimams. Prieš taikydami nuostatas pasitikrinkite galiojančią teisės akto redakciją.</div>{% endif %}
+    {% set body %}{{ m.paragraphs(a.paragraphs) }}<p class="small src"><a class="link" href="{{ a.source_url }}" target="_blank" rel="noopener">Šaltinis: geslita.lt<span class="sr-only"> (atsidaro naujame lange)</span>{{ m.icon('out') }}</a></p>{% endset %}
+    {# Data antraštėje neskaidoma per eilutes (nekeičiami tarpai) #}
+    <div data-reveal>{{ m.acc(a.title|replace('2012 11 01', '2012 11 01'), body) }}</div>
+  </div>
+</section>
+
+<section class="sec sec-tight"><div class="wrap">{{ m.cta_inline('Turite klausimų dėl reikalavimų jūsų objektui?', 'Paskambinkite arba parašykite: aptarsime, kokios įrangos ir dokumentų reikia, ir paruošime pasiūlymą.') }}</div></section>
+{% endblock %}

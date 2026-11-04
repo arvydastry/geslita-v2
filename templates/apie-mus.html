@@ -1,0 +1,264 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m %}
+{% block title %}Apie mus | Geslita{% endblock %}
+{% block extra_css %}<style>
+/* Apie mus (.ab-): sluoksniuotas hero, judanti paslaugų juosta, ryškėjantis teiginys, numeruotas paslaugų sąrašas, prekių mozaika, kontaktai su žemėlapiu */
+.ab-hero { position: relative; padding-top: calc(var(--head-h) + clamp(36px, 5vw, 72px)); padding-bottom: clamp(56px, 7vw, 104px); overflow: clip; }
+.ab-hero .plan { position: absolute; right: -8%; top: -6%; width: clamp(560px, 58vw, 1000px); opacity: 0.12; pointer-events: none; will-change: transform; }
+.ab-side { position: relative; }
+.ab-num { margin-top: 18px; font: 700 clamp(150px, 17vw, 270px)/0.8 var(--fd); letter-spacing: -0.07em; color: transparent; -webkit-text-stroke: 2px rgba(37, 64, 122, 0.2); pointer-events: none; user-select: none; will-change: transform; font-variant-numeric: lining-nums; }
+.ab-copy h1 .lt-flag, .ab-statement .big .lt-flag, .ab-stats .lt-flag { width: 0.8em; height: 0.48em; vertical-align: 0.06em; }
+.ab-hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+.ab-copy h1 { margin: 18px 0 20px; font-size: clamp(38px, 5vw, 66px); line-height: 1.02; letter-spacing: -0.03em; }
+.ab-copy .lead { max-width: 34em; }
+.ab-copy .btn-group { margin-top: 30px; }
+.ab-visual { position: relative; height: clamp(420px, 44vw, 600px); }
+.ab-photo { position: absolute; inset: 4% 4% 10% 14%; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-lg); will-change: transform; }
+.ab-photo img { width: 100%; height: 100%; object-fit: cover; }
+.ab-product { position: absolute; left: -2%; bottom: -4%; height: 74%; z-index: 2; will-change: transform; }
+.ab-product img { height: 100%; width: auto; filter: drop-shadow(0 30px 30px rgba(14, 26, 43, 0.3)); }
+.ab-chip { position: absolute; right: 0; bottom: 16%; z-index: 3; display: grid; gap: 2px; padding: 14px 18px; border-radius: 14px; background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(217, 223, 231, 0.8); box-shadow: var(--shadow-lg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); will-change: transform; }
+.ab-chip b { font: 700 19px/1.2 var(--fd); color: var(--ink); }
+.ab-chip span { font-size: 13.5px; color: var(--muted); }
+
+.ab-marquee { border-block: 1px solid var(--line); background: var(--surface); overflow: hidden; padding: 18px 0; }
+.ab-marquee .track { display: flex; width: max-content; animation: ab-scroll 48s linear infinite; }
+.ab-marquee:hover .track { animation-play-state: paused; }
+.ab-marquee ul { display: flex; align-items: center; margin: 0; padding: 0; list-style: none; }
+.ab-marquee li { display: flex; align-items: center; gap: 28px; padding-right: 28px; font: 600 clamp(18px, 1.8vw, 24px)/1.2 var(--fd); color: var(--ink); white-space: nowrap; }
+.ab-marquee li .ic { font-size: 18px; color: var(--navy-3); }
+@keyframes ab-scroll { to { transform: translateX(-50%); } }
+html.is-static .ab-marquee .track { animation: none; }
+
+.ab-statement .wrap { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
+.ab-statement .big { font: 600 clamp(24px, 2.7vw, 38px)/1.3 var(--fd); letter-spacing: -0.015em; color: var(--ink); text-wrap: pretty; }
+.ab-statement .big .w { display: inline; }
+.ab-statement .more { margin-top: 22px; max-width: 46em; color: var(--text); }
+.ab-stats { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 32px); margin-top: clamp(40px, 5vw, 72px); }
+.ab-stats > div { padding-top: 18px; border-top: 2px solid var(--ink); }
+.ab-stats .num { display: block; font: 700 clamp(40px, 4.4vw, 64px)/1 var(--fd); letter-spacing: -0.03em; color: var(--ink); font-variant-numeric: lining-nums; }
+.ab-stats .num.txt { font-size: clamp(28px, 2.8vw, 40px); line-height: 1.15; }
+.ab-stats p { margin-top: 10px; font-size: 15px; color: var(--muted); }
+
+.ab-ledger .wrap { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(28px, 5vw, 80px); align-items: start; }
+.ab-ledger .lead { margin: 16px 0 26px; }
+.ledger { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line-2); }
+.ledger li { border-bottom: 1px solid var(--line-2); }
+.ledger .row { display: grid; grid-template-columns: 56px minmax(0, 1fr) 28px; align-items: center; gap: 16px; padding: 20px 14px 20px 6px; color: var(--ink); text-decoration: none; font: 500 clamp(17px, 1.5vw, 20px)/1.35 var(--fd); transition: background 0.35s var(--ease), padding 0.35s var(--ease); }
+.ledger .n { font: 600 14px/1 var(--fb); color: var(--muted); font-variant-numeric: lining-nums tabular-nums; transition: color 0.35s var(--ease); }
+.ledger .ar .ic { font-size: 18px; color: var(--muted); transition: transform 0.35s var(--ease), color 0.35s var(--ease); }
+.ledger a.row:hover { background: var(--surface); padding-left: 16px; }
+.ledger a.row:hover .n, .ledger a.row:hover .ar .ic { color: var(--navy-3); }
+.ledger a.row:hover .ar .ic { transform: translateX(4px); }
+
+.ab-sell { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; grid-template-rows: 270px 270px; gap: clamp(14px, 1.8vw, 22px); }
+.ab-sell .tile { padding: 22px; }
+.ab-sell .tile h3 { font-size: 18px; }
+.ab-sell .tile p { font-size: 14.5px; }
+.ab-sell .t-big { grid-column: 1; grid-row: 1 / 3; }
+.ab-sell .t-signs { grid-column: 2 / 4; grid-row: 2; }
+.ab-sell .t-plain { background: var(--bg-2); border-color: transparent; justify-content: space-between; }
+.ab-sell .t-plain .ic-wrap { width: 48px; height: 48px; border-radius: 12px; background: var(--surface); color: var(--navy-3); display: grid; place-items: center; }
+.ab-sell .t-plain .ic-wrap .ic { font-size: 22px; }
+.ab-sell .t-plain small { display: block; margin-top: 8px; font-size: 13px; color: var(--muted); }
+.ab-sell .tile-photo .media img { transition: transform 0.9s var(--ease); }
+.ab-sell .tile-photo:hover .media img { transform: scale(1.05); }
+.ab-sell .t-signs .media { inset: 26px 22px 42% 22px; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; align-content: center; }
+.ab-sell .t-signs .media img { padding: 6px; }
+
+.ab-center .photo.para { aspect-ratio: 4 / 3.3; }
+.ab-center .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
+.ab-center .chips a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); color: var(--ink); font-size: 14px; font-weight: 600; text-decoration: none; transition: border-color 0.3s var(--ease), transform 0.3s var(--ease); }
+.ab-center .chips a:hover { border-color: var(--ink); transform: translateY(-2px); }
+.ab-center .chips .ic { font-size: 14px; color: var(--navy-3); }
+.ab-partner { display: flex; align-items: center; gap: 16px; margin: 24px 0 28px; padding: 10px 16px 10px 18px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); width: fit-content; }
+.ab-partner img { height: 36px; width: auto; border-radius: 6px; }
+.ab-partner span { font-size: 13px; color: var(--muted); }
+
+.ab-contact .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+.ab-contact .lead { margin: 14px 0 32px; }
+.ab-clist { margin: 0; padding: 0; list-style: none; display: grid; gap: 22px; }
+.ab-clist li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; align-items: start; padding-top: 22px; border-top: 1px solid var(--line-dark); }
+.ab-clist li:first-child { padding-top: 0; border-top: 0; }
+.ab-clist .ico { width: 44px; height: 44px; border-radius: 12px; background: rgba(255, 255, 255, 0.07); border: 1px solid var(--line-dark); display: grid; place-items: center; }
+.ab-clist .ico .ic { font-size: 20px; color: var(--on-dark); }
+.ab-clist h3 { font-size: 16px; margin-bottom: 6px; color: #fff; }
+.ab-clist p { font-size: 15.5px; color: var(--on-dark); }
+.ab-clist p.note { margin-top: 6px; font-size: 13.5px; color: var(--on-dark-muted); }
+.ab-clist a { color: #fff; font-weight: 600; text-decoration: none; }
+.ab-clist a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.ab-map figcaption { margin-top: 18px; text-align: center; font-size: 14px; color: var(--on-dark-muted); }
+.ab-map .lt-map { max-width: 520px; }
+.ab-cta { padding-top: clamp(40px, 5vw, 64px); }
+
+@media (max-width: 960px) {
+  .ab-hero .wrap, .ab-statement .wrap, .ab-ledger .wrap, .ab-contact .wrap { grid-template-columns: minmax(0, 1fr); }
+  .ab-visual { height: 440px; max-width: 560px; }
+  .ab-num { display: none; }
+  .ab-stats { grid-template-columns: 1fr 1fr; }
+  .ab-sell { grid-template-columns: 1fr 1fr; grid-template-rows: 300px 230px 230px 230px; }
+  .ab-sell .t-big { grid-column: 1 / 3; grid-row: 1; }
+  .ab-sell .t-signs { grid-column: 1 / 3; grid-row: auto; }
+  .ab-sell .t-big .media { width: 30%; }
+}
+@media (max-width: 560px) {
+  .ab-visual { height: 360px; }
+  .ab-chip { bottom: 6%; padding: 10px 14px; }
+  .ab-stats { grid-template-columns: 1fr; }
+  .ab-sell { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .ab-sell .tile { min-height: 220px; }
+  .ab-sell .t-big, .ab-sell .t-signs { grid-column: auto; }
+  .ab-sell .t-big { min-height: 320px; }
+  .ab-sell .t-big .media { width: 40%; }
+  .ab-sell .t-signs .media { bottom: 46%; gap: 6px; }
+  .ledger .row { grid-template-columns: 40px minmax(0, 1fr) 22px; gap: 12px; padding: 16px 6px 16px 2px; }
+}
+</style>{% endblock %}
+{% block content %}
+{% set pg = about.page %}
+{% set parts = about.intro[0].split('. ', 1) %}
+
+{# 1. Hero: kontūrinis „20“ fone, nuotrauka, tikras Geslitos gesintuvas ir kortelė, visi sluoksniai juda skirtingu greičiu #}
+<section class="ab-hero" data-parallax-root>
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.2">
+  <div class="wrap">
+    <div class="ab-copy">
+      <ol class="crumbs"><li><a href="index.html">Pradžia</a></li><li><span aria-current="page">Apie mus</span></li></ol>
+      <h1>{{ site.years }} metų rūpinamės priešgaisrine sauga visoje Lietuvoje</h1>
+      <p class="lead">{{ parts[0] }}.</p>
+      <div class="btn-group">{{ m.btn('Gauti pasiūlymą', 'kontaktai.html#forma') }}{{ m.btn('Paslaugos ir kainos', 'paslaugos.html', 'btn-line', '') }}</div>
+    </div>
+    <div class="ab-visual">
+      <div class="ab-photo" data-parallax="0.06" data-reveal="scale"><img src="{{ img('foto:vilnius-panorama') }}" alt="Vilniaus verslo centro panorama prie Neries" width="1733" height="1300" fetchpriority="high" sizes="(max-width: 960px) 92vw, 42vw" style="object-position: 62% 50%"></div>
+      <div class="ab-product" data-parallax="-0.14"><img src="assets/img/cutout/dsc9857.webp" alt="Gesintuvas iš Geslitos asortimento" width="560" height="1062"></div>
+      <div class="ab-chip" data-parallax="-0.26"><b>Visa Lietuva</b><span>atvykstame į jūsų objektą</span></div>
+    </div>
+  </div>
+</section>
+
+{# 2. Judanti paslaugų juosta (dekoratyvi: tas pats sąrašas pateiktas žemiau) #}
+<div class="ab-marquee" aria-hidden="true">
+  <div class="track">
+    {% for copy in [1, 2] %}<ul>{% for t in pg.marquee %}<li>{{ t }}{{ m.icon('flame') }}</li>{% endfor %}</ul>{% endfor %}
+  </div>
+</div>
+
+{# 3. Teiginys: žodžiai ryškėja slenkant (GSAP), faktai su skaičiavimu #}
+<section class="sec ab-statement">
+  <div class="wrap">
+    <div class="ab-side" data-parallax-root>
+      <div class="eyebrow" data-reveal>Apie įmonę</div>
+      <div class="ab-num" aria-hidden="true" data-parallax="-0.12">{{ site.years }}</div>
+    </div>
+    <div>
+      <p class="big" data-words>{{ parts[1] }}</p>
+      <div class="more" data-reveal>{{ m.paragraphs(about.intro[1:]) }}</div>
+    </div>
+    <div class="ab-stats">
+      <div data-reveal style="--i:0"><span class="num" data-count="{{ site.years }}">{{ site.years }}</span><p>metų patirtis priešgaisrinės saugos srityje</p></div>
+      <div data-reveal style="--i:1"><span class="num" data-count="{{ about.services_list|length }}">{{ about.services_list|length }}</span><p>veiklos sričių: nuo gesintuvų patikros iki mokymų</p></div>
+      <div data-reveal style="--i:2"><span class="num" data-count="{{ about.we_sell|length }}">{{ about.we_sell|length }}</span><p>prekių grupės: gesintuvai, vandentiekis, ženklai ir kt.</p></div>
+      <div data-reveal style="--i:3"><span class="num txt">Visa Lietuva</span><p>darbus atliekame jūsų objekte</p></div>
+    </div>
+  </div>
+</section>
+
+{# 4. Numeruotas paslaugų sąrašas, nuorodos į vidinius puslapius pagal slug #}
+{% set svc_map = [('gesintuvu-pildymas', 'gesintuvu-patikra.html'), ('vandentiekio', 'paslaugos.html#gaisrinis-vandentiekis'), ('evakuacijos', 'evakuacijos-planai.html'), ('signalizacija', 'gaisrine-signalizacija.html'), ('mokymai', 'saugos-centras.html'), ('dielektriniu', 'paslaugos.html#dielektriniu-priemoniu-patikra')] %}
+<section class="sec sec-tint ab-ledger">
+  <div class="wrap">
+    <div class="sticky-col" data-reveal>
+      <h2>{{ pg.ledger_title }}</h2>
+      <p class="lead">{{ pg.ledger_lead }}</p>
+      {{ m.btn('Visos paslaugos ir kainos', 'paslaugos.html', 'btn-navy') }}
+    </div>
+    <ol class="ledger">
+      {% for s in about.services_list %}
+        {% set ns = namespace(href=None) %}
+        {% if s.slug %}{% for key, href in svc_map %}{% if key in s.slug and not ns.href %}{% set ns.href = href %}{% endif %}{% endfor %}{% endif %}
+        <li data-reveal style="--i:{{ loop.index0 % 4 }}">{% if ns.href %}<a class="row" href="{{ ns.href }}">{% else %}<div class="row">{% endif %}<span class="n">{{ '%02d' % loop.index }}</span><span class="t">{{ s.text }}</span><span class="ar">{% if ns.href %}{{ m.icon('arrow') }}{% endif %}</span>{% if ns.href %}</a>{% else %}</div>{% endif %}</li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{# 5. Prekių mozaika: išpjautas gesintuvas, nuotraukos, ženklų kolekcija #}
+{% set sell = about.we_sell %}
+{% set zt = home.products.tiles.zenklai %}
+<section class="sec sec-white">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2>{{ pg.sell_title }}</h2>
+      <p class="lead">{{ pg.sell_lead }}</p>
+    </div>
+    <div class="ab-sell">
+      <a class="tile tile-big t-big" href="prekes-gesintuvai.html" data-reveal>
+        <div class="media"><img src="assets/img/cutout/dsc9858.webp" alt="" loading="lazy" width="560" height="1128"></div>
+        <h3>Gesintuvai{{ m.icon('arrow') }}</h3><p>{{ sell[0].text }}</p>
+      </a>
+      <a class="tile tile-photo" href="prekes-vandentiekis.html" data-reveal style="--i:1">
+        <div class="media"><img src="{{ img('foto:vandentiekis-rite') }}" alt="" loading="lazy" width="1880" height="1253" sizes="(max-width: 960px) 50vw, 22vw"></div>
+        <h3>Vandentiekis{{ m.icon('arrow') }}</h3><p>{{ sell[1].text }}</p>
+      </a>
+      <a class="tile tile-photo" href="prekes-vandentiekis.html" data-reveal style="--i:2">
+        <div class="media"><img src="{{ img('foto:hv-vandentiekis') }}" alt="" loading="lazy" width="1000" height="1500" sizes="(max-width: 960px) 50vw, 22vw" style="object-position: 50% 40%"></div>
+        <h3>Čiaupų komplektai{{ m.icon('arrow') }}</h3><p>Spintelės, žarnos, čiaupai, švirkštai, armatūra</p>
+      </a>
+      <a class="tile tile-photo" href="prekes-vandentiekis.html" data-reveal style="--i:3">
+        <div class="media"><img src="{{ img('geslita:uploads/images/gaisrines galvutes gaisriniai hidrantai.jpg') }}" alt="" loading="lazy" width="432" height="432"></div>
+        <h3>Hidrantai{{ m.icon('arrow') }}</h3><p>{{ sell[5].text }}</p>
+      </a>
+      <a class="tile tile-signs t-signs" href="prekes-zenklai.html" data-reveal style="--i:4">
+        <div class="media">{% for im in pg.sign_images[:6] %}<img src="assets/img/katalogas/{{ im }}" alt="" loading="lazy">{% endfor %}</div>
+        <h3>Saugos ženklai{{ m.icon('arrow') }}</h3><p>{{ sell[3].text }}</p>
+      </a>
+      <div class="tile t-plain" data-reveal style="--i:5">
+        <span class="ic-wrap">{{ m.icon('shield') }}</span>
+        <div><h3>Priešgaisrinis sandarinimas</h3><p>{{ sell[4].text }}</p><small>Teiraukitės el. paštu arba telefonu</small></div>
+      </div>
+    </div>
+    <div class="btn-group" style="margin-top:32px" data-reveal>{{ m.btn('Visos prekės', 'prekes.html', 'btn-navy') }}</div>
+  </div>
+</section>
+
+{# 6. Saugos centras: nuotrauka su parallax, tekstas, sričių nuorodos, partneris #}
+<section class="sec ab-center">
+  <div class="wrap split">
+    <div class="photo para" data-reveal="scale" data-parallax-root>
+      <img src="{{ img('foto:saugos-mokymai') }}" alt="Lektorė prie vartomosios lentos veda mokymus darbuotojams" loading="lazy" width="1880" height="1058" data-parallax="0.15" style="object-position: 72% 50%">
+    </div>
+    <div data-reveal>
+      <div class="eyebrow">Saugos centras</div>
+      <h2 style="margin-bottom:18px">Mokymai, instrukcijos ir dokumentacija</h2>
+      <p>{{ about.safety_center_blurb }}</p>
+      <ul class="chips">
+        <li><a href="saugos-centras.html#mokymai">Mokymai{{ m.icon('arrow') }}</a></li>
+        {% for x in home.training.more[1:] %}<li><a href="{{ x.href }}">{{ x.label }}{{ m.icon('arrow') }}</a></li>{% endfor %}
+      </ul>
+      <div class="ab-partner"><span>Partneris</span><img src="{{ img(about.partner_logo) }}" alt="Žinių medis" loading="lazy"></div>
+      {{ m.btn('Apie saugos centrą', 'saugos-centras.html', 'btn-navy') }}
+    </div>
+  </div>
+</section>
+
+{# 7. Kontaktai su Lietuvos žemėlapiu (tamsi juosta) #}
+<section class="sec band-dark ab-contact" id="kontaktai">
+  <div class="wrap">
+    <div data-reveal>
+      <h2>Kontaktai</h2>
+      <p class="lead">{{ pg.contacts_lead }}</p>
+      <ul class="ab-clist">
+        <li><span class="ico">{{ m.icon('phone') }}</span><div><h3>Telefonai ir el. paštas</h3><p>{% for p in site.phones %}<a href="tel:{{ p.replace(' ', '') }}">{{ p }}</a>{% if not loop.last %}<br>{% endif %}{% endfor %}</p><p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p></div></li>
+        <li><span class="ico">{{ m.icon('clock') }}</span><div><h3>Darbo laikas</h3><p>{{ site.hours }}</p></div></li>
+        <li><span class="ico">{{ m.icon('pin') }}</span><div><h3>Adresas</h3><p>{{ site.address }}</p><p class="note">{{ site.address_note }}</p></div></li>
+      </ul>
+    </div>
+    <figure class="ab-map" data-reveal style="--i:1">
+      {% include '_lt_map.svg' %}
+      <figcaption>{{ pg.map_caption }}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec sec-tight ab-cta"><div class="wrap">{{ m.cta_inline() }}</div></section>
+{% endblock %}

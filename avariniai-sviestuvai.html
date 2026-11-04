@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) document.documentElement.classList.add('js');</script>
+<title>Avariniai ir evakuaciniai šviestuvai | Geslita</title>
+<meta name="description" content="Evakuacijos ir avarinių šviestuvų montavimas pagal EN 1838: ženklo matymo atstumas, privalomos šviestuvų vietos, akinimo įvertinimas, apšvietos rekomendacijos ir avarinio išėjimo šviestuvai.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* Avariniai šviestuvai: puslapio stiliai (pg-light) */
+.pg-light .doc-sec > h2 { font-size: clamp(26px, 3vw, 36px); }
+.pg-light .doc-body { min-width: 0; } /* lentelės su min-width neturi išplėsti stulpelio mobiliajame */
+.pg-light .side-card a { display: block; padding: 0; margin: 0; border-left: 0; color: var(--ink); font-weight: 600; text-decoration: none; font-size: 15px; }
+.pg-light .side-card a.link { display: inline-flex; justify-self: start; padding-bottom: 2px; border-bottom: 1.5px solid var(--line-2); }
+.pg-light-intro .lead { margin-bottom: 12px; }
+.pg-light-2, .pg-light-3 { display: grid; gap: clamp(16px, 2vw, 24px); margin-top: 24px; align-items: start; }
+.pg-light-2 { grid-template-columns: 1fr 1fr; }
+.pg-light-3 { grid-template-columns: repeat(3, 1fr); }
+.pg-light-2 .card p, .pg-light-3 .card p { font-size: 15.5px; }
+.pg-light-split h2 { margin-bottom: 14px; }
+.pg-light-formula { text-align: center; }
+.pg-light-formula img { width: auto; max-width: 100%; max-height: 220px; margin: 0 auto 16px; }
+.pg-light-formula .num { font-size: clamp(32px, 3.4vw, 44px); font-weight: 700; color: var(--ink); line-height: 1; letter-spacing: -0.02em; margin-top: 8px; }
+.pg-light-steps { margin-top: 24px; }
+.pg-light-steps .step { grid-template-columns: 64px minmax(0, 1fr) minmax(170px, 30%); }
+.pg-light-steps .n { color: var(--navy-3); }
+.pg-light-steps figure, .pg-light-case figure, .pg-light-figs figure { margin: 0; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 10px; }
+.pg-light-steps figure img { max-height: 380px; width: auto; max-width: 100%; }
+.pg-light-legend { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; font-size: 14.5px; color: var(--muted); }
+.pg-light-legend li { display: flex; gap: 8px; align-items: baseline; }
+.pg-light-legend li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 2px; background: var(--navy-3); }
+.pg-light-case figure { margin-bottom: 14px; }
+.pg-light-case figure img { max-height: 170px; width: auto; max-width: 100%; }
+.pg-light-case h3 { font-size: 18px; }
+#akinimas .tbl { margin-top: 24px; }
+.pg-light .tbl td b { font-weight: 500; }
+.pg-light-rec .tbl td:first-child { width: 36%; font-weight: 600; color: var(--ink); }
+.pg-light-figs { display: grid; gap: 14px; margin-top: 18px; }
+.pg-light-figs figure { padding: 12px; }
+.pg-light-figs figure img { width: auto; max-width: 100%; }
+.pg-light-reg p.sub { padding-left: 28px; }
+.pg-light-prods { grid-template-columns: repeat(4, 1fr); }
+.pg-light-cta { padding-top: 0; }
+.pg-light-cta .cta-inline { margin-top: 0; }
+@media (max-width: 900px) { .pg-light-3, .pg-light-prods { grid-template-columns: 1fr 1fr; } .pg-light-steps .step { grid-template-columns: 64px 1fr; } .pg-light-steps figure { grid-column: 2; } }
+@media (max-width: 640px) { .pg-light-2, .pg-light-3 { grid-template-columns: 1fr; } .pg-light-steps .step { grid-template-columns: 1fr; } .pg-light-steps figure { grid-column: auto; } }
+@media (max-width: 640px) { .pg-light .tbl table { min-width: 0; font-size: 14px; } .pg-light .tbl th, .pg-light .tbl td { padding: 10px 12px; } .pg-light .tbl thead th { font-size: 11.5px; letter-spacing: 0.04em; } .pg-light-rec .tbl td:first-child { width: 40%; } }
+@media (max-width: 480px) { .pg-light-prods { gap: 10px; } .pg-light-prods .prod .body { padding: 12px 14px 14px; } }
+</style></head>
+<body class="">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14L20 4M15 4h5v5"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3 4 5 4 9a4 4 0 0 1-8 0c0-1 .3-2 1-3 0 2 1 3 2 3 0-3-1-5 1-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V6h11v11M14 9h4l3 3v5h-2"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3H4a4 4 0 0 0 2-3v-3a7 7 0 0 1 4-6M9 17v1a3 3 0 0 0 6 0v-1"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3zM9 4v13M15 7v13"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 9L12 5 2 9l10 4 10-4zM6 10.6V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.4"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M7 10h3v11H7zM14 4l3-1 3 3-1 3-5 5-3-3 3-7zM4 20l3-3"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></symbol>
+</svg>
+<a class="skip" href="#main">Pereiti prie turinio</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Geslita, į pradžią"><img src="assets/img/logo-geslita-s.png" alt="Geslita" width="167" height="50"></a>
+    <ul class="site-nav">
+      <li><a href="index.html" >Pradžia</a></li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-paslaugos">Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-paslaugos">
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas<span>Patikra nuo 5,26 €</span></a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija<span>Patikra, remontas, įrengimas</span></a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis<span>Čiaupai, žarnos, žurnalai</span></a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai<span>Planas 70 €</span></a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai<span>Montavimas pagal EN 1838</span></a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai<span>Saugos centras</span></a></li>
+          <li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos<span>Dielektrika, nuoma, žurnalai</span></a></li>
+          <li><a class="drop-all" href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-prekes">Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-prekes">
+          <li><a href="prekes-gesintuvai.html">Gesintuvai<span>Milteliniai, CO₂, vandens putų</span></a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis<span>Spintelės, žarnos, čiaupai</span></a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai<span>102 ženklai su paieška</span></a></li>
+          <li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga<span>Detektoriai, sirenos, šviestuvai</span></a></li>
+          <li><a class="drop-all" href="prekes.html">Visos prekės</a></li>
+        </ul>
+      </li>
+      <li><a href="saugos-centras.html" >Saugos centras</a></li>
+      <li class="nav-naudinga"><a href="naudinga-informacija.html" >Naudinga</a></li>
+      <li><a href="apie-mus.html" >Apie mus</a></li>
+      <li><a href="kontaktai.html" >Kontaktai</a></li>
+    </ul>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>+370 653 99977</span></a>
+      <a class="btn btn-sm" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+      <button class="nav-toggle" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-nav"><svg class="ic ic-menu"><use href="#i-menu"/></svg><svg class="ic ic-x"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilus meniu">
+  <ul>
+    <li><a href="index.html">Pradžia</a></li>
+    <li><details><summary>Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li><li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas</a></li><li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li><li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li><li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li><li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li><li><a href="saugos-centras.html">Darbuotojų mokymai</a></li><li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos</a></li>
+    </ul></details></li>
+    <li><details><summary>Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="prekes.html">Visos prekės</a></li><li><a href="prekes-gesintuvai.html">Gesintuvai</a></li><li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li><li><a href="prekes-zenklai.html">Saugos ženklai</a></li><li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga</a></li>
+    </ul></details></li>
+    <li><a href="saugos-centras.html">Saugos centras</a></li>
+    <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+    <li><a href="apie-mus.html">Apie mus</a></li>
+    <li><a href="kontaktai.html">Kontaktai</a></li>
+  </ul>
+  <div class="mobile-cta">
+    <a class="btn" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+    <a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a>
+  </div>
+</nav>
+
+<main id="main">
+<section class="page-hero ">
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.2">
+  <div class="wrap">
+    <div>
+<ol class="crumbs"><li><a href="index.html">Pradžia</a></li><li><a href="paslaugos.html#avariniu-sviestuvu-montavimas">Paslaugos</a></li><li><span aria-current="page">Avariniai šviestuvai</span></li></ol><div class="eyebrow" style="margin-top:14px">Montavimas ir rekomendacijos</div>      <h1>Avariniai ir evakuaciniai šviestuvai</h1>
+<p class="lead">Evakuacijos, avarinio ir antipaniško apšvietimo rekomendacijos pagal Europos standartą EN 1838 ir Apšvietimo elektros įrenginių įrengimo taisykles: nuo ženklo matymo atstumo iki šviestuvų išdėstymo.</p><div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>    </div>
+<div class="media" data-reveal="scale"><img src="assets/img/foto/evakuacija-koridorius.jpg" srcset="assets/img/foto/evakuacija-koridorius-640.webp 640w, assets/img/foto/evakuacija-koridorius-1280.webp 1280w, assets/img/foto/evakuacija-koridorius-1920.webp 1920w" sizes="(max-width: 960px) 92vw, 50vw" alt="Šviečiantis evakuacinio išėjimo ženklas ir raudonas pavojaus signalizatorius ant sienos" width="1200" height="900" fetchpriority="high"></div>  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap doc pg-light">
+    <aside class="doc-nav" aria-label="Puslapio turinys">
+      <ul>
+        <li><a href="#kas-tai">Kas yra avarinis apšvietimas</a></li>
+        <li><a href="#prieziura">Įrangos priežiūra</a></li>
+        <li><a href="#montavimas">Montavimo taisyklės</a></li>
+        <li><a href="#matymo-atstumas">Ženklo matymo atstumas</a></li>
+        <li><a href="#trys-zingsniai">Trys schemos žingsniai</a></li>
+        <li><a href="#akinimas">Akinimo įvertinimas</a></li>
+        <li><a href="#rekomendacijos">Praktinės rekomendacijos</a></li>
+        <li><a href="#taisykles">Įrengimo taisyklės</a></li>
+        <li><a href="#prekes">Avarinio išėjimo šviestuvai</a></li>
+      </ul>
+      <div class="side-card">
+        <strong>Avarinių šviestuvų montavimas</strong>
+        <a href="tel:+37065399977">+370 653 99977</a>
+        <a href="mailto:info@geslita.lt">info@geslita.lt</a>
+        <a class="link" href="paslaugos.html#avariniu-sviestuvu-montavimas">Paslauga kainoraštyje<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </aside>
+
+    <div class="doc-body">
+      <div class="pg-light-intro" data-reveal>
+<p class="lead">Šios rekomendacijos pirmiausia remiasi Europos standartu EN 1838 bei Apšvietimo elektros įrenginių įrengimo taisyklėmis (ištrauka pateikiama žemiau).</p><p class="">Jos padės jums suprojektuoti ir įrengti evakuacinį apšvietimą, atitinkantį tarptautinius reikalavimus bei užtikrinantį saugų žmonių pasišalinimą iš pastato kilus gaisrui ar kitam pavojui.</p>      </div>
+
+      <section class="doc-sec" id="kas-tai">
+        <h2 data-reveal>Kas yra avarinis apšvietimas?</h2>
+        <p class="lead" data-reveal>Avarinis apšvietimas automatiškai įjungiamas dingus pagrindinio apšvietimo elektros maitinimui. Avarinis apšvietimas skirstomas į dvi grupes.</p>
+        <div class="pg-light-2">
+          <article class="card" data-reveal style="--i:0">
+            <div class="ic-wrap"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg></div>
+            <h3>Evakuacinis apšvietimas</h3>
+            <p><strong>Evakuacijos kelių ir atvirų erdvių apšvietimas.</strong></p>
+<ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Evakuacijos keliai turi būti aiškiai apšviesti ir pažymėti, kad būtų užtikrinta saugi žmonių evakuacija iš pastato.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Atvirų erdvių apšvietimas projektuojamas taip, kad sumažintų sumaištį bei paniką ir pagerintų artimiausio išėjimo kelio matomumą.</span></li></ul><p class="small muted" style="margin-top: 14px">Evakuacinis apšvietimas leidžia saugiai išjungti jautrius ir potencialiai pavojingus procesus prieš evakuojantis iš pastato.</p>          </article>
+          <article class="card" data-reveal style="--i:1">
+            <div class="ic-wrap"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></div>
+            <h3>Budintis apšvietimas</h3>
+            <p><strong>Budintis apšvietimas leidžia tęsti normalią veiklą, jei pagrindinis apšvietimas dėl kokių nors priežasčių dingsta.</strong></p>
+<p class="small muted" style="margin-top: 14px">Pavyzdžiui, teatruose ar oro skrydžių valdymo centruose būtų reikalingas budintis apšvietimas.</p>          </article>
+        </div>
+      </section>
+
+      <section class="doc-sec" id="prieziura">
+        <h2 data-reveal>Avarinio apšvietimo įrangos priežiūra</h2>
+        <div data-reveal><p>Sumontavus avarinio (evakuacinio) apšvietimo įrangą, pastatą prižiūrintis asmuo turi įsitikinti, kad reikiamu momentu įranga veiks, kaip nustatyta.</p><p>Avarinio apšvietimo įrenginiai turi būti reguliariai tikrinami. Dažniausiai naudojami avarinio apšvietimo sistemų testavimo būdai:</p></div>
+        <div class="pg-light-3">
+          <article class="card" data-reveal style="--i:0">
+            <div class="ic-wrap"><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg></div>
+            <h3>Adresinis testavimas</h3>
+            <p>Visi avarinio apšvietimo šviestuvai valdomi centrinio bloko. Šis blokas automatiškai testuoja kiekvieną šviestuvą ir saugo rezultatus analizei. Adresinės testavimo sistemos yra optimalus sprendimas vidutinio dydžio ir dideliuose pastatuose.</p>
+          </article>
+          <article class="card" data-reveal style="--i:1">
+            <div class="ic-wrap"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></div>
+            <h3>Pasitikrinimas (SelfTest)</h3>
+            <p>Visuose avarinio apšvietimo šviestuvuose integruoti sumanūs procesoriai, kurie automatiškai tikrina funkcionavimą ir baterijos tarnavimą. Tikrinimo rezultatai matomi dviejų spalvų LED indikatoriuje. Optimalus sprendimas nuo mažų iki vidutinio dydžio objektų.</p>
+          </article>
+          <article class="card" data-reveal style="--i:2">
+            <div class="ic-wrap"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></div>
+            <h3>Rankinis tikrinimas (Manual Test)</h3>
+            <p>Kompetentingas personalas periodiškai turi patikrinti (testuoti) visus avarinio apšvietimo šviestuvus ir registruoti parodymus žurnale. Tai turi būti vykdoma rankiniu būdu, o įrašai saugomi įmonės archyve.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="doc-sec" id="montavimas">
+        <div class="split pg-light-split" data-parallax-root>
+          <div data-reveal>
+            <h2>Montavimo taisyklės</h2>
+            <p class="lead">Avarinio apšvietimo aktuose nustatytas evakuacinių šviestuvų ženklų žymėjimas.</p>
+            <ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Evakuaciniai šviestuvai montuojami ne žemiau kaip 2 m nuo grindų paviršiaus.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Minimalus šviečiančio ženklo skaistis - 2 cd/m².</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Evakuaciniai šviestuvai turi būti montuojami visose evakuacijos kelio pasikeitimo vietose iki galutinių išėjimo durų.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Jei naudojami išoriniai šviestuvai, ženklai turi būti nuolat apšviečiami, kai pastate yra žmonių.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Avariniai šviestuvai turi būti išdėstyti taip, kad neakintų - šviestuvų skaistis neturi erzinti žmonių ar trukdyti aiškiai matyti evakuacinius ženklus.</span></li></ul>
+          </div>
+          <div class="photo para" data-reveal="scale">
+            <img src="assets/img/foto/evakuacija-zenklas.jpg" srcset="assets/img/foto/evakuacija-zenklas-640.webp 640w, assets/img/foto/evakuacija-zenklas-1280.webp 1280w, assets/img/foto/evakuacija-zenklas-1920.webp 1920w" sizes="(max-width: 960px) 92vw, 50vw" alt="Žalias evakuacinio išėjimo ženklas, kabantis po pramoninėmis lubomis" loading="lazy" width="1880" height="1254" data-parallax="0.15">
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-sec" id="matymo-atstumas">
+        <h2 data-reveal>Evakuacinių šviestuvų ženklo matymo atstumas</h2>
+        <div data-reveal><p>Matymo atstumas - tai atstumas, iš kurio matomas ir suprantamas evakuacijos ženklas. Evakuacijos ženklo matymo atstumas priklauso nuo to, ar ženklas apšviečiamas iš vidaus, ar iš išorės, ir nuo ženklo aukščio (h).</p></div>
+        <div class="pg-light-2">
+          <article class="card pg-light-formula" data-reveal style="--i:0">
+            <img src="assets/img/geslita/Emerg_internal-300x220.png" alt="Ženklo matymo atstumas esant vidiniam apšvietimui" width="300" height="220" loading="lazy">
+            <p class="small muted">Esant vidiniam apšvietimui (ant šviestuvo užklijuotas žalias išėjimo ženklas)</p>
+            <div class="num">d = h x 200</div>
+          </article>
+          <article class="card pg-light-formula" data-reveal style="--i:1">
+            <img src="assets/img/geslita/Emerg_external-300x217.png" alt="Ženklo matymo atstumas esant išoriniam apšvietimui" width="300" height="217" loading="lazy">
+            <p class="small muted">Esant išoriniam apšvietimui (šviestuvas montuojamas šalia ženklo)</p>
+            <div class="num">d = h x 100</div>
+          </article>
+        </div>
+        <p class="small muted" style="margin-top: 14px" data-reveal>d - matymo atstumas, h - ženklo aukštis</p>
+      </section>
+
+      <section class="doc-sec" id="trys-zingsniai">
+        <h2 data-reveal>Trys evakuacinio apšvietimo schemos žingsniai</h2>
+        <p class="lead" data-reveal>Avariniai šviestuvai turi būti atsakingai išdėstyti, siekiant užtikrinti tinkamą evakuacijos kelią. Trys žingsniai, garantuojantys sėkmingą evakuacinio apšvietimo schemą:</p>
+        <ol class="steps pg-light-steps">
+          <li class="step" data-reveal style="--i:0">
+            <span class="n num" aria-hidden="true">01</span>
+            <div>
+              <h3>Evakuacinis žymėjimas</h3>
+              <p>Evakuaciniai ženklai turi būti išdėstyti taip, kad užtikrintų aiškų ir nedviprasmišką kelio žymėjimą iki paskutinio išėjimo: laiptai, krypties pasikeitimas, grindų lygio pasikeitimas, išėjimo durys ir saugos ženklai.</p>
+              <p class="small muted" style="margin: 14px 0 6px">Schemos žymėjimas</p>
+              <ul class="pg-light-legend"><li>Stairs - laiptai</li><li>Change of direction - krypties pasikeitimas</li><li>Change of level - grindų lygio pasikeitimas</li><li>Exit doors &amp; safety signs - išėjimo durys ir saugos ženklai</li></ul>
+            </div>
+            <figure><img src="assets/img/geslita/emerg_laiptai1.png" alt="1 žingsnis - evakuacinis žymėjimas laiptinėje" loading="lazy"></figure>
+          </li>
+          <li class="step" data-reveal style="--i:1">
+            <span class="n num" aria-hidden="true">02</span>
+            <div>
+              <h3>Privalomi šviestuvai</h3>
+              <p>Avarinius šviestuvus privalu sumontuoti prioritetinėse vietose: grindų lygio pasikeitimo vietose, koridorių susikirtimuose, prie priešgaisrinės įrangos ir prie pirmosios pagalbos punktų.</p>
+              <p class="small muted" style="margin: 14px 0 6px">Schemos žymėjimas</p>
+              <ul class="pg-light-legend"><li>Lift cars - liftai</li><li>Intersection of corridors - koridorių susikirtimas</li><li>Fire fighting equipment &amp; call points - gesintuvų ir pavojaus mygtukų vietos</li><li>Change of direction - krypties pasikeitimas</li><li>Outside final exit - šviestuvas išėjus į lauką pro paskutinį išėjimo ženklą</li><li>Outside first aid point and change of direction - koridoriuje prie medicinos punkto ir krypties pasikeitimo vietoje</li></ul>
+            </div>
+            <figure><img src="assets/img/geslita/emerg_korid1.png" alt="2 žingsnis - privalomi avariniai šviestuvai koridoriuje" loading="lazy"></figure>
+          </li>
+          <li class="step" data-reveal style="--i:2">
+            <span class="n num" aria-hidden="true">03</span>
+            <div>
+              <h3>Tarpiniai šviestuvai</h3>
+              <p>Siekiant užtikrinti reikiamą evakuacijos kelio apšvietos lygį, tarpuose tarp privalomų avarinių šviestuvų įrengiami tarpiniai avariniai šviestuvai.</p>
+            </div>
+            <figure><img src="assets/img/geslita/emerg_korid_tarpiniai-300x192.png" alt="3 žingsnis - tarpiniai avariniai šviestuvai" loading="lazy"></figure>
+          </li>
+        </ol>
+      </section>
+
+      <section class="doc-sec" id="akinimas">
+        <h2 data-reveal>Akinimo lygio įvertinimas</h2>
+        <div data-reveal><p>Projektuojant avarinį apšvietimą, reikia įvertinti akinimo lygį.</p><p>Avariniai šviestuvai turi būti išdėstyti taip, kad neakintų. Akinimas - kai šviestuvų skaistis erzina žmones ar trukdo aiškiai matyti evakuacinius ženklus.</p></div>
+        <div class="pg-light-3">
+          <article class="card pg-light-case" data-reveal style="--i:0">
+            <figure><img src="assets/img/geslita/emerg_akinimas-300x209.png" alt="Akinimas horizontaliame evakuacijos kelyje" loading="lazy"></figure>
+            <h3>Horizontalus kelias</h3>
+            <p>Akinimas skaičiuojamas visiems matomiems šviestuvams. Horizontaliems keliams bet koks akinimas virš 60° negali viršyti lentelėje pateiktų reikšmių.</p>
+          </article>
+          <article class="card pg-light-case" data-reveal style="--i:1">
+            <figure><img src="assets/img/geslita/emerg_akinimas1-300x207.png" alt="Akinimas grindų lygio pasikeitimo vietoje" loading="lazy"></figure>
+            <h3>Grindų lygio pasikeitimas</h3>
+            <p>Esant grindų lygio pasikeitimui, šviestuvų skaistis visomis kryptimis negali viršyti nustatytų reikšmių.</p>
+          </article>
+          <article class="card pg-light-case" data-reveal style="--i:2">
+            <figure><img src="assets/img/geslita/emerg_akinimas2-300x268.png" alt="Akinimo skaičiavimo pavyzdys koridoriuje" loading="lazy"></figure>
+            <h3>Skaičiavimo pavyzdys</h3>
+            <p>Paveikslėlyje avariniai šviestuvai koridoriuje sumontuoti skersai, 2,4 m aukštyje. Matymo zonoje yra trys avariniai šviestuvai, todėl akinimo lygis apskaičiuojamas: 3 x 64,2 = 192,6 cd. Gauta reikšmė žymiai mažesnė už 500 cd, nurodytą lentelėje, montuojant šviestuvus 2,4 m aukštyje. Skaisčio reikšmės pateikiamos gamintojo kataloguose arba apšvietimo skaičiavimo programose.</p>
+          </article>
+        </div>
+        <div class="tbl" data-reveal>
+  <table>
+<caption>1 lentelė. Leidžiamos akinimo reikšmės</caption><thead><tr><th >Montavimo aukštis h, m</th><th >Evakuacijos kelias ir atviros erdvės - maks. skaistis Imaks., cd</th><th >Didelė rizika - maks. skaistis Imaks., cd</th></tr></thead>    <tbody>
+<tr><td >h &lt; 2,5</td><td >500</td><td >1000</td></tr><tr><td >2,5 ≤ h &lt; 3,0</td><td >900</td><td >1800</td></tr><tr><td >3,0 ≤ h &lt; 3,5</td><td >1600</td><td >3200</td></tr><tr><td >3,5 ≤ h &lt; 4,0</td><td >2500</td><td >5000</td></tr><tr><td >4,0 ≤ h &lt; 4,5</td><td >3500</td><td >7000</td></tr><tr><td >4,5 ≤ h</td><td >5000</td><td >10000</td></tr>    </tbody>
+  </table>
+</div>
+
+      </section>
+
+      <section class="doc-sec" id="rekomendacijos">
+        <h2 data-reveal>Praktinis avarinio apšvietimo taikymas</h2>
+        <p class="lead" data-reveal>Avarinis apšvietimas skirstomas į tris grupes: evakuacijos kelių, atvirų erdvių ir didelės rizikos zonų apšvietimas. Kaip pateikiama lentelėse, avarinio apšvietimo reikalavimai skiriasi priklausomai nuo apšvietimo grupės.</p>
+        <div class="pg-light-rec" data-reveal>
+          <details class="acc" open>
+  <summary>2 lentelė. Evakuacijos kelių avarinio apšvietimo rekomendacijos<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body">            <div class="tbl" data-reveal>
+  <table>
+<thead><tr><th >Rodiklis</th><th >Reikalavimas</th></tr></thead>    <tbody>
+<tr><td >Aprašymas</td><td >Aiškiai nustatytas evakuacijos kelias, taip pat judantys eskalatoriai, kurie visada turi būti tvarkingi.</td></tr><tr><td >Kelias</td><td >2 m pločio juosta arba kelios juostos po 2 m.</td></tr><tr><td >Apšvietimo lygis</td><td >Mažiausiai 1 liuksas (lx) juostos centrinėje linijoje, grindų lygyje. Mažiausiai 0,5 liukso abiejose centrinės linijos pusėse po 0,5 m.</td></tr><tr><td >Maksimalios ir minimalios apšvietos santykis</td><td >&lt; 40 : 1</td></tr><tr><td >Avarinio apšvietimo lygio pasiekimo laikas</td><td >50 % per 5 s, 100 % per 60 s</td></tr><tr><td >Spalvų atgava (Ra)</td><td >&gt; 40</td></tr><tr><td >Akinimas (didelis kontrastas tarp šviestuvo ir aplinkos)</td><td >Žr. 1 lentelę.</td></tr>    </tbody>
+  </table>
+</div>
+
+<div class="pg-light-figs"><figure><img src="assets/img/geslita/emerg_fotometric-1024x448.png" alt="Evakuacijos kelio apšvietimo fotometrinė schema" loading="lazy"></figure><figure><img src="assets/img/geslita/emerg_sviestuvai.png" alt="Avarinių šviestuvų išdėstymas evakuacijos kelyje" loading="lazy"></figure></div></div>
+</details>
+          <details class="acc" >
+  <summary>3 lentelė. Atvirų erdvių avarinio apšvietimo rekomendacijos<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body">            <div class="tbl" data-reveal>
+  <table>
+<thead><tr><th >Rodiklis</th><th >Reikalavimas</th></tr></thead>    <tbody>
+<tr><td >Aprašymas</td><td >Evakuacijos erdvė - atvira arba perstatoma erdvė, taip pat uždaros automobilių stovėjimo aikštelės ir laiptų zonos uždaruose stadionuose (išskyrus priskirtas evakuacijos keliams).</td></tr><tr><td >Erdvė</td><td >&gt; 60 m²</td></tr><tr><td >Apšvietimo lygis</td><td >Mažiausiai 0,5 liukso (lx) visoje erdvėje (išskyrus 0,5 m pločio juostą prie sienų).</td></tr><tr><td >Maksimalios ir minimalios apšvietos santykis</td><td >&lt; 40 : 1</td></tr><tr><td >Avarinio apšvietimo lygio pasiekimo laikas</td><td >50 % per 5 s, 100 % per 60 s</td></tr><tr><td >Spalvų atgava (Ra)</td><td >&gt; 40</td></tr><tr><td >Akinimas (didelis kontrastas tarp šviestuvo ir aplinkos)</td><td >Žr. 1 lentelę.</td></tr>    </tbody>
+  </table>
+</div>
+
+<div class="pg-light-figs"><figure><img src="assets/img/geslita/emerg_open_area.png" alt="Atviros erdvės avarinio apšvietimo schema" loading="lazy"></figure></div><p class="tbl-note">Europos standartas EN 50172 reikalauja naudoti mažiausiai 2 avarinius šviestuvus atvirų erdvių ir kai kurių evakuacijos kelių erdvių apšvietimui (pvz., koridoriaus dalis tarp priešgaisrinių durų).</p><p class="tbl-note">Gamyklų patalpos, kuriose nėra judančių staklių ar yra mažos rizikos įrenginiai, gali būti apšviečiamos kaip standartinės atviros erdvės. Generatorių patalpoms reikalingi individualūs avariniai šviestuvai.</p></div>
+</details>
+          <details class="acc" >
+  <summary>4 lentelė. Didelės rizikos zonų avarinio apšvietimo rekomendacijos<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body">            <div class="tbl" data-reveal>
+  <table>
+<thead><tr><th >Rodiklis</th><th >Reikalavimas</th></tr></thead>    <tbody>
+<tr><td >Aprašymas</td><td >Zonos, kuriose didelės rizikos darbai turi būti atlikti ar sustabdyti saugiai prieš evakuaciją, siekiant apsaugoti praeivius nuo sužalojimo arba įrangą ir pastatą nuo sugadinimo.</td></tr><tr><td >Erdvė</td><td >Nustatoma pagal rizikos dydį.</td></tr><tr><td >Apšvietimo lygis</td><td >10 % nuo bendros apšvietos reikšmės nustatytame paviršiuje arba mažiausiai 15 liuksų.</td></tr><tr><td >Maksimalios ir minimalios apšvietos santykis</td><td >&lt; 10 : 1</td></tr><tr><td >Avarinio apšvietimo lygio pasiekimo laikas</td><td >100 % per 0,5 s</td></tr><tr><td >Spalvų atgava (Ra)</td><td >&gt; 40</td></tr><tr><td >Akinimas (didelis kontrastas tarp šviestuvo ir aplinkos)</td><td >Žr. 1 lentelę.</td></tr>    </tbody>
+  </table>
+</div>
+
+</div>
+</details>
+        </div>
+      </section>
+
+      <section class="doc-sec" id="taisykles">
+        <h2 data-reveal>Apšvietimo elektros įrenginių įrengimo taisyklės (ištrauka)</h2>
+        <p class="lead" data-reveal>Taisyklių punktai, kuriais remiasi šios rekomendacijos.</p>
+        <div data-reveal><details class="acc" >
+  <summary>Skaityti taisyklių ištrauką<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body">          <div class="pg-light-reg">
+<p class="">19. Saugos apšvietimas turi būti įrengiamas kaminams ir kitiems aukštiems statiniams, aukštesniems kaip 45 m, vadovaujantis Aukštų statinių ženklinimo taisyklėse, patvirtintose Civilinės aviacijos administracijos direktoriaus 2001 m. gruodžio 19 d. įsakymu Nr. 106 (Žin., 2002, Nr. 9-351; 2009, Nr. 37-1413), nustatytais reikalavimais, ir tose patalpose, kuriose net trumpalaikis apšvietimo išjungimas gali kelti grėsmę žmonių sveikatai ir gyvybei, sukelti sprogimą bei gaisrą, sutrikdyti sudėtingą technologinį procesą, pridaryti didelių materialinių nuostolių bei sukelti pavojų aplinkai.</p><p class="">20. Gamybos paskirties patalpose ir atvirose aikštelėse darbo paviršiuose saugos apšvietimas turi būti ne mažesnis kaip 5 procentai bendrosios darbinės apšvietos, bet ne mažesnis kaip 2 lx patalpose ir 1 lx atvirose aikštelėse.</p><p class=""><span class="ltx">21. Darbinio ir saugos apšvietimo šviestuvai gamybos ir pramonės paskirties pastatuose, visuomeninės paskirties pastatuose, visuomeninės paskirties inžineriniuose statiniuose (statybos techninis reglamentas STR 2.02.02:2004 „Visuomeninės paskirties statiniai“, patvirtintas Lietuvos Respublikos aplinkos ministro 2004 m. vasario 27 d. įsakymu Nr. D1-91 (Žin., 2004, Nr. 54-1851)) ir lauko aikštelėse turi būti maitinami iš atskiro nepriklausomo šaltinio.</span></p><p class="">22. Evakuacinio apšvietimo šviestuvai ir evakavimo(si) kelių nurodomieji ženklai gamybos paskirties patalpose, kuriose yra natūralus apšvietimas, taip pat gyvenamuosiuose ir visuomeninės paskirties pastatuose turi būti maitinami atskiromis linijomis iš transformatorinės (apšvietimo skirstomojo punkto) arba, esant tik vienam įvadui, iš įvadinės skirstomosios spintos. Evakuacinio apšvietimo šviestuvai ir evakavimo(si) kelių nurodomieji ženklai gamybos paskirties patalpose be natūralaus apšvietimo turi būti maitinami iš atskiro nepriklausomo šaltinio.</p><p class="">23. Evakuacinis apšvietimas, užtikrinantis pakankamą saugiam žmonių judėjimui perėjų ir evakavimo(si) kelių apšvietimą išsijungus pagrindiniam apšvietimui, turi būti naudojamas:</p><p class="sub">23.1. negyvenamosiose patalpose, jeigu vienu metu jose būna 50 ir daugiau žmonių;</p><p class="sub">23.2. didesniuose nei 2000 m² ploto visuomeninės paskirties pastatuose;</p><p class="sub">23.3. didesniuose nei 1000 m² ploto garažuose;</p><p class="sub">23.4. didesniuose nei 50 m² ploto prekybos paskirties patalpose;</p><p class="sub">23.5. visose gamybos paskirties patalpose, kuriose nuolatos dirba žmonės, o užgesus darbiniam apšvietimui dirbantys technologiniai įrenginiai kelia traumų pavojų;</p><p class="sub">23.6. visose gamybos paskirties patalpose be natūralaus patalpų apšvietimo;</p><p class="sub">23.7. evakavimo(si) keliuose, vedančiuose iš visų anksčiau minėtų patalpų ir pastatų, taip pat gydymo paskirties ir kitų pastatų evakavimo(si) keliuose, kur daugiausia būna ribotų judėjimo galimybių žmonės.</p><p class="">24. Evakuacinio apšvietimo šviestuvai turi būti įrengiami:</p><p class="sub">24.1. prie kiekvienų durų, per kurias išeinama į evakavimo(si) kelius avarijų atvejais;</p><p class="sub">24.2. prie evakavimo(si) keliuose esančių laiptų, kad kiekvienas laiptų maršas būtų tiesiogiai apšviestas;</p><p class="sub">24.3. kiekvienoje evakavimo(si) kelių grindų lygio pasikeitimo vietoje;</p><p class="sub">24.4. kiekvienoje evakavimo(si) kelių posūkio vietoje;</p><p class="sub">24.5. kiekvienoje evakavimo(si) kelių šakojimosi vietoje;</p><p class="sub">24.6. visose išėjimo iš evakavimo(si) kelių į lauką vietose (kelių galuose ir lauke šalia išėjimų);</p><p class="sub">24.7. prie pirmosios pagalbos suteikimo postų ir prie gaisro aptikimo signalizavimo sistemų bei stacionariųjų gaisrų gesinimo sistemų valdymo įrangos įrengimo vietų.</p><p class="">25. Jeigu saugos apšvietimas patalpose tenkina evakuacinio apšvietimo sąlygas, evakuacinio apšvietimo įrengti nebūtina.</p><p class="">26. Atsijungus pagrindiniam avarinio apšvietimo maitinimo šaltiniui, automatiškai turi būti įjungiamas maitinimas iš nepriklausomo išorinio arba vietinio šaltinio (akumuliatorių baterijos, elektros generatoriaus, nepertraukiamo maitinimo šaltinio (UPS)), kuris įprasto darbo metu nenaudojamas nei darbiniam, nei saugos, nei evakuaciniam apšvietimui. Toks šaltinis evakuacinio apšvietimo šviestuvus turi maitinti ne trumpiau kaip 1 valandą. Kai kurie evakuacinio apšvietimo šviestuvai ir evakavimo(si) kelių nurodomieji ženklai gali būti su individualiais, skirtais tik šiam šviestuvui arba šviečiančiai rodyklei maitinti, šaltiniais (sausieji elementai, mažos akumuliatorių baterijos).</p><p class="">27. Evakuacinis apšvietimas turi užtikrinti ne mažesnę kaip 2 lx apšvietą evakavimo(si) keliuose ir patalpose, kuriose gali būti 50 ir daugiau žmonių, ir ne mažesnę kaip 5 lx apšvietą laiptinėse ir ties evakuaciniais išėjimais. Kokybiniai evakuacinio apšvietimo rodikliai turi būti priimami pagal LST EN 1838:2003 „Apšvietimo pritaikymas. Avarinis apšvietimas“ standarto reikalavimus.</p><p class="">28. Esant įprastai darbo eigai, evakuacinio apšvietimo evakavimo(si) kelių nurodomieji ženklai gali būti prijungti prie bet kurios paskirties apšvietimo tinklo.</p><p class="">29. Evakuacinio apšvietimo evakavimo(si) kelių nurodomieji ženklai ir jų dydžiai parenkami vadovaujantis Gaisrinės saugos ženklų naudojimo įmonėse, įstaigose ir organizacijose nuostatais, patvirtintais Priešgaisrinės apsaugos ir gelbėjimo departamento prie Vidaus reikalų ministerijos direktoriaus 2005 m. gruodžio 23 d. įsakymu Nr. 1-404 (Žin., 2005, Nr. 152-5630).</p><p class="">30. Evakuacinis apšvietimas turi būti įrengtas taip, kad iš bet kurios patalpos vietos (taško) gerai būtų matomas bent vienas evakuacinio apšvietimo evakavimo(si) kelio nurodomasis ženklas. Šie ženklai turi būti įrengiami evakavimo(si) kelio posūkiuose, grindų nuolydžių pasikeitimo vietose, virš kiekvieno evakuacinio išėjimo ir įrengiami ne žemiau kaip 2 metrai ir ne aukščiau kaip 2,5 metro nuo grindų paviršiaus.</p><p class="">31. Patalpose, kuriose nuolatos dirba žmonės arba per kurias vaikšto darbuotojai, saugos ir evakuacinis apšvietimas gali būti nuolatos įjungtas kartu su darbiniu apšvietimu arba jis gali automatiškai įsijungti, kai išsijungia darbinis apšvietimas. Automatiškai įjungiamas autonominis šaltinis turi užtikrinti 50 procentų avarinės apšvietos lygį per 5 s ir normuotą lygį per 60 s.</p><p class="">32. Darbiniam ir avariniam apšvietimui turi būti naudojami atskiri grupiniai apšvietimo skydeliai ir atskiri valdymo aparatai. Bendri gali būti tik šių apšvietimo grandinių valdymo įtaisai (signalinės lempos, įjungimo raktai ir pan.). Saugos ir evakuacinio apšvietimo grandines leidžiama maitinti iš bendrų skydelių.</p><p class="">33. Gamybos ir pramonės paskirties pastatuose be natūralaus patalpų apšvietimo neleidžiama saugos ir evakuacinio apšvietimo prijungti prie galios imtuvus maitinančių tinklų.</p>          </div>
+</div>
+</details></div>
+      </section>
+
+      <section class="doc-sec" id="prekes">
+        <div class="sec-head" data-reveal style="margin-bottom: 24px">
+          <div class="eyebrow">Prekės</div>
+          <h2>Avarinio išėjimo šviestuvai</h2>
+          <p class="lead">Šviestuvai iš mūsų katalogo. Visą gaisrinės automatikos ir įrangos asortimentą rasite prekių puslapyje.</p>
+        </div>
+        <div class="prod-grid pg-light-prods">
+<article class="prod" data-reveal data-name="Evakuacijos šviestuvas ">
+  <figure><img src="assets/img/katalogas/evakuaciniai-sviestuvai--image001.jpg" alt="Evakuacijos šviestuvas" loading="lazy"></figure>
+  <div class="body">
+    <h3>Evakuacijos šviestuvas</h3>
+<div class="price"><small>Kaina</small>47,31 €</div>  </div>
+</article><article class="prod" data-reveal data-name="Evakuacijos šviestuvas ">
+  <figure><img src="assets/img/katalogas/evakuaciniai-sviestuvai--image003.jpg" alt="Evakuacijos šviestuvas" loading="lazy"></figure>
+  <div class="body">
+    <h3>Evakuacijos šviestuvas</h3>
+<div class="price"><small>Kaina</small>24,53 €</div>  </div>
+</article><article class="prod" data-reveal data-name="Evakuacijos šviestuvas ">
+  <figure><img src="assets/img/katalogas/evakuaciniai-sviestuvai--image005.jpg" alt="Evakuacijos šviestuvas" loading="lazy"></figure>
+  <div class="body">
+    <h3>Evakuacijos šviestuvas</h3>
+<div class="price"><small>Kaina</small>29,78 €</div>  </div>
+</article><article class="prod" data-reveal data-name="Evakuacijos šviestuvas ">
+  <figure><img src="assets/img/katalogas/evakuaciniai-sviestuvai--image007.jpg" alt="Evakuacijos šviestuvas" loading="lazy"></figure>
+  <div class="body">
+    <h3>Evakuacijos šviestuvas</h3>
+<div class="price"><small>Kaina</small>56,07 €</div>  </div>
+</article>        </div>
+        <div style="margin-top: 24px" data-reveal><a class="btn btn-navy" href="prekes-automatika.html">Visos automatikos ir įrangos prekės<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight pg-light-cta"><div class="wrap"><div class="cta-inline" data-reveal>
+  <div><h2>Planuojate avarinį apšvietimą?</h2><p>Paskambinkite arba parašykite: aptarsime objektą, šviestuvų kiekį ir paruošime pasiūlymą.</p></div>
+  <div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a></div>
+</div></div></section>
+</main>
+
+<footer class="site-foot">
+  <img class="plan-wm" src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo-geslita-white-s.png" alt="Geslita" width="167" height="50">
+        <p><span class="ltx">20 metų priešgaisrinės saugos patirties. Įrangos priežiūra ir prekyba, darbo saugos priemonės verslui visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+      </div>
+      <div>
+        <h2 class="foot-h">Paslaugos</h2>
+        <ul>
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra</a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai</a></li>
+          <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Prekės ir informacija</h2>
+        <ul>
+          <li><a href="prekes-gesintuvai.html">Gesintuvai</a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai</a></li>
+          <li><a href="prekes-automatika.html">Automatika ir įranga</a></li>
+          <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+          <li><a href="apie-mus.html">Apie mus</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Kontaktai</h2>
+        <ul class="foot-contact">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+37065399977">+370 653 99977</a><br><a href="tel:+37060763109">+370 607 63109</a></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@geslita.lt">info@geslita.lt</a></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Fabijoniškių g. 4A, Vilnius<br><span class="muted">Ne parduotuvė: prieš atvykdami paskambinkite</span></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span>I-V 9:00-18:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2010-2026 UAB „Geslita“. Visos teisės saugomos.</span>
+      <span><a href="kontaktai.html">Kontaktai</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

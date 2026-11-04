@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) document.documentElement.classList.add('js');</script>
+<title>Paslaugos ir kainos | Geslita</title>
+<meta name="description" content="UAB „Geslita“, 20 metų patirtis: gesintuvų patikra ir pildymas, gaisrinė signalizacija, evakuacijos planai, darbuotojų mokymai ir priešgaisrinės prekės visoje Lietuvoje.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* Paslaugų puslapis (pg-psl-): numeruotas sąrašas su lipnia navigacija */
+.pg-psl-doc { padding-top: clamp(28px, 4vw, 56px); }
+.pg-psl-sec { border-top: 1px solid var(--line-2); padding-top: 26px; }
+.pg-psl-n { display: block; margin-bottom: 14px; font: 700 13px/1 var(--fb); letter-spacing: 0.12em; color: var(--navy-3); }
+.pg-psl-sec > .lead { margin-top: 14px; }
+.pg-psl-meta .tag { white-space: normal; text-align: left; }
+.pg-psl-meta .tag .ic { font-size: 15px; color: var(--navy-3); }
+.pg-psl-note { margin: -8px 0 20px; }
+.pg-psl-two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px 40px; align-items: center; margin: 28px 0; }
+.pg-psl-two.rev > :first-child { order: 2; }
+.pg-psl-two.solo { grid-template-columns: 1fr; }
+.pg-psl-two.lite { grid-template-columns: minmax(0, 1fr) 320px; }
+.pg-psl-two.lite.rev { grid-template-columns: 320px minmax(0, 1fr); }
+.pg-psl-two.solo .checks { grid-template-columns: 1fr 1fr; gap: 8px 28px; }
+.pg-psl-two.lite p { max-width: none; }
+.pg-psl-two.lite p + .checks { margin-top: 16px; }
+.pg-psl-phone-note { display: none; }
+.pg-psl-fig { margin: 0; border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 3 / 2; background: var(--bg-2); box-shadow: var(--shadow-md); }
+.pg-psl-fig img { width: 100%; height: 100%; object-fit: cover; }
+.pg-psl-fig.contain { background: #fff; display: flex; align-items: center; justify-content: center; gap: 28px; padding: 24px; }
+.pg-psl-fig.contain img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+.pg-psl-tbl + .pg-psl-tbl, .pg-psl-tbl + .acc, .pg-psl-tbl + .doc-list, .acc + .doc-list { margin-top: 24px; }
+.pg-psl-doc .tbl td.num, .pg-psl-doc .tbl th.num { font-variant-numeric: lining-nums; }
+.pg-psl-foot { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; margin-top: 26px; }
+.pg-psl-foot .pill-row { margin-left: auto; align-items: center; }
+.pg-psl-foot a.tag { text-decoration: none; transition: border-color 0.25s var(--ease), color 0.25s var(--ease); }
+.pg-psl-foot a.tag:hover { border-color: var(--ink); color: var(--ink); }
+.pg-psl-side { font-size: 14.5px; }
+.pg-psl-side a:not(.btn) { color: var(--ink); font-weight: 600; text-decoration: none; padding: 0; margin: 0; border: 0; }
+.doc-nav .pg-psl-side .btn, .doc-nav .pg-psl-side .btn:hover { display: inline-flex; padding: 0 16px; margin: 4px 0 0; border: 1.5px solid transparent; color: #fff; font-size: 15px; }
+.pg-psl-cta { overflow: hidden; padding-top: 0; }
+.pg-psl-cta .cta-inline { margin-top: 0; }
+.pg-psl-cta .plan { position: absolute; left: -16%; bottom: -34%; width: clamp(460px, 48vw, 820px); opacity: 0.1; pointer-events: none; will-change: transform; }
+.pg-psl-cta .wrap { position: relative; }
+@media (max-width: 960px) { .pg-psl-doc .doc { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 900px) {
+  .pg-psl-two, .pg-psl-two.lite, .pg-psl-two.lite.rev { grid-template-columns: minmax(0, 1fr); }
+  .pg-psl-two.rev > :first-child { order: 0; }
+  .pg-psl-fig { max-width: 520px; }
+  .pg-psl-foot .pill-row { margin-left: 0; }
+}
+@media (max-width: 640px) {
+  .pg-psl-two.solo .checks { grid-template-columns: 1fr; }
+  .pg-psl-tbl.narrow .tbl table { min-width: 0; font-size: 14px; }
+  .pg-psl-tbl.narrow .tbl th, .pg-psl-tbl.narrow .tbl td { padding: 10px; }
+  .pg-psl-tbl.narrow .tbl th.num { white-space: normal; }
+  .pg-psl-tbl.narrow .tbl .num { width: 1%; }
+  .pg-psl-tbl.wide .tbl table { min-width: 0; font-size: 13.5px; }
+  .pg-psl-tbl.wide .tbl th, .pg-psl-tbl.wide .tbl td { padding: 10px 8px; }
+  .pg-psl-tbl.wide .tbl th.num { white-space: normal; }
+  .pg-psl-tbl.wide .tbl .num { width: 1%; }
+  .pg-psl-tbl.hide-c3 .tbl th:nth-child(3), .pg-psl-tbl.hide-c3 .tbl td:nth-child(3) { display: none; }
+  .pg-psl-phone-note { display: block; }
+}
+/* Paslaugų hero (.sv-) */
+.sv-hero { position: relative; padding-top: calc(var(--head-h) + clamp(36px, 5vw, 72px)); padding-bottom: clamp(48px, 6vw, 80px); overflow: clip; }
+.sv-hero .plan { position: absolute; right: -10%; top: -8%; width: clamp(520px, 56vw, 960px); opacity: 0.1; pointer-events: none; will-change: transform; }
+.sv-hero > .wrap:first-of-type { position: relative; display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+.sv-copy h1 { margin: 18px 0 18px; font-size: clamp(40px, 5.4vw, 72px); line-height: 1; letter-spacing: -0.035em; }
+.sv-copy .lead { max-width: 32em; }
+.sv-copy .btn-group { margin-top: 26px; }
+.sv-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin: 34px 0 0; max-width: 520px; }
+.sv-stats > div { padding-top: 12px; border-top: 2px solid var(--ink); }
+.sv-stats dt { order: 2; font-size: 13px; line-height: 1.35; color: var(--muted); }
+.sv-stats > div { display: flex; flex-direction: column-reverse; gap: 6px; }
+.sv-stats dd { margin: 0; font: 700 clamp(32px, 3.2vw, 44px)/1 var(--fd); letter-spacing: -0.03em; color: var(--ink); font-variant-numeric: lining-nums; }
+.sv-visual { position: relative; height: clamp(420px, 42vw, 580px); }
+.sv-main { position: absolute; inset: 0 0 12% 10%; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-lg); will-change: transform; }
+.sv-main img, .sv-sub img { width: 100%; height: 100%; object-fit: cover; }
+.sv-sub { position: absolute; left: 0; bottom: 0; width: 38%; aspect-ratio: 4 / 3; border-radius: var(--r-lg); overflow: hidden; outline: 6px solid var(--bg); box-shadow: var(--shadow-lg); will-change: transform; z-index: 2; }
+.sv-prices { position: absolute; right: -2%; top: 8%; z-index: 3; width: min(300px, 62%); padding: 16px 18px; border-radius: 16px; background: rgba(255, 255, 255, 0.92); border: 1px solid rgba(217, 223, 231, 0.8); box-shadow: var(--shadow-lg); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); will-change: transform; }
+.sv-prices .lbl { display: block; margin-bottom: 8px; font: 600 12px/1 var(--fb); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.sv-prices ul { margin: 0; padding: 0; list-style: none; }
+.sv-prices li + li { border-top: 1px solid var(--line); }
+.sv-prices a { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 9px 0; color: var(--ink); text-decoration: none; font-size: 14.5px; font-weight: 500; }
+.sv-prices a b { font: 700 15.5px/1 var(--fd); color: var(--navy-3); white-space: nowrap; font-variant-numeric: lining-nums; }
+.sv-prices a:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.sv-index { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: clamp(48px, 6vw, 80px); }
+.sv-index a { position: relative; display: grid; grid-template-columns: 40px minmax(0, 1fr); grid-template-rows: auto auto; column-gap: 12px; row-gap: 3px; align-items: center; padding: 16px 16px 14px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm); color: var(--ink); text-decoration: none; transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease); }
+.sv-index .n { position: absolute; right: 14px; top: 12px; font: 600 12px/1 var(--fb); color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
+.sv-index .ico { grid-row: 1 / 3; width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: #e8eef7; color: var(--navy-3); transition: background 0.35s var(--ease), color 0.35s var(--ease); }
+.sv-index .ico .ic { font-size: 19px; }
+.sv-index b { padding-right: 18px; font: 600 14.5px/1.25 var(--fd); }
+.sv-index small { font-size: 12.5px; color: var(--muted); }
+.sv-index a:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: transparent; }
+.sv-index a:hover .ico { background: var(--navy-3); color: #fff; }
+.sv-note { margin-top: 16px; font-size: 13.5px; color: var(--muted); }
+@media (max-width: 1100px) { .sv-index { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 960px) { .sv-hero > .wrap:first-of-type { grid-template-columns: minmax(0, 1fr); } .sv-visual { height: 440px; max-width: 600px; } }
+@media (max-width: 640px) { .sv-index { grid-template-columns: 1fr 1fr; gap: 8px; } .sv-index a { grid-template-columns: 34px minmax(0, 1fr); padding: 12px; column-gap: 10px; } .sv-index .ico { width: 34px; height: 34px; } .sv-index .n { display: none; } .sv-index b { padding-right: 0; font-size: 13.5px; } .sv-visual { height: 320px; } .sv-prices { display: none; } .sv-stats { gap: 12px; } }
+</style></head>
+<body class="">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14L20 4M15 4h5v5"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3 4 5 4 9a4 4 0 0 1-8 0c0-1 .3-2 1-3 0 2 1 3 2 3 0-3-1-5 1-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V6h11v11M14 9h4l3 3v5h-2"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3H4a4 4 0 0 0 2-3v-3a7 7 0 0 1 4-6M9 17v1a3 3 0 0 0 6 0v-1"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3zM9 4v13M15 7v13"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 9L12 5 2 9l10 4 10-4zM6 10.6V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.4"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M7 10h3v11H7zM14 4l3-1 3 3-1 3-5 5-3-3 3-7zM4 20l3-3"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></symbol>
+</svg>
+<a class="skip" href="#main">Pereiti prie turinio</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Geslita, į pradžią"><img src="assets/img/logo-geslita-s.png" alt="Geslita" width="167" height="50"></a>
+    <ul class="site-nav">
+      <li><a href="index.html" >Pradžia</a></li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-paslaugos">Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-paslaugos">
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas<span>Patikra nuo 5,26 €</span></a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija<span>Patikra, remontas, įrengimas</span></a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis<span>Čiaupai, žarnos, žurnalai</span></a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai<span>Planas 70 €</span></a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai<span>Montavimas pagal EN 1838</span></a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai<span>Saugos centras</span></a></li>
+          <li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos<span>Dielektrika, nuoma, žurnalai</span></a></li>
+          <li><a class="drop-all" href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-prekes">Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-prekes">
+          <li><a href="prekes-gesintuvai.html">Gesintuvai<span>Milteliniai, CO₂, vandens putų</span></a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis<span>Spintelės, žarnos, čiaupai</span></a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai<span>102 ženklai su paieška</span></a></li>
+          <li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga<span>Detektoriai, sirenos, šviestuvai</span></a></li>
+          <li><a class="drop-all" href="prekes.html">Visos prekės</a></li>
+        </ul>
+      </li>
+      <li><a href="saugos-centras.html" >Saugos centras</a></li>
+      <li class="nav-naudinga"><a href="naudinga-informacija.html" >Naudinga</a></li>
+      <li><a href="apie-mus.html" >Apie mus</a></li>
+      <li><a href="kontaktai.html" >Kontaktai</a></li>
+    </ul>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>+370 653 99977</span></a>
+      <a class="btn btn-sm" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+      <button class="nav-toggle" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-nav"><svg class="ic ic-menu"><use href="#i-menu"/></svg><svg class="ic ic-x"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilus meniu">
+  <ul>
+    <li><a href="index.html">Pradžia</a></li>
+    <li><details><summary>Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li><li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas</a></li><li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li><li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li><li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li><li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li><li><a href="saugos-centras.html">Darbuotojų mokymai</a></li><li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos</a></li>
+    </ul></details></li>
+    <li><details><summary>Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="prekes.html">Visos prekės</a></li><li><a href="prekes-gesintuvai.html">Gesintuvai</a></li><li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li><li><a href="prekes-zenklai.html">Saugos ženklai</a></li><li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga</a></li>
+    </ul></details></li>
+    <li><a href="saugos-centras.html">Saugos centras</a></li>
+    <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+    <li><a href="apie-mus.html">Apie mus</a></li>
+    <li><a href="kontaktai.html">Kontaktai</a></li>
+  </ul>
+  <div class="mobile-cta">
+    <a class="btn" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+    <a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<section class="sv-hero" data-parallax-root>
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.18">
+  <div class="wrap">
+    <div class="sv-copy">
+      <ol class="crumbs"><li><a href="index.html">Pradžia</a></li><li><span aria-current="page">Paslaugos</span></li></ol>
+      <h1>Paslaugos ir kainos</h1>
+      <p class="lead"><span class="ltx">Visos paslaugos ir jų kainoraščiai vienoje vietoje: nuo gesintuvų patikros iki mokymų ir dokumentų. Atvykstame į objektą visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+      <div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="#kitos-paslaugos">Kitos paslaugos</a></div>
+      <dl class="sv-stats">
+        <div><dt>Paslaugų su kainoraščiais</dt><dd data-count="10">10</dd></div>
+        <div><dt>Kitų paslaugų grupių</dt><dd data-count="10">10</dd></div>
+        <div><dt>Metų patirtis</dt><dd data-count="20">20</dd></div>
+      </dl>
+    </div>
+    <div class="sv-visual">
+      <div class="sv-main" data-parallax="0.06" data-reveal="scale"><img src="assets/img/foto/paslaugos-technikas.jpg" srcset="assets/img/foto/paslaugos-technikas-640.webp 640w, assets/img/foto/paslaugos-technikas-1280.webp 1280w, assets/img/foto/paslaugos-technikas-1920.webp 1920w" alt="Specialistas su atšvaitine apranga tikrina gaisrinio vandentiekio vamzdyną" width="1880" height="1253" fetchpriority="high" sizes="(max-width: 960px) 92vw, 46vw" style="object-position: 30% 50%"></div>
+      <div class="sv-sub" data-parallax="-0.2"><img src="assets/img/foto/paslaugos-zenklai.jpg" srcset="assets/img/foto/paslaugos-zenklai-640.webp 640w, assets/img/foto/paslaugos-zenklai-1280.webp 1280w, assets/img/foto/paslaugos-zenklai-1920.webp 1920w" alt="Gesintuvo ir gaisrinio čiaupo ženklai ant spintelių durelių" width="1880" height="1255" sizes="(max-width: 960px) 40vw, 18vw"></div>
+      <div class="sv-prices" data-parallax="-0.12">
+        <span class="lbl">Kainos nuo</span>
+        <ul><li><a href="#gesintuvu-patikra"><span>Gesintuvų patikra</span><b>nuo 5,26 €</b></a></li><li><a href="#gaisrine-signalizacija"><span>Gaisrinė signalizacija</span><b>nuo 70,00 €</b></a></li><li><a href="#gaisrinis-vandentiekis"><span>Gaisrinis vandentiekis</span><b>nuo 6,31 €</b></a></li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <nav class="sv-index" aria-label="Paslaugų rodyklė">
+      <a href="#gesintuvu-patikra" data-reveal style="--i:0"><span class="n">01</span><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></span><b>Gesintuvų patikra</b><small>nuo 5,26 €</small></a>
+      <a href="#gaisrine-signalizacija" data-reveal style="--i:1"><span class="n">02</span><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg></span><b>Gaisrinė signalizacija</b><small>nuo 70,00 €</small></a>
+      <a href="#gaisrinis-vandentiekis" data-reveal style="--i:2"><span class="n">03</span><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-droplet"/></svg></span><b>Gaisrinis vandentiekis</b><small>nuo 6,31 €</small></a>
+      <a href="#evakuacijos-planai" data-reveal style="--i:3"><span class="n">04</span><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg></span><b>Evakuacijos planai</b><small>70,00 €</small></a>
+      <a href="#darbuotoju-mokymai" data-reveal style="--i:4"><span class="n">05</span><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg></span><b>Darbuotojų mokymai</b><small>kas 3 metus</small></a>
+      <a href="#dielektriniu-priemoniu-patikra" data-reveal style="--i:0"><span class="n">06</span><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></span><b>Dielektrinių priemonių patikra</b><small>pagal priemonės rūšį - kas 6, 12, 24 arba 36 mėn.</small></a>
+      <a href="#medienos-impregnavimas" data-reveal style="--i:1"><span class="n">07</span><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-tools"/></svg></span><b>Medienos impregnavimas</b><small>Kaina pagal užklausą</small></a>
+      <a href="#gesintuvu-nuoma" data-reveal style="--i:2"><span class="n">08</span><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-truck"/></svg></span><b>Gesintuvų nuoma</b><small>nuo 6,00 €</small></a>
+      <a href="#avariniu-sviestuvu-montavimas" data-reveal style="--i:3"><span class="n">09</span><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg></span><b>Avariniai šviestuvai</b><small>Kaina pagal užklausą</small></a>
+      <a href="#registracijos-zurnalai" data-reveal style="--i:4"><span class="n">10</span><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span><b>Registracijos žurnalai</b><small>nuo 3,50 €</small></a>
+    </nav>
+    <p class="sv-note">Kainoraščiuose nurodytos mažmeninės kainos. Norėdami sužinoti kainą didesniam kiekiui, siųskite užklausimą el. paštu info@geslita.lt.</p>
+  </div>
+</section>
+
+<section class="sec pg-psl-doc">
+  <div class="wrap doc">
+    <nav class="doc-nav" aria-label="Paslaugų sąrašas">
+      <ul>
+        <li><a href="#gesintuvu-patikra">Gesintuvų patikra</a></li>
+        <li><a href="#gaisrine-signalizacija">Gaisrinė signalizacija</a></li>
+        <li><a href="#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li>
+        <li><a href="#evakuacijos-planai">Evakuacijos planai</a></li>
+        <li><a href="#darbuotoju-mokymai">Darbuotojų mokymai</a></li>
+        <li><a href="#dielektriniu-priemoniu-patikra">Dielektrinių priemonių patikra</a></li>
+        <li><a href="#medienos-impregnavimas">Medienos impregnavimas</a></li>
+        <li><a href="#gesintuvu-nuoma">Gesintuvų nuoma</a></li>
+        <li><a href="#avariniu-sviestuvu-montavimas">Avariniai šviestuvai</a></li>
+        <li><a href="#registracijos-zurnalai">Registracijos žurnalai</a></li>
+        <li><a href="#kitos-paslaugos">Kitos paslaugos</a></li>
+      </ul>
+      <div class="side-card pg-psl-side">
+        <strong>Reikia pasiūlymo?</strong>
+        <span class="muted">Skambinkite darbo dienomis 9:00-18:00 arba rašykite.</span>
+        <a href="tel:+37065399977">+370 653 99977</a>
+        <a href="mailto:info@geslita.lt">info@geslita.lt</a>
+        <a class="btn btn-sm" href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </nav>
+
+    <div class="doc-body">
+      <section class="doc-sec pg-psl-sec" id="gesintuvu-patikra" data-reveal>
+        <span class="pg-psl-n num" aria-hidden="true">01</span>
+        <h2>Gesintuvų patikra ir pildymas</h2>
+<p class="lead"><span class="ltx">Visų rūšių ir tipų ugnies gesintuvų patikra, pildymas ir techninis aptarnavimas visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+        <div class="meta pg-psl-meta">
+<span class="tag tag-navy">Kaina nuo 5,26 €</span>
+        </div>
+<p class="small muted pg-psl-note">Kaina priklauso nuo gesintuvo tipo ir talpos. Nurodytos mažmeninės kainos; norėdami sužinoti savo kainas, siųskite užklausimą el. paštu info@geslita.lt.</p>
+<p><span class="ltx">Atliekame visų rūšių ir tipų ugnies gesintuvų patikrą, pildymą ir techninį aptarnavimą visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>: aptarnaujame miltelinius, angliarūgšties ir vandens putų gesintuvus.</span></p><p>Patikros metu patikrinama gesintuvo darbinė būklė, prireikus gesintuvas užpildomas ir perdažomas. Miltelinių ir vandens putų gesintuvų techninės priežiūros instrukcijas rasite žemiau.</p><p>Taip pat prekiaujame visų rūšių ugnies gesintuvais, prižiūrime ir komplektuojame objektų gaisrinį ūkį.</p>
+        <div class="pg-psl-two">
+          <div data-reveal style="--i:1"><ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Miltelinių, angliarūgšties ir vandens putų gesintuvų techninis aptarnavimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Darbinės būklės patikrinimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gesintuvų užpildymas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gesintuvų dažymas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><span class="ltx">Darbai atliekami visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span></span></span></li></ul></div>
+          <figure class="pg-psl-fig contain" data-reveal="scale" style="--i:2">
+<img src="assets/img/geslita/co1.jpg" alt="Gesintuvų patikra ir pildymas" loading="lazy">          </figure>
+        </div>
+
+<div class="pg-psl-tbl narrow"><div class="tbl" data-reveal>
+  <table>
+<caption>Milteliniai gesintuvai</caption><thead><tr><th >Gesintuvas</th><th class="num">Patikros kaina</th><th class="num">Užpildymo kaina</th></tr></thead>    <tbody>
+<tr><td >2 kg miltelinis gesintuvas MG-2</td><td class="num">nuo 5,79 €</td><td class="num"><b>nuo 7,01 €</b></td></tr><tr><td >4 kg miltelinis gesintuvas MG-4</td><td class="num">nuo 5,79 €</td><td class="num"><b>nuo 10,51 €</b></td></tr><tr><td >6 kg miltelinis gesintuvas MG-6</td><td class="num">nuo 5,79 €</td><td class="num"><b>nuo 12,62 €</b></td></tr><tr><td >12 kg miltelinis gesintuvas MG-12</td><td class="num">nuo 5,79 €</td><td class="num"><b>nuo 25,23 €</b></td></tr><tr><td >25 kg miltelinis gesintuvas MG-25</td><td class="num">nuo 20,51 €</td><td class="num"><b>nuo 69,00 €</b></td></tr><tr><td >50 kg miltelinis gesintuvas MG-50</td><td class="num">nuo 40,00 €</td><td class="num"><b>nuo 137,50 €</b></td></tr><tr><td >100 kg miltelinis gesintuvas MG-100</td><td class="num">nuo 60,00 €</td><td class="num"><b>nuo 275,00 €</b></td></tr>    </tbody>
+  </table>
+</div>
+<p class="tbl-note">Nurodytos mažmeninės kainos. Norėdami sužinoti savo kainas, siųskite užklausimą el. paštu info@geslita.lt.</p></div><div class="pg-psl-tbl narrow"><div class="tbl" data-reveal>
+  <table>
+<caption>Angliarūgštiniai gesintuvai</caption><thead><tr><th >Gesintuvas</th><th class="num">Patikros kaina</th><th class="num">Užpildymo kaina</th></tr></thead>    <tbody>
+<tr><td >2 l angliarūgštinis gesintuvas AG-2</td><td class="num">nuo 5,26 €</td><td class="num"><b>7,01 €</b></td></tr><tr><td >3 l angliarūgštinis gesintuvas AG-3</td><td class="num">nuo 5,26 €</td><td class="num"><b>7,01 €</b></td></tr><tr><td >5 l angliarūgštinis gesintuvas AG-5</td><td class="num">nuo 5,26 €</td><td class="num"><b>7,01 €</b></td></tr><tr><td >8 l angliarūgštinis gesintuvas AG-8</td><td class="num">nuo 7,01 €</td><td class="num"><b>10,51 €</b></td></tr><tr><td >10 l angliarūgštinis gesintuvas AG-10</td><td class="num">nuo 7,01 €</td><td class="num"><b>10,51 €</b></td></tr><tr><td >25 l angliarūgštinis gesintuvas AG-25</td><td class="num">nuo 8,76 €</td><td class="num"><b>21,03 €</b></td></tr><tr><td >50 l angliarūgštinis gesintuvas AG-50</td><td class="num">nuo 14,02 €</td><td class="num"><b>29,79 €</b></td></tr>    </tbody>
+  </table>
+</div>
+<p class="tbl-note">Nurodytos mažmeninės kainos. Norėdami sužinoti savo kainas, siųskite užklausimą el. paštu info@geslita.lt.</p></div><div class="pg-psl-tbl narrow"><div class="tbl" data-reveal>
+  <table>
+<caption>Vandens putų gesintuvai</caption><thead><tr><th >Gesintuvas</th><th class="num">Dažymo kaina</th><th class="num">Užpildymo kaina</th></tr></thead>    <tbody>
+<tr><td >Vandens putų gesintuvas VPG-5</td><td class="num">1,75 €</td><td class="num"><b>5,26 €</b></td></tr><tr><td >Vandens putų gesintuvas VPG-(9-10)</td><td class="num">1,75 €</td><td class="num"><b>7,01 €</b></td></tr><tr><td >Vandens putų gesintuvas VPG-50</td><td class="num">17,52 €</td><td class="num"><b>17,52 €</b></td></tr><tr><td >Vandens putų gesintuvas VPG-100</td><td class="num">26,28 €</td><td class="num"><b>34,75 €</b></td></tr>    </tbody>
+  </table>
+</div>
+<p class="tbl-note">Nurodytos mažmeninės kainos. Norėdami sužinoti savo kainas, siųskite užklausimą el. paštu info@geslita.lt.</p></div>
+        <details class="acc" >
+  <summary>Plačiau: miltelinių, vandens putų ir angliarūgštės gesintuvų paskirtis<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>Miltelinis gesintuvas. Tai universali ugnies gesinimo priemonė, tinkanti gesinti A, B, C, D klasės gaisrus (priklausomai nuo miltelių rūšies). Taip pat juo galima gesinti elektros įrenginius. Miltelinis gesintuvas chemiškai stabdo degimą. Šie gesintuvai efektyviai gesina ne tik A, B bei C klasių gaisrus, bet tinka gesinti ir neišjungtus elektros prietaisus, todėl juos galima vadinti universaliaisiais gesintuvais, galinčiais puikiai padėti apsisaugoti nuo gaisro jūsų namuose.</p><p>Vandens putų gesintuvas. Pagrindinė gesinimo medžiaga - putos: oro, vandens ir putokšlio (putodario) mišinys. Tinka gesinti A klasės (degant kietoms medžiagoms susidaro įkaitusios anglys) ir B klasės (dega degūs skysčiai ar tokios medžiagos, kurios degdamos skystėja) gaisrus, bet juo negalima gesinti dujų ir elektros įrenginių. Būtina laikyti šildomose patalpose.</p><p>Angliarūgštės gesintuvas. Pagrindinė gesinimo medžiaga - anglies dioksidas. Gesina B ir C klasės (dega degios dujos) gaisrus, tinka elektros įrenginių gesinimui. Mažai veiksmingas gesinant A ir D klasės (dega degūs metalai) gaisrus. Gesintuvai su angliarūgštės užpildu rekomenduojami elektros gaisrams gesinti (kompiuterių, jungiklių, garso įrangos, įvairių mechanizmų gaisrams). Gesinimo medžiaga visiškai išsisklaido ore ir nepalieka jokių pėdsakų. Šio tipo gesintuvai taip pat gali būti naudojami B klasės gaisrams - degiems skysčiams arba skystėjančioms medžiagoms (benzinui, naftos produktams, riebalams, lakams, dervai, vaškui, eteriui, alkoholiui ir kt.) gesinti. Rekomenduojama papildomai turėti vandens putų arba miltelinius gesintuvus, kurie užtikrintų apsaugą nuo A klasės gaisrų.</p></div>
+</details>
+
+        <ul class="doc-list">
+<li><a href="https://www.geslita.lt/uploads/Naudinga%20informacija/Miltelinių%20gesintuvų%20techninės%20priežiūros%20instrukcija.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><span>Miltelinių gesintuvų techninės priežiūros instrukcija<span class="sr-only"> (PDF, atsidaro naujame lange)</span></span><svg class="ic ic-out" aria-hidden="true"><use href="#i-out"/></svg></a></li><li><a href="https://www.geslita.lt/uploads/Naudinga%20informacija/Vandens%20putų%20gesintuvų%20techninės%20priežiūros%20instrukcija.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><span>Vandens putų gesintuvų techninės priežiūros instrukcija<span class="sr-only"> (PDF, atsidaro naujame lange)</span></span><svg class="ic ic-out" aria-hidden="true"><use href="#i-out"/></svg></a></li>        </ul>
+
+        <div class="pg-psl-foot">
+<a class="link" href="gesintuvu-patikra.html">Plačiau apie gesintuvų patikrą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>          <div class="pill-row"><span class="small muted">Susijusios prekės:</span><a class="tag tag-line" href="prekes-gesintuvai.html">Gesintuvai</a></div>
+        </div>
+      </section>
+      <section class="doc-sec pg-psl-sec" id="gaisrine-signalizacija" data-reveal>
+        <span class="pg-psl-n num" aria-hidden="true">02</span>
+        <h2>Gaisrinės signalizacijos patikra, remontas ir įrengimas</h2>
+<p class="lead">Gaisrinės signalizacijos įrengimas, kasmetinė patikra ir remontas.</p>
+        <div class="meta pg-psl-meta">
+<span class="tag tag-navy">Kaina nuo 70,00 €</span>
+<span class="tag"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>Periodiškumas: kartą per metus</span><span class="tag tag-line"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Gaisrinės signalizacijos automatikos eksploatavimo taisyklės</span>        </div>
+<p class="small muted pg-psl-note">Patikros kaina priklauso nuo patalpų ploto, aukščio ir daviklių kiekio.</p>
+<p>Gaisrinė signalizacija skirta automatiškai aptikti degimo ar dūmų židinius: sistemą sudaro dūminiai, temperatūriniai ir liepsnos detektoriai, rankiniai gaisro pavojaus mygtukai ir signaliniai įrenginiai - vidinės sirenos, blykstės bei lauko sirenos su blykste. Atliekame gaisrinės signalizacijos kabelių instaliaciją, montavimą, derinimą, programavimą, remontą ir kasmetinę patikrą, o patikros rezultatus įforminame tam skirtame žurnale arba akte. Taip pat atliekame automatinių gesinimo sistemų techninę priežiūrą.</p>
+        <div class="pg-psl-two rev">
+          <div data-reveal style="--i:1"><ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinės signalizacijos įrengimas: kabelių instaliacija, montavimas, derinimas, programavimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Kasmetinė techninės būklės patikra su įrašu žurnale arba aktu</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gedimų paieška ir remontas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Detektorių ir gaisro pavojaus mygtukų patikra</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Automatinių gesinimo sistemų techninė priežiūra</span></li></ul></div>
+          <figure class="pg-psl-fig" data-reveal="scale" style="--i:2">
+<img src="assets/img/geslita/Gaisrines_signalizacijos_patikra_komplektas.jpg" alt="Gaisrinės signalizacijos patikros komplektas" loading="lazy">          </figure>
+        </div>
+
+
+
+        <ul class="doc-list">
+<li><a href="https://www.geslita.lt/uploads/GAISRINĖS%20SIGNALIZACIJOS%20AUTOMATIKOS%20EKSPLOATAVIMO%20TAISYKLĖS.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><span>Gaisrinės signalizacijos automatikos eksploatavimo taisyklės<span class="sr-only"> (PDF, atsidaro naujame lange)</span></span><svg class="ic ic-out" aria-hidden="true"><use href="#i-out"/></svg></a></li>        </ul>
+
+        <div class="pg-psl-foot">
+<a class="link" href="gaisrine-signalizacija.html">Plačiau apie gaisrinę signalizaciją<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>          <div class="pill-row"><span class="small muted">Susijusios prekės:</span><a class="tag tag-line" href="prekes-automatika.html">Gaisrinė automatika ir įranga</a></div>
+        </div>
+      </section>
+      <section class="doc-sec pg-psl-sec" id="gaisrinis-vandentiekis" data-reveal>
+        <span class="pg-psl-n num" aria-hidden="true">03</span>
+        <h2>Priešgaisrinio vandentiekio techninis aptarnavimas</h2>
+<p class="lead">Gaisrinių čiaupų patikra, slėginių gaisrinių žarnų išbandymas, perkantavimas ir įrišimas.</p>
+        <div class="meta pg-psl-meta">
+<span class="tag tag-navy">Kaina nuo 6,31 €</span>
+        </div>
+<p class="small muted pg-psl-note">Gaisrinio čiaupo patikros kaina. Gaisrinės žarnos patikra nuo 10,51 €, įrišimas nuo 3,50 €.</p>
+<p>Atliekame gaisrinių čiaupų patikrą ir gaisrinių čiaupų keitimo darbus, išbandome slėgines gaisrines žarnas, jas džioviname, įrišame ir perkantuojame.</p><p>Prižiūrime ir komplektuojame objektų gaisrinį ūkį: prekiaujame gaisrinio vandentiekio įranga ir gaisrinių čiaupų komplektacijomis - spintelėmis, žarnomis, čiaupais, švirkštais, gaisrine armatūra, taip pat siurbliais ir hidrantais.</p>
+        <div class="pg-psl-two">
+          <div data-reveal style="--i:1"><ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinio čiaupo patikra</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinės žarnos patikra (išbandymas, perkantavimas)</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinės žarnos įrišimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinių žarnų džiovinimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinių čiaupų keitimo darbai</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinių čiaupų komplektavimas (spintelės, žarnos, čiaupai, švirkštai, armatūra)</span></li></ul></div>
+          <figure class="pg-psl-fig" data-reveal="scale" style="--i:2">
+<img src="assets/img/geslita/gaisriniu_zarnu_isbandymas.jpg" alt="Gaisrinių žarnų išbandymas" loading="lazy">          </figure>
+        </div>
+
+<div class="pg-psl-tbl narrow"><div class="tbl" data-reveal>
+  <table>
+<caption>Darbų kainos</caption><thead><tr><th >Paslaugos pavadinimas</th><th class="num">Kaina</th></tr></thead>    <tbody>
+<tr><td >Gaisrinio čiaupo patikra</td><td class="num"><b>nuo 6,31 €</b></td></tr><tr><td >Gaisrinės žarnos patikra (išbandymas, perkantavimas)</td><td class="num"><b>nuo 10,51 €</b></td></tr><tr><td >Gaisrinės žarnos įrišimas (iš vienos pusės)</td><td class="num"><b>nuo 3,50 €</b></td></tr><tr><td >Gaisrinių čiaupų patikrinimo ir registravimo žurnalas</td><td class="num"><b>nuo 5,26 €</b></td></tr><tr><td >Ženklas D.2 „Gaisrinis čiaupas“ 130x130 mm</td><td class="num"><b>1,80 €</b></td></tr><tr><td >Ženklas F.2 „Ugniagesių iškvietimas 112“ 100x180 mm</td><td class="num"><b>1,80 €</b></td></tr>    </tbody>
+  </table>
+</div>
+<p class="tbl-note">Nurodytos mažmeninės kainos.</p></div>
+
+
+        <div class="pg-psl-foot">
+          <div class="pill-row"><span class="small muted">Susijusios prekės:</span><a class="tag tag-line" href="prekes-vandentiekis.html">Gaisrinio vandentiekio įranga</a><a class="tag tag-line" href="prekes-zenklai.html">Saugos ženklai</a></div>
+        </div>
+      </section>
+      <section class="doc-sec pg-psl-sec" id="evakuacijos-planai" data-reveal>
+        <span class="pg-psl-n num" aria-hidden="true">04</span>
+        <h2>Evakuacijos planų braižymas</h2>
+<p class="lead">Braižome įvairaus dydžio ir sudėtingumo evakuacijos (evakavimo) planus, juos rėminame ir laminuojame.</p>
+        <div class="meta pg-psl-meta">
+<span class="tag tag-navy">Kaina 70,00 €</span>
+        </div>
+<p class="small muted pg-psl-note">Teisinis pagrindas: LR Darbo kodekso 266 str.; LR Darbuotojų saugos ir sveikatos įstatymo 22 str.; Bendrųjų gaisrinės saugos taisyklių (Žin., 2010, Nr. 99-5167) 64 p. ir 6 priedas</p><p class="small muted pg-psl-note">Evakavimo plano rengimo kaina.</p>
+<p>Braižome įvairaus dydžio ir sudėtingumo evakuacijos / evakavimo planus pagal Bendrųjų gaisrinės saugos taisyklių 6 priedo reikalavimus, planus rėminame ir laminuojame. Naujiena - tamsoje šviečiantys evakuacijos planai.</p><p>Evakavimo planus privalo turėti kiekviena įmonė, įstaiga ir organizacija, nepriklausomai nuo darbuotojų skaičiaus (LR Darbo kodekso 266 str., LR Darbuotojų saugos ir sveikatos įstatymo 22 str.). Taip pat konsultuojame rengiant evakuacijos pratybas, parengiame ekstremalių situacijų valdymo planą ir teikiame priešgaisrinės bei civilinės saugos konsultacijas.</p>
+        <div class="pg-psl-two rev">
+          <div data-reveal style="--i:1"><ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Evakuacijos / evakavimo planų braižymas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Tamsoje šviečiantys evakuacijos planai</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Planų rėminimas ir laminavimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Konsultacijos rengiant evakuacijos pratybas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Ekstremalių situacijų valdymo plano parengimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Priešgaisrinės ir civilinės saugos konsultacijos</span></li></ul></div>
+          <figure class="pg-psl-fig" data-reveal="scale" style="--i:2">
+<img src="assets/img/geslita/Planas_2l.jpg" alt="Evakuacijos plano pavyzdys" loading="lazy">          </figure>
+        </div>
+
+
+
+
+        <div class="pg-psl-foot">
+<a class="link" href="evakuacijos-planai.html">Plačiau apie evakuacijos planus<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>          <div class="pill-row"><span class="small muted">Susijusios prekės:</span><a class="tag tag-line" href="prekes-zenklai.html">Saugos ženklai</a></div>
+        </div>
+      </section>
+      <section class="doc-sec pg-psl-sec" id="darbuotoju-mokymai" data-reveal>
+        <span class="pg-psl-n num" aria-hidden="true">05</span>
+        <h2>Darbuotojų priešgaisrinės saugos mokymai</h2>
+<p class="lead">Darbuotojų ir valstybės tarnautojų priešgaisrinės saugos mokymai ir atestavimas pagal 3 valandų programą.</p>
+        <div class="meta pg-psl-meta">
+<span class="tag tag-navy">Kaina sutartinė</span>
+<span class="tag"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>Periodiškumas: kas 3 metus</span>        </div>
+<p class="small muted pg-psl-note">Teisinis pagrindas: LR Priešgaisrinės saugos įstatymo 11 str. 3 d. 6 p. (Žin., 2002, Nr. 123-5518); Bendrųjų gaisrinės saugos taisyklių 12 p.; Minimalūs reikalavimai valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo programoms (Žin., 2003, Nr. 63-2873; Žin., 2012, Nr. 105-5360)</p>
+<p>Organizuojame darbuotojų (valstybės tarnautojų) priešgaisrinės saugos mokymus ir atestavimą pagal „Minimalius reikalavimus valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo programoms“. Mokymo programa trunka 3 valandas ir apima medžiagų degumą bei gaisrų priežastis, teisės aktų reikalavimus objektui ir darbo barams, gaisrinę įrangą, veiksmus kilus gaisrui bei darbuotojų teises, pareigas ir atsakomybę.</p><p>Juridinių asmenų vadovai privalo organizuoti visų darbuotojų mokymą ir atestavimą kas 3 metus, nepriklausomai nuo veiklos rūšies ir darbuotojų skaičiaus. Sutartu laiku atvykstame į mokymų vietą su visomis reikalingomis priemonėmis (garso ir vaizdo aparatūra, gaisrinės saugos ženklų pavyzdžiais), pravedame mokymus, atestuojame darbuotojus ir sėkmingai išlaikiusiems įskaitas išduodame pažymėjimus.</p>
+        <div class="pg-psl-two">
+          <div data-reveal style="--i:1"><ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Priešgaisrinės saugos mokymai pagal 3 val. programą</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Darbuotojų atestavimas ir pažymėjimų išdavimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Mokymai jūsų objekte su visomis reikalingomis priemonėmis</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Įmonių, įstaigų ir organizacijų vadovų priešgaisrinės saugos mokymo kursas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinės saugos instrukcijų ir darbuotojų saugos ir sveikatos dokumentacijos rengimas</span></li></ul></div>
+          <figure class="pg-psl-fig" data-reveal="scale" style="--i:2">
+<img src="assets/img/geslita/saugos_mokymai.jpg" alt="Darbuotojų priešgaisrinės saugos mokymai" loading="lazy">          </figure>
+        </div>
+
+<div class="pg-psl-tbl narrow"><div class="tbl" data-reveal>
+  <table>
+<caption>Mokymo programa (bendra trukmė 3 val.)</caption><thead><tr><th >Tema</th><th >Trukmė</th></tr></thead>    <tbody>
+<tr><td >Medžiagų degumas. Pagrindinės gaisrų priežastys</td><td >30 min.</td></tr><tr><td >Pagrindiniai priešgaisrinę saugą reglamentuojančių teisės aktų reikalavimai objektui ir atskiriems darbo barams</td><td >60 min.</td></tr><tr><td >Gaisrinė įranga ir jos naudojimo ypatumai</td><td >30 min.</td></tr><tr><td >Veiksmai kilus gaisrui</td><td >45 min.</td></tr><tr><td >Darbuotojų teisės ir pareigos priešgaisrinės saugos srityje. Atsakomybė už teisės aktų pažeidimus</td><td >15 min.</td></tr>    </tbody>
+  </table>
+</div>
+<p class="tbl-note">Temos pagal „Minimalius reikalavimus valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo programoms“.</p></div>
+
+        <ul class="doc-list">
+<li><a href="https://www.geslita.lt/uploads/Naudinga%20informacija/Valstybes%20tarnautoju%20ir%20darbuotoju%20priesgaisrines%20saugos%20mokymo%20programos%20minimalus%20reikalavimai.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><span>Valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo programų minimalūs reikalavimai<span class="sr-only"> (PDF, atsidaro naujame lange)</span></span><svg class="ic ic-out" aria-hidden="true"><use href="#i-out"/></svg></a></li>        </ul>
+
+        <div class="pg-psl-foot">
+<a class="link" href="saugos-centras.html">Plačiau apie mokymus: Saugos centras<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>          <div class="pill-row"><span class="small muted">Susijusios prekės:</span><a class="tag tag-line" href="prekes-gesintuvai.html">Gesintuvai</a><a class="tag tag-line" href="prekes-zenklai.html">Saugos ženklai</a></div>
+        </div>
+      </section>
+      <section class="doc-sec pg-psl-sec" id="dielektriniu-priemoniu-patikra" data-reveal>
+        <span class="pg-psl-n num" aria-hidden="true">06</span>
+        <h2>Dielektrinių priemonių patikra</h2>
+<p class="lead">Dielektrinių apsaugos priemonių, izoliuotų įrankių ir apsaugos nuo kritimo iš aukščio priemonių periodiniai bandymai.</p>
+        <div class="meta pg-psl-meta">
+<span class="tag tag-navy">Kaina pagal užklausą</span><span class="tag"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>Periodiškumas: pagal priemonės rūšį - kas 6, 12, 24 arba 36 mėn.</span>        </div>
+<p class="small muted pg-psl-note">Kainą pateikiame pagal užklausą.</p>
+<p>Atliekame dielektrinių apsaugos priemonių - pirštinių, izoliuotų įrankių, įtampos indikatorių, izoliacinių lazdų, kaliošų ir botų - bei apsaugos nuo kritimo iš aukščio priemonių (apsauginių diržų ir lynų) periodinius bandymus.</p><p>Taip pat atliekame varžų matavimą ir aukštalipių įrangos patikrą.</p>
+        <div class="pg-psl-two rev">
+          <div data-reveal style="--i:1"><ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Dielektrinių pirštinių, kaliošų ir botų bandymai</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Izoliuotų įrankių ir įtampos indikatorių patikra</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Izoliacinių lazdų, gaubtų ir antdėklų bandymai</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Apsaugos nuo kritimo iš aukščio priemonių (diržų, lynų) ir monterių nagių patikra</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Aukštalipių įrangos patikra</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Varžų matavimas</span></li></ul></div>
+          <figure class="pg-psl-fig contain" data-reveal="scale" style="--i:2">
+<img src="assets/img/geslita/dielektriniu_priemoniu_patikra.jpg" alt="Dielektrinių priemonių patikra" loading="lazy">          </figure>
+        </div>
+
+<div class="pg-psl-tbl narrow"><div class="tbl" data-reveal>
+  <table>
+<caption>Apsaugos priemonių bandymo periodiškumas</caption><thead><tr><th >Priemonė</th><th >Periodiškumas</th></tr></thead>    <tbody>
+<tr><td >Dielektrinės pirštinės</td><td >kas 6 mėn.</td></tr><tr><td >Izoliuoti įrankiai (replės, atsuktuvai, žnyplės, monterių peiliai, gaisrininkų žirklės)</td><td >kas 12 mėn.</td></tr><tr><td >Įtampos indikatoriai</td><td >kas 12 mėn.</td></tr><tr><td >Fazometrai iki 10 kV</td><td >kas 12 mėn.</td></tr><tr><td >Operatyvinės izoliacinės lazdos</td><td >kas 24 mėn.</td></tr><tr><td >Izoliaciniai kaliošai</td><td >kas 12 mėn.</td></tr><tr><td >Izoliaciniai botai</td><td >kas 36 mėn.</td></tr><tr><td >Elektros matavimo replės</td><td >kas 24 mėn.</td></tr><tr><td >Izoliaciniai gaubtai</td><td >kas 12 mėn.</td></tr><tr><td >Izoliuojantieji antdėklai</td><td >kas 24 mėn.</td></tr><tr><td >Apsaugos priemonės nuo kritimo iš aukščio (apsauginiai diržai ir lynai)</td><td >kas 6 mėn.</td></tr><tr><td >Monterių nagės</td><td >kas 6 mėn.</td></tr>    </tbody>
+  </table>
+</div>
+</div>
+
+
+        <div class="pg-psl-foot">
+          <div class="pill-row"><span class="small muted">Susijusios prekės:</span><a class="tag tag-line" href="prekes-zenklai.html">Saugos ženklai</a></div>
+        </div>
+      </section>
+      <section class="doc-sec pg-psl-sec" id="medienos-impregnavimas" data-reveal>
+        <span class="pg-psl-n num" aria-hidden="true">07</span>
+        <h2>Priešgaisrinis medienos impregnavimas</h2>
+
+        <div class="meta pg-psl-meta">
+<span class="tag tag-navy">Kaina pagal užklausą</span>        </div>
+<p class="small muted pg-psl-note">Kainą pateikiame pagal užklausą.</p>
+
+        <div class="pg-psl-two lite">
+          <div data-reveal style="--i:1"><p>Atliekame priešgaisrinį medienos impregnavimą. Dėl darbų apimties ir kainos teiraukitės.</p></div>
+          <figure class="pg-psl-fig" data-reveal="scale" style="--i:2">
+<img src="assets/img/geslita/Priesgaisrinis_medienos_impregnavimas_3.jpg" alt="Priešgaisrinis medienos impregnavimas" loading="lazy">          </figure>
+        </div>
+
+
+
+
+      </section>
+      <section class="doc-sec pg-psl-sec" id="gesintuvu-nuoma" data-reveal>
+        <span class="pg-psl-n num" aria-hidden="true">08</span>
+        <h2>Ugnies gesintuvų nuoma</h2>
+<p class="lead">Miltelinių gesintuvų MG-6 ir MG-25 nuoma.</p>
+        <div class="meta pg-psl-meta">
+<span class="tag tag-navy">Kaina nuo 6,00 €</span>
+        </div>
+<p class="small muted pg-psl-note">MG-6 - 6,00 €, MG-25 - 25,00 €.</p>
+
+        <div class="pg-psl-two rev lite">
+          <div data-reveal style="--i:1"><p>Nuomojame miltelinius gesintuvus: 6 kg talpos MG-6 ir 25 kg talpos MG-25.</p><ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Miltelinio gesintuvo MG-6 nuoma</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Miltelinio gesintuvo MG-25 nuoma</span></li></ul></div>
+          <figure class="pg-psl-fig contain" data-reveal="scale" style="--i:2">
+<img src="assets/img/geslita/Miltelinis_gesituvas_MG-6.jpg" alt="Miltelinis gesintuvas MG-6 (6 kg)" loading="lazy"><img src="assets/img/geslita/miltelinis_gesintuvas-25kg.jpg" alt="Miltelinis gesintuvas MG-25 (25 kg)" loading="lazy">          </figure>
+        </div>
+
+<div class="pg-psl-tbl narrow"><div class="tbl" data-reveal>
+  <table>
+<caption>Nuomos kainos</caption><thead><tr><th >Gesintuvas</th><th class="num">Kaina</th></tr></thead>    <tbody>
+<tr><td >Miltelinio gesintuvo MG-6 nuoma</td><td class="num"><b>6,00 €</b></td></tr><tr><td >Miltelinio gesintuvo MG-25 nuoma</td><td class="num"><b>25,00 €</b></td></tr>    </tbody>
+  </table>
+</div>
+</div>
+
+
+        <div class="pg-psl-foot">
+          <div class="pill-row"><span class="small muted">Susijusios prekės:</span><a class="tag tag-line" href="prekes-gesintuvai.html">Gesintuvai</a></div>
+        </div>
+      </section>
+      <section class="doc-sec pg-psl-sec" id="avariniu-sviestuvu-montavimas" data-reveal>
+        <span class="pg-psl-n num" aria-hidden="true">09</span>
+        <h2>Evakuacijos ir avarinių šviestuvų montavimas</h2>
+<p class="lead">Evakuacinio ir avarinio apšvietimo šviestuvų montavimas ir rekomendacijos dėl jų išdėstymo.</p>
+        <div class="meta pg-psl-meta">
+<span class="tag tag-navy">Kaina pagal užklausą</span><span class="tag tag-line"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>EN 1838; EN 50172; Apšvietimo elektros įrenginių įrengimo taisyklės</span>        </div>
+<p class="small muted pg-psl-note">Kainą pateikiame pagal užklausą.</p>
+<p>Montuojame evakuacijos ir avarinius šviestuvus ir konsultuojame dėl jų išdėstymo pagal Europos standartą EN 1838 ir Apšvietimo elektros įrenginių įrengimo taisykles. Avarinis apšvietimas įsijungia automatiškai dingus pagrindinio apšvietimo maitinimui ir užtikrina saugų žmonių pasišalinimą iš pastato kilus gaisrui ar kitam pavojui.</p><p>Evakuacinio apšvietimo šviestuvai įrengiami prie išėjimo durų, laiptų, evakuacijos kelių posūkių, šakojimosi ir grindų lygio pasikeitimo vietose, ne žemiau kaip 2 m nuo grindų (evakavimo kelių nurodomieji ženklai - 2-2,5 m aukštyje), o autonominis maitinimo šaltinis turi maitinti šviestuvus ne trumpiau kaip 1 valandą.</p>
+        <div class="pg-psl-two">
+          <div data-reveal style="--i:1"><ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Evakuacinių šviestuvų montavimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Avarinio (budinčio) apšvietimo šviestuvų montavimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Rekomendacijos dėl šviestuvų išdėstymo ir ženklų matymo atstumų</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Avarinio išėjimo šviestuvų pardavimas</span></li></ul></div>
+          <figure class="pg-psl-fig contain" data-reveal="scale" style="--i:2">
+<img src="assets/img/geslita/Evakuacijos_avariniai_sviestuvai.jpg" alt="Evakuacijos ir avariniai šviestuvai" loading="lazy">          </figure>
+        </div>
+
+
+
+
+        <div class="pg-psl-foot">
+<a class="link" href="avariniai-sviestuvai.html">Plačiau apie avarinius šviestuvus<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>          <div class="pill-row"><span class="small muted">Susijusios prekės:</span><a class="tag tag-line" href="prekes-automatika.html">Gaisrinė automatika ir įranga</a><a class="tag tag-line" href="prekes-zenklai.html">Saugos ženklai</a></div>
+        </div>
+      </section>
+      <section class="doc-sec pg-psl-sec" id="registracijos-zurnalai" data-reveal>
+        <span class="pg-psl-n num" aria-hidden="true">10</span>
+        <h2>Registravimo / registracijos žurnalai</h2>
+<p class="lead">Darbo saugos ir gaisrinės saugos registravimo žurnalai A-5 ir A-4 formato bei asmens medicininės knygelės.</p>
+        <div class="meta pg-psl-meta">
+<span class="tag tag-navy">Kaina nuo 3,50 €</span>
+        </div>
+<p class="small muted pg-psl-note">A-5 formato žurnalas nuo 3,50 €, A-4 formato - nuo 5,25 €.</p>
+<p>Parduodame teisės aktuose numatytus registravimo / registracijos žurnalus: darbo sutarčių, darbuotojų darbo pažymėjimų, darbuotojų saugos ir sveikatos instruktavimų, gaisrinės saugos instruktažų, nelaimingų atsitikimų darbe ir kitus. Žurnalai siūlomi A-5 ir A-4 formato.</p><p>Taip pat parduodame asmens medicinines knygeles (F Nr. 048/a).</p>
+        <div class="pg-psl-two rev solo">
+          <div data-reveal style="--i:1"><ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Darbo sutarčių ir darbuotojų darbo pažymėjimų registravimo žurnalai</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Darbuotojų saugos ir sveikatos instruktavimų registravimo žurnalai</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinės saugos instruktažų registravimo žurnalai</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Nelaimingų atsitikimų darbe registravimo žurnalas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Valstybinių kontrolės institucijų patikrinimų registravimo žurnalas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Asmens medicininės knygelės F Nr. 048/a</span></li></ul></div>
+        </div>
+
+<div class="pg-psl-tbl wide hide-c3"><div class="tbl" data-reveal>
+  <table>
+<caption>Registravimo / registracijos žurnalai</caption><thead><tr><th >Eil. Nr.</th><th >Žurnalo pavadinimas</th><th >Reglamentuoja</th><th class="num">Kaina (A-5 formato)</th><th class="num">Kaina (A-4 formato)</th></tr></thead>    <tbody>
+<tr><td >1.</td><td >Darbo sutarčių registravimo žurnalas</td><td >LRV nutarimas Nr. 503 (Žin., 2003, Nr. 40-1822 su vėlesniais pakeitimais)</td><td class="num">3,50 €</td><td class="num"><b>5,25 €</b></td></tr><tr><td >2.</td><td >Darbuotojų darbo pažymėjimų registravimo žurnalas</td><td >LRV nutarimas Nr. 503 (Žin., 2003, Nr. 40-1822 su vėlesniais pakeitimais)</td><td class="num">3,50 €</td><td class="num"><b>5,25 €</b></td></tr><tr><td >3.</td><td >Darbuotojų saugos ir sveikatos įvadinių instruktavimų registravimo žurnalas</td><td >Reglamentavo Darbuotojų saugos ir sveikatos instrukcijų rengimo ir instruktavimo tvarka iki 2012 10 01 (Žin., 2005, Nr. 53-1817 su vėlesniais pakeitimais)</td><td class="num">3,50 €</td><td class="num"><b>5,25 €</b></td></tr><tr><td >4.</td><td >Darbuotojų saugos ir sveikatos instruktavimų darbo vietoje registravimo žurnalas</td><td >Reglamentavo Darbuotojų saugos ir sveikatos instrukcijų rengimo ir instruktavimo tvarka iki 2012 10 01 (Žin., 2005, Nr. 53-1817 su vėlesniais pakeitimais)</td><td class="num">3,50 €</td><td class="num"><b>5,25 €</b></td></tr><tr><td >5.</td><td >Darbuotojų, supažindintų su darbo tvarkos taisyklėmis, registravimo žurnalas</td><td >LR Darbo kodekso (Žin., 2002, Nr. 64-2569 su vėlesniais pakeitimais) 99 str. 4 d., 264 str. 3 d.; Darbuotojų saugos ir sveikatos įstatymo (Žin., 2003, Nr. 70-3170 su vėlesniais pakeitimais) 20 str. 3 d.</td><td class="num">10,00 €</td><td class="num"><b>15,00 €</b></td></tr><tr><td >6.</td><td >Darbuotojų, supažindintų su pareiginiais nuostatais, registravimo žurnalas</td><td >LR Darbo kodekso (Žin., 2002, Nr. 64-2569 su vėlesniais pakeitimais) 99 str. 4 d., 232 str., 274 str.; LR Darbuotojų saugos ir sveikatos įstatymo (Žin., 2003, Nr. 70-3170 su vėlesniais pakeitimais) 20 str. 3 d., 33 str. 2 d.</td><td class="num">3,50 €</td><td class="num"><b>5,25 €</b></td></tr><tr><td >7.</td><td >Įvadinių (bendrų) gaisrinės saugos instruktažų registravimo žurnalas</td><td >Reglamentavo Bendrosios gaisrinės saugos taisyklės iki 2012 11 01 (Žin., 2010, Nr. 99-5167; Žin., 2011, Nr. 100-4727)</td><td class="num">3,50 €</td><td class="num"><b>5,25 €</b></td></tr><tr><td >8.</td><td >Gaisrinės saugos instruktažų registravimo žurnalas</td><td >Bendrosios gaisrinės saugos taisyklės (Žin., 2010, Nr. 99-5167; Žin., 2011, Nr. 100-4727; Žin., 2012, Nr. 118-5970)</td><td class="num">3,50 €</td><td class="num"><b>5,25 €</b></td></tr><tr><td >9.</td><td >Nelaimingų atsitikimų darbe, incidentų ir nelaimingų atsitikimų darbe aktų registravimo žurnalas</td><td >Nelaimingų atsitikimų darbe tyrimo ir apskaitos nuostatai (Žin., 2004, Nr. 136-4945 su vėlesniais pakeitimais)</td><td class="num">3,50 €</td><td class="num"><b>5,25 €</b></td></tr><tr><td >10.</td><td >Valstybinių kontrolės institucijų pareigūnų atliekamų patikrinimų registravimo žurnalas</td><td >LRV nutarimas Nr. 1150 (Žin., 1998, Nr. 85-2373)</td><td class="num">3,50 €</td><td class="num"><b>5,25 €</b></td></tr>    </tbody>
+  </table>
+</div>
+<p class="tbl-note">Kainos už vienetą.</p><p class="tbl-note pg-psl-phone-note">Stulpelis „Reglamentuoja“ rodomas platesniame ekrane.</p></div><div class="pg-psl-tbl narrow"><div class="tbl" data-reveal>
+  <table>
+<caption>Asmens medicininė knygelė</caption><thead><tr><th >Dokumento pavadinimas</th><th >Reglamentuoja</th><th class="num">Kaina</th></tr></thead>    <tbody>
+<tr><td >Asmens medicininė knygelė F Nr. 048/a</td><td >Asmenų, dirbančių darbo aplinkoje, kurioje galima profesinė rizika (kenksmingų veiksnių poveikis ir (ar) pavojingas darbas), privalomo sveikatos tikrinimo tvarkos aprašas (Žin., 2010, Nr. 4-163)</td><td class="num"><b>1,05 €</b></td></tr>    </tbody>
+  </table>
+</div>
+<p class="tbl-note">Kaina už vienetą.</p><p class="tbl-note">Kainos perskaičiuotos iš ankstesnio kainoraščio litais (3,4528 Lt = 1 €) ir yra orientacinės.</p></div>
+
+
+        <div class="pg-psl-foot">
+          <div class="pill-row"><span class="small muted">Susijusios prekės:</span><a class="tag tag-line" href="prekes-zenklai.html">Saugos ženklai</a></div>
+        </div>
+      </section>
+
+      <section class="doc-sec pg-psl-sec" id="kitos-paslaugos" data-reveal>
+        <span class="pg-psl-n num" aria-hidden="true">11</span>
+        <h2>Kitos paslaugos verslui</h2>
+        <p class="lead">Be priešgaisrinės saugos darbų, padedame sutvarkyti ir kitus įmonės veiklai reikalingus dokumentus, leidimus ir mokymus. Išskleiskite grupę ir peržiūrėkite visą sąrašą.</p>
+        <details class="acc" >
+  <summary>Visuomenės sveikata<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>Leidimai-higienos pasai: dokumentų parengimas leidimams-higienos pasams gauti laidojimo namams, grožio salonams ir juose pagal patentus ar verslo liudijimus dirbantiems asmenims, globos namams, darželiams, mokykloms, viešbučiams, stomatologijos kabinetams.</li><li>Pastatų / patalpų paskirties pakeitimas leidimui-higienos pasui tam tikrai veiklai gauti.</li><li>Valgiaraščių parengimas ir derinimas su VSC ikimokyklinio ugdymo įstaigoms, mokykloms, globos įstaigoms, vaikų poilsio stovykloms.</li><li>Kenkėjų kontrolė - privalomasis profilaktinis aplinkos kenksmingumo pašalinimas: dezinfekcija, dezinsekcija, deratizacija, fumigacija. Vabzdžių (tarakonų, skruzdžių, blusų, blakių, uodų, musių, širšių, kandžių), graužikų (pelių, žiurkių), grūdinių ir kitų produktų kenkėjų, mikroorganizmų, bakterijų, grybelių, pelėsių naikinimas, kontrolė ir monitoringas globos įstaigose, darželiuose, mokyklose, kavinėse, restoranuose, viešbučiuose, kaimo turizmo sodybose, maisto pramonės ir kituose objektuose.</li><li>Žurnalai ir blankai: kosmetikos gaminių registras, sterilizacijos, legionelių prevencijos ir kiti žurnalai, grožio paslaugų procedūrų aprašai, biocidai grožio salonams, medicinos knygelių blankai.</li><li>PVSV - poveikio visuomenės sveikatai vertinimo ataskaitų parengimas (dėl planuojamos ūkinės veiklos galimybių išdavimo).</li></ul></div>
+</details>
+        <details class="acc" >
+  <summary>Konsultacijos veterinarinės saugos klausimais<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>Maisto tvarkymo subjekto patvirtinimo pažymėjimo gavimas.</li><li>Maisto tvarkymo proceso aprašymo parengimas.</li><li>Kenkėjų kontrolė.</li></ul></div>
+</details>
+        <details class="acc" >
+  <summary>Konsultacijos VDI klausimais<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>Profesinės ligos: konsultavimas darbinės veiklos aprašymo parengimo klausimais.</li><li>Profesinės sveikatos specialisto paslaugos.</li></ul></div>
+</details>
+        <details class="acc" >
+  <summary>Higienos įgūdžių mokymai<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>Darbuotojams, kurių veikla susijusi su nuodingosiomis medžiagomis.</li><li>Darbuotojams, tvarkantiems medicinines atliekas sveikatos priežiūros įstaigose.</li><li>Vandens tiekimo įmonių darbuotojams.</li><li>Dirbantiems galimos profesinės rizikos sąlygomis.</li><li>Areštinių ir laisvės atėmimo vietų darbuotojams.</li><li>Ikimokyklinio ugdymo, formaliojo ir neformaliojo švietimo, kvalifikacijos tobulinimo įstaigų, mokyklų, psichologinių ir pedagoginių tarnybų darbuotojams.</li><li>Bendrabučių, viešbučių, pensionų, vaikų ir suaugusiųjų globos įstaigų, nakvynės namų, kaimo turizmo sodybų ir kitų apgyvendinimo paslaugų darbuotojams, pagalbą namuose teikiantiems asmenims, taip pat pirčių, baseinų, saunų, plaukų, veido, kūno ir nagų priežiūros, tatuiravimo, ilgalaikio (permanentinio) makiažo, papuošalų vėrimo ir kitų grožio bei sveikatingumo paslaugų darbuotojams.</li></ul></div>
+</details>
+        <details class="acc" >
+  <summary>Pirmos pagalbos mokymai<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>Ugniagesiams gelbėtojams, eismo priežiūrą vykdantiems policijos pareigūnams, policijos, gaisrinių ir greitosios medicinos pagalbos transporto priemonių vairuotojams, paplūdimių gelbėtojams.</li><li>Asmenims, kurių veikla susijusi su ginklais: saugos tarnybų darbuotojams, medžiotojams, šaudymo sporto sportininkams ir kitiems leidimus laikyti ir nešioti ginklus turintiems asmenims.</li><li>C, D ir E kategorijų kelių transporto priemonių vairuotojams, geležinkelių, oro ir vandens transporto priemones valdantiems ir keleivius aptarnaujantiems darbuotojams.</li><li>Dirbantiems kenksmingų veiksnių aplinkoje ir pavojingus darbus, geležinkelio, oro ir vandens transporto, ryšių objektų, kelių priežiūros darbuotojams, darbo saugos ir sveikatos tarnybų specialistams.</li><li>Švietimo, kultūros, sporto, apgyvendinimo ir sveikatingumo paslaugų darbuotojams: pedagogams, treneriams, kazino inspektoriams, renginių organizatoriams, viešbučių, globos įstaigų, nakvynės namų, kaimo turizmo sodybų darbuotojams, pirtininkams, baseinų, saunų, grožio ir sveikatingumo paslaugų teikėjams.</li><li>Statutiniams valstybės tarnautojams (VSD, STT, Muitinės departamento, Priešgaisrinės apsaugos ir Policijos, Vadovybės apsaugos departamentų, Valstybės sienos apsaugos tarnybos), Kalėjimų departamento ir jam pavaldžių įstaigų pareigūnams, teisėjams, prokurorams, antstoliams, ikiteisminio tyrimo pareigūnams.</li></ul></div>
+</details>
+        <details class="acc" >
+  <summary>Kiti mokymai<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>Mokymas apie alkoholio ir narkotikų žalą žmogaus sveikatai (praradus vairuotojo teises).</li></ul></div>
+</details>
+        <details class="acc" >
+  <summary>Konsultacijos NDNT klausimais<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>Teisinės ir medicininės konsultacijos invalidumo, neįgalumo, SP-1 ir SP-2 klausimais (NDNT).</li><li>Konsultacijos globos ir rūpybos klausimais, kai asmeniui skirta SP-1.</li><li>Dokumentų parengimas į teismus norint globoti ar rūpintis neįgaliu asmeniu, giminaičiais.</li><li>Konsultacijos įvaikinimo ir laikinos globos klausimais.</li></ul></div>
+</details>
+        <details class="acc" >
+  <summary>Licencijos<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>Licencijos alkoholio prekybai (mažmena, didmena) gavimas - dokumentų parengimas licencijas išduodančiai institucijai.</li><li>Prarastos ar sustabdytos alkoholio licencijos atstatymas.</li><li>Licencijos tabakui.</li><li>Licencijos globos įstaigoms.</li></ul></div>
+</details>
+        <details class="acc" >
+  <summary>Teisinės paslaugos<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>Administracinė teisė: baudų apskundimas.</li><li>Šeimos teisė: santuokos nutraukimas, išlaikymo pilnamečiams vaikams priteisimas, tėvystės nustatymas, įvaikinimas, globos ir rūpybos pilnamečiams ir nepilnamečiams nustatymas, teismo leidimai parduoti ar įkeisti turtą turint nepilnamečių vaikų.</li><li>Paveldėjimo teisė: juridinio fakto, kad įpėdinis palikimą priėmė faktiškai pradėdamas jį valdyti, nustatymas.</li><li>Skolų išreikalavimas: neteisminis ir teisminis skolų išreikalavimas, pretenzijų ir ieškinių rengimas.</li><li>Darbo teisė: darbdavių ir darbuotojų konsultavimas, darbo sutarčių, pareiginių nuostatų ir darbo tvarkos taisyklių rengimas, darbdavio ar darbuotojo padarytos žalos atlyginimas.</li><li>Įmonių teisė: įmonių, filialų, atstovybių steigimas.</li><li>Viešieji pirkimai: konsultacijos, dokumentų ir skundų rengimas, atstovavimas.</li><li>Sutarčių teisė: sutarčių sudarymas, pakeitimas, nutraukimas.</li></ul></div>
+</details>
+        <details class="acc" >
+  <summary>Kitos paslaugos<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>Objektų gaisrinio ūkio priežiūra ir komplektavimas.</li><li>Automatinių gesinimo sistemų techninė priežiūra.</li><li>Varžų matavimas.</li><li>Aukštalipių įrangos patikra.</li><li>Gaisrinės saugos instrukcijos rengimas.</li><li>Darbuotojų saugos ir sveikatos dokumentacijos rengimas.</li><li>Ekstremalių situacijų valdymo plano parengimas.</li><li>Logotipų siuvinėjimas ant drabužių (šilkografija).</li></ul></div>
+</details>
+      </section>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight pg-psl-cta" data-parallax-root>
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.18">
+  <div class="wrap"><div class="cta-inline" data-reveal>
+  <div><h2>Reikia pasiūlymo jūsų objektui?</h2><p>Paskambinkite arba parašykite: aptarsime įrangos kiekį, terminus ir paruošime pasiūlymą.</p></div>
+  <div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a></div>
+</div></div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <img class="plan-wm" src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo-geslita-white-s.png" alt="Geslita" width="167" height="50">
+        <p><span class="ltx">20 metų priešgaisrinės saugos patirties. Įrangos priežiūra ir prekyba, darbo saugos priemonės verslui visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+      </div>
+      <div>
+        <h2 class="foot-h">Paslaugos</h2>
+        <ul>
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra</a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai</a></li>
+          <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Prekės ir informacija</h2>
+        <ul>
+          <li><a href="prekes-gesintuvai.html">Gesintuvai</a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai</a></li>
+          <li><a href="prekes-automatika.html">Automatika ir įranga</a></li>
+          <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+          <li><a href="apie-mus.html">Apie mus</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Kontaktai</h2>
+        <ul class="foot-contact">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+37065399977">+370 653 99977</a><br><a href="tel:+37060763109">+370 607 63109</a></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@geslita.lt">info@geslita.lt</a></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Fabijoniškių g. 4A, Vilnius<br><span class="muted">Ne parduotuvė: prieš atvykdami paskambinkite</span></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span>I-V 9:00-18:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2010-2026 UAB „Geslita“. Visos teisės saugomos.</span>
+      <span><a href="kontaktai.html">Kontaktai</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

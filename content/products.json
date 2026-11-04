@@ -1,0 +1,1512 @@
+{
+  "price_disclaimer": "Kainoraščiuose nurodytos mažmeninės kainos. Norėdami sužinoti kainą didesniam kiekiui, skambinkite +370 653 99977, +370 607 63109 arba siųskite užklausimą el. paštu info@geslita.lt.",
+  "meta": {
+    "source": "https://www.geslita.lt/ (Priešgaisrinės prekės)",
+    "currency": "EUR",
+    "ltl_to_eur_rate": "3,4528 LTL = 1 EUR",
+    "image_prefix_note": "Nuotraukos žymimos „geslita:<kelias>“ – kelias santykinis nuo https://www.geslita.lt/",
+    "variant_price_note": "Prekių su „variants“ kortelės kaina „nuo …“ yra mažiausia iš išvardytų variantų kainų."
+  },
+  "groups": [
+    {
+      "slug": "gesintuvai",
+      "title": "Gesintuvai",
+      "image": "geslita:uploads/images/co1.jpg",
+      "intro": "Gesintuvai sertifikuoti naudojimui Lietuvoje. Siūlome miltelinius, angliarūgštinius ir vandens putų gesintuvus, taip pat vykdome gesintuvų techninį aptarnavimą – patikrą ir pildymą.",
+      "related_service": {
+        "label": "Gesintuvų patikra ir pildymas",
+        "slug": "gesintuvu-patikra",
+        "old_url": "https://www.geslita.lt/paslaugos/gesintuvu-pildymas-patikra"
+      },
+      "featured": {
+        "title": "Naujos kartos vandens putų gesintuvai 6 l ir 9 l",
+        "badge": "Pagaminta Lietuvoje",
+        "image": "geslita:uploads/images/VPG/_DSC9857.jpg",
+        "image_secondary": "geslita:uploads/images/VPG/_DSC9858.jpg",
+        "paragraphs": [
+          "Naujos kartos gesintuvas šaldančių / impregnuojančių putų pagrindu idealiai tinka B klasės gaisrams gesinti – degiesiems skysčiams: benzinui, spiritui, lakui, tepalams. Efektyviai gesina ir dažniausiai pasitaikančius A klasės gaisrus – įprastas medžiagas: medieną, popierių, tekstilę, gumą ar plastmasę. Tinka elektros prietaisams gesinti.",
+          "Vandens putų gesintuvo pagrindas – AFFF putos, kurių užpurškus ant gaisro židinio akimirksniu susidaro vandens plėvelė, atskirianti deguonį ir blokuojanti pakartotinį užsidegimą. Sudėtyje nėra toksinių medžiagų, todėl gesintuvas idealiai tinka naudoti patalpų viduje, o putos veikia ir kaip impregnatorius, užkertantis kelią pakartotiniam gaisrui. Purškimo srovė 4–5 metrai leidžia ugnį sutramdyti iš saugaus atstumo.",
+          "Gaminami dviejų tipų vandens putų gesintuvai, kurie skiriasi veikimo temperatūros ribomis: šildomoms patalpoms rekomenduojame gesintuvą, veikiantį nuo +5°C iki +60°C, o nešildomoms patalpoms – specialų gesintuvą ReinoldMax, veikiantį nuo -20°C iki +60°C."
+        ],
+        "bullets": [
+          "Tinka B klasės gaisrams – degiesiems skysčiams (benzinas, spiritas, lakas, tepalai)",
+          "Efektyviai gesina A klasės gaisrus – medieną, popierių, tekstilę, gumą, plastmasę",
+          "Tinka elektros prietaisams gesinti",
+          "Sudėtyje nėra toksinių medžiagų – nekenkia kvėpavimo takams",
+          "Purškimo srovė 4–5 metrai",
+          "Nepertraukiamas veikimo laikas: apie 20 sek. (6 l), apie 27–28 sek. (9 l)",
+          "Gaisro nepaliestiems daiktams putos nepakenkia – pakanka nuvalyti ir leisti išdžiūti",
+          "Versijos šildomoms (+5°C…+60°C) ir nešildomoms (-20°C…+60°C) patalpoms",
+          "Atitinka LST EN 3-7:2004 standartą",
+          "Pagaminta Lietuvoje"
+        ],
+        "temperature_versions": [
+          {
+            "label": "Šildomoms patalpoms",
+            "range": "nuo +5°C iki +60°C",
+            "image": "geslita:uploads/images/VPG/_DSC9858.jpg",
+            "prices": [
+              {
+                "label": "6 l",
+                "price": "48,55 €"
+              },
+              {
+                "label": "9 l",
+                "price": "80,00 €"
+              }
+            ]
+          },
+          {
+            "label": "Nešildomoms patalpoms",
+            "range": "nuo -20°C iki +60°C",
+            "image": "geslita:uploads/images/VPG/_DSC9857.jpg",
+            "prices": [
+              {
+                "label": "6 l",
+                "price": "58,55 €"
+              },
+              {
+                "label": "9 l",
+                "price": "75,00 €"
+              }
+            ]
+          }
+        ],
+        "sizes": [
+          {
+            "label": "6 l",
+            "specs": [
+              "Užpildo svoris: 6 kg",
+              "Bendras gesintuvo svoris: 10,10 kg",
+              "Gesinimo medžiaga: AFFF putos",
+              "Gesinimo efektyvumas: 8A 113B",
+              "Veikimo trukmė: 20 sek.",
+              "Išstūmimo priemonė: N2"
+            ],
+            "price": "nuo 48,55 €"
+          },
+          {
+            "label": "9 l",
+            "specs": [
+              "Užpildo svoris: 9 kg",
+              "Bendras gesintuvo svoris: 14,60 kg",
+              "Gesinimo medžiaga: AFFF putos",
+              "Gesinimo efektyvumas: 13A 183B",
+              "Veikimo trukmė: 28 sek.",
+              "Išstūmimo priemonė: N2"
+            ],
+            "price": "nuo 75,00 €"
+          }
+        ],
+        "standard": "Atitinka LST EN 3-7:2004 standartą.",
+        "details": [
+          {
+            "heading": "Kaip veikia?",
+            "paragraphs": [
+              "Visų gesintuvų paleidimo būdas yra panašus: nutraukite plombą ir ištraukite apsauginį kaištį, gesintuvo žarnelę su difuzoriumi nukreipkite į gaisro židinį ir nuspauskite rankenėlę. Purkškite į gaisro židinį, o ne į liepsnas, ir nesistenkite išpurkšti visų putų iš karto – gesindami vandens putų gesintuvu padarykite kelių sekundžių pertrauką, kad pamatytumėte, kur gesinti reikia labiausiai. Nepertraukiamas gesintuvo veikimo laikas – apie 20 sekundžių (6 l) arba apie 27–28 sekundes (9 l).",
+              "Gaisrą sukelia trys faktoriai – degioji medžiaga, kaitra ir deguonis. Gaisras užgesinamas pašalinus nors vieną iš trijų komponentų. Vandens putų gesintuvo pagrindas – AFFF putos, kurių užpurškus ant gaisro židinio akimirksniu susidaro vandens plėvelė, atskirianti deguonį ir blokuojanti pakartotinį užsidegimą."
+            ]
+          },
+          {
+            "heading": "Kodėl verta rinktis vandens putų gesintuvą?",
+            "paragraphs": [
+              "Vandens putų gesintuvas ReinoldMax – tinkamiausias gesintuvas Jūsų namams. Klientų patogumui gaminami dviejų tipų vandens putų gesintuvai, kurie skiriasi veikimo temperatūros ribomis. Šildomoms patalpoms rekomenduojame vandens putų gesintuvą, veikiantį nuo +5°C iki +60°C. Siekiant apsaugoti nešildomas patalpas siūlome specialų vandens putų gesintuvą ReinoldMax, veikiantį nuo -20°C iki +60°C.",
+              "Sudėtyje nėra toksinių medžiagų, todėl idealiai tinka naudoti viduje. Šio tipo gesintuvai ne tik efektyviai numalšina gaisrą AFFF gesinimo putų dėka, bet yra puikūs impregnatoriai, užkertantys kelią pakartotiniam gaisrui. Purškimo srovė 4–5 metrai leis Jums iš saugaus atstumo efektyviai sutramdyti ugnį.",
+              "Apipurškus gaisro nepaliestas sienas, grindis, užuolaidas ar baldus, tiesiog nuvalykite putas ir leiskite išdžiūti. Jeigu gaisras nepalietė Jūsų daiktų, putos jiems nepakenks – to negalima pasakyti apie miltelinius gesintuvus. Vandens putų gesintuvai yra populiariausi gesintuvai Vokietijoje ir Prancūzijoje.",
+              "Po panaudojimo iškart priduokite gesintuvą naujam pripildymui. Stebėkite, kad slėgmačio rodyklė būtų žaliame fone."
+            ]
+          },
+          {
+            "heading": "Kur naudoti?",
+            "paragraphs": [
+              "Vandens putų gesintuvas nekenkia kvėpavimo takams, tad siūlome jį naudoti uždarose patalpose, kur didelė žmonių, o ypač vaikų, koncentracija: mokyklose, darželiuose, viešbučiuose, ligoninėse, poliklinikose, privačiuose namuose, biuruose. Vandens putų gesintuvu ReinoldMax galite gesinti įsiliepsnojusius veikiančius elektros prietaisus.",
+              "Kadangi gesintuvų ReinoldMax 6 l ir 9 l galimos veikimo temperatūros ribos siekia -20°C, ūkininkams siūlome vandens putų gesintuvą naudoti sandėliuose, lentpjūvėse bei žemės ūkio technikoje. Idealiai tinka degiems skysčiams gesinti (B klasės gaisrai), tad rekomenduojame šį gesintuvą cheminių medžiagų šildomiems ir nešildomiems sandėliams, degalinėms."
+            ]
+          }
+        ]
+      },
+      "types": [
+        {
+          "title": "Miltelių gesintuvas",
+          "text": "Universali ugnies gesinimo priemonė, tinkanti gesinti A, B, C, D klasės gaisrus (priklausomai nuo miltelių rūšies). Taip pat juo galima gesinti elektros įrenginius. Miltelinis gesintuvas chemiškai stabdo degimą. Šie gesintuvai efektyviai gesina ne tik A, B bei C klasių gaisrus, bet tinka gesinti ir neišjungtus elektros prietaisus, todėl juos galima vadinti universaliaisiais gesintuvais, galinčiais puikiai padėti apsisaugoti nuo gaisro jūsų namuose."
+        },
+        {
+          "title": "Vandens putų gesintuvas",
+          "text": "Pagrindinė gesinimo medžiaga – putos, t. y. oro, vandens ir putokšlio (putodario) mišinys. Tinka gesinti A klasės (degant kietoms medžiagoms susidaro įkaitusios anglys) ir B klasės (dega degūs skysčiai ar medžiagos, kurios degdamos skystėja) gaisrus. Tradiciniu vandens putų gesintuvu negalima gesinti dujų ir elektros įrenginių, jį būtina laikyti šildomose patalpose."
+        },
+        {
+          "title": "Angliarūgštės gesintuvas",
+          "text": "Pagrindinė gesinimo medžiaga – anglies dioksidas. Gesina B ir C klasės (dega degios dujos) gaisrus, tinka elektros įrenginių gesinimui. Mažai veiksmingas gesinant A ir D klasės (dega degūs metalai) gaisrus. Gesintuvai su angliarūgštės užpildu rekomenduojami elektros gaisrams gesinti (kompiuterių, jungiklių, garso įrangos, įvairių mechanizmų gaisrams). Gesinimo medžiaga pilnai išsisklaido ore ir nepalieka jokių pėdsakų. Šio tipo gesintuvai taip pat gali būti naudojami B klasės gaisrams – degiems skysčiams arba skystėjančioms medžiagoms (benzinui, naftos produktams, riebalams, lakams, dervai, vaškui, eteriui, alkoholiui ir kt.) gesinti. Rekomenduojama papildomai turėti vandens putų arba miltelinius gesintuvus, kurie užtikrintų apsaugą nuo A klasės gaisrų."
+        }
+      ],
+      "subgroups": [
+        {
+          "title": "Milteliniai gesintuvai",
+          "intro": "Milteliniai gesintuvai ReinoldMax, užpildyti gesinimo milteliais monoamonio fosfato pagrindu, tinka visų tipų gaisrams gesinti: A klasės (mediena, popierius, guma, plastmasė, tekstilė), B klasės (benzinas, spiritas, lakas, tepalai) ir C klasės (degančios dujos). Tinka gesinti elektros įrenginius su iki 1 000 V įtampa, veikia esant temperatūrai nuo -30°C iki +60°C.",
+          "items": [
+            {
+              "name": "Miltelinis gesintuvas MG-2",
+              "model": "MG-2",
+              "specs": [
+                "Gesinimo medžiagos kiekis: 2 kg",
+                "Gesinimo potencialas: 13A, 89B, C",
+                "Gesintuvo veikimo laikas: 6 sek.",
+                "Elektros įrenginiai: tinka gesinti iki 1 000 V įtampos",
+                "Veikimo temperatūra: nuo -30°C",
+                "Atitiktis: LST EN 3-6:1999/A1:1999 ir LST EN 3-7:2006"
+              ],
+              "price": "19,27 €",
+              "image": "geslita:uploads/images/ReinoldMAX gesintuvai/2kg.jpg",
+              "notes": "Automobilinis gesintuvas su patogiu tvirtinimo laikikliu. Pagal Lietuvos įstatymus kiekvienas vairuotojas privalo turėti 2 kg gesintuvą savo transporto priemonėje.",
+              "details": [
+                {
+                  "heading": "Aprašymas",
+                  "paragraphs": [
+                    "Automobilinis gesintuvas ReinoldMax, užpildytas gesinimo milteliais monoamonio fosfato pagrindu, tinka visų tipų gaisrams gesinti. A gaisrų klasė – dažniausiai pasitaikantys gaisrai, kai dega įprastos medžiagos: mediena, popierius, guma, plastmasė ar tekstilė. B gaisrų klasė – degantys skysčiai: benzinas, spiritas, lakas ar tepalai. C gaisrų klasė – degančios dujos: vandenilis, acetilenas, angliavandeniliai. Tinka gesinti elektros įrenginius su iki 1 000 V įtampa."
+                  ]
+                },
+                {
+                  "heading": "Kaip veikia?",
+                  "paragraphs": [
+                    "Visų gesintuvų paleidimo būdas yra panašus: nutraukite plombą ir ištraukite apsauginį kaištį, difuzorių nukreipkite į gaisro židinį ir nuspauskite rankenėlę. Gesindami milteliniu gesintuvu ReinoldMax nedarykite pertraukų, o visą turinį išpurškite į gaisro židinį vienu rankenėlės nuspaudimu. Gesintuvo veikimo laikas tik 6 sekundės, todėl gesinkite gaisro židinį, o ne liepsnas.",
+                    "Gaisrą sukelia trys faktoriai – degioji medžiaga, kaitra ir deguonis. Gaisras užgesinamas pašalinus nors vieną iš trijų komponentų. Miltelinio gesintuvo ReinoldMax pagrindas – ABC gesinimo milteliai, kurių užpurškus ant gaisro židinio liepsna „uždusinama“ ir taip atskiriamas deguonis. Jeigu gaisras didesnis, gesinkite vienu metu keliais ReinoldMax gesintuvais."
+                  ]
+                },
+                {
+                  "heading": "Kodėl verta rinktis miltelinį gesintuvą?",
+                  "paragraphs": [
+                    "Pagal Lietuvos įstatymus kiekvienas vairuotojas privalo turėti 2 kg gesintuvą savo transporto priemonėje. Miltelinis gesintuvas ReinoldMax dėl savo aukšto veiksmingumo yra populiariausias automobilinis gesintuvas Lietuvoje.",
+                    "Milteliniai gesintuvai efektyviai numalšina visų tipų gaisrus ir veikia minusinėje temperatūroje nuo -30°C. Gesindami gaisrą automobilio viduje nepamirškite, kad visi milteliniai gesintuvai sudaro toksinį dulkių debesį, tad pasistenkite neįkvėpti miltelių, o po gesinimo gerai išvėdinkite automobilio vidų ir nusiplaukite rankas. Gesinimo milteliai netirpsta vandenyje, todėl salono vidų patartina gerai išsiurbti, o turinį iškart pašalinti. ReinoldMax 2 kg gesintuvas turi patogų tvirtinimo laikiklį, tad UAB „Geslita“ pataria gesintuvą gerai pritvirtinti automobilyje, kad išvengtumėte netikėto miltelių išsipurškimo stabdant.",
+                    "Po gesinimo praėjus kelioms minutėms gali būti, kad gesinimo milteliai užkimš purkštuką, todėl net jeigu neišpurškėte viso turinio, nedelsdami priduokite gesintuvą naujam pripildymui. Stebėkite, kad slėgmačio rodyklė būtų žaliame fone."
+                  ]
+                },
+                {
+                  "heading": "Kur naudoti?",
+                  "paragraphs": [
+                    "Miltelinis gesintuvas ReinoldMax 2 kg idealiai tinka automobiliniams gaisrams malšinti – didžioji dauguma vairuotojų jau pasirinko ReinoldMax savo transporto priemonei apsaugoti. Kaip papildomą gaisrų gesinimo priemonę rekomenduojame ReinoldMax 1000 ml, kuri akimirksniu užgesina visų tipų gaisrus, veikia minusinėje temperatūroje bei yra daugkartinio naudojimo. Jei tektų malšinti gaisrą lauke, gesinkite tik pavėjui.",
+                    "Miltelių gesintuvas ReinoldMax 2 kg atitinka LST EN 3-6:1999/A1:1999 ir LST EN 3-7:2006 privalomuosius reikalavimus."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Miltelinis gesintuvas MG-4",
+              "model": "MG-4",
+              "specs": [
+                "Gesinimo medžiagos kiekis: 4 kg",
+                "Gesinimo potencialas: 21A, 113B, C",
+                "Gesintuvo veikimo laikas: 15 sek.",
+                "Elektros įrenginiai: tinka gesinti iki 1 000 V įtampos",
+                "Veikimo temperatūra: nuo -30°C",
+                "Atitiktis: LST EN 3-6:1999/A1:1999 ir LST EN 3-7:2006"
+              ],
+              "price": "26,28 €",
+              "image": "geslita:uploads/images/ReinoldMAX gesintuvai/4kg.jpg",
+              "notes": "Rekomenduojamas visuomeninės paskirties patalpoms, statomiems pastatams, sandėliams, autobusams, krovininiams automobiliams, kombainams, garažams.",
+              "details": [
+                {
+                  "heading": "Aprašymas",
+                  "paragraphs": [
+                    "Miltelinis gesintuvas ReinoldMax, užpildytas gesinimo milteliais monoamonio fosfato pagrindu, tinka visų tipų gaisrams gesinti. A gaisrų klasė – dažniausiai pasitaikantys gaisrai, kai dega įprastos medžiagos: mediena, popierius, guma, plastmasė ar tekstilė. B gaisrų klasė – degantys skysčiai: benzinas, spiritas, lakas ar tepalai. C gaisrų klasė – degančios dujos: vandenilis, acetilenas, angliavandeniliai. Tinka gesinti elektros įrenginius su iki 1 000 V įtampa."
+                  ]
+                },
+                {
+                  "heading": "Kaip veikia?",
+                  "paragraphs": [
+                    "Visų gesintuvų paleidimo būdas yra panašus: nutraukite plombą ir ištraukite apsauginį kaištį, gesintuvo žarnelę su difuzoriumi nukreipkite į gaisro židinį ir nuspauskite rankenėlę. Gesindami milteliniu gesintuvu ReinoldMax nedarykite pertraukų, o visą turinį išpurškite į gaisro židinį vienu rankenėlės nuspaudimu. Gesintuvo veikimo laikas 15 sekundžių, todėl esant rimtam gaisrui gesinkite gaisro židinį, o ne liepsnas.",
+                    "Gaisrą sukelia trys faktoriai – degioji medžiaga, kaitra ir deguonis. Gaisras užgesinamas pašalinus nors vieną iš trijų komponentų. Miltelinio gesintuvo ReinoldMax pagrindas – ABC gesinimo milteliai, kurių užpurškus ant gaisro židinio liepsna „uždusinama“ ir taip atskiriamas deguonis. Jeigu gaisras didesnis, gesinkite vienu metu keliais ReinoldMax gesintuvais."
+                  ]
+                },
+                {
+                  "heading": "Kodėl verta rinktis miltelinį gesintuvą?",
+                  "paragraphs": [
+                    "Miltelinis gesintuvas ReinoldMax dėl aukšto veiksmingumo ir teisingos kainos yra populiariausias gesintuvas Lietuvoje. Šio tipo gesintuvai efektyviai numalšina visų tipų gaisrus ir veikia minusinėje temperatūroje nuo -30°C. Gesindami gaisrą patalpoje ar sunkiasvorės transporto priemonės viduje žinokite, kad visi milteliniai gesintuvai sudaro toksinį dulkių debesį, tad pasistenkite neįkvėpti miltelių ir po gesinimo gerai išvėdinkite patalpas. Gesinimo milteliai netirpsta vandenyje, todėl patartina juos gerai susiurbti dulkių siurbliu, o turinį iškart pašalinti.",
+                    "Po gesinimo praėjus kelioms minutėms gali būti, kad gesinimo milteliai užkimš purkštuką, todėl net jeigu neišpurškėte viso turinio, nedelsdami priduokite gesintuvą naujam pripildymui. Stebėkite, kad slėgmačio rodyklė būtų žaliame fone.",
+                    "Kartu su ReinoldMax 4 kg gesintuvu rekomenduojame įsigyti patvarų metalinį laikiklį, skirtą tvirtinti vilkikuose, autobusuose, troleibusuose, traktoriuose ar kombainuose. Laikiklio apačioje ir viršuje įmontuotos guminės atramėlės, kurios užtikrina gesintuvo stabilumą autotransporto priemonėje. Gesintuvas fiksuojamas dviem tvirtais diržais, kurie susegami reguliuojamomis metalinėmis sagtelėmis. UAB „Geslita“ pataria gesintuvą gerai pritvirtinti, kad išvengtumėte netikėto miltelių išsipurškimo stabdant ar sužeidimų."
+                  ]
+                },
+                {
+                  "heading": "Kur naudoti?",
+                  "paragraphs": [
+                    "Miltelinis gesintuvas ReinoldMax 4 kg rekomenduojamas naudoti visuomeninės paskirties patalpose, statomų pastatų viduje, šildomuose ir nešildomuose sandėliuose, autobusuose, krovininiuose automobiliuose, kombainuose, garažuose.",
+                    "Miltelių gesintuvas ReinoldMax 4 kg atitinka LST EN 3-6:1999/A1:1999 ir LST EN 3-7:2006 privalomuosius reikalavimus."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Miltelinis gesintuvas MG-6",
+              "model": "MG-6",
+              "specs": [
+                "Gesinimo medžiagos kiekis: 6 kg",
+                "Gesinimo potencialas: 27A, 183B, C",
+                "Gesintuvo veikimo laikas: 20 sek.",
+                "Elektros įrenginiai: tinka gesinti iki 1 000 V įtampos",
+                "Veikimo temperatūra: nuo -30°C",
+                "Atitiktis: LST EN 3-6:1999/A1:1999 ir LST EN 3-7:2006"
+              ],
+              "price": "28,74 €",
+              "image": "geslita:uploads/images/ReinoldMAX gesintuvai/6kg.jpg",
+              "notes": "Gesinimo bandymais įrodyta, kad ReinoldMax 6 kg užgesina 9 kg miltelinio gesintuvo gaisro židinius.",
+              "details": [
+                {
+                  "heading": "Aprašymas",
+                  "paragraphs": [
+                    "Miltelinis gesintuvas ReinoldMax, užpildytas gesinimo milteliais monoamonio fosfato pagrindu, tinka visų tipų gaisrams gesinti. A gaisrų klasė – dažniausiai pasitaikantys gaisrai, kai dega įprastos medžiagos: mediena, popierius, guma, plastmasė ar tekstilė. B gaisrų klasė – degantys skysčiai: benzinas, spiritas, lakas ar tepalai. C gaisrų klasė – degančios dujos: vandenilis, acetilenas, angliavandeniliai. Tinka gesinti elektros įrenginius su iki 1 000 V įtampa."
+                  ]
+                },
+                {
+                  "heading": "Kaip veikia?",
+                  "paragraphs": [
+                    "Visų gesintuvų paleidimo būdas yra panašus: nutraukite plombą ir ištraukite apsauginį kaištį, gesintuvo žarnelę su difuzoriumi nukreipkite į gaisro židinį ir nuspauskite rankenėlę. Gesindami milteliniu gesintuvu ReinoldMax nedarykite pertraukų, o visą turinį išpurškite į gaisro židinį vienu rankenėlės nuspaudimu. Gesinimo bandymais įrodyta, kad ReinoldMax 6 kg užgesina 9 kg miltelinio gesintuvo gaisro židinius. Gesintuvo veikimo laikas 20 sekundžių. Esant rimtam gaisrui gesinkite gaisro židinį, o ne liepsnas.",
+                    "Po gesinimo praėjus kelioms minutėms gali būti, kad gesinimo milteliai užkimš purkštuką, todėl net jeigu neišpurškėte viso turinio, nedelsdami priduokite gesintuvą naujam pripildymui. Stebėkite, kad slėgmačio rodyklė būtų žaliame fone.",
+                    "Gaisrą sukelia trys faktoriai – degioji medžiaga, kaitra ir deguonis. Gaisras užgesinamas pašalinus nors vieną iš trijų komponentų. Miltelinio gesintuvo ReinoldMax pagrindas – ABC gesinimo milteliai, kurių užpurškus ant gaisro židinio liepsna „uždusinama“ ir taip atskiriamas deguonis. Jeigu gaisras didesnis, gesinkite vienu metu keliais ReinoldMax gesintuvais."
+                  ]
+                },
+                {
+                  "heading": "Kodėl verta rinktis miltelinį gesintuvą?",
+                  "paragraphs": [
+                    "Miltelinis gesintuvas ReinoldMax dėl aukšto veiksmingumo ir teisingos kainos yra populiariausias gesintuvas Lietuvoje. Šio tipo gesintuvai efektyviai numalšina visų tipų gaisrus ir veikia minusinėje temperatūroje nuo -30°C. Gesindami gaisrą patalpoje ar sunkiasvorės transporto priemonės viduje žinokite, kad visi milteliniai gesintuvai sudaro toksinį dulkių debesį, tad pasistenkite neįkvėpti miltelių ir po gesinimo gerai išvėdinkite patalpas. Gesinimo milteliai netirpsta vandenyje, todėl patartina juos gerai susiurbti dulkių siurbliu, o turinį iškart pašalinti.",
+                    "Kartu su ReinoldMax 6 kg gesintuvu rekomenduojame įsigyti patvarų metalinį laikiklį, skirtą tvirtinti vilkikuose, autobusuose, troleibusuose, traktoriuose ar kombainuose. Laikiklio apačioje ir viršuje įmontuotos guminės atramėlės, kurios užtikrina gesintuvo stabilumą autotransporto priemonėje. Gesintuvas fiksuojamas dviem tvirtais diržais, kurie susegami reguliuojamomis metalinėmis sagtelėmis. UAB „Geslita“ pataria gesintuvą gerai pritvirtinti, kad išvengtumėte rimtų sužeidimų ar netikėto miltelių išsipurškimo stabdant."
+                  ]
+                },
+                {
+                  "heading": "Kur naudoti?",
+                  "paragraphs": [
+                    "Miltelinis gesintuvas ReinoldMax 6 kg rekomenduojamas naudoti visuomeninės paskirties patalpose, statomų pastatų viduje, šildomuose ir nešildomuose sandėliuose, autobusuose, krovininiuose automobiliuose, kombainuose, garažuose.",
+                    "Miltelių gesintuvas ReinoldMax 6 kg atitinka LST EN 3-6:1999/A1:1999 ir LST EN 3-7:2006 privalomuosius reikalavimus."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Miltelinis gesintuvas MG-12",
+              "model": "MG-12",
+              "specs": [
+                "Gesinimo medžiagos kiekis: 12 kg",
+                "Gesinimo potencialas: 43A, 233B, C"
+              ],
+              "price": "56,07 €",
+              "image": "geslita:uploads/images/gesintuvai/12kg.JPG",
+              "notes": null
+            },
+            {
+              "name": "Miltelinis gesintuvas MG-25",
+              "model": "MG-25",
+              "specs": [
+                "Gesinimo medžiagos kiekis: 25 kg",
+                "Gesinimo potencialas: 55A, 233B, C",
+                "Elektros įrenginiai: leidžiama gesinti iki 1 000 V įtampos",
+                "Veikimo temperatūra: nuo -30°C iki +60°C"
+              ],
+              "price": "220,00 €",
+              "image": "geslita:uploads/images/ReinoldMAX gesintuvai/25kg.jpg",
+              "notes": null,
+              "details": [
+                {
+                  "heading": "Aprašymas",
+                  "paragraphs": [
+                    "Milteliniai gesintuvai ReinoldMax skirti kietoms degioms medžiagoms, dažniausiai organinės prigimties, kurių degimo metu susidaro žarijos (A klasės gaisrams), degiems skysčiams ar medžiagoms, turinčioms savybę lydytis (B klasės gaisrams), ir dujoms (C klasės gaisrams) gesinti. Leidžiama gesinti elektros įrenginius, kurių įtampa ne didesnė kaip 1 000 voltų. Gesintuvai naudojami, kai aplinkos temperatūra ne žemesnė kaip -30°C ir ne aukštesnė kaip +60°C."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Miltelinis gesintuvas MG-50",
+              "model": "MG-50",
+              "specs": [
+                "Elektros įrenginiai: leidžiama gesinti iki 1 000 V įtampos",
+                "Veikimo temperatūra: nuo -30°C iki +60°C"
+              ],
+              "price": "370,00 €",
+              "image": "geslita:uploads/images/gesintuvai/MG-50.jpeg",
+              "notes": null,
+              "details": [
+                {
+                  "heading": "Aprašymas",
+                  "paragraphs": [
+                    "Milteliniai gesintuvai ReinoldMax skirti kietoms degioms medžiagoms, dažniausiai organinės prigimties, kurių degimo metu susidaro žarijos (A klasės gaisrams), degiems skysčiams ar medžiagoms, turinčioms savybę lydytis (B klasės gaisrams), ir dujoms (C klasės gaisrams) gesinti. Leidžiama gesinti elektros įrenginius, kurių įtampa ne didesnė kaip 1 000 voltų. Gesintuvai naudojami, kai aplinkos temperatūra ne žemesnė kaip -30°C ir ne aukštesnė kaip +60°C."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Angliarūgštiniai gesintuvai",
+          "intro": "Gesintuvai su angliarūgštės (CO₂) užpildu rekomenduojami elektros gaisrams gesinti – kompiuterių, jungiklių, garso įrangos, įvairių mechanizmų gaisrams. Gesinimo medžiaga pilnai išsisklaido ore ir nepalieka jokių pėdsakų. Šio tipo gesintuvai taip pat gali būti naudojami B klasės gaisrams – degiems skysčiams arba skystėjančioms medžiagoms (benzinui, naftos produktams, riebalams, lakams, dervai, vaškui, eteriui, alkoholiui ir kt.) gesinti. Rekomenduojama papildomai turėti vandens putų arba miltelinį gesintuvą, kuris užtikrintų apsaugą nuo A klasės gaisrų. Siūlome dviejų dydžių angliarūgštės gesintuvus: 2 kg ir 5 kg.",
+          "items": [
+            {
+              "name": "Angliarūgštinis gesintuvas AG-5",
+              "model": "AG-5",
+              "specs": [
+                "Gesinimo medžiagos kiekis: 5 kg",
+                "Gesinimo potencialas: 55B"
+              ],
+              "price": "79,00 €",
+              "image": "geslita:uploads/images/gesintuvai/AG5kg reinoldmax.jpg",
+              "notes": "Elektros įrenginių ir B klasės gaisrams – nepalieka pėdsakų."
+            },
+            {
+              "name": "Angliarūgštinis gesintuvas AG-2",
+              "model": "AG-2",
+              "specs": [
+                "Gesinimo medžiagos kiekis: 2 kg",
+                "Gesinimo potencialas: 34B"
+              ],
+              "price": "58,00 €",
+              "image": "geslita:uploads/images/gesintuvai/AG2kg reinoldmax.jpg",
+              "notes": "Elektros įrenginių ir B klasės gaisrams – nepalieka pėdsakų."
+            }
+          ]
+        },
+        {
+          "title": "Vandens putų gesintuvai",
+          "intro": "Vandens putų gesintuvų pagrindinė gesinimo medžiaga – putos, t. y. oro, vandens ir putokšlio mišinys. Siūlome VPG-2 riebalų (F klasės) gaisrams ir naujos kartos Lietuvoje pagamintus 6 l bei 9 l AFFF putų gesintuvus, kurie tinka ir elektros prietaisams gesinti.",
+          "items": [
+            {
+              "name": "Vandens putų gesintuvas VPG-2 (F klasės gaisrams)",
+              "model": "VPG-2",
+              "specs": [
+                "Talpa: 2 dm³",
+                "Paskirtis: riebalams gesinti (F klasės gaisrai)",
+                "Gesinimo potencialas: 5A, 34B, 25F"
+              ],
+              "price": "87,00 €",
+              "image": "geslita:uploads/images/gesintuvai/VPG 2 F.JPG",
+              "notes": "Skirtas riebalų (F klasės) gaisrams gesinti."
+            },
+            {
+              "name": "Naujos kartos 6 l vandens putų gesintuvas (-20°C…+60°C)",
+              "model": "6 l, -20°C…+60°C",
+              "specs": [
+                "Gesintuvo modelis: vandens putų gesintuvas 6 kg",
+                "Užpildo svoris: 6 kg",
+                "Bendras gesintuvo svoris: 10,10 kg",
+                "Temperatūros ribos: nuo -20°C iki +60°C",
+                "Gesinimo medžiaga: AFFF putos",
+                "Gesinimo efektyvumas: 8A 113B",
+                "Veikimo trukmė: 20 sek.",
+                "Išstūmimo priemonė: N2"
+              ],
+              "price": "58,55 €",
+              "image": "geslita:uploads/images/VPG/_DSC9857.jpg",
+              "notes": "Nešildomoms patalpoms. Pagaminta Lietuvoje, atitinka LST EN 3-7:2004."
+            },
+            {
+              "name": "Naujos kartos 6 l vandens putų gesintuvas (+5°C…+60°C)",
+              "model": "6 l, +5°C…+60°C",
+              "specs": [
+                "Gesintuvo modelis: vandens putų gesintuvas 6 kg",
+                "Užpildo svoris: 6 kg",
+                "Bendras gesintuvo svoris: 10,10 kg",
+                "Temperatūros ribos: nuo +5°C iki +60°C",
+                "Gesinimo medžiaga: AFFF putos",
+                "Gesinimo efektyvumas: 8A 113B",
+                "Veikimo trukmė: 20 sek.",
+                "Išstūmimo priemonė: N2"
+              ],
+              "price": "48,55 €",
+              "image": "geslita:uploads/images/VPG/_DSC9858.jpg",
+              "notes": "Šildomoms patalpoms. Pagaminta Lietuvoje, atitinka LST EN 3-7:2004."
+            },
+            {
+              "name": "Naujos kartos 9 l vandens putų gesintuvas (-20°C…+60°C)",
+              "model": "9 l, -20°C…+60°C",
+              "specs": [
+                "Gesintuvo modelis: vandens putų gesintuvas 9 kg",
+                "Užpildo svoris: 9 kg",
+                "Bendras gesintuvo svoris: 14,60 kg",
+                "Temperatūros ribos: nuo -20°C iki +60°C",
+                "Gesinimo medžiaga: AFFF putos",
+                "Gesinimo efektyvumas: 13A 183B",
+                "Veikimo trukmė: 28 sek.",
+                "Išstūmimo priemonė: N2"
+              ],
+              "price": "75,00 €",
+              "image": "geslita:uploads/images/VPG/_DSC9857.jpg",
+              "notes": "Didžiausios talpos naujos kartos gesintuvas nešildomoms patalpoms. Pagaminta Lietuvoje, atitinka LST EN 3-7:2004."
+            },
+            {
+              "name": "Naujos kartos 9 l vandens putų gesintuvas (+5°C…+60°C)",
+              "model": "9 l, +5°C…+60°C",
+              "specs": [
+                "Gesintuvo modelis: vandens putų gesintuvas 9 kg",
+                "Užpildo svoris: 9 kg",
+                "Bendras gesintuvo svoris: 14,60 kg",
+                "Temperatūros ribos: nuo +5°C iki +60°C",
+                "Gesinimo medžiaga: AFFF putos",
+                "Gesinimo efektyvumas: 13A 183B",
+                "Veikimo trukmė: 28 sek.",
+                "Išstūmimo priemonė: N2"
+              ],
+              "price": "80,00 €",
+              "image": "geslita:uploads/images/VPG/_DSC9858.jpg",
+              "notes": "Didžiausios talpos naujos kartos gesintuvas šildomoms patalpoms. Pagaminta Lietuvoje, atitinka LST EN 3-7:2004."
+            }
+          ]
+        },
+        {
+          "title": "Automatiniai gesintuvai",
+          "intro": "Automatinis miltelinis gesintuvas 6 kg su ABC gesinimo milteliais. Gesinimo diametras – 3 metrai. Veikimą galite pamatyti vaizdo įraše.",
+          "items": [
+            {
+              "name": "Automatinis miltelinis gesintuvas 6 kg (ABC)",
+              "model": "6 kg ABC",
+              "specs": [
+                "Gesinimo medžiagos kiekis: 6 kg",
+                "Gesinimo milteliai: ABC",
+                "Gesinimo diametras: 3 metrai",
+                "Veikimas: automatinis"
+              ],
+              "price": "98,47 €",
+              "image": "geslita:uploads/images/_DSC9861nm.jpg",
+              "video": "http://www.youtube.com/watch?v=GxUl43_NP0Y",
+              "notes": "Automatinis ugnies gesintuvas 6 kg – veikimo demonstracija vaizdo įraše."
+            }
+          ]
+        },
+        {
+          "title": "Priedai",
+          "intro": "Tvirtinimo laikikliai transporto priemonėms ir papildomos gesinimo priemonės – kainų teiraukitės.",
+          "items": [
+            {
+              "name": "Metalinis laikiklis gesintuvui (transporto priemonėms)",
+              "model": null,
+              "specs": [
+                "Tinka: ReinoldMax 4 kg ir 6 kg gesintuvams",
+                "Paskirtis: tvirtinti vilkikuose, autobusuose, troleibusuose, traktoriuose ar kombainuose",
+                "Konstrukcija: guminės atramėlės apačioje ir viršuje, du tvirti diržai su reguliuojamomis metalinėmis sagtelėmis"
+              ],
+              "price": "teiraukitės",
+              "image": null,
+              "notes": "Patvarus metalinis laikiklis, kurį rekomenduojame įsigyti kartu su 4 kg ir 6 kg gesintuvais. Guminės atramėlės užtikrina gesintuvo stabilumą autotransporto priemonėje, o du diržai patikimai fiksuoja gesintuvą, kad išvengtumėte netikėto miltelių išsipurškimo stabdant ar sužeidimų."
+            },
+            {
+              "name": "Gesinimo priemonė ReinoldMax 1000 ml",
+              "model": "1000 ml",
+              "specs": [
+                "Talpa: 1000 ml",
+                "Naudojimas: daugkartinis",
+                "Veikimo temperatūra: veikia ir minusinėje temperatūroje"
+              ],
+              "price": "teiraukitės",
+              "image": null,
+              "notes": "Papildoma gesinimo priemonė automobiliui – akimirksniu užgesina visų tipų gaisrus."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "vandentiekis",
+      "title": "Gaisrinis vandentiekis ir spintelės",
+      "image": "geslita:uploads/images/spint/image002.jpg",
+      "intro": "Priešgaisrinės metalinės spintelės, gaisrinės žarnos, čiaupai, švirkštai, sujungimo galvutės, gaisriniai skydai, smėlio dėžės, dėžutės raktams, lauko hidrantai ir sprinkleriai. Taip pat vykdome gaisrinio vandentiekio techninį aptarnavimą.",
+      "related_service": {
+        "label": "Gaisrinio vandentiekio techninis aptarnavimas",
+        "slug": "gaisrinis-vandentiekis",
+        "old_url": "https://www.geslita.lt/paslaugos/gaisrinio-vandentiekio-techninis-aptarnavimas"
+      },
+      "subgroups": [
+        {
+          "title": "Priešgaisrinės spintelės",
+          "intro": "Metalinės priešgaisrinės spintelės – įleidžiamos į sieną arba pakabinamos. Yra ir kitų dydžių – teiraukitės.",
+          "items": [
+            {
+              "name": "Priešgaisrinė metalinė spintelė (įleidžiama)",
+              "model": null,
+              "specs": [
+                "Tipas: įleidžiama",
+                "Medžiaga: metalas"
+              ],
+              "price": "nuo 56,77 €",
+              "image": "geslita:uploads/images/spint/image002.jpg",
+              "notes": "Yra ir kitų dydžių – teiraukitės.",
+              "variants": [
+                {
+                  "label": "520x400x180 mm",
+                  "price": "57,40 €"
+                },
+                {
+                  "label": "600x480x180 mm",
+                  "price": "56,77 €"
+                },
+                {
+                  "label": "650x740x200 mm",
+                  "price": "65,88 €"
+                }
+              ]
+            },
+            {
+              "name": "Priešgaisrinė metalinė spintelė (pakabinama)",
+              "model": null,
+              "specs": [
+                "Tipas: pakabinama",
+                "Medžiaga: metalas"
+              ],
+              "price": "nuo 45,18 €",
+              "image": "geslita:uploads/images/spint/image004.jpg",
+              "notes": "Yra ir kitų dydžių – teiraukitės.",
+              "variants": [
+                {
+                  "label": "520x400x180 mm",
+                  "price": "45,18 €"
+                },
+                {
+                  "label": "600x400x180 mm",
+                  "price": "52,57 €"
+                },
+                {
+                  "label": "650x740x200 mm",
+                  "price": "60,98 €"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Gaisrinės sujungimo galvutės",
+          "intro": "Gaisrinės sujungimo galvutės DN50, DN70, DN80 ir DN100 žarnoms, čiaupams ir švirkštams.",
+          "items": [
+            {
+              "name": "Gaisrinės sujungimo galvutės DN50",
+              "model": "GM-50 / GC-50 / GZ-50 / GR-50",
+              "specs": [
+                "Skersmuo: DN50"
+              ],
+              "price": "8,76 €",
+              "image": "geslita:uploads/images/spint/image006.jpg",
+              "notes": null,
+              "variants": [
+                {
+                  "label": "GM-50",
+                  "price": "8,76 €"
+                },
+                {
+                  "label": "GC-50",
+                  "price": "8,76 €"
+                },
+                {
+                  "label": "GZ-50",
+                  "price": "8,76 €"
+                },
+                {
+                  "label": "GR-50",
+                  "price": "8,76 €"
+                }
+              ]
+            },
+            {
+              "name": "Gaisrinės sujungimo galvutės DN70",
+              "model": "GM-70 / GC-70 / GZ-70 / GR-70",
+              "specs": [
+                "Skersmuo: DN70"
+              ],
+              "price": "nuo 8,76 €",
+              "image": "geslita:uploads/images/spint/image008.jpg",
+              "notes": null,
+              "variants": [
+                {
+                  "label": "GM-70",
+                  "price": "8,76 €"
+                },
+                {
+                  "label": "GC-70",
+                  "price": "8,76 €"
+                },
+                {
+                  "label": "GZ-70",
+                  "price": "8,76 €"
+                },
+                {
+                  "label": "GR-70",
+                  "price": "10,51 €"
+                }
+              ]
+            },
+            {
+              "name": "Gaisrinės sujungimo galvutės DN80–DN100",
+              "model": "GM-80 / GC-80 / GZ-80 / GR-80 / GM-100 / GMV-100",
+              "specs": [
+                "Skersmuo: DN80 ir DN100"
+              ],
+              "price": "nuo 8,76 €",
+              "image": "geslita:uploads/images/spint/image010.jpg",
+              "notes": null,
+              "variants": [
+                {
+                  "label": "GM-80",
+                  "price": "8,76 €"
+                },
+                {
+                  "label": "GC-80",
+                  "price": "8,76 €"
+                },
+                {
+                  "label": "GZ-80",
+                  "price": "10,51 €"
+                },
+                {
+                  "label": "GR-80",
+                  "price": "12,27 €"
+                },
+                {
+                  "label": "GM-100",
+                  "price": "25,87 €"
+                },
+                {
+                  "label": "GMV-100",
+                  "price": "28,04 €"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Gaisriniai čiaupai",
+          "intro": "Gaisriniai čiaupai 51 mm – aliuminiai ir bronziniai.",
+          "items": [
+            {
+              "name": "Gaisrinis čiaupas 51 mm",
+              "model": null,
+              "specs": [
+                "Skersmuo: 51 mm"
+              ],
+              "price": "nuo 26,28 €",
+              "image": "geslita:uploads/images/spint/image012.jpg",
+              "notes": null,
+              "variants": [
+                {
+                  "label": "51 mm aliuminis",
+                  "price": "26,28 €"
+                },
+                {
+                  "label": "51 mm bronzinis",
+                  "price": "38,20 €"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Gaisriniai švirkštai",
+          "intro": "Gaisriniai švirkštai gaisrinėms žarnoms: RS-50, JSN-024, JSN-025, PWh-52, RS-70 ir POK nozzle 2 (160 arba 200 litrų per minutę).",
+          "items": [
+            {
+              "name": "Gaisrinis švirkštas",
+              "model": "RS-50 / JSN-024 / JSN-025 / PWh-52 / RS-70",
+              "specs": [],
+              "price": "nuo 14,02 €",
+              "image": "geslita:uploads/images/spint/image014.jpg",
+              "notes": null,
+              "variants": [
+                {
+                  "label": "RS-50 (aliuminis)",
+                  "price": "19,97 €"
+                },
+                {
+                  "label": "JSN-024",
+                  "price": "14,02 €"
+                },
+                {
+                  "label": "JSN-025",
+                  "price": "26,28 €"
+                },
+                {
+                  "label": "PWh-52",
+                  "price": "20,68 €"
+                },
+                {
+                  "label": "RS-70",
+                  "price": "15,76 €"
+                }
+              ]
+            },
+            {
+              "name": "Švirkštas POK nozzle 2",
+              "model": "POK nozzle 2",
+              "specs": [
+                "Našumas: 160 arba 200 litrų per minutę"
+              ],
+              "price": "1051,32 €",
+              "image": "geslita:uploads/images/spint/image014.jpg",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "title": "Gaisrinės žarnos",
+          "intro": "Gaisrinės žarnos (20 m) su sumontuotomis sujungimo galvutėmis.",
+          "items": [
+            {
+              "name": "Gaisrinė žarna 20 m su sujungimo galvutėmis",
+              "model": null,
+              "specs": [
+                "Ilgis: 20 m"
+              ],
+              "price": "nuo 41,99 €",
+              "image": "geslita:uploads/images/spint/image016.jpg",
+              "notes": null,
+              "variants": [
+                {
+                  "label": "51 mm žarna, l = 20 m, su GR-50",
+                  "price": "41,99 €"
+                },
+                {
+                  "label": "66 mm žarna, l = 20 m, su GR-70",
+                  "price": "52,57 €"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Gaisriniai skydai ir smėlio dėžės",
+          "intro": "Gaisriniai skydai (be komplektacijos arba sukomplektuoti), metalinė smėlio dėžė ir plastikinės smėlio dėžės nuo 120 l iki 660 l talpos.",
+          "items": [
+            {
+              "name": "Gaisrinis skydas",
+              "model": null,
+              "specs": [],
+              "price": "nuo 213,77 €",
+              "image": "geslita:uploads/images/spint/image018.jpg",
+              "notes": null,
+              "variants": [
+                {
+                  "label": "Be komplektacijos",
+                  "price": "213,77 €"
+                },
+                {
+                  "label": "Su komplektacija",
+                  "price": "420,52 €"
+                }
+              ]
+            },
+            {
+              "name": "Metalinė smėlio dėžė",
+              "model": null,
+              "specs": [
+                "Medžiaga: metalas"
+              ],
+              "price": "122,50 €",
+              "image": null,
+              "notes": null
+            },
+            {
+              "name": "Plastikinė smėlio dėžė AZR 150",
+              "model": "AZR 150",
+              "specs": [
+                "Talpa: 150 l",
+                "Aukštis: 585 mm",
+                "Plotis: 695 mm",
+                "Gylis: 535 mm"
+              ],
+              "price": "174,76 €",
+              "image": "geslita:uploads/images/Smelio dezes/AZR 150 jpg.jpg",
+              "notes": null
+            },
+            {
+              "name": "Plastikinė smėlio dėžė AZR 300",
+              "model": "AZR 300",
+              "specs": [
+                "Talpa: 300 l"
+              ],
+              "price": "244,96 €",
+              "image": "geslita:uploads/images/Smelio dezes/AZJ 300.jpg",
+              "notes": null
+            },
+            {
+              "name": "Plastikinė smėlio dėžė AZR 450",
+              "model": "AZR 450",
+              "specs": [
+                "Talpa: 450 l",
+                "Aukštis: 850 mm",
+                "Plotis: 1160 mm",
+                "Gylis: 740 mm"
+              ],
+              "price": "297,52 €",
+              "image": "geslita:uploads/images/Smelio dezes/AZR450.jpg",
+              "notes": null
+            },
+            {
+              "name": "Plastikinė smėlio dėžė AZG 120",
+              "model": "AZG 120",
+              "specs": [
+                "Talpa: 120 l",
+                "Aukštis: 510 mm",
+                "Plotis: 700 mm",
+                "Gylis: 800 mm"
+              ],
+              "price": "157,34 €",
+              "image": "geslita:uploads/images/Smelio dezes/AZG 120.jpg",
+              "notes": null
+            },
+            {
+              "name": "Plastikinė smėlio dėžė AZJ 175",
+              "model": "AZJ 175",
+              "specs": [
+                "Talpa: 175 l",
+                "Aukštis: 645 mm",
+                "Plotis: 860 mm",
+                "Gylis: 860 mm"
+              ],
+              "price": "266,34 €",
+              "image": "geslita:uploads/images/Smelio dezes/AZJ 175.jpg",
+              "notes": null
+            },
+            {
+              "name": "Plastikinė smėlio dėžė AZJ 350",
+              "model": "AZJ 350",
+              "specs": [
+                "Talpa: 350 l",
+                "Aukštis: 765 mm",
+                "Plotis: 1050 mm",
+                "Gylis: 975 mm"
+              ],
+              "price": "315,40 €",
+              "image": "geslita:uploads/images/Smelio dezes/AZJ 300.jpg",
+              "notes": null
+            },
+            {
+              "name": "Plastikinė smėlio dėžė AZO 660",
+              "model": "AZO 660",
+              "specs": [
+                "Talpa: 660 l",
+                "Aukštis: 980 mm",
+                "Plotis: 1260 mm",
+                "Gylis: 770 mm"
+              ],
+              "price": "560,71 €",
+              "image": "geslita:uploads/images/Smelio dezes/AZO660.jpg",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "title": "Dėžutės raktams",
+          "intro": "Metalinės dėžutės raktams saugoti – įvairių dydžių, nuo vieno iki septyniasdešimties raktų.",
+          "items": [
+            {
+              "name": "Dėžutė raktams",
+              "model": null,
+              "specs": [],
+              "price": "nuo 14,04 €",
+              "image": "geslita:uploads/images/spint/image020.jpg",
+              "notes": "Įvairių dydžių.",
+              "variants": [
+                {
+                  "label": "Vienam raktui",
+                  "price": "14,04 €"
+                },
+                {
+                  "label": "Trims raktams",
+                  "price": "14,04 €"
+                },
+                {
+                  "label": "Dvylikai raktų",
+                  "price": "35,04 €"
+                },
+                {
+                  "label": "Dvidešimt keturiems raktams",
+                  "price": "42,05 €"
+                },
+                {
+                  "label": "Septyniasdešimčiai raktų",
+                  "price": "70,09 €"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Lauko priešgaisriniai hidrantai",
+          "intro": "Lauko priešgaisriniai hidrantai DN080 ir DN100. Techniniai duomenys pateikiami PDF failuose, kainų teiraukitės.",
+          "items": [
+            {
+              "name": "Lauko priešgaisrinis hidrantas 8003 DN080",
+              "model": "8003_DN080",
+              "specs": [
+                "Jungtis: DN080"
+              ],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Lauko priešgaisriniai hidrantai/Lauko hidrantas 1.jpg",
+              "pdf": "https://www.geslita.lt/uploads/Lauko%20priešgaisriniai%20hidrantai/8003_DN080.pdf",
+              "notes": null
+            },
+            {
+              "name": "Lauko priešgaisrinis hidrantas 8003 DN100",
+              "model": "8003_DN100",
+              "specs": [
+                "Jungtis: DN100"
+              ],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Lauko priešgaisriniai hidrantai/Lauko hidrantas 1.jpg",
+              "pdf": "https://www.geslita.lt/uploads/Lauko%20priešgaisriniai%20hidrantai/8003_DN100.pdf",
+              "notes": null
+            },
+            {
+              "name": "Lauko priešgaisrinis hidrantas 8004 DN080",
+              "model": "8004_DN080",
+              "specs": [
+                "Jungtis: DN080"
+              ],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Lauko priešgaisriniai hidrantai/Lauko hidrantas 1.jpg",
+              "pdf": "https://www.geslita.lt/uploads/Lauko%20priešgaisriniai%20hidrantai/8004_DN080.pdf",
+              "notes": null
+            },
+            {
+              "name": "Lauko priešgaisrinis hidrantas 8004 DN100",
+              "model": "8004_DN100",
+              "specs": [
+                "Jungtis: DN100"
+              ],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Lauko priešgaisriniai hidrantai/Lauko hidrantas 1.jpg",
+              "pdf": "https://www.geslita.lt/uploads/Lauko%20priešgaisriniai%20hidrantai/8004_DN100.pdf",
+              "notes": null
+            },
+            {
+              "name": "Lauko priešgaisrinis hidrantas 8005 DN080",
+              "model": "8005_DN080",
+              "specs": [
+                "Jungtis: DN080"
+              ],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Lauko priešgaisriniai hidrantai/Lauko hidrantas 1.jpg",
+              "pdf": "https://www.geslita.lt/uploads/Lauko%20priešgaisriniai%20hidrantai/8005_DN080.pdf",
+              "notes": null
+            },
+            {
+              "name": "Lauko priešgaisrinis hidrantas 8855.1 DN080/DN100",
+              "model": "8855.1_DN080_DN100",
+              "specs": [
+                "Jungtis: DN080 / DN100"
+              ],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Lauko priešgaisriniai hidrantai/Lauko hidrantas 1.jpg",
+              "pdf": "https://www.geslita.lt/uploads/Lauko%20priešgaisriniai%20hidrantai/8855.1_DN080_DN100.pdf",
+              "notes": null
+            },
+            {
+              "name": "Lauko priešgaisrinis hidrantas 8855.2 DN080/DN100",
+              "model": "8855.2_DN080_DN100",
+              "specs": [
+                "Jungtis: DN080 / DN100"
+              ],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Lauko priešgaisriniai hidrantai/Lauko hidrantas 1.jpg",
+              "pdf": "https://www.geslita.lt/uploads/Lauko%20priešgaisriniai%20hidrantai/8855.2_DN080_DN100.pdf",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "title": "Sprinkleriai",
+          "intro": "Sprinkleriai automatinėms gaisro gesinimo sistemoms. Kainoraštis pateikiamas PDF faile.",
+          "items": [
+            {
+              "name": "Sprinkleriai",
+              "model": null,
+              "specs": [],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Sprinkleriai/sprinkler3.jpg",
+              "pdf": "https://www.geslita.lt/uploads/Sprinkleriai%20kainos.pdf",
+              "notes": "Sprinklerių kainoraštis (PDF)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "automatika",
+      "title": "Gaisrinė automatika ir įranga",
+      "image": "geslita:uploads/images/gaisro pavojaus mygtukai/image001.jpg",
+      "intro": "Dūmų ir smalkių detektoriai, gaisrinės sirenos, gaisro pavojaus mygtukai, avarinio išėjimo šviestuvai, kibirkščių gesikliai, nedegūs audeklai, saugos rinkiniai ir darbo saugos priemonės.",
+      "related_service": {
+        "label": "Gaisrinė signalizacija – patikra, remontas, įrengimas",
+        "slug": "gaisrine-signalizacija",
+        "old_url": "https://www.geslita.lt/gaisrine-signalizacija-patikra-remontas-gaisrines-signalizacijos-irengimas"
+      },
+      "subgroups": [
+        {
+          "title": "Dūmų ir smalkių detektoriai",
+          "intro": "Autonominiai dūmų jutikliai ir smalkių (CO) detektorius.",
+          "converted_from_ltl": true,
+          "price_note": "Senajame kainoraštyje šios prekės buvo įkainotos tik litais (be PVM / su PVM). Kainos su PVM perskaičiuotos į eurus kursu 3,4528 LTL = 1 EUR.",
+          "items": [
+            {
+              "name": "Autonominis dūmų jutiklis ARTOSHKA",
+              "model": "ARTOSHKA",
+              "specs": [
+                "Tipas: autonominis dūmų jutiklis"
+              ],
+              "price": "20,33 €",
+              "converted_from_ltl": true,
+              "source_price_ltl": "70,18 Lt su PVM (58,00 Lt be PVM)",
+              "image": "geslita:uploads/images/dumu detektoriai/image001.jpg",
+              "notes": null
+            },
+            {
+              "name": "Smalkių detektorius NB-983-CO",
+              "model": "NB-983-CO",
+              "specs": [
+                "Tipas: smalkių (CO) detektorius su rėliniu išėjimu",
+                "Garso signalas: 75 dB aliarmo režime",
+                "Aptikimas: patobulinti aptikimo ir skyrimo algoritmai",
+                "Montavimas: lengva instaliuoti ir prižiūrėti",
+                "Maitinimo įtampa: 12/24 VDC",
+                "Darbo temperatūra: nuo 0°C iki +40°C",
+                "Atitiktis: EN 50291"
+              ],
+              "price": "38,55 €",
+              "converted_from_ltl": true,
+              "source_price_ltl": "133,10 Lt su PVM (110,00 Lt be PVM)",
+              "image": "geslita:uploads/images/dumu detektoriai/image002.jpg",
+              "notes": null
+            },
+            {
+              "name": "Autonominis dūmų jutiklis ADR-20N",
+              "model": "ADR-20N",
+              "specs": [
+                "Tipas: autonominis optinis dūmų jutiklis",
+                "Atitiktis: EN 54",
+                "Sirena: 85 dB/1 m",
+                "Sujungimas: 2 laidais galima sujungti jutiklius tarpusavyje – suveikus vienam, įsijungia ir kitų jutiklių sirenos",
+                "Maitinimo įtampa: 9 VDC",
+                "Komplektacija: su tvirtinimo baze",
+                "Kilmės šalis: Lenkija"
+              ],
+              "price": "23,83 €",
+              "converted_from_ltl": true,
+              "source_price_ltl": "82,28 Lt su PVM (68,00 Lt be PVM)",
+              "image": "geslita:uploads/images/dumu detektoriai/image003.jpg",
+              "notes": null
+            },
+            {
+              "name": "Autonominis dūmų detektorius SPD-3.4",
+              "model": "SPD-3.4",
+              "specs": [
+                "Garsumas: 85 dB/1 m"
+              ],
+              "price": "15,77 €",
+              "converted_from_ltl": true,
+              "source_price_ltl": "54,45 Lt su PVM (45,00 Lt be PVM)",
+              "image": "geslita:uploads/images/dumu detektoriai/image004.jpg",
+              "notes": null
+            },
+            {
+              "name": "Autonominis dūmų detektorius ReinoldMax",
+              "model": "ReinoldMax",
+              "specs": [
+                "Garsumas: 85 dB/3 m"
+              ],
+              "price": "8,76 €",
+              "converted_from_ltl": true,
+              "source_price_ltl": "30,25 Lt su PVM (25,00 Lt be PVM)",
+              "image": "geslita:uploads/images/dumu detektoriai/Dumu detektorius reinoldmax.jpg",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "title": "Gaisrinės sirenos",
+          "intro": "Vidaus ir lauko gaisrinės sirenos, garso skambučiai ir sirenos su stroboskopu gaisrinės signalizacijos sistemoms.",
+          "items": [
+            {
+              "name": "Gaisro sirena BS-531",
+              "model": "BS-531",
+              "specs": [
+                "Spalva: balta su raudona blykste",
+                "Naudojimas: vidaus ir lauko",
+                "Garsumas: 100 dB/1 m",
+                "Kilmės šalis: Graikija"
+              ],
+              "price": "33,29 €",
+              "image": "geslita:uploads/images/gaisrines sirenos/image001.jpg",
+              "notes": null
+            },
+            {
+              "name": "Sirena SF 120",
+              "model": "SF 120",
+              "specs": [
+                "Tipas: raudonos spalvos gaisrinė lauko sirena, stačiakampio formos",
+                "Korpusas: ABS-0",
+                "Garsumas: 96 dB/1 m",
+                "Maksimali vartojama srovė: 250 mA",
+                "Darbo temperatūra: nuo -10°C iki +55°C"
+              ],
+              "price": "37,85 €",
+              "image": "geslita:uploads/images/gaisrines sirenos/image003.jpg",
+              "notes": null
+            },
+            {
+              "name": "Gaisro sirena SF 200",
+              "model": "SF 200",
+              "specs": [
+                "Korpusas: polikarbonatas, raudonos spalvos su oranžinės spalvos blykste",
+                "Montavimas: lauko sąlygomis",
+                "Darbo temperatūra: nuo -40°C iki +85°C",
+                "Maitinimo įtampa: 12–30 VDC",
+                "Apsauga: du antisabotažiniai kontaktai",
+                "Garsumas: 105 dB/1 m",
+                "Sirenos dažnis: 3,1–3,8 kHz",
+                "Atitiktis: EN normų reikalavimai, paženklinta CE ženklu"
+              ],
+              "price": "37,85 €",
+              "image": "geslita:uploads/images/gaisrines sirenos/image005.jpg",
+              "notes": null
+            },
+            {
+              "name": "Garso skambutis BS 595",
+              "model": "BS 595",
+              "specs": [
+                "Tipas: universalus, vidaus ir lauko sąlygoms, raudonos spalvos",
+                "Garsumas: 95 dB/1 m",
+                "Maitinimo įtampa: 24 VDC, 15 mA",
+                "Atitiktis: EN 54",
+                "Kilmės šalis: Graikija"
+              ],
+              "price": "36,80 €",
+              "image": "geslita:uploads/images/gaisrines sirenos/image007.jpg",
+              "notes": null
+            },
+            {
+              "name": "Gaisro sirena su stroboskopu SF 105",
+              "model": "SF 105",
+              "specs": [
+                "Tipas: raudonos spalvos korpusas ir stroboskopas",
+                "Naudojimas: tik vidaus sąlygomis",
+                "Maitinimo įtampa: 16–30 VDC",
+                "Garsumas: piezo sirena 105 dB/1 m",
+                "Naudojama srovė: 80 mA (24 V)"
+              ],
+              "price": "10,43 €",
+              "image": "geslita:uploads/images/gaisrines sirenos/image009.jpg",
+              "notes": null
+            },
+            {
+              "name": "Sirena BS 525",
+              "model": "BS 525",
+              "specs": [
+                "Tipas: vandeniui atspari sirena",
+                "Maitinimo įtampa: 24–30 VDC",
+                "Garsumas: 92 dB/1 m",
+                "Apsaugos laipsnis: IP54",
+                "Atitiktis: EN 54, EN 60335-1, EN 50082-1, EN 61000-3-2, EN 61000-3-3",
+                "Veikimo temperatūra: nuo 0°C iki +60°C",
+                "Santykinė drėgmė: iki 95 %",
+                "Korpusas: ABS plastikas",
+                "Matmenys: 108x108x70 mm",
+                "Svoris: 200 g"
+              ],
+              "price": "54,32 €",
+              "image": "geslita:uploads/images/gaisrines sirenos/image011.jpg",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "title": "Gaisro pavojaus mygtukai",
+          "intro": "Ranka valdomi gaisro pavojaus signalizavimo įtaisai su apsauginiu stiklu ir tikrinimo rakteliu – vidaus ir lauko montavimui.",
+          "items": [
+            {
+              "name": "Ranka valdomas pavojaus signalizavimo įtaisas ROP63",
+              "model": "ROP63",
+              "specs": [
+                "Apsauga: skaidrus nedūžtantis stiklas, atsidarantis tik smūgiuojant – gerai apsaugo nuo atsitiktinių (melagingų) suveikimų",
+                "Atstatymas: tik specialiu raktu",
+                "Prijungimas: labai patogus prijungimas ir techninis aptarnavimas",
+                "Montavimas: universalus – įleidžiamas į sieną arba montuojamas ant sienos",
+                "Korpusas: ekranuotas",
+                "Hermetiškumo laipsnis: IP30",
+                "Atitiktis: EN 54-11, sertifikuotas",
+                "Darbo temperatūra: nuo -25°C iki +55°C",
+                "Išmatavimai: 102x98x46 mm"
+              ],
+              "price": "34,69 €",
+              "image": "geslita:uploads/images/gaisro pavojaus mygtukai/image001.jpg",
+              "notes": null
+            },
+            {
+              "name": "Ranka valdomas pavojaus signalizavimo įtaisas ROP63H",
+              "model": "ROP63H",
+              "specs": [
+                "Apsauga: skaidrus nedūžtantis stiklas, atsidarantis tik smūgiuojant – gerai apsaugo nuo atsitiktinių (melagingų) suveikimų",
+                "Atstatymas: tik specialiu raktu",
+                "Prijungimas: labai patogus prijungimas ir techninis aptarnavimas",
+                "Montavimas: universalus – įleidžiamas į sieną arba montuojamas ant sienos",
+                "Korpusas: ekranuotas",
+                "Hermetiškumo laipsnis: IP65 (gali būti montuojamas lauko sąlygomis)",
+                "Atitiktis: EN 54-11, sertifikuotas",
+                "Darbo temperatūra: nuo -40°C iki +60°C",
+                "Išmatavimai: 102x98x46 mm"
+              ],
+              "price": "49,41 €",
+              "image": "geslita:uploads/images/gaisro pavojaus mygtukai/image001.jpg",
+              "notes": null
+            },
+            {
+              "name": "Ranka valdomas pavojaus signalizavimo įtaisas BS-535 (536)",
+              "model": "BS-535 (536)",
+              "specs": [
+                "Korpusas: polikarbonatas, raudonos spalvos",
+                "Tikrinimas: raktelis mygtuko tikrinimui",
+                "Stikliukas: nuspaudimo metu nesulaužomas",
+                "Kilmės šalis: Graikija"
+              ],
+              "price": "14,01 €",
+              "image": "geslita:uploads/images/gaisro pavojaus mygtukai/image004.jpg",
+              "notes": null
+            },
+            {
+              "name": "Ranka valdomas pavojaus signalizavimo įtaisas BS-7002",
+              "model": "BS-7002",
+              "specs": [
+                "Korpusas: polikarbonatas, raudonos spalvos",
+                "Tikrinimas: raktelis tikrinimui (testavimui)",
+                "Stikliukas: daugkartinio naudojimo",
+                "Indikacija: pavojaus indikatorius (šviesos diodas)",
+                "Kontaktai: dvi NC/NO kontaktų grupės (5 A/250 V)",
+                "Apsaugos laipsnis: IP40",
+                "Atitiktis: EN 54",
+                "Kilmės šalis: Graikija"
+              ],
+              "price": "22,78 €",
+              "image": "geslita:uploads/images/gaisro pavojaus mygtukai/image006.jpg",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "title": "Avarinio išėjimo šviestuvai",
+          "intro": "Avarinio išėjimo (evakuacijos) šviestuvai.",
+          "items": [
+            {
+              "name": "Evakuacijos šviestuvas",
+              "model": null,
+              "specs": [],
+              "price": "47,31 €",
+              "image": "geslita:uploads/images/Evakuaciniai sviestuvai/image001.jpg",
+              "notes": null
+            },
+            {
+              "name": "Evakuacijos šviestuvas",
+              "model": null,
+              "specs": [],
+              "price": "24,53 €",
+              "image": "geslita:uploads/images/Evakuaciniai sviestuvai/image003.jpg",
+              "notes": null
+            },
+            {
+              "name": "Evakuacijos šviestuvas",
+              "model": null,
+              "specs": [],
+              "price": "29,78 €",
+              "image": "geslita:uploads/images/Evakuaciniai sviestuvai/image005.jpg",
+              "notes": null
+            },
+            {
+              "name": "Evakuacijos šviestuvas",
+              "model": null,
+              "specs": [],
+              "price": "56,07 €",
+              "image": "geslita:uploads/images/Evakuaciniai sviestuvai/image007.jpg",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "title": "Kibirkščių gesikliai",
+          "intro": "Kibirkščių gesikliai transporto priemonių ir žemės ūkio technikos duslintuvams – privalomi durpynuose dirbančiai technikai, traktoriams ir degias medžiagas gabenančioms automobilinėms cisternoms.",
+          "items": [
+            {
+              "name": "Kibirkščių gesiklis",
+              "model": null,
+              "specs": [
+                "Paskirtis: vidaus degimo variklių duslintuvų vamzdžiams"
+              ],
+              "price": "105,13 €",
+              "image": "geslita:uploads/images/Kibirkščių gaudyklės/kibirksciu gaudykle sumazinta foto.jpg",
+              "notes": "Reikalavimas pagal Bendrąsias gaisrinės saugos taisykles (Žin., 2010, Nr. 99-5167).",
+              "details": [
+                {
+                  "heading": "Reikalavimai",
+                  "paragraphs": [
+                    "Bendrųjų gaisrinės saugos taisyklių (Žin., 2010, Nr. 99-5167) 54, 133, 231, 290 punktai nustato, kad:",
+                    "a) vidaus degimo variklius turinčias transporto priemones vairuojantys asmenys eksploatuojamame durpyne privalo: dirbti tik su techniškai tvarkingu transporto priemonės varikliu ir kibirkščių gesikliu; nedelsdami šalinti pastebėtus gaisro židinius, atsiradusius nuo pravažiavusios transporto priemonės; turėti kibirą, kastuvą ir gesintuvą, turintį ne mažiau kaip 6 kg gesinimo medžiagos;",
+                    "b) traktoriai, kita žemės ūkio technika turi turėti tvarkingus kibirkščių gesiklius ir pirminių gaisro gesinimo priemonių;",
+                    "c) automobilinės cisternos, transportuojančios ypač degias, labai degias ir degias skystas bei dujines medžiagas ir preparatus, turi būti įžemintos (vežant, pripilant ir išpilant), turėti pirminių gaisro gesinimo priemonių. Duslintuvų vamzdžiai turi būti su techniškai tvarkingais kibirkščių gesikliais;",
+                    "d) automobilinėse cisternose, gabenančiose ypač degius ir labai degius skysčius, turi būti techniškai tvarkingi įrenginiai, skirti cisternoms prijungti prie estakados įžeminimo kontūro. Automobilinių cisternų duslintuvai turi būti su techniškai tvarkingais kibirkščių gesikliais, išvestais į priekį. Automobilinėse cisternose turi būti pirminių gaisro gesinimo priemonių."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Nedegūs audeklai",
+          "intro": "Nedegus audeklas – geriausia priemonė malšinant nedidelį gaisrą. Užklotas pagamintas iš ugniai atsparios medžiagos, patogumo sumetimais prie jo pritvirtinti diržai. Tai pati geriausia priemonė malšinti gaisrą, įsiplieskusį užsidegus riebalams, tačiau juo galima gesinti ir degančius buitinės technikos prietaisus bei užsiliepsnojusius žmogaus rūbus.",
+          "image": "geslita:uploads/images/Nedegus Audeklai/nedegus audeklas.JPG",
+          "details": [
+            {
+              "heading": "Svarbu prisiminti",
+              "paragraphs": [
+                "Gesinant gaisro židinį, reikia visiškai uždengti jį užklotu. Tai neleidžia patekti orui, ir ugnis nuslopsta.",
+                "Gesinant degančius riebalus, jokiu būdu negalima naudoti vandens!",
+                "Užpylus ant degančių riebalų netgi visiškai nedaug vandens, ugnis pašoks iki pat lubų."
+              ]
+            }
+          ],
+          "items": [
+            {
+              "name": "Nedegus audeklas AI",
+              "model": "AI",
+              "specs": [
+                "Išmatavimai: 1,2 m x 1,0 m"
+              ],
+              "price": "14,01 €",
+              "image": "geslita:uploads/images/Nedegus Audeklai/DSCN1306 maza - Copy.jpg",
+              "notes": null
+            },
+            {
+              "name": "Nedegus audeklas AII",
+              "model": "AII",
+              "specs": [
+                "Išmatavimai: 1,20 m x 1,80 m"
+              ],
+              "price": "17,52 €",
+              "image": "geslita:uploads/images/Nedegus Audeklai/DSCN1306 maza.jpg",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "title": "Saugos rinkiniai ir pirmosios pagalbos vaistinėlės",
+          "intro": "Automobilio saugos rinkinys, pirmosios pagalbos rinkinys automobiliui ir įmonės pirmosios pagalbos rinkinys. Automobilio rinkiniai pagaminti Lietuvoje – su jais automobilis atitiks saugos reikalavimus per techninę apžiūrą.",
+          "items": [
+            {
+              "name": "Kelių motorinės transporto priemonės saugos rinkinys",
+              "model": null,
+              "specs": [
+                "Sudėtis: pirmosios pagalbos rinkinys (DIN 13164 standartas)",
+                "Sudėtis: 2 kg miltelinis gesintuvas",
+                "Sudėtis: avarinis trikampio formos kelio ženklas",
+                "Sudėtis: šviesą atspindinti liemenė",
+                "Pakuotė: medžiaginis dėklas su dviem užtraukiamais skyriais"
+              ],
+              "price": "49,53 €",
+              "image": "geslita:uploads/images/rinkinis.jpg",
+              "notes": "Automobilio saugos rinkinys pagamintas Lietuvoje, o tai užtikrina produkto kokybę. Su šiuo rinkiniu Jūsų automobilis atitiks saugos reikalavimus per techninę apžiūrą. Kiekvienam vairuotojui, norinčiam užtikrinti savo bei keleivių saugumą, privalu turėti šį rinkinį. Viskas viename medžiaginiame dėkle su dviem užtraukiamais skyriais – kompaktiška laikyti automobilyje."
+            },
+            {
+              "name": "Kelių motorinės transporto priemonės pirmosios pagalbos rinkinys",
+              "model": null,
+              "specs": [
+                "Sudėtis: pirmosios pagalbos rinkinys (DIN 13164 standartas)"
+              ],
+              "price": "9,73 €",
+              "image": "geslita:uploads/images/photo(5).jpg",
+              "notes": "Pirmosios pagalbos rinkinys (vaistinėlė) automobiliui, pagamintas Lietuvoje."
+            },
+            {
+              "name": "Įmonės pirmosios pagalbos rinkinys",
+              "model": null,
+              "specs": [],
+              "price": "19,28 €",
+              "image": "geslita:uploads/images/photo(2).jpg",
+              "notes": "Pirmosios pagalbos rinkinys įmonėms ir įstaigoms."
+            }
+          ]
+        },
+        {
+          "title": "Darbo saugos priemonės",
+          "intro": "Asmeninės apsaugos priemonės darbuotojams: akių, klausos ir veido apsauga, darbo batai, rūbai, pirštinės, šalmai ir apsauga nuo kritimo. Katalogai pateikiami PDF failuose, kainų teiraukitės.",
+          "image": "geslita:uploads/images/darbo sauga/shutterstock_5342725-riskMn.jpg",
+          "catalog_pdf": "https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/Pilnas.pdf",
+          "items": [
+            {
+              "name": "Akių apsauga",
+              "model": null,
+              "specs": [],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Darbo brabuziu kategorijos/Akiu apsauga.gif",
+              "notes": null
+            },
+            {
+              "name": "Klausos apsauga",
+              "model": null,
+              "specs": [],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Darbo brabuziu kategorijos/klausos apsauga.gif",
+              "notes": null
+            },
+            {
+              "name": "Veido apsauga",
+              "model": null,
+              "specs": [],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Darbo brabuziu kategorijos/veido apsauga.gif",
+              "notes": null
+            },
+            {
+              "name": "Darbo batai",
+              "model": null,
+              "specs": [],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Darbo brabuziu kategorijos/Batai.gif",
+              "pdf": "https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/batai.pdf",
+              "notes": null
+            },
+            {
+              "name": "Darbo rūbai",
+              "model": null,
+              "specs": [],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Darbo brabuziu kategorijos/kostiumai.gif",
+              "pdf": "https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/Rūbai.pdf",
+              "notes": null
+            },
+            {
+              "name": "Darbo pirštinės",
+              "model": null,
+              "specs": [],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Darbo brabuziu kategorijos/pirstines.gif",
+              "pdf": "https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/pirstines2%20PLIUS.pdf",
+              "notes": null
+            },
+            {
+              "name": "Šalmai, kepurės",
+              "model": null,
+              "specs": [],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Darbo brabuziu kategorijos/salmai.gif",
+              "pdf": "https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/kepures.pdf",
+              "notes": null
+            },
+            {
+              "name": "Pirmos pagalbos rinkiniai ir kita",
+              "model": null,
+              "specs": [],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Darbo brabuziu kategorijos/pagrind.gif",
+              "pdf": "https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/Pirmos%20pagalbos%20rinkiniai.pdf",
+              "notes": null
+            },
+            {
+              "name": "Apsauga nuo kritimo",
+              "model": null,
+              "specs": [],
+              "price": "teiraukitės",
+              "image": "geslita:uploads/images/Darbo brabuziu kategorijos/Fall Protection.jpg",
+              "pdf": "https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/apsauga%20nuo%20kritimo.pdf",
+              "notes": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

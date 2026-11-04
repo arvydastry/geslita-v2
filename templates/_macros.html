@@ -1,0 +1,97 @@
+{# Pakartotinai naudojami blokai. Ikonos: Tabler Icons kontūrai (MIT), įterptos kaip simboliai base.html #}
+{% macro icon(name) -%}<svg class="ic" aria-hidden="true"><use href="#i-{{ name }}"/></svg>{%- endmacro %}
+
+{% macro btn(label, href, kind='', icon_name='arrow') -%}
+<a class="btn {{ kind }}" href="{{ href }}">{{ label }}{% if icon_name %}{{ icon(icon_name) }}{% endif %}</a>
+{%- endmacro %}
+
+{% macro page_hero(title, lead, image=None, alt='', crumbs=[], eyebrow=None, buttons=[], pos=None, badge=None) -%}
+<section class="page-hero {{ 'no-media' if not image }}">
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.2">
+  <div class="wrap">
+    <div>
+      {% if crumbs %}<ol class="crumbs"><li><a href="index.html">Pradžia</a></li>{% for c in crumbs %}<li>{% if c.href %}<a href="{{ c.href }}">{{ c.label }}</a>{% else %}<span aria-current="page">{{ c.label }}</span>{% endif %}</li>{% endfor %}</ol>{% endif %}
+      {% if eyebrow %}<div class="eyebrow" style="margin-top:14px">{{ eyebrow }}</div>{% endif %}
+      <h1>{{ title }}</h1>
+      {% if lead %}<p class="lead">{{ lead }}</p>{% endif %}
+      {% if buttons %}<div class="btn-group">{% for b in buttons %}{{ btn(b.label, b.href, b.kind or '', b.icon if b.icon is defined else 'arrow') }}{% endfor %}</div>{% endif %}
+    </div>
+    {% if image %}<div class="media" data-reveal="scale"><img src="{{ image }}" alt="{{ alt }}"{% if pos %} style="object-position: {{ pos }}"{% endif %} width="1200" height="900" fetchpriority="high">{% if badge %}<div class="ph-badge">{% if badge.img %}<img src="{{ badge.img }}" alt="" width="56" height="56">{% endif %}<span><b>{{ badge.title }}</b>{% if badge.text %}<small>{{ badge.text }}</small>{% endif %}</span></div>{% endif %}</div>{% endif %}
+  </div>
+</section>
+{%- endmacro %}
+
+{% macro table(t, caption=None) -%}
+<div class="tbl" data-reveal>
+  <table>
+    {% if caption or t.title %}<caption>{{ caption or t.title }}</caption>{% endif %}
+    {% if t.columns %}<thead><tr>{% for c in t.columns %}<th {% if loop.index > 1 and (c is string) and ('€' in c or 'Kaina' in c or 'kaina' in c) %}class="num"{% endif %}>{{ c }}</th>{% endfor %}</tr></thead>{% endif %}
+    <tbody>
+    {% for row in t.rows %}<tr>{% for cell in row %}<td {% if loop.index > 1 and t.columns and (t.columns[loop.index0] is string) and ('€' in t.columns[loop.index0] or 'Kaina' in t.columns[loop.index0] or 'kaina' in t.columns[loop.index0]) %}class="num"{% endif %}>{% if loop.last and row|length > 1 and t.columns and (t.columns[loop.index0] is string) and ('€' in t.columns[loop.index0] or 'Kaina' in t.columns[loop.index0] or 'kaina' in t.columns[loop.index0]) %}<b>{{ cell }}</b>{% else %}{{ cell }}{% endif %}</td>{% endfor %}</tr>{% endfor %}
+    </tbody>
+  </table>
+</div>
+{% if t.note %}<p class="tbl-note">{{ t.note }}</p>{% endif %}
+{% if t.converted_from_ltl %}<p class="tbl-note">Kainos perskaičiuotos iš ankstesnio kainoraščio litais (3,4528 Lt = 1 €) ir yra orientacinės.</p>{% endif %}
+{%- endmacro %}
+
+{% macro acc(title, body_html, open=False) -%}
+<details class="acc" {% if open %}open{% endif %}>
+  <summary>{{ title }}{{ icon('plus') }}</summary>
+  <div class="acc-body">{{ body_html|safe }}</div>
+</details>
+{%- endmacro %}
+
+{% macro paragraphs(list) -%}
+{% for p in list %}<p>{{ p }}</p>{% endfor %}
+{%- endmacro %}
+
+{% macro checks(items) -%}
+<ul class="checks">{% for it in items %}<li>{{ icon('check') }}<span>{{ it }}</span></li>{% endfor %}</ul>
+{%- endmacro %}
+
+{% macro product(p) -%}
+<article class="prod" data-reveal data-name="{{ p.name }} {{ p.model or '' }}">
+  <figure>{% if p.image %}<img src="{{ img(p.image) }}" alt="{{ p.name }}" loading="lazy">{% else %}<span class="muted small">Nuotrauka ruošiama</span>{% endif %}</figure>
+  <div class="body">
+    <h3>{{ p.name }}</h3>
+    {% if p.model %}<div class="small muted">{{ p.model }}</div>{% endif %}
+    {% if p.specs %}<ul class="specs">{% for s in p.specs[:5] %}<li>{{ s }}</li>{% endfor %}</ul>{% endif %}
+    {% if p.variants %}<ul class="variants">{% for v in p.variants %}<li><span>{{ v.label or v.size_mm }}</span><b>{{ v.price }}</b></li>{% endfor %}</ul>{% endif %}
+    {% if p.price %}<div class="price"><small>Kaina</small>{{ p.price }}</div>{% endif %}
+  </div>
+</article>
+{%- endmacro %}
+
+{% macro cta_inline(title='Reikia pasiūlymo jūsų objektui?', text='Paskambinkite arba parašykite: aptarsime įrangos kiekį, terminus ir paruošime pasiūlymą.', label='Gauti pasiūlymą', href='kontaktai.html#forma') -%}
+<div class="cta-inline" data-reveal>
+  <div><h2>{{ title }}</h2><p>{{ text }}</p></div>
+  <div class="btn-group">{{ btn(label, href) }}<a class="btn btn-line" href="tel:+37065399977">{{ icon('phone') }}+370 653 99977</a></div>
+</div>
+{%- endmacro %}
+
+{# Užklausos forma su paslaugų žymomis (pradžios ir kontaktų puslapiai). c = home.cta, site = site #}
+{% macro request_form(c, site) -%}
+<h3>{{ c.form_title }}</h3>
+<p class="form-lead">{{ c.form_lead }}</p>
+<form data-demo novalidate>
+  <fieldset class="svc-pick">
+    <legend>{{ c.services_label }}</legend>
+    <div class="pills">{% for s in c.services %}<label class="pill"><input type="checkbox" name="services" value="{{ s }}"><span>{{ icon('check') }}{{ s }}</span></label>{% endfor %}</div>
+  </fieldset>
+  <div class="form-row">
+    <div class="field"><label for="f-name">Vardas <span class="req" aria-hidden="true">*</span></label><input id="f-name" name="name" type="text" required autocomplete="name"><span class="err" id="f-name-err">Įrašykite vardą</span></div>
+    <div class="field"><label for="f-phone">Telefonas <span class="req" aria-hidden="true">*</span></label><input id="f-phone" name="phone" type="tel" required autocomplete="tel"><span class="err" id="f-phone-err">Įrašykite telefoną</span></div>
+  </div>
+  <div class="form-row">
+    <div class="field"><label for="f-email">El. paštas</label><input id="f-email" name="email" type="email" autocomplete="email"><span class="err" id="f-email-err">Patikrinkite el. pašto adresą</span></div>
+    <div class="field"><label for="f-obj">Objektas ir miestas</label><input id="f-obj" name="object" type="text" placeholder="pvz., sandėlis Kaune, 12 gesintuvų"></div>
+  </div>
+  <div class="field"><label for="f-msg">Komentaras</label><textarea id="f-msg" name="message" rows="3" placeholder="Kiekis, terminai ar kita svarbi informacija"></textarea></div>
+  <div class="form-foot">
+    <p class="form-note">{{ c.note }} {{ c.privacy }}</p>
+    <button class="btn" type="submit">Siųsti užklausą{{ icon('arrow') }}</button>
+  </div>
+</form>
+<div class="form-ok" role="status">Ačiū! Užklausą gavome ir susisieksime darbo dienomis {{ site.hours | replace('I-V ', '') }}.</div>
+{%- endmacro %}

@@ -1,0 +1,1582 @@
+{
+ "price_note": "Kainos su PVM, perkeltos iš senojo geslita.lt kainoraščio (demonstracinė versija).",
+ "groups": [
+  {
+   "title": "Evakuacijos krypties ženklai",
+   "items": [
+    {
+     "code": "C.1d",
+     "name": "Evakuacinis išėjimas į dešinę",
+     "usage": "Virš durų evakuaciniuose išėjimuose, evakuacijos keliuose",
+     "image": "krzenklai--image001.png",
+     "variants": [
+      {
+       "size_mm": "130x230",
+       "price": "3,99 €"
+      }
+     ]
+    },
+    {
+     "code": "C.1k",
+     "name": "Evakuacinis išėjimas į kairę",
+     "usage": "Virš durų evakuaciniuose išėjimuose, evakuacijos keliuose",
+     "image": "krzenklai--image003.png",
+     "variants": [
+      {
+       "size_mm": "130x230",
+       "price": "3,99 €"
+      }
+     ]
+    },
+    {
+     "code": "C.2kv",
+     "name": "Evakuacinis išėjimas, lipant laiptais aukštyn į kairę",
+     "usage": "Virš durų evakuaciniuose išėjimuose prieš laiptines",
+     "image": "krzenklai--image005.png",
+     "variants": [
+      {
+       "size_mm": "130x230",
+       "price": "3,99 €"
+      }
+     ]
+    },
+    {
+     "code": "C.2dv",
+     "name": "Evakuacinis išėjimas, lipant laiptais aukštyn į dešinę",
+     "usage": "Virš durų evakuaciniuose išėjimuose prieš laiptines",
+     "image": "krzenklai--image007.png",
+     "variants": [
+      {
+       "size_mm": "130x230",
+       "price": "3,99 €"
+      }
+     ]
+    },
+    {
+     "code": "C.3kž",
+     "name": "Evakuacinis išėjimas, lipant laiptais žemyn į kairę",
+     "usage": "Virš durų evakuaciniuose išėjimuose prieš laiptines",
+     "image": "krzenklai--image009.png",
+     "variants": [
+      {
+       "size_mm": "130x230",
+       "price": "3,99 €"
+      }
+     ]
+    },
+    {
+     "code": "C.3dž",
+     "name": "Evakuacinis išėjimas, lipant laiptais žemyn į dešinę",
+     "usage": "Virš durų evakuaciniuose išėjimuose prieš laiptines",
+     "image": "krzenklai--image011.png",
+     "variants": [
+      {
+       "size_mm": "130x230",
+       "price": "3,99 €"
+      }
+     ]
+    },
+    {
+     "code": "C.8",
+     "name": "Evakuacinis išėjimas tiesiai",
+     "usage": "Virš durų evakuaciniuose išėjimuose, evakuacijos keliuose",
+     "image": "krzenklai--image013.png",
+     "variants": [
+      {
+       "size_mm": "130x230",
+       "price": "3,99 €"
+      }
+     ]
+    },
+    {
+     "code": "C.9",
+     "name": "Evakuacinis išėjimas tiesiai",
+     "usage": "Virš (ant) durų evakuaciniuose išėjimuose",
+     "image": "krzenklai--image015.png",
+     "variants": [
+      {
+       "size_mm": "130x230",
+       "price": "3,99 €"
+      }
+     ]
+    },
+    {
+     "code": "C.10",
+     "name": "Įėjimas",
+     "usage": "Virš (ant) durų evakuaciniuose iėjimuose",
+     "image": "krzenklai--image017.png",
+     "variants": [
+      {
+       "size_mm": "130x230",
+       "price": "3,99 €"
+      }
+     ]
+    },
+    {
+     "code": "C.11",
+     "name": "Avarinis išėjimas",
+     "usage": "Virš (ant) evakuacinio išėjimo durų",
+     "image": "krzenklai--image019.png",
+     "variants": [
+      {
+       "size_mm": "130x230",
+       "price": "3,99 €"
+      }
+     ]
+    },
+    {
+     "code": "C.12",
+     "name": "Evakuacinis išėjimas į kairę",
+     "usage": "Virš durų evakuaciniuose išėjimuose",
+     "image": "krzenklai--image021.png",
+     "variants": [
+      {
+       "size_mm": "130x130",
+       "price": "3,03 €"
+      }
+     ]
+    },
+    {
+     "code": "C.13",
+     "name": "Evakuacinis išėjimas į dešinę",
+     "usage": "Virš durų evakuaciniuose išėjimuose",
+     "image": "krzenklai--image023.png",
+     "variants": [
+      {
+       "size_mm": "130x130",
+       "price": "3,03 €"
+      }
+     ]
+    },
+    {
+     "code": "C.14",
+     "name": "Krypties rodyklė (pasukimas kas 90°)",
+     "usage": "Evakuacijos keliuose",
+     "image": "krzenklai--image025.png",
+     "variants": [
+      {
+       "size_mm": "130x130",
+       "price": "3,03 €"
+      }
+     ]
+    },
+    {
+     "code": "C.15",
+     "name": "Krypties 45° rodyklė (pasukimas kas 90°)",
+     "usage": "Evakuacijos keliuose",
+     "image": "krzenklai--image027.gif",
+     "variants": [
+      {
+       "size_mm": "130x130",
+       "price": "3,03 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "Susirinkimo vieta",
+     "usage": "Susirinkimo vietoje arba virš durų į susirinkimo vietą",
+     "image": "susirinkimonvieta.gif",
+     "variants": [
+      {
+       "size_mm": "200x200",
+       "price": "5,93 €"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Informacijos ir gaisrinės įrangos ženklai",
+   "items": [
+    {
+     "code": null,
+     "name": "Gaisrinės kopėčios",
+     "usage": "Gaisrinių kopėčių įrengimo vietose",
+     "image": "infzenklai--image001.gif",
+     "variants": [
+      {
+       "size_mm": "130x130",
+       "price": "3,02 €"
+      },
+      {
+       "size_mm": "200x200",
+       "price": "5,99 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "Gaisrinio aliarmo skelbimo vieta",
+     "usage": "Rankinių gaisrinių signalizatorių įrengimo vietose",
+     "image": "infzenklai--image002.gif",
+     "variants": [
+      {
+       "size_mm": "130x130",
+       "price": "3,02 €"
+      },
+      {
+       "size_mm": "200x200",
+       "price": "5,99 €"
+      }
+     ]
+    },
+    {
+     "code": "D.1",
+     "name": "Gesintuvas",
+     "usage": "Gesintuvų išdėstymo vietose (klijuojamas nuo 2 m iki 2,5 m)",
+     "image": "infzenklai--image003.png",
+     "variants": [
+      {
+       "size_mm": "130x130",
+       "price": "3,02 €"
+      },
+      {
+       "size_mm": "200x200",
+       "price": "5,99 €"
+      }
+     ]
+    },
+    {
+     "code": "D.2",
+     "name": "Gaisrinės žarnos ritinys",
+     "usage": "Gaisrinių čiaupų įrengimo vietose",
+     "image": "infzenklai--image005.png",
+     "variants": [
+      {
+       "size_mm": "130x130",
+       "price": "3,02 €"
+      },
+      {
+       "size_mm": "200x200",
+       "price": "5,99 €"
+      }
+     ]
+    },
+    {
+     "code": "D.3",
+     "name": "Gaisro avarinis telefonas",
+     "usage": "Vietose, iš kurių galima pranešti ugnegesiams apie gaisrą",
+     "image": "infzenklai--image007.gif",
+     "variants": [
+      {
+       "size_mm": "130x130",
+       "price": "3,02 €"
+      },
+      {
+       "size_mm": "200x200",
+       "price": "5,99 €"
+      }
+     ]
+    },
+    {
+     "code": "D.4",
+     "name": "Gaisrinis hidrantas",
+     "usage": "Gaisrinių hidrantų įrengimo vietoms nurodyti",
+     "image": "infzenklai--image008.png",
+     "variants": [
+      {
+       "size_mm": "200x200",
+       "price": "6,35 €"
+      }
+     ]
+    },
+    {
+     "code": "D.5",
+     "name": "Pirmoji pagalba",
+     "usage": "Vietose, kur suteikiama pirmoji pagalba",
+     "image": "infzenklai--image010.gif",
+     "variants": [
+      {
+       "size_mm": "130x130",
+       "price": "3,02 €"
+      },
+      {
+       "size_mm": "200x200",
+       "price": "5,99 €"
+      }
+     ]
+    },
+    {
+     "code": "D.6",
+     "name": "Rūkymo vieta",
+     "usage": "Prie rūkymui skirtos patalpos durų arba rūkymo vietoje",
+     "image": "infzenklai--image011.png",
+     "variants": [
+      {
+       "size_mm": "200x200",
+       "price": "6,35 €"
+      }
+     ]
+    },
+    {
+     "code": "D.7",
+     "name": "Patalpų ar pastatų kategorijos pagal sprogimo ir gaisro pavojų",
+     "usage": "Asg, Bsg,Cg, Dg, Eg Prie įėjimo į pastatą ar patalpą „Išorinių įrenginių kategorijos pagal sprogimo ir gaisro pavojų“ Asgi, Bsgi, Cgi, Dgi, Egi",
+     "image": "infzenklai--d71.gif",
+     "variants": [
+      {
+       "size_mm": "200x200",
+       "price": "5,44 €"
+      }
+     ]
+    },
+    {
+     "code": "D.8",
+     "name": "Vandens šaltinis",
+     "usage": "Prie vandens šaltinių, įrengtų arba pritaikytų gaisrams gesinti",
+     "image": "infzenklai--image015.png",
+     "variants": [
+      {
+       "size_mm": "200x200",
+       "price": "5,44 €"
+      }
+     ]
+    },
+    {
+     "code": "F.1",
+     "name": "Krypties rodyklė",
+     "usage": "(Pasukimas kas 90 laipsnių) Gaisrinės įrangos įrengimo ar išdėstymo vietoms nurodyti",
+     "image": "infzenklai--image017.gif",
+     "variants": [
+      {
+       "size_mm": "130x130",
+       "price": "3,02 €"
+      }
+     ]
+    },
+    {
+     "code": "F.2",
+     "name": "Ugniagesių iškvietimo telefono numeris",
+     "usage": "Ant gaisrinio čiaupo spintelės, kartu naudojamas aiškiai pažymėtas raidžių indeksas „GČ“ arba grafinis ženklas ir gaisrinio čiaupo eilės numeris",
+     "image": "sk.-112.gif",
+     "variants": [
+      {
+       "size_mm": "100x180",
+       "price": "3,02 €"
+      },
+      {
+       "size_mm": "130x230",
+       "price": "4,54 €"
+      }
+     ]
+    },
+    {
+     "code": "F.3",
+     "name": "Atsakingas už gaisrinę saugą",
+     "usage": "",
+     "image": "infzenklai--image020.png",
+     "variants": [
+      {
+       "size_mm": "100x290",
+       "price": "4,54 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "Ženklas gaisrinis čiaupas „GČ-“",
+     "usage": "Ant gaisrinio čiaupo spintelės",
+     "image": "gc.gif",
+     "variants": [
+      {
+       "size_mm": "-",
+       "price": "3,02 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "Ženklas skaičiai „0123456789“",
+     "usage": "Ant gaisrinio čiaupo spintelės",
+     "image": "skaiciai-1.gif",
+     "variants": [
+      {
+       "size_mm": "-",
+       "price": "3,02 €"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Draudžiamieji ženklai",
+   "items": [
+    {
+     "code": "B.1",
+     "name": "Draudžiama naudotis ugnimi, atvirais uždegimo šaltiniais ir rūkyti",
+     "usage": "Prie įėjimo į teritoriją,pastatą ar patalpą kur panaudojus atvirą ugnį galimas sprogimo ar gaisro pavojus",
+     "image": "drzenklai--image001.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 200",
+       "price": "5,32 €"
+      }
+     ]
+    },
+    {
+     "code": "B.2",
+     "name": "Nerūkyti",
+     "usage": "",
+     "image": "drzenklai--image003.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 100",
+       "price": "1,82 €"
+      },
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 200",
+       "price": "5,32 €"
+      }
+     ]
+    },
+    {
+     "code": "B.3",
+     "name": "Draudžiama gesinti vandeniu",
+     "usage": "Prie įėjimo į teritoriją, pastatą ar patalpą, kur naudojamas ar laikomas medžiagas, draudžiama gesinti vandeniu",
+     "image": "drzenklai--image005.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 200",
+       "price": "5,32 €"
+      }
+     ]
+    },
+    {
+     "code": "B.4",
+     "name": "Įėjimas draudžiamas",
+     "usage": "Prie įėjimo į pavojingas zonas, taip pat į patalpas, kuriose nepageidaujami pašaliniai",
+     "image": "drzenklai--image007.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 200",
+       "price": "5,32 €"
+      }
+     ]
+    },
+    {
+     "code": "B.5",
+     "name": "Nesiartinti",
+     "usage": "Prie pavojaus šaltinio",
+     "image": "drzenklai--image009.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 200",
+       "price": "5,32 €"
+      }
+     ]
+    },
+    {
+     "code": "B.6",
+     "name": "Draudžiami veiksmai, kurie užrašomi ženklo viduryje",
+     "usage": "",
+     "image": "drzenklai--image011.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 200",
+       "price": "5,32 €"
+      }
+     ]
+    },
+    {
+     "code": "B.7",
+     "name": "Neliesti",
+     "usage": "",
+     "image": "drzenklai--image013.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 200",
+       "price": "5,32 €"
+      }
+     ]
+    },
+    {
+     "code": "B.8",
+     "name": "Vanduo netinkamas gerti",
+     "usage": "",
+     "image": "drzenklai--image015.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 200",
+       "price": "5,32 €"
+      }
+     ]
+    },
+    {
+     "code": "B.9",
+     "name": "Važiuoti įmonės vidaus transporto Priemonėms draudžiama",
+     "usage": "",
+     "image": "drzenklai--image017.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 200",
+       "price": "5,32 €"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Įspėjamieji ženklai",
+   "items": [
+    {
+     "code": "5.1",
+     "name": "Įspėjimas. Liepsnioji medžiaga",
+     "usage": "Prie įėjimo į teritoriją, pastatą ar patalpą, kur naudojamos ar laikomos liepsniosios medžiagos",
+     "image": "ispzenklai--image001.gif",
+     "variants": [
+      {
+       "size_mm": "150",
+       "price": "2,18 €"
+      },
+      {
+       "size_mm": "200",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "280",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "5.2",
+     "name": "Įspėjimas apie sprogstančiąją medžiagą",
+     "usage": "Susiklosčius tam tikroms aplinkybėms, patalpoje, statinyje ar teritorijoje galimas sprogimas. Statomas tiesiai prie priėjimo arba prieigose",
+     "image": "ispzenklai--image002.png",
+     "variants": [
+      {
+       "size_mm": "150",
+       "price": "2,18 €"
+      },
+      {
+       "size_mm": "200",
+       "price": "3,00 €"
+      },
+      {
+       "size_mm": "280",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "5.3",
+     "name": "Įspėjimas. Sprogioji medžiaga",
+     "usage": "Prie įėjimo į teritoriją, pastatą ar patalpą, kur naudojamos ar laikomos sprogiosios medžiagos",
+     "image": "ispzenklai--image004.gif",
+     "variants": [
+      {
+       "size_mm": "150",
+       "price": "2,18 €"
+      },
+      {
+       "size_mm": "200",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "280",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "5.4",
+     "name": "Įspėjimas apie Ėdžią medžiagą",
+     "usage": "Tiesiai prie įėjimo į patalpą, statinį ar atskirą teritoriją, kurioje laikomi gailieji chemikalai",
+     "image": "ispzenklai--image005.png",
+     "variants": [
+      {
+       "size_mm": "150",
+       "price": "2,18 €"
+      },
+      {
+       "size_mm": "200",
+       "price": "3,00 €"
+      },
+      {
+       "size_mm": "280",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "5.5",
+     "name": "Įspėjimas apie radioaktyvią medžiagą",
+     "usage": "Vietose, kuriose yra radioaktyviųjų medžiagų, arba spinduliavimo zonoje",
+     "image": "ispzenklai--image007.gif",
+     "variants": [
+      {
+       "size_mm": "150",
+       "price": "2,18 €"
+      },
+      {
+       "size_mm": "200",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "280",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "5.6",
+     "name": "Įspėjimas apie pakeltą krovinį",
+     "usage": "",
+     "image": "ispzenklai--image008.gif",
+     "variants": [
+      {
+       "size_mm": "150",
+       "price": "2,18 €"
+      },
+      {
+       "size_mm": "200",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "280",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "5.7",
+     "name": "Įspėjimas apie įmonės vidaus transportą",
+     "usage": "",
+     "image": "ispzenklai--image009.gif",
+     "variants": [
+      {
+       "size_mm": "150",
+       "price": "2,18 €"
+      },
+      {
+       "size_mm": "200",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "280",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "5.8",
+     "name": "Įspėjimas apie bendrojo pobūdžio pavojų",
+     "usage": "Vietoje, kurioje gali kilti kiti pavojai. Reikalui esant pridedamas papildomas skydelis",
+     "image": "ispzenklai--image010.gif",
+     "variants": [
+      {
+       "size_mm": "150",
+       "price": "2,18 €"
+      },
+      {
+       "size_mm": "200",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "280",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "5.9",
+     "name": "Įspėjimas apie kliūtį",
+     "usage": "",
+     "image": "ispzenklai--image011.gif",
+     "variants": [
+      {
+       "size_mm": "150",
+       "price": "2,18 €"
+      },
+      {
+       "size_mm": "200",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "280",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "5.10",
+     "name": "Įspėjimas apie pavojų nukristi",
+     "usage": "",
+     "image": "ispzenklai--image012.png",
+     "variants": [
+      {
+       "size_mm": "150",
+       "price": "2,18 €"
+      },
+      {
+       "size_mm": "200",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "280",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "5.11",
+     "name": "Įspėjimas apie kenksmingą arba dirginančią medžiagą",
+     "usage": "",
+     "image": "ispzenklai--image014.gif",
+     "variants": [
+      {
+       "size_mm": "150",
+       "price": "2,18 €"
+      },
+      {
+       "size_mm": "200",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "280",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "5.12",
+     "name": "Įspėjimas apie lazerio spindulius",
+     "usage": "Patalpose arba prieigose prie vietų, kuriose naudojama lazerinė technika",
+     "image": "ispzenklai--image015.png",
+     "variants": [
+      {
+       "size_mm": "150",
+       "price": "2,18 €"
+      },
+      {
+       "size_mm": "200",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "280",
+       "price": "6,05 €"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Elektrosaugos ženklai",
+   "items": [
+    {
+     "code": null,
+     "name": "Nuolatinis ženklas, įspėjantis apie elektros smūgio pavojų: „Atsargiai, elektros smūgio pavojus“",
+     "usage": "Tvirtinami ant visų turinčių įtampą elektros spintų, skydinių (išskyrus skirstyklų viduje) ir skirstyklų išorinių patalpų durų, teritorijų vartų, nuimamų aptvarų, aparatų gaubtų ir pan., už kurių yra elektros smūgio pavojus",
+     "image": "elzenklai--image002.gif",
+     "variants": [
+      {
+       "size_mm": "50",
+       "price": "0,97 €"
+      },
+      {
+       "size_mm": "80",
+       "price": "2,18 €"
+      },
+      {
+       "size_mm": "150",
+       "price": "3,27 €"
+      },
+      {
+       "size_mm": "160",
+       "price": "3,51 €"
+      },
+      {
+       "size_mm": "280",
+       "price": "7,14 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "Nejungti! Įrenginiuose dirbama",
+     "usage": "",
+     "image": "elzenklai--image003.png",
+     "variants": [
+      {
+       "size_mm": "50x80",
+       "price": "0,85 €"
+      },
+      {
+       "size_mm": "180x290",
+       "price": "4,60 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "Bandymai! Pavojinga gyvybei",
+     "usage": "",
+     "image": "elzenklai--image005.png",
+     "variants": [
+      {
+       "size_mm": "210x280",
+       "price": "4,84 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "STOK! Įtampa",
+     "usage": "",
+     "image": "elzenklai--image007.png",
+     "variants": [
+      {
+       "size_mm": "210x280",
+       "price": "4,84 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "Nelipk! Užmuš",
+     "usage": "",
+     "image": "elzenklai--image009.png",
+     "variants": [
+      {
+       "size_mm": "210x280",
+       "price": "4,84 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "neatidaryti! Įrenginiuose dirbama",
+     "usage": "",
+     "image": "elzenklai--image011.png",
+     "variants": [
+      {
+       "size_mm": "180x290",
+       "price": "4,60 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "Įžeminta",
+     "usage": "",
+     "image": "elzenklai--image013.png",
+     "variants": [
+      {
+       "size_mm": "50x80",
+       "price": "0,85 €"
+      },
+      {
+       "size_mm": "130x240",
+       "price": "3,03 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "dirbti čia",
+     "usage": "",
+     "image": "elzenklai--image015.png",
+     "variants": [
+      {
+       "size_mm": "250x250",
+       "price": "4,96 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "lipti čia",
+     "usage": "",
+     "image": "elzenklai--image017.png",
+     "variants": [
+      {
+       "size_mm": "250x250",
+       "price": "4,96 €"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Saugos ir sveikatos ženklai",
+   "items": [
+    {
+     "code": "3.1",
+     "name": "Nešioti apsauginius akinius",
+     "usage": "",
+     "image": "saugzenklai--image001.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 50",
+       "price": "0,97 €"
+      },
+      {
+       "size_mm": "Ø 150",
+       "price": "3,07 €"
+      },
+      {
+       "size_mm": "Ø 250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "3.2",
+     "name": "Dėvėti apsauginį šalmą",
+     "usage": "",
+     "image": "saugzenklai--image002.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 50",
+       "price": "0,97 €"
+      },
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "3.3",
+     "name": "Naudotis klausos apsaugos priemonėmis",
+     "usage": "",
+     "image": "saugzenklai--image003.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 50",
+       "price": "0,97 €"
+      },
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "3.4",
+     "name": "Naudotis kvėpavimo takų apsaugos priemonėmis",
+     "usage": "",
+     "image": "saugzenklai--image004.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 50",
+       "price": "0,97 €"
+      },
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "3.5",
+     "name": "Avėti apsauginius batus",
+     "usage": "",
+     "image": "saugzenklai--image005.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 50",
+       "price": "0,97 €"
+      },
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "3.6",
+     "name": "Mūvėti apsaugines pirštines",
+     "usage": "",
+     "image": "saugzenklai--image006.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 50",
+       "price": "0,97 €"
+      },
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "3.7",
+     "name": "Vilkėti apsauginius drabužius",
+     "usage": "",
+     "image": "saugzenklai--image007.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 50",
+       "price": "0,97 €"
+      },
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "3.8",
+     "name": "Naudotis apsauginiu skydeliu",
+     "usage": "",
+     "image": "saugzenklai--image008.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 50",
+       "price": "0,97 €"
+      },
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "3.9",
+     "name": "Būtina prisisegti apsauginį prisirišimą",
+     "usage": "",
+     "image": "saugzenklai--image010.gif",
+     "variants": [
+      {
+       "size_mm": "Ø 50",
+       "price": "0,97 €"
+      },
+      {
+       "size_mm": "Ø 150",
+       "price": "3,03 €"
+      },
+      {
+       "size_mm": "Ø 250",
+       "price": "6,05 €"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Operatyviniai žymėjimai",
+   "items": [
+    {
+     "code": null,
+     "name": "7.1",
+     "usage": "",
+     "image": "opzenklai--image001.gif",
+     "variants": [
+      {
+       "size_mm": "",
+       "price": "1,57 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "20x30",
+     "usage": "",
+     "image": null,
+     "variants": [
+      {
+       "size_mm": "1 kompl.: (10 vnt).",
+       "price": "1,57 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "7.2",
+     "usage": "",
+     "image": "opzenklai--image002.gif",
+     "variants": [
+      {
+       "size_mm": "",
+       "price": "1,57 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "20x30",
+     "usage": "",
+     "image": null,
+     "variants": [
+      {
+       "size_mm": "1 kompl.: (10 vnt.)",
+       "price": "1,57 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "7.3",
+     "usage": "",
+     "image": "opzenklai--image003.gif",
+     "variants": [
+      {
+       "size_mm": "",
+       "price": "2,06 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "10x40",
+     "usage": "",
+     "image": null,
+     "variants": [
+      {
+       "size_mm": "1 kompl.: (25 vnt.)",
+       "price": "2,06 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "7.4",
+     "usage": "",
+     "image": "opzenklai--image004.gif",
+     "variants": [
+      {
+       "size_mm": "",
+       "price": "1,63 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "7.5",
+     "usage": "",
+     "image": null,
+     "variants": [
+      {
+       "size_mm": "12V, 24V, 36V, 42V, 220V, 380V",
+       "price": "1,82 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "7.6",
+     "usage": "",
+     "image": "opzenklai--image005.gif",
+     "variants": [
+      {
+       "size_mm": "",
+       "price": "0,48 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "7.7",
+     "usage": "",
+     "image": "opzenklai--image006.gif",
+     "variants": [
+      {
+       "size_mm": "",
+       "price": "0,48 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "7.8",
+     "usage": "",
+     "image": "opzenklai--image007.gif",
+     "variants": [
+      {
+       "size_mm": "",
+       "price": "0,48 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "7.9",
+     "usage": "",
+     "image": "opzenklai--image008.gif",
+     "variants": [
+      {
+       "size_mm": "",
+       "price": "0,61 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "h-15",
+     "usage": "",
+     "image": null,
+     "variants": [
+      {
+       "size_mm": "(11 vnt.)",
+       "price": "0,85 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "h-20",
+     "usage": "",
+     "image": null,
+     "variants": [
+      {
+       "size_mm": "(10vnt )",
+       "price": "0,85 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "h-20",
+     "usage": "",
+     "image": null,
+     "variants": [
+      {
+       "size_mm": "(60 vnt.)",
+       "price": "5,93 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "h-35",
+     "usage": "",
+     "image": null,
+     "variants": [
+      {
+       "size_mm": "(5vnt.)",
+       "price": "1,09 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "h-50",
+     "usage": "",
+     "image": null,
+     "variants": [
+      {
+       "size_mm": "(5vnt.)",
+       "price": "1,70 €"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Pavojingų medžiagų (krovinių) ženklai",
+   "items": [
+    {
+     "code": "E.1",
+     "name": "Galintis sprogti",
+     "usage": "Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių",
+     "image": "pavzenklai--image002.gif",
+     "variants": [
+      {
+       "size_mm": "100x100",
+       "price": "1,21 €"
+      },
+      {
+       "size_mm": "250x250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "E.2",
+     "name": "Suslėgtosios, skystosios arba slėgimo būdu ištirpintos dujos",
+     "usage": "Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių",
+     "image": "pavzenklai--image004.gif",
+     "variants": [
+      {
+       "size_mm": "100x100",
+       "price": "1,21 €"
+      },
+      {
+       "size_mm": "250x250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "E.3",
+     "name": "Degieji skysčiai",
+     "usage": "Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių",
+     "image": "pavzenklai--image006.gif",
+     "variants": [
+      {
+       "size_mm": "100x100",
+       "price": "1,21 €"
+      },
+      {
+       "size_mm": "250x250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "E.4",
+     "name": "Degiosios kietos medžiagos",
+     "usage": "Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių",
+     "image": "pavzenklai--image008.gif",
+     "variants": [
+      {
+       "size_mm": "100x100",
+       "price": "1,21 €"
+      },
+      {
+       "size_mm": "250x250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "E.5",
+     "name": "Savaime užsideganti medžiaga",
+     "usage": "Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių",
+     "image": "pavzenklai--image010.gif",
+     "variants": [
+      {
+       "size_mm": "100x100",
+       "price": "1,21 €"
+      },
+      {
+       "size_mm": "250x250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "E.6",
+     "name": "Medžiaga, kurios reaguodamos su vandeniu išskiria degiąsias dujas",
+     "usage": "Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių",
+     "image": "pavzenklai--image012.gif",
+     "variants": [
+      {
+       "size_mm": "100x100",
+       "price": "1,21 €"
+      },
+      {
+       "size_mm": "250x250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "E.7",
+     "name": "Oksidacinės medžiagos",
+     "usage": "Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių",
+     "image": "pavzenklai--image014.gif",
+     "variants": [
+      {
+       "size_mm": "100x100",
+       "price": "1,21 €"
+      },
+      {
+       "size_mm": "250x250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "E.8",
+     "name": "Organiniai peroksidai",
+     "usage": "Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių",
+     "image": "pavzenklai--image016.gif",
+     "variants": [
+      {
+       "size_mm": "100x100",
+       "price": "1,21 €"
+      },
+      {
+       "size_mm": "250x250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "E.9",
+     "name": "Nuodingosios medžiagos",
+     "usage": "Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių",
+     "image": "pavzenklai--image018.gif",
+     "variants": [
+      {
+       "size_mm": "100x100",
+       "price": "1,21 €"
+      },
+      {
+       "size_mm": "250x250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "E.10",
+     "name": "Infekcinės medžiagos",
+     "usage": "Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių",
+     "image": "pavzenklai--image020.gif",
+     "variants": [
+      {
+       "size_mm": "100x100",
+       "price": "1,21 €"
+      },
+      {
+       "size_mm": "250x250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "E.11",
+     "name": "Radioaktyviosios medžiagos",
+     "usage": "Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių",
+     "image": "pavzenklai--image022.gif",
+     "variants": [
+      {
+       "size_mm": "100x100",
+       "price": "1,21 €"
+      },
+      {
+       "size_mm": "250x250",
+       "price": "6,05 €"
+      }
+     ]
+    },
+    {
+     "code": "E.12",
+     "name": "Korozinės medžiagos",
+     "usage": "Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių",
+     "image": "pavzenklai--image024.jpg",
+     "variants": [
+      {
+       "size_mm": "100x100",
+       "price": "1,21 €"
+      },
+      {
+       "size_mm": "250x250",
+       "price": "6,05 €"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Kiti ženklai ir užrašai",
+   "items": [
+    {
+     "code": null,
+     "name": "105x125",
+     "usage": "",
+     "image": null,
+     "variants": [
+      {
+       "size_mm": "1 vnt.",
+       "price": "1,69 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "130x230",
+     "usage": "",
+     "image": null,
+     "variants": [
+      {
+       "size_mm": "1 vnt.",
+       "price": "2,90 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "90x140",
+     "usage": "",
+     "image": null,
+     "variants": [
+      {
+       "size_mm": "1 vnt.",
+       "price": "2,06 €"
+      }
+     ]
+    },
+    {
+     "code": null,
+     "name": "tik plastikinis",
+     "usage": "",
+     "image": "kitzenklai--image044.gif",
+     "variants": [
+      {
+       "size_mm": "D=300",
+       "price": "9,68 €"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

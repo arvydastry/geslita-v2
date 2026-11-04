@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) document.documentElement.classList.add('js');</script>
+<title>Gaisrinė automatika ir įranga | Geslita</title>
+<meta name="description" content="Dūmų ir smalkių detektoriai, gaisrinės sirenos, gaisro pavojaus mygtukai, evakuacijos šviestuvai, kibirkščių gesikliai, nedegūs audeklai ir saugos rinkiniai su kainomis.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* Gaisrinė automatika ir įranga: puslapio stiliai (prefiksas .pg-auto-) */
+.pg-auto-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin-bottom: 12px; }
+.pg-auto-search { margin-bottom: 0; }
+.pg-auto-search + .doc-sec { margin-top: 36px; }
+.pg-auto-side .btn { display: inline-flex; margin: 4px 0 0; padding: 0 14px; background: transparent; box-shadow: none; border: 1.5px solid var(--line-2); color: var(--ink); font-size: 15px; }
+.pg-auto-side .btn:hover { background: var(--bg); border-color: var(--ink); transform: none; }
+.pg-auto-card figure { min-height: 0; overflow: hidden; }
+.pg-auto-card h3 { font-size: 16.5px; line-height: 1.35; letter-spacing: -0.005em; }
+.pg-auto-more { font-size: 13.5px; }
+.pg-auto-more summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; color: var(--ink); font-weight: 600; }
+.pg-auto-more summary::-webkit-details-marker { display: none; }
+.pg-auto-more summary .ic { color: var(--navy-3); font-size: 15px; transition: transform 0.3s var(--ease); }
+.pg-auto-more[open] summary .ic { transform: rotate(45deg); }
+.pg-auto-more .specs { margin-top: 6px; }
+.pg-auto-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: clamp(16px, 2vw, 24px); align-items: start; }
+.pg-auto-pair .prod-grid { grid-template-columns: 1fr; }
+.pg-auto-pair.rev { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+.pg-auto-pair.rev .prod-grid { grid-template-columns: 1fr 1fr; }
+.pg-auto-req { font-size: 15px; color: var(--muted); margin-bottom: 14px; }
+.pg-auto-notes { display: grid; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; font-size: 15px; }
+.pg-auto-notes li { padding: 12px 16px; border-left: 3px solid var(--navy-3); background: var(--surface); border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+.pg-auto-notes b { display: block; color: var(--ink); margin-bottom: 2px; }
+.pg-auto-after { margin-top: 16px; }
+.pg-auto-pills { margin-bottom: 16px; }
+.pg-auto-pills .tag { padding: 9px 14px; font-size: 14px; }
+.pg-auto-h3 { margin: 24px 0 12px; }
+.pg-auto-tip h3 { font-size: 19px; }
+.pg-auto-tip p { font-size: 15.5px; }
+.pg-auto-sys { overflow: hidden; }
+.pg-auto-plan { position: absolute; right: -8%; top: -30%; width: clamp(500px, 50vw, 820px); opacity: 0.1; pointer-events: none; will-change: transform; }
+.pg-auto-sys .wrap { position: relative; }
+.pg-auto-sys .checks { margin: 20px 0 26px; grid-template-columns: 1fr 1fr; gap: 8px 20px; font-size: 15.5px; }
+@media (max-width: 900px) { .pg-auto-pair, .pg-auto-pair.rev { grid-template-columns: 1fr; } .pg-auto-pair .prod-grid, .pg-auto-pair.rev .prod-grid { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); } }
+@media (max-width: 640px) { .pg-auto-sys .checks { grid-template-columns: 1fr; } .pg-auto-card h3 { font-size: 14.5px; } .pg-auto-pair .prod-grid, .pg-auto-pair.rev .prod-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 400px) { .pg-auto-pair .prod-grid, .pg-auto-pair.rev .prod-grid { grid-template-columns: 1fr; } }
+</style></head>
+<body class="">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14L20 4M15 4h5v5"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3 4 5 4 9a4 4 0 0 1-8 0c0-1 .3-2 1-3 0 2 1 3 2 3 0-3-1-5 1-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V6h11v11M14 9h4l3 3v5h-2"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3H4a4 4 0 0 0 2-3v-3a7 7 0 0 1 4-6M9 17v1a3 3 0 0 0 6 0v-1"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3zM9 4v13M15 7v13"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 9L12 5 2 9l10 4 10-4zM6 10.6V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.4"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M7 10h3v11H7zM14 4l3-1 3 3-1 3-5 5-3-3 3-7zM4 20l3-3"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></symbol>
+</svg>
+<a class="skip" href="#main">Pereiti prie turinio</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Geslita, į pradžią"><img src="assets/img/logo-geslita-s.png" alt="Geslita" width="167" height="50"></a>
+    <ul class="site-nav">
+      <li><a href="index.html" >Pradžia</a></li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-paslaugos">Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-paslaugos">
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas<span>Patikra nuo 5,26 €</span></a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija<span>Patikra, remontas, įrengimas</span></a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis<span>Čiaupai, žarnos, žurnalai</span></a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai<span>Planas 70 €</span></a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai<span>Montavimas pagal EN 1838</span></a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai<span>Saugos centras</span></a></li>
+          <li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos<span>Dielektrika, nuoma, žurnalai</span></a></li>
+          <li><a class="drop-all" href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-prekes">Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-prekes">
+          <li><a href="prekes-gesintuvai.html">Gesintuvai<span>Milteliniai, CO₂, vandens putų</span></a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis<span>Spintelės, žarnos, čiaupai</span></a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai<span>102 ženklai su paieška</span></a></li>
+          <li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga<span>Detektoriai, sirenos, šviestuvai</span></a></li>
+          <li><a class="drop-all" href="prekes.html">Visos prekės</a></li>
+        </ul>
+      </li>
+      <li><a href="saugos-centras.html" >Saugos centras</a></li>
+      <li class="nav-naudinga"><a href="naudinga-informacija.html" >Naudinga</a></li>
+      <li><a href="apie-mus.html" >Apie mus</a></li>
+      <li><a href="kontaktai.html" >Kontaktai</a></li>
+    </ul>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>+370 653 99977</span></a>
+      <a class="btn btn-sm" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+      <button class="nav-toggle" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-nav"><svg class="ic ic-menu"><use href="#i-menu"/></svg><svg class="ic ic-x"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilus meniu">
+  <ul>
+    <li><a href="index.html">Pradžia</a></li>
+    <li><details><summary>Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li><li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas</a></li><li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li><li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li><li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li><li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li><li><a href="saugos-centras.html">Darbuotojų mokymai</a></li><li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos</a></li>
+    </ul></details></li>
+    <li><details><summary>Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="prekes.html">Visos prekės</a></li><li><a href="prekes-gesintuvai.html">Gesintuvai</a></li><li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li><li><a href="prekes-zenklai.html">Saugos ženklai</a></li><li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga</a></li>
+    </ul></details></li>
+    <li><a href="saugos-centras.html">Saugos centras</a></li>
+    <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+    <li><a href="apie-mus.html">Apie mus</a></li>
+    <li><a href="kontaktai.html">Kontaktai</a></li>
+  </ul>
+  <div class="mobile-cta">
+    <a class="btn" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+    <a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a>
+  </div>
+</nav>
+
+<main id="main">
+<section class="page-hero ">
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.2">
+  <div class="wrap">
+    <div>
+<ol class="crumbs"><li><a href="index.html">Pradžia</a></li><li><a href="prekes.html">Prekės</a></li><li><span aria-current="page">Gaisrinė automatika ir įranga</span></li></ol>      <h1>Gaisrinė automatika ir įranga</h1>
+<p class="lead">Dūmų ir smalkių detektoriai, gaisrinės sirenos, gaisro pavojaus mygtukai, avarinio išėjimo šviestuvai, kibirkščių gesikliai, nedegūs audeklai, saugos rinkiniai ir darbo saugos priemonės.</p>    </div>
+<div class="media" data-reveal="scale"><img src="assets/img/foto/signalizacija-mygtukas.jpg" srcset="assets/img/foto/signalizacija-mygtukas-640.webp 640w, assets/img/foto/signalizacija-mygtukas-1280.webp 1280w, assets/img/foto/signalizacija-mygtukas-1920.webp 1920w" sizes="(max-width: 960px) 92vw, 50vw" alt="Gaisro pavojaus mygtukas su ženklu ant sienos" width="1200" height="900" fetchpriority="high"></div>  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap doc">
+    <aside class="doc-nav" aria-label="Prekių grupės">
+      <ul>
+<li><a href="#dumu-detektoriai">Dūmų ir smalkių detektoriai</a></li><li><a href="#gaisrines-sirenos">Gaisrinės sirenos</a></li><li><a href="#gaisro-pavojaus-mygtukai">Gaisro pavojaus mygtukai</a></li><li><a href="#avarinio-isejimo-sviestuvai">Avarinio išėjimo šviestuvai</a></li><li><a href="#kibirksciu-gesikliai">Kibirkščių gesikliai</a></li><li><a href="#nedegus-audeklai">Nedegūs audeklai</a></li><li><a href="#saugos-rinkiniai">Saugos rinkiniai ir pirmosios pagalbos vaistinėlės</a></li><li><a href="#darbo-saugos-priemones">Darbo saugos priemonės</a></li>      </ul>
+      <div class="side-card pg-auto-side">
+        <span class="small muted">Kainos</span>
+        <span>Kainoraščiuose nurodytos mažmeninės kainos. Didesniam kiekiui paruošime pasiūlymą.</span>
+        <a class="btn btn-sm" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a>
+      </div>
+    </aside>
+
+    <div class="doc-body">
+      <div class="search pg-auto-search" data-reveal>
+        <label class="sr-only" for="pg-auto-q">Prekių paieška</label>
+        <input id="pg-auto-q" type="text" data-search placeholder="Ieškoti pagal pavadinimą ar modelį, pvz., ROP63" autocomplete="off">
+        <span class="count" data-search-count>Iš viso: 34</span>
+      </div>
+
+      <section class="doc-sec" id="dumu-detektoriai" data-search-group>
+        <div class="pg-auto-head" data-reveal>
+          <h2>Dūmų ir smalkių detektoriai</h2>
+          <span class="tag tag-line">5 prekės</span>
+        </div>
+<p class="lead" data-reveal>Autonominiai dūmų jutikliai ir smalkių (CO) detektorius.</p>
+        <div class="prod-grid"><article class="prod pg-auto-card" data-reveal style="--i:0" data-name="Autonominis dūmų jutiklis ARTOSHKA ARTOSHKA">
+  <figure><img src="assets/img/katalogas/dumu-detektoriai--image001.jpg" alt="Autonominis dūmų jutiklis ARTOSHKA" loading="lazy"></figure>
+  <div class="body">
+    <h3>Autonominis dūmų jutiklis ARTOSHKA</h3>
+<div class="small muted">ARTOSHKA</div><ul class="specs"><li>Tipas: autonominis dūmų jutiklis</li></ul><div class="price"><small>Kaina</small>20,33 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:1" data-name="Smalkių detektorius NB-983-CO NB-983-CO">
+  <figure><img src="assets/img/katalogas/dumu-detektoriai--image002.jpg" alt="Smalkių detektorius NB-983-CO" loading="lazy"></figure>
+  <div class="body">
+    <h3>Smalkių detektorius NB-983-CO</h3>
+<div class="small muted">NB-983-CO</div><ul class="specs"><li>Tipas: smalkių (CO) detektorius su rėliniu išėjimu</li><li>Garso signalas: 75 dB aliarmo režime</li><li>Aptikimas: patobulinti aptikimo ir skyrimo algoritmai</li><li>Montavimas: lengva instaliuoti ir prižiūrėti</li><li>Maitinimo įtampa: 12/24 VDC</li></ul>    <details class="pg-auto-more"><summary><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Dar 2 savybės</summary><ul class="specs"><li>Darbo temperatūra: nuo 0°C iki +40°C</li><li>Atitiktis: EN 50291</li></ul></details>
+<div class="price"><small>Kaina</small>38,55 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:2" data-name="Autonominis dūmų jutiklis ADR-20N ADR-20N">
+  <figure><img src="assets/img/katalogas/dumu-detektoriai--image003.jpg" alt="Autonominis dūmų jutiklis ADR-20N" loading="lazy"></figure>
+  <div class="body">
+    <h3>Autonominis dūmų jutiklis ADR-20N</h3>
+<div class="small muted">ADR-20N</div><ul class="specs"><li>Tipas: autonominis optinis dūmų jutiklis</li><li>Atitiktis: EN 54</li><li>Sirena: 85 dB/1 m</li><li>Sujungimas: 2 laidais galima sujungti jutiklius tarpusavyje - suveikus vienam, įsijungia ir kitų jutiklių sirenos</li><li>Maitinimo įtampa: 9 VDC</li></ul>    <details class="pg-auto-more"><summary><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Dar 2 savybės</summary><ul class="specs"><li>Komplektacija: su tvirtinimo baze</li><li>Kilmės šalis: Lenkija</li></ul></details>
+<div class="price"><small>Kaina</small>23,83 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:0" data-name="Autonominis dūmų detektorius SPD-3.4 SPD-3.4">
+  <figure><img src="assets/img/katalogas/dumu-detektoriai--image004.jpg" alt="Autonominis dūmų detektorius SPD-3.4" loading="lazy"></figure>
+  <div class="body">
+    <h3>Autonominis dūmų detektorius SPD-3.4</h3>
+<div class="small muted">SPD-3.4</div><ul class="specs"><li>Garsumas: 85 dB/1 m</li></ul><div class="price"><small>Kaina</small>15,77 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:1" data-name="Autonominis dūmų detektorius ReinoldMax ReinoldMax">
+  <figure><img src="assets/img/katalogas/dumu-detektoriai--dumu-detektorius-reinoldmax.jpg" alt="Autonominis dūmų detektorius ReinoldMax" loading="lazy"></figure>
+  <div class="body">
+    <h3>Autonominis dūmų detektorius ReinoldMax</h3>
+<div class="small muted">ReinoldMax</div><ul class="specs"><li>Garsumas: 85 dB/3 m</li></ul><div class="price"><small>Kaina</small>8,76 €</div>  </div>
+</article></div>
+<p class="tbl-note">Senajame kainoraštyje šios prekės buvo įkainotos tik litais (be PVM / su PVM). Kainos su PVM perskaičiuotos į eurus kursu 3,4528 LTL = 1 EUR.</p>      </section>
+      <section class="doc-sec" id="gaisrines-sirenos" data-search-group>
+        <div class="pg-auto-head" data-reveal>
+          <h2>Gaisrinės sirenos</h2>
+          <span class="tag tag-line">6 prekės</span>
+        </div>
+<p class="lead" data-reveal>Vidaus ir lauko gaisrinės sirenos, garso skambučiai ir sirenos su stroboskopu gaisrinės signalizacijos sistemoms.</p>
+        <div class="prod-grid"><article class="prod pg-auto-card" data-reveal style="--i:0" data-name="Gaisro sirena BS-531 BS-531">
+  <figure><img src="assets/img/katalogas/gaisrines-sirenos--image001.jpg" alt="Gaisro sirena BS-531" loading="lazy"></figure>
+  <div class="body">
+    <h3>Gaisro sirena BS-531</h3>
+<div class="small muted">BS-531</div><ul class="specs"><li>Spalva: balta su raudona blykste</li><li>Naudojimas: vidaus ir lauko</li><li>Garsumas: 100 dB/1 m</li><li>Kilmės šalis: Graikija</li></ul><div class="price"><small>Kaina</small>33,29 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:1" data-name="Sirena SF 120 SF 120">
+  <figure><img src="assets/img/katalogas/gaisrines-sirenos--image003.jpg" alt="Sirena SF 120" loading="lazy"></figure>
+  <div class="body">
+    <h3>Sirena SF 120</h3>
+<div class="small muted">SF 120</div><ul class="specs"><li>Tipas: raudonos spalvos gaisrinė lauko sirena, stačiakampio formos</li><li>Korpusas: ABS-0</li><li>Garsumas: 96 dB/1 m</li><li>Maksimali vartojama srovė: 250 mA</li><li>Darbo temperatūra: nuo -10°C iki +55°C</li></ul><div class="price"><small>Kaina</small>37,85 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:2" data-name="Gaisro sirena SF 200 SF 200">
+  <figure><img src="assets/img/katalogas/gaisrines-sirenos--image005.jpg" alt="Gaisro sirena SF 200" loading="lazy"></figure>
+  <div class="body">
+    <h3>Gaisro sirena SF 200</h3>
+<div class="small muted">SF 200</div><ul class="specs"><li>Korpusas: polikarbonatas, raudonos spalvos su oranžinės spalvos blykste</li><li>Montavimas: lauko sąlygomis</li><li>Darbo temperatūra: nuo -40°C iki +85°C</li><li>Maitinimo įtampa: 12-30 VDC</li><li>Apsauga: du antisabotažiniai kontaktai</li></ul>    <details class="pg-auto-more"><summary><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Dar 3 savybės</summary><ul class="specs"><li>Garsumas: 105 dB/1 m</li><li>Sirenos dažnis: 3,1-3,8 kHz</li><li>Atitiktis: EN normų reikalavimai, paženklinta CE ženklu</li></ul></details>
+<div class="price"><small>Kaina</small>37,85 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:0" data-name="Garso skambutis BS 595 BS 595">
+  <figure><img src="assets/img/katalogas/gaisrines-sirenos--image007.jpg" alt="Garso skambutis BS 595" loading="lazy"></figure>
+  <div class="body">
+    <h3>Garso skambutis BS 595</h3>
+<div class="small muted">BS 595</div><ul class="specs"><li>Tipas: universalus, vidaus ir lauko sąlygoms, raudonos spalvos</li><li>Garsumas: 95 dB/1 m</li><li>Maitinimo įtampa: 24 VDC, 15 mA</li><li>Atitiktis: EN 54</li><li>Kilmės šalis: Graikija</li></ul><div class="price"><small>Kaina</small>36,80 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:1" data-name="Gaisro sirena su stroboskopu SF 105 SF 105">
+  <figure><img src="assets/img/katalogas/gaisrines-sirenos--image009.jpg" alt="Gaisro sirena su stroboskopu SF 105" loading="lazy"></figure>
+  <div class="body">
+    <h3>Gaisro sirena su stroboskopu SF 105</h3>
+<div class="small muted">SF 105</div><ul class="specs"><li>Tipas: raudonos spalvos korpusas ir stroboskopas</li><li>Naudojimas: tik vidaus sąlygomis</li><li>Maitinimo įtampa: 16-30 VDC</li><li>Garsumas: piezo sirena 105 dB/1 m</li><li>Naudojama srovė: 80 mA (24 V)</li></ul><div class="price"><small>Kaina</small>10,43 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:2" data-name="Sirena BS 525 BS 525">
+  <figure><img src="assets/img/katalogas/gaisrines-sirenos--image011.jpg" alt="Sirena BS 525" loading="lazy"></figure>
+  <div class="body">
+    <h3>Sirena BS 525</h3>
+<div class="small muted">BS 525</div><ul class="specs"><li>Tipas: vandeniui atspari sirena</li><li>Maitinimo įtampa: 24-30 VDC</li><li>Garsumas: 92 dB/1 m</li><li>Apsaugos laipsnis: IP54</li><li>Atitiktis: EN 54, EN 60335-1, EN 50082-1, EN 61000-3-2, EN 61000-3-3</li></ul>    <details class="pg-auto-more"><summary><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Dar 5 savybės</summary><ul class="specs"><li>Veikimo temperatūra: nuo 0°C iki +60°C</li><li>Santykinė drėgmė: iki 95 %</li><li>Korpusas: ABS plastikas</li><li>Matmenys: 108x108x70 mm</li><li>Svoris: 200 g</li></ul></details>
+<div class="price"><small>Kaina</small>54,32 €</div>  </div>
+</article></div>
+      </section>
+      <section class="doc-sec" id="gaisro-pavojaus-mygtukai" data-search-group>
+        <div class="pg-auto-head" data-reveal>
+          <h2>Gaisro pavojaus mygtukai</h2>
+          <span class="tag tag-line">4 prekės</span>
+        </div>
+<p class="lead" data-reveal>Ranka valdomi gaisro pavojaus signalizavimo įtaisai su apsauginiu stiklu ir tikrinimo rakteliu - vidaus ir lauko montavimui.</p>
+        <div class="prod-grid"><article class="prod pg-auto-card" data-reveal style="--i:0" data-name="Ranka valdomas pavojaus signalizavimo įtaisas ROP63 ROP63">
+  <figure><img src="assets/img/katalogas/gaisro-pavojaus-mygtukai--image001.jpg" alt="Ranka valdomas pavojaus signalizavimo įtaisas ROP63" loading="lazy"></figure>
+  <div class="body">
+    <h3>Ranka valdomas pavojaus signalizavimo įtaisas ROP63</h3>
+<div class="small muted">ROP63</div><ul class="specs"><li>Apsauga: skaidrus nedūžtantis stiklas, atsidarantis tik smūgiuojant - gerai apsaugo nuo atsitiktinių (melagingų) suveikimų</li><li>Atstatymas: tik specialiu raktu</li><li>Prijungimas: labai patogus prijungimas ir techninis aptarnavimas</li><li>Montavimas: universalus - įleidžiamas į sieną arba montuojamas ant sienos</li><li>Korpusas: ekranuotas</li></ul>    <details class="pg-auto-more"><summary><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Dar 4 savybės</summary><ul class="specs"><li>Hermetiškumo laipsnis: IP30</li><li>Atitiktis: EN 54-11, sertifikuotas</li><li>Darbo temperatūra: nuo -25°C iki +55°C</li><li>Išmatavimai: 102x98x46 mm</li></ul></details>
+<div class="price"><small>Kaina</small>34,69 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:1" data-name="Ranka valdomas pavojaus signalizavimo įtaisas ROP63H ROP63H">
+  <figure><img src="assets/img/katalogas/gaisro-pavojaus-mygtukai--image001.jpg" alt="Ranka valdomas pavojaus signalizavimo įtaisas ROP63H" loading="lazy"></figure>
+  <div class="body">
+    <h3>Ranka valdomas pavojaus signalizavimo įtaisas ROP63H</h3>
+<div class="small muted">ROP63H</div><ul class="specs"><li>Apsauga: skaidrus nedūžtantis stiklas, atsidarantis tik smūgiuojant - gerai apsaugo nuo atsitiktinių (melagingų) suveikimų</li><li>Atstatymas: tik specialiu raktu</li><li>Prijungimas: labai patogus prijungimas ir techninis aptarnavimas</li><li>Montavimas: universalus - įleidžiamas į sieną arba montuojamas ant sienos</li><li>Korpusas: ekranuotas</li></ul>    <details class="pg-auto-more"><summary><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Dar 4 savybės</summary><ul class="specs"><li>Hermetiškumo laipsnis: IP65 (gali būti montuojamas lauko sąlygomis)</li><li>Atitiktis: EN 54-11, sertifikuotas</li><li>Darbo temperatūra: nuo -40°C iki +60°C</li><li>Išmatavimai: 102x98x46 mm</li></ul></details>
+<div class="price"><small>Kaina</small>49,41 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:2" data-name="Ranka valdomas pavojaus signalizavimo įtaisas BS-535 (536) BS-535 (536)">
+  <figure><img src="assets/img/katalogas/gaisro-pavojaus-mygtukai--image004.jpg" alt="Ranka valdomas pavojaus signalizavimo įtaisas BS-535 (536)" loading="lazy"></figure>
+  <div class="body">
+    <h3>Ranka valdomas pavojaus signalizavimo įtaisas BS-535 (536)</h3>
+<div class="small muted">BS-535 (536)</div><ul class="specs"><li>Korpusas: polikarbonatas, raudonos spalvos</li><li>Tikrinimas: raktelis mygtuko tikrinimui</li><li>Stikliukas: nuspaudimo metu nesulaužomas</li><li>Kilmės šalis: Graikija</li></ul><div class="price"><small>Kaina</small>14,01 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:0" data-name="Ranka valdomas pavojaus signalizavimo įtaisas BS-7002 BS-7002">
+  <figure><img src="assets/img/katalogas/gaisro-pavojaus-mygtukai--image006.jpg" alt="Ranka valdomas pavojaus signalizavimo įtaisas BS-7002" loading="lazy"></figure>
+  <div class="body">
+    <h3>Ranka valdomas pavojaus signalizavimo įtaisas BS-7002</h3>
+<div class="small muted">BS-7002</div><ul class="specs"><li>Korpusas: polikarbonatas, raudonos spalvos</li><li>Tikrinimas: raktelis tikrinimui (testavimui)</li><li>Stikliukas: daugkartinio naudojimo</li><li>Indikacija: pavojaus indikatorius (šviesos diodas)</li><li>Kontaktai: dvi NC/NO kontaktų grupės (5 A/250 V)</li></ul>    <details class="pg-auto-more"><summary><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Dar 3 savybės</summary><ul class="specs"><li>Apsaugos laipsnis: IP40</li><li>Atitiktis: EN 54</li><li>Kilmės šalis: Graikija</li></ul></details>
+<div class="price"><small>Kaina</small>22,78 €</div>  </div>
+</article></div>
+      </section>
+      <section class="doc-sec" id="avarinio-isejimo-sviestuvai" data-search-group>
+        <div class="pg-auto-head" data-reveal>
+          <h2>Avarinio išėjimo šviestuvai</h2>
+          <span class="tag tag-line">4 prekės</span>
+        </div>
+<p class="lead" data-reveal>Avarinio išėjimo (evakuacijos) šviestuvai.</p>
+        <div class="prod-grid"><article class="prod pg-auto-card" data-reveal style="--i:0" data-name="Evakuacijos šviestuvas ">
+  <figure><img src="assets/img/katalogas/evakuaciniai-sviestuvai--image001.jpg" alt="Evakuacijos šviestuvas" loading="lazy"></figure>
+  <div class="body">
+    <h3>Evakuacijos šviestuvas</h3>
+<div class="price"><small>Kaina</small>47,31 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:1" data-name="Evakuacijos šviestuvas ">
+  <figure><img src="assets/img/katalogas/evakuaciniai-sviestuvai--image003.jpg" alt="Evakuacijos šviestuvas" loading="lazy"></figure>
+  <div class="body">
+    <h3>Evakuacijos šviestuvas</h3>
+<div class="price"><small>Kaina</small>24,53 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:2" data-name="Evakuacijos šviestuvas ">
+  <figure><img src="assets/img/katalogas/evakuaciniai-sviestuvai--image005.jpg" alt="Evakuacijos šviestuvas" loading="lazy"></figure>
+  <div class="body">
+    <h3>Evakuacijos šviestuvas</h3>
+<div class="price"><small>Kaina</small>29,78 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:0" data-name="Evakuacijos šviestuvas ">
+  <figure><img src="assets/img/katalogas/evakuaciniai-sviestuvai--image007.jpg" alt="Evakuacijos šviestuvas" loading="lazy"></figure>
+  <div class="body">
+    <h3>Evakuacijos šviestuvas</h3>
+<div class="price"><small>Kaina</small>56,07 €</div>  </div>
+</article></div>
+        <p class="pg-auto-after small muted">Reikia sumontuoti? Teikiame <a href="avariniai-sviestuvai.html">avarinių šviestuvų montavimo paslaugą</a>.</p>
+      </section>
+      <section class="doc-sec" id="kibirksciu-gesikliai" data-search-group>
+        <div class="pg-auto-head" data-reveal>
+          <h2>Kibirkščių gesikliai</h2>
+          <span class="tag tag-line">1 prekė</span>
+        </div>
+<p class="lead" data-reveal>Kibirkščių gesikliai transporto priemonių ir žemės ūkio technikos duslintuvams - privalomi durpynuose dirbančiai technikai, traktoriams ir degias medžiagas gabenančioms automobilinėms cisternoms.</p>
+        <div class="pg-auto-pair">
+          <div class="prod-grid"><article class="prod pg-auto-card" data-reveal style="--i:0" data-name="Kibirkščių gesiklis ">
+  <figure><img src="assets/img/katalogas/kibirksciu-gaudykles--kibirksciu-gaudykle-sumazinta-foto.jpg" alt="Kibirkščių gesiklis" loading="lazy"></figure>
+  <div class="body">
+    <h3>Kibirkščių gesiklis</h3>
+<ul class="specs"><li>Paskirtis: vidaus degimo variklių duslintuvų vamzdžiams</li></ul><div class="price"><small>Kaina</small>105,13 €</div>  </div>
+</article></div>
+          <div data-reveal>
+<p class="pg-auto-req">Reikalavimas pagal Bendrąsias gaisrinės saugos taisykles (Žin., 2010, Nr. 99-5167).</p><details class="acc" open>
+  <summary>Reikalavimai<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>Bendrųjų gaisrinės saugos taisyklių (Žin., 2010, Nr. 99-5167) 54, 133, 231, 290 punktai nustato, kad:</p><p>a) vidaus degimo variklius turinčias transporto priemones vairuojantys asmenys eksploatuojamame durpyne privalo: dirbti tik su techniškai tvarkingu transporto priemonės varikliu ir kibirkščių gesikliu; nedelsdami šalinti pastebėtus gaisro židinius, atsiradusius nuo pravažiavusios transporto priemonės; turėti kibirą, kastuvą ir gesintuvą, turintį ne mažiau kaip 6 kg gesinimo medžiagos;</p><p>b) traktoriai, kita žemės ūkio technika turi turėti tvarkingus kibirkščių gesiklius ir pirminių gaisro gesinimo priemonių;</p><p>c) automobilinės cisternos, transportuojančios ypač degias, labai degias ir degias skystas bei dujines medžiagas ir preparatus, turi būti įžemintos (vežant, pripilant ir išpilant), turėti pirminių gaisro gesinimo priemonių. Duslintuvų vamzdžiai turi būti su techniškai tvarkingais kibirkščių gesikliais;</p><p>d) automobilinėse cisternose, gabenančiose ypač degius ir labai degius skysčius, turi būti techniškai tvarkingi įrenginiai, skirti cisternoms prijungti prie estakados įžeminimo kontūro. Automobilinių cisternų duslintuvai turi būti su techniškai tvarkingais kibirkščių gesikliais, išvestais į priekį. Automobilinėse cisternose turi būti pirminių gaisro gesinimo priemonių.</p></div>
+</details>          </div>
+        </div>
+
+      </section>
+      <section class="doc-sec" id="nedegus-audeklai" data-search-group>
+        <div class="pg-auto-head" data-reveal>
+          <h2>Nedegūs audeklai</h2>
+          <span class="tag tag-line">2 prekės</span>
+        </div>
+<p class="lead" data-reveal>Nedegus audeklas - geriausia priemonė malšinant nedidelį gaisrą. Užklotas pagamintas iš ugniai atsparios medžiagos, patogumo sumetimais prie jo pritvirtinti diržai. Tai pati geriausia priemonė malšinti gaisrą, įsiplieskusį užsidegus riebalams, tačiau juo galima gesinti ir degančius buitinės technikos prietaisus bei užsiliepsnojusius žmogaus rūbus.</p>
+        <div class="pg-auto-pair rev">
+          <div class="prod-grid"><article class="prod pg-auto-card" data-reveal style="--i:0" data-name="Nedegus audeklas AI AI">
+  <figure><img src="assets/img/geslita/DSCN1306_maza_-_Copy.jpg" alt="Nedegus audeklas AI" loading="lazy"></figure>
+  <div class="body">
+    <h3>Nedegus audeklas AI</h3>
+<div class="small muted">AI</div><ul class="specs"><li>Išmatavimai: 1,2 m x 1,0 m</li></ul><div class="price"><small>Kaina</small>14,01 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:1" data-name="Nedegus audeklas AII AII">
+  <figure><img src="assets/img/katalogas/nedegus-audeklai--dscn1306-maza.jpg" alt="Nedegus audeklas AII" loading="lazy"></figure>
+  <div class="body">
+    <h3>Nedegus audeklas AII</h3>
+<div class="small muted">AII</div><ul class="specs"><li>Išmatavimai: 1,20 m x 1,80 m</li></ul><div class="price"><small>Kaina</small>17,52 €</div>  </div>
+</article></div>
+          <div class="card pg-auto-tip" data-reveal>
+<h3>Svarbu prisiminti</h3><p>Gesinant gaisro židinį, reikia visiškai uždengti jį užklotu. Tai neleidžia patekti orui, ir ugnis nuslopsta.</p><p>Gesinant degančius riebalus, jokiu būdu negalima naudoti vandens!</p><p>Užpylus ant degančių riebalų netgi visiškai nedaug vandens, ugnis pašoks iki pat lubų.</p>          </div>
+        </div>
+
+      </section>
+      <section class="doc-sec" id="saugos-rinkiniai" data-search-group>
+        <div class="pg-auto-head" data-reveal>
+          <h2>Saugos rinkiniai ir pirmosios pagalbos vaistinėlės</h2>
+          <span class="tag tag-line">3 prekės</span>
+        </div>
+<p class="lead" data-reveal><span class="ltx">Automobilio saugos rinkinys, pirmosios pagalbos rinkinys automobiliui ir įmonės pirmosios pagalbos rinkinys. Automobilio rinkiniai pagaminti <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span> - su jais automobilis atitiks saugos reikalavimus per techninę apžiūrą.</span></p>
+        <div class="prod-grid"><article class="prod pg-auto-card" data-reveal style="--i:0" data-name="Kelių motorinės transporto priemonės saugos rinkinys ">
+  <figure><img src="assets/img/geslita/rinkinis.jpg" alt="Kelių motorinės transporto priemonės saugos rinkinys" loading="lazy"></figure>
+  <div class="body">
+    <h3>Kelių motorinės transporto priemonės saugos rinkinys</h3>
+<ul class="specs"><li>Sudėtis: pirmosios pagalbos rinkinys (DIN 13164 standartas)</li><li>Sudėtis: 2 kg miltelinis gesintuvas</li><li>Sudėtis: avarinis trikampio formos kelio ženklas</li><li>Sudėtis: šviesą atspindinti liemenė</li><li>Pakuotė: medžiaginis dėklas su dviem užtraukiamais skyriais</li></ul><div class="price"><small>Kaina</small>49,53 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:1" data-name="Kelių motorinės transporto priemonės pirmosios pagalbos rinkinys ">
+  <figure><img src="assets/img/geslita/photo_5_.jpg" alt="Kelių motorinės transporto priemonės pirmosios pagalbos rinkinys" loading="lazy"></figure>
+  <div class="body">
+    <h3>Kelių motorinės transporto priemonės pirmosios pagalbos rinkinys</h3>
+<ul class="specs"><li>Sudėtis: pirmosios pagalbos rinkinys (DIN 13164 standartas)</li></ul><div class="price"><small>Kaina</small>9,73 €</div>  </div>
+</article><article class="prod pg-auto-card" data-reveal style="--i:2" data-name="Įmonės pirmosios pagalbos rinkinys ">
+  <figure><img src="assets/img/geslita/photo_2_.jpg" alt="Įmonės pirmosios pagalbos rinkinys" loading="lazy"></figure>
+  <div class="body">
+    <h3>Įmonės pirmosios pagalbos rinkinys</h3>
+<div class="price"><small>Kaina</small>19,28 €</div>  </div>
+</article></div>
+        <ul class="pg-auto-notes">
+<li data-reveal><b>Kelių motorinės transporto priemonės saugos rinkinys</b><span class="ltx">Automobilio saugos rinkinys pagamintas <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>, o tai užtikrina produkto kokybę. Su šiuo rinkiniu Jūsų automobilis atitiks saugos reikalavimus per techninę apžiūrą. Kiekvienam vairuotojui, norinčiam užtikrinti savo bei keleivių saugumą, privalu turėti šį rinkinį. Viskas viename medžiaginiame dėkle su dviem užtraukiamais skyriais - kompaktiška laikyti automobilyje.</span></li><li data-reveal><b>Kelių motorinės transporto priemonės pirmosios pagalbos rinkinys</b><span class="ltx">Pirmosios pagalbos rinkinys (vaistinėlė) automobiliui, pagamintas <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></li><li data-reveal><b>Įmonės pirmosios pagalbos rinkinys</b>Pirmosios pagalbos rinkinys įmonėms ir įstaigoms.</li>        </ul>
+      </section>
+      <section class="doc-sec" id="darbo-saugos-priemones" data-search-group>
+        <div class="pg-auto-head" data-reveal>
+          <h2>Darbo saugos priemonės</h2>
+          <span class="tag tag-line">9 prekės</span>
+        </div>
+<p class="lead" data-reveal>Asmeninės apsaugos priemonės darbuotojams: akių, klausos ir veido apsauga, darbo batai, rūbai, pirštinės, šalmai ir apsauga nuo kritimo. Katalogai pateikiami PDF failuose, kainų teiraukitės.</p>
+        <div class="pill-row pg-auto-pills" data-reveal>
+<span class="tag" data-name="Akių apsauga">Akių apsauga</span><span class="tag" data-name="Klausos apsauga">Klausos apsauga</span><span class="tag" data-name="Veido apsauga">Veido apsauga</span><span class="tag" data-name="Darbo batai">Darbo batai</span><span class="tag" data-name="Darbo rūbai">Darbo rūbai</span><span class="tag" data-name="Darbo pirštinės">Darbo pirštinės</span><span class="tag" data-name="Šalmai, kepurės">Šalmai, kepurės</span><span class="tag" data-name="Pirmos pagalbos rinkiniai ir kita">Pirmos pagalbos rinkiniai ir kita</span><span class="tag" data-name="Apsauga nuo kritimo">Apsauga nuo kritimo</span>        </div>
+        <div class="notice" data-reveal>Šios grupės katalogas atnaujinamas. Kainų teiraukitės telefonu <a href="tel:+37065399977">+370 653 99977</a> arba el. paštu <a href="mailto:info@geslita.lt">info@geslita.lt</a>.</div>
+        <h3 class="pg-auto-h3">Katalogai (PDF)</h3>
+        <ul class="doc-list" data-reveal>
+<li><a href="https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/Pilnas.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><span>Pilnas darbo saugos priemonių katalogas (PDF)</span><span class="ic-out"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></span></a></li><li><a href="https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/batai.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><span>Darbo batai (PDF)</span><span class="ic-out"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></span></a></li><li><a href="https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/Rūbai.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><span>Darbo rūbai (PDF)</span><span class="ic-out"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></span></a></li><li><a href="https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/pirstines2%20PLIUS.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><span>Darbo pirštinės (PDF)</span><span class="ic-out"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></span></a></li><li><a href="https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/kepures.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><span>Šalmai, kepurės (PDF)</span><span class="ic-out"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></span></a></li><li><a href="https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/Pirmos%20pagalbos%20rinkiniai.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><span>Pirmos pagalbos rinkiniai ir kita (PDF)</span><span class="ic-out"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></span></a></li><li><a href="https://www.geslita.lt/uploads/Darbo%20brabuziu%20kategorijos/apsauga%20nuo%20kritimo.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><span>Apsauga nuo kritimo (PDF)</span><span class="ic-out"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>        </ul>
+
+      </section>
+
+      <div class="notice info" data-reveal>Kainoraščiuose nurodytos mažmeninės kainos. Norėdami sužinoti kainą didesniam kiekiui, skambinkite +370 653 99977, +370 607 63109 arba siųskite užklausimą el. paštu info@geslita.lt.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tint pg-auto-sys" data-parallax-root>
+  <img class="pg-auto-plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.15">
+  <div class="wrap split">
+    <div data-reveal>
+      <div class="eyebrow">Gaisrinės signalizacijos paslauga</div>
+      <h2>Įrangą sujungiame į veikiančią sistemą</h2>
+      <p class="lead">UAB „Geslita“ atlieka gaisrinės signalizacijos kabelių instaliaciją, montavimą, derinimą, programavimą, remontą ir kasmetinę patikrą.</p>
+      <ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinės signalizacijos kabelių instaliacija</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinės signalizacijos montavimas (įrengimas)</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Sistemos derinimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Programavimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinės signalizacijos remontas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Kasmetinė gaisrinės signalizacijos patikra</span></li></ul>
+      <a class="btn btn-navy" href="gaisrine-signalizacija.html">Signalizacijos įrengimas ir patikra<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="photo" data-reveal="scale">
+      <img src="assets/img/geslita/Gaisrines_signalizacijos_patikra_komplektas.jpg" alt="Gaisrinės signalizacijos komplektas: dūmų detektoriai, rankiniai mygtukai, centralė ir sirenos" loading="lazy" width="800" height="600">
+      <div class="pin"><span class="num">nuo 70,00 €</span><span class="small">signalizacijos patikra</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight"><div class="wrap"><div class="cta-inline" data-reveal>
+  <div><h2>Reikia didesnio kiekio ar pasiūlymo objektui?</h2><p>Paskambinkite arba parašykite: aptarsime įrangos kiekį, terminus ir paruošime pasiūlymą.</p></div>
+  <div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a></div>
+</div></div></section>
+</main>
+
+<footer class="site-foot">
+  <img class="plan-wm" src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo-geslita-white-s.png" alt="Geslita" width="167" height="50">
+        <p><span class="ltx">20 metų priešgaisrinės saugos patirties. Įrangos priežiūra ir prekyba, darbo saugos priemonės verslui visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+      </div>
+      <div>
+        <h2 class="foot-h">Paslaugos</h2>
+        <ul>
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra</a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai</a></li>
+          <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Prekės ir informacija</h2>
+        <ul>
+          <li><a href="prekes-gesintuvai.html">Gesintuvai</a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai</a></li>
+          <li><a href="prekes-automatika.html">Automatika ir įranga</a></li>
+          <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+          <li><a href="apie-mus.html">Apie mus</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Kontaktai</h2>
+        <ul class="foot-contact">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+37065399977">+370 653 99977</a><br><a href="tel:+37060763109">+370 607 63109</a></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@geslita.lt">info@geslita.lt</a></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Fabijoniškių g. 4A, Vilnius<br><span class="muted">Ne parduotuvė: prieš atvykdami paskambinkite</span></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span>I-V 9:00-18:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2010-2026 UAB „Geslita“. Visos teisės saugomos.</span>
+      <span><a href="kontaktai.html">Kontaktai</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

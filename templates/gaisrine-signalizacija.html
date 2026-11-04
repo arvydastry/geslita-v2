@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m %}
+{% block title %}{{ alarm.title }} | Geslita{% endblock %}
+{% block description %}Gaisrinės signalizacijos įrengimas, kasmetinė patikra nuo 70,00 € ir remontas. Detektoriai, mygtukai, sirenos, eksploatavimo taisyklės ir dažniausi klausimai.{% endblock %}
+{% block extra_css %}<style>
+/* Gaisrinė signalizacija: puslapio stiliai (prefiksas .pg-alarm-) */
+.pg-alarm-doc .doc-sec h2 { margin-bottom: 14px; }
+.pg-alarm-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.pg-alarm-cols .checks { grid-template-columns: 1fr 1fr; gap: 10px 28px; }
+.pg-alarm-h3 { margin: 30px 0 14px; }
+.pg-alarm-side .num { font-size: 24px; color: var(--ink); line-height: 1; }
+.pg-alarm-side .btn { display: inline-flex; margin: 4px 0 0; padding: 0 14px; background: transparent; box-shadow: none; border: 1.5px solid var(--line-2); color: var(--ink); font-size: 15px; }
+.pg-alarm-side .btn:hover { background: var(--bg); border-color: var(--ink); transform: none; }
+.pg-alarm-pricecard { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(20px, 3vw, 44px); align-items: center; background: var(--navy); color: var(--on-dark); border-color: transparent; }
+.pg-alarm-pricecard .big { display: block; font-size: clamp(36px, 3.6vw, 50px); line-height: 1; color: #fff; letter-spacing: -0.03em; margin: 6px 0 12px; white-space: nowrap; }
+.pg-alarm-pricecard p { color: var(--on-dark); font-size: 15.5px; }
+.pg-alarm-pricecard .small { color: var(--on-dark-muted); }
+.pg-alarm-pricecard .checks { font-size: 15px; gap: 6px; margin: 8px 0 20px; }
+.pg-alarm-pricecard .checks .ic { color: #fff; }
+.pg-alarm-period { margin: 14px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2vw, 24px); }
+.pg-alarm-period li { padding-top: 14px; border-top: 1px solid var(--line-2); font-size: 15px; }
+.pg-alarm-period li .tag { margin-bottom: 10px; }
+.pg-alarm-period li p { margin: 0; max-width: none; }
+.pg-alarm-comp { grid-template-columns: 1fr 1fr; }
+.pg-alarm-comp p { font-size: 15.5px; }
+.pg-alarm-gallery { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 280px; grid-auto-flow: dense; gap: 14px; }
+.pg-alarm-gallery figure { position: relative; margin: 0; border-radius: var(--r); overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+.pg-alarm-gallery img { width: 100%; height: 100%; object-fit: cover; }
+.pg-alarm-gallery .wide { grid-column: span 2; }
+.pg-alarm-gallery .thumb { display: flex; align-items: center; justify-content: center; }
+.pg-alarm-gallery .thumb img { width: auto; height: auto; max-width: 140px; max-height: 60%; object-fit: contain; }
+.pg-alarm-gallery figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 34px 14px 12px; font-size: 13px; color: #fff; text-shadow: 0 1px 2px rgba(14, 26, 43, 0.5); background: linear-gradient(to top, rgba(14, 26, 43, 0.82), rgba(14, 26, 43, 0.4) 55%, transparent); }
+.pg-alarm-gallery .thumb figcaption { background: none; color: var(--muted); text-shadow: none; text-align: center; padding-top: 0; }
+.pg-alarm-rules { background: var(--bg-2); }
+.pg-alarm-rules .checks { display: block; columns: 2; column-gap: 36px; }
+.pg-alarm-rules .checks li { break-inside: avoid; margin-bottom: 12px; font-size: 15px; }
+.pg-alarm-rules .acc { margin-top: 10px; }
+.pg-alarm-relsec { overflow: hidden; }
+.pg-alarm-plan { position: absolute; left: -6%; bottom: -45%; width: clamp(500px, 50vw, 820px); opacity: 0.1; pointer-events: none; will-change: transform; }
+.pg-alarm-rel { position: relative; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+.pg-alarm-rel h2 { font-size: clamp(26px, 3vw, 38px); margin-bottom: 14px; }
+.pg-alarm-rel .btn { margin-top: 20px; }
+.pg-alarm-rel-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.pg-alarm-rel-list li { display: flex; align-items: center; gap: 14px; padding: 10px 14px 10px 10px; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); font-size: 14.5px; }
+.pg-alarm-rel-list img { width: 64px; height: 64px; object-fit: contain; background: #fff; border-radius: 8px; border: 1px solid var(--line); padding: 4px; flex: none; }
+.pg-alarm-rel-list b { display: block; color: var(--ink); }
+@media (max-width: 900px) { .pg-alarm-rel, .pg-alarm-comp { grid-template-columns: minmax(0, 1fr); } .pg-alarm-rel .btn { white-space: normal; text-align: center; } .pg-alarm-gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 250px; } .pg-alarm-gallery .wide-b { grid-column: auto; } .pg-alarm-rules .checks { columns: 1; } }
+@media (max-width: 640px) { .pg-alarm-cols .checks, .pg-alarm-pricecard, .pg-alarm-period { grid-template-columns: 1fr; } .pg-alarm-gallery { grid-template-columns: 1fr; grid-auto-rows: 230px; } .pg-alarm-gallery .wide { grid-column: auto; } }
+</style>{% endblock %}
+{% block content %}
+{{ m.page_hero(alarm.title, 'Įrengiame gaisrinę signalizaciją (kabelių instaliacija, montavimas, derinimas, programavimas), atliekame jos remontą ir kasmetinę patikrą, kurios rezultatus įforminame žurnale arba akte.', image=img('foto:hs-signalizacija'), alt='Raudonas gaisro aliarmo mygtukas ir ženklas „Gaisrinio aliarmo skelbimo vieta“ ant betoninės sienos', badge={'img': 'assets/img/katalogas/infzenklai--image002.gif', 'title': 'Gaisrinio aliarmo skelbimo vieta', 'text': 'Ženklas iš mūsų katalogo, kabinamas prie mygtuko'}, crumbs=[{'label': 'Paslaugos', 'href': 'paslaugos.html'}, {'label': 'Gaisrinė signalizacija'}], buttons=[{'label': 'Gauti pasiūlymą', 'href': 'kontaktai.html#forma'}]) }}
+
+{# Turinys su lipnia šonine navigacija #}
+<section class="sec pg-alarm-doc">
+  <div class="wrap doc">
+    <aside class="doc-nav" aria-label="Puslapio skyriai">
+      <ul>
+        <li><a href="#apie">Apie paslaugą</a></li>
+        <li><a href="#kaina">Kaina</a></li>
+        <li><a href="#komponentai">Sistemos komponentai</a></li>
+        <li><a href="#nuotraukos">Nuotraukos</a></li>
+        <li><a href="#taisykles">Eksploatavimo taisyklės</a></li>
+        <li><a href="#duk">Dažniausi klausimai</a></li>
+      </ul>
+      <div class="side-card pg-alarm-side">
+        <span class="small muted">Signalizacijos patikra</span>
+        <span class="num">{{ alarm.price_from }}</span>
+        <span>{{ alarm.price_note }}</span>
+        <a class="btn btn-sm" href="tel:+37065399977">{{ m.icon('phone') }}+370 653 99977</a>
+      </div>
+    </aside>
+
+    <div class="doc-body">
+      {# Apie paslaugą #}
+      <section class="doc-sec" id="apie">
+        <div data-reveal>
+          <h2>Apie paslaugą</h2>
+          <p class="lead">{{ alarm.subtitle }}</p>
+          <div class="pg-alarm-meta">
+            <span class="tag tag-navy">Patikra {{ alarm.price_from }}</span>
+            <span class="tag">Patikra kartą per metus</span>
+            <span class="tag tag-line">Aktas arba žurnalo įrašas</span>
+          </div>
+          {{ m.paragraphs(alarm.intro) }}
+        </div>
+        <h3 class="pg-alarm-h3">Ką atliekame</h3>
+        <div class="pg-alarm-cols" data-reveal>{{ m.checks(alarm.services) }}</div>
+      </section>
+
+      {# Kaina: tamsi kainos juosta ir periodiškumas trimis stulpeliais #}
+      <section class="doc-sec" id="kaina">
+        <h2>Kaina</h2>
+        <div class="card pg-alarm-pricecard" data-reveal>
+          <div>
+            <span class="small">Gaisrinės signalizacijos patikra</span>
+            <span class="num big">{{ alarm.price_from }}</span>
+            <p>{{ alarm.price_note }}</p>
+          </div>
+          <div>
+            <span class="small">Kainą lemia</span>
+            {{ m.checks(['Patalpų plotas', 'Patalpų aukštis', 'Daviklių kiekis']) }}
+            {{ m.btn('Gauti pasiūlymą', 'kontaktai.html#forma') }}
+          </div>
+        </div>
+        <h3 class="pg-alarm-h3">Kaip dažnai tikrinti</h3>
+        <p>{{ alarm.periodicity.summary }}</p>
+        <ul class="pg-alarm-period">
+          {% for it in alarm.periodicity['items'] %}
+          <li data-reveal style="--i:{{ loop.index0 }}"><span class="tag">{{ it.interval }}</span><p>{{ it.text }}</p></li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      {# Komponentai #}
+      <section class="doc-sec" id="komponentai">
+        <div data-reveal>
+          <h2>Sistemos komponentai</h2>
+          <p class="lead">Ką sudaro gaisrinės signalizacijos sistema ir kaip kiekviena jos dalis prižiūrima pagal eksploatavimo taisykles.</p>
+        </div>
+        {% set ikonos = ['shield', 'flame', 'bulb', 'tools', 'bell', 'doc'] %}
+        <div class="card-grid pg-alarm-comp">
+          {% for c in alarm.components %}
+          <article class="card" data-reveal style="--i:{{ loop.index0 % 2 }}">
+            <span class="ic-wrap">{{ m.icon(ikonos[loop.index0 % 6]) }}</span>
+            <h3>{{ c.name }}</h3>
+            <p>{{ c.description }}</p>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      {# Nuotraukos: didesnės foto per 2 stulpelius, mažos katalogo nuotraukos rodomos natūralaus dydžio #}
+      <section class="doc-sec" id="nuotraukos">
+        <div data-reveal>
+          <h2>Nuotraukos</h2>
+          <p class="lead">Įranga, kurią montuojame ir tikriname: centralės, detektoriai, rankiniai mygtukai ir sirenos.</p>
+        </div>
+        {% set galerija = [
+          {'alt': 'Gaisrinės signalizacijos centralė Bentel J424', 'cap': 'Centralė Bentel J424', 'cls': ''},
+          {'alt': 'Gaisrinės signalizacijos įranga: centralės, rankinis mygtukas, sirenos ir dūmų detektorius', 'cap': 'Signalizacijos patikra', 'cls': ''},
+          {'alt': 'Gaisrinės signalizacijos komplektas: dūmų detektoriai, rankiniai mygtukai, centralė ir sirenos', 'cap': 'Patikros komplektas', 'cls': 'wide'},
+          {'alt': 'Ranka valdomas gaisro pavojaus signalizavimo įtaisas ROP63', 'cap': 'Mygtukas ROP63', 'cls': 'thumb'},
+          {'alt': 'Garso skambutis BS 595', 'cap': 'Garso skambutis BS 595', 'cls': 'thumb'},
+          {'alt': 'Autonominis dūmų detektorius SPD-3.4', 'cap': 'Dūmų detektorius SPD-3.4', 'cls': 'thumb'},
+          {'alt': 'Gaisrinės signalizacijos centralės plokštė remonto metu', 'cap': 'Centralės remontas', 'cls': 'wide wide-b'}
+        ] %}
+        <div class="pg-alarm-gallery">
+          {% for src in alarm.images %}{% set gi = galerija[loop.index0 % 7] %}
+          <figure class="{{ gi.cls }}" data-reveal style="--i:{{ loop.index0 % 3 }}"><img src="{{ img(src) }}" alt="{{ gi.alt }}" loading="lazy"><figcaption>{{ gi.cap }}</figcaption></figure>
+          {% endfor %}
+        </div>
+      </section>
+
+      {# Eksploatavimo taisyklės: 6 svarbiausi punktai matomi, likę 8 ir visi 9 skyriai akordeonuose #}
+      <section class="doc-sec" id="taisykles">
+        <div data-reveal>
+          <h2>Eksploatavimo taisyklės</h2>
+          <p class="lead">{{ alarm.rules_title }}: svarbiausi reikalavimai objekto vadovui, atsakingam asmeniui ir budėtojams.</p>
+        </div>
+        <div class="card pg-alarm-rules" data-reveal>
+          <h3>Svarbiausia trumpai</h3>
+          {{ m.checks(alarm.rules_summary[:6]) }}
+          {{ m.acc('Dar ' ~ ((alarm.rules_summary | length) - 6) ~ ' reikalavimai', m.checks(alarm.rules_summary[6:])) }}
+        </div>
+        <h3 class="pg-alarm-h3">Taisyklių skyriai</h3>
+        <div data-reveal>
+          {% for s in alarm.rules_sections %}{{ m.acc(s.heading, m.paragraphs(s.paragraphs)) }}{% endfor %}
+        </div>
+        <h3 class="pg-alarm-h3">Dokumentas</h3>
+        <ul class="doc-list" data-reveal>
+          <li><a href="{{ alarm.pdf.url }}" target="_blank" rel="noopener">{{ m.icon('file') }}<span>{{ alarm.pdf.title }} (PDF)</span><span class="ic-out">{{ m.icon('out') }}</span></a></li>
+        </ul>
+      </section>
+
+      {# DUK #}
+      <section class="doc-sec" id="duk">
+        <h2>Dažniausi klausimai</h2>
+        <div data-reveal>
+          {% for f in alarm.faq %}{{ m.acc(f.question, m.paragraphs([f.answer]), open=loop.first) }}{% endfor %}
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+{# Susijusios prekės iš gaisrinės automatikos katalogo #}
+{% set g = products.groups | selectattr('slug', 'equalto', 'automatika') | first %}
+{% set picks = [g.subgroups[0]['items'][0], g.subgroups[1]['items'][0], g.subgroups[2]['items'][0]] %}
+<section class="sec sec-tint pg-alarm-relsec" data-parallax-root>
+  <img class="pg-alarm-plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.15">
+  <div class="wrap">
+    <div class="card pg-alarm-rel" data-reveal>
+      <div>
+        <div class="eyebrow">Susijusios prekės</div>
+        <h2>Detektoriai, sirenos ir mygtukai iš mūsų katalogo</h2>
+        <p>{{ g.intro }}</p>
+        {{ m.btn('Automatikos katalogas', 'prekes-automatika.html', 'btn-navy') }}
+      </div>
+      <ul class="pg-alarm-rel-list">
+        {% for p in picks %}
+        <li><img src="{{ img(p.image) }}" alt="{{ p.name }}" loading="lazy" width="64" height="64"><div><b>{{ p.name }}</b><span class="muted">{{ p.price }}</span></div></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight"><div class="wrap">{{ m.cta_inline('Reikia signalizacijos patikros ar įrengimo?', 'Paskambinkite arba parašykite: aptarsime patalpų plotą, daviklių kiekį ir paruošime pasiūlymą.') }}</div></section>
+{% endblock %}

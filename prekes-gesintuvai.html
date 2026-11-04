@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) document.documentElement.classList.add('js');</script>
+<title>Gesintuvai | Geslita</title>
+<meta name="description" content="Milteliniai, angliarūgštiniai, vandens putų ir automatiniai gesintuvai su kainomis. Naujos kartos vandens putų gesintuvai 6 l ir 9 l, pagaminti Lietuvoje.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* prekes-gesintuvai.html: gesintuvų katalogas */
+.pg-ges-feat .tag { margin-bottom: 18px; }
+.pg-ges-feat h2 { margin-bottom: 18px; }
+.pg-ges-bullets { grid-template-columns: 1fr 1fr; gap: 8px 20px; font-size: 15px; margin: 22px 0 28px; }
+.pg-ges-stack { position: relative; min-height: 560px; display: flex; align-items: flex-end; justify-content: center; }
+.pg-ges-stack::before { content: ""; position: absolute; inset: 6% 4% 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(19, 35, 64, 0.12), rgba(19, 35, 64, 0)); }
+.pg-ges-stack .main { position: relative; height: clamp(420px, 46vw, 640px); width: auto; filter: drop-shadow(0 42px 38px rgba(14, 26, 43, 0.32)); }
+.pg-ges-stack .second { position: absolute; left: 3%; bottom: -3%; height: 44%; width: auto; filter: drop-shadow(0 26px 26px rgba(14, 26, 43, 0.28)); will-change: transform; }
+.pg-ges-stack .pin { position: absolute; right: 0; bottom: 12%; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 16px; box-shadow: var(--shadow-md); display: grid; gap: 2px; }
+.pg-ges-stack .pin .num { font-size: 22px; font-weight: 700; color: var(--ink); line-height: 1; }
+.pg-ges-stack .pin .small { color: var(--muted); font-size: 13px; }
+.pg-ges-vcards { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2vw, 24px); margin-bottom: clamp(24px, 3vw, 36px); }
+.pg-ges-vcards .card { display: grid; grid-template-columns: 88px 1fr; gap: 20px; align-items: start; }
+.pg-ges-vcards figure { margin: 0; aspect-ratio: 1; border-radius: var(--r-sm); background: var(--bg); display: flex; align-items: center; justify-content: center; padding: 8px; }
+.pg-ges-vcards figure img { max-height: 100%; width: auto; }
+.pg-ges-vcards .programme { margin: 14px 0 0; }
+.pg-ges-table td.num { font-variant-numeric: lining-nums; } /* tabular-nums šiame šrifte išplečia kablelį */
+.pg-ges-details { margin-top: clamp(24px, 3vw, 36px); max-width: 920px; }
+.pg-ges-types { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line-2); }
+.pg-ges-type { padding: 28px clamp(16px, 2.4vw, 32px) 8px; }
+.pg-ges-type:first-child { padding-left: 0; }
+.pg-ges-type + .pg-ges-type { border-left: 1px solid var(--line-2); }
+.pg-ges-type > .num { display: block; font-size: 42px; font-weight: 700; line-height: 1; letter-spacing: -0.03em; color: var(--line-2); margin-bottom: 16px; transition: color 0.6s var(--ease); }
+.pg-ges-type.is-in > .num { color: var(--navy-3); }
+.pg-ges-type h3 { margin-bottom: 10px; }
+.pg-ges-type p { font-size: 15.5px; }
+.pg-ges-cat .doc-sec > h3 { font-size: clamp(24px, 2.4vw, 30px); margin-bottom: 12px; }
+.pg-ges-cat .intro { max-width: 72ch; margin-bottom: 24px; }
+.pg-ges-cat .cell { display: grid; }
+.pg-ges-more { margin-top: 18px; }
+.pg-ges-more h4 { margin: 16px 0 6px; }
+.pg-ges-notes { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: 15px; color: var(--muted); }
+.pg-ges-notes li { padding-left: 14px; border-left: 2px solid var(--line-2); }
+.pg-ges-notes b { color: var(--ink); font-weight: 600; }
+.pg-ges-auto { display: grid; grid-template-columns: minmax(220px, 280px) 1fr; gap: clamp(20px, 3vw, 36px); align-items: start; }
+.pg-ges-auto .panel { padding: clamp(20px, 2.4vw, 28px); border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); }
+.pg-ges-auto .panel .btn-group { margin: 18px 0 12px; }
+.pg-ges-auto .panel .ic { font-size: 18px; }
+.pg-ges-cat .notice { margin-top: clamp(32px, 4vw, 48px); }
+.pg-ges-cat .prod figure img { min-height: 72%; } /* mažos originalios nuotraukos (100 px) nedingsta kvadrate */
+.pg-ges-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 28px; }
+.pg-ges-specs h4 { margin: 0 0 6px; } .pg-ges-specs ul { margin: 0; padding-left: 18px; font-size: 14.5px; }
+.pg-ges-acc { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(14px, 1.8vw, 20px); }
+.pg-ges-acc .card { display: grid; grid-template-columns: 112px 1fr; gap: 18px; align-items: start; padding: 18px; }
+.pg-ges-acc figure { margin: 0; aspect-ratio: 1; border-radius: var(--r-sm); background: #fff; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; padding: 8px; overflow: hidden; }
+.pg-ges-acc figure img { max-height: 100%; width: auto; } .pg-ges-acc figure .ic-wrap { margin: 0; }
+.pg-ges-acc h4 { font-size: 16.5px; margin-bottom: 4px; }
+.pg-ges-acc .specs { margin: 8px 0 0; padding: 0; list-style: none; font-size: 13.5px; color: var(--muted); display: grid; gap: 2px; }
+.pg-ges-acc .note { margin: 10px 0 0; font-size: 14.5px; }
+.pg-ges-acc .price { margin-top: 10px; font: 700 18px/1.2 var(--fd); color: var(--ink); } .pg-ges-acc .price small { font: 500 12.5px/1.2 var(--fb); color: var(--muted); display: block; margin-bottom: 2px; }
+/* Raudona lieka tik mygtukams ir telefono ikonai: nuorodų ikonos ir aktyvi šoninės navigacijos eilutė tamsiai mėlynos */
+.pg-ges-cat .link .ic { color: var(--navy-3); } .pg-ges-cat .link[href^="tel:"] .ic { color: var(--red); } .pg-ges-cat .doc-nav a.is-active { border-color: var(--navy-3); }
+@media (max-width: 900px) { .pg-ges-stack { min-height: 0; margin-top: 16px; } .pg-ges-stack .main { height: clamp(360px, 70vw, 520px); } .pg-ges-types { grid-template-columns: 1fr; border-top: 0; } .pg-ges-type, .pg-ges-type:first-child { padding: 24px 0 8px; border-top: 1px solid var(--line-2); } .pg-ges-type + .pg-ges-type { border-left: 0; } .pg-ges-vcards { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .pg-ges-bullets { grid-template-columns: 1fr; } .pg-ges-auto { grid-template-columns: 1fr; } .pg-ges-vcards .card { grid-template-columns: 64px 1fr; gap: 14px; } .pg-ges-stack .pin { right: 4px; bottom: 4%; } .pg-ges-cat .prod figure { aspect-ratio: 4 / 3; } .pg-ges-specs { grid-template-columns: 1fr; } .pg-ges-acc { grid-template-columns: 1fr; } .pg-ges-acc .card { grid-template-columns: 88px 1fr; gap: 14px; } }
+</style></head>
+<body class="">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14L20 4M15 4h5v5"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3 4 5 4 9a4 4 0 0 1-8 0c0-1 .3-2 1-3 0 2 1 3 2 3 0-3-1-5 1-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V6h11v11M14 9h4l3 3v5h-2"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3H4a4 4 0 0 0 2-3v-3a7 7 0 0 1 4-6M9 17v1a3 3 0 0 0 6 0v-1"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3zM9 4v13M15 7v13"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 9L12 5 2 9l10 4 10-4zM6 10.6V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.4"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M7 10h3v11H7zM14 4l3-1 3 3-1 3-5 5-3-3 3-7zM4 20l3-3"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></symbol>
+</svg>
+<a class="skip" href="#main">Pereiti prie turinio</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Geslita, į pradžią"><img src="assets/img/logo-geslita-s.png" alt="Geslita" width="167" height="50"></a>
+    <ul class="site-nav">
+      <li><a href="index.html" >Pradžia</a></li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-paslaugos">Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-paslaugos">
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas<span>Patikra nuo 5,26 €</span></a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija<span>Patikra, remontas, įrengimas</span></a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis<span>Čiaupai, žarnos, žurnalai</span></a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai<span>Planas 70 €</span></a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai<span>Montavimas pagal EN 1838</span></a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai<span>Saugos centras</span></a></li>
+          <li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos<span>Dielektrika, nuoma, žurnalai</span></a></li>
+          <li><a class="drop-all" href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-prekes">Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-prekes">
+          <li><a href="prekes-gesintuvai.html">Gesintuvai<span>Milteliniai, CO₂, vandens putų</span></a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis<span>Spintelės, žarnos, čiaupai</span></a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai<span>102 ženklai su paieška</span></a></li>
+          <li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga<span>Detektoriai, sirenos, šviestuvai</span></a></li>
+          <li><a class="drop-all" href="prekes.html">Visos prekės</a></li>
+        </ul>
+      </li>
+      <li><a href="saugos-centras.html" >Saugos centras</a></li>
+      <li class="nav-naudinga"><a href="naudinga-informacija.html" >Naudinga</a></li>
+      <li><a href="apie-mus.html" >Apie mus</a></li>
+      <li><a href="kontaktai.html" >Kontaktai</a></li>
+    </ul>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>+370 653 99977</span></a>
+      <a class="btn btn-sm" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+      <button class="nav-toggle" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-nav"><svg class="ic ic-menu"><use href="#i-menu"/></svg><svg class="ic ic-x"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilus meniu">
+  <ul>
+    <li><a href="index.html">Pradžia</a></li>
+    <li><details><summary>Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li><li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas</a></li><li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li><li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li><li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li><li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li><li><a href="saugos-centras.html">Darbuotojų mokymai</a></li><li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos</a></li>
+    </ul></details></li>
+    <li><details><summary>Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="prekes.html">Visos prekės</a></li><li><a href="prekes-gesintuvai.html">Gesintuvai</a></li><li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li><li><a href="prekes-zenklai.html">Saugos ženklai</a></li><li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga</a></li>
+    </ul></details></li>
+    <li><a href="saugos-centras.html">Saugos centras</a></li>
+    <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+    <li><a href="apie-mus.html">Apie mus</a></li>
+    <li><a href="kontaktai.html">Kontaktai</a></li>
+  </ul>
+  <div class="mobile-cta">
+    <a class="btn" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+    <a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<section class="page-hero ">
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.2">
+  <div class="wrap">
+    <div>
+<ol class="crumbs"><li><a href="index.html">Pradžia</a></li><li><a href="prekes.html">Prekės</a></li><li><span aria-current="page">Gesintuvai</span></li></ol>      <h1>Gesintuvai</h1>
+<p class="lead"><span class="ltx">Gesintuvai sertifikuoti naudojimui <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>. Siūlome miltelinius, angliarūgštinius ir vandens putų gesintuvus, taip pat vykdome gesintuvų techninį aptarnavimą - patikrą ir pildymą.</span></p>    </div>
+<div class="media" data-reveal="scale"><img src="assets/img/foto/gesintuvas-betonas.jpg" srcset="assets/img/foto/gesintuvas-betonas-640.webp 640w, assets/img/foto/gesintuvas-betonas-1280.webp 1280w, assets/img/foto/gesintuvas-betonas-1920.webp 1920w" sizes="(max-width: 960px) 92vw, 50vw" alt="Raudonas gesintuvas ant betoninės sienos su evakuacijos ženklu" width="1200" height="900" fetchpriority="high"></div>  </div>
+</section>
+
+<section class="sec pg-ges-feat" id="naujos-kartos" data-parallax-root>
+  <div class="wrap split">
+    <div data-reveal>
+      <span class="tag tag-navy"><span class="ltx">Pagaminta <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span></span></span>
+      <h2>Naujos kartos vandens putų gesintuvai 6 l ir 9 l</h2>
+      <p>Naujos kartos gesintuvas šaldančių / impregnuojančių putų pagrindu idealiai tinka B klasės gaisrams gesinti - degiesiems skysčiams: benzinui, spiritui, lakui, tepalams. Efektyviai gesina ir dažniausiai pasitaikančius A klasės gaisrus - įprastas medžiagas: medieną, popierių, tekstilę, gumą ar plastmasę. Tinka elektros prietaisams gesinti.</p><p>Vandens putų gesintuvo pagrindas - AFFF putos, kurių užpurškus ant gaisro židinio akimirksniu susidaro vandens plėvelė, atskirianti deguonį ir blokuojanti pakartotinį užsidegimą. Sudėtyje nėra toksinių medžiagų, todėl gesintuvas idealiai tinka naudoti patalpų viduje, o putos veikia ir kaip impregnatorius, užkertantis kelią pakartotiniam gaisrui. Purškimo srovė 4-5 metrai leidžia ugnį sutramdyti iš saugaus atstumo.</p><p>Gaminami dviejų tipų vandens putų gesintuvai, kurie skiriasi veikimo temperatūros ribomis: šildomoms patalpoms rekomenduojame gesintuvą, veikiantį nuo +5°C iki +60°C, o nešildomoms patalpoms - specialų gesintuvą ReinoldMax, veikiantį nuo -20°C iki +60°C.</p>
+      <ul class="checks pg-ges-bullets"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Tinka B klasės gaisrams - degiesiems skysčiams (benzinas, spiritas, lakas, tepalai)</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Efektyviai gesina A klasės gaisrus - medieną, popierių, tekstilę, gumą, plastmasę</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Tinka elektros prietaisams gesinti</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Sudėtyje nėra toksinių medžiagų - nekenkia kvėpavimo takams</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Purškimo srovė 4-5 metrai</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Nepertraukiamas veikimo laikas: apie 20 sek. (6 l), apie 27-28 sek. (9 l)</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisro nepaliestiems daiktams putos nepakenkia - pakanka nuvalyti ir leisti išdžiūti</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Versijos šildomoms (+5°C…+60°C) ir nešildomoms (-20°C…+60°C) patalpoms</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Atitinka LST EN 3-7:2004 standartą</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><span class="ltx">Pagaminta <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span></span></span></li></ul>
+      <div class="btn-group"><a class="btn btn-navy" href="#versijos">Versijos ir kainos<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="#katalogas">Visas katalogas</a></div>
+    </div>
+    <div class="pg-ges-stack" data-reveal="scale">
+      <img class="main" src="assets/img/cutout/dsc9857.png" alt="Naujos kartos vandens putų gesintuvas nešildomoms patalpoms" width="770" height="1460" loading="lazy">
+      <img class="second" src="assets/img/cutout/dsc9858.png" alt="Vandens putų gesintuvas šildomoms patalpoms" width="718" height="1446" loading="lazy" data-parallax="0.22">
+      <div class="pin"><span class="num">nuo 48,55 €</span><span class="small">6 l gesintuvas</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-white" id="versijos">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2>Dvi versijos, dvi talpos</h2>
+      <p class="lead">Gesintuvai gaminami dviejų tipų, kurie skiriasi veikimo temperatūros ribomis, abu 6 l ir 9 l talpos. Atitinka LST EN 3-7:2004 standartą.</p>
+    </div>
+    <div class="pg-ges-vcards">
+      <article class="card" data-reveal style="--i:0">
+        <figure><img src="assets/img/katalogas/vpg--dsc9858.jpg" alt="" loading="lazy"></figure>
+        <div>
+          <h3>Šildomoms patalpoms</h3>
+          <p class="muted">Veikimo temperatūra nuo +5°C iki +60°C</p>
+          <ul class="programme"><li><span>6 l gesintuvas</span><span class="num">48,55 €</span></li><li><span>9 l gesintuvas</span><span class="num">80,00 €</span></li></ul>
+        </div>
+      </article>
+      <article class="card" data-reveal style="--i:1">
+        <figure><img src="assets/img/katalogas/vpg--dsc9857.jpg" alt="" loading="lazy"></figure>
+        <div>
+          <h3>Nešildomoms patalpoms</h3>
+          <p class="muted">Veikimo temperatūra nuo -20°C iki +60°C</p>
+          <ul class="programme"><li><span>6 l gesintuvas</span><span class="num">58,55 €</span></li><li><span>9 l gesintuvas</span><span class="num">75,00 €</span></li></ul>
+        </div>
+      </article>
+    </div>
+    <div class="pg-ges-table"><div class="tbl" data-reveal>
+  <table>
+<caption>Techniniai duomenys</caption><thead><tr><th >Talpa</th><th >Užpildo svoris</th><th >Bendras gesintuvo svoris</th><th >Gesinimo medžiaga</th><th >Gesinimo efektyvumas</th><th >Veikimo trukmė</th><th >Išstūmimo priemonė</th><th class="num">Kaina</th></tr></thead>    <tbody>
+<tr><td >6 l</td><td >6 kg</td><td >10,10 kg</td><td >AFFF putos</td><td >8A 113B</td><td >20 sek.</td><td >N2</td><td class="num"><b>nuo 48,55 €</b></td></tr><tr><td >9 l</td><td >9 kg</td><td >14,60 kg</td><td >AFFF putos</td><td >13A 183B</td><td >28 sek.</td><td >N2</td><td class="num"><b>nuo 75,00 €</b></td></tr>    </tbody>
+  </table>
+</div>
+</div>
+    <div class="pg-ges-details">
+      <details class="acc" >
+  <summary>Kaip veikia?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>Visų gesintuvų paleidimo būdas yra panašus: nutraukite plombą ir ištraukite apsauginį kaištį, gesintuvo žarnelę su difuzoriumi nukreipkite į gaisro židinį ir nuspauskite rankenėlę. Purkškite į gaisro židinį, o ne į liepsnas, ir nesistenkite išpurkšti visų putų iš karto - gesindami vandens putų gesintuvu padarykite kelių sekundžių pertrauką, kad pamatytumėte, kur gesinti reikia labiausiai. Nepertraukiamas gesintuvo veikimo laikas - apie 20 sekundžių (6 l) arba apie 27-28 sekundes (9 l).</p><p>Gaisrą sukelia trys faktoriai - degioji medžiaga, kaitra ir deguonis. Gaisras užgesinamas pašalinus nors vieną iš trijų komponentų. Vandens putų gesintuvo pagrindas - AFFF putos, kurių užpurškus ant gaisro židinio akimirksniu susidaro vandens plėvelė, atskirianti deguonį ir blokuojanti pakartotinį užsidegimą.</p></div>
+</details>
+      <details class="acc" >
+  <summary>Kodėl verta rinktis vandens putų gesintuvą?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>Vandens putų gesintuvas ReinoldMax - tinkamiausias gesintuvas Jūsų namams. Klientų patogumui gaminami dviejų tipų vandens putų gesintuvai, kurie skiriasi veikimo temperatūros ribomis. Šildomoms patalpoms rekomenduojame vandens putų gesintuvą, veikiantį nuo +5°C iki +60°C. Siekiant apsaugoti nešildomas patalpas siūlome specialų vandens putų gesintuvą ReinoldMax, veikiantį nuo -20°C iki +60°C.</p><p>Sudėtyje nėra toksinių medžiagų, todėl idealiai tinka naudoti viduje. Šio tipo gesintuvai ne tik efektyviai numalšina gaisrą AFFF gesinimo putų dėka, bet yra puikūs impregnatoriai, užkertantys kelią pakartotiniam gaisrui. Purškimo srovė 4-5 metrai leis Jums iš saugaus atstumo efektyviai sutramdyti ugnį.</p><p>Apipurškus gaisro nepaliestas sienas, grindis, užuolaidas ar baldus, tiesiog nuvalykite putas ir leiskite išdžiūti. Jeigu gaisras nepalietė Jūsų daiktų, putos jiems nepakenks - to negalima pasakyti apie miltelinius gesintuvus. Vandens putų gesintuvai yra populiariausi gesintuvai Vokietijoje ir Prancūzijoje.</p><p>Po panaudojimo iškart priduokite gesintuvą naujam pripildymui. Stebėkite, kad slėgmačio rodyklė būtų žaliame fone.</p></div>
+</details>
+      <details class="acc" >
+  <summary>Kur naudoti?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>Vandens putų gesintuvas nekenkia kvėpavimo takams, tad siūlome jį naudoti uždarose patalpose, kur didelė žmonių, o ypač vaikų, koncentracija: mokyklose, darželiuose, viešbučiuose, ligoninėse, poliklinikose, privačiuose namuose, biuruose. Vandens putų gesintuvu ReinoldMax galite gesinti įsiliepsnojusius veikiančius elektros prietaisus.</p><p>Kadangi gesintuvų ReinoldMax 6 l ir 9 l galimos veikimo temperatūros ribos siekia -20°C, ūkininkams siūlome vandens putų gesintuvą naudoti sandėliuose, lentpjūvėse bei žemės ūkio technikoje. Idealiai tinka degiems skysčiams gesinti (B klasės gaisrai), tad rekomenduojame šį gesintuvą cheminių medžiagų šildomiems ir nešildomiems sandėliams, degalinėms.</p></div>
+</details>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tint" id="tipai">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Kaip pasirinkti</div>
+      <h2>Trys gesintuvų tipai</h2>
+      <p class="lead">Milteliniai, vandens putų ir angliarūgštės: kuo jie skiriasi ir kokių klasių gaisrams tinka.</p>
+    </div>
+    <div class="pg-ges-types">
+      <div class="pg-ges-type" data-reveal style="--i:0">
+        <span class="num">01</span>
+        <h3>Miltelių gesintuvas</h3>
+        <p>Universali ugnies gesinimo priemonė, tinkanti gesinti A, B, C, D klasės gaisrus (priklausomai nuo miltelių rūšies). Taip pat juo galima gesinti elektros įrenginius. Miltelinis gesintuvas chemiškai stabdo degimą. Šie gesintuvai efektyviai gesina ne tik A, B bei C klasių gaisrus, bet tinka gesinti ir neišjungtus elektros prietaisus, todėl juos galima vadinti universaliaisiais gesintuvais, galinčiais puikiai padėti apsisaugoti nuo gaisro jūsų namuose.</p>
+      </div>
+      <div class="pg-ges-type" data-reveal style="--i:1">
+        <span class="num">02</span>
+        <h3>Vandens putų gesintuvas</h3>
+        <p>Pagrindinė gesinimo medžiaga - putos, t. y. oro, vandens ir putokšlio (putodario) mišinys. Tinka gesinti A klasės (degant kietoms medžiagoms susidaro įkaitusios anglys) ir B klasės (dega degūs skysčiai ar medžiagos, kurios degdamos skystėja) gaisrus. Tradiciniu vandens putų gesintuvu negalima gesinti dujų ir elektros įrenginių, jį būtina laikyti šildomose patalpose.</p>
+      </div>
+      <div class="pg-ges-type" data-reveal style="--i:2">
+        <span class="num">03</span>
+        <h3>Angliarūgštės gesintuvas</h3>
+        <p>Pagrindinė gesinimo medžiaga - anglies dioksidas. Gesina B ir C klasės (dega degios dujos) gaisrus, tinka elektros įrenginių gesinimui. Mažai veiksmingas gesinant A ir D klasės (dega degūs metalai) gaisrus. Gesintuvai su angliarūgštės užpildu rekomenduojami elektros gaisrams gesinti (kompiuterių, jungiklių, garso įrangos, įvairių mechanizmų gaisrams). Gesinimo medžiaga pilnai išsisklaido ore ir nepalieka jokių pėdsakų. Šio tipo gesintuvai taip pat gali būti naudojami B klasės gaisrams - degiems skysčiams arba skystėjančioms medžiagoms (benzinui, naftos produktams, riebalams, lakams, dervai, vaškui, eteriui, alkoholiui ir kt.) gesinti. Rekomenduojama papildomai turėti vandens putų arba miltelinius gesintuvus, kurie užtikrintų apsaugą nuo A klasės gaisrų.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec pg-ges-cat" id="katalogas">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2>Katalogas ir kainos</h2>
+      <p class="lead">5 pogrupiai, 16 pozicijų. Kortelėse pateikiami pagrindiniai duomenys, išsamūs aprašymai išskleidžiami po kiekvienu pogrupiu.</p>
+    </div>
+    <div class="doc">
+      <aside class="doc-nav" data-reveal>
+        <ul>
+<li><a href="#milteliniai">Milteliniai gesintuvai</a></li><li><a href="#angliarugstiniai">Angliarūgštiniai gesintuvai</a></li><li><a href="#vandens-putu">Vandens putų gesintuvai</a></li><li><a href="#automatiniai">Automatiniai gesintuvai</a></li><li><a href="#priedai">Priedai</a></li>        </ul>
+        <div class="side-card">
+          <strong>Didesnis kiekis?</strong>
+          <span>Kainoraštyje nurodytos mažmeninės kainos. Didesniam kiekiui paruošime atskirą pasiūlymą.</span>
+          <a class="link" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a>
+          <a class="link" href="mailto:info@geslita.lt"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>info@geslita.lt</a>
+        </div>
+      </aside>
+      <div class="doc-body">
+        <div class="doc-sec" id="milteliniai">
+          <h3>Milteliniai gesintuvai</h3>
+          <p class="intro">Milteliniai gesintuvai ReinoldMax, užpildyti gesinimo milteliais monoamonio fosfato pagrindu, tinka visų tipų gaisrams gesinti: A klasės (mediena, popierius, guma, plastmasė, tekstilė), B klasės (benzinas, spiritas, lakas, tepalai) ir C klasės (degančios dujos). Tinka gesinti elektros įrenginius su iki 1 000 V įtampa, veikia esant temperatūrai nuo -30°C iki +60°C.</p>
+          <div class="prod-grid">
+<div class="cell" style="--i:0"><article class="prod" data-reveal data-name="Miltelinis gesintuvas MG-2 MG-2">
+  <figure><img src="assets/img/katalogas/reinoldmax-gesintuvai--2kg.jpg" alt="Miltelinis gesintuvas MG-2" loading="lazy"></figure>
+  <div class="body">
+    <h3>Miltelinis gesintuvas MG-2</h3>
+<div class="small muted">MG-2</div><ul class="specs"><li>Gesinimo medžiagos kiekis: 2 kg</li><li>Gesinimo potencialas: 13A, 89B, C</li><li>Gesintuvo veikimo laikas: 6 sek.</li><li>Elektros įrenginiai: tinka gesinti iki 1 000 V įtampos</li><li>Veikimo temperatūra: nuo -30°C</li></ul><div class="price"><small>Kaina</small>19,27 €</div>  </div>
+</article></div><div class="cell" style="--i:1"><article class="prod" data-reveal data-name="Miltelinis gesintuvas MG-4 MG-4">
+  <figure><img src="assets/img/katalogas/reinoldmax-gesintuvai--4kg.jpg" alt="Miltelinis gesintuvas MG-4" loading="lazy"></figure>
+  <div class="body">
+    <h3>Miltelinis gesintuvas MG-4</h3>
+<div class="small muted">MG-4</div><ul class="specs"><li>Gesinimo medžiagos kiekis: 4 kg</li><li>Gesinimo potencialas: 21A, 113B, C</li><li>Gesintuvo veikimo laikas: 15 sek.</li><li>Elektros įrenginiai: tinka gesinti iki 1 000 V įtampos</li><li>Veikimo temperatūra: nuo -30°C</li></ul><div class="price"><small>Kaina</small>26,28 €</div>  </div>
+</article></div><div class="cell" style="--i:2"><article class="prod" data-reveal data-name="Miltelinis gesintuvas MG-6 MG-6">
+  <figure><img src="assets/img/katalogas/reinoldmax-gesintuvai--6kg.jpg" alt="Miltelinis gesintuvas MG-6" loading="lazy"></figure>
+  <div class="body">
+    <h3>Miltelinis gesintuvas MG-6</h3>
+<div class="small muted">MG-6</div><ul class="specs"><li>Gesinimo medžiagos kiekis: 6 kg</li><li>Gesinimo potencialas: 27A, 183B, C</li><li>Gesintuvo veikimo laikas: 20 sek.</li><li>Elektros įrenginiai: tinka gesinti iki 1 000 V įtampos</li><li>Veikimo temperatūra: nuo -30°C</li></ul><div class="price"><small>Kaina</small>28,74 €</div>  </div>
+</article></div><div class="cell" style="--i:0"><article class="prod" data-reveal data-name="Miltelinis gesintuvas MG-12 MG-12">
+  <figure><img src="assets/img/katalogas/gesintuvai--12kg.jpg" alt="Miltelinis gesintuvas MG-12" loading="lazy"></figure>
+  <div class="body">
+    <h3>Miltelinis gesintuvas MG-12</h3>
+<div class="small muted">MG-12</div><ul class="specs"><li>Gesinimo medžiagos kiekis: 12 kg</li><li>Gesinimo potencialas: 43A, 233B, C</li></ul><div class="price"><small>Kaina</small>56,07 €</div>  </div>
+</article></div><div class="cell" style="--i:1"><article class="prod" data-reveal data-name="Miltelinis gesintuvas MG-25 MG-25">
+  <figure><img src="assets/img/katalogas/reinoldmax-gesintuvai--25kg.jpg" alt="Miltelinis gesintuvas MG-25" loading="lazy"></figure>
+  <div class="body">
+    <h3>Miltelinis gesintuvas MG-25</h3>
+<div class="small muted">MG-25</div><ul class="specs"><li>Gesinimo medžiagos kiekis: 25 kg</li><li>Gesinimo potencialas: 55A, 233B, C</li><li>Elektros įrenginiai: leidžiama gesinti iki 1 000 V įtampos</li><li>Veikimo temperatūra: nuo -30°C iki +60°C</li></ul><div class="price"><small>Kaina</small>220,00 €</div>  </div>
+</article></div><div class="cell" style="--i:2"><article class="prod" data-reveal data-name="Miltelinis gesintuvas MG-50 MG-50">
+  <figure><img src="assets/img/katalogas/gesintuvai--mg-50.jpeg" alt="Miltelinis gesintuvas MG-50" loading="lazy"></figure>
+  <div class="body">
+    <h3>Miltelinis gesintuvas MG-50</h3>
+<div class="small muted">MG-50</div><ul class="specs"><li>Elektros įrenginiai: leidžiama gesinti iki 1 000 V įtampos</li><li>Veikimo temperatūra: nuo -30°C iki +60°C</li></ul><div class="price"><small>Kaina</small>370,00 €</div>  </div>
+</article></div>          </div>
+          <div class="pg-ges-more" data-reveal>
+            <details class="acc" >
+  <summary>Plačiau: Miltelinis gesintuvas MG-2<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p><strong><span class="ltx">Automobilinis gesintuvas su patogiu tvirtinimo laikikliu. Pagal Lietuvos įstatymus kiekvienas vairuotojas privalo turėti 2 kg gesintuvą savo transporto priemonėje.</span></strong></p><h4>Techniniai duomenys</h4><ul><li>Gesinimo medžiagos kiekis: 2 kg</li><li>Gesinimo potencialas: 13A, 89B, C</li><li>Gesintuvo veikimo laikas: 6 sek.</li><li>Elektros įrenginiai: tinka gesinti iki 1 000 V įtampos</li><li>Veikimo temperatūra: nuo -30°C</li><li>Atitiktis: LST EN 3-6:1999/A1:1999 ir LST EN 3-7:2006</li></ul><h4>Aprašymas</h4><p>Automobilinis gesintuvas ReinoldMax, užpildytas gesinimo milteliais monoamonio fosfato pagrindu, tinka visų tipų gaisrams gesinti. A gaisrų klasė - dažniausiai pasitaikantys gaisrai, kai dega įprastos medžiagos: mediena, popierius, guma, plastmasė ar tekstilė. B gaisrų klasė - degantys skysčiai: benzinas, spiritas, lakas ar tepalai. C gaisrų klasė - degančios dujos: vandenilis, acetilenas, angliavandeniliai. Tinka gesinti elektros įrenginius su iki 1 000 V įtampa.</p><h4>Kaip veikia?</h4><p>Visų gesintuvų paleidimo būdas yra panašus: nutraukite plombą ir ištraukite apsauginį kaištį, difuzorių nukreipkite į gaisro židinį ir nuspauskite rankenėlę. Gesindami milteliniu gesintuvu ReinoldMax nedarykite pertraukų, o visą turinį išpurškite į gaisro židinį vienu rankenėlės nuspaudimu. Gesintuvo veikimo laikas tik 6 sekundės, todėl gesinkite gaisro židinį, o ne liepsnas.</p><p>Gaisrą sukelia trys faktoriai - degioji medžiaga, kaitra ir deguonis. Gaisras užgesinamas pašalinus nors vieną iš trijų komponentų. Miltelinio gesintuvo ReinoldMax pagrindas - ABC gesinimo milteliai, kurių užpurškus ant gaisro židinio liepsna „uždusinama“ ir taip atskiriamas deguonis. Jeigu gaisras didesnis, gesinkite vienu metu keliais ReinoldMax gesintuvais.</p><h4>Kodėl verta rinktis miltelinį gesintuvą?</h4><p><span class="ltx">Pagal Lietuvos įstatymus kiekvienas vairuotojas privalo turėti 2 kg gesintuvą savo transporto priemonėje. Miltelinis gesintuvas ReinoldMax dėl savo aukšto veiksmingumo yra populiariausias automobilinis gesintuvas <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p><p>Milteliniai gesintuvai efektyviai numalšina visų tipų gaisrus ir veikia minusinėje temperatūroje nuo -30°C. Gesindami gaisrą automobilio viduje nepamirškite, kad visi milteliniai gesintuvai sudaro toksinį dulkių debesį, tad pasistenkite neįkvėpti miltelių, o po gesinimo gerai išvėdinkite automobilio vidų ir nusiplaukite rankas. Gesinimo milteliai netirpsta vandenyje, todėl salono vidų patartina gerai išsiurbti, o turinį iškart pašalinti. ReinoldMax 2 kg gesintuvas turi patogų tvirtinimo laikiklį, tad UAB „Geslita“ pataria gesintuvą gerai pritvirtinti automobilyje, kad išvengtumėte netikėto miltelių išsipurškimo stabdant.</p><p>Po gesinimo praėjus kelioms minutėms gali būti, kad gesinimo milteliai užkimš purkštuką, todėl net jeigu neišpurškėte viso turinio, nedelsdami priduokite gesintuvą naujam pripildymui. Stebėkite, kad slėgmačio rodyklė būtų žaliame fone.</p><h4>Kur naudoti?</h4><p>Miltelinis gesintuvas ReinoldMax 2 kg idealiai tinka automobiliniams gaisrams malšinti - didžioji dauguma vairuotojų jau pasirinko ReinoldMax savo transporto priemonei apsaugoti. Kaip papildomą gaisrų gesinimo priemonę rekomenduojame ReinoldMax 1000 ml, kuri akimirksniu užgesina visų tipų gaisrus, veikia minusinėje temperatūroje bei yra daugkartinio naudojimo. Jei tektų malšinti gaisrą lauke, gesinkite tik pavėjui.</p><p>Miltelių gesintuvas ReinoldMax 2 kg atitinka LST EN 3-6:1999/A1:1999 ir LST EN 3-7:2006 privalomuosius reikalavimus.</p></div>
+</details>
+            <details class="acc" >
+  <summary>Plačiau: Miltelinis gesintuvas MG-4<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p><strong>Rekomenduojamas visuomeninės paskirties patalpoms, statomiems pastatams, sandėliams, autobusams, krovininiams automobiliams, kombainams, garažams.</strong></p><h4>Techniniai duomenys</h4><ul><li>Gesinimo medžiagos kiekis: 4 kg</li><li>Gesinimo potencialas: 21A, 113B, C</li><li>Gesintuvo veikimo laikas: 15 sek.</li><li>Elektros įrenginiai: tinka gesinti iki 1 000 V įtampos</li><li>Veikimo temperatūra: nuo -30°C</li><li>Atitiktis: LST EN 3-6:1999/A1:1999 ir LST EN 3-7:2006</li></ul><h4>Aprašymas</h4><p>Miltelinis gesintuvas ReinoldMax, užpildytas gesinimo milteliais monoamonio fosfato pagrindu, tinka visų tipų gaisrams gesinti. A gaisrų klasė - dažniausiai pasitaikantys gaisrai, kai dega įprastos medžiagos: mediena, popierius, guma, plastmasė ar tekstilė. B gaisrų klasė - degantys skysčiai: benzinas, spiritas, lakas ar tepalai. C gaisrų klasė - degančios dujos: vandenilis, acetilenas, angliavandeniliai. Tinka gesinti elektros įrenginius su iki 1 000 V įtampa.</p><h4>Kaip veikia?</h4><p>Visų gesintuvų paleidimo būdas yra panašus: nutraukite plombą ir ištraukite apsauginį kaištį, gesintuvo žarnelę su difuzoriumi nukreipkite į gaisro židinį ir nuspauskite rankenėlę. Gesindami milteliniu gesintuvu ReinoldMax nedarykite pertraukų, o visą turinį išpurškite į gaisro židinį vienu rankenėlės nuspaudimu. Gesintuvo veikimo laikas 15 sekundžių, todėl esant rimtam gaisrui gesinkite gaisro židinį, o ne liepsnas.</p><p>Gaisrą sukelia trys faktoriai - degioji medžiaga, kaitra ir deguonis. Gaisras užgesinamas pašalinus nors vieną iš trijų komponentų. Miltelinio gesintuvo ReinoldMax pagrindas - ABC gesinimo milteliai, kurių užpurškus ant gaisro židinio liepsna „uždusinama“ ir taip atskiriamas deguonis. Jeigu gaisras didesnis, gesinkite vienu metu keliais ReinoldMax gesintuvais.</p><h4>Kodėl verta rinktis miltelinį gesintuvą?</h4><p><span class="ltx">Miltelinis gesintuvas ReinoldMax dėl aukšto veiksmingumo ir teisingos kainos yra populiariausias gesintuvas <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>. Šio tipo gesintuvai efektyviai numalšina visų tipų gaisrus ir veikia minusinėje temperatūroje nuo -30°C. Gesindami gaisrą patalpoje ar sunkiasvorės transporto priemonės viduje žinokite, kad visi milteliniai gesintuvai sudaro toksinį dulkių debesį, tad pasistenkite neįkvėpti miltelių ir po gesinimo gerai išvėdinkite patalpas. Gesinimo milteliai netirpsta vandenyje, todėl patartina juos gerai susiurbti dulkių siurbliu, o turinį iškart pašalinti.</span></p><p>Po gesinimo praėjus kelioms minutėms gali būti, kad gesinimo milteliai užkimš purkštuką, todėl net jeigu neišpurškėte viso turinio, nedelsdami priduokite gesintuvą naujam pripildymui. Stebėkite, kad slėgmačio rodyklė būtų žaliame fone.</p><p>Kartu su ReinoldMax 4 kg gesintuvu rekomenduojame įsigyti patvarų metalinį laikiklį, skirtą tvirtinti vilkikuose, autobusuose, troleibusuose, traktoriuose ar kombainuose. Laikiklio apačioje ir viršuje įmontuotos guminės atramėlės, kurios užtikrina gesintuvo stabilumą autotransporto priemonėje. Gesintuvas fiksuojamas dviem tvirtais diržais, kurie susegami reguliuojamomis metalinėmis sagtelėmis. UAB „Geslita“ pataria gesintuvą gerai pritvirtinti, kad išvengtumėte netikėto miltelių išsipurškimo stabdant ar sužeidimų.</p><h4>Kur naudoti?</h4><p>Miltelinis gesintuvas ReinoldMax 4 kg rekomenduojamas naudoti visuomeninės paskirties patalpose, statomų pastatų viduje, šildomuose ir nešildomuose sandėliuose, autobusuose, krovininiuose automobiliuose, kombainuose, garažuose.</p><p>Miltelių gesintuvas ReinoldMax 4 kg atitinka LST EN 3-6:1999/A1:1999 ir LST EN 3-7:2006 privalomuosius reikalavimus.</p></div>
+</details>
+            <details class="acc" >
+  <summary>Plačiau: Miltelinis gesintuvas MG-6<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p><strong>Gesinimo bandymais įrodyta, kad ReinoldMax 6 kg užgesina 9 kg miltelinio gesintuvo gaisro židinius.</strong></p><h4>Techniniai duomenys</h4><ul><li>Gesinimo medžiagos kiekis: 6 kg</li><li>Gesinimo potencialas: 27A, 183B, C</li><li>Gesintuvo veikimo laikas: 20 sek.</li><li>Elektros įrenginiai: tinka gesinti iki 1 000 V įtampos</li><li>Veikimo temperatūra: nuo -30°C</li><li>Atitiktis: LST EN 3-6:1999/A1:1999 ir LST EN 3-7:2006</li></ul><h4>Aprašymas</h4><p>Miltelinis gesintuvas ReinoldMax, užpildytas gesinimo milteliais monoamonio fosfato pagrindu, tinka visų tipų gaisrams gesinti. A gaisrų klasė - dažniausiai pasitaikantys gaisrai, kai dega įprastos medžiagos: mediena, popierius, guma, plastmasė ar tekstilė. B gaisrų klasė - degantys skysčiai: benzinas, spiritas, lakas ar tepalai. C gaisrų klasė - degančios dujos: vandenilis, acetilenas, angliavandeniliai. Tinka gesinti elektros įrenginius su iki 1 000 V įtampa.</p><h4>Kaip veikia?</h4><p>Visų gesintuvų paleidimo būdas yra panašus: nutraukite plombą ir ištraukite apsauginį kaištį, gesintuvo žarnelę su difuzoriumi nukreipkite į gaisro židinį ir nuspauskite rankenėlę. Gesindami milteliniu gesintuvu ReinoldMax nedarykite pertraukų, o visą turinį išpurškite į gaisro židinį vienu rankenėlės nuspaudimu. Gesinimo bandymais įrodyta, kad ReinoldMax 6 kg užgesina 9 kg miltelinio gesintuvo gaisro židinius. Gesintuvo veikimo laikas 20 sekundžių. Esant rimtam gaisrui gesinkite gaisro židinį, o ne liepsnas.</p><p>Po gesinimo praėjus kelioms minutėms gali būti, kad gesinimo milteliai užkimš purkštuką, todėl net jeigu neišpurškėte viso turinio, nedelsdami priduokite gesintuvą naujam pripildymui. Stebėkite, kad slėgmačio rodyklė būtų žaliame fone.</p><p>Gaisrą sukelia trys faktoriai - degioji medžiaga, kaitra ir deguonis. Gaisras užgesinamas pašalinus nors vieną iš trijų komponentų. Miltelinio gesintuvo ReinoldMax pagrindas - ABC gesinimo milteliai, kurių užpurškus ant gaisro židinio liepsna „uždusinama“ ir taip atskiriamas deguonis. Jeigu gaisras didesnis, gesinkite vienu metu keliais ReinoldMax gesintuvais.</p><h4>Kodėl verta rinktis miltelinį gesintuvą?</h4><p><span class="ltx">Miltelinis gesintuvas ReinoldMax dėl aukšto veiksmingumo ir teisingos kainos yra populiariausias gesintuvas <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>. Šio tipo gesintuvai efektyviai numalšina visų tipų gaisrus ir veikia minusinėje temperatūroje nuo -30°C. Gesindami gaisrą patalpoje ar sunkiasvorės transporto priemonės viduje žinokite, kad visi milteliniai gesintuvai sudaro toksinį dulkių debesį, tad pasistenkite neįkvėpti miltelių ir po gesinimo gerai išvėdinkite patalpas. Gesinimo milteliai netirpsta vandenyje, todėl patartina juos gerai susiurbti dulkių siurbliu, o turinį iškart pašalinti.</span></p><p>Kartu su ReinoldMax 6 kg gesintuvu rekomenduojame įsigyti patvarų metalinį laikiklį, skirtą tvirtinti vilkikuose, autobusuose, troleibusuose, traktoriuose ar kombainuose. Laikiklio apačioje ir viršuje įmontuotos guminės atramėlės, kurios užtikrina gesintuvo stabilumą autotransporto priemonėje. Gesintuvas fiksuojamas dviem tvirtais diržais, kurie susegami reguliuojamomis metalinėmis sagtelėmis. UAB „Geslita“ pataria gesintuvą gerai pritvirtinti, kad išvengtumėte rimtų sužeidimų ar netikėto miltelių išsipurškimo stabdant.</p><h4>Kur naudoti?</h4><p>Miltelinis gesintuvas ReinoldMax 6 kg rekomenduojamas naudoti visuomeninės paskirties patalpose, statomų pastatų viduje, šildomuose ir nešildomuose sandėliuose, autobusuose, krovininiuose automobiliuose, kombainuose, garažuose.</p><p>Miltelių gesintuvas ReinoldMax 6 kg atitinka LST EN 3-6:1999/A1:1999 ir LST EN 3-7:2006 privalomuosius reikalavimus.</p></div>
+</details>
+            <details class="acc" >
+  <summary>Plačiau: Miltelinis gesintuvas MG-25<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><h4>Aprašymas</h4><p>Milteliniai gesintuvai ReinoldMax skirti kietoms degioms medžiagoms, dažniausiai organinės prigimties, kurių degimo metu susidaro žarijos (A klasės gaisrams), degiems skysčiams ar medžiagoms, turinčioms savybę lydytis (B klasės gaisrams), ir dujoms (C klasės gaisrams) gesinti. Leidžiama gesinti elektros įrenginius, kurių įtampa ne didesnė kaip 1 000 voltų. Gesintuvai naudojami, kai aplinkos temperatūra ne žemesnė kaip -30°C ir ne aukštesnė kaip +60°C.</p></div>
+</details>
+            <details class="acc" >
+  <summary>Plačiau: Miltelinis gesintuvas MG-50<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><h4>Aprašymas</h4><p>Milteliniai gesintuvai ReinoldMax skirti kietoms degioms medžiagoms, dažniausiai organinės prigimties, kurių degimo metu susidaro žarijos (A klasės gaisrams), degiems skysčiams ar medžiagoms, turinčioms savybę lydytis (B klasės gaisrams), ir dujoms (C klasės gaisrams) gesinti. Leidžiama gesinti elektros įrenginius, kurių įtampa ne didesnė kaip 1 000 voltų. Gesintuvai naudojami, kai aplinkos temperatūra ne žemesnė kaip -30°C ir ne aukštesnė kaip +60°C.</p></div>
+</details>
+          </div>
+        </div>
+        <div class="doc-sec" id="angliarugstiniai">
+          <h3>Angliarūgštiniai gesintuvai</h3>
+          <p class="intro">Gesintuvai su angliarūgštės (CO₂) užpildu rekomenduojami elektros gaisrams gesinti - kompiuterių, jungiklių, garso įrangos, įvairių mechanizmų gaisrams. Gesinimo medžiaga pilnai išsisklaido ore ir nepalieka jokių pėdsakų. Šio tipo gesintuvai taip pat gali būti naudojami B klasės gaisrams - degiems skysčiams arba skystėjančioms medžiagoms (benzinui, naftos produktams, riebalams, lakams, dervai, vaškui, eteriui, alkoholiui ir kt.) gesinti. Rekomenduojama papildomai turėti vandens putų arba miltelinį gesintuvą, kuris užtikrintų apsaugą nuo A klasės gaisrų. Siūlome dviejų dydžių angliarūgštės gesintuvus: 2 kg ir 5 kg.</p>
+          <div class="prod-grid">
+<div class="cell" style="--i:0"><article class="prod" data-reveal data-name="Angliarūgštinis gesintuvas AG-5 AG-5">
+  <figure><img src="assets/img/katalogas/gesintuvai--ag5kg-reinoldmax.jpg" alt="Angliarūgštinis gesintuvas AG-5" loading="lazy"></figure>
+  <div class="body">
+    <h3>Angliarūgštinis gesintuvas AG-5</h3>
+<div class="small muted">AG-5</div><ul class="specs"><li>Gesinimo medžiagos kiekis: 5 kg</li><li>Gesinimo potencialas: 55B</li></ul><div class="price"><small>Kaina</small>79,00 €</div>  </div>
+</article></div><div class="cell" style="--i:1"><article class="prod" data-reveal data-name="Angliarūgštinis gesintuvas AG-2 AG-2">
+  <figure><img src="assets/img/katalogas/gesintuvai--ag2kg-reinoldmax.jpg" alt="Angliarūgštinis gesintuvas AG-2" loading="lazy"></figure>
+  <div class="body">
+    <h3>Angliarūgštinis gesintuvas AG-2</h3>
+<div class="small muted">AG-2</div><ul class="specs"><li>Gesinimo medžiagos kiekis: 2 kg</li><li>Gesinimo potencialas: 34B</li></ul><div class="price"><small>Kaina</small>58,00 €</div>  </div>
+</article></div>          </div>
+          <ul class="pg-ges-notes" data-reveal><li><b>AG-5, AG-2:</b> Elektros įrenginių ir B klasės gaisrams - nepalieka pėdsakų.</li></ul>
+        </div>
+        <div class="doc-sec" id="vandens-putu">
+          <h3>Vandens putų gesintuvai</h3>
+          <p class="intro"><span class="ltx">Vandens putų gesintuvų pagrindinė gesinimo medžiaga - putos, t. y. oro, vandens ir putokšlio mišinys. Siūlome VPG-2 riebalų (F klasės) gaisrams ir naujos kartos <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span> pagamintus 6 l bei 9 l AFFF putų gesintuvus, kurie tinka ir elektros prietaisams gesinti.</span></p>
+          <div class="prod-grid">
+<div class="cell" style="--i:0"><article class="prod" data-reveal data-name="Vandens putų gesintuvas VPG-2 (F klasės gaisrams) VPG-2">
+  <figure><img src="assets/img/katalogas/gesintuvai--vpg-2-f.jpg" alt="Vandens putų gesintuvas VPG-2 (F klasės gaisrams)" loading="lazy"></figure>
+  <div class="body">
+    <h3>Vandens putų gesintuvas VPG-2 (F klasės gaisrams)</h3>
+<div class="small muted">VPG-2</div><ul class="specs"><li>Talpa: 2 dm³</li><li>Paskirtis: riebalams gesinti (F klasės gaisrai)</li><li>Gesinimo potencialas: 5A, 34B, 25F</li></ul><div class="price"><small>Kaina</small>87,00 €</div>  </div>
+</article></div><div class="cell" style="--i:1"><article class="prod" data-reveal data-name="Naujos kartos 6 l vandens putų gesintuvas (-20°C…+60°C) 6 l, -20°C…+60°C">
+  <figure><img src="assets/img/katalogas/vpg--dsc9857.jpg" alt="Naujos kartos 6 l vandens putų gesintuvas (-20°C…+60°C)" loading="lazy"></figure>
+  <div class="body">
+    <h3>Naujos kartos 6 l vandens putų gesintuvas (-20°C…+60°C)</h3>
+<div class="small muted">6 l, -20°C…+60°C</div><ul class="specs"><li>Gesintuvo modelis: vandens putų gesintuvas 6 kg</li><li>Užpildo svoris: 6 kg</li><li>Bendras gesintuvo svoris: 10,10 kg</li><li>Temperatūros ribos: nuo -20°C iki +60°C</li><li>Gesinimo medžiaga: AFFF putos</li></ul><div class="price"><small>Kaina</small>58,55 €</div>  </div>
+</article></div><div class="cell" style="--i:2"><article class="prod" data-reveal data-name="Naujos kartos 6 l vandens putų gesintuvas (+5°C…+60°C) 6 l, +5°C…+60°C">
+  <figure><img src="assets/img/katalogas/vpg--dsc9858.jpg" alt="Naujos kartos 6 l vandens putų gesintuvas (+5°C…+60°C)" loading="lazy"></figure>
+  <div class="body">
+    <h3>Naujos kartos 6 l vandens putų gesintuvas (+5°C…+60°C)</h3>
+<div class="small muted">6 l, +5°C…+60°C</div><ul class="specs"><li>Gesintuvo modelis: vandens putų gesintuvas 6 kg</li><li>Užpildo svoris: 6 kg</li><li>Bendras gesintuvo svoris: 10,10 kg</li><li>Temperatūros ribos: nuo +5°C iki +60°C</li><li>Gesinimo medžiaga: AFFF putos</li></ul><div class="price"><small>Kaina</small>48,55 €</div>  </div>
+</article></div><div class="cell" style="--i:0"><article class="prod" data-reveal data-name="Naujos kartos 9 l vandens putų gesintuvas (-20°C…+60°C) 9 l, -20°C…+60°C">
+  <figure><img src="assets/img/katalogas/vpg--dsc9857.jpg" alt="Naujos kartos 9 l vandens putų gesintuvas (-20°C…+60°C)" loading="lazy"></figure>
+  <div class="body">
+    <h3>Naujos kartos 9 l vandens putų gesintuvas (-20°C…+60°C)</h3>
+<div class="small muted">9 l, -20°C…+60°C</div><ul class="specs"><li>Gesintuvo modelis: vandens putų gesintuvas 9 kg</li><li>Užpildo svoris: 9 kg</li><li>Bendras gesintuvo svoris: 14,60 kg</li><li>Temperatūros ribos: nuo -20°C iki +60°C</li><li>Gesinimo medžiaga: AFFF putos</li></ul><div class="price"><small>Kaina</small>75,00 €</div>  </div>
+</article></div><div class="cell" style="--i:1"><article class="prod" data-reveal data-name="Naujos kartos 9 l vandens putų gesintuvas (+5°C…+60°C) 9 l, +5°C…+60°C">
+  <figure><img src="assets/img/katalogas/vpg--dsc9858.jpg" alt="Naujos kartos 9 l vandens putų gesintuvas (+5°C…+60°C)" loading="lazy"></figure>
+  <div class="body">
+    <h3>Naujos kartos 9 l vandens putų gesintuvas (+5°C…+60°C)</h3>
+<div class="small muted">9 l, +5°C…+60°C</div><ul class="specs"><li>Gesintuvo modelis: vandens putų gesintuvas 9 kg</li><li>Užpildo svoris: 9 kg</li><li>Bendras gesintuvo svoris: 14,60 kg</li><li>Temperatūros ribos: nuo +5°C iki +60°C</li><li>Gesinimo medžiaga: AFFF putos</li></ul><div class="price"><small>Kaina</small>80,00 €</div>  </div>
+</article></div>          </div>
+          <ul class="pg-ges-notes" data-reveal><li><b>VPG-2:</b> Skirtas riebalų (F klasės) gaisrams gesinti.</li><li><b>6 l, -20°C…+60°C:</b><span class="ltx"> Nešildomoms patalpoms. Pagaminta <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>, atitinka LST EN 3-7:2004.</span></li><li><b>6 l, +5°C…+60°C:</b><span class="ltx"> Šildomoms patalpoms. Pagaminta <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>, atitinka LST EN 3-7:2004.</span></li><li><b>9 l, -20°C…+60°C:</b><span class="ltx"> Didžiausios talpos naujos kartos gesintuvas nešildomoms patalpoms. Pagaminta <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>, atitinka LST EN 3-7:2004.</span></li><li><b>9 l, +5°C…+60°C:</b><span class="ltx"> Didžiausios talpos naujos kartos gesintuvas šildomoms patalpoms. Pagaminta <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>, atitinka LST EN 3-7:2004.</span></li></ul>
+          <div class="pg-ges-more" data-reveal><details class="acc" >
+  <summary>Visi techniniai duomenys: vandens putų gesintuvai<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><div class="pg-ges-specs"><div><h4>Naujos kartos 6 l vandens putų gesintuvas (-20°C…+60°C)</h4><ul><li>Gesintuvo modelis: vandens putų gesintuvas 6 kg</li><li>Užpildo svoris: 6 kg</li><li>Bendras gesintuvo svoris: 10,10 kg</li><li>Temperatūros ribos: nuo -20°C iki +60°C</li><li>Gesinimo medžiaga: AFFF putos</li><li>Gesinimo efektyvumas: 8A 113B</li><li>Veikimo trukmė: 20 sek.</li><li>Išstūmimo priemonė: N2</li></ul></div><div><h4>Naujos kartos 6 l vandens putų gesintuvas (+5°C…+60°C)</h4><ul><li>Gesintuvo modelis: vandens putų gesintuvas 6 kg</li><li>Užpildo svoris: 6 kg</li><li>Bendras gesintuvo svoris: 10,10 kg</li><li>Temperatūros ribos: nuo +5°C iki +60°C</li><li>Gesinimo medžiaga: AFFF putos</li><li>Gesinimo efektyvumas: 8A 113B</li><li>Veikimo trukmė: 20 sek.</li><li>Išstūmimo priemonė: N2</li></ul></div><div><h4>Naujos kartos 9 l vandens putų gesintuvas (-20°C…+60°C)</h4><ul><li>Gesintuvo modelis: vandens putų gesintuvas 9 kg</li><li>Užpildo svoris: 9 kg</li><li>Bendras gesintuvo svoris: 14,60 kg</li><li>Temperatūros ribos: nuo -20°C iki +60°C</li><li>Gesinimo medžiaga: AFFF putos</li><li>Gesinimo efektyvumas: 13A 183B</li><li>Veikimo trukmė: 28 sek.</li><li>Išstūmimo priemonė: N2</li></ul></div><div><h4>Naujos kartos 9 l vandens putų gesintuvas (+5°C…+60°C)</h4><ul><li>Gesintuvo modelis: vandens putų gesintuvas 9 kg</li><li>Užpildo svoris: 9 kg</li><li>Bendras gesintuvo svoris: 14,60 kg</li><li>Temperatūros ribos: nuo +5°C iki +60°C</li><li>Gesinimo medžiaga: AFFF putos</li><li>Gesinimo efektyvumas: 13A 183B</li><li>Veikimo trukmė: 28 sek.</li><li>Išstūmimo priemonė: N2</li></ul></div></div></div>
+</details></div>
+        </div>
+        <div class="doc-sec" id="automatiniai">
+          <h3>Automatiniai gesintuvai</h3>
+          <p class="intro">Automatinis miltelinis gesintuvas 6 kg su ABC gesinimo milteliais. Gesinimo diametras - 3 metrai. Veikimą galite pamatyti vaizdo įraše.</p>
+          <div class="pg-ges-auto">
+            <article class="prod" data-reveal data-name="Automatinis miltelinis gesintuvas 6 kg (ABC) 6 kg ABC">
+  <figure><img src="assets/img/katalogas/dsc9861nm.jpg" alt="Automatinis miltelinis gesintuvas 6 kg (ABC)" loading="lazy"></figure>
+  <div class="body">
+    <h3>Automatinis miltelinis gesintuvas 6 kg (ABC)</h3>
+<div class="small muted">6 kg ABC</div><ul class="specs"><li>Gesinimo medžiagos kiekis: 6 kg</li><li>Gesinimo milteliai: ABC</li><li>Gesinimo diametras: 3 metrai</li><li>Veikimas: automatinis</li></ul><div class="price"><small>Kaina</small>98,47 €</div>  </div>
+</article>
+            <div class="panel" data-reveal style="--i:1">
+              <h4>Veikimo demonstracija</h4>
+              <p>Automatinis ugnies gesintuvas 6 kg - veikimo demonstracija vaizdo įraše.</p>
+              <div class="btn-group"><a class="btn btn-navy" href="https://www.youtube.com/watch?v=GxUl43_NP0Y" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg>Žiūrėti vaizdo įrašą</a></div>
+              <p class="small muted">Vaizdo įrašas atidaromas „YouTube“ svetainėje naujame lange.</p>
+            </div>
+          </div>
+        </div>
+        <div class="doc-sec" id="priedai">
+          <h3>Priedai</h3>
+          <p class="intro">Tvirtinimo laikikliai transporto priemonėms ir papildomos gesinimo priemonės - kainų teiraukitės.</p>
+          <div class="pg-ges-acc">
+            <article class="card" data-reveal style="--i:0" data-name="Metalinis laikiklis gesintuvui (transporto priemonėms) ">
+              <figure><img src="assets/img/geslita/Laikiklis_4_kg_6_kg_Small.jpg" alt="Metalinis laikiklis gesintuvui (transporto priemonėms)" loading="lazy" width="314" height="235"></figure>
+              <div>
+                <h4>Metalinis laikiklis gesintuvui (transporto priemonėms)</h4>
+                <ul class="specs"><li>Tinka: ReinoldMax 4 kg ir 6 kg gesintuvams</li><li>Paskirtis: tvirtinti vilkikuose, autobusuose, troleibusuose, traktoriuose ar kombainuose</li><li>Konstrukcija: guminės atramėlės apačioje ir viršuje, du tvirti diržai su reguliuojamomis metalinėmis sagtelėmis</li></ul>
+<p class="note">Patvarus metalinis laikiklis, kurį rekomenduojame įsigyti kartu su 4 kg ir 6 kg gesintuvais. Guminės atramėlės užtikrina gesintuvo stabilumą autotransporto priemonėje, o du diržai patikimai fiksuoja gesintuvą, kad išvengtumėte netikėto miltelių išsipurškimo stabdant ar sužeidimų.</p>                <div class="price"><small>Kaina</small>teiraukitės</div>
+              </div>
+            </article>
+            <article class="card" data-reveal style="--i:1" data-name="Gesinimo priemonė ReinoldMax 1000 ml 1000 ml">
+              <figure><span class="ic-wrap"><svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></span></figure>
+              <div>
+                <h4>Gesinimo priemonė ReinoldMax 1000 ml</h4>
+<div class="small muted">1000 ml</div>                <ul class="specs"><li>Talpa: 1000 ml</li><li>Naudojimas: daugkartinis</li><li>Veikimo temperatūra: veikia ir minusinėje temperatūroje</li></ul>
+<p class="note">Papildoma gesinimo priemonė automobiliui - akimirksniu užgesina visų tipų gaisrus.</p>                <div class="price"><small>Kaina</small>teiraukitės</div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="notice" data-reveal>Kainoraščiuose nurodytos mažmeninės kainos. Norėdami sužinoti kainą didesniam kiekiui, skambinkite +370 653 99977, +370 607 63109 arba siųskite užklausimą el. paštu info@geslita.lt.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-white" id="patikra">
+  <div class="wrap split rev">
+    <div data-reveal>
+      <h2>Gesintuvą jau turite? Atliekame patikrą nuo 5,26 €</h2>
+      <p class="lead"><span class="ltx">Atliekame visų rūšių ir tipų ugnies gesintuvų patikrą, pildymą ir techninį aptarnavimą visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>. Po panaudojimo gesintuvą priduokite naujam pripildymui.</span></p>
+      <div class="btn-group"><a class="btn btn-navy" href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="paslaugos.html#gesintuvu-patikra">Visos paslaugos ir kainos</a></div>
+    </div>
+    <div class="photo" data-reveal="scale">
+      <img src="assets/img/foto/garazas.jpg" srcset="assets/img/foto/garazas-640.webp 640w, assets/img/foto/garazas-1280.webp 1280w, assets/img/foto/garazas-1920.webp 1920w" sizes="(max-width: 960px) 92vw, 50vw" alt="Specialistė su šalmu ir liemene pildo patikros dokumentus" loading="lazy" width="1880" height="1253">
+      <div class="pin"><span class="num">nuo 5,26 €</span><span class="small">gesintuvo patikra objekte</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight"><div class="wrap"><div class="cta-inline" data-reveal>
+  <div><h2>Reikia pasiūlymo jūsų objektui?</h2><p>Paskambinkite arba parašykite: aptarsime įrangos kiekį, terminus ir paruošime pasiūlymą.</p></div>
+  <div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a></div>
+</div></div></section>
+</main>
+
+<footer class="site-foot">
+  <img class="plan-wm" src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo-geslita-white-s.png" alt="Geslita" width="167" height="50">
+        <p><span class="ltx">20 metų priešgaisrinės saugos patirties. Įrangos priežiūra ir prekyba, darbo saugos priemonės verslui visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+      </div>
+      <div>
+        <h2 class="foot-h">Paslaugos</h2>
+        <ul>
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra</a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai</a></li>
+          <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Prekės ir informacija</h2>
+        <ul>
+          <li><a href="prekes-gesintuvai.html">Gesintuvai</a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai</a></li>
+          <li><a href="prekes-automatika.html">Automatika ir įranga</a></li>
+          <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+          <li><a href="apie-mus.html">Apie mus</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Kontaktai</h2>
+        <ul class="foot-contact">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+37065399977">+370 653 99977</a><br><a href="tel:+37060763109">+370 607 63109</a></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@geslita.lt">info@geslita.lt</a></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Fabijoniškių g. 4A, Vilnius<br><span class="muted">Ne parduotuvė: prieš atvykdami paskambinkite</span></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span>I-V 9:00-18:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2010-2026 UAB „Geslita“. Visos teisės saugomos.</span>
+      <span><a href="kontaktai.html">Kontaktai</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

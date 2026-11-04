@@ -1,0 +1,117 @@
+{
+ "title": "Apie mus",
+ "intro": [
+  "UAB „Geslita“ – priešgaisrinės įrangos priežiūros ir prekybos įmonė, tiekianti ir darbo saugos priemones. Atliekame visų rūšių ir tipų ugnies gesintuvų patikrą, pildymą ir techninį aptarnavimą visoje Lietuvoje, prižiūrime gaisrinį vandentiekį ir gaisrinę signalizaciją, braižome patalpų evakuacinius planus, prižiūrime ir komplektuojame objektų gaisrinį ūkį.",
+  "Prekiaujame gesintuvais, gaisrinio vandentiekio įranga, gaisrinės ir darbo saugos ženklais bei kitomis priešgaisrinėmis prekėmis. Įmonės saugos centras rengia priešgaisrinės ir darbų saugos mokymus, gaisrinės saugos instrukcijas ir darbuotojų saugos ir sveikatos dokumentaciją."
+ ],
+ "services_list": [
+  {
+   "text": "Atliekame visų rūšių ir tipų ugnies gesintuvų patikrą, pildymą ir techninį aptarnavimą visoje Lietuvoje",
+   "slug": "paslaugos/gesintuvu-pildymas-patikra"
+  },
+  {
+   "text": "Atliekame gaisrinių čiaupų patikrą ir gaisrinių čiaupų keitimo darbus",
+   "slug": "paslaugos/gaisrinio-vandentiekio-techninis-aptarnavimas"
+  },
+  {
+   "text": "Išbandome slėgines gaisrines žarnas, jas džioviname, įrišame, perkantuojame",
+   "slug": "paslaugos/gaisrinio-vandentiekio-techninis-aptarnavimas"
+  },
+  {
+   "text": "Braižome patalpų evakuacinius planus, juos rėminame ir laminuojame",
+   "slug": "evakuacijos-planu-schemu-braizymas"
+  },
+  {
+   "text": "Prižiūrime ir komplektuojame objektų gaisrinį ūkį",
+   "slug": null
+  },
+  {
+   "text": "Gaisrinės signalizacijos montavimas ir aptarnavimas",
+   "slug": "gaisrine-signalizacija-patikra-remontas-gaisrines-signalizacijos-irengimas"
+  },
+  {
+   "text": "Automatinių gesinimo sistemų techninė priežiūra",
+   "slug": null
+  },
+  {
+   "text": "Varžų matavimas",
+   "slug": null
+  },
+  {
+   "text": "Dielektrinių priemonių patikra",
+   "slug": "dielektriniu-priemoniu-patikra"
+  },
+  {
+   "text": "Aukštalipių įrangos patikra",
+   "slug": null
+  },
+  {
+   "text": "Logotipų siuvinėjimas ant drabužių (šilkografija)",
+   "slug": null
+  },
+  {
+   "text": "Priešgaisrinės ir darbų saugos mokymai",
+   "slug": "mokymai"
+  }
+ ],
+ "we_sell": [
+  {
+   "text": "Visų rūšių ugnies gesintuvais",
+   "slug": "priesgaisrines-prekes/gesintuvai"
+  },
+  {
+   "text": "Gaisrinio vandentiekio įranga",
+   "slug": "priesgaisrines-prekes/priesgaisrinis-vandentiekis"
+  },
+  {
+   "text": "Gaisrinių čiaupų komplektacijomis (spintelės, žarnos, čiaupai, švirkštai, gaisrinė armatūra)",
+   "slug": "priesgaisrines-prekes/priesgaisrinis-vandentiekis"
+  },
+  {
+   "text": "Gaisrinės ir darbo saugos ženklais",
+   "slug": "priesgaisrines-prekes/saugos-zenklai/draudziamieji-zenklai"
+  },
+  {
+   "text": "Priešgaisriniais dažais, užpildais, priešgaisrinio sandarinimo juostomis, movomis",
+   "slug": null
+  },
+  {
+   "text": "Siurbliais, hidrantais, absorbentais",
+   "slug": null
+  }
+ ],
+ "safety_center_blurb": "„Geslitos“ saugos centro specialistai turi profesinės veiklos patirtį darbuotojų saugos ir sveikatos, gaisrinės saugos ir darbo teisės srityse. Padedame darbdaviams sukurti saugias ir sveikas darbo sąlygas bei išlaikyti jas aukštame lygyje: rengiame darbuotojų priešgaisrinės saugos mokymus, gaisrinės saugos instrukcijas, darbuotojų saugos ir sveikatos dokumentaciją ir ekstremalių situacijų valdymo planus. Savo veikloje vadovaujamės tik aktualios redakcijos norminiais teisės aktais, teismų praktika ir ekspertų rekomendacijomis.",
+ "partner_logo": "geslita:uploads/images/ziniumedis logo.jpg",
+ "page": {
+  "marquee": [
+   "Gesintuvų patikra ir pildymas",
+   "Gaisrinis vandentiekis",
+   "Gaisrinių žarnų išbandymas",
+   "Evakuacijos planai",
+   "Gaisrinė signalizacija",
+   "Automatinės gesinimo sistemos",
+   "Varžų matavimas",
+   "Dielektrinių priemonių patikra",
+   "Aukštalipių įrangos patikra",
+   "Priešgaisrinės saugos mokymai"
+  ],
+  "ledger_title": "Ką darome",
+  "ledger_lead": "Visos įmonės veiklos sritys vienoje vietoje. Kainas ir sąlygas rasite paslaugų puslapyje.",
+  "sell_title": "Ką parduodame",
+  "sell_lead": "Prekyba vyksta elektroniniu būdu: užsakymus priimame el. paštu arba telefonu.",
+  "contacts_lead": "Skambinkite arba rašykite el. paštu darbo dienomis. Darbus objektuose atliekame visoje Lietuvoje.",
+  "map_caption": "Būstinė Vilniuje, į objektus atvykstame visoje Lietuvoje",
+  "sign_images": [
+   "krzenklai--image001.png",
+   "krzenklai--image003.png",
+   "infzenklai--image001.gif",
+   "infzenklai--image002.gif",
+   "drzenklai--image001.gif",
+   "drzenklai--image003.gif",
+   "ispzenklai--image001.gif",
+   "ispzenklai--image002.png",
+   "elzenklai--image002.gif",
+   "elzenklai--image003.png"
+  ]
+ }
+}

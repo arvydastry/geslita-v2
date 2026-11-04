@@ -1,0 +1,7 @@
+{# Tik demonstracijai: hero variantų perjungiklis klientui palyginti #}
+<nav class="hv-switch" aria-label="Hero variantai (demonstracija)">
+  <span>Hero variantas</span>
+  <a href="index.html"><b>1</b> Video (pasirinktas)</a>
+  <a href="hero-2-nuotraukos.html"{% if hero_variant == 'photos' %} aria-current="page"{% endif %}><b>2</b> Nuotraukos</a>
+  <a href="hero-3-slankiklis.html"{% if hero_variant == 'slider' %} aria-current="page"{% endif %}><b>3</b> Slankiklis</a>
+</nav>

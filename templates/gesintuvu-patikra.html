@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m %}
+{% block title %}Gesintuvų patikra ir pildymas | Geslita{% endblock %}
+{% block extra_css %}<style>
+/* Gesintuvų patikros puslapis (pg-gp-) */
+.pg-gp-media { display: grid; gap: 14px; }
+.pg-gp-main { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-md); aspect-ratio: 2 / 1; display: flex; align-items: center; justify-content: center; padding: 22px; }
+.pg-gp-main img { width: auto; height: auto; max-width: 100%; max-height: 100%; }
+.pg-gp-gal { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.pg-gp-gal figure { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 12px; box-shadow: var(--shadow-sm); }
+.pg-gp-gal .im { height: 112px; display: flex; align-items: center; justify-content: center; }
+.pg-gp-gal img { width: auto; height: auto; max-width: 100%; max-height: 100%; }
+.pg-gp-gal figcaption { margin-top: 10px; font-size: 13px; line-height: 1.35; color: var(--muted); text-align: center; }
+.pg-gp-checks { margin-top: 26px; }
+.pg-gp-prices { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.pg-gp-prices .lead { margin-top: 16px; }
+.pg-gp-prices .pill-row { margin: 18px 0 26px; }
+.pg-gp-tbls > * + * { margin-top: 28px; }
+.pg-gp-tbls .tbl td.num, .pg-gp-tbls .tbl th.num { font-variant-numeric: lining-nums; }
+.pg-gp-types { overflow: hidden; }
+.pg-gp-types .plan { position: absolute; right: -14%; top: -22%; width: clamp(480px, 48vw, 820px); opacity: 0.09; pointer-events: none; }
+.pg-gp-types .wrap { position: relative; }
+.pg-gp-typegrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 3vw, 48px); align-items: start; }
+.pg-gp-type { border-top: 2px solid var(--line-2); padding-top: 22px; }
+.pg-gp-type .ic-wrap { width: 46px; height: 46px; border-radius: 12px; background: #e8eef7; color: var(--navy-3); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.pg-gp-type .ic-wrap .ic { font-size: 22px; }
+.pg-gp-type h3 { margin-bottom: 10px; }
+.pg-gp-type p { font-size: 15.5px; }
+.pg-gp-rel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
+.pg-gp-rel .doc-list { grid-template-columns: 1fr; margin-top: 20px; }
+.pg-gp-rel > div > p { margin-top: 14px; }
+.pg-gp-card { display: grid; grid-template-columns: minmax(0, 1fr) 150px; gap: 20px; align-items: center; }
+.pg-gp-card h3 { margin-bottom: 10px; }
+.pg-gp-card p { font-size: 15.5px; }
+.pg-gp-card .btn-group { margin-top: 20px; }
+.pg-gp-card img { width: auto; max-height: 280px; justify-self: center; filter: drop-shadow(0 24px 22px rgba(14, 26, 43, 0.28)); will-change: transform; }
+@media (max-width: 900px) {
+  .pg-gp-prices, .pg-gp-rel, .pg-gp-typegrid { grid-template-columns: minmax(0, 1fr); }
+  .pg-gp-prices .sticky-col { position: static; }
+  .pg-gp-media { max-width: 600px; }
+}
+@media (max-width: 640px) { .pg-gp-tbls .tbl table { min-width: 0; font-size: 14px; } .pg-gp-tbls .tbl th, .pg-gp-tbls .tbl td { padding: 10px; } .pg-gp-tbls .tbl th.num { white-space: normal; } .pg-gp-tbls .tbl .num { width: 1%; } }
+@media (max-width: 480px) { .pg-gp-card { grid-template-columns: 1fr; } .pg-gp-gal .im { height: 96px; } }
+</style>{% endblock %}
+{% block content %}
+{% set s = services.services[0] %}
+{{ m.page_hero('Gesintuvų patikra ir pildymas', s.short, image=img('foto:gesintuvas-balta'), alt='Keturi raudoni gesintuvai, pakabinti ant šviesios sienos', crumbs=[{'label': 'Paslaugos', 'href': 'paslaugos.html'}, {'label': 'Gesintuvų patikra'}], buttons=[{'label': 'Gauti pasiūlymą', 'href': 'kontaktai.html#forma'}, {'label': 'Kainoraštis', 'href': '#kainos', 'kind': 'btn-line', 'icon': 'chev'}]) }}
+
+{# 1. Aprašymas ir darbų sąrašas su įrangos nuotraukomis #}
+<section class="sec sec-white">
+  <div class="wrap split">
+    <div data-reveal>
+      <h2>Patikra, pildymas ir dažymas vienoje vietoje</h2>
+      <div class="lead" style="margin: 16px 0 20px">{{ m.paragraphs(s.summary[:1]) }}</div>
+      {{ m.paragraphs(s.summary[1:]) }}
+      <div class="pg-gp-checks">{{ m.checks(s.bullets) }}</div>
+    </div>
+    <div class="pg-gp-media">
+      <figure class="pg-gp-main" data-reveal="scale"><img src="{{ img(s.images[0].src) }}" alt="{{ s.images[0].alt }}" width="528" height="273"></figure>
+      <div class="pg-gp-gal">
+        {% for im in s.images[1:] %}
+        <figure data-reveal style="--i:{{ loop.index }}">
+          <div class="im"><img src="{{ img(im.src) }}" alt="{{ im.alt }}" loading="lazy"></div>
+          <figcaption>{{ im.alt }}</figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# 2. Kainoraštis: lipni antraštė kairėje, trys lentelės dešinėje #}
+<section class="sec" id="kainos">
+  <div class="wrap pg-gp-prices">
+    <div class="sticky-col" data-reveal>
+      <h2>Patikros ir pildymo kainos</h2>
+      <p class="lead">{{ s.price_note }}</p>
+      <div class="pill-row"><span class="tag tag-navy">Patikra {{ s.price_from }}</span><span class="tag">Darbai visoje Lietuvoje</span></div>
+      {{ m.btn('Gauti pasiūlymą', 'kontaktai.html#forma', 'btn-navy') }}
+    </div>
+    <div class="pg-gp-tbls">
+      {% for t in s.tables %}<div>{{ m.table(t) }}</div>{% endfor %}
+    </div>
+  </div>
+</section>
+
+{# 3. Gesintuvų tipai: trys stulpeliai su viršutine linija (be kortelių, nes tekstų ilgis labai skiriasi) #}
+<section class="sec sec-tint pg-gp-types">
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Gesintuvų tipai</div>
+      <h2>Kuris gesintuvas kam tinka</h2>
+      <p class="lead">Aptarnaujame miltelinius, vandens putų ir angliarūgštės gesintuvus. Trumpai apie kiekvieno tipo paskirtį ir gaisrų klases, kurioms jis tinka.</p>
+    </div>
+    <div class="pg-gp-typegrid">
+      {% set icons = ['flame', 'droplet', 'shield'] %}
+      {% for p in s.details %}
+      <article class="pg-gp-type" data-reveal style="--i:{{ loop.index0 }}">
+        <div class="ic-wrap">{{ m.icon(icons[loop.index0]) }}</div>
+        <h3>{{ p.split('.')[0] }}</h3>
+        <p>{{ p.split('. ', 1)[1] }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# 4. Instrukcijos (PDF) ir susijusios nuorodos #}
+<section class="sec sec-white">
+  <div class="wrap pg-gp-rel">
+    <div data-reveal>
+      <h2>Techninės priežiūros instrukcijos</h2>
+      <p>Miltelinių ir vandens putų gesintuvų priežiūros instrukcijos (PDF, atsidaro naujame lange).</p>
+      <ul class="doc-list">
+        {% for d in s.pdfs %}<li><a href="{{ d.url }}" target="_blank" rel="noopener">{{ m.icon('file') }}<span>{{ d.title }}<span class="sr-only"> (PDF, atsidaro naujame lange)</span></span><svg class="ic ic-out" aria-hidden="true"><use href="#i-out"/></svg></a></li>{% endfor %}
+      </ul>
+      {% if s.periodicity %}<div class="notice info" style="margin-top: 16px">Periodiškumas: {{ s.periodicity }}</div>{% endif %}
+    </div>
+    <div class="card pg-gp-card" data-reveal="right" data-parallax-root>
+      <div>
+        <h3>Reikia naujo gesintuvo?</h3>
+        <p>Prekiaujame visų rūšių ugnies gesintuvais, prižiūrime ir komplektuojame objektų gaisrinį ūkį. Peržiūrėkite katalogą arba grįžkite į visų paslaugų sąrašą.</p>
+        <div class="btn-group">{{ m.btn('Gesintuvų katalogas', 'prekes-gesintuvai.html', 'btn-navy') }}{{ m.btn('Visos paslaugos', 'paslaugos.html', 'btn-line', '') }}</div>
+      </div>
+      <img src="assets/img/cutout/dsc9858.png" alt="Vandens putų gesintuvas" width="718" height="1446" loading="lazy" data-parallax="0.12">
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight" style="padding-top: 0"><div class="wrap">{{ m.cta_inline('Reikia patikrinti ar užpildyti gesintuvus?', 'Paskambinkite arba parašykite: aptarsime gesintuvų kiekį, tipus ir terminus, paruošime pasiūlymą.') }}</div></section>
+{% endblock %}

@@ -1,0 +1,256 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m %}
+{% block title %}Gesintuvai | Geslita{% endblock %}
+{% block description %}Milteliniai, angliarūgštiniai, vandens putų ir automatiniai gesintuvai su kainomis. Naujos kartos vandens putų gesintuvai 6 l ir 9 l, pagaminti Lietuvoje.{% endblock %}
+{% block extra_css %}<style>
+/* prekes-gesintuvai.html: gesintuvų katalogas */
+.pg-ges-feat .tag { margin-bottom: 18px; }
+.pg-ges-feat h2 { margin-bottom: 18px; }
+.pg-ges-bullets { grid-template-columns: 1fr 1fr; gap: 8px 20px; font-size: 15px; margin: 22px 0 28px; }
+.pg-ges-stack { position: relative; min-height: 560px; display: flex; align-items: flex-end; justify-content: center; }
+.pg-ges-stack::before { content: ""; position: absolute; inset: 6% 4% 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(19, 35, 64, 0.12), rgba(19, 35, 64, 0)); }
+.pg-ges-stack .main { position: relative; height: clamp(420px, 46vw, 640px); width: auto; filter: drop-shadow(0 42px 38px rgba(14, 26, 43, 0.32)); }
+.pg-ges-stack .second { position: absolute; left: 3%; bottom: -3%; height: 44%; width: auto; filter: drop-shadow(0 26px 26px rgba(14, 26, 43, 0.28)); will-change: transform; }
+.pg-ges-stack .pin { position: absolute; right: 0; bottom: 12%; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 16px; box-shadow: var(--shadow-md); display: grid; gap: 2px; }
+.pg-ges-stack .pin .num { font-size: 22px; font-weight: 700; color: var(--ink); line-height: 1; }
+.pg-ges-stack .pin .small { color: var(--muted); font-size: 13px; }
+.pg-ges-vcards { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2vw, 24px); margin-bottom: clamp(24px, 3vw, 36px); }
+.pg-ges-vcards .card { display: grid; grid-template-columns: 88px 1fr; gap: 20px; align-items: start; }
+.pg-ges-vcards figure { margin: 0; aspect-ratio: 1; border-radius: var(--r-sm); background: var(--bg); display: flex; align-items: center; justify-content: center; padding: 8px; }
+.pg-ges-vcards figure img { max-height: 100%; width: auto; }
+.pg-ges-vcards .programme { margin: 14px 0 0; }
+.pg-ges-table td.num { font-variant-numeric: lining-nums; } /* tabular-nums šiame šrifte išplečia kablelį */
+.pg-ges-details { margin-top: clamp(24px, 3vw, 36px); max-width: 920px; }
+.pg-ges-types { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line-2); }
+.pg-ges-type { padding: 28px clamp(16px, 2.4vw, 32px) 8px; }
+.pg-ges-type:first-child { padding-left: 0; }
+.pg-ges-type + .pg-ges-type { border-left: 1px solid var(--line-2); }
+.pg-ges-type > .num { display: block; font-size: 42px; font-weight: 700; line-height: 1; letter-spacing: -0.03em; color: var(--line-2); margin-bottom: 16px; transition: color 0.6s var(--ease); }
+.pg-ges-type.is-in > .num { color: var(--navy-3); }
+.pg-ges-type h3 { margin-bottom: 10px; }
+.pg-ges-type p { font-size: 15.5px; }
+.pg-ges-cat .doc-sec > h3 { font-size: clamp(24px, 2.4vw, 30px); margin-bottom: 12px; }
+.pg-ges-cat .intro { max-width: 72ch; margin-bottom: 24px; }
+.pg-ges-cat .cell { display: grid; }
+.pg-ges-more { margin-top: 18px; }
+.pg-ges-more h4 { margin: 16px 0 6px; }
+.pg-ges-notes { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: 15px; color: var(--muted); }
+.pg-ges-notes li { padding-left: 14px; border-left: 2px solid var(--line-2); }
+.pg-ges-notes b { color: var(--ink); font-weight: 600; }
+.pg-ges-auto { display: grid; grid-template-columns: minmax(220px, 280px) 1fr; gap: clamp(20px, 3vw, 36px); align-items: start; }
+.pg-ges-auto .panel { padding: clamp(20px, 2.4vw, 28px); border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); }
+.pg-ges-auto .panel .btn-group { margin: 18px 0 12px; }
+.pg-ges-auto .panel .ic { font-size: 18px; }
+.pg-ges-cat .notice { margin-top: clamp(32px, 4vw, 48px); }
+.pg-ges-cat .prod figure img { min-height: 72%; } /* mažos originalios nuotraukos (100 px) nedingsta kvadrate */
+.pg-ges-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 28px; }
+.pg-ges-specs h4 { margin: 0 0 6px; } .pg-ges-specs ul { margin: 0; padding-left: 18px; font-size: 14.5px; }
+.pg-ges-acc { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(14px, 1.8vw, 20px); }
+.pg-ges-acc .card { display: grid; grid-template-columns: 112px 1fr; gap: 18px; align-items: start; padding: 18px; }
+.pg-ges-acc figure { margin: 0; aspect-ratio: 1; border-radius: var(--r-sm); background: #fff; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; padding: 8px; overflow: hidden; }
+.pg-ges-acc figure img { max-height: 100%; width: auto; } .pg-ges-acc figure .ic-wrap { margin: 0; }
+.pg-ges-acc h4 { font-size: 16.5px; margin-bottom: 4px; }
+.pg-ges-acc .specs { margin: 8px 0 0; padding: 0; list-style: none; font-size: 13.5px; color: var(--muted); display: grid; gap: 2px; }
+.pg-ges-acc .note { margin: 10px 0 0; font-size: 14.5px; }
+.pg-ges-acc .price { margin-top: 10px; font: 700 18px/1.2 var(--fd); color: var(--ink); } .pg-ges-acc .price small { font: 500 12.5px/1.2 var(--fb); color: var(--muted); display: block; margin-bottom: 2px; }
+/* Raudona lieka tik mygtukams ir telefono ikonai: nuorodų ikonos ir aktyvi šoninės navigacijos eilutė tamsiai mėlynos */
+.pg-ges-cat .link .ic { color: var(--navy-3); } .pg-ges-cat .link[href^="tel:"] .ic { color: var(--red); } .pg-ges-cat .doc-nav a.is-active { border-color: var(--navy-3); }
+@media (max-width: 900px) { .pg-ges-stack { min-height: 0; margin-top: 16px; } .pg-ges-stack .main { height: clamp(360px, 70vw, 520px); } .pg-ges-types { grid-template-columns: 1fr; border-top: 0; } .pg-ges-type, .pg-ges-type:first-child { padding: 24px 0 8px; border-top: 1px solid var(--line-2); } .pg-ges-type + .pg-ges-type { border-left: 0; } .pg-ges-vcards { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .pg-ges-bullets { grid-template-columns: 1fr; } .pg-ges-auto { grid-template-columns: 1fr; } .pg-ges-vcards .card { grid-template-columns: 64px 1fr; gap: 14px; } .pg-ges-stack .pin { right: 4px; bottom: 4%; } .pg-ges-cat .prod figure { aspect-ratio: 4 / 3; } .pg-ges-specs { grid-template-columns: 1fr; } .pg-ges-acc { grid-template-columns: 1fr; } .pg-ges-acc .card { grid-template-columns: 88px 1fr; gap: 14px; } }
+</style>{% endblock %}
+{% block content %}
+{% set g = products.groups | selectattr('slug', 'equalto', 'gesintuvai') | first %}
+{% set f = g.featured %}
+{% set ids = ['milteliniai', 'angliarugstiniai', 'vandens-putu', 'automatiniai', 'priedai'] %}
+{% set ps = services.services | selectattr('slug', 'equalto', 'gesintuvu-patikra') | first %}
+
+{{ m.page_hero('Gesintuvai', g.intro, image=img('foto:gesintuvas-betonas'), alt='Raudonas gesintuvas ant betoninės sienos su evakuacijos ženklu', crumbs=[{'label': 'Prekės', 'href': 'prekes.html'}, {'label': 'Gesintuvai'}]) }}
+
+{# Išskirtinė prekė: naujos kartos vandens putų gesintuvai (iškirpta nuotrauka su šešėliu) #}
+<section class="sec pg-ges-feat" id="naujos-kartos" data-parallax-root>
+  <div class="wrap split">
+    <div data-reveal>
+      <span class="tag tag-navy">{{ f.badge }}</span>
+      <h2>{{ f.title|replace('6 l', '6 l')|replace('9 l', '9 l') }}</h2>
+      {{ m.paragraphs(f.paragraphs) }}
+      <ul class="checks pg-ges-bullets">{% for b in f.bullets %}<li>{{ m.icon('check') }}<span>{{ b }}</span></li>{% endfor %}</ul>
+      <div class="btn-group">{{ m.btn('Versijos ir kainos', '#versijos', 'btn-navy') }}{{ m.btn('Visas katalogas', '#katalogas', 'btn-line', '') }}</div>
+    </div>
+    <div class="pg-ges-stack" data-reveal="scale">
+      <img class="main" src="assets/img/cutout/dsc9857.png" alt="Naujos kartos vandens putų gesintuvas nešildomoms patalpoms" width="770" height="1460" loading="lazy">
+      <img class="second" src="assets/img/cutout/dsc9858.png" alt="Vandens putų gesintuvas šildomoms patalpoms" width="718" height="1446" loading="lazy" data-parallax="0.22">
+      <div class="pin"><span class="num">{{ f.sizes[0].price }}</span><span class="small">{{ f.sizes[0].label }} gesintuvas</span></div>
+    </div>
+  </div>
+</section>
+
+{# Versijos pagal temperatūrą, talpos ir techniniai duomenys, išsamūs aprašymai #}
+<section class="sec sec-white" id="versijos">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2>Dvi versijos, dvi talpos</h2>
+      <p class="lead">Gesintuvai gaminami dviejų tipų, kurie skiriasi veikimo temperatūros ribomis, abu 6 l ir 9 l talpos. {{ f.standard }}</p>
+    </div>
+    <div class="pg-ges-vcards">
+      {% for v in f.temperature_versions %}
+      <article class="card" data-reveal style="--i:{{ loop.index0 }}">
+        <figure><img src="{{ img(v.image) }}" alt="" loading="lazy"></figure>
+        <div>
+          <h3>{{ v.label }}</h3>
+          <p class="muted">Veikimo temperatūra {{ v.range }}</p>
+          <ul class="programme">{% for p in v.prices %}<li><span>{{ p.label }} gesintuvas</span><span class="num">{{ p.price }}</span></li>{% endfor %}</ul>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {# Lentelė iš sizes: specifikacijos „Parametras: reikšmė“ išskaidomos į stulpelius #}
+    {% set cols = ['Talpa'] %}
+    {% for s in f.sizes[0].specs %}{% set _ = cols.append(s.split(': ', 1)[0]) %}{% endfor %}
+    {% set _ = cols.append('Kaina') %}
+    {% set rows = [] %}
+    {% for sz in f.sizes %}
+      {% set r = [sz.label] %}
+      {% for s in sz.specs %}{% set _ = r.append(s.split(': ', 1)[1]) %}{% endfor %}
+      {% set _ = r.append(sz.price) %}
+      {% set _ = rows.append(r) %}
+    {% endfor %}
+    <div class="pg-ges-table">{{ m.table({'title': 'Techniniai duomenys', 'columns': cols, 'rows': rows}) }}</div>
+    <div class="pg-ges-details">
+      {% for d in f.details %}
+      {% set body %}{{ m.paragraphs(d.paragraphs) }}{% endset %}
+      {{ m.acc(d.heading, body) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# Trys gesintuvų tipai: numeruota lentyna su linijomis #}
+<section class="sec sec-tint" id="tipai">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Kaip pasirinkti</div>
+      <h2>Trys gesintuvų tipai</h2>
+      <p class="lead">Milteliniai, vandens putų ir angliarūgštės: kuo jie skiriasi ir kokių klasių gaisrams tinka.</p>
+    </div>
+    <div class="pg-ges-types">
+      {% for t in g.types %}
+      <div class="pg-ges-type" data-reveal style="--i:{{ loop.index0 }}">
+        <span class="num">0{{ loop.index }}</span>
+        <h3>{{ t.title }}</h3>
+        <p>{{ t.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# Katalogas: lipni šoninė navigacija + pogrupiai su prekių kortelėmis #}
+<section class="sec pg-ges-cat" id="katalogas">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2>Katalogas ir kainos</h2>
+      <p class="lead">{{ g.subgroups|length }} pogrupiai, {% set n = namespace(c=0) %}{% for sg in g.subgroups %}{% set n.c = n.c + sg['items']|length %}{% endfor %}{{ n.c }} pozicijų. Kortelėse pateikiami pagrindiniai duomenys, išsamūs aprašymai išskleidžiami po kiekvienu pogrupiu.</p>
+    </div>
+    <div class="doc">
+      <aside class="doc-nav" data-reveal>
+        <ul>
+          {% for sg in g.subgroups %}<li><a href="#{{ ids[loop.index0] }}">{{ sg.title }}</a></li>{% endfor %}
+        </ul>
+        <div class="side-card">
+          <strong>Didesnis kiekis?</strong>
+          <span>Kainoraštyje nurodytos mažmeninės kainos. Didesniam kiekiui paruošime atskirą pasiūlymą.</span>
+          <a class="link" href="tel:+37065399977">{{ m.icon('phone') }}+370 653 99977</a>
+          <a class="link" href="mailto:info@geslita.lt">{{ m.icon('mail') }}info@geslita.lt</a>
+        </div>
+      </aside>
+      <div class="doc-body">
+        {% for sg in g.subgroups %}
+        {% set items = sg['items'] %}
+        <div class="doc-sec" id="{{ ids[loop.index0] }}">
+          <h3>{{ sg.title }}</h3>
+          <p class="intro">{{ sg.intro }}</p>
+          {% if items|length == 1 and items[0].video %}
+          {# Automatinis gesintuvas: kortelė + vaizdo įrašo nuoroda #}
+          {% set it = items[0] %}
+          <div class="pg-ges-auto">
+            {{ m.product(it) }}
+            <div class="panel" data-reveal style="--i:1">
+              <h4>Veikimo demonstracija</h4>
+              <p>{{ it.notes }}</p>
+              <div class="btn-group"><a class="btn btn-navy" href="{{ it.video|replace('http://', 'https://') }}" target="_blank" rel="noopener">{{ m.icon('play') }}Žiūrėti vaizdo įrašą</a></div>
+              <p class="small muted">Vaizdo įrašas atidaromas „YouTube“ svetainėje naujame lange.</p>
+            </div>
+          </div>
+          {% elif ids[loop.index0] == 'priedai' %}
+          {# Priedai: horizontalios kortelės su pastabomis; laikiklio nuotrauka iš geslita.lt archyvo, priemonei be nuotraukos - piktograma #}
+          <div class="pg-ges-acc">
+            {% for it in items %}
+            {% set photo = 'assets/img/geslita/Laikiklis_4_kg_6_kg_Small.jpg' if 'laikiklis' in it.name|lower else it.image %}
+            <article class="card" data-reveal style="--i:{{ loop.index0 }}" data-name="{{ it.name }} {{ it.model or '' }}">
+              <figure>{% if photo %}<img src="{{ photo }}" alt="{{ it.name }}" loading="lazy" width="314" height="235">{% else %}<span class="ic-wrap">{{ m.icon('flame') }}</span>{% endif %}</figure>
+              <div>
+                <h4>{{ it.name }}</h4>
+                {% if it.model %}<div class="small muted">{{ it.model }}</div>{% endif %}
+                <ul class="specs">{% for sp in it.specs %}<li>{{ sp }}</li>{% endfor %}</ul>
+                {% if it.notes %}<p class="note">{{ it.notes }}</p>{% endif %}
+                <div class="price"><small>Kaina</small>{{ it.price }}</div>
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+          {% else %}
+          <div class="prod-grid">
+            {# Skaičius ir vienetas (6 l, 9 l) pavadinime nelaužomi į skirtingas eilutes #}
+            {% for it in items %}<div class="cell" style="--i:{{ loop.index0 % 3 }}">{{ m.product(dict(it, name=it.name|replace('6 l', '6 l')|replace('9 l', '9 l'))) }}</div>{% endfor %}
+          </div>
+          {# Trys sąrašai: prekės su išsamiais aprašymais (akordeonas kiekvienai), prekės su daugiau nei 5 parametrais (kortelėje telpa 5) ir trumpos pastabos #}
+          {% set acc_items = [] %}{% set long_items = [] %}{% set note_items = [] %}
+          {% for it in items %}{% if it.details %}{% set _ = acc_items.append(it) %}{% else %}{% if it.specs and it.specs|length > 5 %}{% set _ = long_items.append(it) %}{% endif %}{% if it.notes %}{% set _ = note_items.append(it) %}{% endif %}{% endif %}{% endfor %}
+          {% if note_items %}
+          {# Vienodos pastabos (pvz., AG-5 ir AG-2) rodomos vieną kartą #}
+          {% set by_note = {} %}{% set order = [] %}
+          {% for it in note_items %}{% if it.notes not in by_note %}{% set _ = by_note.update({it.notes: []}) %}{% set _ = order.append(it.notes) %}{% endif %}{% set _ = by_note[it.notes].append(it.model or it.name) %}{% endfor %}
+          <ul class="pg-ges-notes" data-reveal>{% for n in order %}<li><b>{{ by_note[n]|join(', ') }}:</b> {{ n }}</li>{% endfor %}</ul>
+          {% endif %}
+          {% if long_items %}
+          {% set body %}<div class="pg-ges-specs">{% for it in long_items %}<div><h4>{{ it.name }}</h4><ul>{% for sp in it.specs %}<li>{{ sp }}</li>{% endfor %}</ul></div>{% endfor %}</div>{% endset %}
+          <div class="pg-ges-more" data-reveal>{{ m.acc('Visi techniniai duomenys: ' ~ sg.title|lower, body) }}</div>
+          {% endif %}
+          {% if acc_items %}
+          <div class="pg-ges-more" data-reveal>
+            {% for it in acc_items %}
+            {% set body %}
+              {% if it.notes %}<p><strong>{{ it.notes }}</strong></p>{% endif %}
+              {% if it.specs and it.specs|length > 5 %}<h4>Techniniai duomenys</h4><ul>{% for sp in it.specs %}<li>{{ sp }}</li>{% endfor %}</ul>{% endif %}
+              {% for d in it.details %}<h4>{{ d.heading }}</h4>{{ m.paragraphs(d.paragraphs) }}{% endfor %}
+            {% endset %}
+            {{ m.acc('Plačiau: ' ~ it.name, body) }}
+            {% endfor %}
+          </div>
+          {% endif %}
+          {% endif %}
+        </div>
+        {% endfor %}
+        <div class="notice" data-reveal>{{ products.price_disclaimer }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Susijusi paslauga: gesintuvų patikra #}
+<section class="sec sec-white" id="patikra">
+  <div class="wrap split rev">
+    <div data-reveal>
+      <h2>Gesintuvą jau turite? Atliekame patikrą {{ ps.price_from }}</h2>
+      <p class="lead">{{ about.services_list[0].text }}. Po panaudojimo gesintuvą priduokite naujam pripildymui.</p>
+      <div class="btn-group">{{ m.btn(g.related_service.label, g.related_service.slug ~ '.html', 'btn-navy') }}{{ m.btn('Visos paslaugos ir kainos', 'paslaugos.html#gesintuvu-patikra', 'btn-line', '') }}</div>
+    </div>
+    <div class="photo" data-reveal="scale">
+      <img src="{{ img('foto:garazas') }}" alt="Specialistė su šalmu ir liemene pildo patikros dokumentus" loading="lazy" width="1880" height="1253">
+      <div class="pin"><span class="num">{{ ps.price_from }}</span><span class="small">gesintuvo patikra objekte</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight"><div class="wrap">{{ m.cta_inline() }}</div></section>
+{% endblock %}

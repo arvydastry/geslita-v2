@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m %}
+{% block title %}Gaisrinė automatika ir įranga | Geslita{% endblock %}
+{% block description %}Dūmų ir smalkių detektoriai, gaisrinės sirenos, gaisro pavojaus mygtukai, evakuacijos šviestuvai, kibirkščių gesikliai, nedegūs audeklai ir saugos rinkiniai su kainomis.{% endblock %}
+{% block extra_css %}<style>
+/* Gaisrinė automatika ir įranga: puslapio stiliai (prefiksas .pg-auto-) */
+.pg-auto-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin-bottom: 12px; }
+.pg-auto-search { margin-bottom: 0; }
+.pg-auto-search + .doc-sec { margin-top: 36px; }
+.pg-auto-side .btn { display: inline-flex; margin: 4px 0 0; padding: 0 14px; background: transparent; box-shadow: none; border: 1.5px solid var(--line-2); color: var(--ink); font-size: 15px; }
+.pg-auto-side .btn:hover { background: var(--bg); border-color: var(--ink); transform: none; }
+.pg-auto-card figure { min-height: 0; overflow: hidden; }
+.pg-auto-card h3 { font-size: 16.5px; line-height: 1.35; letter-spacing: -0.005em; }
+.pg-auto-more { font-size: 13.5px; }
+.pg-auto-more summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; color: var(--ink); font-weight: 600; }
+.pg-auto-more summary::-webkit-details-marker { display: none; }
+.pg-auto-more summary .ic { color: var(--navy-3); font-size: 15px; transition: transform 0.3s var(--ease); }
+.pg-auto-more[open] summary .ic { transform: rotate(45deg); }
+.pg-auto-more .specs { margin-top: 6px; }
+.pg-auto-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: clamp(16px, 2vw, 24px); align-items: start; }
+.pg-auto-pair .prod-grid { grid-template-columns: 1fr; }
+.pg-auto-pair.rev { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+.pg-auto-pair.rev .prod-grid { grid-template-columns: 1fr 1fr; }
+.pg-auto-req { font-size: 15px; color: var(--muted); margin-bottom: 14px; }
+.pg-auto-notes { display: grid; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; font-size: 15px; }
+.pg-auto-notes li { padding: 12px 16px; border-left: 3px solid var(--navy-3); background: var(--surface); border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+.pg-auto-notes b { display: block; color: var(--ink); margin-bottom: 2px; }
+.pg-auto-after { margin-top: 16px; }
+.pg-auto-pills { margin-bottom: 16px; }
+.pg-auto-pills .tag { padding: 9px 14px; font-size: 14px; }
+.pg-auto-h3 { margin: 24px 0 12px; }
+.pg-auto-tip h3 { font-size: 19px; }
+.pg-auto-tip p { font-size: 15.5px; }
+.pg-auto-sys { overflow: hidden; }
+.pg-auto-plan { position: absolute; right: -8%; top: -30%; width: clamp(500px, 50vw, 820px); opacity: 0.1; pointer-events: none; will-change: transform; }
+.pg-auto-sys .wrap { position: relative; }
+.pg-auto-sys .checks { margin: 20px 0 26px; grid-template-columns: 1fr 1fr; gap: 8px 20px; font-size: 15.5px; }
+@media (max-width: 900px) { .pg-auto-pair, .pg-auto-pair.rev { grid-template-columns: 1fr; } .pg-auto-pair .prod-grid, .pg-auto-pair.rev .prod-grid { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); } }
+@media (max-width: 640px) { .pg-auto-sys .checks { grid-template-columns: 1fr; } .pg-auto-card h3 { font-size: 14.5px; } .pg-auto-pair .prod-grid, .pg-auto-pair.rev .prod-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 400px) { .pg-auto-pair .prod-grid, .pg-auto-pair.rev .prod-grid { grid-template-columns: 1fr; } }
+</style>{% endblock %}
+{% block content %}
+{# Prekės kortelė: kaip m.product, bet rodomos visos savybės (pirmos 5 matomos, likusios išskleidžiamos) #}
+{% macro prod_card(p, i=0) -%}
+<article class="prod pg-auto-card" data-reveal style="--i:{{ i }}" data-name="{{ p.name }} {{ p.model or '' }}">
+  <figure>{% if p.image %}<img src="{{ img(p.image) }}" alt="{{ p.name }}" loading="lazy">{% else %}<span class="muted small">Nuotrauka ruošiama</span>{% endif %}</figure>
+  <div class="body">
+    <h3>{{ p.name }}</h3>
+    {% if p.model %}<div class="small muted">{{ p.model }}</div>{% endif %}
+    {% if p.specs %}<ul class="specs">{% for s in p.specs[:5] %}<li>{{ s }}</li>{% endfor %}</ul>{% endif %}
+    {% if p.specs and p.specs | length > 5 %}{% set extra = (p.specs | length) - 5 %}
+    <details class="pg-auto-more"><summary><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Dar {{ extra }} {{ 'savybė' if extra == 1 else 'savybės' }}</summary><ul class="specs">{% for s in p.specs[5:] %}<li>{{ s }}</li>{% endfor %}</ul></details>
+    {% endif %}
+    {% if p.price %}<div class="price"><small>Kaina</small>{{ p.price }}</div>{% endif %}
+  </div>
+</article>
+{%- endmacro %}
+{% set g = products.groups | selectattr('slug', 'equalto', 'automatika') | first %}
+{% set ids = ['dumu-detektoriai', 'gaisrines-sirenos', 'gaisro-pavojaus-mygtukai', 'avarinio-isejimo-sviestuvai', 'kibirksciu-gesikliai', 'nedegus-audeklai', 'saugos-rinkiniai', 'darbo-saugos-priemones'] %}
+{% set total = namespace(n=0) %}
+{% for sg in g.subgroups %}{% set total.n = total.n + (sg['items'] | length) %}{% endfor %}
+{{ m.page_hero(g.title, g.intro, image=img('foto:signalizacija-mygtukas'), alt='Gaisro pavojaus mygtukas su ženklu ant sienos', crumbs=[{'label': 'Prekės', 'href': 'prekes.html'}, {'label': g.title}]) }}
+
+{# Katalogas su lipnia šonine navigacija ir paieška #}
+<section class="sec">
+  <div class="wrap doc">
+    <aside class="doc-nav" aria-label="Prekių grupės">
+      <ul>
+        {% for sg in g.subgroups %}<li><a href="#{{ ids[loop.index0 % 8] }}">{{ sg.title }}</a></li>{% endfor %}
+      </ul>
+      <div class="side-card pg-auto-side">
+        <span class="small muted">Kainos</span>
+        <span>Kainoraščiuose nurodytos mažmeninės kainos. Didesniam kiekiui paruošime pasiūlymą.</span>
+        <a class="btn btn-sm" href="tel:+37065399977">{{ m.icon('phone') }}+370 653 99977</a>
+      </div>
+    </aside>
+
+    <div class="doc-body">
+      <div class="search pg-auto-search" data-reveal>
+        <label class="sr-only" for="pg-auto-q">Prekių paieška</label>
+        <input id="pg-auto-q" type="text" data-search placeholder="Ieškoti pagal pavadinimą ar modelį, pvz., ROP63" autocomplete="off">
+        <span class="count" data-search-count>Iš viso: {{ total.n }}</span>
+      </div>
+
+      {% for sg in g.subgroups %}
+      {% set n = sg['items'] | length %}
+      {% set ns = namespace(priced=false) %}
+      {% for it in sg['items'] %}{% if it.price and '€' in it.price %}{% set ns.priced = true %}{% endif %}{% endfor %}
+      <section class="doc-sec" id="{{ ids[loop.index0 % 8] }}" data-search-group>
+        <div class="pg-auto-head" data-reveal>
+          <h2>{{ sg.title }}</h2>
+          <span class="tag tag-line">{{ n }} {{ 'prekė' if n == 1 else ('prekės' if n < 10 else 'prekių') }}</span>
+        </div>
+        {% if sg.intro %}<p class="lead" data-reveal>{{ sg.intro }}</p>{% endif %}
+
+        {% if not ns.priced %}
+        {# Darbo saugos priemonės: kainų nėra, rodomi pavadinimai ir PDF katalogai #}
+        <div class="pill-row pg-auto-pills" data-reveal>
+          {% for it in sg['items'] %}<span class="tag" data-name="{{ it.name }}">{{ it.name }}</span>{% endfor %}
+        </div>
+        <div class="notice" data-reveal>Šios grupės katalogas atnaujinamas. Kainų teiraukitės telefonu <a href="tel:+37065399977">+370 653 99977</a> arba el. paštu <a href="mailto:info@geslita.lt">info@geslita.lt</a>.</div>
+        <h3 class="pg-auto-h3">Katalogai (PDF)</h3>
+        <ul class="doc-list" data-reveal>
+          {% if sg.catalog_pdf %}<li><a href="{{ sg.catalog_pdf }}" target="_blank" rel="noopener">{{ m.icon('file') }}<span>Pilnas darbo saugos priemonių katalogas (PDF)</span><span class="ic-out">{{ m.icon('out') }}</span></a></li>{% endif %}
+          {% for it in sg['items'] if it.pdf %}<li><a href="{{ it.pdf }}" target="_blank" rel="noopener">{{ m.icon('file') }}<span>{{ it.name }} (PDF)</span><span class="ic-out">{{ m.icon('out') }}</span></a></li>{% endfor %}
+        </ul>
+
+        {% elif n == 1 and sg['items'][0].details %}
+        {# Kibirkščių gesikliai: viena prekė ir teisiniai reikalavimai akordeone #}
+        {% set it = sg['items'][0] %}
+        <div class="pg-auto-pair">
+          <div class="prod-grid">{{ prod_card(it) }}</div>
+          <div data-reveal>
+            {% if it.notes %}<p class="pg-auto-req">{{ it.notes }}</p>{% endif %}
+            {% for d in it.details %}{{ m.acc(d.heading, m.paragraphs(d.paragraphs), open=loop.first) }}{% endfor %}
+          </div>
+        </div>
+
+        {% elif sg.details %}
+        {# Nedegūs audeklai: prekės ir priminimas, kaip naudoti #}
+        <div class="pg-auto-pair rev">
+          <div class="prod-grid">{% for it in sg['items'] %}{{ prod_card(it, loop.index0) }}{% endfor %}</div>
+          <div class="card pg-auto-tip" data-reveal>
+            {% for d in sg.details %}<h3>{{ d.heading }}</h3>{{ m.paragraphs(d.paragraphs) }}{% endfor %}
+          </div>
+        </div>
+
+        {% else %}
+        <div class="prod-grid">{% for it in sg['items'] %}{{ prod_card(it, loop.index0 % 3) }}{% endfor %}</div>
+        {% if sg.price_note %}<p class="tbl-note">{{ sg.price_note }}</p>{% endif %}
+        {% set noted = sg['items'] | selectattr('notes') | list %}
+        {% if noted %}
+        <ul class="pg-auto-notes">
+          {% for it in noted %}<li data-reveal><b>{{ it.name }}</b>{{ it.notes }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        {% if ids[loop.index0 % 8] == 'avarinio-isejimo-sviestuvai' %}
+        <p class="pg-auto-after small muted">Reikia sumontuoti? Teikiame <a href="avariniai-sviestuvai.html">avarinių šviestuvų montavimo paslaugą</a>.</p>
+        {% endif %}
+        {% endif %}
+      </section>
+      {% endfor %}
+
+      <div class="notice info" data-reveal>{{ products.price_disclaimer }}</div>
+    </div>
+  </div>
+</section>
+
+{# Nuoroda į signalizacijos paslaugą #}
+<section class="sec sec-tint pg-auto-sys" data-parallax-root>
+  <img class="pg-auto-plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.15">
+  <div class="wrap split">
+    <div data-reveal>
+      <div class="eyebrow">Gaisrinės signalizacijos paslauga</div>
+      <h2>Įrangą sujungiame į veikiančią sistemą</h2>
+      <p class="lead">{{ alarm.intro[2] }}</p>
+      {{ m.checks(alarm.services) }}
+      {{ m.btn('Signalizacijos įrengimas ir patikra', 'gaisrine-signalizacija.html', 'btn-navy') }}
+    </div>
+    <div class="photo" data-reveal="scale">
+      <img src="{{ img('geslita:uploads/images/Gaisrine signalizacija/Gaisrines signalizacijos patikra komplektas.jpg') }}" alt="Gaisrinės signalizacijos komplektas: dūmų detektoriai, rankiniai mygtukai, centralė ir sirenos" loading="lazy" width="800" height="600">
+      <div class="pin"><span class="num">{{ alarm.price_from }}</span><span class="small">signalizacijos patikra</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight"><div class="wrap">{{ m.cta_inline('Reikia didesnio kiekio ar pasiūlymo objektui?', 'Paskambinkite arba parašykite: aptarsime įrangos kiekį, terminus ir paruošime pasiūlymą.') }}</div></section>
+{% endblock %}

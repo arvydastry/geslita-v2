@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) document.documentElement.classList.add('js');</script>
+<title>Gaisrinės signalizacijos patikra ir įrengimas | Geslita</title>
+<meta name="description" content="Gaisrinės signalizacijos įrengimas, kasmetinė patikra nuo 70,00 € ir remontas. Detektoriai, mygtukai, sirenos, eksploatavimo taisyklės ir dažniausi klausimai.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* Gaisrinė signalizacija: puslapio stiliai (prefiksas .pg-alarm-) */
+.pg-alarm-doc .doc-sec h2 { margin-bottom: 14px; }
+.pg-alarm-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.pg-alarm-cols .checks { grid-template-columns: 1fr 1fr; gap: 10px 28px; }
+.pg-alarm-h3 { margin: 30px 0 14px; }
+.pg-alarm-side .num { font-size: 24px; color: var(--ink); line-height: 1; }
+.pg-alarm-side .btn { display: inline-flex; margin: 4px 0 0; padding: 0 14px; background: transparent; box-shadow: none; border: 1.5px solid var(--line-2); color: var(--ink); font-size: 15px; }
+.pg-alarm-side .btn:hover { background: var(--bg); border-color: var(--ink); transform: none; }
+.pg-alarm-pricecard { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(20px, 3vw, 44px); align-items: center; background: var(--navy); color: var(--on-dark); border-color: transparent; }
+.pg-alarm-pricecard .big { display: block; font-size: clamp(36px, 3.6vw, 50px); line-height: 1; color: #fff; letter-spacing: -0.03em; margin: 6px 0 12px; white-space: nowrap; }
+.pg-alarm-pricecard p { color: var(--on-dark); font-size: 15.5px; }
+.pg-alarm-pricecard .small { color: var(--on-dark-muted); }
+.pg-alarm-pricecard .checks { font-size: 15px; gap: 6px; margin: 8px 0 20px; }
+.pg-alarm-pricecard .checks .ic { color: #fff; }
+.pg-alarm-period { margin: 14px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2vw, 24px); }
+.pg-alarm-period li { padding-top: 14px; border-top: 1px solid var(--line-2); font-size: 15px; }
+.pg-alarm-period li .tag { margin-bottom: 10px; }
+.pg-alarm-period li p { margin: 0; max-width: none; }
+.pg-alarm-comp { grid-template-columns: 1fr 1fr; }
+.pg-alarm-comp p { font-size: 15.5px; }
+.pg-alarm-gallery { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 280px; grid-auto-flow: dense; gap: 14px; }
+.pg-alarm-gallery figure { position: relative; margin: 0; border-radius: var(--r); overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+.pg-alarm-gallery img { width: 100%; height: 100%; object-fit: cover; }
+.pg-alarm-gallery .wide { grid-column: span 2; }
+.pg-alarm-gallery .thumb { display: flex; align-items: center; justify-content: center; }
+.pg-alarm-gallery .thumb img { width: auto; height: auto; max-width: 140px; max-height: 60%; object-fit: contain; }
+.pg-alarm-gallery figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 34px 14px 12px; font-size: 13px; color: #fff; text-shadow: 0 1px 2px rgba(14, 26, 43, 0.5); background: linear-gradient(to top, rgba(14, 26, 43, 0.82), rgba(14, 26, 43, 0.4) 55%, transparent); }
+.pg-alarm-gallery .thumb figcaption { background: none; color: var(--muted); text-shadow: none; text-align: center; padding-top: 0; }
+.pg-alarm-rules { background: var(--bg-2); }
+.pg-alarm-rules .checks { display: block; columns: 2; column-gap: 36px; }
+.pg-alarm-rules .checks li { break-inside: avoid; margin-bottom: 12px; font-size: 15px; }
+.pg-alarm-rules .acc { margin-top: 10px; }
+.pg-alarm-relsec { overflow: hidden; }
+.pg-alarm-plan { position: absolute; left: -6%; bottom: -45%; width: clamp(500px, 50vw, 820px); opacity: 0.1; pointer-events: none; will-change: transform; }
+.pg-alarm-rel { position: relative; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+.pg-alarm-rel h2 { font-size: clamp(26px, 3vw, 38px); margin-bottom: 14px; }
+.pg-alarm-rel .btn { margin-top: 20px; }
+.pg-alarm-rel-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.pg-alarm-rel-list li { display: flex; align-items: center; gap: 14px; padding: 10px 14px 10px 10px; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); font-size: 14.5px; }
+.pg-alarm-rel-list img { width: 64px; height: 64px; object-fit: contain; background: #fff; border-radius: 8px; border: 1px solid var(--line); padding: 4px; flex: none; }
+.pg-alarm-rel-list b { display: block; color: var(--ink); }
+@media (max-width: 900px) { .pg-alarm-rel, .pg-alarm-comp { grid-template-columns: minmax(0, 1fr); } .pg-alarm-rel .btn { white-space: normal; text-align: center; } .pg-alarm-gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 250px; } .pg-alarm-gallery .wide-b { grid-column: auto; } .pg-alarm-rules .checks { columns: 1; } }
+@media (max-width: 640px) { .pg-alarm-cols .checks, .pg-alarm-pricecard, .pg-alarm-period { grid-template-columns: 1fr; } .pg-alarm-gallery { grid-template-columns: 1fr; grid-auto-rows: 230px; } .pg-alarm-gallery .wide { grid-column: auto; } }
+</style></head>
+<body class="">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14L20 4M15 4h5v5"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3 4 5 4 9a4 4 0 0 1-8 0c0-1 .3-2 1-3 0 2 1 3 2 3 0-3-1-5 1-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V6h11v11M14 9h4l3 3v5h-2"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3H4a4 4 0 0 0 2-3v-3a7 7 0 0 1 4-6M9 17v1a3 3 0 0 0 6 0v-1"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3zM9 4v13M15 7v13"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 9L12 5 2 9l10 4 10-4zM6 10.6V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.4"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M7 10h3v11H7zM14 4l3-1 3 3-1 3-5 5-3-3 3-7zM4 20l3-3"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></symbol>
+</svg>
+<a class="skip" href="#main">Pereiti prie turinio</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Geslita, į pradžią"><img src="assets/img/logo-geslita-s.png" alt="Geslita" width="167" height="50"></a>
+    <ul class="site-nav">
+      <li><a href="index.html" >Pradžia</a></li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-paslaugos">Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-paslaugos">
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas<span>Patikra nuo 5,26 €</span></a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija<span>Patikra, remontas, įrengimas</span></a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis<span>Čiaupai, žarnos, žurnalai</span></a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai<span>Planas 70 €</span></a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai<span>Montavimas pagal EN 1838</span></a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai<span>Saugos centras</span></a></li>
+          <li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos<span>Dielektrika, nuoma, žurnalai</span></a></li>
+          <li><a class="drop-all" href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-prekes">Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-prekes">
+          <li><a href="prekes-gesintuvai.html">Gesintuvai<span>Milteliniai, CO₂, vandens putų</span></a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis<span>Spintelės, žarnos, čiaupai</span></a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai<span>102 ženklai su paieška</span></a></li>
+          <li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga<span>Detektoriai, sirenos, šviestuvai</span></a></li>
+          <li><a class="drop-all" href="prekes.html">Visos prekės</a></li>
+        </ul>
+      </li>
+      <li><a href="saugos-centras.html" >Saugos centras</a></li>
+      <li class="nav-naudinga"><a href="naudinga-informacija.html" >Naudinga</a></li>
+      <li><a href="apie-mus.html" >Apie mus</a></li>
+      <li><a href="kontaktai.html" >Kontaktai</a></li>
+    </ul>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>+370 653 99977</span></a>
+      <a class="btn btn-sm" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+      <button class="nav-toggle" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-nav"><svg class="ic ic-menu"><use href="#i-menu"/></svg><svg class="ic ic-x"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilus meniu">
+  <ul>
+    <li><a href="index.html">Pradžia</a></li>
+    <li><details><summary>Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li><li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas</a></li><li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li><li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li><li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li><li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li><li><a href="saugos-centras.html">Darbuotojų mokymai</a></li><li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos</a></li>
+    </ul></details></li>
+    <li><details><summary>Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="prekes.html">Visos prekės</a></li><li><a href="prekes-gesintuvai.html">Gesintuvai</a></li><li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li><li><a href="prekes-zenklai.html">Saugos ženklai</a></li><li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga</a></li>
+    </ul></details></li>
+    <li><a href="saugos-centras.html">Saugos centras</a></li>
+    <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+    <li><a href="apie-mus.html">Apie mus</a></li>
+    <li><a href="kontaktai.html">Kontaktai</a></li>
+  </ul>
+  <div class="mobile-cta">
+    <a class="btn" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+    <a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a>
+  </div>
+</nav>
+
+<main id="main">
+<section class="page-hero ">
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.2">
+  <div class="wrap">
+    <div>
+<ol class="crumbs"><li><a href="index.html">Pradžia</a></li><li><a href="paslaugos.html">Paslaugos</a></li><li><span aria-current="page">Gaisrinė signalizacija</span></li></ol>      <h1>Gaisrinės signalizacijos patikra ir įrengimas</h1>
+<p class="lead">Įrengiame gaisrinę signalizaciją (kabelių instaliacija, montavimas, derinimas, programavimas), atliekame jos remontą ir kasmetinę patikrą, kurios rezultatus įforminame žurnale arba akte.</p><div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>    </div>
+<div class="media" data-reveal="scale"><img src="assets/img/foto/hs-signalizacija.jpg" srcset="assets/img/foto/hs-signalizacija-640.webp 640w, assets/img/foto/hs-signalizacija-1280.webp 1280w, assets/img/foto/hs-signalizacija-1920.webp 1920w" sizes="(max-width: 960px) 92vw, 50vw" alt="Raudonas gaisro aliarmo mygtukas ir ženklas „Gaisrinio aliarmo skelbimo vieta“ ant betoninės sienos" width="1200" height="900" fetchpriority="high"><div class="ph-badge"><img src="assets/img/katalogas/infzenklai--image002.gif" alt="" width="56" height="56"><span><b>Gaisrinio aliarmo skelbimo vieta</b><small>Ženklas iš mūsų katalogo, kabinamas prie mygtuko</small></span></div></div>  </div>
+</section>
+
+<section class="sec pg-alarm-doc">
+  <div class="wrap doc">
+    <aside class="doc-nav" aria-label="Puslapio skyriai">
+      <ul>
+        <li><a href="#apie">Apie paslaugą</a></li>
+        <li><a href="#kaina">Kaina</a></li>
+        <li><a href="#komponentai">Sistemos komponentai</a></li>
+        <li><a href="#nuotraukos">Nuotraukos</a></li>
+        <li><a href="#taisykles">Eksploatavimo taisyklės</a></li>
+        <li><a href="#duk">Dažniausi klausimai</a></li>
+      </ul>
+      <div class="side-card pg-alarm-side">
+        <span class="small muted">Signalizacijos patikra</span>
+        <span class="num">nuo 70,00 €</span>
+        <span>Gaisrinės signalizacijos patikros kaina priklauso nuo patalpų ploto, aukščio ir daviklių kiekio.</span>
+        <a class="btn btn-sm" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a>
+      </div>
+    </aside>
+
+    <div class="doc-body">
+      <section class="doc-sec" id="apie">
+        <div data-reveal>
+          <h2>Apie paslaugą</h2>
+          <p class="lead">Gaisrinės signalizacijos įrengimas, kasmetinė patikra ir remontas</p>
+          <div class="pg-alarm-meta">
+            <span class="tag tag-navy">Patikra nuo 70,00 €</span>
+            <span class="tag">Patikra kartą per metus</span>
+            <span class="tag tag-line">Aktas arba žurnalo įrašas</span>
+          </div>
+          <p>Gaisrinė signalizacija skirta automatiniam degimo ar dūmų židinių nustatymui. Sistemoje naudojami dūminiai, temperatūriniai ir liepsnos detektoriai, taip pat rankiniai gaisro pavojaus mygtukai, o signaliniai įrenginiai - vidinės sirenos, blykstės ir lauko sirenos su blykste.</p><p>Kartą per metus būtina patikrinti gaisrinės signalizacijos techninę būklę, o patikros rezultatus surašyti į tam tikslui skirtą žurnalą arba atitinkamos formos aktą.</p><p>UAB „Geslita“ atlieka gaisrinės signalizacijos kabelių instaliaciją, montavimą, derinimą, programavimą, remontą ir kasmetinę patikrą.</p>
+        </div>
+        <h3 class="pg-alarm-h3">Ką atliekame</h3>
+        <div class="pg-alarm-cols" data-reveal><ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinės signalizacijos kabelių instaliacija</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinės signalizacijos montavimas (įrengimas)</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Sistemos derinimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Programavimas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Gaisrinės signalizacijos remontas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Kasmetinė gaisrinės signalizacijos patikra</span></li></ul></div>
+      </section>
+
+      <section class="doc-sec" id="kaina">
+        <h2>Kaina</h2>
+        <div class="card pg-alarm-pricecard" data-reveal>
+          <div>
+            <span class="small">Gaisrinės signalizacijos patikra</span>
+            <span class="num big">nuo 70,00 €</span>
+            <p>Gaisrinės signalizacijos patikros kaina priklauso nuo patalpų ploto, aukščio ir daviklių kiekio.</p>
+          </div>
+          <div>
+            <span class="small">Kainą lemia</span>
+            <ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Patalpų plotas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Patalpų aukštis</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Daviklių kiekis</span></li></ul>
+            <a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <h3 class="pg-alarm-h3">Kaip dažnai tikrinti</h3>
+        <p>Kartą per metus būtina patikrinti gaisrinės signalizacijos techninę būklę, o patikros rezultatus surašyti į tam skirtą žurnalą arba atitinkamos formos aktą.</p>
+        <ul class="pg-alarm-period">
+          <li data-reveal style="--i:0"><span class="tag">Kartą per metus</span><p>Gaisrinės signalizacijos techninės būklės patikra ir sumontuotų įrenginių vidinė apžiūra (pasibaigus garantiniam terminui); daugkartinio veikimo šiluminių signalizatorių patikrinimas šilumos šaltiniu; įžeminimų elektros varžos patikra.</p></li>
+          <li data-reveal style="--i:1"><span class="tag">Kartą per mėnesį</span><p>Gaisrinės signalizacijos įrenginių veikimo patikrinimas; dūmų ir kombinuotų signalizatorių patikrinimas.</p></li>
+          <li data-reveal style="--i:2"><span class="tag">Kartą per trejus metus</span><p>Elektrinių grandinių izoliacijos varžos patikra; objekto administracijos parengtos techninės dokumentacijos peržiūra (arba pasikeitus eksploatavimo sąlygoms).</p></li>
+        </ul>
+      </section>
+
+      <section class="doc-sec" id="komponentai">
+        <div data-reveal>
+          <h2>Sistemos komponentai</h2>
+          <p class="lead">Ką sudaro gaisrinės signalizacijos sistema ir kaip kiekviena jos dalis prižiūrima pagal eksploatavimo taisykles.</p>
+        </div>
+        <div class="card-grid pg-alarm-comp">
+          <article class="card" data-reveal style="--i:0">
+            <span class="ic-wrap"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3>Dūminiai detektoriai</h3>
+            <p>Automatiškai aptinka dūmus saugomoje patalpoje. Pagal eksploatavimo taisykles dūmų ir kombinuoti signalizatoriai tikrinami ne rečiau kaip kartą per mėnesį. Autonominiai dūmų detektoriai gali būti įrengti gyvenamuosiuose namuose, butuose, ligonių palatose, viešbučių ir poilsio įstaigų kambariuose bei kitose patalpose, kuriose nuolat būna žmonės; juos galima jungti į signalizacijos tinklą, tačiau negalima naudoti gaisrinės automatikos valdymo impulsams formuoti.</p>
+          </article>
+          <article class="card" data-reveal style="--i:1">
+            <span class="ic-wrap"><svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></span>
+            <h3>Temperatūriniai (šiluminiai) detektoriai</h3>
+            <p>Reaguoja į temperatūros pokytį patalpoje. Daugkartinio veikimo šiluminiai signalizatoriai tikrinami ne rečiau kaip kartą per metus kilnojamu bandymo prietaisu - šilumos šaltiniu.</p>
+          </article>
+          <article class="card" data-reveal style="--i:0">
+            <span class="ic-wrap"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg></span>
+            <h3>Liepsnos detektoriai</h3>
+            <p>Skirti liepsnos židiniams aptikti. Signalizacijos darbas tikrinamas perduodant pavojaus signalą šilumos, dūmų arba šviesos šaltiniais pagal įrenginio eksploatavimo instrukciją.</p>
+          </article>
+          <article class="card" data-reveal style="--i:1">
+            <span class="ic-wrap"><svg class="ic" aria-hidden="true"><use href="#i-tools"/></svg></span>
+            <h3>Rankiniai gaisro pavojaus mygtukai</h3>
+            <p>Leidžia žmogui rankiniu būdu įjungti pavojaus signalą. Pagal taisykles rankiniai signalizatoriai turi būti su apsauginiu stiklu, o jų įrengimo vietos - apšviestos; gedimo ar remonto atveju ant mygtuko pakabinama lentelė su atitinkamu užrašu. Siūlomi modeliai: ROP63 (IP30) ir ROP63H (IP65, gali būti montuojamas lauko sąlygomis) - atitinka EN-54-11 reikalavimus; BS-535(536); BS-7002 (IP40, atitinka EN 54 normas).</p>
+          </article>
+          <article class="card" data-reveal style="--i:0">
+            <span class="ic-wrap"><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg></span>
+            <h3>Signaliniai įrenginiai: sirenos ir blykstės</h3>
+            <p>Vidinės sirenos, blykstės ir lauko sirenos su blykste įspėja netoliese esančius darbuotojus ir gyventojus apie gaisro pavojų. Garso signalai apie gaisrą savo tonu turi skirtis nuo signalų apie gedimą. Išorinei garso signalizacijai naudojami elektros skambučiai ar sirenos iki 20 W, montuojami pastato fasadinėje pusėje ne žemiau kaip 2,75 m aukštyje su apsaugine armatūra. Siūlomi modeliai: BS-531, SF 120, SF 200, BS 595, SF 105, BS 525.</p>
+          </article>
+          <article class="card" data-reveal style="--i:1">
+            <span class="ic-wrap"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span>
+            <h3>Priėmimo kontrolinis prietaisas (centralė)</h3>
+            <p>Priima detektorių ir mygtukų signalus ir atskiria signalus apie gaisrą nuo signalų apie gedimą. Centralė montuojama patalpoje, kurioje budima ištisą parą (arba signalai perduodami į tokią patalpą), 0,8-1,8 m aukštyje ant stovo ar sienos, numatant ne mažesnę kaip 10 % spindulių (kilpų) atsargą; prie priėmimo aparato laikoma priežiūros ir kontrolės instrukcija.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="doc-sec" id="nuotraukos">
+        <div data-reveal>
+          <h2>Nuotraukos</h2>
+          <p class="lead">Įranga, kurią montuojame ir tikriname: centralės, detektoriai, rankiniai mygtukai ir sirenos.</p>
+        </div>
+        <div class="pg-alarm-gallery">
+          <figure class="" data-reveal style="--i:0"><img src="assets/img/geslita/Gaisrine_signalizacija_bentel_J424.jpg" alt="Gaisrinės signalizacijos centralė Bentel J424" loading="lazy"><figcaption>Centralė Bentel J424</figcaption></figure>
+          <figure class="" data-reveal style="--i:1"><img src="assets/img/geslita/Priesgaisrines_signalizacijos_patikra.jpg" alt="Gaisrinės signalizacijos įranga: centralės, rankinis mygtukas, sirenos ir dūmų detektorius" loading="lazy"><figcaption>Signalizacijos patikra</figcaption></figure>
+          <figure class="wide" data-reveal style="--i:2"><img src="assets/img/geslita/Gaisrines_signalizacijos_patikra_komplektas.jpg" alt="Gaisrinės signalizacijos komplektas: dūmų detektoriai, rankiniai mygtukai, centralė ir sirenos" loading="lazy"><figcaption>Patikros komplektas</figcaption></figure>
+          <figure class="thumb" data-reveal style="--i:0"><img src="assets/img/katalogas/gaisro-pavojaus-mygtukai--image001.jpg" alt="Ranka valdomas gaisro pavojaus signalizavimo įtaisas ROP63" loading="lazy"><figcaption>Mygtukas ROP63</figcaption></figure>
+          <figure class="thumb" data-reveal style="--i:1"><img src="assets/img/katalogas/gaisrines-sirenos--image007.jpg" alt="Garso skambutis BS 595" loading="lazy"><figcaption>Garso skambutis BS 595</figcaption></figure>
+          <figure class="thumb" data-reveal style="--i:2"><img src="assets/img/katalogas/dumu-detektoriai--image004.jpg" alt="Autonominis dūmų detektorius SPD-3.4" loading="lazy"><figcaption>Dūmų detektorius SPD-3.4</figcaption></figure>
+          <figure class="wide wide-b" data-reveal style="--i:0"><img src="assets/img/geslita/Gaisrine_signalizacija_remontas.jpg" alt="Gaisrinės signalizacijos centralės plokštė remonto metu" loading="lazy"><figcaption>Centralės remontas</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="doc-sec" id="taisykles">
+        <div data-reveal>
+          <h2>Eksploatavimo taisyklės</h2>
+          <p class="lead">Gaisrinės signalizacijos automatikos eksploatavimo taisyklės: svarbiausi reikalavimai objekto vadovui, atsakingam asmeniui ir budėtojams.</p>
+        </div>
+        <div class="card pg-alarm-rules" data-reveal>
+          <h3>Svarbiausia trumpai</h3>
+          <ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Už eksploatavimo taisyklių vykdymą objekte atsako jo vadovas. Administracijos įsakymu ar potvarkiu turi būti paskirtas asmuo, atsakingas už įrenginio eksploatavimą, remontą ir techninę priežiūrą, ir budėtojas, prižiūrintis įrenginį ištisą parą (jei signalizacija įjungta į priežiūros organizacijos centralizuotą stebėjimo pultą - tik objekto darbo metu).</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Jei objektas nepajėgia pats organizuoti techninės priežiūros ištisą parą, privalu sudaryti sutartį su specializuota priežiūros organizacija, turinčia licenciją šiems darbams. Sutartis nesumažina objekto vadovo (darbdavio) atsakomybės už įrenginio eksploatavimą.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Remonto ir techninės priežiūros darbus gali atlikti tik atestuoti asmenys; atliktų darbų kokybę visais atvejais tikrina už įrenginio eksploatavimą atsakingas asmuo.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Pasibaigus garantiniam terminui, įrenginių būklės vidinė apžiūra atliekama kartą per metus, o įrenginių veikimas tikrinamas kartą per mėnesį. Dūmų ir kombinuoti signalizatoriai tikrinami ne rečiau kaip kartą per mėnesį, daugkartinio veikimo šiluminiai - ne rečiau kaip kartą per metus.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Signalizacijos darbo patikrinimo rezultatai registruojami patikrinimų apskaitos žurnale. Kiekvienam įrenginio tipui sudaromas techninės priežiūros darbų reglamentas, o jo vykdymas fiksuojamas žurnale.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Kiekvienas gedimas ar nepatikimo veikimo atvejis turi būti ištirtas ir užfiksuotas gedimų apskaitos žurnale (1 priedas). Apie įrenginio suveikimo atvejus ir gedimus laiku informuojami valstybinės priešgaisrinės priežiūros organai (2 priedas).</span></li></ul>
+          <details class="acc" >
+  <summary>Dar 8 reikalavimai<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Pastebėjus gedimą, nedelsiant pranešama atsakingam asmeniui ir imamasi priemonių jam pašalinti. Sugedusio signalizatoriaus negalima keisti kitu panašaus tipo ar veikimo principo signalizatoriumi arba užtrumpinti spindulio - jo vietoje montuojamas analogiškas veikiantis signalizatorius. Ant sugedusio ar remontuojamo rankinio mygtuko pakabinama lentelė su užrašu.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Jei reglamentiniams darbams įrenginį reikia išjungti, objekto administracija privalo užtikrinti saugomų patalpų priešgaisrinę saugą; jei darbai trunka ilgiau nei numatyta reglamente, informuojami teritoriniai valstybinės priešgaisrinės priežiūros organai.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Objekte laikoma ne mažesnė kaip 10 % signalizatorių atsarga. Priėjimas prie signalizatorių turi būti laisvas, vietos apšviestos, iki sandėliuojamų medžiagų - ne mažiau kaip 0,6 m, šalia neturi būti šildymo prietaisų. Remonto metu signalizatoriai uždengiami nuo tinko ir dažų.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Vienoje patalpoje įrengiami ne mažiau kaip du automatiniai signalizatoriai; vienas leidžiamas tik tada, kai įranga atitinka EN-54 standartų seriją ir yra aprobuota bandomojoje priešgaisrinėje laboratorijoje.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Priėmimo kontroliniai prietaisai (centralės) montuojami patalpoje, kurioje budima ištisą parą, arba signalai apie gaisrą ir gedimus perduodami į tokią patalpą. Prie priėmimo aparato laikoma priežiūros ir kontrolės instrukcija; aparatūra ir spintos užplombuojamos.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Atsakingas asmuo privalo turėti techninę dokumentaciją: projektinius ir vykdomuosius brėžinius, priėmimo eksploatuoti aktus, prietaisų pasus, eksploatavimo instrukciją, priežiūros reglamentą ir grafiką, priežiūros ir remonto, gedimų ir budėtojų kaitos žurnalus, pareigybines instrukcijas ir paskyrimo įsakymo kopiją. Žurnalų lapai susiuvami, numeruojami ir antspauduojami; dokumentacija peržiūrima ne rečiau kaip kartą per trejus metus.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Aptarnaujantysis personalas ir budėtojai mokomi pagal objekto vadovo patvirtintą programą, jų žinios tikrinamos kartą per metus ir surašomos į žurnalą (3 priedas). Darbuotojai (gyventojai) instruktuojami, ką daryti pradėjus veikti gaisrinei automatikai.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><span class="ltx">Draudžiama naudoti užsienio gamybos gaisrinės automatikos įrangą be Lietuvos Respublikoje pripažinto atitikties dokumento. Įžeminimų elektros varža tikrinama kartą per metus, elektrinių grandinių izoliacijos varža - kartą per trejus metus.</span></span></li></ul></div>
+</details>
+        </div>
+        <h3 class="pg-alarm-h3">Taisyklių skyriai</h3>
+        <div data-reveal>
+<details class="acc" >
+  <summary>1. Bendrieji reikalavimai<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p><span class="ltx">1.1. Taisyklės nustato automatinio gaisrų gesinimo, gaisrinės, gaisrinės-apsauginės signalizacijos ir dūmų šalinimo (toliau - gaisrinės automatikos) įrenginių, veikiančių įvairios paskirties ir visų nuosavybės formų objektuose, techninio eksploatavimo reikalavimus; jos privalomos Lietuvos Respublikos teritorijoje. 1.2. Kartu privaloma vykdyti galiojančių standartų, statybos normų, technologinių sąlygų, elektros įrenginių įrengimo ir eksploatavimo taisyklių bei kitų priešgaisrinę saugą reglamentuojančių aktų reikalavimus.</span></p><p>1.3. Objektų vadovai gali parengti savas gaisrinės automatikos priežiūros taisykles, suderintas su valstybinės priešgaisrinės priežiūros organais, tačiau jos negali sumažinti šių taisyklių reikalavimų. 1.4. Įrenginiai montuojami ten, kur to reikalauja galiojančios respublikinės statybos normos, ir eksploatuojami jų laikantis. 1.5. Taisyklės netaikomos kilnojamiems įrenginiams specialios paskirties bei sprogstamų medžiagų gamybos ir sandėliavimo objektuose.</p><p>1.6. Atsiradus tobulesniems įrenginiams, priešgaisrinės priežiūros organai, atsižvelgdami į objekto pavojingumą, gali reikalauti juos įdiegti kapitalinio remonto ar rekonstrukcijos metu. 1.7. Įrenginius aptarnaujančiam personalui pagal šias taisykles ir projektuotojų bei gamintojų dokumentaciją parengiamos instrukcijos, kurias tvirtina objekto vadovai. 1.8. Sumontuoti įrenginiai turi atitikti projektą ir statybos normas; keisti įrenginio konstrukciją, saugomų patalpų suplanavimą ar permontuoti įrenginius leidžiama tik suderinus su projektavimo organizacija ir priešgaisrinės priežiūros organais.</p><p><span class="ltx">1.9. Už taisyklių vykdymą objekte atsako jo vadovas. 1.10. Atsakingas už įrenginio eksploatavimą asmuo, budėtojai ir aptarnaujantysis personalas privalo laikytis taisyklių ir atsako pagal vadovybės nustatytas pareigas. 1.11. Pažeidę taisykles asmenys atsako Lietuvos Respublikos įstatymų nustatyta tvarka. 1.12. Kiekvienas įrenginio gedimas ar nepatikimo veikimo atvejis ištiriamas ir užfiksuojamas gedimų apskaitos žurnale (1 priedas).</span></p></div>
+</details><details class="acc" >
+  <summary>2. Aptarnaujančiojo personalo ir budėtojų pareigos<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>2.1. Kiekviename objekte administracijos įsakymu ar potvarkiu paskiriami: asmenys, atsakingi už įrenginių eksploatavimą, remontą ir techninę priežiūrą, ir budėtojas, prižiūrintis įrenginį ištisą parą. Jei signalizacija įjungta į priežiūros organizacijos centralizuotą stebėjimo pultą, budėtojas skiriamas tik objekto darbo metu.</p><p>2.2. Objektas, nepajėgiantis organizuoti techninės priežiūros ištisą parą, privalo sudaryti sutartį su licencijuota specializuota priežiūros organizacija. 2.3. Tokia sutartis nesumažina objekto vadovų (darbdavių) atsakomybės už įrenginio eksploatavimą. 2.4. Atliktų darbų kokybę visais atvejais tikrina už įrenginio eksploatavimą atsakingas asmuo.</p><p>2.5. Atsakingas asmuo privalo: užtikrinti planinio remonto ir techninės priežiūros darbų atlikimą ir kokybę; kontroliuoti, kad juos atliktų atestuoti asmenys pagal saugos darbe, įrenginių eksploatavimo, elektros įrenginių ir slėgiminių indų taisykles; garantuoti įrenginio veikimą; mokyti personalą ir budėtojus; instruktuoti darbuotojus (gyventojus), ką daryti suveikus gaisrinei automatikai; parengti eksploatavimo dokumentaciją ir kontroliuoti jos pildymą; laiku informuoti valstybinės priešgaisrinės priežiūros organus apie suveikimus ir gedimus (2 priedas). Jis taip pat informuoja gamintoją ar pardavėją apie nekokybiškus ir standartų neatitinkančius prietaisus, montavimo organizaciją - apie nekokybiškus darbus ar nesuderintus nukrypimus nuo projekto, priežiūros organizaciją - apie ne laiku atliktą ar nekokybišką priežiūrą; visais atvejais informuojami ir teritoriniai priešgaisrinės priežiūros organai.</p><p>2.6. Aptarnaujantysis personalas privalo žinoti įrenginio veikimo principą ir vykdyti šių taisyklių, eksploatavimo instrukcijos, gamintojo dokumentacijos, „Vartotojų elektros įrenginių techninio eksploatavimo taisyklių“, „Elektros įrenginių eksploatavimo darbų saugos taisyklių“ ir „Slėgiminių indų įrengimo ir saugaus eksploatavimo taisyklių“ reikalavimus. 2.7. Pastebėję pažeidimus ar gedimus, personalas ir budėtojai nedelsdami praneša atsakingam asmeniui ir imasi priemonių gedimams pašalinti. 2.8. Personalas atlieka reglamentinius priežiūros darbus, remontą ir pildo eksploatavimo dokumentaciją.</p><p><span class="ltx">2.9. Draudžiama naudoti užsienio gamybos gaisrinės automatikos įrangą be Lietuvos Respublikoje pripažinto atitikties dokumento ir atlikti darbus, trikdančius normalų įrenginio darbo režimą. 2.10. Kai reglamentiniams darbams įrenginį reikia išjungti, administracija privalo užtikrinti saugomų patalpų priešgaisrinę saugą; darbams užtrukus ilgiau nei numatyta reglamente, informuojami teritoriniai priešgaisrinės priežiūros organai.</span></p><p>2.11. Budėtojai privalo žinoti įrenginių technines charakteristikas, veikimo principus ir patalpas, kuriose jie sumontuoti; kaip patikrinti įrenginio veikimą; kokių veiksmų imtis suveikus gaisrinei automatikai; dokumentacijos vedimo tvarką; savo pareigybinių ir eksploatavimo instrukcijų reikalavimus.</p></div>
+</details><details class="acc" >
+  <summary>3. Aptarnaujančiojo personalo ir budėtojų parengimas<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>3.1. Už personalo ir budėtojų parengimą atsako paskirtas už įrenginio eksploatavimą atsakingas darbuotojas. 3.2. Prieš pradėdamas dirbti savarankiškai, personalas turi įgyti teorinių žinių ir praktinių įgūdžių, susipažinti su šiomis taisyklėmis, projektine ir eksploatavimo dokumentacija, gamintojo reikalavimais, priežiūros ir remonto tvarka, pareigybinėmis instrukcijomis, „Elektros įrenginių įrengimo taisyklėmis“, „Vartotojų elektros įrenginių techninio eksploatavimo taisyklėmis“, „Elektros įrenginių eksploatavimo darbų saugos taisyklėmis“ ir „Slėgiminių indų įrengimo ir saugaus eksploatavimo taisyklėmis“.</p><p>3.3. Mokymas vykdomas pagal objekto vadovo patvirtintą programą. 3.4. Kartą per metus žinias tikrina vadovo įsakymu paskirta komisija; rezultatai surašomi į žurnalą (3 priedas). 3.5. Specializuotų priežiūros organizacijų personalas mokomas tų organizacijų nustatyta tvarka, o atsakingas asmuo supažindina jį su objekto specifiniais reikalavimais. 3.6. Taisykles pažeidusių asmenų žinios tikrinamos pakartotinai ir tai pažymima žurnale (3 priedas).</p></div>
+</details><details class="acc" >
+  <summary>4. Techninė dokumentacija<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>4.1. Atsakingas už įrenginio eksploatavimą asmuo privalo turėti: 1) projektinius ir vykdomuosius brėžinius; 2) priėmimo eksploatuoti aktus; 3) prietaisų ir įrangos pasus; 4) sumontuotos įrangos, mazgų ir prietaisų sąrašą; 5) gesinimo įrenginių balionų pripildymo pasus; 6) eksploatavimo instrukciją; 7) techninės priežiūros reglamentinių darbų sąrašą; 8) priežiūros grafiką; 9) priežiūros ir remonto apskaitos žurnalą (4 priedas); 10) budėtojų kaitos žurnalą (9 priedas); 11) budėtojų darbo grafiką; 12) gedimų apskaitos žurnalą (1 priedas); 13) gesinančiu mišiniu pripildytų balionų svorio registracijos žurnalą; 14) pareigybines instrukcijas; 15) įsakymo ar potvarkio dėl 2.1 punkte nurodytų asmenų paskyrimo kopiją.</p><p>4.2. 1, 3 ir 4 papunkčių dokumentus parengia montavimo organizacija, 5 - balionus pripildžiusi organizacija, 7, 8, 9, 12 ir 13 - objekto administracija (kai priežiūrą atlieka specializuota organizacija - kartu su ja), 2, 6, 10, 11, 14 ir 15 - objekto administracija. 4.3. Žurnalų lapai susiuvami, numeruojami, antspauduojami ir tvirtinami atsakingo asmens parašu. 4.4. Dokumentacijos sąrašą galima keisti pagal objekto sąlygas, suderinus su priešgaisrinės priežiūros organais. 4.5. Objekto parengta dokumentacija peržiūrima ne rečiau kaip kartą per trejus metus arba pasikeitus eksploatavimo sąlygoms.</p></div>
+</details><details class="acc" >
+  <summary>5. Gaisro gesinimo įrenginiai, gesinimo stotys ir siurblinės<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>5.1. Gesinimo įrenginiai pagal gesinimo medžiagas skirstomi į vandens, putų, vandens su papildomais komponentais ir dujų įrenginius. 5.2. Gesinant vandeniu ar putomis patalpoje, kurioje yra įrengimų su atviromis elektrai laidžiomis dalimis, įtampa automatiškai išjungiama iki gesinimo pradžios. 5.3. Kiekvienai įrenginio sekcijai įrengiamas atskiras valdymo mazgas.</p><p>5.4. Purkštukai (sprinkleriai, drenčeriai) vietose, kur galimi mechaniniai pažeidimai, apsaugomi nekeičiant drėkinimo ploto. 5.5. Sprinklerio lydžiosios dalies lydymosi ar ampulės sprogimo temperatūra turi atitikti projektą. 5.6. Vienoje patalpoje purkštukų angos - vienodo skersmens. 5.7. Purkštukai turi būti švarūs, neįtrūkę, be įlenkimų; remonto metu apsaugomi nuo dažų ir tinko. 5.8. Draudžiama vietoje suveikusių ar nekokybiškų purkštukų montuoti kamščius ir sandėliuoti medžiagas arčiau kaip 0,9 m nuo purkštukų. 5.9. Laikoma ne mažesnė kaip 10 % purkštukų atsarga.</p><p>5.10. Vamzdynai dažomi: su vandeniu - žalia; su oru - žalia iki valdymo mazgo, mėlyna už jo; su vandeniu ir oru - žalia iki mazgo, už jo mėlyna ir žalia ruožais iki 2 m; su putokšlio mišiniu - žalia su rudais 70 mm pločio žiedais kas 4000 mm; su dujomis - geltona. Dažomi visi išoriniai paviršiai, išskyrus sriegius ir flanšų sandarinimo paviršius. 5.11. Agresyvioje aplinkoje naudojami jai atsparūs dažai; kultūros objektuose vamzdynus galima derinti prie interjero.</p><p>5.12. Draudžiama naudoti vamzdynus įrangai kabinti, sprinklerinės sistemos vidaus gaisrinius čiaupus - ne gesinimo tikslams, jungti prie vamzdynų gamybinius įrengimus ar sanitarinius prietaisus, įrengti uždaromąją armatūrą ir flanšinius sujungimus maitinimo ir paskirstymo vamzdynuose. 5.13. Priėjimų prie valdymo mazgų užgriozdinti negalima. 5.14. Prie kiekvieno valdymo mazgo - lentelė su saugomų patalpų pavadinimais, purkštukų skaičiumi, tipu ir išdėstymo schema. 5.15. Mazgų sklendės užplombuojamos. 5.16. Mazgo patalpa turi avarinį apšvietimą ir rakinama; raktus turi personalas ir budėtojai. 5.17. Ant durų - užrašas „Gaisro gesinimo įrenginio valdymo mazgas“ (GGĮVM).</p><p>5.18. Siurblinė turi telefono ryšį su gaisriniu postu ar kita ištisą parą budima patalpa, prie įėjimo - nuolat įjungta švieslentė „Gesinimo stotis“. 5.19. Joje laikomos aiškios įrenginių išdėstymo ir elektrinio valdymo schemos. 5.20. Patalpa rakinama, raktus turi personalas ir budėtojai. 5.21. Įvadinės ir valdymo sklendės, automatikos ir signalizacijos spintos plombuojamos. 5.22. Gali būti įrengta apsauginė signalizacija su signalais į budėtojų patalpą. 5.23. Pašalinių medžiagų ir įrengimų laikyti draudžiama.</p><p>5.24. Vandens ir putų gesinimo įrenginių elektrinis valdymas privalo garantuoti pagrindinių ir rezervinių siurblių, uždaromosios armatūros ir drenažinio siurblio automatinį paleidimą, vietinį ir distancinį valdymą, automatinį perjungimą prie rezervinio įvado dingus įtampai, valdymo grandinių ir avarinio lygio automatinę kontrolę, garso ir šviesos signalizacijos kontrolę bei valdymo impulsų formavimą kitoms objekto sistemoms. 5.25. Siurblių vietinis valdymas įrengiamas siurblinėje; gaisrinius siurblius leidžiama valdyti ir iš budėtojų patalpos. 5.26. Į automatinį režimą įrenginiai grąžinami iš gaisrinio posto ar kitos ištisą parą budimos patalpos.</p><p>5.27. Siurblinėje įrengiama šviesos signalizacija apie įtampą įvaduose, automatinio paleidimo išjungimą, valdymo ir sklendžių grandinių gedimus bei užsikirtimus (nurodant kryptį) ir avarinį lygį rezervuaruose. 5.28. Ištisą parą budimoje patalpoje įrengiama šviesos ir garso signalizacija apie gaisrą (iššifruojant kryptis), siurblių paleidimą, įrenginio darbo pradžią ir gesinimo kryptį, automatinio paleidimo išjungimą, gedimus ir avarinį lygį (bendri signalai) bei šviesos signalizacija apie įtampą įvaduose, garso signalizacijos išjungimą ir atidarytas sklendes. 5.29. Garso signalai apie gaisrą ir įrenginių suveikimą tonu privalo skirtis nuo signalų apie gedimus.</p><p>5.30. Putų įrenginiams laikoma dviguba putokšlio atsarga; jo kokybė kartą per metus tikrinama bandomojoje priešgaisrinėje laboratorijoje. 5.31. Dujų įrenginiui numatoma 100 % dujų atsarga, laikoma gesinimo stotyje. 5.32. Balionai su gesinimo medžiaga ir suspaustu oru įrengiami ne arčiau kaip 1 m nuo šilumos šaltinio. 5.33. Prie kiekvieno paskirstymo įrenginio - lentelė su saugomos patalpos pavadinimu ir vieta. 5.34. Dujų gesinimo stotyje laikomos pirmosios pagalbos priemonės ir izoliuojantys kvėpavimo aparatai ar dujokaukės. 5.35. Rankinio paleidimo įtaisai plombuojami. 5.36. Dujomis saugomose patalpose iškabinama veiksmų ir evakuacijos instrukcija gavus signalą apie įrenginio suveikimą.</p><p>5.37. Dujų gesinimo įrenginių valdymas privalo garantuoti automatinį ir distancinį paleidimą, jo išjungimą ir atstatymą, perjungimą į rezervinį maitinimą, piropatronų grandinių ir slėgio kontrolę, signalizacijos kontrolę ir garso signalo išjungimą. 5.38. Automatinio paleidimo įtaisai įrengiami ištisą parą budimoje patalpoje. 5.39. Prie įėjimo į saugomas patalpas - šviesos ir garso signalizacija apie gesinimo medžiagos tiekimą ir automatinio paleidimo išjungimą. 5.40. Stotyje - šviesos signalizacija apie įtampą įvaduose, slėgio kritimą sužadinimo vamzdyne 0,05 MPa ir paleidimo balionuose 0,2 MPa, piropatronų grandinių gedimus ir įrenginio paleidimą. 5.41. Budėtojų patalpoje - šviesos ir garso signalizacija apie gaisrą, gesinimo medžiagos patekimą į saugomą patalpą ir gedimus bei šviesos signalizacija apie įtampą, automatinio paleidimo išjungimą ir garso signalizacijos išjungimą.</p><p>5.42. Dujų balionai sveriami ne rečiau kaip kartą per ketvirtį (jei gamintojas nenurodo kitaip); masei sumažėjus 10 %, balionai pripildomi iš naujo. 5.43. Gesinimo įrenginiai įžeminami; įžeminimų varža tikrinama kartą per metus, grandinių izoliacijos varža - kartą per trejus metus. 5.44. Gesinimo įrenginių veikimas tikrinamas kartą per metus.</p></div>
+</details><details class="acc" >
+  <summary>6. Gaisrinė, gaisrinė-apsauginė signalizacija<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>6.1. Signalizacijos įrenginiai ir signalizatoriai (davikliai, detektoriai) turi atitikti galiojančius standartus, technines sąlygas, gamintojo ir patalpų reikalavimus bei būti be defektų. 6.2. Įrenginiai turi būti nuolat veikiantys ir tvarkingi; veikimas tikrinamas pagal gamintojo instrukcijas, o priežiūros ir kontrolės instrukcija laikoma prie priėmimo aparato, lengvai prieinamoje vietoje. Kiekvienam įrenginio tipui sudaromas techninės priežiūros reglamentas, jo vykdymas fiksuojamas žurnale.</p><p>6.3. Garantinio taisymo metu eksploatuojančiai įmonei draudžiama pažeisti plombas ant prietaisų. 6.4. Signalizatoriai vietose, kur galimi mechaniniai pažeidimai, apsaugomi jiems poveikio nedarančia armatūra. 6.5. Signalizatoriai turi būti švarūs; remonto metu uždengiami nuo tinko ir dažų, o baigus darbus apsaugos nuimamos. 6.6. Draudžiama vietoj sugedusių signalizatorių naudoti kitus panašaus tipo ar veikimo principo signalizatorius arba vietoje jų užtrumpinti spindulį; nuėmus signalizatorių bandymams ar dėl kitos priežasties, jo vietoje montuojamas analogiškas veikiantis.</p><p>6.7. Priėjimas prie signalizatorių turi būti laisvas, vietos pakankamai apšviestos; atstumas iki sandėliuojamų medžiagų ir įrangos - ne mažesnis kaip 0,6 m; šalia neturi būti šildymo prietaisų. 6.8. Ant perforuotų lubų, per kurias tiekiamas oras, lubos aplink signalizatorius uždengiamos 0,5 m spinduliu. 6.9. Laidai ir kabeliai turi būti patikimai pritvirtinti, be įtrūkimų, įlinkimų ir izoliacijos pažeidimų. 6.10. Objekte laikoma ne mažesnė kaip 10 % signalizatorių atsarga.</p><p>6.11. Automatiniai signalizatoriai parenkami pagal technines charakteristikas ir standartų reikalavimus. 6.12. Vienoje patalpoje įrengiami ne mažiau kaip du automatiniai signalizatoriai. 6.13. Vieną signalizatorių patalpoje leidžiama įrengti, jei pastato įranga atitinka EN-54 standartų serijos ir patalpų išplanavimo reikalavimus bei yra aprobuota Priešgaisrinės apsaugos departamento bandomojoje priešgaisrinėje laboratorijoje. Adresinių signalizatorių su programiniu valdymu ir savikontrole vieną spindulį (kilpą) leidžiama tiesti per kelis aukštus neribojant patalpų skaičiaus; signalizatorių skaičių kilpoje lemia įrangos parametrai, paliekant 10 % atsargą papildomiems signalizatoriams.</p><p>6.14. Autonominiai dūmų detektoriai gali būti įrengti gyvenamuosiuose namuose, butuose, ligonių palatose, viešbučių, motelių, sanatorijų, poilsio ir turizmo įstaigų kambariuose bei kitose visuomeninės paskirties patalpose, kuriose nuolat būna žmonės ir gali išgirsti pavojaus signalą. 6.15. Juos galima jungti į signalizacijos tinklą, bet negalima naudoti gaisrinės automatikos valdymo impulsams formuoti. 6.16. Įrengiami pagal patvirtintą „Autonominių dūmų detektorių įrengimo instrukciją“.</p><p>6.17. Rankiniai gaisriniai signalizatoriai turi būti su apsauginiu stiklu, o jų vietos apšviestos. 6.18. Sugedus ar remontuojant rankinį signalizatorių, ant jo pakabinama lentelė su atitinkamu užrašu.</p><p>6.19. Signalizacijos darbas tikrinamas perduodant pavojaus signalą šilumos, dūmų ar šviesos šaltiniais, paspaudžiant signalizatoriaus mygtuką ir imituojant mechaninius pažeidimus (grandinės nutrūkimą, trumpą jungimą) pagal įrenginio eksploatavimo instrukciją; rezultatai registruojami patikrinimų apskaitos žurnale. 6.20. Pasibaigus garantiniam terminui, įrenginių būklės vidinė apžiūra atliekama kartą per metus, o veikimas tikrinamas kartą per mėnesį. 6.21. Daugkartinio veikimo šiluminiai signalizatoriai tikrinami ne rečiau kaip kartą per metus kilnojamu bandymo prietaisu - šilumos šaltiniu; dūmų ir kombinuoti - ne rečiau kaip kartą per mėnesį.</p></div>
+</details><details class="acc" >
+  <summary>7. Aparatūra, įrengimai ir jų išdėstymas budėtojų patalpoje<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>7.1. Montuojant signalizacijos stotis ir koncentratorius, numatoma ne mažesnė kaip 10 % spindulių atsarga. 7.2. Į priėmimo kontrolinius prietaisus ir koncentratorius, atskiriančius gaisro ir gedimo signalus, jungiama ne daugiau kaip 10 spindulių, jei jais nevaldomi technologiniai įrenginiai, automatinio gesinimo, dūmų šalinimo ir pranešimo apie gaisrą sistemos.</p><p>7.3. Stotys, koncentratoriai ir priėmimo kontroliniai prietaisai montuojami patalpose, kuriose budima ištisą parą. 7.4. Išimties tvarka - patalpose be budėtojų, jei signalai apie gaisrą ir gedimus perduodami į kitą ištisą parą budimą patalpą su ryšio kanalais pranešti apie gaisrą. 7.5. Patalpose be budėtojų numatomos priemonės, kad pašaliniai nepatektų prie prietaisų.</p><p>7.6. Aparatūrą draudžiama montuoti sandėliuose; ji rengiama sprogimo ir gaisro atžvilgiu nepavojingose patalpose ant konstrukcijų, kurių ugnies plitimo riba nulinė. Ant degių konstrukcijų - tik apsaugotų ne plonesne kaip 1 mm metaline arba ne plonesne kaip 10 mm nedegia lakštine medžiaga, 100 mm didesne už įrenginio gabaritus; atstumas iki degių lubų - ne mažesnis kaip 1 m. 7.7. Tarp greta išdėstytų stočių ir prietaisų - ne mažiau kaip 50 mm. 7.8. Įrengimai ir valdymo aparatai montuojami 0,8-1,8 m aukštyje ant stovo arba sienos.</p><p>7.9. Budėtojų patalpa - ne mažesnė kaip 15 m², pirmame arba cokoliniame aukšte, su tiesioginiu išėjimu į lauką; temperatūra 18-25 °C, santykinis drėgnumas - ne didesnis kaip 80 %. 7.10. Joje turi būti natūralus apšvietimas ir ne mažiau kaip 150 lx dienos lempų arba 100 lx kaitinimo lempų apšvietimas; avarinis apšvietimas - ne mažiau kaip 10 % pagrindinio, esant nepatikimam tinklui - iš akumuliatorių. 7.11. Patalpose be budėtojų temperatūra ir drėgnumas turi atitikti įrenginių pasų, standartų ir instrukcijų reikalavimus. 7.12. Budėtojų patalpoje turi būti telefono ryšys. 7.13. Garso signalai apie gaisrą tonu turi skirtis nuo signalų apie gedimą. 7.14. Akumuliatorinės baterijos įrengiamos atskiroje patalpoje.</p><p>7.15. Aparatūros korpusai įžeminami; apsauginio įžeminimo varža - ne didesnė kaip 10 omų. Įžeminti galima nuo vandentiekio vamzdžių (dujų ir šildymo vamzdynus naudoti draudžiama) arba nuo patikimai su žeme sujungtų metalinių pastato konstrukcijų. 7.16. Įžeminimų ir izoliacijos varža tikrinama pagal 5.43 punktą (kartą per metus ir kartą per trejus metus). 7.17. Aparatūra ir spintos plombuojamos personalo plombomis. 7.18. Prijungimo prie abonentinės telefono linijos vieta apsaugoma nuo pašalinių. 7.19. Budėtojų patalpoje laikomas saugomų patalpų sąrašas su pavadinimais ir vietomis, sudėtinguose objektuose - teritorijos ir pastatų schemos.</p></div>
+</details><details class="acc" >
+  <summary>8. Išorinė šviesos ir garso signalizacija<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>8.1. Išorinės signalizacijos tikslas - suformuoti aliarmo signalą ir pranešti netoliese esantiems darbuotojams bei gyventojams apie gaisro pavojų. 8.2. Šviesos signalizacijai naudojama iki 25 W elektros lempa, įrengiama saugomo pastato fasadinėje pusėje ne žemiau kaip 2,75 m nuo žemės, uždengta raudonai nudažytu stikliniu gaubtu apsauginėje armatūroje ant metalinės gembės arba sienos. 8.3. Garso signalizacijai naudojami elektros skambučiai ar sirenos iki 20 W, montuojami fasadinėje pusėje ne žemiau kaip 2,75 m aukštyje su apsaugine armatūra; analogiška signalizacija gali būti ir pastato koridoriuose.</p></div>
+</details><details class="acc" >
+  <summary>9. Dūmų šalinimo sistemos<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>9.1. Pastatų dūmų šalinimo (priešdūminės) sistemos turi užtikrinti automatinį signalų apie gaisrą formavimą ir perdavimą budėtojams; pritekamosios ventiliacijos automatinį įjungimą ir oro tiekimą į laiptines, tambūrus-šliuzus ir liftų šachtas; ištraukiamosios ventiliacijos įjungimą ir dūmų šalinimą iš uždūmintos zonos; įrengimų darbo kontrolę su signalais į valdymo pultus; ventiliatorių distancinį paleidimą ir stabdymą; automatinį ir distancinį lifto grąžinimą į pirmą aukštą; kondicionavimo ir vėdinimo sistemų išjungimą; įspėjimą apie gaisro pavojų automatiškai įjungiant šviesos ir garso signalizaciją.</p><p>9.2. Elektrinis valdymas turi leisti automatinį režimą perjungti į rankinį; perjungiklis montuojamas valdymo pulte. 9.3. Kai automatikos spintos ir pultai įrengti patalpoje be budėtojų, į dispečerinę ar ištisą parą budimą patalpą papildomai įvedama šviesos ir garso signalizacija apie gaisrą, gedimus ir ventiliatorių darbą (bendri signalai). 9.4. Spintose ir pultuose įrengiama šviesos ir garso signalizacija apie gaisrą (iššifruojant kryptį), kiekvieno ventiliatoriaus paleidimą, vožtuvų įjungimą (nurodant vietą), automatinio paleidimo išjungimą ir gedimus (įtampos dingimą, linijų, vožtuvų pavarų ir fiksatorių grandinių nutrūkimus, pavarų užsikirtimus - bendras signalas), taip pat šviesos signalizacija apie įtampą įvaduose, garso signalizacijos išjungimą ir pavarų valdymo grandinių gedimus.</p><p>9.5. Durys į neuždūminamas laiptines turi turėti savaiminio užsidarymo mechanizmus. 9.6. Ant automatikos spintų, pultų ir stočių turi būti informaciniai užrašai - ne pieštuku ar rašalu. 9.7. Aerodinaminiai bandymai atliekami ne rečiau kaip kartą per metus, tik kvalifikuotų specialistų; rezultatai įforminami aktu su aksonometrine schema ir pažymėtais matavimo taškais. 9.8. Matavimai atliekami ne anksčiau kaip praėjus 15 min. po ventiliatoriaus įjungimo. 9.9. Sistemos be reikalo nejunginėjamos; kiekvieno pastato pirmame aukšte iškabinama instrukcija dėl veiksmų kilus gaisrui. Prieš eksploatuojant visi asmenys instruktuojami, instruktavimas pažymimas specialiame žurnale su instruktavusio pareigūno ir instruktuojamojo parašais; žurnalas saugomas sistemą eksploatuojančioje organizacijoje.</p></div>
+</details>        </div>
+        <h3 class="pg-alarm-h3">Dokumentas</h3>
+        <ul class="doc-list" data-reveal>
+          <li><a href="https://www.geslita.lt/uploads/GAISRINĖS%20SIGNALIZACIJOS%20AUTOMATIKOS%20EKSPLOATAVIMO%20TAISYKLĖS.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><span>Gaisrinės signalizacijos automatikos eksploatavimo taisyklės (PDF)</span><span class="ic-out"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+        </ul>
+      </section>
+
+      <section class="doc-sec" id="duk">
+        <h2>Dažniausi klausimai</h2>
+        <div data-reveal>
+<details class="acc" open>
+  <summary>Kaip dažnai privaloma tikrinti gaisrinę signalizaciją?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>Kartą per metus būtina patikrinti gaisrinės signalizacijos techninę būklę, o patikros rezultatus surašyti į tam skirtą žurnalą arba atitinkamos formos aktą. Pagal eksploatavimo taisykles įrenginių veikimas papildomai tikrinamas kartą per mėnesį: dūmų ir kombinuoti signalizatoriai - ne rečiau kaip kartą per mėnesį, daugkartinio veikimo šiluminiai signalizatoriai - ne rečiau kaip kartą per metus.</p></div>
+</details><details class="acc" >
+  <summary>Kiek kainuoja gaisrinės signalizacijos patikra?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>Gaisrinės signalizacijos patikros kaina - nuo 70,00 €. Galutinė kaina priklauso nuo patalpų ploto, aukščio ir daviklių kiekio.</p></div>
+</details><details class="acc" >
+  <summary>Kokias gaisrinės signalizacijos paslaugas teikiate?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>Atliekame gaisrinės signalizacijos kabelių instaliaciją, montavimą, derinimą, programavimą, remontą ir kasmetinę patikrą.</p></div>
+</details><details class="acc" >
+  <summary>Kas objekte atsako už gaisrinės signalizacijos eksploatavimą?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>Už eksploatavimo taisyklių vykdymą objekte atsako jo vadovas. Administracijos įsakymu ar potvarkiu paskiriamas asmuo, atsakingas už įrenginio eksploatavimą, remontą ir techninę priežiūrą, bei budėtojas. Jei objektas nepajėgia organizuoti techninės priežiūros ištisą parą, sudaroma sutartis su licencijuota specializuota priežiūros organizacija, tačiau ji nesumažina objekto vadovo atsakomybės.</p></div>
+</details><details class="acc" >
+  <summary>Ką daryti pastebėjus gaisrinės signalizacijos gedimą?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>Nedelsiant pranešti už įrenginio eksploatavimą atsakingam asmeniui ir imtis priemonių gedimui pašalinti. Kiekvienas gedimas ištiriamas ir užfiksuojamas gedimų apskaitos žurnale, o apie suveikimus ir gedimus informuojami valstybinės priešgaisrinės priežiūros organai. Sugedusio signalizatoriaus negalima keisti kitu panašaus tipo ar veikimo principo signalizatoriumi arba užtrumpinti spindulio - jo vietoje montuojamas analogiškas veikiantis signalizatorius; ant sugedusio rankinio mygtuko pakabinama lentelė su užrašu.</p></div>
+</details><details class="acc" >
+  <summary>Kokie įrenginiai sudaro gaisrinės signalizacijos sistemą?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>Dūminiai, temperatūriniai ir liepsnos detektoriai, rankiniai gaisro pavojaus mygtukai ir signaliniai įrenginiai - vidinės sirenos, blykstės ir lauko sirenos su blykste. Detektorių ir mygtukų signalus priima ir gaisro bei gedimo signalus atskiria priėmimo kontrolinis prietaisas (centralė), montuojamas patalpoje, kurioje budima ištisą parą.</p></div>
+</details>        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tint pg-alarm-relsec" data-parallax-root>
+  <img class="pg-alarm-plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.15">
+  <div class="wrap">
+    <div class="card pg-alarm-rel" data-reveal>
+      <div>
+        <div class="eyebrow">Susijusios prekės</div>
+        <h2>Detektoriai, sirenos ir mygtukai iš mūsų katalogo</h2>
+        <p>Dūmų ir smalkių detektoriai, gaisrinės sirenos, gaisro pavojaus mygtukai, avarinio išėjimo šviestuvai, kibirkščių gesikliai, nedegūs audeklai, saugos rinkiniai ir darbo saugos priemonės.</p>
+        <a class="btn btn-navy" href="prekes-automatika.html">Automatikos katalogas<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <ul class="pg-alarm-rel-list">
+        <li><img src="assets/img/katalogas/dumu-detektoriai--image001.jpg" alt="Autonominis dūmų jutiklis ARTOSHKA" loading="lazy" width="64" height="64"><div><b>Autonominis dūmų jutiklis ARTOSHKA</b><span class="muted">20,33 €</span></div></li>
+        <li><img src="assets/img/katalogas/gaisrines-sirenos--image001.jpg" alt="Gaisro sirena BS-531" loading="lazy" width="64" height="64"><div><b>Gaisro sirena BS-531</b><span class="muted">33,29 €</span></div></li>
+        <li><img src="assets/img/katalogas/gaisro-pavojaus-mygtukai--image001.jpg" alt="Ranka valdomas pavojaus signalizavimo įtaisas ROP63" loading="lazy" width="64" height="64"><div><b>Ranka valdomas pavojaus signalizavimo įtaisas ROP63</b><span class="muted">34,69 €</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight"><div class="wrap"><div class="cta-inline" data-reveal>
+  <div><h2>Reikia signalizacijos patikros ar įrengimo?</h2><p>Paskambinkite arba parašykite: aptarsime patalpų plotą, daviklių kiekį ir paruošime pasiūlymą.</p></div>
+  <div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a></div>
+</div></div></section>
+</main>
+
+<footer class="site-foot">
+  <img class="plan-wm" src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo-geslita-white-s.png" alt="Geslita" width="167" height="50">
+        <p><span class="ltx">20 metų priešgaisrinės saugos patirties. Įrangos priežiūra ir prekyba, darbo saugos priemonės verslui visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+      </div>
+      <div>
+        <h2 class="foot-h">Paslaugos</h2>
+        <ul>
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra</a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai</a></li>
+          <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Prekės ir informacija</h2>
+        <ul>
+          <li><a href="prekes-gesintuvai.html">Gesintuvai</a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai</a></li>
+          <li><a href="prekes-automatika.html">Automatika ir įranga</a></li>
+          <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+          <li><a href="apie-mus.html">Apie mus</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Kontaktai</h2>
+        <ul class="foot-contact">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+37065399977">+370 653 99977</a><br><a href="tel:+37060763109">+370 607 63109</a></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@geslita.lt">info@geslita.lt</a></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Fabijoniškių g. 4A, Vilnius<br><span class="muted">Ne parduotuvė: prieš atvykdami paskambinkite</span></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span>I-V 9:00-18:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2010-2026 UAB „Geslita“. Visos teisės saugomos.</span>
+      <span><a href="kontaktai.html">Kontaktai</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

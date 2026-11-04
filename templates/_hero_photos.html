@@ -1,0 +1,31 @@
+{% import '_macros.html' as m %}
+{% set v = home.hero_variants.photos %}
+{% set cards = home.services.cards %}
+{# 2 variantas: naujos nuotraukos, keturių paslaugų mozaika, stulpeliai juda priešingomis kryptimis #}
+<section class="hero hv-photos" data-parallax-root>
+  <div class="hero-bg">
+    <div class="glow"></div>
+    <div class="plan" data-parallax="0.35"><img src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-mouse="-22"></div>
+  </div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="hero-badge hero-anim">{{ h.badge }}</p>
+      <h1>{{ h.title }}</h1>
+      <p class="lead hero-anim">{{ h.lead }}</p>
+      <div class="btn-group hero-anim">{{ m.btn(h.primary.label, h.primary.href) }}{{ m.btn(h.secondary.label, h.secondary.href, 'btn-line', '') }}</div>
+    </div>
+    <div class="hv-mosaic">
+      {% for col in [v.tiles[:2], v.tiles[2:]] %}
+      {% set ci = loop.index0 %}
+      <div class="hv-col hv-col-{{ loop.index }}" data-parallax="{{ '0.12' if ci == 0 else '-0.12' }}">
+        {% for t in col %}{% set c = cards[t.card] %}
+        <a class="hv-tile" href="{{ c.href }}">
+          <img src="{{ img(t.image) }}" alt="{{ t.alt }}" style="object-position: {{ t.pos }}" width="1000" height="1500" sizes="(max-width: 960px) 46vw, 22vw"{% if ci == 0 and loop.first %} fetchpriority="high"{% endif %}>
+          <span class="cap"><span><b>{{ c.title }}</b><small>{{ c.price_label }}: {{ c.price }}</small></span>{{ m.icon('arrow') }}</span>
+        </a>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

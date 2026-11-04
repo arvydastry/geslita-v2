@@ -1,0 +1,101 @@
+{
+  "title": "Naudinga informacija",
+  "documents": [
+    {
+      "title": "Gesintuvų skaičiaus nustatymas pagal BPST",
+      "url": "https://www.geslita.lt/uploads/Gesintuvu%20skaiciaus%20nustatymas.pdf"
+    },
+    {
+      "title": "Kaip teisingai gesinti ugnį?",
+      "url": "https://www.geslita.lt/uploads/Kaip%20gesinti.pdf"
+    },
+    {
+      "title": "Patalpų kategorijų nustatymas",
+      "url": "https://www.geslita.lt/uploads/Naudinga%20informacija/STR2-01-04-2004Pr01.pdf"
+    },
+    {
+      "title": "Priešgaisrinės saugos pagrindiniai reikalavimai",
+      "url": "https://www.geslita.lt/uploads/Naudinga%20informacija/Gaisrines%20saugos%20pagrindiniai%20reikalavimai.pdf"
+    },
+    {
+      "title": "Gaisrų kategorijos",
+      "url": "https://www.geslita.lt/uploads/Naudinga%20informacija/Gaisru%20kategorijos.pdf"
+    },
+    {
+      "title": "Priešgaisrinės saugos taisyklės",
+      "url": "https://www.geslita.lt/uploads/Naudinga%20informacija/Gaisrines%20saugos%20taisykles.pdf"
+    },
+    {
+      "title": "Lietuvos Respublikos priešgaisrinės saugos įstatymas",
+      "url": "https://www.geslita.lt/uploads/Naudinga%20informacija/PRIESGAISRINES%20SAUGOS%20ISTATYMAS.pdf"
+    },
+    {
+      "title": "Rūkymo patalpų (vietų) įmonėse, įstaigose ir organizacijose įrengimo ir eksploatavimo reikalavimai",
+      "url": "https://www.geslita.lt/uploads/Naudinga%20informacija/Reikalavimai%20rukymo%20patalpoms.pdf"
+    },
+    {
+      "title": "Saugos ir sveikatos apsaugos ženklų naudojimo darbovietėse nuostatai",
+      "url": "https://www.geslita.lt/uploads/Naudinga%20informacija/SAUGOS%20IR%20SVEIKATOS%20APSAUGOS%20ZENKLU%20NAUDOJIMO%20NUOSTATAI.pdf"
+    },
+    {
+      "title": "Minimalūs reikalavimai valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo programoms",
+      "url": "https://www.geslita.lt/uploads/Naudinga%20informacija/Valstybes%20tarnautoju%20ir%20darbuotoju%20priesgaisrines%20saugos%20mokymo%20programos%20minimalus%20reikalavimai.pdf"
+    },
+    {
+      "title": "Visuomeninių statinių gaisrinės saugos taisyklės",
+      "url": "https://www.geslita.lt/uploads/Naudinga%20informacija/Visuomeniniu%20statiniu%20gaisrines%20saugos%20taisykles.pdf"
+    },
+    {
+      "title": "Gyvenamųjų pastatų gaisrinės saugos taisyklės",
+      "url": "https://www.geslita.lt/uploads/Naudinga%20informacija/Gyvenamuju%20pastatu%20gaisrines%20saugos%20taisykles.pdf"
+    },
+    {
+      "title": "Miltelinių gesintuvų techninės priežiūros instrukcija",
+      "url": "https://www.geslita.lt/uploads/Naudinga%20informacija/Miltelini%C5%B3%20gesintuv%C5%B3%20technin%C4%97s%20prie%C5%BEi%C5%ABros%20instrukcija.pdf"
+    },
+    {
+      "title": "Vandens putų gesintuvų techninės priežiūros instrukcija",
+      "url": "https://www.geslita.lt/uploads/Naudinga%20informacija/Vandens%20put%C5%B3%20gesintuv%C5%B3%20technin%C4%97s%20prie%C5%BEi%C5%ABros%20instrukcija.pdf"
+    },
+    {
+      "title": "Autonominių dūmų detektorių įrengimo instrukcija",
+      "url": "https://www.geslita.lt/uploads/Autonominiu%20dumu%20detektoriu%20taisykles.pdf"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Kaip gesinti gaisrą anglies dioksido (angliarūgštės) gesintuvu",
+      "url": "https://www.youtube.com/watch?v=0TxhUmU7Jfk",
+      "youtube_id": "0TxhUmU7Jfk"
+    },
+    {
+      "title": "Kaip gesinti gaisrą vandens putų gesintuvu",
+      "url": "https://www.youtube.com/watch?v=TjbXu2jXr-c",
+      "youtube_id": "TjbXu2jXr-c"
+    },
+    {
+      "title": "Gaisro gesinimas milteliniu bei vandens putų gesintuvu",
+      "url": "https://www.youtube.com/watch?v=bkmwJt6dm6M",
+      "youtube_id": "bkmwJt6dm6M"
+    },
+    {
+      "title": "Kombinuotas gesinimas: su gaisrine žarna vandeniu ir milteliniu gesintuvu",
+      "url": "https://www.youtube.com/watch?v=Q7-0HcwJHI0",
+      "youtube_id": "Q7-0HcwJHI0"
+    }
+  ],
+  "article_2012": {
+    "title": "Bendrųjų gaisrinės saugos taisyklių pakeitimas nuo 2012 11 01",
+    "source_url": "https://www.geslita.lt/mokymai/bendruju-gaisrines-saugos-taisykliu-pakeitimas-nuo-2012-11-01",
+    "paragraphs": [
+      "Nuo 2012 11 01 įsigalios naujas „Bendrųjų gaisrinės saugos taisyklių“ (Žin., 2005, Nr. 26-852; Žin., 2010, Nr. 99-5167; Žin., 2011, Nr. 100-4727; Žin., 2012, Nr. 118-5970) pakeitimas. Šių taisyklių bendrieji gaisrinės saugos reikalavimai yra privalomi kiekvienai Lietuvos Respublikos teritorijoje esančiai įmonei, įstaigai ir organizacijai, savo veikloje eksploatuojančiai nekilnojamuosius ir kilnojamuosius daiktus, kuriems nustatyti priešgaisrinės saugos reikalavimai, nepriklausomai nuo juridinio asmens nuosavybės formos. Pažymėtina, kad šie gaisrinės saugos reikalavimai privalomi ir fiziniams asmenims.",
+      "Keičiasi reikalavimai valstybės tarnautojų ir darbuotojų instruktažų įforminimui (registracijai), pratyboms, skirtoms valstybės tarnautojų ir darbuotojų veiksmų kilus gaisrui planams išmokti, bei valstybės tarnautojų ir darbuotojų supažindinimui su evakavimo planais. Daugiausia pakeitimų numatyta eksploatuojamiems durpynams ir durpynų gaisrams gesinti pritaikytos technikos parinkimo reikalavimams.",
+      "Visiems juridiniams asmenims aktualesnis pakeitimas yra susijęs su gaisrinės saugos instruktažų registracija. Nuo 2012 11 01 įvedamas vienas naujas Gaisrinės saugos instruktažų registracijos žurnalas vietoje anksčiau numatytų dviejų – Įvadinių (bendrų) gaisrinės saugos instruktažų registracijos žurnalo ir Gaisrinės saugos instruktažų darbo vietoje registracijos žurnalo. Patys gaisrinės saugos instruktažai lieka tie patys: įvadinis (bendras), periodinis darbo vietoje ir papildomas darbo vietoje. Naujo pavyzdžio Gaisrinės saugos instruktažų registracijos žurnale nebereikės privalomai rašyti instruktažų pavadinimų, o jo forma bus tokia pati kaip Gaisrinės saugos instruktažų darbo vietoje registracijos žurnalo (žurnalo forma gali būti papildyta kitomis reikalingomis skiltimis).",
+      "Dar vienas pakeitimas susijęs su juridiniais asmenimis, kuriems numatyta pareiga parengti Valstybės tarnautojų ir darbuotojų veiksmų kilus gaisrui planus. Tokį planą turi parengti, suderinti su Priešgaisrinės apsaugos ir gelbėjimo departamentui pavaldžia įstaiga ir patvirtinti juridinio asmens vadovas, jeigu jo vadovaujamame objekte dirba arba nuolat būna daugiau kaip 100 žmonių. Iki 2012 11 01 „Bendrųjų gaisrinės saugos taisyklių“ 2 priede buvo numatyta vadovo pareiga šiam planui išmokti ne rečiau kaip kartą per metus rengti pratybas objekte, tačiau nuo pakeitimų įsigaliojimo datos „Bendrųjų gaisrinės saugos taisyklių“ 2 priede tokios pareigos iš esmės nebelieka.",
+      "Tačiau labai svarbu atkreipti dėmesį į kitą norminį teisės aktą – „Minimalius reikalavimus valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo programoms“ (Žin., 2003, Nr. 63-2873; Žin., 2012, Nr. 105-5360). Jis reglamentuoja privalomus valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymus (t. y. visų darbuotojų ir valstybės tarnautojų mokymą ir atestavimą kas 3 metus pagal „Bendrųjų gaisrinės saugos taisyklių“ 12 punktą), šių mokymų paskirtį, mokymo tvarką, mokymų temas ir laiką bei kitas pastabas mokymams. Šis teisės aktas taip pat buvo pakeistas, o jo pakeitimas įsigalioja nuo 2012 11 01. Esminis pakeitimas susijęs su 3 pastaba: anksčiau, mokymo metu nagrinėjant temą „Veiksmai kilus gaisrui“, buvo rekomenduojama organizuoti praktines pratybas įmonės, įstaigos ar organizacijos Veiksmų kilus gaisrui planui išmokti, o nuo 2012 11 01 šios praktinės pratybos pagal Veiksmų kilus gaisrui planą tampa privalomos toms įmonėms, įstaigoms ir organizacijoms, kurios jau turi parengtus arba privalo turėti Veiksmų kilus gaisrui planus.",
+      "Apibendrinant minėtus teisės aktų pakeitimus, susijusius su juridiniais asmenimis, kuriems numatyta pareiga parengti Valstybės tarnautojų ir darbuotojų veiksmų kilus gaisrui planus, darytina išvada: nuo 2012 11 01 pratybas šiam planui išmokti tokių juridinių asmenų vadovai turės rengti objekte ne rečiau kaip kartą per 3 metus, t. y. visoms įmonėms, įstaigoms ir organizacijoms privalomo valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo metu.",
+      "Juridinių asmenų vadovams svarbus ir „Bendrųjų gaisrinės saugos taisyklių“ 6 priedo 7 punkto pakeitimas, susijęs su valstybės tarnautojų ir darbuotojų supažindinimu su evakavimo planais. Nuo 2012 11 01 nebereikės kasmet supažindinti visų valstybės tarnautojų ir darbuotojų su įmonėje, įstaigoje ar organizacijoje esančiais evakavimo planais. Vis dėlto paliekama nuostata, kad visi valstybės tarnautojai ir darbuotojai turi būti supažindinti su žmonių evakavimo planu, ir pabrėžiama, kad visi valstybės tarnautojai ir darbuotojai privalės mokėti naudotis įmonėje, įstaigoje ar organizacijoje esančiais evakavimo planais."
+    ],
+    "note": "archive"
+  }
+}

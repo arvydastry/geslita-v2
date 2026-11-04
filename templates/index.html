@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m %}
+{% block title %}{% if show_switch %}Hero variantas: {{ home.hero_variants[hero_variant].label }} | {% endif %}Geslita | Priešgaisrinė sauga ir įranga visoje Lietuvoje{% endblock %}
+{% block bodyclass %}is-home{% endblock %}
+{% block content %}
+{% set h = home.hero %}
+{% include '_hero_' ~ hero_variant ~ '.html' %}
+
+{% set s = home.services %}
+<section class="sec svc-sec" id="paslaugos">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">{{ s.eyebrow }}</div>
+      <h2>{{ s.title }}</h2>
+      <p class="lead">{{ s.lead }}</p>
+    </div>
+    <div class="svc-grid">
+      {% for c in s.cards %}
+      <a class="svc-card{% if c.wide %} wide{% endif %}" href="{{ c.href }}" aria-labelledby="svc-{{ loop.index }}" data-reveal style="--i:{{ loop.index0 % 2 }}">
+        <figure><img src="{{ img(c.image) }}" alt="{{ c.alt }}"{% if c.pos %} style="object-position: {{ c.pos }}"{% endif %} loading="lazy" width="1880" height="1253" sizes="(max-width: 640px) 108px, (max-width: 1023px) 40vw, 20vw"></figure>
+        <div class="body">
+          <h3 id="svc-{{ loop.index }}">{{ c.title }}{{ m.icon('arrow') }}</h3>
+          <p>{{ c.text }}</p>
+          <ul class="checks">{% for b in c.bullets %}<li>{{ m.icon('check') }}<span>{{ b }}</span></li>{% endfor %}</ul>
+          <div class="foot"><span class="price"><small>{{ c.price_label }}</small>{{ c.price }}</span></div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <p class="svc-more" data-reveal>{{ s.more.text }} <a href="{{ s.more.href }}">{{ s.more.label }}</a>.</p>
+    <div class="svc-note" data-reveal>
+      <span>{{ s.note }}</span>
+      {{ m.btn('Visos paslaugos ir kainos', 'paslaugos.html', 'btn-line', '') }}
+    </div>
+  </div>
+</section>
+
+{% set e = home.evac %}
+<section class="band-dark evac" id="evakuacija" data-parallax-root>
+  <div class="plan-layer" data-parallax="0.25">
+    <img src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+    <div class="route"><img src="assets/img/plan-route.png" alt="" aria-hidden="true"></div>
+  </div>
+  <div class="wrap">
+    <div data-reveal>
+      <h2>{{ e.title }}</h2>
+      <p class="lead">{{ e.lead }}</p>
+      <p>{{ e.text }}</p>
+      <ul class="facts">{% for f in e.facts %}<li><span class="num">{{ f.num }}</span><span>{{ f.text }}</span></li>{% endfor %}</ul>
+      <a class="link" href="{{ e.link.href }}">{{ e.link.label }}{{ m.icon('arrow') }}</a>
+    </div>
+    <div class="evac-visual" data-reveal="right">
+      <div class="main" data-parallax="0.08"><img src="{{ img(e.image) }}" alt="{{ e.alt }}" loading="lazy" width="1600" height="1280" sizes="(max-width: 960px) 92vw, 44vw"></div>
+      <figure class="sample" data-parallax="-0.28"><img src="{{ img(e.sample) }}" alt="Tamsoje šviečiantis evakuacijos planas, parengtas Geslitos" loading="lazy" width="500" height="333"><figcaption>{{ e.sample_caption }}</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+{% set pr = home.process %}
+<section class="sec process" id="procesas" data-parallax-root>
+  <img class="wm" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.18">
+  <div class="wrap">
+    <div class="sticky-col">
+      <div data-reveal><h2>{{ pr.title }}</h2><p class="lead">{{ pr.lead }}</p></div>
+      <div class="photo" data-reveal="scale"><img src="{{ img(pr.image) }}" alt="{{ pr.alt }}" loading="lazy" width="1880" height="1253" sizes="(max-width: 960px) 92vw, 40vw"></div>
+    </div>
+    <ol class="steps">
+      {% for st in pr.steps %}
+      <li class="step" data-reveal style="--i:{{ loop.index0 }}">
+        <span class="n num">0{{ loop.index }}</span>
+        <div><h3>{{ st.title }}</h3><p>{{ st.text }}</p><span class="tag">{{ st.tag }}</span></div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{% set p = home.products %}
+<section class="sec sec-white" id="prekes">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">{{ p.eyebrow }}</div>
+      <h2>{{ p.title }}</h2>
+      <p class="lead">{{ p.lead }}</p>
+    </div>
+    <div class="bento">
+      {% set t = p.tiles.gesintuvai %}
+      <a class="tile tile-big" href="{{ t.href }}" data-reveal>
+        <span class="tag count">{{ t.count }}</span>
+        <div class="media"><img src="assets/img/cutout/dsc9858.webp" alt="Vandens putų gesintuvas" loading="lazy" width="560" height="1128"></div>
+        <h3>{{ t.title }}{{ m.icon('arrow') }}</h3><p>{{ t.text }}</p>
+      </a>
+      {% set t = p.tiles.vandentiekis %}
+      <a class="tile tile-photo" href="{{ t.href }}" data-reveal style="--i:1">
+        <div class="media"><img src="{{ img(t.image) }}" alt="" loading="lazy" width="1880" height="1253" sizes="(max-width: 960px) 50vw, 28vw"></div>
+        <span class="tag count">{{ t.count }}</span>
+        <h3>{{ t.title }}{{ m.icon('arrow') }}</h3><p>{{ t.text }}</p>
+      </a>
+      {% set t = p.tiles.zenklai %}
+      <a class="tile tile-signs" href="{{ t.href }}" data-reveal style="--i:2">
+        <span class="tag count">{{ t.count }}</span>
+        <div class="media">{% for im in t.images %}<img src="assets/img/katalogas/{{ im }}" alt="" loading="lazy">{% endfor %}</div>
+        <h3>{{ t.title }}{{ m.icon('arrow') }}</h3><p>{{ t.text }}</p>
+      </a>
+      {% set t = p.tiles.automatika %}
+      <a class="tile tile-video" href="{{ t.href }}" data-reveal style="--i:3">
+        <div class="media"><video muted loop playsinline autoplay preload="none" poster="{{ t.poster }}" data-src="{{ t.video }}" aria-hidden="true"></video></div>
+        <span class="tag count">{{ t.count }}</span>
+        <h3>{{ t.title }}{{ m.icon('arrow') }}</h3><p>{{ t.text }}</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% set tr = home.training %}
+{% set total = tr.programme | sum(attribute='min') %}
+<section class="sec train" id="mokymai" data-parallax-root>
+  <div class="train-num" aria-hidden="true" data-parallax="-0.14">3:00</div>
+  <div class="wrap">
+    <div class="train-head" data-reveal>
+      <h2>{{ tr.title }}</h2>
+      <p class="lead">{{ tr.lead }}</p>
+    </div>
+    <div class="train-grid">
+      <div class="prog" data-reveal>
+        <div class="prog-top">
+          <h3>{{ tr.sheet_title }}</h3>
+          <div class="prog-meta">{% for x in tr.sheet_meta %}<span class="tag">{{ x }}</span>{% endfor %}</div>
+        </div>
+        {% set ns = namespace(acc=0) %}
+        <div class="prog-bar" aria-hidden="true">
+          {% for t in tr.programme %}<span class="seg" data-k="{{ loop.index }}" style="--w:{{ t.min }};--i:{{ loop.index0 }}"><b>{{ loop.index }}</b><small>{{ t.min }} min.</small></span>{% endfor %}
+        </div>
+        <div class="prog-ticks" aria-hidden="true">
+          <span style="--at:0">0:00</span>
+          {% for t in tr.programme %}{% set ns.acc = ns.acc + t.min %}<span style="--at:{{ (ns.acc / total * 100) | round(3) }};--k:{{ loop.index }}"{% if loop.last %} class="end"{% endif %}>{{ ns.acc // 60 }}:{{ '%02d' % (ns.acc % 60) }}</span>{% endfor %}
+        </div>
+        <ol class="prog-list">
+          {% for t in tr.programme %}
+          <li class="p-row" data-k="{{ loop.index }}">
+            <span class="p-n">{{ '%02d' % loop.index }}</span>
+            <h4>{{ t.title }}</h4>
+            <span class="p-min num">{{ t.min }}<small> min.</small></span>
+            {% if t.sub %}<ul class="p-items">{% for it in t.sub %}<li>{{ it }}</li>{% endfor %}</ul>{% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+        <p class="prog-note">{{ tr.programme_note }}</p>
+      </div>
+      <aside class="train-aside">
+        <div class="duty" data-reveal style="--i:1">
+          <span class="duty-k">{{ m.icon('clock') }}{{ tr.duty.value }}</span>
+          <h3>{{ tr.duty.title }}</h3>
+          <p>{{ tr.duty.text }}</p>
+          <small>{{ tr.duty.source }}</small>
+        </div>
+        <ul class="incl" data-reveal style="--i:2">
+          {% for x in tr.included %}<li><span class="incl-ic">{{ m.icon(x.icon) }}</span><span><b>{{ x.title }}</b>{{ x.text }}</span></li>{% endfor %}
+        </ul>
+        <div class="train-cta" data-reveal style="--i:3">
+          {{ m.btn(tr.cta.label, tr.cta.href) }}
+          <span>{{ tr.price }}</span>
+        </div>
+      </aside>
+    </div>
+    <nav class="train-more" aria-label="{{ tr.more_title }}" data-reveal>
+      <span>{{ tr.more_title }}</span>
+      <div class="train-more-grid">{% for x in tr.more %}<a href="{{ x.href }}"><b>{{ x.label }}{{ m.icon('arrow') }}</b><small>{{ x.text }}</small></a>{% endfor %}</div>
+    </nav>
+  </div>
+</section>
+
+{% set c = home.cta %}
+<section class="cta" id="kontaktai" data-parallax-root>
+  <div class="cta-bg" aria-hidden="true"><div class="grid"></div><div class="glow" data-parallax="0.2"></div><div class="glow glow-2" data-parallax="-0.16"></div></div>
+  <div class="wrap">
+    <div class="cta-panel" data-reveal>
+      <div class="cta-info">
+        <h2>{{ c.title }}</h2>
+        {% set tp = c.text.split(site.hours | replace('I-V ', '')) %}
+        <p class="lead">{{ tp[0] }}{% if tp | length > 1 %}<span class="nw">{{ site.hours | replace('I-V ', '') }}</span>{{ tp[1] }}{% endif %}</p>
+        <div class="cta-call">
+          <span class="lbl">{{ m.icon('phone') }}{{ c.call_label }}</span>
+          {% for ph in site.phones %}<a class="tel" href="tel:{{ ph | replace(' ', '') }}">{{ ph }}</a>{% endfor %}
+        </div>
+        <ul class="cta-meta">
+          <li>{{ m.icon('mail') }}<a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li>{{ m.icon('clock') }}<span>{{ site.hours }}</span></li>
+        </ul>
+        <figure class="cta-map">
+          {% include '_lt_map.svg' %}
+          <figcaption><span class="years"><b>{{ site.years }}</b> metų patirtis</span><span class="where">{{ c.map_caption }}</span></figcaption>
+        </figure>
+      </div>
+      <div class="form-card cta-form" id="forma">
+        {{ m.request_form(c, site) }}
+      </div>
+    </div>
+  </div>
+</section>
+{% if show_switch %}{% include '_hero_switch.html' %}{% endif %}
+{% endblock %}

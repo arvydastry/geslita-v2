@@ -1,0 +1,348 @@
+{
+  "slug": "gaisrine-signalizacija",
+  "source_urls": [
+    "https://www.geslita.lt/gaisrine-signalizacija-patikra-remontas-gaisrines-signalizacijos-irengimas",
+    "https://www.geslita.lt/priesgaisrines-prekes/dumu-detektoriai",
+    "https://www.geslita.lt/priesgaisrines-prekes/gaisrines-sirenos",
+    "https://www.geslita.lt/priesgaisrines-prekes/gaisro-pavojaus-mygtukai"
+  ],
+  "title": "Gaisrinės signalizacijos patikra ir įrengimas",
+  "subtitle": "Gaisrinės signalizacijos įrengimas, kasmetinė patikra ir remontas",
+  "intro": [
+    "Gaisrinė signalizacija skirta automatiniam degimo ar dūmų židinių nustatymui. Sistemoje naudojami dūminiai, temperatūriniai ir liepsnos detektoriai, taip pat rankiniai gaisro pavojaus mygtukai, o signaliniai įrenginiai – vidinės sirenos, blykstės ir lauko sirenos su blykste.",
+    "Kartą per metus būtina patikrinti gaisrinės signalizacijos techninę būklę, o patikros rezultatus surašyti į tam tikslui skirtą žurnalą arba atitinkamos formos aktą.",
+    "UAB „Geslita“ atlieka gaisrinės signalizacijos kabelių instaliaciją, montavimą, derinimą, programavimą, remontą ir kasmetinę patikrą."
+  ],
+  "services": [
+    "Gaisrinės signalizacijos kabelių instaliacija",
+    "Gaisrinės signalizacijos montavimas (įrengimas)",
+    "Sistemos derinimas",
+    "Programavimas",
+    "Gaisrinės signalizacijos remontas",
+    "Kasmetinė gaisrinės signalizacijos patikra"
+  ],
+  "price_from": "nuo 70,00 €",
+  "price_note": "Gaisrinės signalizacijos patikros kaina priklauso nuo patalpų ploto, aukščio ir daviklių kiekio.",
+  "periodicity": {
+    "summary": "Kartą per metus būtina patikrinti gaisrinės signalizacijos techninę būklę, o patikros rezultatus surašyti į tam skirtą žurnalą arba atitinkamos formos aktą.",
+    "items": [
+      {
+        "interval": "Kartą per metus",
+        "text": "Gaisrinės signalizacijos techninės būklės patikra ir sumontuotų įrenginių vidinė apžiūra (pasibaigus garantiniam terminui); daugkartinio veikimo šiluminių signalizatorių patikrinimas šilumos šaltiniu; įžeminimų elektros varžos patikra."
+      },
+      {
+        "interval": "Kartą per mėnesį",
+        "text": "Gaisrinės signalizacijos įrenginių veikimo patikrinimas; dūmų ir kombinuotų signalizatorių patikrinimas."
+      },
+      {
+        "interval": "Kartą per trejus metus",
+        "text": "Elektrinių grandinių izoliacijos varžos patikra; objekto administracijos parengtos techninės dokumentacijos peržiūra (arba pasikeitus eksploatavimo sąlygoms)."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Dūminiai detektoriai",
+      "description": "Automatiškai aptinka dūmus saugomoje patalpoje. Pagal eksploatavimo taisykles dūmų ir kombinuoti signalizatoriai tikrinami ne rečiau kaip kartą per mėnesį. Autonominiai dūmų detektoriai gali būti įrengti gyvenamuosiuose namuose, butuose, ligonių palatose, viešbučių ir poilsio įstaigų kambariuose bei kitose patalpose, kuriose nuolat būna žmonės; juos galima jungti į signalizacijos tinklą, tačiau negalima naudoti gaisrinės automatikos valdymo impulsams formuoti."
+    },
+    {
+      "name": "Temperatūriniai (šiluminiai) detektoriai",
+      "description": "Reaguoja į temperatūros pokytį patalpoje. Daugkartinio veikimo šiluminiai signalizatoriai tikrinami ne rečiau kaip kartą per metus kilnojamu bandymo prietaisu – šilumos šaltiniu."
+    },
+    {
+      "name": "Liepsnos detektoriai",
+      "description": "Skirti liepsnos židiniams aptikti. Signalizacijos darbas tikrinamas perduodant pavojaus signalą šilumos, dūmų arba šviesos šaltiniais pagal įrenginio eksploatavimo instrukciją."
+    },
+    {
+      "name": "Rankiniai gaisro pavojaus mygtukai",
+      "description": "Leidžia žmogui rankiniu būdu įjungti pavojaus signalą. Pagal taisykles rankiniai signalizatoriai turi būti su apsauginiu stiklu, o jų įrengimo vietos – apšviestos; gedimo ar remonto atveju ant mygtuko pakabinama lentelė su atitinkamu užrašu. Siūlomi modeliai: ROP63 (IP30) ir ROP63H (IP65, gali būti montuojamas lauko sąlygomis) – atitinka EN-54-11 reikalavimus; BS-535(536); BS-7002 (IP40, atitinka EN 54 normas)."
+    },
+    {
+      "name": "Signaliniai įrenginiai: sirenos ir blykstės",
+      "description": "Vidinės sirenos, blykstės ir lauko sirenos su blykste įspėja netoliese esančius darbuotojus ir gyventojus apie gaisro pavojų. Garso signalai apie gaisrą savo tonu turi skirtis nuo signalų apie gedimą. Išorinei garso signalizacijai naudojami elektros skambučiai ar sirenos iki 20 W, montuojami pastato fasadinėje pusėje ne žemiau kaip 2,75 m aukštyje su apsaugine armatūra. Siūlomi modeliai: BS-531, SF 120, SF 200, BS 595, SF 105, BS 525."
+    },
+    {
+      "name": "Priėmimo kontrolinis prietaisas (centralė)",
+      "description": "Priima detektorių ir mygtukų signalus ir atskiria signalus apie gaisrą nuo signalų apie gedimą. Centralė montuojama patalpoje, kurioje budima ištisą parą (arba signalai perduodami į tokią patalpą), 0,8–1,8 m aukštyje ant stovo ar sienos, numatant ne mažesnę kaip 10 % spindulių (kilpų) atsargą; prie priėmimo aparato laikoma priežiūros ir kontrolės instrukcija."
+    }
+  ],
+  "images": [
+    "geslita:uploads/images/Gaisrine signalizacija/Gaisrine signalizacija bentel J424.jpg",
+    "geslita:uploads/images/Gaisrine signalizacija/Priesgaisrines signalizacijos patikra.jpg",
+    "geslita:uploads/images/Gaisrine signalizacija/Gaisrines signalizacijos patikra komplektas.jpg",
+    "geslita:uploads/images/gaisro pavojaus mygtukai/image001.jpg",
+    "geslita:uploads/images/gaisrines sirenos/image007.jpg",
+    "geslita:uploads/images/dumu detektoriai/image004.jpg",
+    "geslita:uploads/images/Gaisrine signalizacija/Gaisrine signalizacija remontas.jpg"
+  ],
+  "pdf": {
+    "title": "Gaisrinės signalizacijos automatikos eksploatavimo taisyklės",
+    "url": "https://www.geslita.lt/uploads/GAISRINĖS%20SIGNALIZACIJOS%20AUTOMATIKOS%20EKSPLOATAVIMO%20TAISYKLĖS.pdf"
+  },
+  "rules_title": "Gaisrinės signalizacijos automatikos eksploatavimo taisyklės",
+  "rules_summary": [
+    "Už eksploatavimo taisyklių vykdymą objekte atsako jo vadovas. Administracijos įsakymu ar potvarkiu turi būti paskirtas asmuo, atsakingas už įrenginio eksploatavimą, remontą ir techninę priežiūrą, ir budėtojas, prižiūrintis įrenginį ištisą parą (jei signalizacija įjungta į priežiūros organizacijos centralizuotą stebėjimo pultą – tik objekto darbo metu).",
+    "Jei objektas nepajėgia pats organizuoti techninės priežiūros ištisą parą, privalu sudaryti sutartį su specializuota priežiūros organizacija, turinčia licenciją šiems darbams. Sutartis nesumažina objekto vadovo (darbdavio) atsakomybės už įrenginio eksploatavimą.",
+    "Remonto ir techninės priežiūros darbus gali atlikti tik atestuoti asmenys; atliktų darbų kokybę visais atvejais tikrina už įrenginio eksploatavimą atsakingas asmuo.",
+    "Pasibaigus garantiniam terminui, įrenginių būklės vidinė apžiūra atliekama kartą per metus, o įrenginių veikimas tikrinamas kartą per mėnesį. Dūmų ir kombinuoti signalizatoriai tikrinami ne rečiau kaip kartą per mėnesį, daugkartinio veikimo šiluminiai – ne rečiau kaip kartą per metus.",
+    "Signalizacijos darbo patikrinimo rezultatai registruojami patikrinimų apskaitos žurnale. Kiekvienam įrenginio tipui sudaromas techninės priežiūros darbų reglamentas, o jo vykdymas fiksuojamas žurnale.",
+    "Kiekvienas gedimas ar nepatikimo veikimo atvejis turi būti ištirtas ir užfiksuotas gedimų apskaitos žurnale (1 priedas). Apie įrenginio suveikimo atvejus ir gedimus laiku informuojami valstybinės priešgaisrinės priežiūros organai (2 priedas).",
+    "Pastebėjus gedimą, nedelsiant pranešama atsakingam asmeniui ir imamasi priemonių jam pašalinti. Sugedusio signalizatoriaus negalima keisti kitu panašaus tipo ar veikimo principo signalizatoriumi arba užtrumpinti spindulio – jo vietoje montuojamas analogiškas veikiantis signalizatorius. Ant sugedusio ar remontuojamo rankinio mygtuko pakabinama lentelė su užrašu.",
+    "Jei reglamentiniams darbams įrenginį reikia išjungti, objekto administracija privalo užtikrinti saugomų patalpų priešgaisrinę saugą; jei darbai trunka ilgiau nei numatyta reglamente, informuojami teritoriniai valstybinės priešgaisrinės priežiūros organai.",
+    "Objekte laikoma ne mažesnė kaip 10 % signalizatorių atsarga. Priėjimas prie signalizatorių turi būti laisvas, vietos apšviestos, iki sandėliuojamų medžiagų – ne mažiau kaip 0,6 m, šalia neturi būti šildymo prietaisų. Remonto metu signalizatoriai uždengiami nuo tinko ir dažų.",
+    "Vienoje patalpoje įrengiami ne mažiau kaip du automatiniai signalizatoriai; vienas leidžiamas tik tada, kai įranga atitinka EN-54 standartų seriją ir yra aprobuota bandomojoje priešgaisrinėje laboratorijoje.",
+    "Priėmimo kontroliniai prietaisai (centralės) montuojami patalpoje, kurioje budima ištisą parą, arba signalai apie gaisrą ir gedimus perduodami į tokią patalpą. Prie priėmimo aparato laikoma priežiūros ir kontrolės instrukcija; aparatūra ir spintos užplombuojamos.",
+    "Atsakingas asmuo privalo turėti techninę dokumentaciją: projektinius ir vykdomuosius brėžinius, priėmimo eksploatuoti aktus, prietaisų pasus, eksploatavimo instrukciją, priežiūros reglamentą ir grafiką, priežiūros ir remonto, gedimų ir budėtojų kaitos žurnalus, pareigybines instrukcijas ir paskyrimo įsakymo kopiją. Žurnalų lapai susiuvami, numeruojami ir antspauduojami; dokumentacija peržiūrima ne rečiau kaip kartą per trejus metus.",
+    "Aptarnaujantysis personalas ir budėtojai mokomi pagal objekto vadovo patvirtintą programą, jų žinios tikrinamos kartą per metus ir surašomos į žurnalą (3 priedas). Darbuotojai (gyventojai) instruktuojami, ką daryti pradėjus veikti gaisrinei automatikai.",
+    "Draudžiama naudoti užsienio gamybos gaisrinės automatikos įrangą be Lietuvos Respublikoje pripažinto atitikties dokumento. Įžeminimų elektros varža tikrinama kartą per metus, elektrinių grandinių izoliacijos varža – kartą per trejus metus."
+  ],
+  "rules_sections": [
+    {
+      "heading": "1. Bendrieji reikalavimai",
+      "paragraphs": [
+        "1.1. Taisyklės nustato automatinio gaisrų gesinimo, gaisrinės, gaisrinės-apsauginės signalizacijos ir dūmų šalinimo (toliau – gaisrinės automatikos) įrenginių, veikiančių įvairios paskirties ir visų nuosavybės formų objektuose, techninio eksploatavimo reikalavimus; jos privalomos Lietuvos Respublikos teritorijoje. 1.2. Kartu privaloma vykdyti galiojančių standartų, statybos normų, technologinių sąlygų, elektros įrenginių įrengimo ir eksploatavimo taisyklių bei kitų priešgaisrinę saugą reglamentuojančių aktų reikalavimus.",
+        "1.3. Objektų vadovai gali parengti savas gaisrinės automatikos priežiūros taisykles, suderintas su valstybinės priešgaisrinės priežiūros organais, tačiau jos negali sumažinti šių taisyklių reikalavimų. 1.4. Įrenginiai montuojami ten, kur to reikalauja galiojančios respublikinės statybos normos, ir eksploatuojami jų laikantis. 1.5. Taisyklės netaikomos kilnojamiems įrenginiams specialios paskirties bei sprogstamų medžiagų gamybos ir sandėliavimo objektuose.",
+        "1.6. Atsiradus tobulesniems įrenginiams, priešgaisrinės priežiūros organai, atsižvelgdami į objekto pavojingumą, gali reikalauti juos įdiegti kapitalinio remonto ar rekonstrukcijos metu. 1.7. Įrenginius aptarnaujančiam personalui pagal šias taisykles ir projektuotojų bei gamintojų dokumentaciją parengiamos instrukcijos, kurias tvirtina objekto vadovai. 1.8. Sumontuoti įrenginiai turi atitikti projektą ir statybos normas; keisti įrenginio konstrukciją, saugomų patalpų suplanavimą ar permontuoti įrenginius leidžiama tik suderinus su projektavimo organizacija ir priešgaisrinės priežiūros organais.",
+        "1.9. Už taisyklių vykdymą objekte atsako jo vadovas. 1.10. Atsakingas už įrenginio eksploatavimą asmuo, budėtojai ir aptarnaujantysis personalas privalo laikytis taisyklių ir atsako pagal vadovybės nustatytas pareigas. 1.11. Pažeidę taisykles asmenys atsako Lietuvos Respublikos įstatymų nustatyta tvarka. 1.12. Kiekvienas įrenginio gedimas ar nepatikimo veikimo atvejis ištiriamas ir užfiksuojamas gedimų apskaitos žurnale (1 priedas)."
+      ]
+    },
+    {
+      "heading": "2. Aptarnaujančiojo personalo ir budėtojų pareigos",
+      "paragraphs": [
+        "2.1. Kiekviename objekte administracijos įsakymu ar potvarkiu paskiriami: asmenys, atsakingi už įrenginių eksploatavimą, remontą ir techninę priežiūrą, ir budėtojas, prižiūrintis įrenginį ištisą parą. Jei signalizacija įjungta į priežiūros organizacijos centralizuotą stebėjimo pultą, budėtojas skiriamas tik objekto darbo metu.",
+        "2.2. Objektas, nepajėgiantis organizuoti techninės priežiūros ištisą parą, privalo sudaryti sutartį su licencijuota specializuota priežiūros organizacija. 2.3. Tokia sutartis nesumažina objekto vadovų (darbdavių) atsakomybės už įrenginio eksploatavimą. 2.4. Atliktų darbų kokybę visais atvejais tikrina už įrenginio eksploatavimą atsakingas asmuo.",
+        "2.5. Atsakingas asmuo privalo: užtikrinti planinio remonto ir techninės priežiūros darbų atlikimą ir kokybę; kontroliuoti, kad juos atliktų atestuoti asmenys pagal saugos darbe, įrenginių eksploatavimo, elektros įrenginių ir slėgiminių indų taisykles; garantuoti įrenginio veikimą; mokyti personalą ir budėtojus; instruktuoti darbuotojus (gyventojus), ką daryti suveikus gaisrinei automatikai; parengti eksploatavimo dokumentaciją ir kontroliuoti jos pildymą; laiku informuoti valstybinės priešgaisrinės priežiūros organus apie suveikimus ir gedimus (2 priedas). Jis taip pat informuoja gamintoją ar pardavėją apie nekokybiškus ir standartų neatitinkančius prietaisus, montavimo organizaciją – apie nekokybiškus darbus ar nesuderintus nukrypimus nuo projekto, priežiūros organizaciją – apie ne laiku atliktą ar nekokybišką priežiūrą; visais atvejais informuojami ir teritoriniai priešgaisrinės priežiūros organai.",
+        "2.6. Aptarnaujantysis personalas privalo žinoti įrenginio veikimo principą ir vykdyti šių taisyklių, eksploatavimo instrukcijos, gamintojo dokumentacijos, „Vartotojų elektros įrenginių techninio eksploatavimo taisyklių“, „Elektros įrenginių eksploatavimo darbų saugos taisyklių“ ir „Slėgiminių indų įrengimo ir saugaus eksploatavimo taisyklių“ reikalavimus. 2.7. Pastebėję pažeidimus ar gedimus, personalas ir budėtojai nedelsdami praneša atsakingam asmeniui ir imasi priemonių gedimams pašalinti. 2.8. Personalas atlieka reglamentinius priežiūros darbus, remontą ir pildo eksploatavimo dokumentaciją.",
+        "2.9. Draudžiama naudoti užsienio gamybos gaisrinės automatikos įrangą be Lietuvos Respublikoje pripažinto atitikties dokumento ir atlikti darbus, trikdančius normalų įrenginio darbo režimą. 2.10. Kai reglamentiniams darbams įrenginį reikia išjungti, administracija privalo užtikrinti saugomų patalpų priešgaisrinę saugą; darbams užtrukus ilgiau nei numatyta reglamente, informuojami teritoriniai priešgaisrinės priežiūros organai.",
+        "2.11. Budėtojai privalo žinoti įrenginių technines charakteristikas, veikimo principus ir patalpas, kuriose jie sumontuoti; kaip patikrinti įrenginio veikimą; kokių veiksmų imtis suveikus gaisrinei automatikai; dokumentacijos vedimo tvarką; savo pareigybinių ir eksploatavimo instrukcijų reikalavimus."
+      ]
+    },
+    {
+      "heading": "3. Aptarnaujančiojo personalo ir budėtojų parengimas",
+      "paragraphs": [
+        "3.1. Už personalo ir budėtojų parengimą atsako paskirtas už įrenginio eksploatavimą atsakingas darbuotojas. 3.2. Prieš pradėdamas dirbti savarankiškai, personalas turi įgyti teorinių žinių ir praktinių įgūdžių, susipažinti su šiomis taisyklėmis, projektine ir eksploatavimo dokumentacija, gamintojo reikalavimais, priežiūros ir remonto tvarka, pareigybinėmis instrukcijomis, „Elektros įrenginių įrengimo taisyklėmis“, „Vartotojų elektros įrenginių techninio eksploatavimo taisyklėmis“, „Elektros įrenginių eksploatavimo darbų saugos taisyklėmis“ ir „Slėgiminių indų įrengimo ir saugaus eksploatavimo taisyklėmis“.",
+        "3.3. Mokymas vykdomas pagal objekto vadovo patvirtintą programą. 3.4. Kartą per metus žinias tikrina vadovo įsakymu paskirta komisija; rezultatai surašomi į žurnalą (3 priedas). 3.5. Specializuotų priežiūros organizacijų personalas mokomas tų organizacijų nustatyta tvarka, o atsakingas asmuo supažindina jį su objekto specifiniais reikalavimais. 3.6. Taisykles pažeidusių asmenų žinios tikrinamos pakartotinai ir tai pažymima žurnale (3 priedas)."
+      ]
+    },
+    {
+      "heading": "4. Techninė dokumentacija",
+      "paragraphs": [
+        "4.1. Atsakingas už įrenginio eksploatavimą asmuo privalo turėti: 1) projektinius ir vykdomuosius brėžinius; 2) priėmimo eksploatuoti aktus; 3) prietaisų ir įrangos pasus; 4) sumontuotos įrangos, mazgų ir prietaisų sąrašą; 5) gesinimo įrenginių balionų pripildymo pasus; 6) eksploatavimo instrukciją; 7) techninės priežiūros reglamentinių darbų sąrašą; 8) priežiūros grafiką; 9) priežiūros ir remonto apskaitos žurnalą (4 priedas); 10) budėtojų kaitos žurnalą (9 priedas); 11) budėtojų darbo grafiką; 12) gedimų apskaitos žurnalą (1 priedas); 13) gesinančiu mišiniu pripildytų balionų svorio registracijos žurnalą; 14) pareigybines instrukcijas; 15) įsakymo ar potvarkio dėl 2.1 punkte nurodytų asmenų paskyrimo kopiją.",
+        "4.2. 1, 3 ir 4 papunkčių dokumentus parengia montavimo organizacija, 5 – balionus pripildžiusi organizacija, 7, 8, 9, 12 ir 13 – objekto administracija (kai priežiūrą atlieka specializuota organizacija – kartu su ja), 2, 6, 10, 11, 14 ir 15 – objekto administracija. 4.3. Žurnalų lapai susiuvami, numeruojami, antspauduojami ir tvirtinami atsakingo asmens parašu. 4.4. Dokumentacijos sąrašą galima keisti pagal objekto sąlygas, suderinus su priešgaisrinės priežiūros organais. 4.5. Objekto parengta dokumentacija peržiūrima ne rečiau kaip kartą per trejus metus arba pasikeitus eksploatavimo sąlygoms."
+      ]
+    },
+    {
+      "heading": "5. Gaisro gesinimo įrenginiai, gesinimo stotys ir siurblinės",
+      "paragraphs": [
+        "5.1. Gesinimo įrenginiai pagal gesinimo medžiagas skirstomi į vandens, putų, vandens su papildomais komponentais ir dujų įrenginius. 5.2. Gesinant vandeniu ar putomis patalpoje, kurioje yra įrengimų su atviromis elektrai laidžiomis dalimis, įtampa automatiškai išjungiama iki gesinimo pradžios. 5.3. Kiekvienai įrenginio sekcijai įrengiamas atskiras valdymo mazgas.",
+        "5.4. Purkštukai (sprinkleriai, drenčeriai) vietose, kur galimi mechaniniai pažeidimai, apsaugomi nekeičiant drėkinimo ploto. 5.5. Sprinklerio lydžiosios dalies lydymosi ar ampulės sprogimo temperatūra turi atitikti projektą. 5.6. Vienoje patalpoje purkštukų angos – vienodo skersmens. 5.7. Purkštukai turi būti švarūs, neįtrūkę, be įlenkimų; remonto metu apsaugomi nuo dažų ir tinko. 5.8. Draudžiama vietoje suveikusių ar nekokybiškų purkštukų montuoti kamščius ir sandėliuoti medžiagas arčiau kaip 0,9 m nuo purkštukų. 5.9. Laikoma ne mažesnė kaip 10 % purkštukų atsarga.",
+        "5.10. Vamzdynai dažomi: su vandeniu – žalia; su oru – žalia iki valdymo mazgo, mėlyna už jo; su vandeniu ir oru – žalia iki mazgo, už jo mėlyna ir žalia ruožais iki 2 m; su putokšlio mišiniu – žalia su rudais 70 mm pločio žiedais kas 4000 mm; su dujomis – geltona. Dažomi visi išoriniai paviršiai, išskyrus sriegius ir flanšų sandarinimo paviršius. 5.11. Agresyvioje aplinkoje naudojami jai atsparūs dažai; kultūros objektuose vamzdynus galima derinti prie interjero.",
+        "5.12. Draudžiama naudoti vamzdynus įrangai kabinti, sprinklerinės sistemos vidaus gaisrinius čiaupus – ne gesinimo tikslams, jungti prie vamzdynų gamybinius įrengimus ar sanitarinius prietaisus, įrengti uždaromąją armatūrą ir flanšinius sujungimus maitinimo ir paskirstymo vamzdynuose. 5.13. Priėjimų prie valdymo mazgų užgriozdinti negalima. 5.14. Prie kiekvieno valdymo mazgo – lentelė su saugomų patalpų pavadinimais, purkštukų skaičiumi, tipu ir išdėstymo schema. 5.15. Mazgų sklendės užplombuojamos. 5.16. Mazgo patalpa turi avarinį apšvietimą ir rakinama; raktus turi personalas ir budėtojai. 5.17. Ant durų – užrašas „Gaisro gesinimo įrenginio valdymo mazgas“ (GGĮVM).",
+        "5.18. Siurblinė turi telefono ryšį su gaisriniu postu ar kita ištisą parą budima patalpa, prie įėjimo – nuolat įjungta švieslentė „Gesinimo stotis“. 5.19. Joje laikomos aiškios įrenginių išdėstymo ir elektrinio valdymo schemos. 5.20. Patalpa rakinama, raktus turi personalas ir budėtojai. 5.21. Įvadinės ir valdymo sklendės, automatikos ir signalizacijos spintos plombuojamos. 5.22. Gali būti įrengta apsauginė signalizacija su signalais į budėtojų patalpą. 5.23. Pašalinių medžiagų ir įrengimų laikyti draudžiama.",
+        "5.24. Vandens ir putų gesinimo įrenginių elektrinis valdymas privalo garantuoti pagrindinių ir rezervinių siurblių, uždaromosios armatūros ir drenažinio siurblio automatinį paleidimą, vietinį ir distancinį valdymą, automatinį perjungimą prie rezervinio įvado dingus įtampai, valdymo grandinių ir avarinio lygio automatinę kontrolę, garso ir šviesos signalizacijos kontrolę bei valdymo impulsų formavimą kitoms objekto sistemoms. 5.25. Siurblių vietinis valdymas įrengiamas siurblinėje; gaisrinius siurblius leidžiama valdyti ir iš budėtojų patalpos. 5.26. Į automatinį režimą įrenginiai grąžinami iš gaisrinio posto ar kitos ištisą parą budimos patalpos.",
+        "5.27. Siurblinėje įrengiama šviesos signalizacija apie įtampą įvaduose, automatinio paleidimo išjungimą, valdymo ir sklendžių grandinių gedimus bei užsikirtimus (nurodant kryptį) ir avarinį lygį rezervuaruose. 5.28. Ištisą parą budimoje patalpoje įrengiama šviesos ir garso signalizacija apie gaisrą (iššifruojant kryptis), siurblių paleidimą, įrenginio darbo pradžią ir gesinimo kryptį, automatinio paleidimo išjungimą, gedimus ir avarinį lygį (bendri signalai) bei šviesos signalizacija apie įtampą įvaduose, garso signalizacijos išjungimą ir atidarytas sklendes. 5.29. Garso signalai apie gaisrą ir įrenginių suveikimą tonu privalo skirtis nuo signalų apie gedimus.",
+        "5.30. Putų įrenginiams laikoma dviguba putokšlio atsarga; jo kokybė kartą per metus tikrinama bandomojoje priešgaisrinėje laboratorijoje. 5.31. Dujų įrenginiui numatoma 100 % dujų atsarga, laikoma gesinimo stotyje. 5.32. Balionai su gesinimo medžiaga ir suspaustu oru įrengiami ne arčiau kaip 1 m nuo šilumos šaltinio. 5.33. Prie kiekvieno paskirstymo įrenginio – lentelė su saugomos patalpos pavadinimu ir vieta. 5.34. Dujų gesinimo stotyje laikomos pirmosios pagalbos priemonės ir izoliuojantys kvėpavimo aparatai ar dujokaukės. 5.35. Rankinio paleidimo įtaisai plombuojami. 5.36. Dujomis saugomose patalpose iškabinama veiksmų ir evakuacijos instrukcija gavus signalą apie įrenginio suveikimą.",
+        "5.37. Dujų gesinimo įrenginių valdymas privalo garantuoti automatinį ir distancinį paleidimą, jo išjungimą ir atstatymą, perjungimą į rezervinį maitinimą, piropatronų grandinių ir slėgio kontrolę, signalizacijos kontrolę ir garso signalo išjungimą. 5.38. Automatinio paleidimo įtaisai įrengiami ištisą parą budimoje patalpoje. 5.39. Prie įėjimo į saugomas patalpas – šviesos ir garso signalizacija apie gesinimo medžiagos tiekimą ir automatinio paleidimo išjungimą. 5.40. Stotyje – šviesos signalizacija apie įtampą įvaduose, slėgio kritimą sužadinimo vamzdyne 0,05 MPa ir paleidimo balionuose 0,2 MPa, piropatronų grandinių gedimus ir įrenginio paleidimą. 5.41. Budėtojų patalpoje – šviesos ir garso signalizacija apie gaisrą, gesinimo medžiagos patekimą į saugomą patalpą ir gedimus bei šviesos signalizacija apie įtampą, automatinio paleidimo išjungimą ir garso signalizacijos išjungimą.",
+        "5.42. Dujų balionai sveriami ne rečiau kaip kartą per ketvirtį (jei gamintojas nenurodo kitaip); masei sumažėjus 10 %, balionai pripildomi iš naujo. 5.43. Gesinimo įrenginiai įžeminami; įžeminimų varža tikrinama kartą per metus, grandinių izoliacijos varža – kartą per trejus metus. 5.44. Gesinimo įrenginių veikimas tikrinamas kartą per metus."
+      ]
+    },
+    {
+      "heading": "6. Gaisrinė, gaisrinė-apsauginė signalizacija",
+      "paragraphs": [
+        "6.1. Signalizacijos įrenginiai ir signalizatoriai (davikliai, detektoriai) turi atitikti galiojančius standartus, technines sąlygas, gamintojo ir patalpų reikalavimus bei būti be defektų. 6.2. Įrenginiai turi būti nuolat veikiantys ir tvarkingi; veikimas tikrinamas pagal gamintojo instrukcijas, o priežiūros ir kontrolės instrukcija laikoma prie priėmimo aparato, lengvai prieinamoje vietoje. Kiekvienam įrenginio tipui sudaromas techninės priežiūros reglamentas, jo vykdymas fiksuojamas žurnale.",
+        "6.3. Garantinio taisymo metu eksploatuojančiai įmonei draudžiama pažeisti plombas ant prietaisų. 6.4. Signalizatoriai vietose, kur galimi mechaniniai pažeidimai, apsaugomi jiems poveikio nedarančia armatūra. 6.5. Signalizatoriai turi būti švarūs; remonto metu uždengiami nuo tinko ir dažų, o baigus darbus apsaugos nuimamos. 6.6. Draudžiama vietoj sugedusių signalizatorių naudoti kitus panašaus tipo ar veikimo principo signalizatorius arba vietoje jų užtrumpinti spindulį; nuėmus signalizatorių bandymams ar dėl kitos priežasties, jo vietoje montuojamas analogiškas veikiantis.",
+        "6.7. Priėjimas prie signalizatorių turi būti laisvas, vietos pakankamai apšviestos; atstumas iki sandėliuojamų medžiagų ir įrangos – ne mažesnis kaip 0,6 m; šalia neturi būti šildymo prietaisų. 6.8. Ant perforuotų lubų, per kurias tiekiamas oras, lubos aplink signalizatorius uždengiamos 0,5 m spinduliu. 6.9. Laidai ir kabeliai turi būti patikimai pritvirtinti, be įtrūkimų, įlinkimų ir izoliacijos pažeidimų. 6.10. Objekte laikoma ne mažesnė kaip 10 % signalizatorių atsarga.",
+        "6.11. Automatiniai signalizatoriai parenkami pagal technines charakteristikas ir standartų reikalavimus. 6.12. Vienoje patalpoje įrengiami ne mažiau kaip du automatiniai signalizatoriai. 6.13. Vieną signalizatorių patalpoje leidžiama įrengti, jei pastato įranga atitinka EN-54 standartų serijos ir patalpų išplanavimo reikalavimus bei yra aprobuota Priešgaisrinės apsaugos departamento bandomojoje priešgaisrinėje laboratorijoje. Adresinių signalizatorių su programiniu valdymu ir savikontrole vieną spindulį (kilpą) leidžiama tiesti per kelis aukštus neribojant patalpų skaičiaus; signalizatorių skaičių kilpoje lemia įrangos parametrai, paliekant 10 % atsargą papildomiems signalizatoriams.",
+        "6.14. Autonominiai dūmų detektoriai gali būti įrengti gyvenamuosiuose namuose, butuose, ligonių palatose, viešbučių, motelių, sanatorijų, poilsio ir turizmo įstaigų kambariuose bei kitose visuomeninės paskirties patalpose, kuriose nuolat būna žmonės ir gali išgirsti pavojaus signalą. 6.15. Juos galima jungti į signalizacijos tinklą, bet negalima naudoti gaisrinės automatikos valdymo impulsams formuoti. 6.16. Įrengiami pagal patvirtintą „Autonominių dūmų detektorių įrengimo instrukciją“.",
+        "6.17. Rankiniai gaisriniai signalizatoriai turi būti su apsauginiu stiklu, o jų vietos apšviestos. 6.18. Sugedus ar remontuojant rankinį signalizatorių, ant jo pakabinama lentelė su atitinkamu užrašu.",
+        "6.19. Signalizacijos darbas tikrinamas perduodant pavojaus signalą šilumos, dūmų ar šviesos šaltiniais, paspaudžiant signalizatoriaus mygtuką ir imituojant mechaninius pažeidimus (grandinės nutrūkimą, trumpą jungimą) pagal įrenginio eksploatavimo instrukciją; rezultatai registruojami patikrinimų apskaitos žurnale. 6.20. Pasibaigus garantiniam terminui, įrenginių būklės vidinė apžiūra atliekama kartą per metus, o veikimas tikrinamas kartą per mėnesį. 6.21. Daugkartinio veikimo šiluminiai signalizatoriai tikrinami ne rečiau kaip kartą per metus kilnojamu bandymo prietaisu – šilumos šaltiniu; dūmų ir kombinuoti – ne rečiau kaip kartą per mėnesį."
+      ]
+    },
+    {
+      "heading": "7. Aparatūra, įrengimai ir jų išdėstymas budėtojų patalpoje",
+      "paragraphs": [
+        "7.1. Montuojant signalizacijos stotis ir koncentratorius, numatoma ne mažesnė kaip 10 % spindulių atsarga. 7.2. Į priėmimo kontrolinius prietaisus ir koncentratorius, atskiriančius gaisro ir gedimo signalus, jungiama ne daugiau kaip 10 spindulių, jei jais nevaldomi technologiniai įrenginiai, automatinio gesinimo, dūmų šalinimo ir pranešimo apie gaisrą sistemos.",
+        "7.3. Stotys, koncentratoriai ir priėmimo kontroliniai prietaisai montuojami patalpose, kuriose budima ištisą parą. 7.4. Išimties tvarka – patalpose be budėtojų, jei signalai apie gaisrą ir gedimus perduodami į kitą ištisą parą budimą patalpą su ryšio kanalais pranešti apie gaisrą. 7.5. Patalpose be budėtojų numatomos priemonės, kad pašaliniai nepatektų prie prietaisų.",
+        "7.6. Aparatūrą draudžiama montuoti sandėliuose; ji rengiama sprogimo ir gaisro atžvilgiu nepavojingose patalpose ant konstrukcijų, kurių ugnies plitimo riba nulinė. Ant degių konstrukcijų – tik apsaugotų ne plonesne kaip 1 mm metaline arba ne plonesne kaip 10 mm nedegia lakštine medžiaga, 100 mm didesne už įrenginio gabaritus; atstumas iki degių lubų – ne mažesnis kaip 1 m. 7.7. Tarp greta išdėstytų stočių ir prietaisų – ne mažiau kaip 50 mm. 7.8. Įrengimai ir valdymo aparatai montuojami 0,8–1,8 m aukštyje ant stovo arba sienos.",
+        "7.9. Budėtojų patalpa – ne mažesnė kaip 15 m², pirmame arba cokoliniame aukšte, su tiesioginiu išėjimu į lauką; temperatūra 18–25 °C, santykinis drėgnumas – ne didesnis kaip 80 %. 7.10. Joje turi būti natūralus apšvietimas ir ne mažiau kaip 150 lx dienos lempų arba 100 lx kaitinimo lempų apšvietimas; avarinis apšvietimas – ne mažiau kaip 10 % pagrindinio, esant nepatikimam tinklui – iš akumuliatorių. 7.11. Patalpose be budėtojų temperatūra ir drėgnumas turi atitikti įrenginių pasų, standartų ir instrukcijų reikalavimus. 7.12. Budėtojų patalpoje turi būti telefono ryšys. 7.13. Garso signalai apie gaisrą tonu turi skirtis nuo signalų apie gedimą. 7.14. Akumuliatorinės baterijos įrengiamos atskiroje patalpoje.",
+        "7.15. Aparatūros korpusai įžeminami; apsauginio įžeminimo varža – ne didesnė kaip 10 omų. Įžeminti galima nuo vandentiekio vamzdžių (dujų ir šildymo vamzdynus naudoti draudžiama) arba nuo patikimai su žeme sujungtų metalinių pastato konstrukcijų. 7.16. Įžeminimų ir izoliacijos varža tikrinama pagal 5.43 punktą (kartą per metus ir kartą per trejus metus). 7.17. Aparatūra ir spintos plombuojamos personalo plombomis. 7.18. Prijungimo prie abonentinės telefono linijos vieta apsaugoma nuo pašalinių. 7.19. Budėtojų patalpoje laikomas saugomų patalpų sąrašas su pavadinimais ir vietomis, sudėtinguose objektuose – teritorijos ir pastatų schemos."
+      ]
+    },
+    {
+      "heading": "8. Išorinė šviesos ir garso signalizacija",
+      "paragraphs": [
+        "8.1. Išorinės signalizacijos tikslas – suformuoti aliarmo signalą ir pranešti netoliese esantiems darbuotojams bei gyventojams apie gaisro pavojų. 8.2. Šviesos signalizacijai naudojama iki 25 W elektros lempa, įrengiama saugomo pastato fasadinėje pusėje ne žemiau kaip 2,75 m nuo žemės, uždengta raudonai nudažytu stikliniu gaubtu apsauginėje armatūroje ant metalinės gembės arba sienos. 8.3. Garso signalizacijai naudojami elektros skambučiai ar sirenos iki 20 W, montuojami fasadinėje pusėje ne žemiau kaip 2,75 m aukštyje su apsaugine armatūra; analogiška signalizacija gali būti ir pastato koridoriuose."
+      ]
+    },
+    {
+      "heading": "9. Dūmų šalinimo sistemos",
+      "paragraphs": [
+        "9.1. Pastatų dūmų šalinimo (priešdūminės) sistemos turi užtikrinti automatinį signalų apie gaisrą formavimą ir perdavimą budėtojams; pritekamosios ventiliacijos automatinį įjungimą ir oro tiekimą į laiptines, tambūrus-šliuzus ir liftų šachtas; ištraukiamosios ventiliacijos įjungimą ir dūmų šalinimą iš uždūmintos zonos; įrengimų darbo kontrolę su signalais į valdymo pultus; ventiliatorių distancinį paleidimą ir stabdymą; automatinį ir distancinį lifto grąžinimą į pirmą aukštą; kondicionavimo ir vėdinimo sistemų išjungimą; įspėjimą apie gaisro pavojų automatiškai įjungiant šviesos ir garso signalizaciją.",
+        "9.2. Elektrinis valdymas turi leisti automatinį režimą perjungti į rankinį; perjungiklis montuojamas valdymo pulte. 9.3. Kai automatikos spintos ir pultai įrengti patalpoje be budėtojų, į dispečerinę ar ištisą parą budimą patalpą papildomai įvedama šviesos ir garso signalizacija apie gaisrą, gedimus ir ventiliatorių darbą (bendri signalai). 9.4. Spintose ir pultuose įrengiama šviesos ir garso signalizacija apie gaisrą (iššifruojant kryptį), kiekvieno ventiliatoriaus paleidimą, vožtuvų įjungimą (nurodant vietą), automatinio paleidimo išjungimą ir gedimus (įtampos dingimą, linijų, vožtuvų pavarų ir fiksatorių grandinių nutrūkimus, pavarų užsikirtimus – bendras signalas), taip pat šviesos signalizacija apie įtampą įvaduose, garso signalizacijos išjungimą ir pavarų valdymo grandinių gedimus.",
+        "9.5. Durys į neuždūminamas laiptines turi turėti savaiminio užsidarymo mechanizmus. 9.6. Ant automatikos spintų, pultų ir stočių turi būti informaciniai užrašai – ne pieštuku ar rašalu. 9.7. Aerodinaminiai bandymai atliekami ne rečiau kaip kartą per metus, tik kvalifikuotų specialistų; rezultatai įforminami aktu su aksonometrine schema ir pažymėtais matavimo taškais. 9.8. Matavimai atliekami ne anksčiau kaip praėjus 15 min. po ventiliatoriaus įjungimo. 9.9. Sistemos be reikalo nejunginėjamos; kiekvieno pastato pirmame aukšte iškabinama instrukcija dėl veiksmų kilus gaisrui. Prieš eksploatuojant visi asmenys instruktuojami, instruktavimas pažymimas specialiame žurnale su instruktavusio pareigūno ir instruktuojamojo parašais; žurnalas saugomas sistemą eksploatuojančioje organizacijoje."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kaip dažnai privaloma tikrinti gaisrinę signalizaciją?",
+      "answer": "Kartą per metus būtina patikrinti gaisrinės signalizacijos techninę būklę, o patikros rezultatus surašyti į tam skirtą žurnalą arba atitinkamos formos aktą. Pagal eksploatavimo taisykles įrenginių veikimas papildomai tikrinamas kartą per mėnesį: dūmų ir kombinuoti signalizatoriai – ne rečiau kaip kartą per mėnesį, daugkartinio veikimo šiluminiai signalizatoriai – ne rečiau kaip kartą per metus."
+    },
+    {
+      "question": "Kiek kainuoja gaisrinės signalizacijos patikra?",
+      "answer": "Gaisrinės signalizacijos patikros kaina – nuo 70,00 €. Galutinė kaina priklauso nuo patalpų ploto, aukščio ir daviklių kiekio."
+    },
+    {
+      "question": "Kokias gaisrinės signalizacijos paslaugas teikiate?",
+      "answer": "Atliekame gaisrinės signalizacijos kabelių instaliaciją, montavimą, derinimą, programavimą, remontą ir kasmetinę patikrą."
+    },
+    {
+      "question": "Kas objekte atsako už gaisrinės signalizacijos eksploatavimą?",
+      "answer": "Už eksploatavimo taisyklių vykdymą objekte atsako jo vadovas. Administracijos įsakymu ar potvarkiu paskiriamas asmuo, atsakingas už įrenginio eksploatavimą, remontą ir techninę priežiūrą, bei budėtojas. Jei objektas nepajėgia organizuoti techninės priežiūros ištisą parą, sudaroma sutartis su licencijuota specializuota priežiūros organizacija, tačiau ji nesumažina objekto vadovo atsakomybės."
+    },
+    {
+      "question": "Ką daryti pastebėjus gaisrinės signalizacijos gedimą?",
+      "answer": "Nedelsiant pranešti už įrenginio eksploatavimą atsakingam asmeniui ir imtis priemonių gedimui pašalinti. Kiekvienas gedimas ištiriamas ir užfiksuojamas gedimų apskaitos žurnale, o apie suveikimus ir gedimus informuojami valstybinės priešgaisrinės priežiūros organai. Sugedusio signalizatoriaus negalima keisti kitu panašaus tipo ar veikimo principo signalizatoriumi arba užtrumpinti spindulio – jo vietoje montuojamas analogiškas veikiantis signalizatorius; ant sugedusio rankinio mygtuko pakabinama lentelė su užrašu."
+    },
+    {
+      "question": "Kokie įrenginiai sudaro gaisrinės signalizacijos sistemą?",
+      "answer": "Dūminiai, temperatūriniai ir liepsnos detektoriai, rankiniai gaisro pavojaus mygtukai ir signaliniai įrenginiai – vidinės sirenos, blykstės ir lauko sirenos su blykste. Detektorių ir mygtukų signalus priima ir gaisro bei gedimo signalus atskiria priėmimo kontrolinis prietaisas (centralė), montuojamas patalpoje, kurioje budima ištisą parą."
+    }
+  ],
+  "products": [
+    {
+      "category": "Dūmų detektoriai",
+      "source_url": "https://www.geslita.lt/priesgaisrines-prekes/dumu-detektoriai",
+      "price_note": "Šaltinyje kainos nurodytos tik litais (be PVM ir su PVM); perskaičiuota kursu 3,4528 LTL = 1 EUR.",
+      "converted_from_ltl": true,
+      "items": [
+        {
+          "name": "Autonominis dūmų jutiklis „ARTOSHKA“",
+          "description": "Autonominis dūmų jutiklis.",
+          "image": "geslita:uploads/images/dumu detektoriai/image001.jpg",
+          "price_excl_vat": "16,80 €",
+          "price_incl_vat": "20,33 €",
+          "price_ltl_excl_vat": "58,00 Lt",
+          "price_ltl_incl_vat": "70,18 Lt",
+          "converted_from_ltl": true
+        },
+        {
+          "name": "Smalkių detektorius NB-983-CO",
+          "description": "Smalkių (CO) detektorius su reliniu išėjimu, aliarmo režime skleidžiantis 75 dB garso signalą; patobulinti aptikimo ir atskyrimo algoritmai, lengva instaliuoti ir prižiūrėti; maitinimas 12/24 VDC, darbo temperatūra nuo 0 °C iki 40 °C, atitinka EN 50291 standartą.",
+          "image": "geslita:uploads/images/dumu detektoriai/image002.jpg",
+          "price_excl_vat": "31,86 €",
+          "price_incl_vat": "38,55 €",
+          "price_ltl_excl_vat": "110,00 Lt",
+          "price_ltl_incl_vat": "133,10 Lt",
+          "converted_from_ltl": true
+        },
+        {
+          "name": "Autonominis dūmų jutiklis ADR-20N",
+          "description": "Autonominis optinis dūmų jutiklis, atitinkantis EN-54 normų reikalavimus; 85 dB/1 m sirena; jutiklius galima sujungti tarpusavyje 2 laidais – suveikus vienam, įsijungia ir kitų jutiklių sirenos; įtampa 9 VDC; komplekte tvirtinimo bazė. Kilmės šalis – Lenkija.",
+          "image": "geslita:uploads/images/dumu detektoriai/image003.jpg",
+          "price_excl_vat": "19,69 €",
+          "price_incl_vat": "23,83 €",
+          "price_ltl_excl_vat": "68,00 Lt",
+          "price_ltl_incl_vat": "82,28 Lt",
+          "converted_from_ltl": true
+        },
+        {
+          "name": "Autonominis dūmų detektorius SPD-3.4",
+          "description": "Garsumas 85 dB/1 m.",
+          "image": "geslita:uploads/images/dumu detektoriai/image004.jpg",
+          "price_excl_vat": "13,03 €",
+          "price_incl_vat": "15,77 €",
+          "price_ltl_excl_vat": "45,00 Lt",
+          "price_ltl_incl_vat": "54,45 Lt",
+          "converted_from_ltl": true
+        },
+        {
+          "name": "Autonominis dūmų detektorius REINOLDMAX",
+          "description": "Garsumas 85 dB/3 m.",
+          "image": "geslita:uploads/images/dumu detektoriai/Dumu detektorius reinoldmax.jpg",
+          "price_excl_vat": "7,24 €",
+          "price_incl_vat": "8,76 €",
+          "price_ltl_excl_vat": "25,00 Lt",
+          "price_ltl_incl_vat": "30,25 Lt",
+          "converted_from_ltl": true
+        }
+      ]
+    },
+    {
+      "category": "Gaisrinės sirenos",
+      "source_url": "https://www.geslita.lt/priesgaisrines-prekes/gaisrines-sirenos",
+      "price_note": "Kainos šaltinyje nurodytos eurais (ir litais); ar į kainą įskaičiuotas PVM, šaltinyje nenurodyta.",
+      "converted_from_ltl": false,
+      "items": [
+        {
+          "name": "Gaisro sirena BS-531",
+          "description": "Balta sirena su raudona blykste, vidaus ir lauko sąlygoms, garsumas 100 dB/1 m. Kilmės šalis – Graikija.",
+          "image": "geslita:uploads/images/gaisrines sirenos/image001.jpg",
+          "price": "33,29 €"
+        },
+        {
+          "name": "Sirena SF 120",
+          "description": "Raudona stačiakampė gaisrinė lauko sirena, korpusas ABS-0, garsumas 96 dB/1 m, maksimali vartojama srovė 250 mA, darbo temperatūra nuo -10 °C iki +55 °C.",
+          "image": "geslita:uploads/images/gaisrines sirenos/image003.jpg",
+          "price": "37,85 €"
+        },
+        {
+          "name": "Gaisro sirena SF 200",
+          "description": "Raudonas polikarbonato korpusas su oranžine blykste, montuojama lauko sąlygomis; darbo temperatūra nuo -40 °C iki +85 °C, maitinimo įtampa 12–30 VDC, du antisabotažiniai kontaktai, garsumas 105 dB/1 m, sirenos dažnis 3,1–3,8 kHz; atitinka EN normų reikalavimus, paženklinta CE ženklu.",
+          "image": "geslita:uploads/images/gaisrines sirenos/image005.jpg",
+          "price": "37,85 €"
+        },
+        {
+          "name": "Garso skambutis BS 595",
+          "description": "Universalus raudonas garso skambutis vidaus ir lauko sąlygoms, garsumas 95 dB/1 m, maitinimo įtampa 24 VDC, 15 mA, atitinka EN-54 normų reikalavimus. Kilmės šalis – Graikija.",
+          "image": "geslita:uploads/images/gaisrines sirenos/image007.jpg",
+          "price": "36,80 €"
+        },
+        {
+          "name": "Gaisro sirena su stroboskopu SF 105",
+          "description": "Raudonas korpusas su stroboskopu, skirta tik vidaus sąlygoms; maitinimo įtampa 16–30 VDC, pjezo sirena 105 dB/1 m, naudojama srovė 80 mA (24 V).",
+          "image": "geslita:uploads/images/gaisrines sirenos/image009.jpg",
+          "price": "10,43 €"
+        },
+        {
+          "name": "Sirena BS 525",
+          "description": "Vandeniui atspari sirena, maitinimo įtampa 24–30 VDC, garso lygis 92 dB/1 m, apsaugos laipsnis IP54; atitinka EN 54, EN 60335-1, EN 50082-1, EN 61000-3-2, EN 61000-3-3 standartus; veikimo temperatūra nuo 0 °C iki 60 °C, santykinė drėgmė iki 95 %; ABS plastiko korpusas, matmenys 108x108x70 mm, svoris 200 g.",
+          "image": "geslita:uploads/images/gaisrines sirenos/image011.jpg",
+          "price": "54,32 €"
+        }
+      ]
+    },
+    {
+      "category": "Gaisro pavojaus mygtukai",
+      "source_url": "https://www.geslita.lt/priesgaisrines-prekes/gaisro-pavojaus-mygtukai",
+      "price_note": "Kainos šaltinyje nurodytos eurais (ir litais); ar į kainą įskaičiuotas PVM, šaltinyje nenurodyta.",
+      "converted_from_ltl": false,
+      "items": [
+        {
+          "name": "Ranka valdomas pavojaus signalizavimo įtaisas ROP63",
+          "description": "Priešgaisrinis rankinis mygtukas, apsaugotas skaidriu nedūžtančiu stiklu, kuris atsidaro tik smūgiuojant į stikliuką ir gerai apsaugo nuo atsitiktinių (melagingų) nuspaudimų; darbinis atstatymas – tik specialiu raktu; patogus prijungimas ir techninis aptarnavimas; universalus montažas – įleidžiamas į sieną arba montuojamas ant sienos; ekranuotas; hermetiškumo laipsnis IP30; atitinka EN-54-11 reikalavimus, sertifikuotas; darbo temperatūra nuo -25 °C iki +55 °C; matmenys 102x98x46 mm.",
+          "image": "geslita:uploads/images/gaisro pavojaus mygtukai/image001.jpg",
+          "price": "34,69 €"
+        },
+        {
+          "name": "Ranka valdomas pavojaus signalizavimo įtaisas ROP63H",
+          "description": "Priešgaisrinis rankinis mygtukas, apsaugotas skaidriu nedūžtančiu stiklu, kuris atsidaro tik smūgiuojant į stikliuką ir gerai apsaugo nuo atsitiktinių (melagingų) nuspaudimų; darbinis atstatymas – tik specialiu raktu; patogus prijungimas ir techninis aptarnavimas; universalus montažas – įleidžiamas į sieną arba montuojamas ant sienos; ekranuotas; hermetiškumo laipsnis IP65 (gali būti montuojamas lauko sąlygomis); atitinka EN-54-11 reikalavimus, sertifikuotas; darbo temperatūra nuo -40 °C iki +60 °C; matmenys 102x98x46 mm.",
+          "image": "geslita:uploads/images/gaisro pavojaus mygtukai/image001.jpg",
+          "price": "49,41 €"
+        },
+        {
+          "name": "Ranka valdomas pavojaus signalizavimo įtaisas BS-535(536)",
+          "description": "Priešgaisrinis rankinis mygtukas, raudonas polikarbonato korpusas, raktelis mygtuko tikrinimui, nuspaudimo metu stikliukas nesulaužomas. Kilmės šalis – Graikija.",
+          "image": "geslita:uploads/images/gaisro pavojaus mygtukai/image004.jpg",
+          "price": "14,01 €"
+        },
+        {
+          "name": "Ranka valdomas pavojaus signalizavimo įtaisas BS-7002",
+          "description": "Priešgaisrinis rankinis mygtukas, raudonas polikarbonato korpusas, raktelis tikrinimui (testavimui), daugkartinio naudojimo stikliukas, pavojaus indikatorius (šviesos diodas), dvi NC/NO kontaktų grupės (5 A/250 V), apsaugos laipsnis IP40, atitinka EN 54 normas. Kilmės šalis – Graikija.",
+          "image": "geslita:uploads/images/gaisro pavojaus mygtukai/image006.jpg",
+          "price": "22,78 €"
+        }
+      ]
+    }
+  ]
+}

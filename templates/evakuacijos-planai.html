@@ -1,0 +1,323 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m %}
+{% block title %}Evakuacijos planai | Geslita{% endblock %}
+{% block description %}Evakuacijos (evakavimo) planų braižymas pagal Bendrųjų gaisrinės saugos taisyklių 6 priedą: rėminimas, tamsoje šviečiantys planai, kaina 70 €. Dirbame visoje Lietuvoje.{% endblock %}
+{% block extra_css %}<style>
+/* Evakuacijos planai (.ev-): hero su įrėmintu planu, rėmelio spalvomis ir šviesos jungikliu; teiginys; teisės aktai; reikalavimai su ženklų legenda; pavyzdžiai; užsakymas */
+.ev-hero { position: relative; padding-top: calc(var(--head-h) + clamp(36px, 5vw, 72px)); padding-bottom: clamp(56px, 7vw, 100px); overflow: clip; transition: background-color 0.7s var(--ease), color 0.7s var(--ease); }
+.ev-hero .plan-bg { position: absolute; left: -10%; bottom: -24%; width: clamp(520px, 52vw, 900px); opacity: 0.1; pointer-events: none; will-change: transform; transition: opacity 0.7s var(--ease); }
+.ev-hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+.ev-copy h1 { margin: 18px 0 18px; font-size: clamp(40px, 5.4vw, 72px); line-height: 1; letter-spacing: -0.035em; transition: color 0.7s var(--ease); }
+.ev-copy .lead { max-width: 32em; transition: color 0.7s var(--ease); }
+.ev-price { display: inline-flex; align-items: baseline; gap: 10px; margin-top: 24px; padding: 10px 18px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm); transition: background 0.7s var(--ease), border-color 0.7s var(--ease); }
+.ev-price small { font-size: 13.5px; color: var(--muted); }
+.ev-price b { font: 700 28px/1 var(--fd); color: var(--ink); font-variant-numeric: lining-nums; }
+.ev-copy .btn-group { margin-top: 26px; }
+
+.ev-stage { position: relative; perspective: 1400px; }
+.ev-frame { --frame: #c3c9d2; position: relative; padding: clamp(10px, 1.2vw, 16px); border-radius: 8px; background: var(--frame); box-shadow: 0 2px 0 rgba(255, 255, 255, 0.4) inset, 0 40px 70px -30px rgba(14, 26, 43, 0.45), 0 12px 24px -12px rgba(14, 26, 43, 0.25); transform: rotateY(-7deg) rotateX(3deg); transform-style: preserve-3d; transition: background 0.5s var(--ease), box-shadow 0.7s var(--ease), transform 0.9s var(--ease); will-change: transform; }
+.ev-frame .sheet { position: relative; aspect-ratio: 1600 / 1280; background: #fff; overflow: hidden; border-radius: 2px; }
+.ev-frame .sheet img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.9s var(--ease); }
+.ev-frame .sheet .night { opacity: 0; }
+.ev-frame .glare { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 38%); mix-blend-mode: screen; transition: opacity 0.7s var(--ease); }
+.ev-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 20px; margin-top: 30px; }
+.ev-swatches { display: flex; align-items: center; gap: 10px; margin: 0; padding: 0; border: 0; }
+.ev-swatches legend { float: left; margin-right: 4px; font: 600 13px/1 var(--fb); color: var(--muted); transition: color 0.7s var(--ease); }
+.ev-sw { position: relative; width: 30px; height: 30px; }
+.ev-sw input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+.ev-sw span { display: block; width: 100%; height: 100%; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgba(14, 26, 43, 0.18); transition: box-shadow 0.25s var(--ease), transform 0.25s var(--ease); }
+.ev-sw input:checked + span { box-shadow: inset 0 0 0 1px rgba(14, 26, 43, 0.18), 0 0 0 3px var(--bg), 0 0 0 5px var(--navy-3); }
+.ev-sw input:focus-visible + span { outline: 2px solid var(--navy-3); outline-offset: 5px; }
+.ev-sw:hover span { transform: scale(1.08); }
+.ev-light { display: inline-flex; align-items: center; gap: 12px; padding: 8px 16px 8px 8px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); font: 600 14px/1 var(--fb); color: var(--ink); cursor: pointer; transition: background 0.5s var(--ease), border-color 0.5s var(--ease), color 0.5s var(--ease); }
+.ev-light .track { position: relative; width: 46px; height: 26px; border-radius: 999px; background: #e3e8ef; transition: background 0.4s var(--ease); }
+.ev-light .knob { position: absolute; left: 3px; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(14, 26, 43, 0.3); display: grid; place-items: center; transition: transform 0.4s var(--ease); }
+.ev-light .knob .ic { font-size: 12px; color: #a86f00; }
+.ev-light[aria-pressed="true"] .track { background: #1f9d55; }
+.ev-light[aria-pressed="true"] .knob { transform: translateX(20px); }
+.ev-light[aria-pressed="true"] .knob .ic { color: #1f9d55; }
+.ev-tip { position: absolute; z-index: 2; left: -4%; bottom: 14%; display: grid; gap: 2px; padding: 12px 16px; border-radius: 14px; background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(217, 223, 231, 0.8); box-shadow: var(--shadow-lg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); will-change: transform; transition: background 0.7s var(--ease), border-color 0.7s var(--ease); }
+.ev-tip b { font: 700 15px/1.2 var(--fd); color: var(--ink); transition: color 0.7s var(--ease); }
+.ev-tip span { font-size: 13px; color: var(--muted); transition: color 0.7s var(--ease); }
+
+/* Šviesa išjungta: hero tamsėja, planas šviečia */
+.ev-hero.is-dark { background: #070d17; color: var(--on-dark); }
+.ev-hero.is-dark .plan-bg { opacity: 0.03; }
+.ev-hero.is-dark h1 { color: #fff; }
+.ev-hero.is-dark .lead, .ev-hero.is-dark .crumbs, .ev-hero.is-dark .crumbs a, .ev-hero.is-dark .eyebrow, .ev-hero.is-dark .ev-swatches legend { color: var(--on-dark-muted); }
+.ev-hero.is-dark .ev-price, .ev-hero.is-dark .ev-light, .ev-hero.is-dark .ev-tip { background: rgba(255, 255, 255, 0.06); border-color: var(--line-dark); }
+.ev-hero.is-dark .ev-price b, .ev-hero.is-dark .ev-light, .ev-hero.is-dark .ev-tip b { color: #fff; }
+.ev-hero.is-dark .ev-price small, .ev-hero.is-dark .ev-tip span { color: var(--on-dark-muted); }
+.ev-hero.is-dark .btn-line { color: #fff; border-color: rgba(255, 255, 255, 0.3); }
+.ev-hero.is-dark .btn-line:hover { background: rgba(255, 255, 255, 0.08); border-color: #fff; }
+.ev-hero.is-dark .ev-sw span { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35); }
+.ev-hero.is-dark .ev-sw input:checked + span { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 0 3px #070d17, 0 0 0 5px #8fe3a3; }
+.ev-hero.is-dark .ev-frame { background: color-mix(in srgb, var(--frame) 35%, #05080e); box-shadow: 0 0 0 1px rgba(140, 255, 150, 0.12), 0 0 60px 6px rgba(120, 255, 140, 0.28), 0 0 160px 30px rgba(80, 220, 110, 0.14); }
+.ev-hero.is-dark .ev-frame .sheet .night { opacity: 1; }
+.ev-hero.is-dark .ev-frame .glare { opacity: 0.25; }
+
+.ev-hl { border-block: 1px solid var(--line); background: var(--surface); }
+.ev-hl ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.ev-hl li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: start; padding: 26px 22px; }
+.ev-hl li + li { border-left: 1px solid var(--line); }
+.ev-hl .ico { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: #e8eef7; color: var(--navy-3); }
+.ev-hl .ico .ic { font-size: 20px; }
+.ev-hl b { display: block; margin-bottom: 4px; font: 700 16px/1.25 var(--fd); color: var(--ink); }
+.ev-hl p { font-size: 13.5px; line-height: 1.45; color: var(--muted); }
+
+.ev-def .wrap { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
+.ev-def .eyebrow { margin-top: 12px; }
+.ev-def .big { font: 600 clamp(24px, 2.7vw, 38px)/1.3 var(--fd); letter-spacing: -0.015em; color: var(--ink); text-wrap: pretty; }
+.ev-def .more { margin-top: 22px; max-width: 48em; }
+
+.ev-legal { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 1.8vw, 22px); }
+.ev-law { position: relative; display: flex; flex-direction: column; padding: 28px; border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm); overflow: hidden; }
+.ev-law::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--navy-3); }
+.ev-law .doc { min-height: 2.6em; font: 600 12.5px/1.3 var(--fb); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.ev-law .ref { margin: 12px 0 16px; font: 700 clamp(30px, 3vw, 42px)/1.05 var(--fd); letter-spacing: -0.02em; color: var(--ink); }
+.ev-law p { font-size: 15px; color: var(--text); }
+
+.ev-req .wrap { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(28px, 5vw, 80px); align-items: start; }
+.ev-req .tag { margin-top: 14px; }
+.ev-legend { margin: 28px 0 0; padding: 18px; border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-md); }
+.ev-legend img { display: block; width: 100%; height: auto; }
+.ev-legend figcaption { margin-top: 12px; font-size: 13px; color: var(--muted); }
+.ev-reqlist { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line-2); }
+.ev-reqlist li { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--line-2); }
+.ev-reqlist .n { font: 700 clamp(24px, 2.2vw, 30px)/1 var(--fd); color: var(--navy-3); letter-spacing: -0.02em; font-variant-numeric: lining-nums; }
+.ev-reqlist b { display: block; font: 500 clamp(16px, 1.35vw, 18px)/1.5 var(--fd); color: var(--ink); }
+.ev-reqlist p { margin-top: 8px; font-size: 15px; color: var(--text); }
+.ev-reqlist .route-demo { display: inline-flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 12px; font-size: 13.5px; color: var(--muted); }
+.ev-reqlist .route-demo span { display: inline-flex; align-items: center; gap: 8px; }
+.ev-reqlist .route-demo i { display: inline-block; width: 40px; border-top: 4px solid #1f9d55; }
+.ev-reqlist .route-demo i.dash { border-top-style: dashed; }
+
+.ev-band .plan-layer { position: absolute; right: -16%; top: -12%; width: 62%; min-width: 560px; opacity: 0.12; pointer-events: none; will-change: transform; }
+.ev-band .plan-layer img { width: 100%; }
+.ev-band .plan-layer .route { position: absolute; inset: 0; clip-path: inset(0 100% 0 0); transition: clip-path 1.8s cubic-bezier(0.65, 0, 0.35, 1) 0.2s; }
+.ev-band .plan-layer.is-in .route, html.is-static .ev-band .route { clip-path: none; }
+.ev-band .wrap { position: relative; }
+.ev-q { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 80px); align-items: start; }
+.ev-q h2 { color: #fff; }
+.ev-q p { color: var(--on-dark); }
+.ev-q p + p { margin-top: 14px; }
+.ev-verdict { margin-top: 22px; padding: 20px 22px 20px 24px; border-left: 4px solid #4ade80; border-radius: 0 14px 14px 0; background: rgba(255, 255, 255, 0.06); font: 600 clamp(17px, 1.5vw, 20px)/1.45 var(--fd); color: #fff; }
+.ev-verdict small { display: block; margin-bottom: 8px; font: 600 12px/1 var(--fb); letter-spacing: 0.08em; text-transform: uppercase; color: #8fe3a3; }
+.ev-samples { display: grid; grid-template-columns: 1.1fr 1fr 0.8fr; gap: clamp(16px, 2vw, 28px); align-items: center; margin-top: clamp(48px, 6vw, 88px); }
+.ev-samples figure { margin: 0; }
+.ev-samples .fr { padding: 10px; border-radius: 6px; background: #c3c9d2; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7); }
+.ev-samples .fr img { display: block; width: 100%; height: auto; background: #fff; }
+.ev-samples .s1 { transform: rotate(-1.5deg); }
+.ev-samples .s2 { transform: rotate(1.2deg) translateY(24px); }
+.ev-samples .glow .fr { background: #1b2a1f; box-shadow: 0 0 50px 4px rgba(120, 255, 140, 0.22); }
+.ev-samples figcaption { margin-top: 14px; font-size: 13.5px; color: var(--on-dark-muted); }
+.ev-samples .glow h3 { color: #fff; margin-bottom: 8px; font-size: 19px; }
+.ev-samples .glow p { margin-bottom: 14px; font-size: 14.5px; color: var(--on-dark); }
+
+.ev-order .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(28px, 5vw, 80px); align-items: start; }
+.ev-check { position: relative; padding: clamp(26px, 3vw, 40px); padding-top: clamp(40px, 4vw, 52px); border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-lg); }
+.ev-check::before { content: ""; position: absolute; left: 50%; top: -14px; width: 120px; height: 28px; translate: -50% 0; border-radius: 8px; background: var(--navy); box-shadow: var(--shadow-sm); }
+.ev-check h2 { font-size: clamp(24px, 2.4vw, 32px); margin-bottom: 20px; }
+.ev-check ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.ev-check li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 14px; padding: 12px 0; border-bottom: 1px dashed var(--line-2); font-size: 15.5px; color: var(--text); }
+.ev-check li:last-child { border-bottom: 0; }
+.ev-check .box { width: 22px; height: 22px; margin-top: 2px; border-radius: 6px; border: 2px solid var(--navy-3); display: grid; place-items: center; color: var(--navy-3); }
+.ev-check .box .ic { font-size: 14px; stroke-width: 3; opacity: 0; transform: scale(0.5); transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); transition-delay: calc(0.3s + var(--i) * 0.12s); }
+.ev-check.is-in .box .ic { opacity: 1; transform: none; }
+html.is-static .ev-check .box .ic { opacity: 1; transform: none; transition: none; }
+.ev-steps h2 { margin-bottom: 26px; }
+.ev-steplist { margin: 0; padding: 0; list-style: none; position: relative; }
+.ev-steplist::before { content: ""; position: absolute; left: 21px; top: 22px; bottom: 22px; width: 2px; background: linear-gradient(var(--navy-3), var(--line)); }
+.ev-steplist li { position: relative; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; padding-bottom: 26px; }
+.ev-steplist .n { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--surface); border: 2px solid var(--navy-3); font: 700 15px/1 var(--fd); color: var(--navy-3); z-index: 1; font-variant-numeric: lining-nums; }
+.ev-steplist h3 { font-size: 19px; margin: 9px 0 6px; }
+.ev-steplist p { font-size: 15.5px; color: var(--text); }
+.ev-steps .btn-group { margin-top: 8px; }
+.ev-cta { padding-top: 0; }
+
+@media (max-width: 1023px) {
+  .ev-hl ul { grid-template-columns: 1fr 1fr; }
+  .ev-hl li:nth-child(3) { border-left: 0; }
+  .ev-hl li:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+@media (max-width: 960px) {
+  .ev-hero .wrap, .ev-def .wrap, .ev-req .wrap, .ev-q, .ev-order .wrap { grid-template-columns: minmax(0, 1fr); }
+  .ev-legal { grid-template-columns: minmax(0, 1fr); }
+  .ev-frame { transform: none; }
+  .ev-tip { left: auto; right: -6px; top: -22px; bottom: auto; padding: 9px 13px; }
+  .ev-tip b { font-size: 13.5px; }
+  .ev-tip span { font-size: 12px; }
+  .ev-samples { grid-template-columns: 1fr 1fr; }
+  .ev-samples .glow { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; }
+  .ev-legend { max-width: 460px; }
+}
+@media (max-width: 560px) {
+  .ev-hl ul { grid-template-columns: minmax(0, 1fr); }
+  .ev-hl li + li { border-left: 0; border-top: 1px solid var(--line); }
+  .ev-hl li { padding: 18px 4px; }
+  .ev-samples { grid-template-columns: minmax(0, 1fr); }
+  .ev-samples .s2 { transform: rotate(1deg); }
+  .ev-samples .glow { grid-template-columns: minmax(0, 1fr); }
+  .ev-reqlist li { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; }
+  .ev-controls { margin-top: 36px; }
+}
+@media (prefers-reduced-motion: reduce) { .ev-frame, .ev-hero, .ev-frame .sheet img { transition: none; } }
+</style>{% endblock %}
+{% block content %}
+{% set E = evacuation %}
+{% set P = E.page %}
+
+{# 1. Hero: įrėmintas tikras Geslitos planas; rėmelio spalvos ir šviesos jungiklis (tamsoje šviečiantis planas) #}
+<section class="ev-hero" data-parallax-root data-ev-hero>
+  <img class="plan-bg" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.18">
+  <div class="wrap">
+    <div class="ev-copy">
+      <ol class="crumbs"><li><a href="index.html">Pradžia</a></li><li><a href="paslaugos.html#evakuacijos-planai">Paslaugos</a></li><li><span aria-current="page">Evakuacijos planai</span></li></ol>
+      <h1>Evakuacijos planai</h1>
+      <p class="lead">{{ E.intro[0] }} {{ E.highlights[1] }}</p>
+      <p class="ev-price"><small>{{ E.price_label }}</small><b>{{ E.price }}</b></p>
+      <div class="btn-group">{{ m.btn('Užsakyti planus', '#uzsakymas') }}{{ m.btn('Reikalavimai planui', '#reikalavimai', 'btn-line', '') }}</div>
+    </div>
+    <div class="ev-stage">
+      <div data-tilt>
+        <div class="ev-frame" data-frame>
+          <div class="sheet">
+            <img class="day" src="assets/img/evak/plan-diena.webp" alt="Geslitos parengtas pirmo aukšto evakuacijos planas su sutartiniais ženklais ir žaliais evakuacijos keliais" width="1600" height="1280" fetchpriority="high">
+            <img class="night" src="assets/img/evak/plan-naktis.webp" alt="" aria-hidden="true" width="1600" height="1280" loading="lazy">
+          </div>
+          <span class="glare" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="ev-tip" data-parallax="-0.2" aria-hidden="true"><b data-tip-title>Rėmelis norimos spalvos</b><span data-tip-text>Formatas ir kiekis pagal poreikį</span></div>
+      <div class="ev-controls">
+        <fieldset class="ev-swatches">
+          <legend>Rėmelis</legend>
+          {% for f in P.frames %}<label class="ev-sw" title="{{ f.name }}" style="--c: {{ f.color }}"><input type="radio" name="frame" value="{{ f.color }}" aria-label="{{ f.name }} rėmelis"{% if loop.first %} checked{% endif %}><span></span></label>{% endfor %}
+        </fieldset>
+        <button class="ev-light" type="button" aria-pressed="false" data-light><span class="track" aria-hidden="true"><span class="knob">{{ m.icon('bulb') }}</span></span><span class="lbl">Išjungti šviesą</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# 2. Privalumai juostoje (iš E.highlights) #}
+<section class="ev-hl" aria-label="Kodėl verta užsakyti">
+  <div class="wrap">
+    <ul>
+      {% for h in P.highlights %}<li data-reveal style="--i:{{ loop.index0 }}"><span class="ico">{{ m.icon(h.icon) }}</span><div><b>{{ h.title }}</b><p>{{ E.highlights[loop.index0].replace('Naujiena - tamsoje', 'Tamsoje').replace('Naujiena – tamsoje', 'Tamsoje') }}</p></div></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+{# 3. Apibrėžimas: žodžiai ryškėja slenkant #}
+<section class="sec ev-def">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>Kas yra evakavimo planas</div>
+    <div>
+      <p class="big" data-words>{{ E.intro[1] }}</p>
+      <p class="more" data-reveal>{{ E.intro[2] }}</p>
+    </div>
+  </div>
+</section>
+
+{# 4. Teisės aktai: didelės nuorodos į straipsnius #}
+<section class="sec sec-tint">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2>Kas įpareigoja turėti evakavimo planus</h2>
+    </div>
+    <div class="ev-legal">
+      {% for l in E.legal_basis %}{% set r = P.legal_refs[loop.index0] %}
+      <article class="ev-law" data-reveal style="--i:{{ loop.index0 }}">
+        <span class="doc">{{ r.doc }}</span>
+        <h3 class="ref">{{ r.ref }}</h3>
+        <p>{{ l.what_it_says }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# 5. Reikalavimai: lipni kolona su tikra plano legenda, dešinėje 9 reikalavimai (pirmas sakinys paryškintas) #}
+{% set rt = E.requirements_title.split(' (', 1) %}
+<section class="sec ev-req" id="reikalavimai">
+  <div class="wrap">
+    <div class="sticky-col" data-reveal>
+      <h2>{{ rt[0] }}</h2>
+      {% if rt|length > 1 %}<span class="tag tag-line">{{ rt[1].rstrip(')') }}</span>{% endif %}
+      <figure class="ev-legend">
+        <img src="assets/img/evak/sutartiniai-zenklai.webp" alt="Sutartiniai ženklai iš Geslitos evakuacijos plano: gesintuvas, gaisrinis čiaupas, signalizacijos mygtukas, elektros skydelis, telefonas, pagrindinis ir atsarginis evakuacijos kelias, „Jūs esate čia“" width="440" height="403" loading="lazy">
+        <figcaption>Sutartiniai ženklai iš mūsų parengto plano</figcaption>
+      </figure>
+    </div>
+    <ol class="ev-reqlist">
+      {% for r in E.requirements %}{% set parts = r.split('. ', 1) %}
+      <li data-reveal style="--i:{{ loop.index0 % 3 }}">
+        <span class="n" aria-hidden="true">{{ '%02d'|format(loop.index) }}</span>
+        <div>
+          <b>{{ parts[0] }}{% if parts|length > 1 %}.{% endif %}</b>
+          {% if parts|length > 1 %}<p>{{ parts[1] }}</p>{% endif %}
+          {% if loop.index == 4 %}<span class="route-demo" aria-hidden="true"><span><i></i>Pagrindinis kelias</span><span><i class="dash"></i>Atsarginis kelias</span></span>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{# 6. Tamsi juosta: ar privalomi mažesniems pastatams; planų pavyzdžiai #}
+<section class="band-dark sec ev-band" data-parallax-root>
+  <div class="plan-layer" data-parallax="0.2">
+    <img src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+    <div class="route"><img src="assets/img/plan-route.png" alt="" aria-hidden="true"></div>
+  </div>
+  <div class="wrap">
+    {% set ss = E.who_must_have.split('. ') %}
+    <div class="ev-q">
+      <h2 data-reveal>{{ E.who_must_have_title }}</h2>
+      <div data-reveal style="--i:1">
+        {% if ss|length == 5 %}
+        <p>{{ ss[:2]|join('. ') }}.</p>
+        <p>{{ ss[2:4]|join('. ') }}.</p>
+        <p class="ev-verdict"><small>Išvada</small>{{ ss[4] }}</p>
+        {% else %}
+        <p>{{ E.who_must_have }}</p>
+        {% endif %}
+      </div>
+    </div>
+    {% set s = E.samples %}
+    <div class="ev-samples">
+      <figure class="s1" data-reveal style="--i:0"><div class="fr" data-parallax="0.06"><img src="{{ img(s[0].src) }}" alt="{{ s[0].alt }}" loading="lazy" width="1600" height="1280"></div><figcaption>Aukšto planas su sutartiniais ženklais</figcaption></figure>
+      <figure class="s2" data-reveal style="--i:1"><div class="fr" data-parallax="-0.06"><img src="{{ img(s[1].src) }}" alt="{{ s[1].alt }}" loading="lazy" width="1600" height="1200"></div><figcaption>Pagrindinis ir atsarginis evakuacijos keliai</figcaption></figure>
+      <div class="glow" data-reveal style="--i:2">
+        <div><h3>Tamsoje šviečiantys planai</h3><p>{{ E.glow_in_dark.replace('Naujiena: siūlome', 'Siūlome') }}</p></div>
+        <figure><div class="fr"><img src="{{ img(s[2].src) }}" alt="{{ s[2].alt }}" loading="lazy" width="500" height="333"></div><figcaption>Tikra nuotrauka tamsoje</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# 7. Užsakymas: ką atsiųsti (kontrolinis sąrašas) + eiga #}
+<section class="sec sec-white ev-order" id="uzsakymas">
+  <div class="wrap">
+    <div class="ev-check" data-reveal>
+      <h2>{{ E.info_needed_title }}</h2>
+      <ol>
+        {% for x in E.info_needed %}<li style="--i:{{ loop.index0 }}"><span class="box" aria-hidden="true">{{ m.icon('check') }}</span><span>{{ x }}</span></li>{% endfor %}
+      </ol>
+    </div>
+    <div class="ev-steps" data-reveal="right">
+      <div class="eyebrow">Užsakymas</div>
+      <h2>Kaip užsakyti</h2>
+      <ol class="ev-steplist">
+        {% for st in P.steps %}<li><span class="n">{{ loop.index }}</span><div><h3>{{ st.title }}</h3><p>{{ st.text }}</p></div></li>{% endfor %}
+      </ol>
+      <div class="btn-group">
+        <a class="btn" href="mailto:{{ site.email }}?subject={{ P.mail_subject | urlencode }}">{{ m.icon('mail') }}Siųsti planus el. paštu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight ev-cta"><div class="wrap">{{ m.cta_inline(title='Reikia evakuacijos planų?', text='Paskambinkite arba parašykite: aptarsime planų kiekį, formatą ir rėminimą.') }}</div></section>
+{% endblock %}

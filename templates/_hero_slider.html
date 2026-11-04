@@ -1,0 +1,51 @@
+{% import '_macros.html' as m %}
+{% set v = home.hero_variants.slider %}
+{% set cards = home.services.cards %}
+{% set n = v.slides | length %}
+{# 3 variantas: slankiklis per pagrindines paslaugas. WAI-ARIA „tabbed carousel“: skirtukai, sustabdymo mygtukas, automatinis slinkimas stoja užvedus pelę ar fokusavus #}
+<section class="hero hv-slider" aria-roledescription="karuselė" aria-label="Pagrindinės paslaugos" data-slider data-interval="{{ v.interval }}">
+  <div class="hero-bg">
+    <div class="glow"></div>
+    <div class="plan"><img src="assets/img/plan-lines.png" alt="" aria-hidden="true"></div>
+  </div>
+  <div class="wrap">
+    <div class="hs-copy">
+      <div class="hs-top">
+        <h1>{{ h.title }}</h1>
+        <p class="hero-badge">{{ h.badge }}</p>
+      </div>
+      <div class="hs-texts" aria-live="off">
+        {% for s in v.slides %}{% set c = cards[s.card] %}
+        <div class="hs-text{% if loop.first %} is-active{% endif %}" id="hs-slide-{{ loop.index }}" role="tabpanel" aria-roledescription="skaidrė" aria-label="{{ loop.index }} iš {{ n }}: {{ c.title }}"{% if not loop.first %} hidden{% endif %}>
+          <p class="hs-count"><b>{{ '%02d' % loop.index }}</b> / {{ '%02d' % n }}</p>
+          <h2>{{ c.title }}</h2>
+          <p class="lead">{{ c.text }}</p>
+          <p class="hs-price"><small>{{ c.price_label }}</small>{{ c.price }}</p>
+          <div class="btn-group">{{ m.btn(h.primary.label, h.primary.href) }}{{ m.btn('Plačiau apie paslaugą', c.href, 'btn-line', '') }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="hs-media">
+      {% for s in v.slides %}
+      <figure class="hs-img{% if loop.first %} is-active{% endif %}"{% if not loop.first %} aria-hidden="true"{% endif %}><img src="{{ img(s.image) }}" alt="{{ s.alt }}" style="object-position: {{ s.pos }}" width="2000" height="1334" sizes="(max-width: 960px) 100vw, 58vw"{% if loop.first %} fetchpriority="high"{% else %} loading="lazy"{% endif %}></figure>
+      {% endfor %}
+      <div class="hs-arrows">
+        <button class="hs-prev" type="button" aria-label="Ankstesnė skaidrė">{{ m.icon('arrow') }}</button>
+        <button class="hs-next" type="button" aria-label="Kita skaidrė">{{ m.icon('arrow') }}</button>
+      </div>
+    </div>
+    <div class="hs-nav">
+      <button class="hs-play" type="button" aria-label="Sustabdyti automatinį slinkimą"><span class="i-pause" aria-hidden="true"></span><span class="i-play" aria-hidden="true"></span></button>
+      <div class="hs-tabs" role="tablist" aria-label="Skaidrės">
+        {% for s in v.slides %}{% set c = cards[s.card] %}
+        <button class="hs-tab" type="button" role="tab" id="hs-tab-{{ loop.index }}" aria-controls="hs-slide-{{ loop.index }}" aria-selected="{{ 'true' if loop.first else 'false' }}"{% if not loop.first %} tabindex="-1"{% endif %}>
+          <span class="bar" aria-hidden="true"><span class="fill"></span></span>
+          <span class="t"><b>{{ '%02d' % loop.index }}</b><span class="name">{{ c.title }}</span></span>
+          <small>{{ c.price }}</small>
+        </button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,441 @@
+{
+ "hero": {
+  "title": "Priešgaisrinė sauga jūsų objektui",
+  "badge": "Dirbame visoje Lietuvoje",
+  "lead": "Patikrinta įranga, veikianti signalizacija, aiškūs evakuacijos planai ir apmokyti darbuotojai. Patikroms, montavimui ir mokymams atvykstame į jūsų objektą.",
+  "primary": {
+   "label": "Gauti pasiūlymą",
+   "href": "kontaktai.html#forma"
+  },
+  "secondary": {
+   "label": "Paslaugos ir kainos",
+   "href": "#paslaugos"
+  },
+  "photos": {
+   "main": {
+    "src": "foto:hero-koridorius",
+    "alt": "Šviesus pastato koridorius su gesintuvu ant sienos"
+   },
+   "a": {
+    "src": "foto:signalizacija-mygtukas",
+    "alt": "Gaisro pavojaus mygtukas su ženklu ant betoninės sienos"
+   },
+   "b": {
+    "src": "foto:gesintuvas-balta",
+    "alt": "Raudonas gesintuvas ant baltos sienos"
+   }
+  }
+ },
+ "hero_variants": {
+  "video": {
+   "label": "Video",
+   "product": {
+    "src": "assets/img/cutout/dsc9857.webp",
+    "alt": "Gesintuvas iš Geslitos asortimento",
+    "w": 560,
+    "h": 1062
+   }
+  },
+  "photos": {
+   "label": "Naujos nuotraukos",
+   "tiles": [
+    {
+     "card": 1,
+     "image": "foto:hv-signalizacija",
+     "pos": "50% 75%",
+     "alt": "Gaisro pavojaus mygtukas ir ženklas ant betoninės sienos"
+    },
+    {
+     "card": 0,
+     "image": "foto:hv-gesintuvas",
+     "pos": "50% 100%",
+     "alt": "Raudonas gesintuvas prie pilkos sienos"
+    },
+    {
+     "card": 2,
+     "image": "foto:hv-vandentiekis",
+     "pos": "50% 45%",
+     "alt": "Gaisrinė spinta su žarna ir gesintuvu"
+    },
+    {
+     "card": 3,
+     "image": "foto:hv-evakuacija",
+     "pos": "50% 10%",
+     "alt": "Evakuacijos išėjimo ženklas ant betoninės sienos"
+    }
+   ]
+  },
+  "slider": {
+   "label": "Slankiklis",
+   "interval": 6500,
+   "slides": [
+    {
+     "card": 0,
+     "image": "foto:gesintuvai-siena",
+     "alt": "Keturi skirtingų tipų gesintuvai ant baltos sienos",
+     "pos": "50% 50%"
+    },
+    {
+     "card": 1,
+     "image": "foto:hs-signalizacija",
+     "alt": "Gaisro pavojaus mygtukas ir ženklas ant betoninės sienos",
+     "pos": "52% 50%"
+    },
+    {
+     "card": 3,
+     "image": "foto:hs-evakuacija",
+     "alt": "Šviečiantis evakuacijos išėjimo ženklas po lubomis",
+     "pos": "50% 40%"
+    },
+    {
+     "card": 4,
+     "image": "foto:hs-mokymai",
+     "alt": "Lektorius prie vartomosios lentos veda mokymus darbuotojams",
+     "pos": "62% 50%"
+    }
+   ]
+  }
+ },
+ "services": {
+  "eyebrow": "Paslaugos ir kainos",
+  "title": "Septynios paslaugos, kurių reikia kiekvienam objektui",
+  "lead": "Kainos iš galiojančio kainoraščio: mažmeninės, patvirtinamos užsakant. Didesniam kiekiui ar nuolatinei objekto priežiūrai parengiame individualų pasiūlymą.",
+  "cards": [
+   {
+    "title": "Gesintuvų patikra ir pildymas",
+    "text": "Visų rūšių ir tipų gesintuvų patikra, užpildymas, dažymas ir techninis aptarnavimas.",
+    "bullets": [
+     "Milteliniai, angliarūgštiniai ir vandens putų",
+     "Patikra ir užpildymas pagal kainoraštį",
+     "Techninės priežiūros instrukcijos"
+    ],
+    "price_label": "Patikra",
+    "price": "nuo 5,26 €",
+    "image": "foto:gesintuvai-patikra",
+    "alt": "Raudonų miltelinių gesintuvų grupė",
+    "href": "gesintuvu-patikra.html"
+   },
+   {
+    "title": "Gaisrinė signalizacija",
+    "text": "Montavimas, programavimas, remontas ir kasmetinė techninės būklės patikra su aktu.",
+    "bullets": [
+     "Dūmų, temperatūros ir liepsnos detektoriai",
+     "Pavojaus mygtukai, sirenos, blykstės",
+     "Patikros aktas arba įrašas žurnale"
+    ],
+    "price_label": "Patikra",
+    "price": "nuo 70,00 €",
+    "image": "foto:signalizacija-mygtukas",
+    "alt": "Gaisro pavojaus mygtukas ant betoninės sienos",
+    "href": "gaisrine-signalizacija.html"
+   },
+   {
+    "title": "Gaisrinis vandentiekis",
+    "text": "Gaisrinių čiaupų patikra, žarnų išbandymas, perkantavimas ir įrišimas.",
+    "bullets": [
+     "Žarnos įrišimas nuo 3,50 €",
+     "Žarnos patikra ir perkantavimas nuo 10,51 €",
+     "Patikrinimo ir registravimo žurnalas"
+    ],
+    "price_label": "Čiaupo patikra",
+    "price": "nuo 6,31 €",
+    "image": "foto:vandentiekis-spinta",
+    "alt": "Raudona gaisrinės žarnos spintelė ant pramoninės sienos",
+    "pos": "19% 50%",
+    "href": "paslaugos.html#gaisrinis-vandentiekis"
+   },
+   {
+    "title": "Evakuacijos planai",
+    "text": "Braižome, rėminame ir laminuojame planus pagal faktinį patalpų išplanavimą.",
+    "bullets": [
+     "Pagal Bendrųjų gaisrinės saugos taisyklių 6 priedą",
+     "Tamsoje šviečiantys planai",
+     "Konsultacijos evakuacijos pratyboms"
+    ],
+    "price_label": "Plano parengimas",
+    "price": "70,00 €",
+    "image": "foto:evakuacija-planas",
+    "alt": "Pastato aukšto planas, prisegtas prie lentos ant sienos",
+    "href": "evakuacijos-planai.html"
+   },
+   {
+    "title": "Darbuotojų mokymai",
+    "text": "Priešgaisrinės saugos mokymai ir atestavimas jūsų objekte, su pažymėjimais.",
+    "bullets": [
+     "3 valandų programa pagal patvirtintus reikalavimus",
+     "Periodiškumas kas 3 metus",
+     "Atvykstame su garso ir vaizdo įranga"
+    ],
+    "price_label": "Periodiškumas",
+    "price": "kas 3 metus",
+    "image": "foto:mokymai-seminaras",
+    "alt": "Lektorė veda mokymus darbuotojams prie vartomosios lentos",
+    "href": "saugos-centras.html"
+   },
+   {
+    "title": "Avariniai šviestuvai",
+    "text": "Evakuacinio ir avarinio apšvietimo išdėstymas ir montavimas pagal EN 1838.",
+    "bullets": [
+     "Matymo atstumo ir akinimo skaičiavimai",
+     "Privalomos ir tarpinės šviestuvų vietos",
+     "Šviestuvai nuo 24,53 €"
+    ],
+    "price_label": "Montavimas",
+    "price": "pagal objektą",
+    "image": "foto:evakuacija-koridorius",
+    "alt": "Šviečiantis evakuacijos išėjimo ženklas ant sienos",
+    "pos": "24% 50%",
+    "href": "avariniai-sviestuvai.html"
+   },
+   {
+    "wide": true,
+    "title": "Kitos paslaugos ir priežiūra",
+    "text": "Darbai, kuriuos patogu užsakyti kartu su periodine objekto priežiūra.",
+    "bullets": [
+     "Dielektrinių priemonių patikra (kas 6-36 mėn.)",
+     "Gesintuvų nuoma (MG-6, MG-25) nuo 6 €",
+     "Registravimo žurnalai nuo 3,50 €",
+     "Priešgaisrinis medienos impregnavimas",
+     "Varžų matavimas",
+     "Aukštalipių įrangos patikra"
+    ],
+    "price_label": "Kainos",
+    "price": "pagal kainoraštį",
+    "image": "foto:garazas",
+    "alt": "Gesintuvo spintelė požeminiame garaže",
+    "href": "paslaugos.html#kitos-paslaugos"
+   }
+  ],
+  "note": "Kainoraščiuose nurodytos mažmeninės kainos. Didesniam kiekiui skambinkite arba siųskite užklausą el. paštu.",
+  "more": {
+   "text": "Taip pat: higienos ir pirmosios pagalbos mokymai, visuomenės sveikatos dokumentai, teisinės konsultacijos.",
+   "label": "Kitos paslaugos verslui",
+   "href": "paslaugos.html#kitos-paslaugos"
+  }
+ },
+ "evac": {
+  "title": "Evakuacijos planai, kurie matomi ir dingus elektrai",
+  "text": "Parengiame juos pagal Bendrųjų gaisrinės saugos taisyklių 6 priedą: pagrindinis kelias žymimas ištisine žalia linija, atsarginis punktyrine, simboliais pažymimi gesintuvai, čiaupai ir signalizacijos mygtukai. Planus rėminame ir laminuojame, o tamsoje šviečiantys lieka matomi ir dingus elektrai.",
+  "facts": [
+   {
+    "num": "70 €",
+    "text": "plano parengimas"
+   },
+   {
+    "num": "1 m",
+    "text": "atstumas, iš kurio turi būti įskaitomi simboliai"
+   },
+   {
+    "num": "100+",
+    "text": "žmonių objektuose planas privalomas kiekviename aukšte"
+   }
+  ],
+  "image": "geslita:uploads/images/evakuacijos planai/Planas 2l.jpg",
+  "alt": "Geslitos parengtas aukšto evakuacijos planas su pažymėtu evakuacijos keliu",
+  "sample": "geslita:uploads/images/evakuacijos planai/evac nakties1.JPG",
+  "sample_caption": "Tamsoje šviečiantis planas",
+  "button": {
+   "label": "Apie evakuacijos planus",
+   "href": "evakuacijos-planai.html"
+  },
+  "lead": "Pagal LR darbo kodekso 266 straipsnį ir Darbuotojų saugos ir sveikatos įstatymo 22 straipsnį evakavimo planus privalo turėti kiekviena įmonė, nepriklausomai nuo darbuotojų skaičiaus.",
+  "link": {
+   "label": "Apie evakuacijos planus",
+   "href": "evakuacijos-planai.html"
+  }
+ },
+ "process": {
+  "title": "Kaip vyksta darbai",
+  "lead": "Paprasta tvarka, kad priešgaisrinė sauga netaptų dar vienu rūpesčiu jūsų sąraše.",
+  "image": "foto:planas-stalas",
+  "alt": "Patalpų planas peržiūrimas ant stalo",
+  "steps": [
+   {
+    "title": "Susisiekiate",
+    "text": "Paskambinate arba parašote. Aptariame objektą, įrangos kiekį ir patogų laiką.",
+    "tag": "Atsakome darbo dienomis 9:00-18:00"
+   },
+   {
+    "title": "Atvykstame į objektą",
+    "text": "Sutartu laiku bet kurioje Lietuvos vietoje. Patikra, pildymas, montavimas ar mokymai vyksta vietoje.",
+    "tag": "Visa Lietuva"
+   },
+   {
+    "title": "Gaunate dokumentus",
+    "text": "Patikros aktai, įrašai žurnaluose, pažymėjimai ir planai, paruošti patikrinimams.",
+    "tag": "Aktai ir žurnalai"
+   }
+  ]
+ },
+ "products": {
+  "eyebrow": "Prekės",
+  "title": "Priešgaisrinės prekės iš vienų rankų",
+  "lead": "Gesintuvai, vandentiekio įranga, saugos ženklai ir gaisrinė automatika su kainomis ir originaliomis katalogo nuotraukomis. Įrangą ne tik parduodame, bet ir prižiūrime.",
+  "tiles": {
+   "gesintuvai": {
+    "title": "Gesintuvai",
+    "text": "Milteliniai, angliarūgštiniai ir naujos kartos vandens putų, pagaminti Lietuvoje.",
+    "count": "14 modelių",
+    "image": "assets/img/cutout/dsc9858.png",
+    "href": "prekes-gesintuvai.html"
+   },
+   "vandentiekis": {
+    "title": "Gaisrinis vandentiekis",
+    "text": "Spintelės, žarnos, čiaupai, švirkštai ir hidrantai.",
+    "count": "27 pozicijos",
+    "image": "foto:vandentiekis-interjeras",
+    "href": "prekes-vandentiekis.html"
+   },
+   "zenklai": {
+    "title": "Saugos ženklai",
+    "text": "Evakuacijos, draudžiamieji, įspėjamieji ir elektrosaugos ženklai.",
+    "count": "102 ženklai",
+    "images": [
+     "krzenklai--image001.png",
+     "infzenklai--image003.png",
+     "drzenklai--image001.gif",
+     "ispzenklai--image002.png",
+     "saugzenklai--image001.gif"
+    ],
+    "href": "prekes-zenklai.html"
+   },
+   "automatika": {
+    "title": "Gaisrinė automatika ir įranga",
+    "text": "Dūmų detektoriai, sirenos, pavojaus mygtukai, evakuacijos šviestuvai, nedegūs audeklai.",
+    "count": "34 pozicijos",
+    "video": "assets/video/automatika-1.mp4",
+    "href": "prekes-automatika.html",
+    "poster": "assets/video/automatika-poster.jpg"
+   }
+  }
+ },
+ "training": {
+  "title": "Priešgaisrinės saugos mokymai jūsų darbuotojams",
+  "lead": "Mokymus ir atestavimą pravedame jūsų objekte pagal patvirtintą programą. Atvykstame sutartu laiku su visomis mokymo priemonėmis, o sėkmingai išlaikiusiems įskaitą išduodame pažymėjimus.",
+  "sheet_title": "Mokymo programa",
+  "sheet_meta": [
+   "5 temos",
+   "180 min."
+  ],
+  "programme": [
+   {
+    "title": "Medžiagų degumas ir pagrindinės gaisrų priežastys",
+    "min": 30
+   },
+   {
+    "title": "Teisės aktų reikalavimai objektui ir atskiriems darbo barams",
+    "min": 60,
+    "sub": [
+     "Teritorijos priežiūra",
+     "Statiniai, pastatai ir patalpos",
+     "Elektros įrenginiai",
+     "Šildymas ir vėdinimas",
+     "Technologiniai procesai",
+     "Pavojingų medžiagų transportavimas",
+     "Medžiagų sandėliavimas",
+     "Statybos darbai",
+     "Ugnies darbai"
+    ]
+   },
+   {
+    "title": "Gaisrinė įranga ir jos naudojimo ypatumai",
+    "min": 30,
+    "sub": [
+     "Stacionariosios gesinimo sistemos",
+     "Gaisro aptikimo ir signalizavimo sistemos",
+     "Perspėjimo ir evakuacijos valdymo sistemos",
+     "Vidaus gaisrinis vandentiekis",
+     "Lauko gaisrinis vandentiekis",
+     "Dūmų ir šilumos kontrolės sistemos",
+     "Pirminės gesinimo priemonės"
+    ]
+   },
+   {
+    "title": "Veiksmai kilus gaisrui",
+    "min": 45
+   },
+   {
+    "title": "Darbuotojų teisės, pareigos ir atsakomybė priešgaisrinės saugos srityje",
+    "min": 15
+   }
+  ],
+  "programme_note": "Temos ir jų trukmė pagal Priešgaisrinės apsaugos ir gelbėjimo departamento patvirtintus „Minimalius reikalavimus valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo programoms“.",
+  "duty": {
+   "value": "Kas 3 metus",
+   "title": "Privaloma kiekvienai įmonei",
+   "text": "Įmonių vadovai, nepriklausomai nuo veiklos rūšies ir darbuotojų skaičiaus, kas 3 metus turi organizuoti visų darbuotojų priešgaisrinės saugos mokymą ir atestavimą. Tai tikrina valstybinės priešgaisrinės priežiūros pareigūnai.",
+   "source": "Priešgaisrinės saugos įstatymo 11 str., Bendrųjų gaisrinės saugos taisyklių 12 p."
+  },
+  "included": [
+   {
+    "icon": "pin",
+    "title": "Jūsų objekte",
+    "text": "Atvykstame sutartu laiku"
+   },
+   {
+    "icon": "play",
+    "title": "Su mokymo priemonėmis",
+    "text": "Garso ir vaizdo aparatūra, saugos ženklų pavyzdžiai"
+   },
+   {
+    "icon": "doc",
+    "title": "Įskaita ir atestavimas",
+    "text": "Visiems mokymuose dalyvavusiems darbuotojams"
+   },
+   {
+    "icon": "cap",
+    "title": "Pažymėjimai",
+    "text": "Sėkmingai išlaikiusiems įskaitą"
+   }
+  ],
+  "price": "Kaina sutartinė",
+  "cta": {
+   "label": "Užsakyti mokymus",
+   "href": "#forma"
+  },
+  "more_title": "Saugos centre taip pat",
+  "more": [
+   {
+    "label": "Mokymų kainininkas",
+    "text": "29 mokymo programos",
+    "href": "saugos-centras.html#kainininkas"
+   },
+   {
+    "label": "Gaisrinės saugos instrukcijos",
+    "text": "Pagal Bendrųjų gaisrinės saugos taisyklių 1 priedą",
+    "href": "saugos-centras.html#instrukcija"
+   },
+   {
+    "label": "Ekstremalių situacijų valdymo planai",
+    "text": "Planų rengimas įmonėms ir įstaigoms",
+    "href": "saugos-centras.html#esvp"
+   },
+   {
+    "label": "DSS dokumentacija",
+    "text": "Nuostatai, instrukcijos ir tvarkos",
+    "href": "saugos-centras.html#dss"
+   }
+  ]
+ },
+ "cta": {
+  "title": "Susitarkime dėl patikros jūsų objekte",
+  "text": "Trumpai aprašykite objektą arba tiesiog paskambinkite. Atsakome darbo dienomis 9:00-18:00.",
+  "note": "Privalomi laukai pažymėti *.",
+  "call_label": "Skambinkite",
+  "map_caption": "Atvykstame į objektus visoje Lietuvoje",
+  "form_title": "Užklausa dėl pasiūlymo",
+  "form_lead": "Pažymėkite, ko reikia, ir paruošime pasiūlymą jūsų objektui.",
+  "services_label": "Ko reikia?",
+  "services": [
+   "Gesintuvų patikra",
+   "Gaisrinė signalizacija",
+   "Gaisrinis vandentiekis",
+   "Evakuacijos planai",
+   "Darbuotojų mokymai",
+   "Avariniai šviestuvai",
+   "Prekės",
+   "Kita"
+  ],
+  "privacy": "Pateiktus duomenis naudosime tik atsakyti į šią užklausą."
+ }
+}

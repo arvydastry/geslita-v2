@@ -1,0 +1,4 @@
+tools/_tmp/
+__pycache__/
+.DS_Store
+.claude/

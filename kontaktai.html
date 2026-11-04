@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) document.documentElement.classList.add('js');</script>
+<title>Kontaktai | Geslita</title>
+<meta name="description" content="UAB „Geslita“, 20 metų patirtis: gesintuvų patikra ir pildymas, gaisrinė signalizacija, evakuacijos planai, darbuotojų mokymai ir priešgaisrinės prekės visoje Lietuvoje.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* Kontaktai (.kt-): hero su veiksmų kortelėmis ir gyvu darbo laiku, užsakymo eiga + forma, „Kur mus rasti“ su žemėlapiu */
+.kt-hero { position: relative; padding-top: calc(var(--head-h) + clamp(36px, 5vw, 72px)); padding-bottom: clamp(56px, 7vw, 100px); overflow: clip; }
+.kt-bg { position: absolute; inset: 0; pointer-events: none; }
+.kt-bg .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(37, 64, 122, 0.075) 1px, transparent 1px), linear-gradient(90deg, rgba(37, 64, 122, 0.075) 1px, transparent 1px); background-size: 36px 36px; background-position: center;
+  -webkit-mask-image: radial-gradient(ellipse 80% 75% at 60% 45%, #000 30%, transparent 85%); mask-image: radial-gradient(ellipse 80% 75% at 60% 45%, #000 30%, transparent 85%); }
+.kt-bg .glow { position: absolute; right: -6%; top: -10%; width: 60%; height: 110%; border-radius: 50%; background: radial-gradient(closest-side, rgba(37, 64, 122, 0.2), rgba(37, 64, 122, 0)); will-change: transform; }
+.kt-hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+.kt-copy h1 { margin: 18px 0 18px; font-size: clamp(44px, 6vw, 80px); line-height: 0.98; letter-spacing: -0.035em; }
+.kt-copy .lead { max-width: 30em; }
+.kt-status { display: inline-flex; align-items: center; gap: 10px; margin: 26px 0 0; padding: 9px 16px 9px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm); font: 600 14.5px/1.2 var(--fb); color: var(--ink); }
+.kt-status .dot { position: relative; width: 10px; height: 10px; border-radius: 50%; background: var(--muted); flex: none; }
+.kt-status.is-open .dot { background: var(--green); }
+.kt-status.is-open .dot::after { content: ""; position: absolute; inset: -5px; border-radius: 50%; border: 2px solid var(--green); opacity: 0; animation: kt-ping 2s ease-out infinite; }
+@keyframes kt-ping { 0% { transform: scale(0.5); opacity: 0.8; } 100% { transform: scale(1.4); opacity: 0; } }
+.kt-copy .btn-group { margin-top: 26px; }
+
+.kt-quick { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 26px; max-width: 600px; }
+.kt-q { position: relative; display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 14px; background: rgba(255, 255, 255, 0.86); border: 1px solid var(--line); box-shadow: var(--shadow-sm); color: var(--ink); text-decoration: none; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease); }
+a.kt-q:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: transparent; }
+.kt-q.is-main { background: var(--navy); border-color: transparent; color: #fff; box-shadow: var(--shadow-md); }
+.kt-q-mail { grid-column: 1 / -1; }
+.kt-ico { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: #e8eef7; color: var(--navy-3); }
+.kt-ico .ic { font-size: 20px; }
+.kt-q.is-main .kt-ico { background: rgba(255, 255, 255, 0.1); color: #ff6b6b; }
+.kt-q .t small { display: block; font: 600 12px/1.2 var(--fb); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+.kt-q.is-main .t small { color: var(--on-dark-muted); }
+.kt-q .t b { display: block; font: 700 clamp(18px, 1.6vw, 21px)/1.2 var(--fd); letter-spacing: -0.01em; font-variant-numeric: lining-nums; overflow-wrap: anywhere; }
+.kt-q .t a { color: inherit; text-decoration: none; }
+.kt-q .t a:hover { color: var(--navy-3); }
+.kt-copy-btn { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); font: 600 13.5px/1 var(--fb); color: var(--ink); cursor: pointer; transition: border-color 0.25s var(--ease), background 0.25s var(--ease); }
+.kt-copy-btn:hover { border-color: var(--ink); }
+.kt-copy-btn .ic { font-size: 15px; color: var(--navy-3); }
+.kt-copy-btn.is-done { border-color: var(--green); color: #14532d; background: #e8f7ee; }
+.kt-copy-btn[hidden] { display: none; }
+.kt-fb { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 14.5px; font-weight: 600; color: var(--ink); text-decoration: none; }
+.kt-fb .ic { font-size: 16px; color: var(--navy-3); }
+.kt-fb:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.kt-mapwrap { margin: 0; }
+.kt-mapbox { position: relative; will-change: transform; }
+.lt-routes { display: block; width: 100%; height: auto; overflow: visible; }
+.lt-routes pattern circle { fill: rgba(37, 64, 122, 0.3); }
+.lt-routes .lt-fill { fill: url(#lt-dot-h); }
+.lt-routes .lt-outline { fill: none; stroke: rgba(37, 64, 122, 0.28); stroke-width: 1.5; stroke-linejoin: round; }
+.lt-routes .rt { fill: none; stroke: var(--navy-3); stroke-width: 2.2; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.3s var(--ease) calc(0.35s + var(--i) * 0.12s); }
+.lt-routes .city circle { fill: #fff; stroke: var(--navy-3); stroke-width: 2.5; transform-box: fill-box; transform-origin: center; transform: scale(0); transition: transform 0.5s var(--ease) calc(1.1s + var(--i) * 0.12s); }
+.lt-routes .city text { font: 600 15px/1 var(--fb); fill: var(--ink); paint-order: stroke; stroke: var(--bg); stroke-width: 5px; stroke-linejoin: round; opacity: 0; transition: opacity 0.5s var(--ease) calc(1.2s + var(--i) * 0.12s); }
+.kt-mapwrap.is-in .rt { stroke-dashoffset: 0; }
+.kt-mapwrap.is-in .city circle { transform: scale(1); }
+.kt-mapwrap.is-in .city text { opacity: 1; }
+.lt-routes .lt-pin .core { fill: var(--navy-3); stroke: #fff; stroke-width: 3; }
+.lt-routes .lt-pin .pulse { fill: rgba(37, 64, 122, 0.3); transform-box: fill-box; transform-origin: center; animation: lt-pulse 2.6s ease-out infinite; }
+.lt-routes .lt-pin .p2 { animation-delay: 1.3s; }
+html.is-static .lt-routes .rt { stroke-dashoffset: 0; transition: none; }
+html.is-static .lt-routes .city circle { transform: none; transition: none; }
+html.is-static .lt-routes .city text { opacity: 1; transition: none; }
+@media (prefers-reduced-motion: reduce) { .lt-routes .rt { stroke-dashoffset: 0; } .lt-routes .city circle { transform: none; } .lt-routes .city text { opacity: 1; } .lt-routes .lt-pin .pulse { animation: none; opacity: 0; } }
+.kt-hq { position: absolute; z-index: 2; transform: translate(20px, -50%); display: grid; gap: 2px; padding: 12px 16px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-md); white-space: nowrap; }
+.kt-hq b { font: 700 15px/1.2 var(--fd); color: var(--ink); }
+.kt-hq span { font-size: 13px; color: var(--muted); }
+.kt-mapwrap figcaption { margin-top: 18px; text-align: center; font-size: 14.5px; font-weight: 600; color: var(--ink); }
+
+.kt-form-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.kt-steps .lead { margin: 14px 0 30px; }
+.kt-steplist { margin: 0; padding: 0; list-style: none; position: relative; }
+.kt-steplist::before { content: ""; position: absolute; left: 21px; top: 22px; bottom: 22px; width: 2px; background: linear-gradient(var(--navy-3), var(--line)); }
+.kt-steplist li { position: relative; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; padding-bottom: 28px; }
+.kt-steplist li:last-child { padding-bottom: 0; }
+.kt-steplist .n { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--surface); border: 2px solid var(--navy-3); font: 700 15px/1 var(--fd); color: var(--navy-3); font-variant-numeric: lining-nums; z-index: 1; }
+.kt-steplist h3 { font-size: 19px; margin: 9px 0 6px; }
+.kt-steplist p { font-size: 15.5px; color: var(--text); }
+.kt-steplist .tag { margin-top: 10px; }
+.kt-form { position: sticky; top: calc(var(--head-h) + 24px); }
+
+.kt-where-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+.kt-addr { display: flex; align-items: flex-start; gap: 12px; margin: 18px 0 18px; font: 700 clamp(22px, 2.2vw, 30px)/1.25 var(--fd); color: var(--ink); }
+.kt-addr .ic { flex: none; margin-top: 4px; font-size: 24px; color: var(--navy-3); }
+.kt-note { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 12px; padding: 16px 18px; border-radius: 14px; background: #fff8e6; border: 1px solid #f1d58c; color: #4f3f12; font-size: 14.5px; line-height: 1.55; }
+.kt-note .ic { font-size: 20px; color: #a86f00; margin-top: 1px; }
+.kt-where .btn-group { margin-top: 26px; }
+.kt-where .credit { margin-top: 16px; font-size: 13px; color: var(--muted); }
+.kt-map { position: relative; aspect-ratio: 4 / 3; border-radius: var(--r-lg); overflow: hidden; background: #dfe6ee; box-shadow: var(--shadow-lg); border: 1px solid var(--line); }
+.kt-map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.kt-map .pin { position: absolute; left: 16px; top: 16px; z-index: 2; display: inline-flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: var(--surface); box-shadow: var(--shadow-md); font: 600 14.5px/1.2 var(--fb); color: var(--ink); pointer-events: none; }
+.kt-map .pin .ic { font-size: 18px; color: var(--navy-3); }
+
+@media (max-width: 960px) {
+  .kt-hero .wrap, .kt-form-grid, .kt-where-grid { grid-template-columns: minmax(0, 1fr); }
+  .kt-form { position: static; }
+}
+@media (max-width: 560px) {
+  .kt-quick { grid-template-columns: minmax(0, 1fr); }
+  .kt-q-mail { grid-template-columns: 44px minmax(0, 1fr); }
+  .kt-q-mail .kt-copy-btn { grid-column: 2; justify-self: start; }
+  .lt-routes .city text { font-size: 19px; }
+  .kt-hq { padding: 8px 12px; transform: translate(-90%, 16px); }
+  .kt-hq b { font-size: 14px; }
+  .kt-hq span { font-size: 12px; }
+  .kt-map { aspect-ratio: 1 / 1; }
+  .kt-map .pin { left: 10px; top: 10px; padding: 8px 12px; font-size: 13px; max-width: calc(100% - 60px); }
+}
+@media (prefers-reduced-motion: reduce) { .kt-status .dot::after { animation: none; } }
+</style></head>
+<body class="">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14L20 4M15 4h5v5"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3 4 5 4 9a4 4 0 0 1-8 0c0-1 .3-2 1-3 0 2 1 3 2 3 0-3-1-5 1-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V6h11v11M14 9h4l3 3v5h-2"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3H4a4 4 0 0 0 2-3v-3a7 7 0 0 1 4-6M9 17v1a3 3 0 0 0 6 0v-1"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3zM9 4v13M15 7v13"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 9L12 5 2 9l10 4 10-4zM6 10.6V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.4"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M7 10h3v11H7zM14 4l3-1 3 3-1 3-5 5-3-3 3-7zM4 20l3-3"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></symbol>
+</svg>
+<a class="skip" href="#main">Pereiti prie turinio</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Geslita, į pradžią"><img src="assets/img/logo-geslita-s.png" alt="Geslita" width="167" height="50"></a>
+    <ul class="site-nav">
+      <li><a href="index.html" >Pradžia</a></li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-paslaugos">Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-paslaugos">
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas<span>Patikra nuo 5,26 €</span></a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija<span>Patikra, remontas, įrengimas</span></a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis<span>Čiaupai, žarnos, žurnalai</span></a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai<span>Planas 70 €</span></a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai<span>Montavimas pagal EN 1838</span></a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai<span>Saugos centras</span></a></li>
+          <li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos<span>Dielektrika, nuoma, žurnalai</span></a></li>
+          <li><a class="drop-all" href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-prekes">Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-prekes">
+          <li><a href="prekes-gesintuvai.html">Gesintuvai<span>Milteliniai, CO₂, vandens putų</span></a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis<span>Spintelės, žarnos, čiaupai</span></a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai<span>102 ženklai su paieška</span></a></li>
+          <li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga<span>Detektoriai, sirenos, šviestuvai</span></a></li>
+          <li><a class="drop-all" href="prekes.html">Visos prekės</a></li>
+        </ul>
+      </li>
+      <li><a href="saugos-centras.html" >Saugos centras</a></li>
+      <li class="nav-naudinga"><a href="naudinga-informacija.html" >Naudinga</a></li>
+      <li><a href="apie-mus.html" >Apie mus</a></li>
+      <li><a href="kontaktai.html" aria-current="page">Kontaktai</a></li>
+    </ul>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>+370 653 99977</span></a>
+      <a class="btn btn-sm" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+      <button class="nav-toggle" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-nav"><svg class="ic ic-menu"><use href="#i-menu"/></svg><svg class="ic ic-x"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilus meniu">
+  <ul>
+    <li><a href="index.html">Pradžia</a></li>
+    <li><details><summary>Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li><li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas</a></li><li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li><li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li><li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li><li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li><li><a href="saugos-centras.html">Darbuotojų mokymai</a></li><li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos</a></li>
+    </ul></details></li>
+    <li><details><summary>Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="prekes.html">Visos prekės</a></li><li><a href="prekes-gesintuvai.html">Gesintuvai</a></li><li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li><li><a href="prekes-zenklai.html">Saugos ženklai</a></li><li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga</a></li>
+    </ul></details></li>
+    <li><a href="saugos-centras.html">Saugos centras</a></li>
+    <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+    <li><a href="apie-mus.html">Apie mus</a></li>
+    <li><a href="kontaktai.html">Kontaktai</a></li>
+  </ul>
+  <div class="mobile-cta">
+    <a class="btn" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+    <a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<section class="kt-hero" data-parallax-root>
+  <div class="kt-bg" aria-hidden="true"><div class="grid"></div><div class="glow" data-parallax="0.18"></div></div>
+  <div class="wrap">
+    <div class="kt-copy">
+      <ol class="crumbs"><li><a href="index.html">Pradžia</a></li><li><span aria-current="page">Kontaktai</span></li></ol>
+      <h1>Kontaktai</h1>
+      <p class="lead"><span class="ltx">Skambinkite, rašykite arba užpildykite užklausą. Atvykstame į objektą visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+      <p class="kt-status" data-open-status data-days="1-5" data-open="9" data-close="18"><span class="dot" aria-hidden="true"></span><span class="txt">Darbo laikas I-V 9:00-18:00</span></p>
+      <div class="kt-quick">
+<a class="kt-q is-main" href="tel:+37065399977"><span class="kt-ico"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="t"><small>Skambinkite</small><b>+370 653 99977</b></span></a><a class="kt-q" href="tel:+37060763109"><span class="kt-ico"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="t"><small>Arba</small><b>+370 607 63109</b></span></a>        <div class="kt-q kt-q-mail"><span class="kt-ico"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><span class="t"><small>Rašykite</small><a href="mailto:info@geslita.lt"><b>info@geslita.lt</b></a></span><button class="kt-copy-btn" type="button" data-copy="info@geslita.lt" hidden><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg><span aria-live="polite">Kopijuoti</span></button></div>
+      </div>
+      <div class="btn-group"><a class="btn " href="#forma">Užpildyti užklausą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="#zemelapis">Kaip mus rasti</a></div>
+      <a class="kt-fb" href="https://www.facebook.com/pages/Geslita-Prie%C5%A1gaisrin%C4%97-%C4%AFranga/145899122128560" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg>Sekite mus Facebook<span class="sr-only"> (atsidaro naujame lange)</span></a>
+    </div>
+    <figure class="kt-mapwrap" data-reveal>
+      <div class="kt-mapbox" data-parallax="-0.08">
+<svg class="lt-routes" viewBox="0 0 600 463" role="img" aria-label="Lietuvos žemėlapis: iš Vilniaus atvykstame į objektus visoje Lietuvoje">
+<defs><pattern id="lt-dot-h" width="11" height="11" patternUnits="userSpaceOnUse"><circle cx="5.5" cy="5.5" r="2.3"/></pattern></defs>
+<path class="lt-fill" d="M29,210 L24,209 L35,190 L39,178 L42,160 L44,155 L44,163 L43,176 L36,199 L29,210 Z M199,362 L195,354 L191,340 L192,328 L194,317 L205,283 L205,277 L197,268 L186,261 L181,247 L160,246 L140,247 L134,246 L116,240 L98,230 L86,224 L75,218 L70,211 L61,213 L56,213 L56,212 L52,200 L56,181 L49,155 L39,122 L38,88 L38,80 L63,61 L95,40 L102,38 L131,26 L135,25 L162,27 L182,30 L200,30 L210,26 L218,29 L225,38 L233,37 L240,31 L279,37 L288,37 L298,37 L316,43 L327,48 L350,45 L360,45 L365,43 L381,29 L388,27 L394,24 L400,26 L404,38 L416,59 L429,62 L464,70 L471,74 L492,93 L504,102 L511,109 L523,123 L530,133 L541,140 L554,146 L559,146 L559,154 L556,166 L552,183 L547,195 L546,200 L550,204 L567,206 L575,208 L576,211 L572,216 L567,219 L564,223 L560,235 L531,233 L527,236 L525,241 L523,248 L520,256 L512,262 L500,265 L490,270 L483,284 L477,303 L477,316 L478,324 L477,328 L474,333 L467,345 L463,359 L461,366 L462,370 L467,370 L475,373 L479,378 L481,384 L481,391 L480,395 L473,398 L463,398 L457,395 L456,392 L459,385 L457,377 L453,373 L444,380 L436,380 L426,386 L420,395 L414,399 L397,397 L393,401 L389,421 L387,425 L374,424 L360,432 L345,439 L337,434 L333,429 L325,430 L316,432 L310,431 L303,431 L290,435 L274,434 L267,431 L266,428 L267,420 L267,408 L264,397 L256,388 L248,381 L237,375 L230,372 L225,371 L224,367 L223,364 L219,361 L211,357 L205,356 L199,362 Z"/>
+<path class="lt-outline" d="M29,210 L24,209 L35,190 L39,178 L42,160 L44,155 L44,163 L43,176 L36,199 L29,210 Z M199,362 L195,354 L191,340 L192,328 L194,317 L205,283 L205,277 L197,268 L186,261 L181,247 L160,246 L140,247 L134,246 L116,240 L98,230 L86,224 L75,218 L70,211 L61,213 L56,213 L56,212 L52,200 L56,181 L49,155 L39,122 L38,88 L38,80 L63,61 L95,40 L102,38 L131,26 L135,25 L162,27 L182,30 L200,30 L210,26 L218,29 L225,38 L233,37 L240,31 L279,37 L288,37 L298,37 L316,43 L327,48 L350,45 L360,45 L365,43 L381,29 L388,27 L394,24 L400,26 L404,38 L416,59 L429,62 L464,70 L471,74 L492,93 L504,102 L511,109 L523,123 L530,133 L541,140 L554,146 L559,146 L559,154 L556,166 L552,183 L547,195 L546,200 L550,204 L567,206 L575,208 L576,211 L572,216 L567,219 L564,223 L560,235 L531,233 L527,236 L525,241 L523,248 L520,256 L512,262 L500,265 L490,270 L483,284 L477,303 L477,316 L478,324 L477,328 L474,333 L467,345 L463,359 L461,366 L462,370 L467,370 L475,373 L479,378 L481,384 L481,391 L480,395 L473,398 L463,398 L457,395 L456,392 L459,385 L457,377 L453,373 L444,380 L436,380 L426,386 L420,395 L414,399 L397,397 L393,401 L389,421 L387,425 L374,424 L360,432 L345,439 L337,434 L333,429 L325,430 L316,432 L310,431 L303,431 L290,435 L274,434 L267,431 L266,428 L267,420 L267,408 L264,397 L256,388 L248,381 L237,375 L230,372 L225,371 L224,367 L223,364 L219,361 L211,357 L205,356 L199,362 Z"/>
+<g class="rts"><path class="rt" style="--i:0" pathLength="1" d="M435,308 Q377,267 306,273"/><path class="rt" style="--i:1" pathLength="1" d="M435,308 Q211,294 47,141"/><path class="rt" style="--i:2" pathLength="1" d="M435,308 Q380,172 251,102"/><path class="rt" style="--i:3" pathLength="1" d="M435,308 Q361,237 349,135"/><path class="rt" style="--i:4" pathLength="1" d="M435,308 Q369,311 320,356"/><path class="rt" style="--i:5" pathLength="1" d="M435,308 Q426,236 465,174"/><path class="rt" style="--i:6" pathLength="1" d="M435,308 Q331,150 151,95"/><path class="rt" style="--i:7" pathLength="1" d="M435,308 Q349,351 255,329"/></g>
+<g class="cities"><g class="city" style="--i:0"><circle cx="306" cy="273" r="5"/><text x="316" y="278" text-anchor="start">Kaunas</text></g><g class="city" style="--i:1"><circle cx="47" cy="141" r="5"/><text x="57" y="146" text-anchor="start">Klaipėda</text></g><g class="city" style="--i:2"><circle cx="251" cy="102" r="5"/><text x="261" y="107" text-anchor="start">Šiauliai</text></g><g class="city" style="--i:3"><circle cx="349" cy="135" r="5"/><text x="359" y="140" text-anchor="start">Panevėžys</text></g><g class="city" style="--i:4"><circle cx="320" cy="356" r="5"/><text x="330" y="361" text-anchor="start">Alytus</text></g><g class="city" style="--i:5"><circle cx="465" cy="174" r="5"/><text x="475" y="179" text-anchor="start">Utena</text></g><g class="city" style="--i:6"><circle cx="151" cy="95" r="5"/><text x="161" y="100" text-anchor="start">Telšiai</text></g><g class="city" style="--i:7"><circle cx="255" cy="329" r="5"/><text x="245" y="334" text-anchor="end">Marijampolė</text></g></g>
+<g class="lt-pin" transform="translate(435 308)"><circle class="pulse" r="10"/><circle class="pulse p2" r="10"/><circle class="core" r="8"/></g>
+</svg>        <div class="kt-hq" style="left:72.6%; top:66.5%"><b>Geslita, Vilnius</b><span>Fabijoniškių g. 4A, Vilnius</span></div>
+      </div>
+      <figcaption><span class="ltx">Atvykstame į objektus visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span></span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec sec-white" id="forma">
+  <div class="wrap kt-form-grid">
+    <div class="kt-steps" data-reveal>
+      <h2>Kaip vyksta užsakymas</h2>
+      <p class="lead">Paprasta tvarka, kad priešgaisrinė sauga netaptų dar vienu rūpesčiu jūsų sąraše.</p>
+      <ol class="kt-steplist">
+        <li><span class="n">01</span><div><h3>Susisiekiate</h3><p>Paskambinate arba parašote. Aptariame objektą, įrangos kiekį ir patogų laiką.</p><span class="tag">Atsakome darbo dienomis 9:00-18:00</span></div></li>
+        <li><span class="n">02</span><div><h3>Atvykstame į objektą</h3><p><span class="ltx">Sutartu laiku bet kurioje Lietuvos vietoje. Patikra, pildymas, montavimas ar mokymai vyksta vietoje.</span></p><span class="tag"><span class="ltx">Visa <span class="lt">Lietuva<span class="lt-flag" aria-hidden="true"></span></span></span></span></div></li>
+        <li><span class="n">03</span><div><h3>Gaunate dokumentus</h3><p>Patikros aktai, įrašai žurnaluose, pažymėjimai ir planai, paruošti patikrinimams.</p><span class="tag">Aktai ir žurnalai</span></div></li>
+      </ol>
+    </div>
+    <div class="form-card kt-form" data-reveal="right">
+      <h3>Užklausa dėl pasiūlymo</h3>
+<p class="form-lead">Pažymėkite, ko reikia, ir paruošime pasiūlymą jūsų objektui.</p>
+<form data-demo novalidate>
+  <fieldset class="svc-pick">
+    <legend>Ko reikia?</legend>
+    <div class="pills"><label class="pill"><input type="checkbox" name="services" value="Gesintuvų patikra"><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Gesintuvų patikra</span></label><label class="pill"><input type="checkbox" name="services" value="Gaisrinė signalizacija"><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Gaisrinė signalizacija</span></label><label class="pill"><input type="checkbox" name="services" value="Gaisrinis vandentiekis"><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Gaisrinis vandentiekis</span></label><label class="pill"><input type="checkbox" name="services" value="Evakuacijos planai"><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Evakuacijos planai</span></label><label class="pill"><input type="checkbox" name="services" value="Darbuotojų mokymai"><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Darbuotojų mokymai</span></label><label class="pill"><input type="checkbox" name="services" value="Avariniai šviestuvai"><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Avariniai šviestuvai</span></label><label class="pill"><input type="checkbox" name="services" value="Prekės"><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Prekės</span></label><label class="pill"><input type="checkbox" name="services" value="Kita"><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Kita</span></label></div>
+  </fieldset>
+  <div class="form-row">
+    <div class="field"><label for="f-name">Vardas <span class="req" aria-hidden="true">*</span></label><input id="f-name" name="name" type="text" required autocomplete="name"><span class="err" id="f-name-err">Įrašykite vardą</span></div>
+    <div class="field"><label for="f-phone">Telefonas <span class="req" aria-hidden="true">*</span></label><input id="f-phone" name="phone" type="tel" required autocomplete="tel"><span class="err" id="f-phone-err">Įrašykite telefoną</span></div>
+  </div>
+  <div class="form-row">
+    <div class="field"><label for="f-email">El. paštas</label><input id="f-email" name="email" type="email" autocomplete="email"><span class="err" id="f-email-err">Patikrinkite el. pašto adresą</span></div>
+    <div class="field"><label for="f-obj">Objektas ir miestas</label><input id="f-obj" name="object" type="text" placeholder="pvz., sandėlis Kaune, 12 gesintuvų"></div>
+  </div>
+  <div class="field"><label for="f-msg">Komentaras</label><textarea id="f-msg" name="message" rows="3" placeholder="Kiekis, terminai ar kita svarbi informacija"></textarea></div>
+  <div class="form-foot">
+    <p class="form-note">Privalomi laukai pažymėti *. Pateiktus duomenis naudosime tik atsakyti į šią užklausą.</p>
+    <button class="btn" type="submit">Siųsti užklausą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+  </div>
+</form>
+<div class="form-ok" role="status">Ačiū! Užklausą gavome ir susisieksime darbo dienomis 9:00-18:00.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tint kt-where" id="zemelapis">
+  <div class="wrap kt-where-grid">
+    <div data-reveal>
+      <h2>Kur mus rasti</h2>
+      <p class="kt-addr"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Fabijoniškių g. 4A, Vilnius</span></p>
+      <div class="kt-note"><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg><span>Šis adresas nėra parduotuvės adresas - „gyvai“ neprekiaujame, prekyba vyksta tik elektroniniu būdu: užsakymus priimame el. paštu info@geslita.lt arba telefonu. Prieš atvažiuodami būtinai paskambinkite +370 653 99977 ir pasiteiraukite, ar esame vietoje.</span></div>
+      <div class="btn-group">
+        <a class="btn btn-navy" href="https://www.openstreetmap.org/?mlat=54.7239519&amp;mlon=25.2437435#map=17/54.7239519/25.2437435" target="_blank" rel="noopener">Atidaryti žemėlapį<svg class="ic" aria-hidden="true"><use href="#i-out"/></svg><span class="sr-only"> (atsidaro naujame lange)</span></a>
+        <a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Paskambinti prieš atvykstant</a>
+      </div>
+      <p class="credit">Žemėlapio duomenys: © OpenStreetMap bendraautoriai.</p>
+    </div>
+    <div class="kt-map" data-reveal="scale">
+      <span class="pin" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Fabijoniškių g. 4A, Vilnius</span>
+      <iframe title="Žemėlapis: Fabijoniškių g. 4A, Vilnius" src="https://www.openstreetmap.org/export/embed.html?bbox=25.2377435,54.7209519,25.2497435,54.7269519&amp;layer=mapnik&amp;marker=54.7239519,25.2437435" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <img class="plan-wm" src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo-geslita-white-s.png" alt="Geslita" width="167" height="50">
+        <p><span class="ltx">20 metų priešgaisrinės saugos patirties. Įrangos priežiūra ir prekyba, darbo saugos priemonės verslui visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+      </div>
+      <div>
+        <h2 class="foot-h">Paslaugos</h2>
+        <ul>
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra</a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai</a></li>
+          <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Prekės ir informacija</h2>
+        <ul>
+          <li><a href="prekes-gesintuvai.html">Gesintuvai</a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai</a></li>
+          <li><a href="prekes-automatika.html">Automatika ir įranga</a></li>
+          <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+          <li><a href="apie-mus.html">Apie mus</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Kontaktai</h2>
+        <ul class="foot-contact">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+37065399977">+370 653 99977</a><br><a href="tel:+37060763109">+370 607 63109</a></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@geslita.lt">info@geslita.lt</a></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Fabijoniškių g. 4A, Vilnius<br><span class="muted">Ne parduotuvė: prieš atvykdami paskambinkite</span></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span>I-V 9:00-18:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2010-2026 UAB „Geslita“. Visos teisės saugomos.</span>
+      <span><a href="kontaktai.html">Kontaktai</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

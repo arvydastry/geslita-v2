@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m %}
+{% block title %}Saugos ženklai | Geslita{% endblock %}
+{% block description %}Saugos ženklų katalogas su paieška: evakuacijos krypties, informacijos, draudžiamieji, įspėjamieji, elektrosaugos, saugos ir sveikatos, operatyviniai ir pavojingų medžiagų ženklai. Kainos su PVM.{% endblock %}
+{% block extra_css %}<style>
+/* Saugos ženklai: grupių apžvalga, lipni paieškos juosta ir lentelės */
+.pg-signs-over { overflow: clip; }
+.pg-signs-over .plan { position: absolute; left: -12%; bottom: -30%; width: clamp(520px, 50vw, 860px); opacity: 0.1; pointer-events: none; will-change: transform; }
+.pg-signs-over .wrap { position: relative; }
+.pg-signs-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 1.8vw, 20px); }
+.pg-signs-gcard { display: grid; gap: 14px; padding: 20px 22px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-sm); color: inherit; text-decoration: none; transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease); }
+.pg-signs-gcard:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.pg-signs-gcard .thumbs { display: flex; gap: 8px; }
+.pg-signs-gcard .thumbs img { width: 58px; height: 58px; object-fit: contain; padding: 6px; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+.pg-signs-gcard h3 { font-size: 18px; display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+.pg-signs-gcard h3 .ic { font-size: 18px; color: var(--ink); flex: none; margin-top: 3px; transition: transform 0.3s var(--ease); }
+.pg-signs-gcard:hover h3 .ic { transform: translateX(4px); }
+.pg-signs-bar { position: sticky; top: var(--head-h); z-index: 5; padding: 14px 0 12px; margin-bottom: clamp(28px, 4vw, 44px); background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.pg-signs-bar .search { margin-bottom: 10px; }
+.pg-signs-bar .pill-row a { text-decoration: none; transition: border-color 0.25s var(--ease), color 0.25s var(--ease); }
+.pg-signs-bar .pill-row a:hover { border-color: var(--ink); color: var(--ink); }
+.pg-signs-group { scroll-margin-top: 124px; }
+.pg-signs-group + .pg-signs-group { margin-top: clamp(40px, 5vw, 64px); }
+.pg-signs-ghead { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-bottom: 16px; }
+.pg-signs-ghead h2 { font-size: clamp(24px, 2.4vw, 30px); }
+.pg-signs-cat .tbl .thumb { width: 92px; }
+.pg-signs-cat .tbl th:nth-child(3) { width: 150px; }
+.pg-signs-cat .tbl th:nth-child(4) { width: 140px; }
+.pg-signs-cat .tbl .thumb img { width: 64px; height: 48px; }
+.pg-signs-cat .tbl td .code { color: var(--ink); font-weight: 700; margin-right: 6px; }
+.pg-signs-cat .tbl td .use { display: block; font-size: 13.5px; color: var(--muted); margin-top: 3px; max-width: 60ch; }
+.pg-signs-cat .tbl td.dims span, .pg-signs-cat .tbl td.num b { display: block; white-space: nowrap; }
+.pg-signs-cat .tbl td.dims { white-space: nowrap; }
+.pg-signs-cat .notice { margin-top: clamp(32px, 4vw, 48px); }
+@media (max-width: 1100px) { .pg-signs-bar .pill-row { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; } }
+@media (max-width: 900px) { .pg-signs-groups { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) {
+  .pg-signs-groups { grid-template-columns: 1fr; }
+  .pg-signs-bar .search .count { display: none; }
+  /* Lentelė telefone: kiekviena eilutė tampa kortele (tinklelis), antraštė slepiama */
+  .pg-signs-cat .tbl table, .pg-signs-cat .tbl tbody { display: block; min-width: 0; }
+  .pg-signs-cat .tbl thead { display: none; }
+  .pg-signs-cat .tbl tr { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; grid-template-areas: "thumb name name" "thumb dims price"; gap: 4px 12px; padding: 12px 14px; border-top: 1px solid var(--line); font-size: 14.5px; }
+  .pg-signs-cat .tbl tr:first-child { border-top: 0; }
+  .pg-signs-cat .tbl td { display: block; padding: 0; border: 0; width: auto; }
+  .pg-signs-cat .tbl td.thumb { grid-area: thumb; }
+  .pg-signs-cat .tbl td.name { grid-area: name; }
+  .pg-signs-cat .tbl td.dims { grid-area: dims; color: var(--muted); }
+  .pg-signs-cat .tbl td.num { grid-area: price; }
+  .pg-signs-cat .tbl .thumb img { width: 52px; height: 44px; }
+}
+</style>{% endblock %}
+{% block content %}
+{# Duomenys: signs.json (grupės, ženklai, variantai su matmenimis ir kainomis) #}
+{% macro slug(s) -%}{{ s|lower|replace('ą','a')|replace('č','c')|replace('ę','e')|replace('ė','e')|replace('į','i')|replace('š','s')|replace('ų','u')|replace('ū','u')|replace('ž','z')|replace('(','')|replace(')','')|replace(' ','-') }}{%- endmacro %}
+{# Lietuviškos daugiskaitos formos: 1 ženklas, 2-9 ženklai, 10-20 ženklų #}
+{% macro pl(n, one, few, many) -%}{% if n % 10 == 1 and n % 100 != 11 %}{{ one }}{% elif n % 10 == 0 or (n % 100 >= 11 and n % 100 <= 19) %}{{ many }}{% else %}{{ few }}{% endif %}{%- endmacro %}
+{% set odd_groups = ['Operatyviniai žymėjimai', 'Kiti ženklai ir užrašai'] %}
+{% set short = {'Evakuacijos krypties ženklai': 'Evakuacija', 'Informacijos ir gaisrinės įrangos ženklai': 'Informacija ir įranga', 'Draudžiamieji ženklai': 'Draudžiamieji', 'Įspėjamieji ženklai': 'Įspėjamieji', 'Elektrosaugos ženklai': 'Elektrosauga', 'Saugos ir sveikatos ženklai': 'Sauga ir sveikata', 'Operatyviniai žymėjimai': 'Operatyviniai', 'Pavojingų medžiagų (krovinių) ženklai': 'Pavojingos medžiagos', 'Kiti ženklai ir užrašai': 'Kiti'} %}
+{% set ns = namespace(total=0) %}
+{% for grp in signs.groups %}{% set ns.total = ns.total + grp['items']|length %}{% endfor %}
+{% set total = ns.total %}
+{% set lead = total ~ ' ' ~ pl(total, 'ženklas', 'ženklai', 'ženklų') ~ ' ' ~ signs.groups|length ~ ' grupėse: evakuacijos krypties, informacijos ir gaisrinės įrangos, draudžiamieji, įspėjamieji, elektrosaugos, saugos ir sveikatos, operatyviniai žymėjimai, pavojingų medžiagų ir kiti. Kainos su PVM.' %}
+
+{{ m.page_hero('Saugos ženklai', lead, image=img('foto:evakuacija-zenklas'), alt='Žalias evakuacijos krypties ženklas, pakabintas tarp pastato inžinerinių vamzdžių', crumbs=[{'label': 'Prekės', 'href': 'prekes.html'}, {'label': 'Saugos ženklai'}]) }}
+
+{# Grupių apžvalga: kortelės su ženklų pavyzdžiais ir nuorodomis į lenteles #}
+<section class="sec pg-signs-over" data-parallax-root>
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.15">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Katalogas</div>
+      <h2>{{ signs.groups|length }} ženklų grupės</h2>
+      <p class="lead">Pasirinkite grupę arba ieškokite pagal ženklo kodą ar pavadinimą. Prie kiekvieno ženklo nurodyti matmenys ir kaina su PVM, užsakymus priimame el. paštu ir telefonu.</p>
+    </div>
+    <div class="pg-signs-groups">
+      {% for grp in signs.groups %}
+      {% set n = grp['items']|length %}
+      <a class="pg-signs-gcard" href="#{{ slug(grp.title) }}" data-reveal style="--i:{{ loop.index0 % 3 }}">
+        <div class="thumbs">{% for it in (grp['items']|selectattr('image')|list)[:4] %}<img src="assets/img/katalogas/{{ it.image }}" alt="" loading="lazy" width="58" height="58">{% endfor %}</div>
+        <h3>{{ grp.title }}{{ m.icon('arrow') }}</h3>
+        <span class="small muted">{% if grp.title in odd_groups %}{{ n }} {{ pl(n, 'pozicija', 'pozicijos', 'pozicijų') }}{% else %}{{ n }} {{ pl(n, 'ženklas', 'ženklai', 'ženklų') }}{% endif %}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# Katalogas: lipni paieškos juosta su grupių nuorodomis, po viena lentele kiekvienai grupei #}
+<section class="sec sec-white pg-signs-cat" id="katalogas">
+  <div class="wrap">
+    <div class="pg-signs-bar">
+      <div class="search">
+        <input type="search" data-search aria-label="Ieškoti ženklo" placeholder="Ieškoti pagal kodą ar pavadinimą" autocomplete="off">
+        <span class="count" data-search-count>Iš viso: {{ total }}</span>
+      </div>
+      <nav class="pill-row" aria-label="Ženklų grupės">
+        {% for grp in signs.groups %}<a class="tag tag-line" href="#{{ slug(grp.title) }}">{{ short.get(grp.title, grp.title) }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+
+    {% for grp in signs.groups %}
+    {% set odd = grp.title in odd_groups %}
+    {% set n = grp['items']|length %}
+    <section class="pg-signs-group" id="{{ slug(grp.title) }}" data-search-group data-reveal>
+      <div class="pg-signs-ghead">
+        <h2 id="h-{{ slug(grp.title) }}">{{ grp.title }}</h2>
+        <span class="tag">{% if odd %}{{ n }} {{ pl(n, 'pozicija', 'pozicijos', 'pozicijų') }}{% else %}{{ n }} {{ pl(n, 'ženklas', 'ženklai', 'ženklų') }}{% endif %}</span>
+      </div>
+      <div class="tbl">
+        <table aria-labelledby="h-{{ slug(grp.title) }}">
+          <thead>
+            <tr>
+              <th class="thumb">Ženklas</th>
+              <th>{{ 'Pavadinimas / dydis' if odd else 'Kodas ir pavadinimas' }}</th>
+              <th>Matmenys, mm</th>
+              <th class="num">Kaina su PVM</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for it in grp['items'] %}
+            {# Pateikimo pataisos senojo kainoraščio įrašams (tarpai po kablelių, didžiosios raidės sakinio viduryje, "vnt." žymėjimas);
+               turinys nekeičiamas. Prieš skelbiant svetainę tas pačias pataisas verta perkelti į signs.json. #}
+            {% set name = it.name|replace('transporto Priemonėms', 'transporto priemonėms')|replace('apie Ėdžią', 'apie ėdžią') %}
+            {% set name = name if name[:2] == 'h-' else (name[:1]|upper) ~ name[1:] %}
+            {% set usage = (it.usage or '')|replace('teritoriją,pastatą', 'teritoriją, pastatą')|replace('Bsg,Cg', 'Bsg, Cg') %}
+            <tr data-name="{{ it.code or '' }} {{ name }} {{ usage or '' }}">
+              <td class="thumb">{% if it.image %}<img src="assets/img/katalogas/{{ it.image }}" alt="" loading="lazy" width="64" height="48">{% endif %}</td>
+              <td class="name">{% if it.code %}<b class="code">{{ it.code }}</b>{% endif %}{{ name }}{% if usage %}<span class="use">{{ usage }}</span>{% endif %}</td>
+              <td class="dims">{% for v in it.variants %}<span>{{ (v.size_mm or '-')|replace('(10 vnt).', '(10 vnt.)')|replace('(10vnt )', '(10 vnt.)')|replace('(5vnt.)', '(5 vnt.)') }}</span>{% endfor %}</td>
+              <td class="num">{% for v in it.variants %}<b>{{ v.price }}</b>{% endfor %}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+    {% endfor %}
+
+    <div class="notice" data-reveal>{{ signs.price_note|replace(' (demonstracinė versija)', '') }}</div>
+  </div>
+</section>
+
+<section class="sec sec-tight">
+  <div class="wrap">
+    {{ m.cta_inline(title='Reikia ženklų visam objektui?', text='Atsiųskite patalpų sąrašą arba evakuacijos planą: sudarysime ženklų komplektą pagal grupes bei matmenis ir pateiksime pasiūlymą.') }}
+  </div>
+</section>
+{% endblock %}

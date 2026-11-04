@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) document.documentElement.classList.add('js');</script>
+<title>Evakuacijos planai | Geslita</title>
+<meta name="description" content="Evakuacijos (evakavimo) planų braižymas pagal Bendrųjų gaisrinės saugos taisyklių 6 priedą: rėminimas, tamsoje šviečiantys planai, kaina 70 €. Dirbame visoje Lietuvoje.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* Evakuacijos planai (.ev-): hero su įrėmintu planu, rėmelio spalvomis ir šviesos jungikliu; teiginys; teisės aktai; reikalavimai su ženklų legenda; pavyzdžiai; užsakymas */
+.ev-hero { position: relative; padding-top: calc(var(--head-h) + clamp(36px, 5vw, 72px)); padding-bottom: clamp(56px, 7vw, 100px); overflow: clip; transition: background-color 0.7s var(--ease), color 0.7s var(--ease); }
+.ev-hero .plan-bg { position: absolute; left: -10%; bottom: -24%; width: clamp(520px, 52vw, 900px); opacity: 0.1; pointer-events: none; will-change: transform; transition: opacity 0.7s var(--ease); }
+.ev-hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+.ev-copy h1 { margin: 18px 0 18px; font-size: clamp(40px, 5.4vw, 72px); line-height: 1; letter-spacing: -0.035em; transition: color 0.7s var(--ease); }
+.ev-copy .lead { max-width: 32em; transition: color 0.7s var(--ease); }
+.ev-price { display: inline-flex; align-items: baseline; gap: 10px; margin-top: 24px; padding: 10px 18px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm); transition: background 0.7s var(--ease), border-color 0.7s var(--ease); }
+.ev-price small { font-size: 13.5px; color: var(--muted); }
+.ev-price b { font: 700 28px/1 var(--fd); color: var(--ink); font-variant-numeric: lining-nums; }
+.ev-copy .btn-group { margin-top: 26px; }
+
+.ev-stage { position: relative; perspective: 1400px; }
+.ev-frame { --frame: #c3c9d2; position: relative; padding: clamp(10px, 1.2vw, 16px); border-radius: 8px; background: var(--frame); box-shadow: 0 2px 0 rgba(255, 255, 255, 0.4) inset, 0 40px 70px -30px rgba(14, 26, 43, 0.45), 0 12px 24px -12px rgba(14, 26, 43, 0.25); transform: rotateY(-7deg) rotateX(3deg); transform-style: preserve-3d; transition: background 0.5s var(--ease), box-shadow 0.7s var(--ease), transform 0.9s var(--ease); will-change: transform; }
+.ev-frame .sheet { position: relative; aspect-ratio: 1600 / 1280; background: #fff; overflow: hidden; border-radius: 2px; }
+.ev-frame .sheet img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.9s var(--ease); }
+.ev-frame .sheet .night { opacity: 0; }
+.ev-frame .glare { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 38%); mix-blend-mode: screen; transition: opacity 0.7s var(--ease); }
+.ev-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 20px; margin-top: 30px; }
+.ev-swatches { display: flex; align-items: center; gap: 10px; margin: 0; padding: 0; border: 0; }
+.ev-swatches legend { float: left; margin-right: 4px; font: 600 13px/1 var(--fb); color: var(--muted); transition: color 0.7s var(--ease); }
+.ev-sw { position: relative; width: 30px; height: 30px; }
+.ev-sw input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+.ev-sw span { display: block; width: 100%; height: 100%; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgba(14, 26, 43, 0.18); transition: box-shadow 0.25s var(--ease), transform 0.25s var(--ease); }
+.ev-sw input:checked + span { box-shadow: inset 0 0 0 1px rgba(14, 26, 43, 0.18), 0 0 0 3px var(--bg), 0 0 0 5px var(--navy-3); }
+.ev-sw input:focus-visible + span { outline: 2px solid var(--navy-3); outline-offset: 5px; }
+.ev-sw:hover span { transform: scale(1.08); }
+.ev-light { display: inline-flex; align-items: center; gap: 12px; padding: 8px 16px 8px 8px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); font: 600 14px/1 var(--fb); color: var(--ink); cursor: pointer; transition: background 0.5s var(--ease), border-color 0.5s var(--ease), color 0.5s var(--ease); }
+.ev-light .track { position: relative; width: 46px; height: 26px; border-radius: 999px; background: #e3e8ef; transition: background 0.4s var(--ease); }
+.ev-light .knob { position: absolute; left: 3px; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(14, 26, 43, 0.3); display: grid; place-items: center; transition: transform 0.4s var(--ease); }
+.ev-light .knob .ic { font-size: 12px; color: #a86f00; }
+.ev-light[aria-pressed="true"] .track { background: #1f9d55; }
+.ev-light[aria-pressed="true"] .knob { transform: translateX(20px); }
+.ev-light[aria-pressed="true"] .knob .ic { color: #1f9d55; }
+.ev-tip { position: absolute; z-index: 2; left: -4%; bottom: 14%; display: grid; gap: 2px; padding: 12px 16px; border-radius: 14px; background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(217, 223, 231, 0.8); box-shadow: var(--shadow-lg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); will-change: transform; transition: background 0.7s var(--ease), border-color 0.7s var(--ease); }
+.ev-tip b { font: 700 15px/1.2 var(--fd); color: var(--ink); transition: color 0.7s var(--ease); }
+.ev-tip span { font-size: 13px; color: var(--muted); transition: color 0.7s var(--ease); }
+
+/* Šviesa išjungta: hero tamsėja, planas šviečia */
+.ev-hero.is-dark { background: #070d17; color: var(--on-dark); }
+.ev-hero.is-dark .plan-bg { opacity: 0.03; }
+.ev-hero.is-dark h1 { color: #fff; }
+.ev-hero.is-dark .lead, .ev-hero.is-dark .crumbs, .ev-hero.is-dark .crumbs a, .ev-hero.is-dark .eyebrow, .ev-hero.is-dark .ev-swatches legend { color: var(--on-dark-muted); }
+.ev-hero.is-dark .ev-price, .ev-hero.is-dark .ev-light, .ev-hero.is-dark .ev-tip { background: rgba(255, 255, 255, 0.06); border-color: var(--line-dark); }
+.ev-hero.is-dark .ev-price b, .ev-hero.is-dark .ev-light, .ev-hero.is-dark .ev-tip b { color: #fff; }
+.ev-hero.is-dark .ev-price small, .ev-hero.is-dark .ev-tip span { color: var(--on-dark-muted); }
+.ev-hero.is-dark .btn-line { color: #fff; border-color: rgba(255, 255, 255, 0.3); }
+.ev-hero.is-dark .btn-line:hover { background: rgba(255, 255, 255, 0.08); border-color: #fff; }
+.ev-hero.is-dark .ev-sw span { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35); }
+.ev-hero.is-dark .ev-sw input:checked + span { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 0 3px #070d17, 0 0 0 5px #8fe3a3; }
+.ev-hero.is-dark .ev-frame { background: color-mix(in srgb, var(--frame) 35%, #05080e); box-shadow: 0 0 0 1px rgba(140, 255, 150, 0.12), 0 0 60px 6px rgba(120, 255, 140, 0.28), 0 0 160px 30px rgba(80, 220, 110, 0.14); }
+.ev-hero.is-dark .ev-frame .sheet .night { opacity: 1; }
+.ev-hero.is-dark .ev-frame .glare { opacity: 0.25; }
+
+.ev-hl { border-block: 1px solid var(--line); background: var(--surface); }
+.ev-hl ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.ev-hl li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: start; padding: 26px 22px; }
+.ev-hl li + li { border-left: 1px solid var(--line); }
+.ev-hl .ico { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: #e8eef7; color: var(--navy-3); }
+.ev-hl .ico .ic { font-size: 20px; }
+.ev-hl b { display: block; margin-bottom: 4px; font: 700 16px/1.25 var(--fd); color: var(--ink); }
+.ev-hl p { font-size: 13.5px; line-height: 1.45; color: var(--muted); }
+
+.ev-def .wrap { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
+.ev-def .eyebrow { margin-top: 12px; }
+.ev-def .big { font: 600 clamp(24px, 2.7vw, 38px)/1.3 var(--fd); letter-spacing: -0.015em; color: var(--ink); text-wrap: pretty; }
+.ev-def .more { margin-top: 22px; max-width: 48em; }
+
+.ev-legal { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 1.8vw, 22px); }
+.ev-law { position: relative; display: flex; flex-direction: column; padding: 28px; border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm); overflow: hidden; }
+.ev-law::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--navy-3); }
+.ev-law .doc { min-height: 2.6em; font: 600 12.5px/1.3 var(--fb); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.ev-law .ref { margin: 12px 0 16px; font: 700 clamp(30px, 3vw, 42px)/1.05 var(--fd); letter-spacing: -0.02em; color: var(--ink); }
+.ev-law p { font-size: 15px; color: var(--text); }
+
+.ev-req .wrap { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(28px, 5vw, 80px); align-items: start; }
+.ev-req .tag { margin-top: 14px; }
+.ev-legend { margin: 28px 0 0; padding: 18px; border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-md); }
+.ev-legend img { display: block; width: 100%; height: auto; }
+.ev-legend figcaption { margin-top: 12px; font-size: 13px; color: var(--muted); }
+.ev-reqlist { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line-2); }
+.ev-reqlist li { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--line-2); }
+.ev-reqlist .n { font: 700 clamp(24px, 2.2vw, 30px)/1 var(--fd); color: var(--navy-3); letter-spacing: -0.02em; font-variant-numeric: lining-nums; }
+.ev-reqlist b { display: block; font: 500 clamp(16px, 1.35vw, 18px)/1.5 var(--fd); color: var(--ink); }
+.ev-reqlist p { margin-top: 8px; font-size: 15px; color: var(--text); }
+.ev-reqlist .route-demo { display: inline-flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 12px; font-size: 13.5px; color: var(--muted); }
+.ev-reqlist .route-demo span { display: inline-flex; align-items: center; gap: 8px; }
+.ev-reqlist .route-demo i { display: inline-block; width: 40px; border-top: 4px solid #1f9d55; }
+.ev-reqlist .route-demo i.dash { border-top-style: dashed; }
+
+.ev-band .plan-layer { position: absolute; right: -16%; top: -12%; width: 62%; min-width: 560px; opacity: 0.12; pointer-events: none; will-change: transform; }
+.ev-band .plan-layer img { width: 100%; }
+.ev-band .plan-layer .route { position: absolute; inset: 0; clip-path: inset(0 100% 0 0); transition: clip-path 1.8s cubic-bezier(0.65, 0, 0.35, 1) 0.2s; }
+.ev-band .plan-layer.is-in .route, html.is-static .ev-band .route { clip-path: none; }
+.ev-band .wrap { position: relative; }
+.ev-q { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 80px); align-items: start; }
+.ev-q h2 { color: #fff; }
+.ev-q p { color: var(--on-dark); }
+.ev-q p + p { margin-top: 14px; }
+.ev-verdict { margin-top: 22px; padding: 20px 22px 20px 24px; border-left: 4px solid #4ade80; border-radius: 0 14px 14px 0; background: rgba(255, 255, 255, 0.06); font: 600 clamp(17px, 1.5vw, 20px)/1.45 var(--fd); color: #fff; }
+.ev-verdict small { display: block; margin-bottom: 8px; font: 600 12px/1 var(--fb); letter-spacing: 0.08em; text-transform: uppercase; color: #8fe3a3; }
+.ev-samples { display: grid; grid-template-columns: 1.1fr 1fr 0.8fr; gap: clamp(16px, 2vw, 28px); align-items: center; margin-top: clamp(48px, 6vw, 88px); }
+.ev-samples figure { margin: 0; }
+.ev-samples .fr { padding: 10px; border-radius: 6px; background: #c3c9d2; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7); }
+.ev-samples .fr img { display: block; width: 100%; height: auto; background: #fff; }
+.ev-samples .s1 { transform: rotate(-1.5deg); }
+.ev-samples .s2 { transform: rotate(1.2deg) translateY(24px); }
+.ev-samples .glow .fr { background: #1b2a1f; box-shadow: 0 0 50px 4px rgba(120, 255, 140, 0.22); }
+.ev-samples figcaption { margin-top: 14px; font-size: 13.5px; color: var(--on-dark-muted); }
+.ev-samples .glow h3 { color: #fff; margin-bottom: 8px; font-size: 19px; }
+.ev-samples .glow p { margin-bottom: 14px; font-size: 14.5px; color: var(--on-dark); }
+
+.ev-order .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(28px, 5vw, 80px); align-items: start; }
+.ev-check { position: relative; padding: clamp(26px, 3vw, 40px); padding-top: clamp(40px, 4vw, 52px); border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-lg); }
+.ev-check::before { content: ""; position: absolute; left: 50%; top: -14px; width: 120px; height: 28px; translate: -50% 0; border-radius: 8px; background: var(--navy); box-shadow: var(--shadow-sm); }
+.ev-check h2 { font-size: clamp(24px, 2.4vw, 32px); margin-bottom: 20px; }
+.ev-check ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.ev-check li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 14px; padding: 12px 0; border-bottom: 1px dashed var(--line-2); font-size: 15.5px; color: var(--text); }
+.ev-check li:last-child { border-bottom: 0; }
+.ev-check .box { width: 22px; height: 22px; margin-top: 2px; border-radius: 6px; border: 2px solid var(--navy-3); display: grid; place-items: center; color: var(--navy-3); }
+.ev-check .box .ic { font-size: 14px; stroke-width: 3; opacity: 0; transform: scale(0.5); transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); transition-delay: calc(0.3s + var(--i) * 0.12s); }
+.ev-check.is-in .box .ic { opacity: 1; transform: none; }
+html.is-static .ev-check .box .ic { opacity: 1; transform: none; transition: none; }
+.ev-steps h2 { margin-bottom: 26px; }
+.ev-steplist { margin: 0; padding: 0; list-style: none; position: relative; }
+.ev-steplist::before { content: ""; position: absolute; left: 21px; top: 22px; bottom: 22px; width: 2px; background: linear-gradient(var(--navy-3), var(--line)); }
+.ev-steplist li { position: relative; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; padding-bottom: 26px; }
+.ev-steplist .n { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--surface); border: 2px solid var(--navy-3); font: 700 15px/1 var(--fd); color: var(--navy-3); z-index: 1; font-variant-numeric: lining-nums; }
+.ev-steplist h3 { font-size: 19px; margin: 9px 0 6px; }
+.ev-steplist p { font-size: 15.5px; color: var(--text); }
+.ev-steps .btn-group { margin-top: 8px; }
+.ev-cta { padding-top: 0; }
+
+@media (max-width: 1023px) {
+  .ev-hl ul { grid-template-columns: 1fr 1fr; }
+  .ev-hl li:nth-child(3) { border-left: 0; }
+  .ev-hl li:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+@media (max-width: 960px) {
+  .ev-hero .wrap, .ev-def .wrap, .ev-req .wrap, .ev-q, .ev-order .wrap { grid-template-columns: minmax(0, 1fr); }
+  .ev-legal { grid-template-columns: minmax(0, 1fr); }
+  .ev-frame { transform: none; }
+  .ev-tip { left: auto; right: -6px; top: -22px; bottom: auto; padding: 9px 13px; }
+  .ev-tip b { font-size: 13.5px; }
+  .ev-tip span { font-size: 12px; }
+  .ev-samples { grid-template-columns: 1fr 1fr; }
+  .ev-samples .glow { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; }
+  .ev-legend { max-width: 460px; }
+}
+@media (max-width: 560px) {
+  .ev-hl ul { grid-template-columns: minmax(0, 1fr); }
+  .ev-hl li + li { border-left: 0; border-top: 1px solid var(--line); }
+  .ev-hl li { padding: 18px 4px; }
+  .ev-samples { grid-template-columns: minmax(0, 1fr); }
+  .ev-samples .s2 { transform: rotate(1deg); }
+  .ev-samples .glow { grid-template-columns: minmax(0, 1fr); }
+  .ev-reqlist li { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; }
+  .ev-controls { margin-top: 36px; }
+}
+@media (prefers-reduced-motion: reduce) { .ev-frame, .ev-hero, .ev-frame .sheet img { transition: none; } }
+</style></head>
+<body class="">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14L20 4M15 4h5v5"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3 4 5 4 9a4 4 0 0 1-8 0c0-1 .3-2 1-3 0 2 1 3 2 3 0-3-1-5 1-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V6h11v11M14 9h4l3 3v5h-2"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3H4a4 4 0 0 0 2-3v-3a7 7 0 0 1 4-6M9 17v1a3 3 0 0 0 6 0v-1"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3zM9 4v13M15 7v13"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 9L12 5 2 9l10 4 10-4zM6 10.6V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.4"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M7 10h3v11H7zM14 4l3-1 3 3-1 3-5 5-3-3 3-7zM4 20l3-3"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></symbol>
+</svg>
+<a class="skip" href="#main">Pereiti prie turinio</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Geslita, į pradžią"><img src="assets/img/logo-geslita-s.png" alt="Geslita" width="167" height="50"></a>
+    <ul class="site-nav">
+      <li><a href="index.html" >Pradžia</a></li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-paslaugos">Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-paslaugos">
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas<span>Patikra nuo 5,26 €</span></a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija<span>Patikra, remontas, įrengimas</span></a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis<span>Čiaupai, žarnos, žurnalai</span></a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai<span>Planas 70 €</span></a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai<span>Montavimas pagal EN 1838</span></a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai<span>Saugos centras</span></a></li>
+          <li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos<span>Dielektrika, nuoma, žurnalai</span></a></li>
+          <li><a class="drop-all" href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-prekes">Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-prekes">
+          <li><a href="prekes-gesintuvai.html">Gesintuvai<span>Milteliniai, CO₂, vandens putų</span></a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis<span>Spintelės, žarnos, čiaupai</span></a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai<span>102 ženklai su paieška</span></a></li>
+          <li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga<span>Detektoriai, sirenos, šviestuvai</span></a></li>
+          <li><a class="drop-all" href="prekes.html">Visos prekės</a></li>
+        </ul>
+      </li>
+      <li><a href="saugos-centras.html" >Saugos centras</a></li>
+      <li class="nav-naudinga"><a href="naudinga-informacija.html" >Naudinga</a></li>
+      <li><a href="apie-mus.html" >Apie mus</a></li>
+      <li><a href="kontaktai.html" >Kontaktai</a></li>
+    </ul>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>+370 653 99977</span></a>
+      <a class="btn btn-sm" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+      <button class="nav-toggle" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-nav"><svg class="ic ic-menu"><use href="#i-menu"/></svg><svg class="ic ic-x"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilus meniu">
+  <ul>
+    <li><a href="index.html">Pradžia</a></li>
+    <li><details><summary>Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li><li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas</a></li><li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li><li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li><li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li><li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li><li><a href="saugos-centras.html">Darbuotojų mokymai</a></li><li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos</a></li>
+    </ul></details></li>
+    <li><details><summary>Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="prekes.html">Visos prekės</a></li><li><a href="prekes-gesintuvai.html">Gesintuvai</a></li><li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li><li><a href="prekes-zenklai.html">Saugos ženklai</a></li><li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga</a></li>
+    </ul></details></li>
+    <li><a href="saugos-centras.html">Saugos centras</a></li>
+    <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+    <li><a href="apie-mus.html">Apie mus</a></li>
+    <li><a href="kontaktai.html">Kontaktai</a></li>
+  </ul>
+  <div class="mobile-cta">
+    <a class="btn" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+    <a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<section class="ev-hero" data-parallax-root data-ev-hero>
+  <img class="plan-bg" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.18">
+  <div class="wrap">
+    <div class="ev-copy">
+      <ol class="crumbs"><li><a href="index.html">Pradžia</a></li><li><a href="paslaugos.html#evakuacijos-planai">Paslaugos</a></li><li><span aria-current="page">Evakuacijos planai</span></li></ol>
+      <h1>Evakuacijos planai</h1>
+      <p class="lead">Braižome įvairaus dydžio ir sudėtingumo evakuacijos (evakavimo) planus. Planai rengiami pagal Bendrųjų gaisrinės saugos taisyklių 6 priedo reikalavimus ir pateikiami tvirtinti įmonės vadovui.</p>
+      <p class="ev-price"><small>Evakavimo plano rengimo kaina</small><b>70 €</b></p>
+      <div class="btn-group"><a class="btn " href="#uzsakymas">Užsakyti planus<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="#reikalavimai">Reikalavimai planui</a></div>
+    </div>
+    <div class="ev-stage">
+      <div data-tilt>
+        <div class="ev-frame" data-frame>
+          <div class="sheet">
+            <img class="day" src="assets/img/evak/plan-diena.webp" alt="Geslitos parengtas pirmo aukšto evakuacijos planas su sutartiniais ženklais ir žaliais evakuacijos keliais" width="1600" height="1280" fetchpriority="high">
+            <img class="night" src="assets/img/evak/plan-naktis.webp" alt="" aria-hidden="true" width="1600" height="1280" loading="lazy">
+          </div>
+          <span class="glare" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="ev-tip" data-parallax="-0.2" aria-hidden="true"><b data-tip-title>Rėmelis norimos spalvos</b><span data-tip-text>Formatas ir kiekis pagal poreikį</span></div>
+      <div class="ev-controls">
+        <fieldset class="ev-swatches">
+          <legend>Rėmelis</legend>
+<label class="ev-sw" title="Aliuminis" style="--c: #c3c9d2"><input type="radio" name="frame" value="#c3c9d2" aria-label="Aliuminis rėmelis" checked><span></span></label><label class="ev-sw" title="Juodas" style="--c: #1d232c"><input type="radio" name="frame" value="#1d232c" aria-label="Juodas rėmelis"><span></span></label><label class="ev-sw" title="Baltas" style="--c: #f4f5f7"><input type="radio" name="frame" value="#f4f5f7" aria-label="Baltas rėmelis"><span></span></label><label class="ev-sw" title="Raudonas" style="--c: #c62828"><input type="radio" name="frame" value="#c62828" aria-label="Raudonas rėmelis"><span></span></label>        </fieldset>
+        <button class="ev-light" type="button" aria-pressed="false" data-light><span class="track" aria-hidden="true"><span class="knob"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg></span></span><span class="lbl">Išjungti šviesą</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ev-hl" aria-label="Kodėl verta užsakyti">
+  <div class="wrap">
+    <ul>
+<li data-reveal style="--i:0"><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg></span><div><b>Pagal faktinį išplanavimą</b><p>Planai braižomi pagal faktinį pastato išplanavimą (kiekvieno aukšto plano kopiją), nepriklausomai nuo pastato dydžio ir sudėtingumo.</p></div></li><li data-reveal style="--i:1"><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span><div><b>Pagal 6 priedo reikalavimus</b><p>Planai rengiami pagal Bendrųjų gaisrinės saugos taisyklių 6 priedo reikalavimus ir pateikiami tvirtinti įmonės vadovui.</p></div></li><li data-reveal style="--i:2"><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-tools"/></svg></span><div><b>Formatas, kiekis ir rėmelis</b><p>Pasirenkamas planų formatas, kiekis ir rėminimas - rėmelis norimos spalvos.</p></div></li><li data-reveal style="--i:3"><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg></span><div><b>Tamsoje šviečiantys</b><p>Tamsoje šviečiantys evakuacijos planai.</p></div></li>    </ul>
+  </div>
+</section>
+
+<section class="sec ev-def">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>Kas yra evakavimo planas</div>
+    <div>
+      <p class="big" data-words>Evakavimo planas - tai vidinis juridinio asmens dokumentas, nurodantis evakuacijos kelius ir evakuacinius išėjimus bei nustatantis žmonių elgesio taisykles galimo pavojaus atveju.</p>
+      <p class="more" data-reveal>Evakavimo planai, gaisrinės saugos, evakuacijos krypties (saugių sąlygų), gaisrinės įrangos, informacijos, draudžiamieji, įspėjamieji ir vaizdiniai ženklai padeda priimti tinkamus sprendimus evakuojant žmones iš masinio žmonių susibūrimo vietų, įvykus neįprastai situacijai ar kilus pavojui.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tint">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2>Kas įpareigoja turėti evakavimo planus</h2>
+    </div>
+    <div class="ev-legal">
+      <article class="ev-law" data-reveal style="--i:0">
+        <span class="doc">LR darbo kodeksas</span>
+        <h3 class="ref">266 str.</h3>
+        <p>Kiekviena įmonė, įstaiga, organizacija ir visi jų padaliniai privalo turėti darbuotojų evakuacijos planus. Planai turi būti įmonės ir jos padalinių informaciniuose stenduose, pastebimose vietose. Įmonės darbuotojų saugos ir sveikatos tarnybos darbuotojai ir darbuotojų atstovai privalo būti gerai susipažinę su evakuacijos planais.</p>
+      </article>
+      <article class="ev-law" data-reveal style="--i:1">
+        <span class="doc">LR darbuotojų saugos ir sveikatos įstatymas</span>
+        <h3 class="ref">22 str.</h3>
+        <p>Kiekviena įmonė ir visi jos padaliniai privalo turėti darbuotojų evakavimo planus. Su evakavimo planais darbuotojai susipažįsta įsidarbindami įmonėje. Planai iškabinami įmonės ir jos padalinių gerai matomose vietose. Darbdavio įgalioti asmenys, įmonės darbuotojų saugos ir sveikatos tarnybos darbuotojai, darbuotojų atstovai saugai ir sveikatai privalo būti gerai susipažinę su evakavimo planais, įmonės avarijų prevencijos ir likvidavimo planais bei priemonėmis, kurių privaloma imtis avarijų atvejais.</p>
+      </article>
+      <article class="ev-law" data-reveal style="--i:2">
+        <span class="doc">Bendrosios gaisrinės saugos taisyklės</span>
+        <h3 class="ref">64 p. ir 6 priedas</h3>
+        <p><span class="ltx">Taisyklės nustato bendruosius eksploatuojamų objektų gaisrinės saugos reikalavimus, neatsižvelgiant į jų nuosavybės formas, kurių privalo laikytis visi Lietuvos Respublikos teritorijoje esantys asmenys. Taisyklių 64 punktas nustato, kad žmonių evakavimo planai statiniuose įrengiami pagal šių taisyklių 6 priede nurodytus reikalavimus.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec ev-req" id="reikalavimai">
+  <div class="wrap">
+    <div class="sticky-col" data-reveal>
+      <h2>Pagrindiniai žmonių evakavimo plano reikalavimai</h2>
+<span class="tag tag-line">Bendrųjų gaisrinės saugos taisyklių 6 priedas</span>      <figure class="ev-legend">
+        <img src="assets/img/evak/sutartiniai-zenklai.webp" alt="Sutartiniai ženklai iš Geslitos evakuacijos plano: gesintuvas, gaisrinis čiaupas, signalizacijos mygtukas, elektros skydelis, telefonas, pagrindinis ir atsarginis evakuacijos kelias, „Jūs esate čia“" width="440" height="403" loading="lazy">
+        <figcaption>Sutartiniai ženklai iš mūsų parengto plano</figcaption>
+      </figure>
+    </div>
+    <ol class="ev-reqlist">
+      <li data-reveal style="--i:0">
+        <span class="n" aria-hidden="true">01</span>
+        <div>
+          <b>Žmonių evakavimo planas turi būti pakabintas kiekvieno pastato visuose aukštuose (išskyrus gyvenamuosius namus), gerai matomoje vietoje, prie kiekvieno įėjimo ir (ar) išėjimo, kai pastatuose nuolat ar laikinai būna daugiau kaip 100 žmonių, taip pat, neatsižvelgiant į žmonių skaičių, mokslo paskirties pastatuose (vaikų darželiuose, lopšeliuose, bendrojo lavinimo, profesinėse ir aukštosiose mokyklose), gydymo paskirties pastatuose (ligoninėse, sanatorijose, slaugos namuose), viešbučių bei poilsio paskirties pastatuose.</b>
+<p>Žmonių evakavimo planas, jo simboliai ir tekstas turi būti matomi iš ne mažesnio kaip 1 m atstumo.</p>        </div>
+      </li>
+      <li data-reveal style="--i:1">
+        <span class="n" aria-hidden="true">02</span>
+        <div>
+          <b>Aukšto žmonių evakavimo plane būtina nurodyti laiptines, liftus ir liftų holus, kambarius, balkonus, išorines kopėčias, taip pat laiptinių, liftų holų ir evakuacijos keliuose esančias duris.</b>
+        </div>
+      </li>
+      <li data-reveal style="--i:2">
+        <span class="n" aria-hidden="true">03</span>
+        <div>
+          <b>Kiekvieno viešbučio, motelio, senelių prieglaudos, pensiono, poilsio namų, nakvynės namų kambario matomoje vietoje turi būti pakabintas žmonių evakavimo planas ir gaisrinės saugos reikalavimų atmintinė, kurioje nurodyta, kaip elgtis kilus gaisrui.</b>
+<p>Kiekvienos patalpos žmonių evakavimo plane turi būti užrašas „Jūsų kambarys...“.</p>        </div>
+      </li>
+      <li data-reveal style="--i:0">
+        <span class="n" aria-hidden="true">04</span>
+        <div>
+          <b>Pagrindinis evakuacijos kelias žmonių evakavimo plane turi būti pažymėtas ištisine linija, atsarginis - punktyru.</b>
+<p>Šios linijos turi būti žalios spalvos ir dukart storesnės negu pastato aukšto žmonių evakavimo plano linijos. Pagrindinį evakuacijos kelią aukšto plane būtina nurodyti per laiptines, apsaugotas nuo dūmų, taip pat laiptines, vedančias į pirmąjį pastato aukštą. Kai laiptinės vienodai apsaugotos nuo dūmų ir ugnies, pagrindinis evakuacijos kelias yra iki artimiausios laiptinės. Linijos, rodančios evakuacijos kelią, turi būti nubrėžtos iš kambario iki išėjimo į laiptinę arba kitą saugią vietą.</p><span class="route-demo" aria-hidden="true"><span><i></i>Pagrindinis kelias</span><span><i class="dash"></i>Atsarginis kelias</span></span>        </div>
+      </li>
+      <li data-reveal style="--i:1">
+        <span class="n" aria-hidden="true">05</span>
+        <div>
+          <b>Aukšto žmonių evakavimo plane simboliais turi būti pažymėta: žmonių evakavimo plano vietos, rankinių gaisro signalizatorių jungikliai, gaisriniai čiaupai, gaisrinių siurblių (elektrifikuotų sklendžių) jungikliai, gesintuvai, stacionarių gesinimo ir dūmų šalinimo įrenginių rankinio paleidimo jungikliai, elektros skydeliai, telefonai.</b>
+<p>Simboliai turi būti ryškūs ir gerai matomi.</p>        </div>
+      </li>
+      <li data-reveal style="--i:2">
+        <span class="n" aria-hidden="true">06</span>
+        <div>
+          <b>Aukšto žmonių evakavimo plane simbolius būtina aiškiai iššifruoti.</b>
+        </div>
+      </li>
+      <li data-reveal style="--i:0">
+        <span class="n" aria-hidden="true">07</span>
+        <div>
+          <b>Su žmonių evakavimo planu turi būti supažindinti visi valstybės tarnautojai ir darbuotojai.</b>
+<p>Pakartotinai turi būti supažindinama kiekvienais metais.</p>        </div>
+      </li>
+      <li data-reveal style="--i:1">
+        <span class="n" aria-hidden="true">08</span>
+        <div>
+          <b>Žmonių evakavimo planą privalo patvirtinti įmonės, įstaigos, organizacijos vadovas.</b>
+        </div>
+      </li>
+      <li data-reveal style="--i:2">
+        <span class="n" aria-hidden="true">09</span>
+        <div>
+          <b>Žmonių evakavimo plano sutartiniai ženklai pateikti Bendrųjų gaisrinės saugos taisyklių 6 priedo lentelėje.</b>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="band-dark sec ev-band" data-parallax-root>
+  <div class="plan-layer" data-parallax="0.2">
+    <img src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+    <div class="route"><img src="assets/img/plan-route.png" alt="" aria-hidden="true"></div>
+  </div>
+  <div class="wrap">
+    <div class="ev-q">
+      <h2 data-reveal>Ar evakavimo planai privalomi, kai pastate būna mažiau kaip 100 žmonių?</h2>
+      <div data-reveal style="--i:1">
+        <p>Atsižvelgiant į teisės aktų reikalavimus gali kilti klausimas, ar evakavimo planai įmonėse, įstaigose ir organizacijose turi būti pakabinti tik tuomet, kai jų pastatuose nuolat ar laikinai būna daugiau kaip 100 žmonių (darbuotojų), ar ir tais atvejais, kai žmonių būna mažiau. Valstybinės darbo inspekcijos pozicija šiuo klausimu yra tokia, kad evakavimo planai privalo būti pakabinti visose įmonėse, įstaigose ir organizacijose nepriklausomai nuo dirbančiųjų skaičiaus ir įmonės ekonominės veiklos rūšies, kadangi LR Darbuotojų saugos ir sveikatos įstatymo 22 straipsnis griežtai nustato darbdaviui tokią prievolę.</p>
+        <p>Juolab viename pastate gali būti įsikūrusi viena, kelios ar keliolika įmonių, kuriose dirba po keletą, kelioliką ar keliasdešimt darbuotojų - bendras dirbančiųjų skaičius pastate gali siekti kelis šimtus, nors atskirose įmonėse dirba tik keletas žmonių. Įstatymas neišskiria darbuotojų ar žmonių skaičiaus kaip evakavimo planų įrengimo kriterijaus, o pagal teisės aktų hierarchiją LR Darbo kodeksas ir LR Darbuotojų saugos ir sveikatos įstatymas turi viršenybę Bendrųjų gaisrinės saugos taisyklių atžvilgiu.</p>
+        <p class="ev-verdict"><small>Išvada</small>Taigi darbuotojų evakavimo planai privalo būti visose įmonėse, įstaigose ir organizacijose nepriklausomai nuo darbuotojų skaičiaus ar vykdomos ekonominės veiklos rūšies.</p>
+      </div>
+    </div>
+    <div class="ev-samples">
+      <figure class="s1" data-reveal style="--i:0"><div class="fr" data-parallax="0.06"><img src="assets/img/geslita/Planas_2l.jpg" alt="Evakavimo plano pavyzdys" loading="lazy" width="1600" height="1280"></div><figcaption>Aukšto planas su sutartiniais ženklais</figcaption></figure>
+      <figure class="s2" data-reveal style="--i:1"><div class="fr" data-parallax="-0.06"><img src="assets/img/geslita/Planas_3l.jpg" alt="Evakavimo plano pavyzdys" loading="lazy" width="1600" height="1200"></div><figcaption>Pagrindinis ir atsarginis evakuacijos keliai</figcaption></figure>
+      <div class="glow" data-reveal style="--i:2">
+        <div><h3>Tamsoje šviečiantys planai</h3><p>Siūlome tamsoje šviečiančius (fotoliuminescencinius) evakuacijos planus, kurie išlieka matomi ir dingus apšvietimui.</p></div>
+        <figure><div class="fr"><img src="assets/img/geslita/evac_nakties1.JPG" alt="Tamsoje šviečiantis evakavimo planas" loading="lazy" width="500" height="333"></div><figcaption>Tikra nuotrauka tamsoje</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-white ev-order" id="uzsakymas">
+  <div class="wrap">
+    <div class="ev-check" data-reveal>
+      <h2>Informacija, reikalinga evakavimo planų parengimui</h2>
+      <ol>
+<li style="--i:0"><span class="box" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><span>Kiekvieno aukšto planas (kopija).</span></li><li style="--i:1"><span class="box" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><span>Organizacinės struktūros teisinė forma, pavadinimas ir kodas.</span></li><li style="--i:2"><span class="box" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><span>Vadovo, kuris tvirtins evakavimo planus, pareigų pavadinimas, vardas ir pavardė.</span></li><li style="--i:3"><span class="box" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><span>Evakavimo planų kabėjimo vietos, rankinių gaisro signalizatorių jungikliai, gaisriniai čiaupai, gaisrinių siurblių (elektrifikuotų sklendžių) jungikliai, gesintuvai, stacionarių gesinimo ir dūmų šalinimo įrenginių rankinio paleidimo jungikliai, elektros skydeliai, telefonai.</span></li><li style="--i:4"><span class="box" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><span>Reikalingas evakavimo planų formatas ir kiekis.</span></li><li style="--i:5"><span class="box" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><span>Ar reikalingas rėmelis, jo spalva.</span></li><li style="--i:6"><span class="box" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><span>Kontaktinis asmuo, telefonas, el. paštas.</span></li>      </ol>
+    </div>
+    <div class="ev-steps" data-reveal="right">
+      <div class="eyebrow">Užsakymas</div>
+      <h2>Kaip užsakyti</h2>
+      <ol class="ev-steplist">
+<li><span class="n">1</span><div><h3>Atsiųskite aukštų planus</h3><p>Kiekvieno aukšto plano kopiją ir įmonės rekvizitus atsiųskite el. paštu.</p></div></li><li><span class="n">2</span><div><h3>Suderiname</h3><p>Patiksliname gaisrinės įrangos vietas, planų formatą, kiekį ir rėminimą.</p></div></li><li><span class="n">3</span><div><h3>Pristatome</h3><p>Parengtus planus pateikiame tvirtinti įmonės vadovui.</p></div></li>      </ol>
+      <div class="btn-group">
+        <a class="btn" href="mailto:info@geslita.lt?subject=Evakuacijos%20plan%C5%B3%20u%C5%BEsakymas"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Siųsti planus el. paštu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight ev-cta"><div class="wrap"><div class="cta-inline" data-reveal>
+  <div><h2>Reikia evakuacijos planų?</h2><p>Paskambinkite arba parašykite: aptarsime planų kiekį, formatą ir rėminimą.</p></div>
+  <div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a></div>
+</div></div></section>
+</main>
+
+<footer class="site-foot">
+  <img class="plan-wm" src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo-geslita-white-s.png" alt="Geslita" width="167" height="50">
+        <p><span class="ltx">20 metų priešgaisrinės saugos patirties. Įrangos priežiūra ir prekyba, darbo saugos priemonės verslui visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+      </div>
+      <div>
+        <h2 class="foot-h">Paslaugos</h2>
+        <ul>
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra</a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai</a></li>
+          <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Prekės ir informacija</h2>
+        <ul>
+          <li><a href="prekes-gesintuvai.html">Gesintuvai</a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai</a></li>
+          <li><a href="prekes-automatika.html">Automatika ir įranga</a></li>
+          <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+          <li><a href="apie-mus.html">Apie mus</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Kontaktai</h2>
+        <ul class="foot-contact">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+37065399977">+370 653 99977</a><br><a href="tel:+37060763109">+370 607 63109</a></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@geslita.lt">info@geslita.lt</a></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Fabijoniškių g. 4A, Vilnius<br><span class="muted">Ne parduotuvė: prieš atvykdami paskambinkite</span></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span>I-V 9:00-18:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2010-2026 UAB „Geslita“. Visos teisės saugomos.</span>
+      <span><a href="kontaktai.html">Kontaktai</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

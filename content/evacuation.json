@@ -1,0 +1,138 @@
+{
+ "source_url": "https://www.geslita.lt/evakuacijos-planu-schemu-braizymas",
+ "title": "Evakuacijos (evakavimo) planų braižymas",
+ "intro": [
+  "Braižome įvairaus dydžio ir sudėtingumo evakuacijos (evakavimo) planus.",
+  "Evakavimo planas – tai vidinis juridinio asmens dokumentas, nurodantis evakuacijos kelius ir evakuacinius išėjimus bei nustatantis žmonių elgesio taisykles galimo pavojaus atveju.",
+  "Evakavimo planai, gaisrinės saugos, evakuacijos krypties (saugių sąlygų), gaisrinės įrangos, informacijos, draudžiamieji, įspėjamieji ir vaizdiniai ženklai padeda priimti tinkamus sprendimus evakuojant žmones iš masinio žmonių susibūrimo vietų, įvykus neįprastai situacijai ar kilus pavojui."
+ ],
+ "highlights": [
+  "Planai braižomi pagal faktinį pastato išplanavimą (kiekvieno aukšto plano kopiją), nepriklausomai nuo pastato dydžio ir sudėtingumo.",
+  "Planai rengiami pagal Bendrųjų gaisrinės saugos taisyklių 6 priedo reikalavimus ir pateikiami tvirtinti įmonės vadovui.",
+  "Pasirenkamas planų formatas, kiekis ir rėminimas – rėmelis norimos spalvos.",
+  "Naujiena – tamsoje šviečiantys evakuacijos planai."
+ ],
+ "price": "70 €",
+ "price_label": "Evakavimo plano rengimo kaina",
+ "legal_basis": [
+  {
+   "act": "LR Darbo kodekso 266 straipsnis",
+   "what_it_says": "Kiekviena įmonė, įstaiga, organizacija ir visi jų padaliniai privalo turėti darbuotojų evakuacijos planus. Planai turi būti įmonės ir jos padalinių informaciniuose stenduose, pastebimose vietose. Įmonės darbuotojų saugos ir sveikatos tarnybos darbuotojai ir darbuotojų atstovai privalo būti gerai susipažinę su evakuacijos planais."
+  },
+  {
+   "act": "LR Darbuotojų saugos ir sveikatos įstatymo 22 straipsnis",
+   "what_it_says": "Kiekviena įmonė ir visi jos padaliniai privalo turėti darbuotojų evakavimo planus. Su evakavimo planais darbuotojai susipažįsta įsidarbindami įmonėje. Planai iškabinami įmonės ir jos padalinių gerai matomose vietose. Darbdavio įgalioti asmenys, įmonės darbuotojų saugos ir sveikatos tarnybos darbuotojai, darbuotojų atstovai saugai ir sveikatai privalo būti gerai susipažinę su evakavimo planais, įmonės avarijų prevencijos ir likvidavimo planais bei priemonėmis, kurių privaloma imtis avarijų atvejais."
+  },
+  {
+   "act": "Bendrųjų gaisrinės saugos taisyklių 64 punktas ir 6 priedas (Žin., 2010, Nr. 99-5167)",
+   "what_it_says": "Taisyklės nustato bendruosius eksploatuojamų objektų gaisrinės saugos reikalavimus, neatsižvelgiant į jų nuosavybės formas, kurių privalo laikytis visi Lietuvos Respublikos teritorijoje esantys asmenys. Taisyklių 64 punktas nustato, kad žmonių evakavimo planai statiniuose įrengiami pagal šių taisyklių 6 priede nurodytus reikalavimus."
+  }
+ ],
+ "requirements_title": "Pagrindiniai žmonių evakavimo plano reikalavimai (Bendrųjų gaisrinės saugos taisyklių 6 priedas)",
+ "requirements": [
+  "Žmonių evakavimo planas turi būti pakabintas kiekvieno pastato visuose aukštuose (išskyrus gyvenamuosius namus), gerai matomoje vietoje, prie kiekvieno įėjimo ir (ar) išėjimo, kai pastatuose nuolat ar laikinai būna daugiau kaip 100 žmonių, taip pat, neatsižvelgiant į žmonių skaičių, mokslo paskirties pastatuose (vaikų darželiuose, lopšeliuose, bendrojo lavinimo, profesinėse ir aukštosiose mokyklose), gydymo paskirties pastatuose (ligoninėse, sanatorijose, slaugos namuose), viešbučių bei poilsio paskirties pastatuose. Žmonių evakavimo planas, jo simboliai ir tekstas turi būti matomi iš ne mažesnio kaip 1 m atstumo.",
+  "Aukšto žmonių evakavimo plane būtina nurodyti laiptines, liftus ir liftų holus, kambarius, balkonus, išorines kopėčias, taip pat laiptinių, liftų holų ir evakuacijos keliuose esančias duris.",
+  "Kiekvieno viešbučio, motelio, senelių prieglaudos, pensiono, poilsio namų, nakvynės namų kambario matomoje vietoje turi būti pakabintas žmonių evakavimo planas ir gaisrinės saugos reikalavimų atmintinė, kurioje nurodyta, kaip elgtis kilus gaisrui. Kiekvienos patalpos žmonių evakavimo plane turi būti užrašas „Jūsų kambarys...“.",
+  "Pagrindinis evakuacijos kelias žmonių evakavimo plane turi būti pažymėtas ištisine linija, atsarginis – punktyru. Šios linijos turi būti žalios spalvos ir dukart storesnės negu pastato aukšto žmonių evakavimo plano linijos. Pagrindinį evakuacijos kelią aukšto plane būtina nurodyti per laiptines, apsaugotas nuo dūmų, taip pat laiptines, vedančias į pirmąjį pastato aukštą. Kai laiptinės vienodai apsaugotos nuo dūmų ir ugnies, pagrindinis evakuacijos kelias yra iki artimiausios laiptinės. Linijos, rodančios evakuacijos kelią, turi būti nubrėžtos iš kambario iki išėjimo į laiptinę arba kitą saugią vietą.",
+  "Aukšto žmonių evakavimo plane simboliais turi būti pažymėta: žmonių evakavimo plano vietos, rankinių gaisro signalizatorių jungikliai, gaisriniai čiaupai, gaisrinių siurblių (elektrifikuotų sklendžių) jungikliai, gesintuvai, stacionarių gesinimo ir dūmų šalinimo įrenginių rankinio paleidimo jungikliai, elektros skydeliai, telefonai. Simboliai turi būti ryškūs ir gerai matomi.",
+  "Aukšto žmonių evakavimo plane simbolius būtina aiškiai iššifruoti.",
+  "Su žmonių evakavimo planu turi būti supažindinti visi valstybės tarnautojai ir darbuotojai. Pakartotinai turi būti supažindinama kiekvienais metais.",
+  "Žmonių evakavimo planą privalo patvirtinti įmonės, įstaigos, organizacijos vadovas.",
+  "Žmonių evakavimo plano sutartiniai ženklai pateikti Bendrųjų gaisrinės saugos taisyklių 6 priedo lentelėje."
+ ],
+ "who_must_have_title": "Ar evakavimo planai privalomi, kai pastate būna mažiau kaip 100 žmonių?",
+ "who_must_have": "Atsižvelgiant į teisės aktų reikalavimus gali kilti klausimas, ar evakavimo planai įmonėse, įstaigose ir organizacijose turi būti pakabinti tik tuomet, kai jų pastatuose nuolat ar laikinai būna daugiau kaip 100 žmonių (darbuotojų), ar ir tais atvejais, kai žmonių būna mažiau. Valstybinės darbo inspekcijos pozicija šiuo klausimu yra tokia, kad evakavimo planai privalo būti pakabinti visose įmonėse, įstaigose ir organizacijose nepriklausomai nuo dirbančiųjų skaičiaus ir įmonės ekonominės veiklos rūšies, kadangi LR Darbuotojų saugos ir sveikatos įstatymo 22 straipsnis griežtai nustato darbdaviui tokią prievolę. Juolab viename pastate gali būti įsikūrusi viena, kelios ar keliolika įmonių, kuriose dirba po keletą, kelioliką ar keliasdešimt darbuotojų – bendras dirbančiųjų skaičius pastate gali siekti kelis šimtus, nors atskirose įmonėse dirba tik keletas žmonių. Įstatymas neišskiria darbuotojų ar žmonių skaičiaus kaip evakavimo planų įrengimo kriterijaus, o pagal teisės aktų hierarchiją LR Darbo kodeksas ir LR Darbuotojų saugos ir sveikatos įstatymas turi viršenybę Bendrųjų gaisrinės saugos taisyklių atžvilgiu. Taigi darbuotojų evakavimo planai privalo būti visose įmonėse, įstaigose ir organizacijose nepriklausomai nuo darbuotojų skaičiaus ar vykdomos ekonominės veiklos rūšies.",
+ "info_needed_title": "Informacija, reikalinga evakavimo planų parengimui",
+ "info_needed": [
+  "Kiekvieno aukšto planas (kopija).",
+  "Organizacinės struktūros teisinė forma, pavadinimas ir kodas.",
+  "Vadovo, kuris tvirtins evakavimo planus, pareigų pavadinimas, vardas ir pavardė.",
+  "Evakavimo planų kabėjimo vietos, rankinių gaisro signalizatorių jungikliai, gaisriniai čiaupai, gaisrinių siurblių (elektrifikuotų sklendžių) jungikliai, gesintuvai, stacionarių gesinimo ir dūmų šalinimo įrenginių rankinio paleidimo jungikliai, elektros skydeliai, telefonai.",
+  "Reikalingas evakavimo planų formatas ir kiekis.",
+  "Ar reikalingas rėmelis, jo spalva.",
+  "Kontaktinis asmuo, telefonas, el. paštas."
+ ],
+ "samples": [
+  {
+   "src": "geslita:uploads/images/evakuacijos planai/Planas 2l.jpg",
+   "alt": "Evakavimo plano pavyzdys"
+  },
+  {
+   "src": "geslita:uploads/images/evakuacijos planai/Planas 3l.jpg",
+   "alt": "Evakavimo plano pavyzdys"
+  },
+  {
+   "src": "geslita:uploads/images/evakuacijos planai/evac nakties1.JPG",
+   "alt": "Tamsoje šviečiantis evakavimo planas"
+  }
+ ],
+ "glow_in_dark_title": "Naujiena – tamsoje šviečiantys evakuacijos planai",
+ "glow_in_dark": "Naujiena: siūlome tamsoje šviečiančius (fotoliuminescencinius) evakuacijos planus, kurie išlieka matomi ir dingus apšvietimui.",
+ "page": {
+  "highlights": [
+   {
+    "icon": "map",
+    "title": "Pagal faktinį išplanavimą"
+   },
+   {
+    "icon": "doc",
+    "title": "Pagal 6 priedo reikalavimus"
+   },
+   {
+    "icon": "tools",
+    "title": "Formatas, kiekis ir rėmelis"
+   },
+   {
+    "icon": "bulb",
+    "title": "Tamsoje šviečiantys"
+   }
+  ],
+  "legal_refs": [
+   {
+    "doc": "LR darbo kodeksas",
+    "ref": "266 str."
+   },
+   {
+    "doc": "LR darbuotojų saugos ir sveikatos įstatymas",
+    "ref": "22 str."
+   },
+   {
+    "doc": "Bendrosios gaisrinės saugos taisyklės",
+    "ref": "64 p. ir 6 priedas"
+   }
+  ],
+  "frames": [
+   {
+    "name": "Aliuminis",
+    "color": "#c3c9d2"
+   },
+   {
+    "name": "Juodas",
+    "color": "#1d232c"
+   },
+   {
+    "name": "Baltas",
+    "color": "#f4f5f7"
+   },
+   {
+    "name": "Raudonas",
+    "color": "#c62828"
+   }
+  ],
+  "steps": [
+   {
+    "title": "Atsiųskite aukštų planus",
+    "text": "Kiekvieno aukšto plano kopiją ir įmonės rekvizitus atsiųskite el. paštu."
+   },
+   {
+    "title": "Suderiname",
+    "text": "Patiksliname gaisrinės įrangos vietas, planų formatą, kiekį ir rėminimą."
+   },
+   {
+    "title": "Pristatome",
+    "text": "Parengtus planus pateikiame tvirtinti įmonės vadovui."
+   }
+  ],
+  "mail_subject": "Evakuacijos planų užsakymas"
+ }
+}

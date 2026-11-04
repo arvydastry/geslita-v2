@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m %}
+{# Lietuviškas daugiskaitos skaitvardis: 1 prekė, 2-9 prekės, 10-20 prekių #}
+{% macro pl(n, one, few, many) %}{{ n }} {% if n % 10 == 0 or (n % 100 >= 11 and n % 100 <= 19) %}{{ many }}{% elif n % 10 == 1 %}{{ one }}{% else %}{{ few }}{% endif %}{% endmacro %}
+{% block title %}Priešgaisrinės prekės | Geslita{% endblock %}
+{% block description %}Gesintuvai, gaisrinio vandentiekio įranga, saugos ženklai ir gaisrinė automatika su kainomis. Užsakymai el. paštu arba telefonu, įrangą taip pat prižiūrime.{% endblock %}
+{% block extra_css %}<style>
+/* prekes.html: katalogo apžvalga */
+.pg-prekes-index { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(24px, 3vw, 44px); }
+.pg-prekes-index h3 { font-size: 19px; margin-bottom: 14px; min-height: 2.5em; display: flex; align-items: flex-end; }
+.pg-prekes-index h3 a { display: inline-flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; transition: color 0.25s var(--ease); }
+.pg-prekes-index h3 a:hover { color: var(--navy-3); }
+.pg-prekes-index h3 .ic { font-size: 18px; color: var(--navy-3); }
+.pg-prekes-index ul { list-style: none; margin: 0; padding: 0; }
+.pg-prekes-index li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 9px 0; border-top: 1px solid var(--line); font-size: 15px; color: var(--text); }
+.pg-prekes-index li:last-child { border-bottom: 1px solid var(--line); }
+.pg-prekes-index li .num { color: var(--muted); font-size: 13.5px; white-space: nowrap; }
+.pg-prekes-sell { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.pg-prekes-sell h2 { margin-bottom: 16px; }
+.pg-prekes-sell .checks { grid-template-columns: 1fr 1fr; gap: 14px 24px; font-size: 16px; }
+.pg-prekes-sell .checks a { color: var(--ink); font-weight: 500; text-decoration: none; border-bottom: 1.5px solid var(--line-2); transition: border-color 0.25s var(--ease); }
+.pg-prekes-sell .checks a:hover { border-color: var(--navy-3); }
+.pg-prekes-sell .notice { margin-top: 22px; }
+.pg-prekes-order h2 { margin-bottom: 16px; }
+.pg-prekes-order .steps { margin-top: 26px; }
+.pg-prekes-order .step { padding: clamp(18px, 2.2vw, 24px); grid-template-columns: 56px 1fr; gap: 14px; }
+.pg-prekes-order .step .n { font-size: 34px; }
+.pg-prekes-order .step h3 { font-size: 19px; }
+.pg-prekes-order .step p { font-size: 15.5px; }
+.pg-prekes-order .step a { color: var(--ink); font-weight: 600; text-decoration: none; }
+.pg-prekes-bento .tile:hover h3 .ic { color: var(--navy-3); }
+@media (max-width: 900px) { .pg-prekes-index { grid-template-columns: 1fr 1fr; } .pg-prekes-sell { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .pg-prekes-index { grid-template-columns: 1fr; } .pg-prekes-index h3 { min-height: 0; } .pg-prekes-sell .checks { grid-template-columns: 1fr; } }
+/* 561-760 px: dviejų stulpelių bento, antroje eilutėje antraštės lūžta į dvi eilutes, todėl plytelės aukštesnės, o spintelės nuotrauka pakelta */
+@media (max-width: 760px) and (min-width: 561px) { .pg-prekes-bento .bento { grid-template-rows: 300px 330px 280px; } .pg-prekes-bento .tile-product .media { inset: 8% 8% 50% 42%; } }
+@media (max-width: 560px) { .pg-prekes-bento .tile-big .media { inset: 5% 6% 45% auto; } }
+</style>{% endblock %}
+{% block content %}
+{# Prekių skaičius kiekvienoje grupėje skaičiuojamas iš JSON #}
+{% set cnt = {} %}
+{% for grp in products.groups %}
+  {% set n = namespace(c=0) %}
+  {% for sg in grp.subgroups %}{% set n.c = n.c + sg['items']|length %}{% endfor %}
+  {% set _ = cnt.update({grp.slug: n.c}) %}
+{% endfor %}
+{% set ns = namespace(c=0) %}
+{% for sg in signs.groups %}{% set ns.c = ns.c + sg['items']|length %}{% endfor %}
+{% set hrefs = {'gesintuvai': 'prekes-gesintuvai.html', 'vandentiekis': 'prekes-vandentiekis.html', 'automatika': 'prekes-automatika.html'} %}
+{% set sell_links = {'priesgaisrines-prekes/gesintuvai': 'prekes-gesintuvai.html', 'priesgaisrines-prekes/priesgaisrinis-vandentiekis': 'prekes-vandentiekis.html', 'priesgaisrines-prekes/saugos-zenklai/draudziamieji-zenklai': 'prekes-zenklai.html'} %}
+
+{{ m.page_hero('Priešgaisrinės prekės', 'Gesintuvai, gaisrinio vandentiekio įranga, saugos ženklai ir gaisrinė automatika su mažmeninėmis kainomis. Įrangą ne tik parduodame, bet ir prižiūrime.', image=img('foto:sandelis'), alt='Tvarkingas pramoninis sandėlis su metalinėmis lentynomis', crumbs=[{'label': 'Prekės'}]) }}
+
+{# Keturios prekių grupės: bento tinklelis #}
+<section class="sec pg-prekes-bento" id="grupes">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Prekių katalogas</div>
+      <h2>Keturios prekių grupės</h2>
+      <p class="lead">Prekės su mažmeninėmis kainomis ir originaliomis katalogo nuotraukomis. Pasirinkite grupę ir peržiūrėkite visą kainoraštį.</p>
+    </div>
+    <div class="bento">
+      <a class="tile tile-big" href="prekes-gesintuvai.html" data-reveal>
+        <span class="tag count">{{ pl(cnt.gesintuvai, 'prekė', 'prekės', 'prekių') }}</span>
+        <div class="media"><img src="assets/img/cutout/dsc9857.png" alt="Naujos kartos vandens putų gesintuvas" loading="lazy" width="770" height="1460"></div>
+        <h3>Gesintuvai{{ m.icon('arrow') }}</h3>
+        <p>Milteliniai, angliarūgštiniai ir vandens putų gesintuvai, sertifikuoti naudojimui Lietuvoje.</p>
+      </a>
+      <a class="tile tile-product" href="prekes-vandentiekis.html" data-reveal style="--i:1">
+        <span class="tag count">{{ pl(cnt.vandentiekis, 'prekė', 'prekės', 'prekių') }}</span>
+        <div class="media"><img src="{{ img('geslita:uploads/images/spint/image002.jpg') }}" alt="Priešgaisrinė metalinė spintelė" loading="lazy"></div>
+        <h3>Gaisrinis vandentiekis{{ m.icon('arrow') }}</h3>
+        <p>Spintelės, žarnos, čiaupai, švirkštai, gaisriniai skydai ir hidrantai.</p>
+      </a>
+      <a class="tile tile-signs" href="prekes-zenklai.html" data-reveal style="--i:2">
+        <span class="tag count">{{ pl(ns.c, 'ženklas', 'ženklai', 'ženklų') }}</span>
+        <div class="media">{% for im in ['krzenklai--image001.png', 'infzenklai--image003.png', 'drzenklai--image001.gif', 'ispzenklai--image002.png', 'saugzenklai--image001.gif'] %}<img src="assets/img/katalogas/{{ im }}" alt="" loading="lazy">{% endfor %}</div>
+        <h3>Saugos ženklai{{ m.icon('arrow') }}</h3>
+        <p>Evakuacijos, draudžiamieji, įspėjamieji, elektrosaugos ir kiti saugos ženklai.</p>
+      </a>
+      <a class="tile tile-video" href="prekes-automatika.html" data-reveal style="--i:3">
+        <div class="media"><video autoplay muted loop playsinline preload="metadata" src="assets/video/automatika-2.mp4" aria-hidden="true"></video></div>
+        <span class="tag count">{{ pl(cnt.automatika, 'prekė', 'prekės', 'prekių') }}</span>
+        <h3>Gaisrinė automatika ir įranga{{ m.icon('arrow') }}</h3>
+        <p>Dūmų detektoriai, sirenos, pavojaus mygtukai, evakuacijos šviestuvai, nedegūs audeklai.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+{# Katalogo rodyklė: visi pogrupiai su pozicijų skaičiumi #}
+<section class="sec sec-white" id="rodykle">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2>Kas yra kataloge</h2>
+      <p class="lead">Prekių pogrupiai ir pozicijų skaičius kiekviename. Pavadinimas veda į grupės puslapį su kainomis.</p>
+    </div>
+    <div class="pg-prekes-index">
+      {% for grp in products.groups %}
+      <div data-reveal style="--i:{{ loop.index0 }}">
+        <h3><a href="{{ hrefs[grp.slug] }}">{{ grp.title }}{{ m.icon('arrow') }}</a></h3>
+        <ul>{% for sg in grp.subgroups %}<li><span>{{ sg.title }}</span><span class="num">{{ pl(sg['items']|length, 'prekė', 'prekės', 'prekių') }}</span></li>{% endfor %}</ul>
+      </div>
+      {% if grp.slug == 'vandentiekis' %}
+      <div data-reveal style="--i:2">
+        <h3><a href="prekes-zenklai.html">Saugos ženklai{{ m.icon('arrow') }}</a></h3>
+        <ul>{% for sg in signs.groups %}<li><span>{{ sg.title }}</span><span class="num">{{ pl(sg['items']|length, 'ženklas', 'ženklai', 'ženklų') }}</span></li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# Taip pat prekiaujame + pastabos dėl kainų #}
+<section class="sec sec-tint" id="prekiaujame">
+  <div class="wrap pg-prekes-sell">
+    <div data-reveal>
+      <h2>Taip pat prekiaujame</h2>
+      <p>{{ about.intro[1].split('. ')[0] }}.</p>
+      <div class="notice info">{{ products.price_disclaimer }} Prekių kortelėse kaina „nuo“ yra mažiausia iš išvardytų variantų kainų. Dalis gaisrinės automatikos kainų perskaičiuota iš senojo kainoraščio litais ({{ products.meta.ltl_to_eur_rate }}).</div>
+    </div>
+    <ul class="checks" data-reveal style="--i:1">
+      {% for w in about.we_sell %}
+      <li>{{ m.icon('check') }}<span>{% if w.slug in sell_links %}<a href="{{ sell_links[w.slug] }}">{{ w.text }}</a>{% else %}{{ w.text }}{% endif %}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{# Kaip užsisakyti: ne parduotuvė, užsakymai el. paštu ir telefonu #}
+<section class="sec pg-prekes-order" id="uzsakymas">
+  <div class="wrap split">
+    <div data-reveal>
+      <h2>Kaip užsisakyti</h2>
+      <p class="lead">Mūsų adresu ({{ site.address }}) parduotuvės nėra: „gyvai“ neprekiaujame, prekyba vyksta tik elektroniniu būdu. Prieš atvažiuodami būtinai paskambinkite ir pasiteiraukite, ar esame vietoje.</p>
+      <ol class="steps">
+        <li class="step" data-reveal style="--i:0">
+          <span class="n num">01</span>
+          <div><h3>Išsirinkite prekes</h3><p>Kataloge nurodytos mažmeninės kainos ir originalios katalogo nuotraukos.</p></div>
+        </li>
+        <li class="step" data-reveal style="--i:1">
+          <span class="n num">02</span>
+          <div><h3>Parašykite arba paskambinkite</h3><p>Užsakymus priimame el. paštu <a href="mailto:{{ site.email }}">{{ site.email }}</a> arba telefonu <a href="tel:+37065399977">{{ site.phones[0] }}</a>, <a href="tel:+37060763109">{{ site.phones[1] }}</a>.</p><span class="tag">{{ site.hours }}</span></div>
+        </li>
+        <li class="step" data-reveal style="--i:2">
+          <span class="n num">03</span>
+          <div><h3>Didesniam kiekiui - atskiras pasiūlymas</h3><p>Norėdami sužinoti kainą didesniam kiekiui, skambinkite arba siųskite užklausimą el. paštu.</p></div>
+        </li>
+      </ol>
+    </div>
+    <div class="photo para" data-reveal="scale" data-parallax-root>
+      <img src="{{ img('foto:biuras') }}" alt="Šviesus šiuolaikinio biuro koridorius su stiklinėmis pertvaromis" loading="lazy" width="1880" height="1253" data-parallax="0.18">
+      <div class="pin"><span class="num">{{ site.hours }}</span><span class="small">užsakymai el. paštu ir telefonu</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight"><div class="wrap">{{ m.cta_inline(title='Reikia pasiūlymo visam objektui?', text='Aptarsime įrangos kiekį ir terminus, paruošime pasiūlymą didesniam kiekiui.') }}</div></section>
+{% endblock %}

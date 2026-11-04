@@ -1,0 +1,318 @@
+{
+  "source_urls": [
+    "https://www.geslita.lt/paslaugos/evakuacijos-ir-avariniu-sviestuvu-montavimas-rekomendacijos",
+    "https://www.geslita.lt/priesgaisrines-prekes/avarinio-isejimo-sviestuvai"
+  ],
+  "title": "Evakuacijos ir avarinių šviestuvų montavimas, rekomendacijos",
+  "subtitle": "Evakuacijos, avarinio ir antipaniško apšvietimo rekomendacijos",
+  "intro": [
+    "Šios rekomendacijos pirmiausia remiasi Europos standartu EN 1838 bei Apšvietimo elektros įrenginių įrengimo taisyklėmis (ištrauka pateikiama žemiau).",
+    "Jos padės jums suprojektuoti ir įrengti evakuacinį apšvietimą, atitinkantį tarptautinius reikalavimus bei užtikrinantį saugų žmonių pasišalinimą iš pastato kilus gaisrui ar kitam pavojui."
+  ],
+  "what_is": {
+    "title": "Kas yra avarinis apšvietimas?",
+    "intro": "Avarinis apšvietimas automatiškai įjungiamas dingus pagrindinio apšvietimo elektros maitinimui. Avarinis apšvietimas skirstomas į dvi grupes.",
+    "groups": [
+      {
+        "title": "Evakuacinis apšvietimas",
+        "lead": "Evakuacijos kelių ir atvirų erdvių apšvietimas.",
+        "bullets": [
+          "Evakuacijos keliai turi būti aiškiai apšviesti ir pažymėti, kad būtų užtikrinta saugi žmonių evakuacija iš pastato.",
+          "Atvirų erdvių apšvietimas projektuojamas taip, kad sumažintų sumaištį bei paniką ir pagerintų artimiausio išėjimo kelio matomumą."
+        ],
+        "note": "Evakuacinis apšvietimas leidžia saugiai išjungti jautrius ir potencialiai pavojingus procesus prieš evakuojantis iš pastato."
+      },
+      {
+        "title": "Budintis apšvietimas",
+        "lead": "Budintis apšvietimas leidžia tęsti normalią veiklą, jei pagrindinis apšvietimas dėl kokių nors priežasčių dingsta.",
+        "bullets": [],
+        "note": "Pavyzdžiui, teatruose ar oro skrydžių valdymo centruose būtų reikalingas budintis apšvietimas."
+      }
+    ]
+  },
+  "maintenance": {
+    "title": "Avarinio apšvietimo įrangos priežiūra",
+    "intro": [
+      "Sumontavus avarinio (evakuacinio) apšvietimo įrangą, pastatą prižiūrintis asmuo turi įsitikinti, kad reikiamu momentu įranga veiks, kaip nustatyta.",
+      "Avarinio apšvietimo įrenginiai turi būti reguliariai tikrinami. Dažniausiai naudojami avarinio apšvietimo sistemų testavimo būdai:"
+    ],
+    "methods": [
+      {
+        "title": "Adresinis testavimas",
+        "text": "Visi avarinio apšvietimo šviestuvai valdomi centrinio bloko. Šis blokas automatiškai testuoja kiekvieną šviestuvą ir saugo rezultatus analizei. Adresinės testavimo sistemos yra optimalus sprendimas vidutinio dydžio ir dideliuose pastatuose."
+      },
+      {
+        "title": "Pasitikrinimas (SelfTest)",
+        "text": "Visuose avarinio apšvietimo šviestuvuose integruoti sumanūs procesoriai, kurie automatiškai tikrina funkcionavimą ir baterijos tarnavimą. Tikrinimo rezultatai matomi dviejų spalvų LED indikatoriuje. Optimalus sprendimas nuo mažų iki vidutinio dydžio objektų."
+      },
+      {
+        "title": "Rankinis tikrinimas (Manual Test)",
+        "text": "Kompetentingas personalas periodiškai turi patikrinti (testuoti) visus avarinio apšvietimo šviestuvus ir registruoti parodymus žurnale. Tai turi būti vykdoma rankiniu būdu, o įrašai saugomi įmonės archyve."
+      }
+    ]
+  },
+  "mounting_rules_intro": "Avarinio apšvietimo aktuose nustatytas evakuacinių šviestuvų ženklų žymėjimas.",
+  "mounting_rules": [
+    "Evakuaciniai šviestuvai montuojami ne žemiau kaip 2 m nuo grindų paviršiaus.",
+    "Minimalus šviečiančio ženklo skaistis – 2 cd/m².",
+    "Evakuaciniai šviestuvai turi būti montuojami visose evakuacijos kelio pasikeitimo vietose iki galutinių išėjimo durų.",
+    "Jei naudojami išoriniai šviestuvai, ženklai turi būti nuolat apšviečiami, kai pastate yra žmonių.",
+    "Avariniai šviestuvai turi būti išdėstyti taip, kad neakintų – šviestuvų skaistis neturi erzinti žmonių ar trukdyti aiškiai matyti evakuacinius ženklus."
+  ],
+  "viewing_distance": {
+    "title": "Evakuacinių šviestuvų ženklo matymo atstumas",
+    "intro": [
+      "Matymo atstumas – tai atstumas, iš kurio matomas ir suprantamas evakuacijos ženklas. Evakuacijos ženklo matymo atstumas priklauso nuo to, ar ženklas apšviečiamas iš vidaus, ar iš išorės, ir nuo ženklo aukščio (h)."
+    ],
+    "internal_label": "Esant vidiniam apšvietimui (ant šviestuvo užklijuotas žalias išėjimo ženklas)",
+    "internal": "d = h x 200",
+    "external_label": "Esant išoriniam apšvietimui (šviestuvas montuojamas šalia ženklo)",
+    "external": "d = h x 100",
+    "legend": "d – matymo atstumas, h – ženklo aukštis",
+    "note": "Jei naudojami išoriniai šviestuvai, ženklai turi būti nuolat apšviečiami, kai pastate yra žmonių.",
+    "images": [
+      {
+        "src": "geslita:uploads/images/Emerg_internal-300x220.png",
+        "alt": "Ženklo matymo atstumas esant vidiniam apšvietimui"
+      },
+      {
+        "src": "geslita:uploads/images/Emerg_external-300x217.png",
+        "alt": "Ženklo matymo atstumas esant išoriniam apšvietimui"
+      }
+    ]
+  },
+  "three_steps_intro": "Avariniai šviestuvai turi būti atsakingai išdėstyti, siekiant užtikrinti tinkamą evakuacijos kelią. Trys žingsniai, garantuojantys sėkmingą evakuacinio apšvietimo schemą:",
+  "three_steps": [
+    {
+      "title": "1 žingsnis – evakuacinis žymėjimas",
+      "text": "Evakuaciniai ženklai turi būti išdėstyti taip, kad užtikrintų aiškų ir nedviprasmišką kelio žymėjimą iki paskutinio išėjimo: laiptai, krypties pasikeitimas, grindų lygio pasikeitimas, išėjimo durys ir saugos ženklai.",
+      "legend": [
+        "Stairs – laiptai",
+        "Change of direction – krypties pasikeitimas",
+        "Change of level – grindų lygio pasikeitimas",
+        "Exit doors & safety signs – išėjimo durys ir saugos ženklai"
+      ],
+      "image": "geslita:uploads/images/laiptines/emerg_laiptai1.png"
+    },
+    {
+      "title": "2 žingsnis – privalomi šviestuvai",
+      "text": "Avarinius šviestuvus privalu sumontuoti prioritetinėse vietose: grindų lygio pasikeitimo vietose, koridorių susikirtimuose, prie priešgaisrinės įrangos ir prie pirmosios pagalbos punktų.",
+      "legend": [
+        "Lift cars – liftai",
+        "Intersection of corridors – koridorių susikirtimas",
+        "Fire fighting equipment & call points – gesintuvų ir pavojaus mygtukų vietos",
+        "Change of direction – krypties pasikeitimas",
+        "Outside final exit – šviestuvas išėjus į lauką pro paskutinį išėjimo ženklą",
+        "Outside first aid point and change of direction – koridoriuje prie medicinos punkto ir krypties pasikeitimo vietoje"
+      ],
+      "image": "geslita:uploads/images/laiptines/emerg_korid1.png"
+    },
+    {
+      "title": "3 žingsnis – tarpiniai šviestuvai",
+      "text": "Siekiant užtikrinti reikiamą evakuacijos kelio apšvietos lygį, tarpuose tarp privalomų avarinių šviestuvų įrengiami tarpiniai avariniai šviestuvai.",
+      "legend": [],
+      "image": "geslita:uploads/images/laiptines/emerg_korid_tarpiniai-300x192.png"
+    }
+  ],
+  "glare": {
+    "title": "Akinimo lygio įvertinimas",
+    "intro": [
+      "Projektuojant avarinį apšvietimą, reikia įvertinti akinimo lygį.",
+      "Avariniai šviestuvai turi būti išdėstyti taip, kad neakintų. Akinimas – kai šviestuvų skaistis erzina žmones ar trukdo aiškiai matyti evakuacinius ženklus."
+    ],
+    "cases": [
+      {
+        "title": "Horizontalus kelias",
+        "text": "Akinimas skaičiuojamas visiems matomiems šviestuvams. Horizontaliems keliams bet koks akinimas virš 60° negali viršyti lentelėje pateiktų reikšmių.",
+        "image": "geslita:uploads/images/Evakuaciniai sviestuvai/emerg_akinimas-300x209.png"
+      },
+      {
+        "title": "Grindų lygio pasikeitimas",
+        "text": "Esant grindų lygio pasikeitimui, šviestuvų skaistis visomis kryptimis negali viršyti nustatytų reikšmių.",
+        "image": "geslita:uploads/images/Evakuaciniai sviestuvai/emerg_akinimas1-300x207.png"
+      },
+      {
+        "title": "Skaičiavimo pavyzdys",
+        "text": "Paveikslėlyje avariniai šviestuvai koridoriuje sumontuoti skersai, 2,4 m aukštyje. Matymo zonoje yra trys avariniai šviestuvai, todėl akinimo lygis apskaičiuojamas: 3 x 64,2 = 192,6 cd. Gauta reikšmė žymiai mažesnė už 500 cd, nurodytą lentelėje, montuojant šviestuvus 2,4 m aukštyje. Skaisčio reikšmės pateikiamos gamintojo kataloguose arba apšvietimo skaičiavimo programose.",
+        "image": "geslita:uploads/images/Evakuaciniai sviestuvai/emerg_akinimas2-300x268.png"
+      }
+    ]
+  },
+  "glare_table": {
+    "title": "1 lentelė. Leidžiamos akinimo reikšmės",
+    "columns": [
+      "Montavimo aukštis h, m",
+      "Evakuacijos kelias ir atviros erdvės – maks. skaistis Imaks., cd",
+      "Didelė rizika – maks. skaistis Imaks., cd"
+    ],
+    "rows": [
+      ["h < 2,5", "500", "1000"],
+      ["2,5 ≤ h < 3,0", "900", "1800"],
+      ["3,0 ≤ h < 3,5", "1600", "3200"],
+      ["3,5 ≤ h < 4,0", "2500", "5000"],
+      ["4,0 ≤ h < 4,5", "3500", "7000"],
+      ["4,5 ≤ h", "5000", "10000"]
+    ]
+  },
+  "recommendation_intro": {
+    "title": "Praktinis avarinio apšvietimo taikymas",
+    "text": "Avarinis apšvietimas skirstomas į tris grupes: evakuacijos kelių, atvirų erdvių ir didelės rizikos zonų apšvietimas. Kaip pateikiama lentelėse, avarinio apšvietimo reikalavimai skiriasi priklausomai nuo apšvietimo grupės."
+  },
+  "recommendation_tables": [
+    {
+      "title": "2 lentelė. Evakuacijos kelių avarinio apšvietimo rekomendacijos",
+      "rows": [
+        ["Aprašymas", "Aiškiai nustatytas evakuacijos kelias, taip pat judantys eskalatoriai, kurie visada turi būti tvarkingi."],
+        ["Kelias", "2 m pločio juosta arba kelios juostos po 2 m."],
+        ["Apšvietimo lygis", "Mažiausiai 1 liuksas (lx) juostos centrinėje linijoje, grindų lygyje. Mažiausiai 0,5 liukso abiejose centrinės linijos pusėse po 0,5 m."],
+        ["Maksimalios ir minimalios apšvietos santykis", "< 40 : 1"],
+        ["Avarinio apšvietimo lygio pasiekimo laikas", "50 % per 5 s, 100 % per 60 s"],
+        ["Spalvų atgava (Ra)", "> 40"],
+        ["Akinimas (didelis kontrastas tarp šviestuvo ir aplinkos)", "Žr. 1 lentelę."]
+      ],
+      "images": [
+        "geslita:uploads/images/Evakuaciniai sviestuvai/emerg_fotometric-1024x448.png",
+        "geslita:uploads/images/Evakuaciniai sviestuvai/emerg_sviestuvai.png"
+      ],
+      "notes": []
+    },
+    {
+      "title": "3 lentelė. Atvirų erdvių avarinio apšvietimo rekomendacijos",
+      "rows": [
+        ["Aprašymas", "Evakuacijos erdvė – atvira arba perstatoma erdvė, taip pat uždaros automobilių stovėjimo aikštelės ir laiptų zonos uždaruose stadionuose (išskyrus priskirtas evakuacijos keliams)."],
+        ["Erdvė", "> 60 m²"],
+        ["Apšvietimo lygis", "Mažiausiai 0,5 liukso (lx) visoje erdvėje (išskyrus 0,5 m pločio juostą prie sienų)."],
+        ["Maksimalios ir minimalios apšvietos santykis", "< 40 : 1"],
+        ["Avarinio apšvietimo lygio pasiekimo laikas", "50 % per 5 s, 100 % per 60 s"],
+        ["Spalvų atgava (Ra)", "> 40"],
+        ["Akinimas (didelis kontrastas tarp šviestuvo ir aplinkos)", "Žr. 1 lentelę."]
+      ],
+      "images": [
+        "geslita:uploads/images/Evakuaciniai sviestuvai/emerg_open_area.png"
+      ],
+      "notes": [
+        "Europos standartas EN 50172 reikalauja naudoti mažiausiai 2 avarinius šviestuvus atvirų erdvių ir kai kurių evakuacijos kelių erdvių apšvietimui (pvz., koridoriaus dalis tarp priešgaisrinių durų).",
+        "Gamyklų patalpos, kuriose nėra judančių staklių ar yra mažos rizikos įrenginiai, gali būti apšviečiamos kaip standartinės atviros erdvės. Generatorių patalpoms reikalingi individualūs avariniai šviestuvai."
+      ]
+    },
+    {
+      "title": "4 lentelė. Didelės rizikos zonų avarinio apšvietimo rekomendacijos",
+      "rows": [
+        ["Aprašymas", "Zonos, kuriose didelės rizikos darbai turi būti atlikti ar sustabdyti saugiai prieš evakuaciją, siekiant apsaugoti praeivius nuo sužalojimo arba įrangą ir pastatą nuo sugadinimo."],
+        ["Erdvė", "Nustatoma pagal rizikos dydį."],
+        ["Apšvietimo lygis", "10 % nuo bendros apšvietos reikšmės nustatytame paviršiuje arba mažiausiai 15 liuksų."],
+        ["Maksimalios ir minimalios apšvietos santykis", "< 10 : 1"],
+        ["Avarinio apšvietimo lygio pasiekimo laikas", "100 % per 0,5 s"],
+        ["Spalvų atgava (Ra)", "> 40"],
+        ["Akinimas (didelis kontrastas tarp šviestuvo ir aplinkos)", "Žr. 1 lentelę."]
+      ],
+      "images": [],
+      "notes": []
+    }
+  ],
+  "regulation_title": "Apšvietimo elektros įrenginių įrengimo taisyklės (ištrauka)",
+  "regulation_excerpt": [
+    "19. Saugos apšvietimas turi būti įrengiamas kaminams ir kitiems aukštiems statiniams, aukštesniems kaip 45 m, vadovaujantis Aukštų statinių ženklinimo taisyklėse, patvirtintose Civilinės aviacijos administracijos direktoriaus 2001 m. gruodžio 19 d. įsakymu Nr. 106 (Žin., 2002, Nr. 9-351; 2009, Nr. 37-1413), nustatytais reikalavimais, ir tose patalpose, kuriose net trumpalaikis apšvietimo išjungimas gali kelti grėsmę žmonių sveikatai ir gyvybei, sukelti sprogimą bei gaisrą, sutrikdyti sudėtingą technologinį procesą, pridaryti didelių materialinių nuostolių bei sukelti pavojų aplinkai.",
+    "20. Gamybos paskirties patalpose ir atvirose aikštelėse darbo paviršiuose saugos apšvietimas turi būti ne mažesnis kaip 5 procentai bendrosios darbinės apšvietos, bet ne mažesnis kaip 2 lx patalpose ir 1 lx atvirose aikštelėse.",
+    "21. Darbinio ir saugos apšvietimo šviestuvai gamybos ir pramonės paskirties pastatuose, visuomeninės paskirties pastatuose, visuomeninės paskirties inžineriniuose statiniuose (statybos techninis reglamentas STR 2.02.02:2004 „Visuomeninės paskirties statiniai“, patvirtintas Lietuvos Respublikos aplinkos ministro 2004 m. vasario 27 d. įsakymu Nr. D1-91 (Žin., 2004, Nr. 54-1851)) ir lauko aikštelėse turi būti maitinami iš atskiro nepriklausomo šaltinio.",
+    "22. Evakuacinio apšvietimo šviestuvai ir evakavimo(si) kelių nurodomieji ženklai gamybos paskirties patalpose, kuriose yra natūralus apšvietimas, taip pat gyvenamuosiuose ir visuomeninės paskirties pastatuose turi būti maitinami atskiromis linijomis iš transformatorinės (apšvietimo skirstomojo punkto) arba, esant tik vienam įvadui, iš įvadinės skirstomosios spintos. Evakuacinio apšvietimo šviestuvai ir evakavimo(si) kelių nurodomieji ženklai gamybos paskirties patalpose be natūralaus apšvietimo turi būti maitinami iš atskiro nepriklausomo šaltinio.",
+    "23. Evakuacinis apšvietimas, užtikrinantis pakankamą saugiam žmonių judėjimui perėjų ir evakavimo(si) kelių apšvietimą išsijungus pagrindiniam apšvietimui, turi būti naudojamas:",
+    "23.1. negyvenamosiose patalpose, jeigu vienu metu jose būna 50 ir daugiau žmonių;",
+    "23.2. didesniuose nei 2000 m² ploto visuomeninės paskirties pastatuose;",
+    "23.3. didesniuose nei 1000 m² ploto garažuose;",
+    "23.4. didesniuose nei 50 m² ploto prekybos paskirties patalpose;",
+    "23.5. visose gamybos paskirties patalpose, kuriose nuolatos dirba žmonės, o užgesus darbiniam apšvietimui dirbantys technologiniai įrenginiai kelia traumų pavojų;",
+    "23.6. visose gamybos paskirties patalpose be natūralaus patalpų apšvietimo;",
+    "23.7. evakavimo(si) keliuose, vedančiuose iš visų anksčiau minėtų patalpų ir pastatų, taip pat gydymo paskirties ir kitų pastatų evakavimo(si) keliuose, kur daugiausia būna ribotų judėjimo galimybių žmonės.",
+    "24. Evakuacinio apšvietimo šviestuvai turi būti įrengiami:",
+    "24.1. prie kiekvienų durų, per kurias išeinama į evakavimo(si) kelius avarijų atvejais;",
+    "24.2. prie evakavimo(si) keliuose esančių laiptų, kad kiekvienas laiptų maršas būtų tiesiogiai apšviestas;",
+    "24.3. kiekvienoje evakavimo(si) kelių grindų lygio pasikeitimo vietoje;",
+    "24.4. kiekvienoje evakavimo(si) kelių posūkio vietoje;",
+    "24.5. kiekvienoje evakavimo(si) kelių šakojimosi vietoje;",
+    "24.6. visose išėjimo iš evakavimo(si) kelių į lauką vietose (kelių galuose ir lauke šalia išėjimų);",
+    "24.7. prie pirmosios pagalbos suteikimo postų ir prie gaisro aptikimo signalizavimo sistemų bei stacionariųjų gaisrų gesinimo sistemų valdymo įrangos įrengimo vietų.",
+    "25. Jeigu saugos apšvietimas patalpose tenkina evakuacinio apšvietimo sąlygas, evakuacinio apšvietimo įrengti nebūtina.",
+    "26. Atsijungus pagrindiniam avarinio apšvietimo maitinimo šaltiniui, automatiškai turi būti įjungiamas maitinimas iš nepriklausomo išorinio arba vietinio šaltinio (akumuliatorių baterijos, elektros generatoriaus, nepertraukiamo maitinimo šaltinio (UPS)), kuris įprasto darbo metu nenaudojamas nei darbiniam, nei saugos, nei evakuaciniam apšvietimui. Toks šaltinis evakuacinio apšvietimo šviestuvus turi maitinti ne trumpiau kaip 1 valandą. Kai kurie evakuacinio apšvietimo šviestuvai ir evakavimo(si) kelių nurodomieji ženklai gali būti su individualiais, skirtais tik šiam šviestuvui arba šviečiančiai rodyklei maitinti, šaltiniais (sausieji elementai, mažos akumuliatorių baterijos).",
+    "27. Evakuacinis apšvietimas turi užtikrinti ne mažesnę kaip 2 lx apšvietą evakavimo(si) keliuose ir patalpose, kuriose gali būti 50 ir daugiau žmonių, ir ne mažesnę kaip 5 lx apšvietą laiptinėse ir ties evakuaciniais išėjimais. Kokybiniai evakuacinio apšvietimo rodikliai turi būti priimami pagal LST EN 1838:2003 „Apšvietimo pritaikymas. Avarinis apšvietimas“ standarto reikalavimus.",
+    "28. Esant įprastai darbo eigai, evakuacinio apšvietimo evakavimo(si) kelių nurodomieji ženklai gali būti prijungti prie bet kurios paskirties apšvietimo tinklo.",
+    "29. Evakuacinio apšvietimo evakavimo(si) kelių nurodomieji ženklai ir jų dydžiai parenkami vadovaujantis Gaisrinės saugos ženklų naudojimo įmonėse, įstaigose ir organizacijose nuostatais, patvirtintais Priešgaisrinės apsaugos ir gelbėjimo departamento prie Vidaus reikalų ministerijos direktoriaus 2005 m. gruodžio 23 d. įsakymu Nr. 1-404 (Žin., 2005, Nr. 152-5630).",
+    "30. Evakuacinis apšvietimas turi būti įrengtas taip, kad iš bet kurios patalpos vietos (taško) gerai būtų matomas bent vienas evakuacinio apšvietimo evakavimo(si) kelio nurodomasis ženklas. Šie ženklai turi būti įrengiami evakavimo(si) kelio posūkiuose, grindų nuolydžių pasikeitimo vietose, virš kiekvieno evakuacinio išėjimo ir įrengiami ne žemiau kaip 2 metrai ir ne aukščiau kaip 2,5 metro nuo grindų paviršiaus.",
+    "31. Patalpose, kuriose nuolatos dirba žmonės arba per kurias vaikšto darbuotojai, saugos ir evakuacinis apšvietimas gali būti nuolatos įjungtas kartu su darbiniu apšvietimu arba jis gali automatiškai įsijungti, kai išsijungia darbinis apšvietimas. Automatiškai įjungiamas autonominis šaltinis turi užtikrinti 50 procentų avarinės apšvietos lygį per 5 s ir normuotą lygį per 60 s.",
+    "32. Darbiniam ir avariniam apšvietimui turi būti naudojami atskiri grupiniai apšvietimo skydeliai ir atskiri valdymo aparatai. Bendri gali būti tik šių apšvietimo grandinių valdymo įtaisai (signalinės lempos, įjungimo raktai ir pan.). Saugos ir evakuacinio apšvietimo grandines leidžiama maitinti iš bendrų skydelių.",
+    "33. Gamybos ir pramonės paskirties pastatuose be natūralaus patalpų apšvietimo neleidžiama saugos ir evakuacinio apšvietimo prijungti prie galios imtuvus maitinančių tinklų."
+  ],
+  "images": [
+    {
+      "src": "geslita:uploads/images/Emerg_external-300x217.png",
+      "alt": "Ženklo matymo atstumas esant išoriniam apšvietimui"
+    },
+    {
+      "src": "geslita:uploads/images/Emerg_internal-300x220.png",
+      "alt": "Ženklo matymo atstumas esant vidiniam apšvietimui"
+    },
+    {
+      "src": "geslita:uploads/images/laiptines/emerg_laiptai1.png",
+      "alt": "1 žingsnis – evakuacinis žymėjimas laiptinėje"
+    },
+    {
+      "src": "geslita:uploads/images/laiptines/emerg_korid1.png",
+      "alt": "2 žingsnis – privalomi avariniai šviestuvai koridoriuje"
+    },
+    {
+      "src": "geslita:uploads/images/laiptines/emerg_korid_tarpiniai-300x192.png",
+      "alt": "3 žingsnis – tarpiniai avariniai šviestuvai"
+    },
+    {
+      "src": "geslita:uploads/images/Evakuaciniai sviestuvai/emerg_akinimas-300x209.png",
+      "alt": "Akinimas horizontaliame evakuacijos kelyje"
+    },
+    {
+      "src": "geslita:uploads/images/Evakuaciniai sviestuvai/emerg_akinimas1-300x207.png",
+      "alt": "Akinimas grindų lygio pasikeitimo vietoje"
+    },
+    {
+      "src": "geslita:uploads/images/Evakuaciniai sviestuvai/emerg_akinimas2-300x268.png",
+      "alt": "Akinimo skaičiavimo pavyzdys koridoriuje"
+    },
+    {
+      "src": "geslita:uploads/images/Evakuaciniai sviestuvai/emerg_fotometric-1024x448.png",
+      "alt": "Evakuacijos kelio apšvietimo fotometrinė schema"
+    },
+    {
+      "src": "geslita:uploads/images/Evakuaciniai sviestuvai/emerg_sviestuvai.png",
+      "alt": "Avarinių šviestuvų išdėstymas evakuacijos kelyje"
+    },
+    {
+      "src": "geslita:uploads/images/Evakuaciniai sviestuvai/emerg_open_area.png",
+      "alt": "Atviros erdvės avarinio apšvietimo schema"
+    }
+  ],
+  "products_title": "Avarinio išėjimo šviestuvai",
+  "products": [
+    {
+      "name": "Evakuacijos šviestuvas",
+      "image": "geslita:uploads/images/Evakuaciniai sviestuvai/image001.jpg",
+      "alt": "Evakuacijos šviestuvas",
+      "price": "47,31 €"
+    },
+    {
+      "name": "Evakuacijos šviestuvas",
+      "image": "geslita:uploads/images/Evakuaciniai sviestuvai/image003.jpg",
+      "alt": "Evakuacijos šviestuvas",
+      "price": "24,53 €"
+    },
+    {
+      "name": "Evakuacijos šviestuvas",
+      "image": "geslita:uploads/images/Evakuaciniai sviestuvai/image005.jpg",
+      "alt": "Evakuacijos šviestuvas",
+      "price": "29,78 €"
+    },
+    {
+      "name": "Evakuacijos šviestuvas",
+      "image": "geslita:uploads/images/Evakuaciniai sviestuvai/image007.jpg",
+      "alt": "Evakuacijos šviestuvas",
+      "price": "56,07 €"
+    }
+  ]
+}

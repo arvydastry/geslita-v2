@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) document.documentElement.classList.add('js');</script>
+<title>Saugos centras: mokymai, instrukcijos, dokumentacija | Geslita</title>
+<meta name="description" content="Darbuotojų priešgaisrinės saugos mokymai ir atestavimas kas 3 metus (180 min. programa), mokymų kainininkas, gaisrinės saugos instrukcijų, ekstremalių situacijų valdymo planų ir darbuotojų saugos ir sveikatos dokumentacijos rengimas.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* Saugos centras (.pg-sc-) */
+.pg-sc-intro .photo { aspect-ratio: 3 / 4; }
+.pg-sc-head h2 { margin-bottom: 16px; }
+.pg-sc-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; }
+.pg-sc-h3 { margin: 36px 0 12px; }
+.pg-sc-h3 .count { font: 500 14px/1 var(--fb); color: var(--muted); margin-left: 10px; white-space: nowrap; letter-spacing: 0; }
+.pg-sc-legal { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 15px; }
+.pg-sc-legal li { padding-left: 18px; border-left: 2px solid var(--line-2); }
+.pg-sc-prog { margin-top: 14px; }
+.pg-sc-prog li > div { display: grid; gap: 4px; }
+.pg-sc-prog .det { font-size: 13.5px; color: var(--muted); }
+.pg-sc-prog .total { background: var(--navy); border-color: transparent; color: #fff; font-weight: 600; }
+.pg-sc-prog .total .num { color: #fff; }
+.pg-sc-notice { margin-top: 28px; }
+.pg-sc-how { position: relative; overflow: hidden; background: var(--navy); border-color: transparent; margin-top: 28px; }
+.pg-sc-how .plan { position: absolute; right: -14%; top: -45%; width: 62%; min-width: 420px; opacity: 0.1; pointer-events: none; }
+.pg-sc-how > * { position: relative; }
+.pg-sc-how p { color: var(--on-dark); max-width: none; }
+.pg-sc-how .checks { margin-top: 20px; grid-template-columns: repeat(3, 1fr); gap: 14px 24px; font-size: 16px; }
+/* Kainininko lentelės: pavadinimas, kodas ir kainos vienoje eilutėje, aprašymas antroje */
+.pg-sc-tbl th.no, .pg-sc-tbl td.no { width: 64px; color: var(--muted); white-space: nowrap; }
+.pg-sc-tbl td.code { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.pg-sc-tbl .name { color: var(--ink); font-weight: 500; }
+.pg-sc-tbl .en { display: block; font-size: 12.5px; color: var(--muted); font-style: italic; }
+.pg-sc-tbl tr.main td { padding-bottom: 4px; }
+.pg-sc-tbl tr.sub td { border-top: 0; padding-top: 0; padding-bottom: 14px; font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+.pg-sc-tbl tbody tr:hover { background: transparent; }
+.pg-sc-doc { padding-top: clamp(16px, 3vw, 40px); }
+.pg-sc-ol { margin: 8px 0 28px; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 32px; counter-reset: n; }
+.pg-sc-ol li { counter-increment: n; display: grid; grid-template-columns: 38px 1fr; gap: 8px; padding-top: 12px; border-top: 1px solid var(--line-2); font-size: 15.5px; }
+.pg-sc-ol li::before { content: counter(n, decimal-leading-zero); font: 700 20px/1.3 var(--fd); color: var(--navy-3); }
+.pg-sc-close { margin-top: 28px; padding: 4px 0 4px 20px; border-left: 3px solid var(--navy-3); color: var(--ink); font-weight: 500; }
+.pg-sc-acc { margin-top: 24px; }
+.pg-sc-acc .acc-body ul { margin: 0; display: grid; gap: 8px; }
+.pg-sc-docs { grid-template-columns: 1fr 1fr; gap: 10px 28px; margin: 22px 0; }
+.pg-sc-side a { display: block; padding: 0; margin: 0; border-left: 0; color: var(--ink); font-weight: 600; text-decoration: none; font-size: 15px; }
+.pg-sc-cta { padding-top: 0; }
+.pg-sc-cta .cta-inline { margin-top: 0; }
+@media (max-width: 960px) { .pg-sc-doc .doc-body { min-width: 0; } }
+@media (max-width: 900px) { .pg-sc-intro .photo { aspect-ratio: 4 / 3; } .pg-sc-legal, .pg-sc-ol, .pg-sc-docs, .pg-sc-how .checks { grid-template-columns: 1fr; } }
+/* Telefone kiekviena kainininko eilutė virsta kortele, stulpelių žymos imamos iš data-l */
+@media (max-width: 640px) {
+  .pg-sc-tbl table { min-width: 0; } .pg-sc-tbl tr.sub td.no { display: none; }
+  .pg-sc-tbl thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .pg-sc-tbl tr.main { display: grid; grid-template-columns: 44px 1fr; gap: 3px 6px; padding: 14px 12px 0; border-top: 1px solid var(--line); }
+  .pg-sc-tbl tr.main:first-child { border-top: 0; } .pg-sc-tbl tr.sub { display: block; padding: 6px 12px 14px 62px; }
+  .pg-sc-tbl tr.main td, .pg-sc-tbl tr.sub td { display: block; border: 0; padding: 0; width: auto; } .pg-sc-tbl tr.main td:not(.no) { grid-column: 2; }
+  .pg-sc-tbl td.num { text-align: left; white-space: normal; } .pg-sc-tbl td.code { font-size: 13.5px; color: var(--muted); }
+  .pg-sc-tbl td[data-l]::before { content: attr(data-l) ": "; color: var(--muted); font-weight: 400; }
+}
+</style></head>
+<body class="">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14L20 4M15 4h5v5"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3 4 5 4 9a4 4 0 0 1-8 0c0-1 .3-2 1-3 0 2 1 3 2 3 0-3-1-5 1-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V6h11v11M14 9h4l3 3v5h-2"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3H4a4 4 0 0 0 2-3v-3a7 7 0 0 1 4-6M9 17v1a3 3 0 0 0 6 0v-1"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3zM9 4v13M15 7v13"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 9L12 5 2 9l10 4 10-4zM6 10.6V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.4"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M7 10h3v11H7zM14 4l3-1 3 3-1 3-5 5-3-3 3-7zM4 20l3-3"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></symbol>
+</svg>
+<a class="skip" href="#main">Pereiti prie turinio</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Geslita, į pradžią"><img src="assets/img/logo-geslita-s.png" alt="Geslita" width="167" height="50"></a>
+    <ul class="site-nav">
+      <li><a href="index.html" >Pradžia</a></li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-paslaugos">Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-paslaugos">
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas<span>Patikra nuo 5,26 €</span></a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija<span>Patikra, remontas, įrengimas</span></a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis<span>Čiaupai, žarnos, žurnalai</span></a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai<span>Planas 70 €</span></a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai<span>Montavimas pagal EN 1838</span></a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai<span>Saugos centras</span></a></li>
+          <li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos<span>Dielektrika, nuoma, žurnalai</span></a></li>
+          <li><a class="drop-all" href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-prekes">Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-prekes">
+          <li><a href="prekes-gesintuvai.html">Gesintuvai<span>Milteliniai, CO₂, vandens putų</span></a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis<span>Spintelės, žarnos, čiaupai</span></a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai<span>102 ženklai su paieška</span></a></li>
+          <li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga<span>Detektoriai, sirenos, šviestuvai</span></a></li>
+          <li><a class="drop-all" href="prekes.html">Visos prekės</a></li>
+        </ul>
+      </li>
+      <li><a href="saugos-centras.html" aria-current="page">Saugos centras</a></li>
+      <li class="nav-naudinga"><a href="naudinga-informacija.html" >Naudinga</a></li>
+      <li><a href="apie-mus.html" >Apie mus</a></li>
+      <li><a href="kontaktai.html" >Kontaktai</a></li>
+    </ul>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>+370 653 99977</span></a>
+      <a class="btn btn-sm" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+      <button class="nav-toggle" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-nav"><svg class="ic ic-menu"><use href="#i-menu"/></svg><svg class="ic ic-x"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilus meniu">
+  <ul>
+    <li><a href="index.html">Pradžia</a></li>
+    <li><details><summary>Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li><li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas</a></li><li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li><li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li><li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li><li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li><li><a href="saugos-centras.html">Darbuotojų mokymai</a></li><li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos</a></li>
+    </ul></details></li>
+    <li><details><summary>Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="prekes.html">Visos prekės</a></li><li><a href="prekes-gesintuvai.html">Gesintuvai</a></li><li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li><li><a href="prekes-zenklai.html">Saugos ženklai</a></li><li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga</a></li>
+    </ul></details></li>
+    <li><a href="saugos-centras.html">Saugos centras</a></li>
+    <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+    <li><a href="apie-mus.html">Apie mus</a></li>
+    <li><a href="kontaktai.html">Kontaktai</a></li>
+  </ul>
+  <div class="mobile-cta">
+    <a class="btn" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+    <a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a>
+  </div>
+</nav>
+
+<main id="main">
+<section class="page-hero ">
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.2">
+  <div class="wrap">
+    <div>
+<ol class="crumbs"><li><a href="index.html">Pradžia</a></li><li><span aria-current="page">Saugos centras</span></li></ol>      <h1>Saugos centras</h1>
+<p class="lead">Priešgaisrinės saugos mokymai ir atestavimas, gaisrinės saugos instrukcijos, ekstremalių situacijų valdymo planai ir darbuotojų saugos ir sveikatos dokumentacija: padedame darbdaviams įgyvendinti teisės aktų reikalavimus.</p><div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>    </div>
+<div class="media" data-reveal="scale"><img src="assets/img/foto/saugos-mokymai.jpg" srcset="assets/img/foto/saugos-mokymai-640.webp 640w, assets/img/foto/saugos-mokymai-1280.webp 1280w, assets/img/foto/saugos-mokymai-1920.webp 1920w" sizes="(max-width: 960px) 92vw, 50vw" alt="Lektorė prie vartomosios lentos veda mokymus darbuotojams šviesioje mokymų patalpoje" style="object-position: 72% 50%" width="1200" height="900" fetchpriority="high"></div>  </div>
+</section>
+
+<section class="sec sec-tight">
+  <div class="wrap split rev pg-sc-intro">
+    <div data-reveal>
+      <div class="eyebrow">Darbuotojų sauga ir sveikata</div>
+      <h2 style="margin-bottom:20px">Darbdavio pareiga ir verslo sėkmės veiksnys</h2>
+      <p>Darbdavio pareiga - sudaryti darbuotojams saugias ir sveikatai nekenksmingas darbo sąlygas visais su darbu susijusiais aspektais. Kiekvienas darbdavys turi siekti darbuotojų saugos ir sveikatos reikalavimų įgyvendinimo visa apimtimi - tuo pačiu jis didina ir darbo efektyvumą. Darbuotojų sauga ir sveikata yra ne tik pirmoji darbdavio pareiga, bet ir vienas svarbiausių verslo sėkmės veiksnių, padedantis saugiai konkuruoti ir siekti pagrindinių verslo ar įstaigos tikslų.</p><p>Griežtas ir tinkamas darbuotojų saugos ir sveikatos, gaisrinės saugos bei darbo teisės reikalavimų įgyvendinimas - nelengvas uždavinys, dažnai reikalaujantis rimtos kvalifikuotos pagalbos ir patyrusių specialistų palaikymo.</p><p>Mūsų specialistai turi sėkmingą profesinės veiklos patirtį darbuotojų saugos ir sveikatos, gaisrinės saugos ir darbo teisės srityse. Padedame darbdaviams sukurti saugias ir sveikas darbo sąlygas bei išlaikyti jas aukštame lygyje. Savo veikloje vadovaujamės tik aktualios redakcijos norminiais teisės aktais, teismų praktika ir ekspertų rekomendacijomis. Teikiame visas darbuotojų saugos ir sveikatos, gaisrinės saugos ir darbo teisės paslaugas.</p><p>Kreipkitės į mus - mūsų profesionalai padės įgyvendinti visus darbuotojų saugos ir sveikatos, gaisrinės saugos ir darbo teisės norminių teisės aktų reikalavimus.</p>
+    </div>
+    <div class="photo para" data-reveal="scale" data-parallax-root>
+      <img src="assets/img/foto/biuras.jpg" srcset="assets/img/foto/biuras-640.webp 640w, assets/img/foto/biuras-1280.webp 1280w, assets/img/foto/biuras-1920.webp 1920w" sizes="(max-width: 960px) 92vw, 50vw" alt="Šviesus biuro koridorius su stiklinėmis pertvaromis ir darbo vietomis" loading="lazy" width="1880" height="1253" data-parallax="0.15">
+      <div class="pin"><span class="num">180 min.</span><span class="small">priešgaisrinės saugos mokymo programa</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec pg-sc-doc">
+  <div class="wrap doc">
+    <aside class="doc-nav" aria-label="Puslapio turinys">
+      <ul>
+        <li><a href="#mokymai">Priešgaisrinės saugos mokymai</a></li>
+        <li><a href="#kainininkas">Mokymų kainininkas</a></li>
+        <li><a href="#instrukcija">Gaisrinės saugos instrukcija</a></li>
+        <li><a href="#esvp">Ekstremalių situacijų valdymo planas</a></li>
+        <li><a href="#dss">DSS dokumentacija</a></li>
+        <li><a href="#pakeitimai-2012">Archyvas: 2012 m. pakeitimai</a></li>
+      </ul>
+      <div class="side-card pg-sc-side">
+        <strong>Klausimai dėl mokymų?</strong>
+        <span class="muted">Skambinkite darbo dienomis 9:00-18:00</span>
+        <a href="tel:+37065399977">+370 653 99977</a>
+        <a href="mailto:info@geslita.lt">info@geslita.lt</a>
+      </div>
+    </aside>
+
+    <div class="doc-body">
+      <article class="doc-sec" id="mokymai">
+        <div class="pg-sc-head" data-reveal>
+          <h2>Darbuotojų (valstybės tarnautojų) priešgaisrinės saugos mokymai</h2>
+          <div class="pg-sc-meta">
+            <span class="tag tag-navy"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>Periodiškumas: kas 3 metus</span>
+            <span class="tag">Programa: 180 min.</span>
+            <span class="tag">Atvykstame į mokymų vietą</span>
+            <span class="tag">Išduodame pažymėjimus</span>
+          </div>
+          <p>Darbuotojų (valstybės tarnautojų) priešgaisrinės saugos mokymo paskirtis - supažindinti darbuotojus su galimomis gaisrų kilimo priežastimis, pagrindiniais priešgaisrinę saugą reglamentuojančių teisės aktų reikalavimais objektui ir atskiriems darbo barams, gaisrine įranga, darbuotojų (valstybės tarnautojų) teisėmis ir pareigomis priešgaisrinės saugos srityje bei atsakomybe už priešgaisrinę saugą reglamentuojančių teisės aktų pažeidimus.</p>
+        </div>
+
+        <h3 class="pg-sc-h3">Mokymo programa</h3>
+        <p class="small muted">Priešgaisrinės apsaugos ir gelbėjimo departamento direktoriaus 2003 m. birželio 20 d. įsakymu Nr. 112 patvirtinti „Minimalūs reikalavimai valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo programoms“ (Žin., 2003, Nr. 63-2873; Žin., 2012, Nr. 105-5360) numato šias priešgaisrinės saugos mokymo temas:</p>
+        <ul class="programme pg-sc-prog" data-reveal>
+          <li>
+            <div><span>Medžiagų degumas. Pagrindinės gaisrų priežastys</span></div>
+            <span class="num">30 min.</span>
+          </li>
+          <li>
+            <div><span>Pagrindiniai priešgaisrinę saugą reglamentuojančių teisės aktų reikalavimai objektui ir atskiriems darbo barams</span><span class="det">Apima: teritorijos priežiūrai, statiniams, atskiriems pastatams ir patalpoms, elektros įrenginiams, šildymui ir vėdinimui, technologiniams procesams, pavojingų medžiagų transportavimui, medžiagų sandėliavimui, statybos darbams, ugnies darbams.</span></div>
+            <span class="num">60 min.</span>
+          </li>
+          <li>
+            <div><span>Gaisrinė įranga ir jos naudojimo ypatumai</span><span class="det">Apima: stacionariosios gaisrų gesinimo sistemos, gaisro aptikimo ir signalizavimo sistemos, perspėjimo apie gaisrą ir evakuacijos valdymo sistemos, statinių vidaus gaisrinio vandentiekio sistemos, lauko gaisrinio vandentiekio sistemos, dūmų ir šilumos kontrolės sistemos, pirminės gaisro gesinimo priemonės.</span></div>
+            <span class="num">30 min.</span>
+          </li>
+          <li>
+            <div><span>Veiksmai kilus gaisrui</span></div>
+            <span class="num">45 min.</span>
+          </li>
+          <li>
+            <div><span>Valstybės tarnautojų ir darbuotojų teisės ir pareigos priešgaisrinės saugos srityje. Atsakomybė už priešgaisrinę saugą reglamentuojančių teisės aktų pažeidimus</span></div>
+            <span class="num">15 min.</span>
+          </li>
+          <li class="total"><span>Iš viso</span><span class="num">180 min.</span></li>
+        </ul>
+
+        <h3 class="pg-sc-h3">Teisinis pagrindas</h3>
+        <ul class="pg-sc-legal" data-reveal><li>LR Priešgaisrinės saugos įstatymo 11 straipsnio 3 dalies 6 punktas (Žin., 2002, Nr. 123-5518) ir „Bendrųjų gaisrinės saugos taisyklių“ 12 punktas (Žin., 2005, Nr. 26-852; Žin., 2010, Nr. 99-5167; Žin., 2011, Nr. 100-4727; Žin., 2012, Nr. 118-5970) nustato, kad juridinių asmenų vadovai, nepriklausomai nuo ekonominės veiklos rūšies ir darbuotojų skaičiaus, kas 3 metus turi organizuoti visų savo darbuotojų (valstybės tarnautojų) mokymą ir atestavimą priešgaisrinės saugos klausimais pagal „Minimalius reikalavimus valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo programoms“ (Žin., 2003, Nr. 63-2873; Žin., 2012, Nr. 105-5360).</li><li>Tuo tikslu juridinio asmens vadovas turi parengti specialią priešgaisrinės saugos mokymo programą, kurioje nurodoma: 1) priešgaisrinės saugos mokymo tvarka ir trukmė; 2) darbuotojų (valstybės tarnautojų), išklausiusių priešgaisrinės saugos mokymo kursą, žinių tikrinimo tvarka.</li></ul>
+
+        <div class="notice info pg-sc-notice" data-reveal><strong>Tikrinama priežiūros metu.</strong> Priešgaisrinės apsaugos ir gelbėjimo departamento prie Vidaus reikalų ministerijos direktoriaus 2010 m. vasario 22 d. įsakymu Nr. 1-63 patvirtinto „Objekto atitikties priešgaisrinę saugą reglamentuojantiems teisės aktams patikrinimų atlikimo tvarkos aprašo“ (Žin., 2010, Nr. 23-1103) 21 punkto 1 papunktyje numatyta, kad patikrinimo metu, be kitų pagrindinių klausimų, valstybinės priešgaisrinės priežiūros pareigūnas privalo patikrinti, ar objekte atliekamas periodinis visų darbuotojų mokymas priešgaisrinės saugos klausimais.</div>
+
+        <div class="card band-dark pg-sc-how" data-reveal>
+          <img class="plan" src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+          <h3>Kaip vyksta mokymai</h3>
+          <p>UAB „Geslita“ saugos centro specialistai gali padėti organizuoti jūsų darbuotojų (valstybės tarnautojų) priešgaisrinės saugos mokymą ir atestavimą pagal norminių teisės aktų reikalavimus palankiausiomis sąlygomis.</p>
+          <ul class="checks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Sutartu laiku atvykstame į mokymų vietą su visomis reikalingomis mokymo priemonėmis (garso ir vaizdo aparatūra, gaisrinės saugos ženklų pavyzdžiais ir kt.)</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Pravedame mokymus ir atestuojame visus jūsų darbuotojus (valstybės tarnautojus)</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Visiems sėkmingai išlaikiusiems įskaitas išduodame pažymėjimus</span></li></ul>
+        </div>
+      </article>
+
+      <article class="doc-sec" id="kainininkas">
+        <div class="pg-sc-head" data-reveal>
+          <h2>Mokymų kainininkas</h2>
+          <div class="notice">Kainos orientacinės: perskaičiuotos iš ankstesnio kainoraščio litais oficialiu kursu 3,4528 Lt = 1 € ir suapvalintos iki centų. Dėl galiojančių kainų skambinkite <a href="tel:+37065399977">+370 653 99977</a> arba rašykite <a href="mailto:info@geslita.lt">info@geslita.lt</a>.</div>
+        </div>
+        <h3 class="pg-sc-h3">Formalieji mokymai<span class="count">21 programa</span></h3>
+        <div data-reveal><div class="tbl pg-sc-tbl">
+  <table>
+    <thead><tr><th class="no">Nr.</th><th>Programa</th><th>Valst. kodas</th><th class="num">Kaina (1 asm.)</th><th class="num">Peratestavimas (1 asm.)</th></tr></thead>
+    <tbody>
+    <tr class="main">
+      <td class="no">1.1.</td>
+<td><span class="name">Įmonės darbuotojų saugos ir sveikatos tarnybos specialisto</span><span class="en">Specialist of Employees&#39; Safety and Health Services</span></td>
+<td class="code" data-l="Valst. kodas">560086211</td><td class="num" data-l="Kaina"><b>160,74 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Baigus įmonės darbuotojų saugos ir sveikatos tarnybos specialisto programą, kvalifikacija nesuteikiama, tačiau įgyjama teisė dirbti atitinkamos ekonominės veiklos rūšies įmonės darbuotojų saugos ir sveikatos tarnybos specialistu.</td></tr>    <tr class="main">
+      <td class="no">1.2.</td>
+<td><span class="name">Darbdavio, jam atstovaujančio asmens</span><span class="en">Employer or his Representative</span></td>
+<td class="code" data-l="Valst. kodas">260086210</td><td class="num" data-l="Kaina"><b>115,85 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Gali užtikrinti darbuotojų saugą ir sveikatą visais su darbu susijusiais aspektais.</td></tr>    <tr class="main">
+      <td class="no">1.3.</td>
+<td><span class="name">Įmonės vadovo, vykdančio įmonės darbuotojų saugos ir sveikatos tarnybos funkcijas</span><span class="en">Manager of an enterprise, executing functions of employees&#39; safety and health services</span></td>
+<td class="code" data-l="Valst. kodas">360086217</td><td class="num" data-l="Kaina"><b>160,74 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Gali užtikrinti darbo santykius ir darbuotojų saugą ir sveikatą reglamentuojančių teisės aktų reikalavimų įgyvendinimą ir galės vykdyti įmonės darbuotojų saugos ir sveikatos tarnybos funkcijas konkrečios ekonominės veiklos rūšies įmonėje.</td></tr>    <tr class="main">
+      <td class="no">1.4.</td>
+<td><span class="name">Darbininko, dirbančio aukštalipių darbus</span><span class="en">Worker Performing Steeplejack&#39;s Works</span></td>
+<td class="code" data-l="Valst. kodas">260086203</td><td class="num" data-l="Kaina"><b>115,85 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Gali dirbti aukštalipių darbus. Baigę darbininko, dirbančio aukštalipių darbus, mokymo programą, asmenys gali dirbti įvairius statybos, montavimo darbus aukštyje visų ekonominių veiklos rūšių įmonėse.</td></tr>    <tr class="main">
+      <td class="no">1.5.</td>
+<td><span class="name">Aukštalipio darbų vadovo</span><span class="en">High-scaler&#39;s Supervisor</span></td>
+<td class="code" data-l="Valst. kodas">560086208</td><td class="num" data-l="Kaina"><b>115,85 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Gali vadovauti aukštalipio darbams. Baigę aukštalipio darbų vadovo mokymo programą, asmenys vadovauja aukštalipio darbams su alpinizmo elementais, atliekant darbus ant laikinų bei nestabilių konstrukcijų, paviršių.</td></tr>    <tr class="main">
+      <td class="no">1.6.</td>
+<td><span class="name">Autokrautuvo vairuotojo</span><span class="en">Forklift Driver</span></td>
+<td class="code" data-l="Valst. kodas">261084001</td><td class="num" data-l="Kaina"><b>130,33 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Įgyjama profesinė kvalifikacija - autokrautuvo vairuotojas. Įgiję automobilinių krautuvų vairuotojo kvalifikaciją asmenys gali dirbti įvairiose įmonėse automobilinių krautuvų vairuotojais.</td></tr>    <tr class="main">
+      <td class="no">1.7.</td>
+<td><span class="name">Elektrinių krautuvų ir vežimėlių vairuotojas</span><span class="en">Electrical Forklift and Trolley Driver</span></td>
+<td class="code" data-l="Valst. kodas">261084002</td><td class="num" data-l="Kaina"><b>130,33 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Įgyjama profesinė kvalifikacija - elektrinių krautuvų ir vežimėlių vairuotojas. Įgiję elektrinių krautuvų ir vežimėlių vairuotojo kvalifikaciją asmenys gali dirbti įvairiose įmonėse elektrinių krautuvų ir vežimėlių vairuotojais.</td></tr>    <tr class="main">
+      <td class="no">1.8.</td>
+<td><span class="name">Krautuvų vairuotojas</span><span class="en">Industrial forklifts driver</span></td>
+<td class="code" data-l="Valst. kodas">261084022</td><td class="num" data-l="Kaina"><b>159,29 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Įgyjama profesinė kvalifikacija - krautuvų vairuotojas.</td></tr>    <tr class="main">
+      <td class="no">1.9.</td>
+<td><span class="name">Kėlimo įrenginių priežiūros meistro</span><span class="en">Lifting Machinery Maintenance Foreman</span></td>
+<td class="code" data-l="Valst. kodas">560084006</td><td class="num" data-l="Kaina"><b>130,33 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Gali dirbti kėlimo įrenginių priežiūros meistru. Baigę keliamųjų kranų priežiūros meistro mokymo programą, asmenys gali paruošti dokumentus krano registravimui, prižiūrėti ir kontroliuoti krano techninę būklę, remontų kokybę.</td></tr>    <tr class="main">
+      <td class="no">1.10.</td>
+<td><span class="name">Kėlimo kranų darbo vadovo</span><span class="en">Crane work supervisor</span></td>
+<td class="code" data-l="Valst. kodas">560084007</td><td class="num" data-l="Kaina"><b>130,33 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Gali dirbti kėlimo kranų darbo vadovu. Baigę kėlimo kranų darbo vadovo mokymo programą, asmenys gali vadovauti krovimo darbams sandėlių ūkyje, įrengimų remonto darbams su kranais pramonės įmonėse, parinkti apmokytą personalą šių darbų vykdymui.</td></tr>    <tr class="main">
+      <td class="no">1.11.</td>
+<td><span class="name">Neregistruojamų kėlimo įrenginių priežiūros meistro</span><span class="en">Maintenance foreman for lifting machinery not to be registered</span></td>
+<td class="code" data-l="Valst. kodas">560052509</td><td class="num" data-l="Kaina"><b>130,33 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Gali dirbti neregistruojamų kėlimo įrenginių priežiūros meistru. Baigę neregistruojamų kėlimo įrenginių priežiūros meistro mokymo programą, asmenys gali prižiūrėti neregistruojamus kėlimo įrenginius, organizuoti jų remontą, bandymus.</td></tr>    <tr class="main">
+      <td class="no">1.12.</td>
+<td><span class="name">Hidromanipuliatorių operatoriaus</span><span class="en">Operator of crane manipulator</span></td>
+<td class="code" data-l="Valst. kodas">260052107</td><td class="num" data-l="Kaina"><b>159,29 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Gali dirbti hidromanipuliatorių operatoriumi. Baigę hidromanipuliatorių operatoriaus mokymo programą, asmenys gali dirbti hidromanipuliatorių operatoriumi įmonėse, kuriose vykdomi medienos pakrovimo, iškrovimo ir sandėliavimo darbai.</td></tr>    <tr class="main">
+      <td class="no">1.13.</td>
+<td><span class="name">Nuo žemės valdomų tiltinio tipo kranų operatoriaus</span><span class="en">Operator of Overhead Travelling Type Cranes Controlled from the Ground</span></td>
+<td class="code" data-l="Valst. kodas">260084005</td><td class="num" data-l="Kaina"><b>115,85 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Gali dirbti nuo žemės valdomų tiltinio tipo kranų operatoriumi. Baigę nuo žemės valdomų tiltinio tipo kranų operatoriaus mokymo programą, asmenys gali vykdyti krovinių kėlimo darbus įmonėse, eksploatuojančiose nuo žemės valdomus tiltinio tipo kranus, atlikti krovinių perkėlimą.</td></tr>    <tr class="main">
+      <td class="no">1.14.</td>
+<td><span class="name">Savaeigio strėlinio krano operatoriaus</span><span class="en">Self-propelled arrow-shaped cranes operator</span></td>
+<td class="code" data-l="Valst. kodas">265084006</td><td class="num" data-l="Kaina"><b>521,32 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Įgyjama profesinė kvalifikacija - savaeigio strėlinio krano operatorius.</td></tr>    <tr class="main">
+      <td class="no">1.15.</td>
+<td><span class="name">Automobilinio krano operatoriaus</span><span class="en">Motocrane operator</span></td>
+<td class="code" data-l="Valst. kodas">265084001</td><td class="num" data-l="Kaina"><b>260,66 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Įgyjama profesinė kvalifikacija - automobilinio krano operatorius. Įgiję automobilinio krano mašinisto kvalifikaciją asmenys gali dirbti įmonėse, firmose, naudojančiose automobilinius kranus, arba dirbti su automobiliniu kranu, įsigytu asmeninės nuosavybės pagrindu.</td></tr>    <tr class="main">
+      <td class="no">1.16.</td>
+<td><span class="name">Savaeigio platforminio keltuvo operatoriaus</span><span class="en">Self-propelled platform cranes operator</span></td>
+<td class="code" data-l="Valst. kodas">265084005</td><td class="num" data-l="Kaina"><b>260,66 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Įgyjama profesinė kvalifikacija - savaeigio platforminio keltuvo operatorius. Įgiję savaeigio platforminio keltuvo operatoriaus kvalifikaciją asmenys gali dirbti įmonėse, firmose, naudojančiose savaeigius platforminius keltuvus, arba dirbti su savaeigiu platforminiu keltuvu.</td></tr>    <tr class="main">
+      <td class="no">1.17.</td>
+<td><span class="name">Tiltinių kranų operatoriaus</span><span class="en">Operator of overhead travelling cranes</span></td>
+<td class="code" data-l="Valst. kodas">262084007</td><td class="num" data-l="Kaina"><b>289,62 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Įgyjama profesinė kvalifikacija - tiltinių kranų operatorius. Įgiję tiltinio krano mašinisto kvalifikaciją asmenys gali dirbti tiltinio krano mašinisto darbą įmonėse, naudojančiose tiltinius kranus.</td></tr>    <tr class="main">
+      <td class="no">1.18.</td>
+<td><span class="name">Bokštinio krano operatoriaus</span><span class="en">Tower crane operator</span></td>
+<td class="code" data-l="Valst. kodas">262084002</td><td class="num" data-l="Kaina"><b>289,62 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Įgyjama profesinė kvalifikacija - bokštinio krano operatorius. Įgiję bokštinio krano mašinisto kvalifikaciją asmenys gali dirbti bokštinio krano mašinisto darbą įmonėse, eksploatuojančiose bokštinius kranus.</td></tr>    <tr class="main">
+      <td class="no">1.19.</td>
+<td><span class="name">Krovinių kabinėtojo</span><span class="en">Load Hanger</span></td>
+<td class="code" data-l="Valst. kodas">260058206</td><td class="num" data-l="Kaina"><b>86,89 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Gali dirbti krovinių kabinėtoju. Baigę krovinių kabinėtojo programą, asmenys gali dirbti krovinių kabinėtoju statybos objektuose, pramonės įmonėse, vykdant darbus sandėlių ūkiuose.</td></tr>    <tr class="main">
+      <td class="no">1.20.</td>
+<td><span class="name">Darbininko, dirbančio kėlimo įrenginių lopšiuose</span><span class="en">Worker Working in Hoisting Machinery Cradles</span></td>
+<td class="code" data-l="Valst. kodas">260086205</td><td class="num" data-l="Kaina"><b>86,89 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Gali dirbti kėlimo įrenginių lopšiuose. Baigę darbininko, dirbančio kėlimo įrenginių lopšiuose, mokymo programą, asmenys gali dirbti įmonėse, kurios eksploatuoja keltuvus, pakabinamus lopšius, bokštelius žmonėms kelti ir įvairiems darbams atlikti.</td></tr>    <tr class="main">
+      <td class="no">1.21.</td>
+<td><span class="name">Portalinio krano mašinisto</span><span class="en">Portal cranes machinist</span></td>
+<td class="code" data-l="Valst. kodas">262084004</td><td class="num" data-l="Kaina"><b>521,32 €</b></td>
+<td class="num" data-l="Peratestavimas"><b>43,44 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="4">Įgyjama profesinė kvalifikacija - portalinio krano mašinistas. Įgiję portalinio krano mašinisto kvalifikaciją asmenys gali dirbti portalinio krano mašinisto darbą upių ar jūrų uostuose, įmonėse, eksploatuojančiose portalinius kranus.</td></tr>    </tbody>
+  </table>
+</div></div>
+        <h3 class="pg-sc-h3">Privalomieji mokymai<span class="count">3 programos</span></h3>
+        <div data-reveal><div class="tbl pg-sc-tbl">
+  <table>
+    <thead><tr><th class="no">Nr.</th><th>Programa</th><th class="num">Kaina (1 asm.)</th></tr></thead>
+    <tbody>
+    <tr class="main">
+      <td class="no">2.1.</td>
+<td><span class="name">Privalomasis pirmosios pagalbos mokymas</span><span class="en">Compulsory first aid training</span></td>
+<td class="num" data-l="Kaina"><b>10,14 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="2">Daugelio profesijų, darbų ar veiklos sričių darbuotojai privalo mokėti suteikti pirmąją pagalbą ir įgyti žinių sveikatos klausimais. Mokymas LR sveikatos apsaugos ministro 2008 m. sausio 28 d. įsakyme Nr. V-69 (Žin., 2008, Nr. 14-490) nurodytiems asmenims nustatytu periodiškumu.</td></tr>    <tr class="main">
+      <td class="no">2.2.</td>
+<td><span class="name">Privalomasis higienos įgūdžių mokymas</span><span class="en">Compulsory hygiene skills training</span></td>
+<td class="num" data-l="Kaina"><b>10,14 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="2">Mokymas LR sveikatos apsaugos ministro 2008 m. sausio 28 d. įsakyme Nr. V-69 (Žin., 2008, Nr. 14-490) nurodytiems asmenims nustatytu periodiškumu.</td></tr>    <tr class="main">
+      <td class="no">2.3.</td>
+<td><span class="name">Privalomasis mokymas apie alkoholio ir narkotikų žalą žmogaus sveikatai</span><span class="en">Mandatory training of alcohol and drug harm to human health</span></td>
+<td class="num" data-l="Kaina"><b>13,03 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="2"><span class="ltx">Asmenims, iš kurių pagal Lietuvos Respublikos įstatymus teisė vairuoti transporto priemonę, skraidyti orlaivio įgulos nariu, atlikti orlaivių techninę priežiūrą, dirbti skrydžių vadovu, medžioti arba žvejoti, vairuoti upių ir mažuosius laivus atimta (gali būti atimta arba dar nėra pasibaigęs specialiosios teisės atėmimo laikas) dėl teisės pažeidimo, padaryto esant neblaiviam arba apsvaigusiam nuo narkotikų, vaistų ar kitų svaigiųjų medžiagų.</span></td></tr>    </tbody>
+  </table>
+</div></div>
+        <h3 class="pg-sc-h3">Kiti mokymai<span class="count">5 programos</span></h3>
+        <div data-reveal><div class="tbl pg-sc-tbl">
+  <table>
+    <thead><tr><th class="no">Nr.</th><th>Programa</th><th class="num">Kaina (1 asm.)</th></tr></thead>
+    <tbody>
+    <tr class="main">
+      <td class="no">3.1.</td>
+<td><span class="name">Elektrotechnikos darbuotojų, kuriems suteikiamos apsaugos nuo elektros kategorijos žemosios įtampos elektros įrenginiuose, mokymo programa</span></td>
+<td class="num" data-l="Kaina"><b>86,89 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="2">Suteikiama PK ir VK apsaugos nuo elektros kategorija.</td></tr>    <tr class="main">
+      <td class="no">3.2.</td>
+<td><span class="name">Pedagoginių psichologinių žinių kursas</span></td>
+<td class="num" data-l="Kaina"><b>231,70 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="2">Vadovaujantis „Mokymo ir atestavimo darbuotojų saugos ir sveikatos klausimais bendrųjų nuostatų“ 46 punktu (Žin., 2011, Nr. 76-3683), baigęs kursą asmuo galės būti mokymo įstaigos profesijos mokytoju.</td></tr>    <tr class="main">
+      <td class="no">3.3.</td>
+<td><span class="name">Įmonių darbuotojų saugos ir sveikatos komitetų narių ir darbuotojų atstovų saugai ir sveikatai mokymas</span></td>
+<td class="num" data-l="Kaina"><b>57,92 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="2">Galės būti darbuotojų atstovu saugai ir sveikatai ir įmonės darbuotojų saugos ir sveikatos komiteto nariu.</td></tr>    <tr class="main">
+      <td class="no">3.4.</td>
+<td><span class="name">Įmonių, įstaigų, organizacijų vadovų priešgaisrinės saugos mokymo kursas</span></td>
+<td class="num" data-l="Kaina"><b>37,65 € <span class="vat">+ PVM</span></b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="2">Galės kontroliuoti objekto priešgaisrinę būklę ir imtis priemonių priešgaisrinės saugos reikalavimams vykdyti.</td></tr>    <tr class="main">
+      <td class="no">3.5.</td>
+<td><span class="name">Valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymas ir atestavimas</span></td>
+<td class="num" data-l="Kaina"><b>sutartinė</b></td>
+    </tr>
+<tr class="sub"><td class="no"></td><td colspan="2">Valstybės tarnautojai ir darbuotojai susipažins su galimomis gaisrų kilimo priežastimis, pagrindiniais priešgaisrinę saugą reglamentuojančių teisės aktų reikalavimais objektui ir atskiriems darbo barams, priešgaisrine įranga, valstybės tarnautojų ir darbuotojų teisėmis ir pareigomis priešgaisrinės saugos srityje, atsakomybe už priešgaisrinę saugą reglamentuojančių teisės aktų pažeidimus.</td></tr>    </tbody>
+  </table>
+</div></div>
+        <p class="tbl-note">Kainos nurodytos 1 asmeniui.</p>
+      </article>
+
+      <article class="doc-sec" id="instrukcija">
+        <div class="pg-sc-head" data-reveal>
+          <h2>Gaisrinės saugos instrukcijos rengimas</h2>
+          <p><span class="ltx">Nuo 2010 m. rugsėjo 1 d. įsigaliojo naujos „Bendrosios gaisrinės saugos taisyklės“ (Žin., 2005, Nr. 26-852; Žin., 2010, Nr. 99-5167; Žin., 2011, Nr. 100-4727; Žin., 2012, Nr. 118-5970). Jų bendrieji gaisrinės saugos reikalavimai privalomi kiekvienai Lietuvos Respublikos teritorijoje esančiai įmonei, įstaigai, organizacijai, savo veikloje eksploatuojančiai nekilnojamus ir kilnojamus daiktus, kuriems nustatyti priešgaisrinės saugos reikalavimai, nepriklausomai nuo nuosavybės formos. Šie reikalavimai privalomi ir fiziniams asmenims.</span></p><p>Bendrųjų gaisrinės saugos taisyklių 5 punktas nustato, kad kiekvienoje įmonėje, įstaigoje, organizacijoje turi būti parengtos gaisrinės saugos instrukcijos, vadovaujantis šių taisyklių 1 priedu.</p><p>Gaisrinės saugos instrukciją tvirtina įmonės, įstaigos, organizacijos vadovas. Joje turi būti nurodyta:</p>
+        </div>
+        <ol class="pg-sc-ol" data-reveal><li><span>Teritorijos, statinių ir evakuacijos kelių priežiūros reikalavimai.</span></li><li><span>Atskirų gamybos procesų gaisrinės saugos reikalavimai, kurių pažeidimai gali sukelti gaisrą.</span></li><li><span>Sprogių ir gaisringų medžiagų laikymo ir transportavimo sąlygos.</span></li><li><span>Rūkymo vietų ir vietų, skirtų suvirinimo ir kitiems darbams, kai naudojama atvira ugnis, įrengimo reikalavimai.</span></li><li><span>Degių medžiagų surinkimo ir šalinimo iš patalpų, specialiųjų drabužių naudojimo reikalavimai.</span></li><li><span>Kontrolinių matavimo prietaisų (termometrų, manometrų ir t. t.) pavojingos ribos, kurias peržengus gali kilti gaisras ar sprogimas.</span></li><li><span>Elektros šildymo prietaisų ir šildymo įrenginių eksploatavimo reikalavimai.</span></li><li><span>Patalpų uždarymo pasibaigus darbui tvarka.</span></li><li><span>Valstybės tarnautojų ir darbuotojų veiksmai kilus gaisrui: priešgaisrinių gelbėjimo pajėgų iškvietimas, žmonių ir turto evakavimas, technologinio proceso (įrenginių) avarinio stabdymo veiksmų eiliškumas, elektros prietaisų ir vėdinimo sistemos išjungimas, gaisrinės įrangos naudojimas gaisrui gesinti.</span></li></ol>
+        <div data-reveal><details class="acc" >
+  <summary>Kiti teisės aktai, atsakomybė ir instrukcijos peržiūra<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><p>Be Bendrųjų gaisrinės saugos taisyklių, būtina laikytis ir kitų eksploatuojamiems objektams taikomų gaisrinę saugą reglamentuojančių teisės aktų reikalavimų, pvz.: LR Priešgaisrinės saugos įstatymo (Žin., 2002, Nr. 123-5518 su vėlesniais pakeitimais), Statybos techninio reglamento STR 2.02.02:2004 „Visuomeninės paskirties statiniai“ (Žin., 2004, Nr. 54-1851 su vėlesniais pakeitimais), Civilinės aviacijos priešgaisrinės saugos taisyklių (Žin., 2001, Nr. 19-624), Gesintuvų techninės priežiūros taisyklių (Žin., 2010, Nr. 152-7772) ir kt. Už šių norminių teisės aktų reikalavimų pažeidimus įstatymai numato administracinę atsakomybę (LR Administracinių teisės pažeidimų kodekso (Žin., 1985, Nr. 1-1 su vėlesniais pakeitimais) 77, 83¹, 83², 121, 192, 192¹, 226, 259 straipsniai).</p><p>Gaisrinės saugos instrukcijos tekstas turi būti aiškus, reikalavimai - trumpi ir konkretūs. Įsigaliojus naujiems ar pasikeitus galiojantiems gaisrinę saugą reglamentuojantiems teisės aktams, keičiant technologinius procesus, pradedant naudoti naujas gaisrinės saugos priemones, medžiagas, žaliavas ir pan., instrukcija privalo būti peržiūrėta, esant reikalui - pataisyta ir iš naujo patvirtinta.</p><p>Atsižvelgiant į Bendrųjų gaisrinės saugos taisyklių (Žin., 2010, Nr. 99-5167) reikalavimus gaisrinės saugos instrukcijai, visos įmonės, įstaigos, organizacijos, kurios iki 2010 09 01 turėjo seno pavyzdžio priešgaisrinės saugos instrukcijas, turi jas iš naujo peržiūrėti, pataisyti ir patvirtinti.</p><p>Bendrosios gaisrinės saugos taisyklės nuo 2010 09 01 keitėsi jau 2 kartus (Žin., 2011, Nr. 100-4727; Žin., 2012, Nr. 118-5970) - paskutinis pakeitimas įsigaliojo 2012 11 01. Vadovaujantis šiais reikalavimais, visos įmonės, įstaigos, organizacijos turi dar kartą peržiūrėti savo gaisrinės saugos instrukcijas ir, esant būtinybei, pataisyti bei iš naujo patvirtinti.</p></div>
+</details></div>
+        <div class="pg-sc-close" data-reveal><p>Geslitos saugos centro specialistai gali padėti jums parengti naujo pavyzdžio gaisrinės saugos instrukciją, atsižvelgiant į visus norminių teisės aktų reikalavimus, palankiausiomis sąlygomis.</p></div>
+      </article>
+
+      <article class="doc-sec" id="esvp">
+        <div class="pg-sc-head" data-reveal>
+          <h2>Ekstremalių situacijų valdymo planas</h2>
+          <p>LR Civilinės saugos įstatymo 16 straipsnio 3 dalies 9 punktas (Žin., 1998, Nr. 115-3230), „Kriterijai ūkio subjektams ir kitoms įstaigoms, kurių vadovai turi organizuoti ekstremaliųjų situacijų valdymo planų rengimą, derinimą ir tvirtinimą, bei ūkio subjektams, kurių vadovai turi sudaryti ekstremaliųjų situacijų operacijų centrą“ (Žin., 2010, Nr. 46-2236) ir Priešgaisrinės apsaugos ir gelbėjimo departamento prie VRM direktoriaus 2011 m. vasario 23 d. įsakymas Nr. 1-70 „Dėl ekstremalių situacijų valdymo planų rengimo metodinių rekomendacijų patvirtinimo“ (Žin., 2011, Nr. 24-1200) nustato, kad ekstremalių situacijų valdymo planus (ESVP) rengia šie ūkio subjektai ir kitos įstaigos:</p>
+        </div>
+        <div class="pg-sc-acc" data-reveal>
+            <details class="acc" open>
+  <summary>Ūkio subjektai, kurių vykdoma veikla ar veiklos pobūdis esant nepalankioms aplinkybėms gali sukelti ekstremaliąją situaciją ir pavojų žmonių gyvybei ar sveikatai, turtui, aplinkai<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>valstybinės reikšmės objektai.</li><li>strateginę ir svarbią reikšmę nacionaliniam saugumui turinčios įmonės, išvardytos LR strateginę reikšmę nacionaliniam saugumui turinčių įmonių ir įrenginių bei kitų nacionaliniam saugumui užtikrinti svarbių įmonių įstatyme (Žin., 2002, Nr. 103-4604; 2009, Nr. 93-3968), išskyrus valstybės įmonę Ignalinos atominę elektrinę, turinčią savo avarinės parengties planą.</li><li>pavojingieji objektai, kuriuose pagal Pramoninių avarijų prevencijos, likvidavimo ir tyrimo nuostatus (patvirtintus LR Vyriausybės 2004 m. rugpjūčio 17 d. nutarimu Nr. 966; Žin., 2004, Nr. 130-4649; 2008, Nr. 109-4159) medžiagų kiekiai prilygsta nustatytųjų kvalifikacinių kiekių I lygiui ar jį viršija, bet nepasiekia II lygio.</li><li>įmonės, kurios steigia ar yra įsteigusios ir eksploatuoja valstybinės reikšmės atliekų tvarkymo objektus.</li><li>pavojingas atliekas gaminančios bei tvarkančios įmonės ir nepavojingas atliekas šalinančios įmonės.</li><li>ūkio subjektai ar kitos įstaigos, kuriose darbuotojai savo veikloje naudoja arba kitaip kontaktuoja su antrosios, trečiosios arba ketvirtosios grupės biologinėmis medžiagomis.</li><li><span class="ltx">ūkio subjektai, tiekiantys rinkai ar kitaip tvarkantys, taip pat laikinai įvežantys į Lietuvos teritoriją perdirbti pavojingas chemines medžiagas ir preparatus.</span></li><li>apdirbamosios gamybos (pagal Ekonominės veiklos rūšių klasifikatorių EVRK 2 red., patvirtintą Statistikos departamento prie LR Vyriausybės generalinio direktoriaus 2007 m. spalio 31 d. įsakymu Nr. DĮ-226; Žin., 2007, Nr. 119-4877) ūkio subjektai, kai juose vienoje vietoje dirba daugiau kaip 50 žmonių.</li><li>ūkio subjektai, užsiimantys civilinių pirotechnikos priemonių gamyba, laikymu ir naudojimu.</li><li>ūkio subjektai, vykdantys ūkinę veiklą, kuriai dėl jos pobūdžio, masto ar numatomos vietos ypatumų buvo atliktas poveikio aplinkai vertinimas arba buvo nustatomos ar tikslinamos sanitarinių apsaugos zonų ribos poveikio visuomenės sveikatai vertinimo būdu (išskyrus pavojinguosius objektus, kuriuose medžiagų kiekiai prilygsta nustatytųjų kvalifikacinių kiekių II lygiui ar jį viršija).</li><li>ūkio subjektai, užsiimantys radioaktyviųjų atliekų tvarkymo veikla.</li><li>ūkio subjektai, gaminantys, importuojantys ir transportuojantys naftos produktus.</li><li>ūkio subjektai, eksploatuojantys valstybinės svarbos energetikos objektus.</li></ul></div>
+</details>
+            <details class="acc" >
+  <summary>Ūkio subjektai ir kitos įstaigos, kuriose pagal vykdomos veiklos pobūdį nuolat ar laikinai būna žmonių<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>apgyvendinimo paslaugas teikiantys ūkio subjektai ir kitos įstaigos (viešbučiai, moteliai, svečių namai), kai juose vienu metu gali būti 100 žmonių ir daugiau.</li><li>asmens ir visuomenės sveikatos priežiūros įstaigos, nurodytos Informacijos apie sveikatos priežiūros įstaigų pasirengimą veiklai ekstremaliųjų situacijų atvejais teikimo tvarkos aprašo (patvirtinto LR sveikatos apsaugos ministro 2011 m. gruodžio 23 d. įsakymu Nr. V-1110; Žin., 2011, Nr. 162-7698) 6 ir 7 punktuose.</li><li>kitos asmens ir visuomenės sveikatos priežiūros įstaigos, kurioms prievolė rengti ekstremaliųjų situacijų valdymo planus numatyta sveikatos apsaugos ministro tvirtinamose šių planų rengimo metodinėse rekomendacijose.</li><li>socialinės globos įstaigos ir laikino apnakvindinimo paslaugas teikiančios socialinių paslaugų įstaigos, kai jose vienu metu gali būti 50 žmonių ir daugiau.</li><li>ūkio subjektai ir kitos įstaigos, teikiančios formaliojo švietimo paslaugas arba vykdančios ikimokyklinio ir priešmokyklinio ugdymo programas.</li><li>ūkio subjektai ir kitos įstaigos, kurioms nuosavybės teise priklauso patalpos ar pastatai, kuriuose vykdoma kūrybinė, meninė ir pramogų, sporto renginių organizavimo (teatrai, kino teatrai, koncertų salės, universalios salės ir kt.), sveikatos gerinimo ir poilsio organizavimo, finansinių paslaugų ar draudimo veikla ir kuriuose vienu metu būna daugiau kaip 200 žmonių; kai šias patalpas ar pastatus pagal sutartis valdo kiti ūkio subjektai ar įstaigos - juos valdantys subjektai.</li><li>prekybos paskirties ūkio subjektai ir kitos įstaigos, kai bendras patalpų plotas viršija 2000 m².</li></ul></div>
+</details>
+            <details class="acc" >
+  <summary>Kultūros paveldo objektus valdantys subjektai<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>ūkio subjektai ir kitos įstaigos, kurių teritorijoje ir (ar) atsakomybėje yra kultūros paveldo objektai ir kurie užtikrina kilnojamųjų kultūros vertybių apsaugą, valdo ir administruoja statinius bei jų kompleksus, ansamblius, įregistruotus kaip nekilnojamosios kultūros paveldo vertybės.</li></ul></div>
+</details>
+            <details class="acc" >
+  <summary>Miškų urėdijos ir Kuršių nerijos nacionalinio parko direkcija<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li>miškų urėdijos.</li><li>Kuršių nerijos nacionalinio parko direkcija.</li></ul></div>
+</details>
+        </div>
+        <div class="pg-sc-close" data-reveal><p>Geslitos saugos centro specialistai gali padėti jums organizuoti ekstremalių situacijų valdymo plano parengimą, atsižvelgiant į norminių teisės aktų reikalavimus, palankiausiomis sąlygomis.</p></div>
+      </article>
+
+      <article class="doc-sec" id="dss">
+        <div class="pg-sc-head" data-reveal>
+          <h2>Darbuotojų saugos ir sveikatos dokumentacijos rengimas</h2>
+          <p><span class="ltx">Lietuvos Respublikos darbo kodeksas (264 straipsnio 2 dalies 3 punktas, 264 straipsnio 2 dalies 4 punktas, 264 straipsnio 3 dalis), Lietuvos Respublikos darbuotojų saugos ir sveikatos įstatymas (19 straipsnio 2 dalies 4 punktas, 20 straipsnio 2 dalis, 25 straipsnio 5 dalis bei 27 straipsnis) ir kiti norminiai teisės aktai nustato pareigą kiekvienam darbdaviui, atsižvelgiant į įmonės dydį ir pavojus darbuotojams, parengti šiuos dokumentus:</span></p>
+        </div>
+        <ul class="checks pg-sc-docs" data-reveal><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Darbuotojų saugos ir sveikatos tarnybos nuostatus ar darbuotojų saugos ir sveikatos specialistų pareigybių aprašymus.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Darbuotojų saugos ir sveikatos bei gaisrinės saugos instrukcijas.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Darbo tvarkos taisykles.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Darbuotojų mokymo ir žinių iš darbuotojų saugos ir sveikatos srities tikrinimo, instruktavimo tvarką.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Pareiginius nuostatus.</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Kitus reikiamus įmonės lokalinius norminius teisės aktus, kurių reikalavimai privalomi darbuotojams.</span></li></ul>
+        <div class="pg-sc-close" data-reveal><p>Įstatymų reikalavimai nuolat keičiasi, kuriami nauji, todėl parengti visus reikalavimus atitinkančią darbuotojų saugos ir sveikatos dokumentaciją reikia kvalifikuotų darbuotojų saugos ir sveikatos specialistų arba skirti tam nemažai brangaus laiko.</p><p>Geslitos saugos centro specialistai turi ilgametę patirtį darbo teisės, darbuotojų saugos ir sveikatos bei gaisrinės saugos srityse. Siūlome pasinaudoti mūsų specialistų pagalba rengiant jūsų įmonei svarbius lokalinius teisės aktus pačiomis geriausiomis sąlygomis.</p></div>
+      </article>
+
+      <article class="doc-sec" id="pakeitimai-2012">
+        <div class="pg-sc-head" data-reveal>
+          <h2>Archyvas: teisės aktų pakeitimai nuo 2012 11 01</h2>
+          <div class="notice">Archyvinė informacija (2012 m.): santrauka apie 2012 11 01 įsigaliojusius teisės aktų pakeitimus. Nuo to laiko teisės aktai keitėsi, todėl vadovaukitės galiojančiomis teisės aktų redakcijomis.</div>
+        </div>
+        <div class="pg-sc-acc" data-reveal><details class="acc" >
+  <summary>Bendrųjų gaisrinės saugos taisyklių ir darbuotojų priešgaisrinės saugos mokymo pakeitimai nuo 2012 11 01<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+  <div class="acc-body"><ul><li><span class="ltx">Nuo 2012 11 01 įsigaliojo naujas „Bendrųjų gaisrinės saugos taisyklių“ pakeitimas (Žin., 2005, Nr. 26-852; Žin., 2010, Nr. 99-5167; Žin., 2011, Nr. 100-4727; Žin., 2012, Nr. 118-5970). Taisyklės privalomos kiekvienai Lietuvos Respublikos teritorijoje esančiai įmonei, įstaigai, organizacijai, nepriklausomai nuo nuosavybės formos, taip pat fiziniams asmenims.</span></li><li>Pakeitimai palietė darbuotojų instruktažų įforminimą (registraciją), pratybas veiksmų kilus gaisrui planams išmokti ir darbuotojų supažindinimą su evakavimo planais; daugiausia pakeitimų numatyta eksploatuojamiems durpynams ir durpynų gaisrams gesinti pritaikytos technikos parinkimo reikalavimams.</li><li>Instruktažų registracija: vietoj dviejų anksčiau numatytų žurnalų (įvadinių (bendrų) gaisrinės saugos instruktažų ir instruktažų darbo vietoje) įvedamas vienas Gaisrinės saugos instruktažų registracijos žurnalas. Instruktažų rūšys lieka tos pačios - įvadinis (bendras), periodinis darbo vietoje ir papildomas darbo vietoje. Naujo pavyzdžio žurnale instruktažų pavadinimų privalomai rašyti nebereikia; jo forma tokia pati kaip buvusio instruktažų darbo vietoje žurnalo ir gali būti papildyta kitomis reikalingomis skiltimis.</li><li>Veiksmų kilus gaisrui planas: jį turi parengti, suderinti su Priešgaisrinės apsaugos ir gelbėjimo departamentui pavaldžia įstaiga ir patvirtinti juridinio asmens vadovas, jeigu objekte dirba arba nuolat būna daugiau kaip 100 žmonių. Iki 2012 11 01 taisyklių 2 priede buvo numatyta pareiga ne rečiau kaip kartą per metus rengti pratybas objekte šiam planui išmokti; nuo pakeitimų įsigaliojimo tokios pareigos 2 priede nebelieka.</li><li>Kartu nuo 2012 11 01 pasikeitė „Minimalūs reikalavimai valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo programoms“ (Žin., 2003, Nr. 63-2873; Žin., 2012, Nr. 105-5360), reglamentuojantys privalomą visų darbuotojų mokymą ir atestavimą kas 3 metus: keičiasi tam tikra terminologija, mokymo temų laiko normatyvai ir pastabos.</li><li>Esminis mokymo programų pakeitimas (3 pastaba): praktinės pratybos pagal Veiksmų kilus gaisrui planą, nagrinėjant temą „Veiksmai kilus gaisrui“, anksčiau buvo tik rekomenduojamos, o nuo 2012 11 01 tapo privalomos toms įmonėms, įstaigoms, organizacijoms, kurios turi parengtus ar privalo turėti tokius planus.</li><li>Išvada: pratybas Veiksmų kilus gaisrui planui išmokti tokių juridinių asmenų vadovai turi rengti ne rečiau kaip kartą per 3 metus - privalomo visų darbuotojų priešgaisrinės saugos mokymo ir atestavimo (pagal Bendrųjų gaisrinės saugos taisyklių 12 punktą) metu.</li><li>Evakavimo planai (taisyklių 6 priedo 7 punktas): nuo 2012 11 01 nebereikia kasmet supažindinti visų darbuotojų su evakavimo planais, tačiau išlieka nuostata, kad visi valstybės tarnautojai ir darbuotojai turi būti supažindinti su žmonių evakavimo planu ir privalo mokėti naudotis įmonėje esančiais evakavimo planais.</li></ul></div>
+</details></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight pg-sc-cta"><div class="wrap"><div class="cta-inline" data-reveal>
+  <div><h2>Reikia mokymų ar dokumentų?</h2><p>Paskambinkite arba parašykite: aptarsime darbuotojų skaičių, mokymų vietą ir laiką, paruošime pasiūlymą.</p></div>
+  <div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a></div>
+</div></div></section>
+</main>
+
+<footer class="site-foot">
+  <img class="plan-wm" src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo-geslita-white-s.png" alt="Geslita" width="167" height="50">
+        <p><span class="ltx">20 metų priešgaisrinės saugos patirties. Įrangos priežiūra ir prekyba, darbo saugos priemonės verslui visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+      </div>
+      <div>
+        <h2 class="foot-h">Paslaugos</h2>
+        <ul>
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra</a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai</a></li>
+          <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Prekės ir informacija</h2>
+        <ul>
+          <li><a href="prekes-gesintuvai.html">Gesintuvai</a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai</a></li>
+          <li><a href="prekes-automatika.html">Automatika ir įranga</a></li>
+          <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+          <li><a href="apie-mus.html">Apie mus</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Kontaktai</h2>
+        <ul class="foot-contact">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+37065399977">+370 653 99977</a><br><a href="tel:+37060763109">+370 607 63109</a></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@geslita.lt">info@geslita.lt</a></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Fabijoniškių g. 4A, Vilnius<br><span class="muted">Ne parduotuvė: prieš atvykdami paskambinkite</span></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span>I-V 9:00-18:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2010-2026 UAB „Geslita“. Visos teisės saugomos.</span>
+      <span><a href="kontaktai.html">Kontaktai</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

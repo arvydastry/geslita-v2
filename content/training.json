@@ -1,0 +1,510 @@
+{
+  "title": "Saugos centras",
+  "source_url": "https://www.geslita.lt/mokymai",
+  "image": "geslita:uploads/images/ziniumedis logo.jpg",
+  "intro": [
+    "Darbdavio pareiga – sudaryti darbuotojams saugias ir sveikatai nekenksmingas darbo sąlygas visais su darbu susijusiais aspektais. Kiekvienas darbdavys turi siekti darbuotojų saugos ir sveikatos reikalavimų įgyvendinimo visa apimtimi – tuo pačiu jis didina ir darbo efektyvumą. Darbuotojų sauga ir sveikata yra ne tik pirmoji darbdavio pareiga, bet ir vienas svarbiausių verslo sėkmės veiksnių, padedantis saugiai konkuruoti ir siekti pagrindinių verslo ar įstaigos tikslų.",
+    "Griežtas ir tinkamas darbuotojų saugos ir sveikatos, gaisrinės saugos bei darbo teisės reikalavimų įgyvendinimas – nelengvas uždavinys, dažnai reikalaujantis rimtos kvalifikuotos pagalbos ir patyrusių specialistų palaikymo.",
+    "Mūsų specialistai turi sėkmingą profesinės veiklos patirtį darbuotojų saugos ir sveikatos, gaisrinės saugos ir darbo teisės srityse. Padedame darbdaviams sukurti saugias ir sveikas darbo sąlygas bei išlaikyti jas aukštame lygyje. Savo veikloje vadovaujamės tik aktualios redakcijos norminiais teisės aktais, teismų praktika ir ekspertų rekomendacijomis. Teikiame visas darbuotojų saugos ir sveikatos, gaisrinės saugos ir darbo teisės paslaugas.",
+    "Kreipkitės į mus – mūsų profesionalai padės įgyvendinti visus darbuotojų saugos ir sveikatos, gaisrinės saugos ir darbo teisės norminių teisės aktų reikalavimus."
+  ],
+  "fire_safety_training": {
+    "title": "Darbuotojų (valstybės tarnautojų) priešgaisrinės saugos mokymai",
+    "source_url": "https://www.geslita.lt/mokymai/priesgaisrines-saugos-mokymai",
+    "legal_basis": [
+      "LR Priešgaisrinės saugos įstatymo 11 straipsnio 3 dalies 6 punktas (Žin., 2002, Nr. 123-5518) ir „Bendrųjų gaisrinės saugos taisyklių“ 12 punktas (Žin., 2005, Nr. 26-852; Žin., 2010, Nr. 99-5167; Žin., 2011, Nr. 100-4727; Žin., 2012, Nr. 118-5970) nustato, kad juridinių asmenų vadovai, nepriklausomai nuo ekonominės veiklos rūšies ir darbuotojų skaičiaus, kas 3 metus turi organizuoti visų savo darbuotojų (valstybės tarnautojų) mokymą ir atestavimą priešgaisrinės saugos klausimais pagal „Minimalius reikalavimus valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo programoms“ (Žin., 2003, Nr. 63-2873; Žin., 2012, Nr. 105-5360).",
+      "Tuo tikslu juridinio asmens vadovas turi parengti specialią priešgaisrinės saugos mokymo programą, kurioje nurodoma: 1) priešgaisrinės saugos mokymo tvarka ir trukmė; 2) darbuotojų (valstybės tarnautojų), išklausiusių priešgaisrinės saugos mokymo kursą, žinių tikrinimo tvarka."
+    ],
+    "periodicity": "kas 3 metus",
+    "programme_basis": "Priešgaisrinės apsaugos ir gelbėjimo departamento direktoriaus 2003 m. birželio 20 d. įsakymu Nr. 112 patvirtinti „Minimalūs reikalavimai valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo programoms“ (Žin., 2003, Nr. 63-2873; Žin., 2012, Nr. 105-5360) numato šias priešgaisrinės saugos mokymo temas:",
+    "programme": [
+      {
+        "topic": "Medžiagų degumas. Pagrindinės gaisrų priežastys",
+        "minutes": 30
+      },
+      {
+        "topic": "Pagrindiniai priešgaisrinę saugą reglamentuojančių teisės aktų reikalavimai objektui ir atskiriems darbo barams",
+        "minutes": 60,
+        "details": [
+          "teritorijos priežiūrai",
+          "statiniams, atskiriems pastatams ir patalpoms",
+          "elektros įrenginiams",
+          "šildymui ir vėdinimui",
+          "technologiniams procesams",
+          "pavojingų medžiagų transportavimui",
+          "medžiagų sandėliavimui",
+          "statybos darbams",
+          "ugnies darbams"
+        ]
+      },
+      {
+        "topic": "Gaisrinė įranga ir jos naudojimo ypatumai",
+        "minutes": 30,
+        "details": [
+          "stacionariosios gaisrų gesinimo sistemos",
+          "gaisro aptikimo ir signalizavimo sistemos",
+          "perspėjimo apie gaisrą ir evakuacijos valdymo sistemos",
+          "statinių vidaus gaisrinio vandentiekio sistemos",
+          "lauko gaisrinio vandentiekio sistemos",
+          "dūmų ir šilumos kontrolės sistemos",
+          "pirminės gaisro gesinimo priemonės"
+        ]
+      },
+      {
+        "topic": "Veiksmai kilus gaisrui",
+        "minutes": 45
+      },
+      {
+        "topic": "Valstybės tarnautojų ir darbuotojų teisės ir pareigos priešgaisrinės saugos srityje. Atsakomybė už priešgaisrinę saugą reglamentuojančių teisės aktų pažeidimus",
+        "minutes": 15
+      }
+    ],
+    "programme_total_minutes": 180,
+    "purpose": "Darbuotojų (valstybės tarnautojų) priešgaisrinės saugos mokymo paskirtis – supažindinti darbuotojus su galimomis gaisrų kilimo priežastimis, pagrindiniais priešgaisrinę saugą reglamentuojančių teisės aktų reikalavimais objektui ir atskiriems darbo barams, gaisrine įranga, darbuotojų (valstybės tarnautojų) teisėmis ir pareigomis priešgaisrinės saugos srityje bei atsakomybe už priešgaisrinę saugą reglamentuojančių teisės aktų pažeidimus.",
+    "inspection_note": "Priešgaisrinės apsaugos ir gelbėjimo departamento prie Vidaus reikalų ministerijos direktoriaus 2010 m. vasario 22 d. įsakymu Nr. 1-63 patvirtinto „Objekto atitikties priešgaisrinę saugą reglamentuojantiems teisės aktams patikrinimų atlikimo tvarkos aprašo“ (Žin., 2010, Nr. 23-1103) 21 punkto 1 papunktyje numatyta, kad patikrinimo metu, be kitų pagrindinių klausimų, valstybinės priešgaisrinės priežiūros pareigūnas privalo patikrinti, ar objekte atliekamas periodinis visų darbuotojų mokymas priešgaisrinės saugos klausimais.",
+    "how_we_do_it": "UAB „Geslita“ saugos centro specialistai gali padėti organizuoti Jūsų darbuotojų (valstybės tarnautojų) priešgaisrinės saugos mokymą ir atestavimą pagal norminių teisės aktų reikalavimus palankiausiomis sąlygomis. Sutartu laiku atvykstame į mokymų vietą su visomis reikalingomis mokymo priemonėmis (garso ir vaizdo aparatūra, gaisrinės saugos ženklų pavyzdžiais ir kt.), pravedame mokymus ir atestuojame visus Jūsų darbuotojus (valstybės tarnautojus). Visiems sėkmingai išlaikiusiems įskaitas išduodame pažymėjimus."
+  },
+  "price_list": {
+    "title": "Mokymų kainininkas",
+    "source_url": "https://www.geslita.lt/mokymai/mokymu-kainininkas",
+    "note": "Kainos perkeltos iš senojo geslita.lt mokymų kainininko, kuriame jos nurodytos litais (Lt) vienam asmeniui. Demonstracinei versijai jos perskaičiuotos į eurus oficialiu kursu 3,4528 Lt = 1 € ir suapvalintos iki centų. Tai nėra aktualus kainininkas – prieš skelbiant svetainę klientas turi pateikti ir patvirtinti galiojančias kainas eurais.",
+    "conversion_rate": "3,4528 Lt = 1 €",
+    "groups": [
+      {
+        "title": "Formalieji mokymai",
+        "columns": ["Programa", "Valst. kodas", "Kaina, € (1 asm.)", "Peratestavimas, € (1 asm.)"],
+        "column_keys": ["programme", "code", "price_eur", "reattestation_eur"],
+        "converted_from_ltl": true,
+        "rows": [
+          {
+            "no": "1.1.",
+            "programme": "Įmonės darbuotojų saugos ir sveikatos tarnybos specialisto",
+            "title_en": "Specialist of Employees' Safety and Health Services",
+            "code": "560086211",
+            "price_eur": "160,74",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "555",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Baigus įmonės darbuotojų saugos ir sveikatos tarnybos specialisto programą, kvalifikacija nesuteikiama, tačiau įgyjama teisė dirbti atitinkamos ekonominės veiklos rūšies įmonės darbuotojų saugos ir sveikatos tarnybos specialistu."
+          },
+          {
+            "no": "1.2.",
+            "programme": "Darbdavio, jam atstovaujančio asmens",
+            "title_en": "Employer or his Representative",
+            "code": "260086210",
+            "price_eur": "115,85",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "400",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Gali užtikrinti darbuotojų saugą ir sveikatą visais su darbu susijusiais aspektais."
+          },
+          {
+            "no": "1.3.",
+            "programme": "Įmonės vadovo, vykdančio įmonės darbuotojų saugos ir sveikatos tarnybos funkcijas",
+            "title_en": "Manager of an enterprise, executing functions of employees' safety and health services",
+            "code": "360086217",
+            "price_eur": "160,74",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "555",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Gali užtikrinti darbo santykius ir darbuotojų saugą ir sveikatą reglamentuojančių teisės aktų reikalavimų įgyvendinimą ir galės vykdyti įmonės darbuotojų saugos ir sveikatos tarnybos funkcijas konkrečios ekonominės veiklos rūšies įmonėje."
+          },
+          {
+            "no": "1.4.",
+            "programme": "Darbininko, dirbančio aukštalipių darbus",
+            "title_en": "Worker Performing Steeplejack's Works",
+            "code": "260086203",
+            "price_eur": "115,85",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "400",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Gali dirbti aukštalipių darbus. Baigę darbininko, dirbančio aukštalipių darbus, mokymo programą, asmenys gali dirbti įvairius statybos, montavimo darbus aukštyje visų ekonominių veiklos rūšių įmonėse."
+          },
+          {
+            "no": "1.5.",
+            "programme": "Aukštalipio darbų vadovo",
+            "title_en": "High-scaler's Supervisor",
+            "code": "560086208",
+            "price_eur": "115,85",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "400",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Gali vadovauti aukštalipio darbams. Baigę aukštalipio darbų vadovo mokymo programą, asmenys vadovauja aukštalipio darbams su alpinizmo elementais, atliekant darbus ant laikinų bei nestabilių konstrukcijų, paviršių."
+          },
+          {
+            "no": "1.6.",
+            "programme": "Autokrautuvo vairuotojo",
+            "title_en": "Forklift Driver",
+            "code": "261084001",
+            "price_eur": "130,33",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "450",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Įgyjama profesinė kvalifikacija – autokrautuvo vairuotojas. Įgiję automobilinių krautuvų vairuotojo kvalifikaciją asmenys gali dirbti įvairiose įmonėse automobilinių krautuvų vairuotojais."
+          },
+          {
+            "no": "1.7.",
+            "programme": "Elektrinių krautuvų ir vežimėlių vairuotojas",
+            "title_en": "Electrical Forklift and Trolley Driver",
+            "code": "261084002",
+            "price_eur": "130,33",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "450",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Įgyjama profesinė kvalifikacija – elektrinių krautuvų ir vežimėlių vairuotojas. Įgiję elektrinių krautuvų ir vežimėlių vairuotojo kvalifikaciją asmenys gali dirbti įvairiose įmonėse elektrinių krautuvų ir vežimėlių vairuotojais."
+          },
+          {
+            "no": "1.8.",
+            "programme": "Krautuvų vairuotojas",
+            "title_en": "Industrial forklifts driver",
+            "code": "261084022",
+            "price_eur": "159,29",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "550",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Įgyjama profesinė kvalifikacija – krautuvų vairuotojas."
+          },
+          {
+            "no": "1.9.",
+            "programme": "Kėlimo įrenginių priežiūros meistro",
+            "title_en": "Lifting Machinery Maintenance Foreman",
+            "code": "560084006",
+            "price_eur": "130,33",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "450",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Gali dirbti kėlimo įrenginių priežiūros meistru. Baigę keliamųjų kranų priežiūros meistro mokymo programą, asmenys gali paruošti dokumentus krano registravimui, prižiūrėti ir kontroliuoti krano techninę būklę, remontų kokybę."
+          },
+          {
+            "no": "1.10.",
+            "programme": "Kėlimo kranų darbo vadovo",
+            "title_en": "Crane work supervisor",
+            "code": "560084007",
+            "price_eur": "130,33",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "450",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Gali dirbti kėlimo kranų darbo vadovu. Baigę kėlimo kranų darbo vadovo mokymo programą, asmenys gali vadovauti krovimo darbams sandėlių ūkyje, įrengimų remonto darbams su kranais pramonės įmonėse, parinkti apmokytą personalą šių darbų vykdymui."
+          },
+          {
+            "no": "1.11.",
+            "programme": "Neregistruojamų kėlimo įrenginių priežiūros meistro",
+            "title_en": "Maintenance foreman for lifting machinery not to be registered",
+            "code": "560052509",
+            "price_eur": "130,33",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "450",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Gali dirbti neregistruojamų kėlimo įrenginių priežiūros meistru. Baigę neregistruojamų kėlimo įrenginių priežiūros meistro mokymo programą, asmenys gali prižiūrėti neregistruojamus kėlimo įrenginius, organizuoti jų remontą, bandymus."
+          },
+          {
+            "no": "1.12.",
+            "programme": "Hidromanipuliatorių operatoriaus",
+            "title_en": "Operator of crane manipulator",
+            "code": "260052107",
+            "price_eur": "159,29",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "550",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Gali dirbti hidromanipuliatorių operatoriumi. Baigę hidromanipuliatorių operatoriaus mokymo programą, asmenys gali dirbti hidromanipuliatorių operatoriumi įmonėse, kuriose vykdomi medienos pakrovimo, iškrovimo ir sandėliavimo darbai."
+          },
+          {
+            "no": "1.13.",
+            "programme": "Nuo žemės valdomų tiltinio tipo kranų operatoriaus",
+            "title_en": "Operator of Overhead Travelling Type Cranes Controlled from the Ground",
+            "code": "260084005",
+            "price_eur": "115,85",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "400",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Gali dirbti nuo žemės valdomų tiltinio tipo kranų operatoriumi. Baigę nuo žemės valdomų tiltinio tipo kranų operatoriaus mokymo programą, asmenys gali vykdyti krovinių kėlimo darbus įmonėse, eksploatuojančiose nuo žemės valdomus tiltinio tipo kranus, atlikti krovinių perkėlimą."
+          },
+          {
+            "no": "1.14.",
+            "programme": "Savaeigio strėlinio krano operatoriaus",
+            "title_en": "Self-propelled arrow-shaped cranes operator",
+            "code": "265084006",
+            "price_eur": "521,32",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "1800",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Įgyjama profesinė kvalifikacija – savaeigio strėlinio krano operatorius."
+          },
+          {
+            "no": "1.15.",
+            "programme": "Automobilinio krano operatoriaus",
+            "title_en": "Motocrane operator",
+            "code": "265084001",
+            "price_eur": "260,66",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "900",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Įgyjama profesinė kvalifikacija – automobilinio krano operatorius. Įgiję automobilinio krano mašinisto kvalifikaciją asmenys gali dirbti įmonėse, firmose, naudojančiose automobilinius kranus, arba dirbti su automobiliniu kranu, įsigytu asmeninės nuosavybės pagrindu."
+          },
+          {
+            "no": "1.16.",
+            "programme": "Savaeigio platforminio keltuvo operatoriaus",
+            "title_en": "Self-propelled platform cranes operator",
+            "code": "265084005",
+            "price_eur": "260,66",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "900",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Įgyjama profesinė kvalifikacija – savaeigio platforminio keltuvo operatorius. Įgiję savaeigio platforminio keltuvo operatoriaus kvalifikaciją asmenys gali dirbti įmonėse, firmose, naudojančiose savaeigius platforminius keltuvus, arba dirbti su savaeigiu platforminiu keltuvu."
+          },
+          {
+            "no": "1.17.",
+            "programme": "Tiltinių kranų operatoriaus",
+            "title_en": "Operator of overhead travelling cranes",
+            "code": "262084007",
+            "price_eur": "289,62",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "1000",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Įgyjama profesinė kvalifikacija – tiltinių kranų operatorius. Įgiję tiltinio krano mašinisto kvalifikaciją asmenys gali dirbti tiltinio krano mašinisto darbą įmonėse, naudojančiose tiltinius kranus."
+          },
+          {
+            "no": "1.18.",
+            "programme": "Bokštinio krano operatoriaus",
+            "title_en": "Tower crane operator",
+            "code": "262084002",
+            "price_eur": "289,62",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "1000",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Įgyjama profesinė kvalifikacija – bokštinio krano operatorius. Įgiję bokštinio krano mašinisto kvalifikaciją asmenys gali dirbti bokštinio krano mašinisto darbą įmonėse, eksploatuojančiose bokštinius kranus."
+          },
+          {
+            "no": "1.19.",
+            "programme": "Krovinių kabinėtojo",
+            "title_en": "Load Hanger",
+            "code": "260058206",
+            "price_eur": "86,89",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "300",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Gali dirbti krovinių kabinėtoju. Baigę krovinių kabinėtojo programą, asmenys gali dirbti krovinių kabinėtoju statybos objektuose, pramonės įmonėse, vykdant darbus sandėlių ūkiuose."
+          },
+          {
+            "no": "1.20.",
+            "programme": "Darbininko, dirbančio kėlimo įrenginių lopšiuose",
+            "title_en": "Worker Working in Hoisting Machinery Cradles",
+            "code": "260086205",
+            "price_eur": "86,89",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "300",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Gali dirbti kėlimo įrenginių lopšiuose. Baigę darbininko, dirbančio kėlimo įrenginių lopšiuose, mokymo programą, asmenys gali dirbti įmonėse, kurios eksploatuoja keltuvus, pakabinamus lopšius, bokštelius žmonėms kelti ir įvairiems darbams atlikti."
+          },
+          {
+            "no": "1.21.",
+            "programme": "Portalinio krano mašinisto",
+            "title_en": "Portal cranes machinist",
+            "code": "262084004",
+            "price_eur": "521,32",
+            "reattestation_eur": "43,44 + PVM",
+            "price_ltl": "1800",
+            "reattestation_ltl": "150 + PVM",
+            "qualification": "Įgyjama profesinė kvalifikacija – portalinio krano mašinistas. Įgiję portalinio krano mašinisto kvalifikaciją asmenys gali dirbti portalinio krano mašinisto darbą upių ar jūrų uostuose, įmonėse, eksploatuojančiose portalinius kranus."
+          }
+        ]
+      },
+      {
+        "title": "Privalomieji mokymai",
+        "columns": ["Programa", "Kaina, € (1 asm.)"],
+        "column_keys": ["programme", "price_eur"],
+        "converted_from_ltl": true,
+        "rows": [
+          {
+            "no": "2.1.",
+            "programme": "Privalomasis pirmosios pagalbos mokymas",
+            "title_en": "Compulsory first aid training",
+            "price_eur": "10,14 + PVM",
+            "price_ltl": "35 + PVM",
+            "description": "Daugelio profesijų, darbų ar veiklos sričių darbuotojai privalo mokėti suteikti pirmąją pagalbą ir įgyti žinių sveikatos klausimais. Mokymas LR sveikatos apsaugos ministro 2008 m. sausio 28 d. įsakyme Nr. V-69 (Žin., 2008, Nr. 14-490) nurodytiems asmenims nustatytu periodiškumu."
+          },
+          {
+            "no": "2.2.",
+            "programme": "Privalomasis higienos įgūdžių mokymas",
+            "title_en": "Compulsory hygiene skills training",
+            "price_eur": "10,14 + PVM",
+            "price_ltl": "35 + PVM",
+            "description": "Mokymas LR sveikatos apsaugos ministro 2008 m. sausio 28 d. įsakyme Nr. V-69 (Žin., 2008, Nr. 14-490) nurodytiems asmenims nustatytu periodiškumu."
+          },
+          {
+            "no": "2.3.",
+            "programme": "Privalomasis mokymas apie alkoholio ir narkotikų žalą žmogaus sveikatai",
+            "title_en": "Mandatory training of alcohol and drug harm to human health",
+            "price_eur": "13,03 + PVM",
+            "price_ltl": "45 + PVM",
+            "description": "Asmenims, iš kurių pagal Lietuvos Respublikos įstatymus teisė vairuoti transporto priemonę, skraidyti orlaivio įgulos nariu, atlikti orlaivių techninę priežiūrą, dirbti skrydžių vadovu, medžioti arba žvejoti, vairuoti upių ir mažuosius laivus atimta (gali būti atimta arba dar nėra pasibaigęs specialiosios teisės atėmimo laikas) dėl teisės pažeidimo, padaryto esant neblaiviam arba apsvaigusiam nuo narkotikų, vaistų ar kitų svaigiųjų medžiagų."
+          }
+        ]
+      },
+      {
+        "title": "Kiti mokymai",
+        "columns": ["Programa", "Kaina, € (1 asm.)"],
+        "column_keys": ["programme", "price_eur"],
+        "converted_from_ltl": true,
+        "rows": [
+          {
+            "no": "3.1.",
+            "programme": "Elektrotechnikos darbuotojų, kuriems suteikiamos apsaugos nuo elektros kategorijos žemosios įtampos elektros įrenginiuose, mokymo programa",
+            "price_eur": "86,89 + PVM",
+            "price_ltl": "300 + PVM",
+            "description": "Suteikiama PK ir VK apsaugos nuo elektros kategorija."
+          },
+          {
+            "no": "3.2.",
+            "programme": "Pedagoginių psichologinių žinių kursas",
+            "price_eur": "231,70 + PVM",
+            "price_ltl": "800 + PVM",
+            "description": "Vadovaujantis „Mokymo ir atestavimo darbuotojų saugos ir sveikatos klausimais bendrųjų nuostatų“ 46 punktu (Žin., 2011, Nr. 76-3683), baigęs kursą asmuo galės būti mokymo įstaigos profesijos mokytoju."
+          },
+          {
+            "no": "3.3.",
+            "programme": "Įmonių darbuotojų saugos ir sveikatos komitetų narių ir darbuotojų atstovų saugai ir sveikatai mokymas",
+            "price_eur": "57,92 + PVM",
+            "price_ltl": "200 + PVM",
+            "description": "Galės būti darbuotojų atstovu saugai ir sveikatai ir įmonės darbuotojų saugos ir sveikatos komiteto nariu."
+          },
+          {
+            "no": "3.4.",
+            "programme": "Įmonių, įstaigų, organizacijų vadovų priešgaisrinės saugos mokymo kursas",
+            "price_eur": "37,65 + PVM",
+            "price_ltl": "130 + PVM",
+            "description": "Galės kontroliuoti objekto priešgaisrinę būklę ir imtis priemonių priešgaisrinės saugos reikalavimams vykdyti."
+          },
+          {
+            "no": "3.5.",
+            "programme": "Valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymas ir atestavimas",
+            "price_eur": "sutartinė",
+            "price_ltl": "sutartinė",
+            "description": "Valstybės tarnautojai ir darbuotojai susipažins su galimomis gaisrų kilimo priežastimis, pagrindiniais priešgaisrinę saugą reglamentuojančių teisės aktų reikalavimais objektui ir atskiriems darbo barams, priešgaisrine įranga, valstybės tarnautojų ir darbuotojų teisėmis ir pareigomis priešgaisrinės saugos srityje, atsakomybe už priešgaisrinę saugą reglamentuojančių teisės aktų pažeidimus."
+          }
+        ]
+      }
+    ]
+  },
+  "instruction_drafting": {
+    "title": "Gaisrinės saugos instrukcijos rengimas",
+    "source_url": "https://www.geslita.lt/mokymai/gaisrines-saugos-instrukcijos-rengimas",
+    "intro": [
+      "Nuo 2010 m. rugsėjo 1 d. įsigaliojo naujos „Bendrosios gaisrinės saugos taisyklės“ (Žin., 2005, Nr. 26-852; Žin., 2010, Nr. 99-5167; Žin., 2011, Nr. 100-4727; Žin., 2012, Nr. 118-5970). Jų bendrieji gaisrinės saugos reikalavimai privalomi kiekvienai Lietuvos Respublikos teritorijoje esančiai įmonei, įstaigai, organizacijai, savo veikloje eksploatuojančiai nekilnojamus ir kilnojamus daiktus, kuriems nustatyti priešgaisrinės saugos reikalavimai, nepriklausomai nuo nuosavybės formos. Šie reikalavimai privalomi ir fiziniams asmenims.",
+      "Bendrųjų gaisrinės saugos taisyklių 5 punktas nustato, kad kiekvienoje įmonėje, įstaigoje, organizacijoje turi būti parengtos gaisrinės saugos instrukcijos, vadovaujantis šių taisyklių 1 priedu.",
+      "Gaisrinės saugos instrukciją tvirtina įmonės, įstaigos, organizacijos vadovas. Joje turi būti nurodyta:"
+    ],
+    "must_contain": [
+      "Teritorijos, statinių ir evakuacijos kelių priežiūros reikalavimai.",
+      "Atskirų gamybos procesų gaisrinės saugos reikalavimai, kurių pažeidimai gali sukelti gaisrą.",
+      "Sprogių ir gaisringų medžiagų laikymo ir transportavimo sąlygos.",
+      "Rūkymo vietų ir vietų, skirtų suvirinimo ir kitiems darbams, kai naudojama atvira ugnis, įrengimo reikalavimai.",
+      "Degių medžiagų surinkimo ir šalinimo iš patalpų, specialiųjų drabužių naudojimo reikalavimai.",
+      "Kontrolinių matavimo prietaisų (termometrų, manometrų ir t. t.) pavojingos ribos, kurias peržengus gali kilti gaisras ar sprogimas.",
+      "Elektros šildymo prietaisų ir šildymo įrenginių eksploatavimo reikalavimai.",
+      "Patalpų uždarymo pasibaigus darbui tvarka.",
+      "Valstybės tarnautojų ir darbuotojų veiksmai kilus gaisrui: priešgaisrinių gelbėjimo pajėgų iškvietimas, žmonių ir turto evakavimas, technologinio proceso (įrenginių) avarinio stabdymo veiksmų eiliškumas, elektros prietaisų ir vėdinimo sistemos išjungimas, gaisrinės įrangos naudojimas gaisrui gesinti."
+    ],
+    "details": [
+      "Be Bendrųjų gaisrinės saugos taisyklių, būtina laikytis ir kitų eksploatuojamiems objektams taikomų gaisrinę saugą reglamentuojančių teisės aktų reikalavimų, pvz.: LR Priešgaisrinės saugos įstatymo (Žin., 2002, Nr. 123-5518 su vėlesniais pakeitimais), Statybos techninio reglamento STR 2.02.02:2004 „Visuomeninės paskirties statiniai“ (Žin., 2004, Nr. 54-1851 su vėlesniais pakeitimais), Civilinės aviacijos priešgaisrinės saugos taisyklių (Žin., 2001, Nr. 19-624), Gesintuvų techninės priežiūros taisyklių (Žin., 2010, Nr. 152-7772) ir kt. Už šių norminių teisės aktų reikalavimų pažeidimus įstatymai numato administracinę atsakomybę (LR Administracinių teisės pažeidimų kodekso (Žin., 1985, Nr. 1-1 su vėlesniais pakeitimais) 77, 83¹, 83², 121, 192, 192¹, 226, 259 straipsniai).",
+      "Gaisrinės saugos instrukcijos tekstas turi būti aiškus, reikalavimai – trumpi ir konkretūs. Įsigaliojus naujiems ar pasikeitus galiojantiems gaisrinę saugą reglamentuojantiems teisės aktams, keičiant technologinius procesus, pradedant naudoti naujas gaisrinės saugos priemones, medžiagas, žaliavas ir pan., instrukcija privalo būti peržiūrėta, esant reikalui – pataisyta ir iš naujo patvirtinta.",
+      "Atsižvelgiant į Bendrųjų gaisrinės saugos taisyklių (Žin., 2010, Nr. 99-5167) reikalavimus gaisrinės saugos instrukcijai, visos įmonės, įstaigos, organizacijos, kurios iki 2010 09 01 turėjo seno pavyzdžio priešgaisrinės saugos instrukcijas, turi jas iš naujo peržiūrėti, pataisyti ir patvirtinti.",
+      "Bendrosios gaisrinės saugos taisyklės nuo 2010 09 01 keitėsi jau 2 kartus (Žin., 2011, Nr. 100-4727; Žin., 2012, Nr. 118-5970) – paskutinis pakeitimas įsigaliojo 2012 11 01. Vadovaujantis šiais reikalavimais, visos įmonės, įstaigos, organizacijos turi dar kartą peržiūrėti savo gaisrinės saugos instrukcijas ir, esant būtinybei, pataisyti bei iš naujo patvirtinti."
+    ],
+    "closing": [
+      "Geslitos saugos centro specialistai gali padėti Jums parengti naujo pavyzdžio gaisrinės saugos instrukciją, atsižvelgiant į visus norminių teisės aktų reikalavimus, palankiausiomis sąlygomis."
+    ]
+  },
+  "emergency_plan": {
+    "title": "Ekstremalių situacijų valdymo planas",
+    "source_url": "https://www.geslita.lt/mokymai/ekstremaliu-situaciju-valdymo-planas",
+    "intro": [
+      "LR Civilinės saugos įstatymo 16 straipsnio 3 dalies 9 punktas (Žin., 1998, Nr. 115-3230), „Kriterijai ūkio subjektams ir kitoms įstaigoms, kurių vadovai turi organizuoti ekstremaliųjų situacijų valdymo planų rengimą, derinimą ir tvirtinimą, bei ūkio subjektams, kurių vadovai turi sudaryti ekstremaliųjų situacijų operacijų centrą“ (Žin., 2010, Nr. 46-2236) ir Priešgaisrinės apsaugos ir gelbėjimo departamento prie VRM direktoriaus 2011 m. vasario 23 d. įsakymas Nr. 1-70 „Dėl ekstremalių situacijų valdymo planų rengimo metodinių rekomendacijų patvirtinimo“ (Žin., 2011, Nr. 24-1200) nustato, kad ekstremalių situacijų valdymo planus (ESVP) rengia šie ūkio subjektai ir kitos įstaigos:"
+    ],
+    "who_must_prepare": [
+      {
+        "group": "Ūkio subjektai, kurių vykdoma veikla ar veiklos pobūdis esant nepalankioms aplinkybėms gali sukelti ekstremaliąją situaciją ir pavojų žmonių gyvybei ar sveikatai, turtui, aplinkai",
+        "items": [
+          "valstybinės reikšmės objektai.",
+          "strateginę ir svarbią reikšmę nacionaliniam saugumui turinčios įmonės, išvardytos LR strateginę reikšmę nacionaliniam saugumui turinčių įmonių ir įrenginių bei kitų nacionaliniam saugumui užtikrinti svarbių įmonių įstatyme (Žin., 2002, Nr. 103-4604; 2009, Nr. 93-3968), išskyrus valstybės įmonę Ignalinos atominę elektrinę, turinčią savo avarinės parengties planą.",
+          "pavojingieji objektai, kuriuose pagal Pramoninių avarijų prevencijos, likvidavimo ir tyrimo nuostatus (patvirtintus LR Vyriausybės 2004 m. rugpjūčio 17 d. nutarimu Nr. 966; Žin., 2004, Nr. 130-4649; 2008, Nr. 109-4159) medžiagų kiekiai prilygsta nustatytųjų kvalifikacinių kiekių I lygiui ar jį viršija, bet nepasiekia II lygio.",
+          "įmonės, kurios steigia ar yra įsteigusios ir eksploatuoja valstybinės reikšmės atliekų tvarkymo objektus.",
+          "pavojingas atliekas gaminančios bei tvarkančios įmonės ir nepavojingas atliekas šalinančios įmonės.",
+          "ūkio subjektai ar kitos įstaigos, kuriose darbuotojai savo veikloje naudoja arba kitaip kontaktuoja su antrosios, trečiosios arba ketvirtosios grupės biologinėmis medžiagomis.",
+          "ūkio subjektai, tiekiantys rinkai ar kitaip tvarkantys, taip pat laikinai įvežantys į Lietuvos teritoriją perdirbti pavojingas chemines medžiagas ir preparatus.",
+          "apdirbamosios gamybos (pagal Ekonominės veiklos rūšių klasifikatorių EVRK 2 red., patvirtintą Statistikos departamento prie LR Vyriausybės generalinio direktoriaus 2007 m. spalio 31 d. įsakymu Nr. DĮ-226; Žin., 2007, Nr. 119-4877) ūkio subjektai, kai juose vienoje vietoje dirba daugiau kaip 50 žmonių.",
+          "ūkio subjektai, užsiimantys civilinių pirotechnikos priemonių gamyba, laikymu ir naudojimu.",
+          "ūkio subjektai, vykdantys ūkinę veiklą, kuriai dėl jos pobūdžio, masto ar numatomos vietos ypatumų buvo atliktas poveikio aplinkai vertinimas arba buvo nustatomos ar tikslinamos sanitarinių apsaugos zonų ribos poveikio visuomenės sveikatai vertinimo būdu (išskyrus pavojinguosius objektus, kuriuose medžiagų kiekiai prilygsta nustatytųjų kvalifikacinių kiekių II lygiui ar jį viršija).",
+          "ūkio subjektai, užsiimantys radioaktyviųjų atliekų tvarkymo veikla.",
+          "ūkio subjektai, gaminantys, importuojantys ir transportuojantys naftos produktus.",
+          "ūkio subjektai, eksploatuojantys valstybinės svarbos energetikos objektus."
+        ]
+      },
+      {
+        "group": "Ūkio subjektai ir kitos įstaigos, kuriose pagal vykdomos veiklos pobūdį nuolat ar laikinai būna žmonių",
+        "items": [
+          "apgyvendinimo paslaugas teikiantys ūkio subjektai ir kitos įstaigos (viešbučiai, moteliai, svečių namai), kai juose vienu metu gali būti 100 žmonių ir daugiau.",
+          "asmens ir visuomenės sveikatos priežiūros įstaigos, nurodytos Informacijos apie sveikatos priežiūros įstaigų pasirengimą veiklai ekstremaliųjų situacijų atvejais teikimo tvarkos aprašo (patvirtinto LR sveikatos apsaugos ministro 2011 m. gruodžio 23 d. įsakymu Nr. V-1110; Žin., 2011, Nr. 162-7698) 6 ir 7 punktuose.",
+          "kitos asmens ir visuomenės sveikatos priežiūros įstaigos, kurioms prievolė rengti ekstremaliųjų situacijų valdymo planus numatyta sveikatos apsaugos ministro tvirtinamose šių planų rengimo metodinėse rekomendacijose.",
+          "socialinės globos įstaigos ir laikino apnakvindinimo paslaugas teikiančios socialinių paslaugų įstaigos, kai jose vienu metu gali būti 50 žmonių ir daugiau.",
+          "ūkio subjektai ir kitos įstaigos, teikiančios formaliojo švietimo paslaugas arba vykdančios ikimokyklinio ir priešmokyklinio ugdymo programas.",
+          "ūkio subjektai ir kitos įstaigos, kurioms nuosavybės teise priklauso patalpos ar pastatai, kuriuose vykdoma kūrybinė, meninė ir pramogų, sporto renginių organizavimo (teatrai, kino teatrai, koncertų salės, universalios salės ir kt.), sveikatos gerinimo ir poilsio organizavimo, finansinių paslaugų ar draudimo veikla ir kuriuose vienu metu būna daugiau kaip 200 žmonių; kai šias patalpas ar pastatus pagal sutartis valdo kiti ūkio subjektai ar įstaigos – juos valdantys subjektai.",
+          "prekybos paskirties ūkio subjektai ir kitos įstaigos, kai bendras patalpų plotas viršija 2000 m²."
+        ]
+      },
+      {
+        "group": "Kultūros paveldo objektus valdantys subjektai",
+        "items": [
+          "ūkio subjektai ir kitos įstaigos, kurių teritorijoje ir (ar) atsakomybėje yra kultūros paveldo objektai ir kurie užtikrina kilnojamųjų kultūros vertybių apsaugą, valdo ir administruoja statinius bei jų kompleksus, ansamblius, įregistruotus kaip nekilnojamosios kultūros paveldo vertybės."
+        ]
+      },
+      {
+        "group": "Miškų urėdijos ir Kuršių nerijos nacionalinio parko direkcija",
+        "items": [
+          "miškų urėdijos.",
+          "Kuršių nerijos nacionalinio parko direkcija."
+        ]
+      }
+    ],
+    "closing": [
+      "Geslitos saugos centro specialistai gali padėti Jums organizuoti ekstremalių situacijų valdymo plano parengimą, atsižvelgiant į norminių teisės aktų reikalavimus, palankiausiomis sąlygomis."
+    ]
+  },
+  "ohs_documentation": {
+    "title": "Darbuotojų saugos ir sveikatos dokumentacijos rengimas",
+    "source_url": "https://www.geslita.lt/mokymai/imones-darbuotoju-saugos-ir-sveikatos-tarnybos-funkciju-vykdymas-2",
+    "intro": [
+      "Lietuvos Respublikos darbo kodeksas (264 straipsnio 2 dalies 3 punktas, 264 straipsnio 2 dalies 4 punktas, 264 straipsnio 3 dalis), Lietuvos Respublikos darbuotojų saugos ir sveikatos įstatymas (19 straipsnio 2 dalies 4 punktas, 20 straipsnio 2 dalis, 25 straipsnio 5 dalis bei 27 straipsnis) ir kiti norminiai teisės aktai nustato pareigą kiekvienam darbdaviui, atsižvelgiant į įmonės dydį ir pavojus darbuotojams, parengti šiuos dokumentus:"
+    ],
+    "documents": [
+      "Darbuotojų saugos ir sveikatos tarnybos nuostatus ar darbuotojų saugos ir sveikatos specialistų pareigybių aprašymus.",
+      "Darbuotojų saugos ir sveikatos bei gaisrinės saugos instrukcijas.",
+      "Darbo tvarkos taisykles.",
+      "Darbuotojų mokymo ir žinių iš darbuotojų saugos ir sveikatos srities tikrinimo, instruktavimo tvarką.",
+      "Pareiginius nuostatus.",
+      "Kitus reikiamus įmonės lokalinius norminius teisės aktus, kurių reikalavimai privalomi darbuotojams."
+    ],
+    "closing": [
+      "Įstatymų reikalavimai nuolat keičiasi, kuriami nauji, todėl parengti visus reikalavimus atitinkančią darbuotojų saugos ir sveikatos dokumentaciją reikia kvalifikuotų darbuotojų saugos ir sveikatos specialistų arba skirti tam nemažai brangaus laiko.",
+      "Geslitos saugos centro specialistai turi ilgametę patirtį darbo teisės, darbuotojų saugos ir sveikatos bei gaisrinės saugos srityse. Siūlome pasinaudoti mūsų specialistų pagalba rengiant Jūsų įmonei svarbius lokalinius teisės aktus pačiomis geriausiomis sąlygomis."
+    ]
+  },
+  "legal_updates_2012": {
+    "title": "Bendrųjų gaisrinės saugos taisyklių ir darbuotojų priešgaisrinės saugos mokymo pakeitimai nuo 2012 11 01",
+    "source_urls": [
+      "https://www.geslita.lt/mokymai/bendruju-gaisrines-saugos-taisykliu-pakeitimas-nuo-2012-11-01",
+      "https://www.geslita.lt/mokymai/darbuotoju-priesgaisrines-saugos-mokymo-pakeitimai"
+    ],
+    "summary": [
+      "Nuo 2012 11 01 įsigaliojo naujas „Bendrųjų gaisrinės saugos taisyklių“ pakeitimas (Žin., 2005, Nr. 26-852; Žin., 2010, Nr. 99-5167; Žin., 2011, Nr. 100-4727; Žin., 2012, Nr. 118-5970). Taisyklės privalomos kiekvienai Lietuvos Respublikos teritorijoje esančiai įmonei, įstaigai, organizacijai, nepriklausomai nuo nuosavybės formos, taip pat fiziniams asmenims.",
+      "Pakeitimai palietė darbuotojų instruktažų įforminimą (registraciją), pratybas veiksmų kilus gaisrui planams išmokti ir darbuotojų supažindinimą su evakavimo planais; daugiausia pakeitimų numatyta eksploatuojamiems durpynams ir durpynų gaisrams gesinti pritaikytos technikos parinkimo reikalavimams.",
+      "Instruktažų registracija: vietoj dviejų anksčiau numatytų žurnalų (įvadinių (bendrų) gaisrinės saugos instruktažų ir instruktažų darbo vietoje) įvedamas vienas Gaisrinės saugos instruktažų registracijos žurnalas. Instruktažų rūšys lieka tos pačios – įvadinis (bendras), periodinis darbo vietoje ir papildomas darbo vietoje. Naujo pavyzdžio žurnale instruktažų pavadinimų privalomai rašyti nebereikia; jo forma tokia pati kaip buvusio instruktažų darbo vietoje žurnalo ir gali būti papildyta kitomis reikalingomis skiltimis.",
+      "Veiksmų kilus gaisrui planas: jį turi parengti, suderinti su Priešgaisrinės apsaugos ir gelbėjimo departamentui pavaldžia įstaiga ir patvirtinti juridinio asmens vadovas, jeigu objekte dirba arba nuolat būna daugiau kaip 100 žmonių. Iki 2012 11 01 taisyklių 2 priede buvo numatyta pareiga ne rečiau kaip kartą per metus rengti pratybas objekte šiam planui išmokti; nuo pakeitimų įsigaliojimo tokios pareigos 2 priede nebelieka.",
+      "Kartu nuo 2012 11 01 pasikeitė „Minimalūs reikalavimai valstybės tarnautojų ir darbuotojų priešgaisrinės saugos mokymo programoms“ (Žin., 2003, Nr. 63-2873; Žin., 2012, Nr. 105-5360), reglamentuojantys privalomą visų darbuotojų mokymą ir atestavimą kas 3 metus: keičiasi tam tikra terminologija, mokymo temų laiko normatyvai ir pastabos.",
+      "Esminis mokymo programų pakeitimas (3 pastaba): praktinės pratybos pagal Veiksmų kilus gaisrui planą, nagrinėjant temą „Veiksmai kilus gaisrui“, anksčiau buvo tik rekomenduojamos, o nuo 2012 11 01 tapo privalomos toms įmonėms, įstaigoms, organizacijoms, kurios turi parengtus ar privalo turėti tokius planus.",
+      "Išvada: pratybas Veiksmų kilus gaisrui planui išmokti tokių juridinių asmenų vadovai turi rengti ne rečiau kaip kartą per 3 metus – privalomo visų darbuotojų priešgaisrinės saugos mokymo ir atestavimo (pagal Bendrųjų gaisrinės saugos taisyklių 12 punktą) metu.",
+      "Evakavimo planai (taisyklių 6 priedo 7 punktas): nuo 2012 11 01 nebereikia kasmet supažindinti visų darbuotojų su evakavimo planais, tačiau išlieka nuostata, kad visi valstybės tarnautojai ir darbuotojai turi būti supažindinti su žmonių evakavimo planu ir privalo mokėti naudotis įmonėje esančiais evakavimo planais."
+    ],
+    "note": "Archyvinė informacija (2012 m.): santrauka parengta pagal senosios svetainės tekstus apie 2012 11 01 įsigaliojusius teisės aktų pakeitimus. Nuo to laiko teisės aktai keitėsi, todėl prieš skelbiant svetainę turinį būtina peržiūrėti dėl aktualumo arba aiškiai pažymėti kaip archyvą."
+  }
+}

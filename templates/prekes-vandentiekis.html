@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m %}
+{% block title %}Gaisrinis vandentiekis ir spintelės | Geslita{% endblock %}
+{% block description %}Priešgaisrinės spintelės, gaisrinės žarnos, čiaupai, švirkštai, sujungimo galvutės, gaisriniai skydai, smėlio dėžės, lauko hidrantai ir sprinkleriai. Kainos ir užsakymas.{% endblock %}
+{% block extra_css %}<style>
+/* Gaisrinis vandentiekis: katalogas su lipnia šonine navigacija */
+.pg-vand-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-bottom: clamp(28px, 4vw, 44px); }
+.pg-vand-head h2 { font-size: clamp(28px, 3vw, 38px); }
+.pg-vand-cat .doc-sec > h3 { font-size: clamp(26px, 2.6vw, 34px); margin-bottom: 14px; }
+.pg-vand-cat .doc-sec > .lead { font-size: 17px; color: var(--muted); margin-bottom: 22px; }
+.pg-vand-cat .prod figure { aspect-ratio: 4 / 3; padding: 20px; }
+.pg-vand-cat .prod figure img { width: 100%; max-width: 150px; height: auto; }
+.pg-vand-cat .prod .variants b { white-space: nowrap; }
+.pg-vand-wide { grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); }
+.pg-vand-wide .prod { flex-direction: row; }
+.pg-vand-wide .prod figure { flex: 0 0 min(38%, 250px); aspect-ratio: auto; border-bottom: 0; border-right: 1px solid var(--line); }
+.pg-vand-wide .prod .body { flex: 1; min-width: 0; }
+.pg-vand-hyd { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 20px; align-items: start; }
+.pg-vand-hyd .photo { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); display: flex; align-items: center; justify-content: center; padding: 28px 20px; box-shadow: var(--shadow-sm); }
+.pg-vand-hyd .photo img { width: auto; max-height: 330px; filter: drop-shadow(0 18px 20px rgba(14, 26, 43, 0.22)); }
+.pg-vand-hyd .tbl td .link { font-size: 14.5px; white-space: nowrap; }
+.pg-vand-spr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 24px; align-items: center; }
+.pg-vand-spr figure { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); padding: 20px; box-shadow: var(--shadow-sm); }
+.pg-vand-spr figure img { margin: 0 auto; }
+.pg-vand-spr .doc-list { grid-template-columns: 1fr; margin-bottom: 14px; }
+.pg-vand-svc .programme { max-width: 520px; }
+.pg-vand-svc .lead { margin: 18px 0 0; }
+/* Raudona lieka tik mygtukams ir telefono ikonai: nuorodų ikonos ir aktyvi šoninės navigacijos eilutė tamsiai mėlynos */
+.pg-vand-cat .link .ic { color: var(--navy-3); } .pg-vand-cat .link[href^="tel:"] .ic { color: var(--red); } .pg-vand-cat .doc-nav a.is-active { border-color: var(--navy-3); }
+@media (max-width: 960px) {
+  .pg-vand-hyd { grid-template-columns: 1fr; }
+  .pg-vand-hyd .photo { padding: 16px; }
+  .pg-vand-hyd .photo img { max-height: 200px; }
+}
+@media (max-width: 640px) {
+  /* Telefone visos prekių kortelės: nuotrauka kairėje, aprašas dešinėje */
+  .pg-vand-cat .prod-grid { grid-template-columns: 1fr; }
+  .pg-vand-cat .prod { flex-direction: row; }
+  .pg-vand-cat .prod figure { flex: 0 0 34%; aspect-ratio: auto; padding: 12px; border-bottom: 0; border-right: 1px solid var(--line); }
+  .pg-vand-cat .prod .body { flex: 1; min-width: 0; padding: 14px; }
+  .pg-vand-spr { grid-template-columns: 1fr; }
+  /* Hidrantų lentelė telefone: kiekviena eilutė tampa kortele, antraštė slepiama */
+  .pg-vand-hyd .tbl table, .pg-vand-hyd .tbl tbody { display: block; min-width: 0; }
+  .pg-vand-hyd .tbl thead { display: none; }
+  .pg-vand-hyd .tbl tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "name name" "spec price" "pdf pdf"; gap: 6px 12px; padding: 12px 14px; border-top: 1px solid var(--line); }
+  .pg-vand-hyd .tbl tr:first-child { border-top: 0; }
+  .pg-vand-hyd .tbl td { display: block; padding: 0; border: 0; }
+  .pg-vand-hyd .tbl td:nth-child(1) { grid-area: name; }
+  .pg-vand-hyd .tbl td:nth-child(2) { grid-area: spec; color: var(--muted); }
+  .pg-vand-hyd .tbl td:nth-child(3) { grid-area: pdf; }
+  .pg-vand-hyd .tbl td:nth-child(4) { grid-area: price; }
+}
+</style>{% endblock %}
+{% block content %}
+{# Duomenys: products.json grupė "vandentiekis" ir susijusi paslauga iš services.json #}
+{% set g = products.groups | selectattr('slug', 'equalto', 'vandentiekis') | first %}
+{% set svc = services.services | selectattr('slug', 'equalto', 'gaisrinis-vandentiekis') | first %}
+{% macro slug(s) -%}{{ s|lower|replace('ą','a')|replace('č','c')|replace('ę','e')|replace('ė','e')|replace('į','i')|replace('š','s')|replace('ų','u')|replace('ū','u')|replace('ž','z')|replace('(','')|replace(')','')|replace(' ','-') }}{%- endmacro %}
+
+{{ m.page_hero('Gaisrinis vandentiekis ir spintelės', g.intro, image=img('foto:vandentiekis-spinta'), alt='Raudona gaisrinio čiaupo spintelė ant metalinės pastato sienos', crumbs=[{'label': 'Prekės', 'href': 'prekes.html'}, {'label': 'Gaisrinis vandentiekis'}]) }}
+
+{# Katalogas: lipni navigacija kairėje, pogrupiai dešinėje (h2 katalogui, h3 pogrupiams, h4 prekių kortelėms) #}
+<section class="sec pg-vand-cat" id="katalogas">
+  <div class="wrap doc">
+    <aside class="doc-nav" data-reveal>
+      <ul>
+        {% for sg in g.subgroups %}<li><a href="#{{ slug(sg.title) }}">{{ sg.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <div class="side-card">
+        <strong>Nerandate reikiamo dydžio?</strong>
+        <span class="muted">Spintelių ir dėžučių raktams yra ir kitų dydžių, o hidrantų ir sprinklerių kainų teiraukitės.</span>
+        <a class="link" href="tel:+37065399977">{{ m.icon('phone') }}+370 653 99977</a>
+        <a class="link" href="paslaugos.html#gaisrinis-vandentiekis">{{ m.icon('tools') }}Vandentiekio priežiūra</a>
+      </div>
+    </aside>
+    <div class="doc-body">
+      <div class="pg-vand-head" data-reveal>
+        <h2>Katalogas</h2>
+        <span class="tag">{{ g.subgroups|length }} grupės</span>
+      </div>
+      {% for sg in g.subgroups %}
+      {% set items = sg['items'] %}
+      <section class="doc-sec" id="{{ slug(sg.title) }}">
+        <h3>{{ sg.title }}</h3>
+        <p class="lead">{{ sg.intro }}</p>
+        {% if sg.title == 'Lauko priešgaisriniai hidrantai' %}
+        {# Hidrantai: viena nuotrauka ir modelių lentelė su PDF nuorodomis; kainų teiraujamasi #}
+        <div class="pg-vand-hyd">
+          <figure class="photo" data-reveal="scale"><img src="{{ img(items[0].image) }}" alt="Raudonas lauko priešgaisrinis hidrantas" loading="lazy" width="94" height="350"></figure>
+          <div class="tbl" data-reveal>
+            <table>
+              <thead><tr><th>Modelis</th><th>Jungtis</th><th>Dokumentai</th><th class="num">Kaina</th></tr></thead>
+              <tbody>
+                {% for it in items %}
+                <tr>
+                  <td><strong>{{ it.name }}</strong></td>
+                  <td>{{ it.specs|join(', ')|replace('Jungtis: ', '') }}</td>
+                  <td><a class="link" href="{{ it.pdf }}" target="_blank" rel="noopener" aria-label="{{ it.name }}: techniniai duomenys (PDF)">{{ m.icon('file') }}Techniniai duomenys (PDF)</a></td>
+                  <td class="num"><b>{{ it.price }}</b></td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {% elif sg.title == 'Sprinkleriai' %}
+        {# Sprinkleriai: kainoraštis PDF faile #}
+        {% for it in items %}
+        <div class="pg-vand-spr">
+          <figure data-reveal="scale"><img src="{{ img(it.image) }}" alt="Trys skirtingų tipų sprinkleriai automatinei gesinimo sistemai" loading="lazy" width="532" height="274"></figure>
+          <div data-reveal>
+            <ul class="doc-list">
+              <li><a href="{{ it.pdf }}" target="_blank" rel="noopener">{{ m.icon('file') }}{{ it.notes|trim('.') }}<svg class="ic ic-out" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+            </ul>
+            <p><strong>{{ it.name }}</strong>, kaina: {{ it.price }} telefonu <a href="tel:+37065399977">+370 653 99977</a> arba el. paštu <a href="mailto:info@geslita.lt">info@geslita.lt</a>.</p>
+          </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="prod-grid{% if items|length <= 2 %} pg-vand-wide{% endif %}">
+          {% for it in items %}
+          {% if it.name == 'Švirkštas POK nozzle 2' %}
+          {# POK švirkštui naudojama tikroji produkto nuotrauka iš geslita.lt archyvo #}
+          {{ m.product(dict(it, image='geslita:uploads/images/POKnozzle2web.jpg')) }}
+          {% else %}
+          {{ m.product(it) }}
+          {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </section>
+      {% endfor %}
+      <div class="notice" data-reveal>{{ products.price_disclaimer }}</div>
+    </div>
+  </div>
+</section>
+
+{# Susijusi paslauga: techninis aptarnavimas (kainos iš services.json) #}
+<section class="sec sec-white pg-vand-svc">
+  <div class="wrap split">
+    <div data-reveal>
+      <div class="eyebrow">Susijusi paslauga</div>
+      <h2>Techninis aptarnavimas ir patikra</h2>
+      <p class="lead">{{ svc.summary[0] }}</p>
+      <ul class="programme">
+        {% for row in svc.tables[0].rows[:3] %}<li><span>{{ row[0] }}</span><span class="num">{{ row[1] }}</span></li>
+        {% endfor %}
+      </ul>
+      {{ m.btn('Priežiūros darbai ir kainos', 'paslaugos.html#gaisrinis-vandentiekis', 'btn-navy') }}
+    </div>
+    <div class="photo para" data-reveal="scale" data-parallax-root>
+      <img src="{{ img('foto:vandentiekis-interjeras') }}" alt="Raudona gaisrinės žarnos ritė ir gesintuvas pastato koridoriuje" loading="lazy" width="1880" height="1253" data-parallax="0.18">
+      <div class="pin"><span class="num">{{ svc.price_from }}</span><span class="small">gaisrinio čiaupo patikra</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight">
+  <div class="wrap">
+    {{ m.cta_inline(title='Reikia sukomplektuoti gaisrinius čiaupus?', text='Pasakykite objekto adresą ir čiaupų skaičių: parinksime spinteles, žarnas, galvutes ir švirkštus, o prireikus atliksime ir patikrą.') }}
+  </div>
+</section>
+{% endblock %}

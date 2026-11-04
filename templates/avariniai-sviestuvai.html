@@ -1,0 +1,233 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m %}
+{% block title %}Avariniai ir evakuaciniai šviestuvai | Geslita{% endblock %}
+{% block description %}Evakuacijos ir avarinių šviestuvų montavimas pagal EN 1838: ženklo matymo atstumas, privalomos šviestuvų vietos, akinimo įvertinimas, apšvietos rekomendacijos ir avarinio išėjimo šviestuvai.{% endblock %}
+{% block extra_css %}<style>
+/* Avariniai šviestuvai: puslapio stiliai (pg-light) */
+.pg-light .doc-sec > h2 { font-size: clamp(26px, 3vw, 36px); }
+.pg-light .doc-body { min-width: 0; } /* lentelės su min-width neturi išplėsti stulpelio mobiliajame */
+.pg-light .side-card a { display: block; padding: 0; margin: 0; border-left: 0; color: var(--ink); font-weight: 600; text-decoration: none; font-size: 15px; }
+.pg-light .side-card a.link { display: inline-flex; justify-self: start; padding-bottom: 2px; border-bottom: 1.5px solid var(--line-2); }
+.pg-light-intro .lead { margin-bottom: 12px; }
+.pg-light-2, .pg-light-3 { display: grid; gap: clamp(16px, 2vw, 24px); margin-top: 24px; align-items: start; }
+.pg-light-2 { grid-template-columns: 1fr 1fr; }
+.pg-light-3 { grid-template-columns: repeat(3, 1fr); }
+.pg-light-2 .card p, .pg-light-3 .card p { font-size: 15.5px; }
+.pg-light-split h2 { margin-bottom: 14px; }
+.pg-light-formula { text-align: center; }
+.pg-light-formula img { width: auto; max-width: 100%; max-height: 220px; margin: 0 auto 16px; }
+.pg-light-formula .num { font-size: clamp(32px, 3.4vw, 44px); font-weight: 700; color: var(--ink); line-height: 1; letter-spacing: -0.02em; margin-top: 8px; }
+.pg-light-steps { margin-top: 24px; }
+.pg-light-steps .step { grid-template-columns: 64px minmax(0, 1fr) minmax(170px, 30%); }
+.pg-light-steps .n { color: var(--navy-3); }
+.pg-light-steps figure, .pg-light-case figure, .pg-light-figs figure { margin: 0; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 10px; }
+.pg-light-steps figure img { max-height: 380px; width: auto; max-width: 100%; }
+.pg-light-legend { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; font-size: 14.5px; color: var(--muted); }
+.pg-light-legend li { display: flex; gap: 8px; align-items: baseline; }
+.pg-light-legend li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 2px; background: var(--navy-3); }
+.pg-light-case figure { margin-bottom: 14px; }
+.pg-light-case figure img { max-height: 170px; width: auto; max-width: 100%; }
+.pg-light-case h3 { font-size: 18px; }
+#akinimas .tbl { margin-top: 24px; }
+.pg-light .tbl td b { font-weight: 500; }
+.pg-light-rec .tbl td:first-child { width: 36%; font-weight: 600; color: var(--ink); }
+.pg-light-figs { display: grid; gap: 14px; margin-top: 18px; }
+.pg-light-figs figure { padding: 12px; }
+.pg-light-figs figure img { width: auto; max-width: 100%; }
+.pg-light-reg p.sub { padding-left: 28px; }
+.pg-light-prods { grid-template-columns: repeat(4, 1fr); }
+.pg-light-cta { padding-top: 0; }
+.pg-light-cta .cta-inline { margin-top: 0; }
+@media (max-width: 900px) { .pg-light-3, .pg-light-prods { grid-template-columns: 1fr 1fr; } .pg-light-steps .step { grid-template-columns: 64px 1fr; } .pg-light-steps figure { grid-column: 2; } }
+@media (max-width: 640px) { .pg-light-2, .pg-light-3 { grid-template-columns: 1fr; } .pg-light-steps .step { grid-template-columns: 1fr; } .pg-light-steps figure { grid-column: auto; } }
+@media (max-width: 640px) { .pg-light .tbl table { min-width: 0; font-size: 14px; } .pg-light .tbl th, .pg-light .tbl td { padding: 10px 12px; } .pg-light .tbl thead th { font-size: 11.5px; letter-spacing: 0.04em; } .pg-light-rec .tbl td:first-child { width: 40%; } }
+@media (max-width: 480px) { .pg-light-prods { gap: 10px; } .pg-light-prods .prod .body { padding: 12px 14px 14px; } }
+</style>{% endblock %}
+{% block content %}
+{% set L = lighting %}
+{# alt tekstų žodynas pagal nuotraukos kelią (lighting.images) #}
+{% set alts = {} %}
+{% for im in L.images %}{% set _ = alts.update({im.src: im.alt}) %}{% endfor %}
+{{ m.page_hero('Avariniai ir evakuaciniai šviestuvai', 'Evakuacijos, avarinio ir antipaniško apšvietimo rekomendacijos pagal Europos standartą EN 1838 ir Apšvietimo elektros įrenginių įrengimo taisykles: nuo ženklo matymo atstumo iki šviestuvų išdėstymo.', image=img('foto:evakuacija-koridorius'), alt='Šviečiantis evakuacinio išėjimo ženklas ir raudonas pavojaus signalizatorius ant sienos', crumbs=[{'label': 'Paslaugos', 'href': 'paslaugos.html#avariniu-sviestuvu-montavimas'}, {'label': 'Avariniai šviestuvai'}], eyebrow='Montavimas ir rekomendacijos', buttons=[{'label': 'Gauti pasiūlymą', 'href': 'kontaktai.html#forma'}]) }}
+
+<section class="sec">
+  <div class="wrap doc pg-light">
+    <aside class="doc-nav" aria-label="Puslapio turinys">
+      <ul>
+        <li><a href="#kas-tai">Kas yra avarinis apšvietimas</a></li>
+        <li><a href="#prieziura">Įrangos priežiūra</a></li>
+        <li><a href="#montavimas">Montavimo taisyklės</a></li>
+        <li><a href="#matymo-atstumas">Ženklo matymo atstumas</a></li>
+        <li><a href="#trys-zingsniai">Trys schemos žingsniai</a></li>
+        <li><a href="#akinimas">Akinimo įvertinimas</a></li>
+        <li><a href="#rekomendacijos">Praktinės rekomendacijos</a></li>
+        <li><a href="#taisykles">Įrengimo taisyklės</a></li>
+        <li><a href="#prekes">Avarinio išėjimo šviestuvai</a></li>
+      </ul>
+      <div class="side-card">
+        <strong>Avarinių šviestuvų montavimas</strong>
+        <a href="tel:+37065399977">+370 653 99977</a>
+        <a href="mailto:info@geslita.lt">info@geslita.lt</a>
+        <a class="link" href="paslaugos.html#avariniu-sviestuvu-montavimas">Paslauga kainoraštyje{{ m.icon('arrow') }}</a>
+      </div>
+    </aside>
+
+    <div class="doc-body">
+      <div class="pg-light-intro" data-reveal>
+        {% for p in L.intro %}<p class="{{ 'lead' if loop.first }}">{{ p }}</p>{% endfor %}
+      </div>
+
+      {# Kas yra avarinis apšvietimas: dvi grupės #}
+      <section class="doc-sec" id="kas-tai">
+        <h2 data-reveal>{{ L.what_is.title }}</h2>
+        <p class="lead" data-reveal>{{ L.what_is.intro }}</p>
+        <div class="pg-light-2">
+          {% for g in L.what_is.groups %}
+          <article class="card" data-reveal style="--i:{{ loop.index0 }}">
+            <div class="ic-wrap">{{ m.icon('bulb' if loop.first else 'clock') }}</div>
+            <h3>{{ g.title }}</h3>
+            <p><strong>{{ g.lead }}</strong></p>
+            {% if g.bullets %}{{ m.checks(g.bullets) }}{% endif %}
+            {% if g.note %}<p class="small muted" style="margin-top: 14px">{{ g.note }}</p>{% endif %}
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      {# Priežiūra: trys testavimo būdai #}
+      {% set mt = L.maintenance %}
+      <section class="doc-sec" id="prieziura">
+        <h2 data-reveal>{{ mt.title }}</h2>
+        <div data-reveal>{{ m.paragraphs(mt.intro) }}</div>
+        <div class="pg-light-3">
+          {% for md in mt.methods %}
+          <article class="card" data-reveal style="--i:{{ loop.index0 }}">
+            <div class="ic-wrap">{{ m.icon(['map', 'shield', 'doc'][loop.index0]) }}</div>
+            <h3>{{ md.title }}</h3>
+            <p>{{ md.text }}</p>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      {# Montavimo taisyklės: tekstas ir nuotrauka su parallax #}
+      <section class="doc-sec" id="montavimas">
+        <div class="split pg-light-split" data-parallax-root>
+          <div data-reveal>
+            <h2>Montavimo taisyklės</h2>
+            <p class="lead">{{ L.mounting_rules_intro }}</p>
+            {{ m.checks(L.mounting_rules) }}
+          </div>
+          <div class="photo para" data-reveal="scale">
+            <img src="{{ img('foto:evakuacija-zenklas') }}" alt="Žalias evakuacinio išėjimo ženklas, kabantis po pramoninėmis lubomis" loading="lazy" width="1880" height="1254" data-parallax="0.15">
+          </div>
+        </div>
+      </section>
+
+      {# Ženklo matymo atstumas: dvi formulės #}
+      {% set V = L.viewing_distance %}
+      <section class="doc-sec" id="matymo-atstumas">
+        <h2 data-reveal>{{ V.title }}</h2>
+        <div data-reveal>{{ m.paragraphs(V.intro) }}</div>
+        <div class="pg-light-2">
+          <article class="card pg-light-formula" data-reveal style="--i:0">
+            <img src="{{ img(V.images[0].src) }}" alt="{{ V.images[0].alt }}" width="300" height="220" loading="lazy">
+            <p class="small muted">{{ V.internal_label }}</p>
+            <div class="num">{{ V.internal }}</div>
+          </article>
+          <article class="card pg-light-formula" data-reveal style="--i:1">
+            <img src="{{ img(V.images[1].src) }}" alt="{{ V.images[1].alt }}" width="300" height="217" loading="lazy">
+            <p class="small muted">{{ V.external_label }}</p>
+            <div class="num">{{ V.external }}</div>
+          </article>
+        </div>
+        <p class="small muted" style="margin-top: 14px" data-reveal>{{ V.legend }}</p>
+      </section>
+
+      {# Trys žingsniai: numeruotos kortelės su schemomis #}
+      <section class="doc-sec" id="trys-zingsniai">
+        <h2 data-reveal>Trys evakuacinio apšvietimo schemos žingsniai</h2>
+        <p class="lead" data-reveal>{{ L.three_steps_intro }}</p>
+        <ol class="steps pg-light-steps">
+          {% for st in L.three_steps %}
+          {% set tt = st.title.split(' - ', 1) %}
+          <li class="step" data-reveal style="--i:{{ loop.index0 }}">
+            <span class="n num" aria-hidden="true">0{{ loop.index }}</span>
+            <div>
+              <h3>{{ tt[1]|capitalize if tt|length > 1 else st.title }}</h3>
+              <p>{{ st.text }}</p>
+              {% if st.legend %}
+              <p class="small muted" style="margin: 14px 0 6px">Schemos žymėjimas</p>
+              <ul class="pg-light-legend">{% for lg in st.legend %}<li>{{ lg }}</li>{% endfor %}</ul>
+              {% endif %}
+            </div>
+            <figure><img src="{{ img(st.image) }}" alt="{{ alts.get(st.image, st.title) }}" loading="lazy"></figure>
+          </li>
+          {% endfor %}
+        </ol>
+      </section>
+
+      {# Akinimas: trys atvejai ir leidžiamų reikšmių lentelė #}
+      {% set G = L.glare %}
+      <section class="doc-sec" id="akinimas">
+        <h2 data-reveal>{{ G.title }}</h2>
+        <div data-reveal>{{ m.paragraphs(G.intro) }}</div>
+        <div class="pg-light-3">
+          {% for c in G.cases %}
+          <article class="card pg-light-case" data-reveal style="--i:{{ loop.index0 }}">
+            <figure><img src="{{ img(c.image) }}" alt="{{ alts.get(c.image, c.title) }}" loading="lazy"></figure>
+            <h3>{{ c.title }}</h3>
+            <p>{{ c.text }}</p>
+          </article>
+          {% endfor %}
+        </div>
+        {{ m.table(L.glare_table) }}
+      </section>
+
+      {# Praktinis taikymas: trys rekomendacijų lentelės akordeonuose #}
+      {% set R = L.recommendation_intro %}
+      <section class="doc-sec" id="rekomendacijos">
+        <h2 data-reveal>{{ R.title }}</h2>
+        <p class="lead" data-reveal>{{ R.text }}</p>
+        <div class="pg-light-rec" data-reveal>
+          {% for t in L.recommendation_tables %}
+          {% set body %}
+            {{ m.table({'columns': ['Rodiklis', 'Reikalavimas'], 'rows': t.rows}) }}
+            {% if t.images %}<div class="pg-light-figs">{% for im in t.images %}<figure><img src="{{ img(im) }}" alt="{{ alts.get(im, '') }}" loading="lazy"></figure>{% endfor %}</div>{% endif %}
+            {% for n in t.notes %}<p class="tbl-note">{{ n }}</p>{% endfor %}
+          {% endset %}
+          {{ m.acc(t.title, body, open=loop.first) }}
+          {% endfor %}
+        </div>
+      </section>
+
+      {# Taisyklių ištrauka viename akordeone #}
+      <section class="doc-sec" id="taisykles">
+        <h2 data-reveal>{{ L.regulation_title }}</h2>
+        <p class="lead" data-reveal>Taisyklių punktai, kuriais remiasi šios rekomendacijos.</p>
+        {% set reg %}
+          <div class="pg-light-reg">
+          {% for p in L.regulation_excerpt %}<p class="{{ 'sub' if p.split(' ', 1)[0].count('.') > 1 }}">{{ p }}</p>{% endfor %}
+          </div>
+        {% endset %}
+        <div data-reveal>{{ m.acc('Skaityti taisyklių ištrauką', reg) }}</div>
+      </section>
+
+      {# Prekės: avarinio išėjimo šviestuvai #}
+      <section class="doc-sec" id="prekes">
+        <div class="sec-head" data-reveal style="margin-bottom: 24px">
+          <div class="eyebrow">Prekės</div>
+          <h2>{{ L.products_title }}</h2>
+          <p class="lead">Šviestuvai iš mūsų katalogo. Visą gaisrinės automatikos ir įrangos asortimentą rasite prekių puslapyje.</p>
+        </div>
+        <div class="prod-grid pg-light-prods">
+          {% for p in L.products %}{{ m.product(p) }}{% endfor %}
+        </div>
+        <div style="margin-top: 24px" data-reveal>{{ m.btn('Visos automatikos ir įrangos prekės', 'prekes-automatika.html', 'btn-navy') }}</div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight pg-light-cta"><div class="wrap">{{ m.cta_inline(title='Planuojate avarinį apšvietimą?', text='Paskambinkite arba parašykite: aptarsime objektą, šviestuvų kiekį ir paruošime pasiūlymą.') }}</div></section>
+{% endblock %}

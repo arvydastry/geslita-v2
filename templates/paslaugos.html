@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m %}
+{% block title %}Paslaugos ir kainos | Geslita{% endblock %}
+{% block extra_css %}<style>
+/* Paslaugų puslapis (pg-psl-): numeruotas sąrašas su lipnia navigacija */
+.pg-psl-doc { padding-top: clamp(28px, 4vw, 56px); }
+.pg-psl-sec { border-top: 1px solid var(--line-2); padding-top: 26px; }
+.pg-psl-n { display: block; margin-bottom: 14px; font: 700 13px/1 var(--fb); letter-spacing: 0.12em; color: var(--navy-3); }
+.pg-psl-sec > .lead { margin-top: 14px; }
+.pg-psl-meta .tag { white-space: normal; text-align: left; }
+.pg-psl-meta .tag .ic { font-size: 15px; color: var(--navy-3); }
+.pg-psl-note { margin: -8px 0 20px; }
+.pg-psl-two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px 40px; align-items: center; margin: 28px 0; }
+.pg-psl-two.rev > :first-child { order: 2; }
+.pg-psl-two.solo { grid-template-columns: 1fr; }
+.pg-psl-two.lite { grid-template-columns: minmax(0, 1fr) 320px; }
+.pg-psl-two.lite.rev { grid-template-columns: 320px minmax(0, 1fr); }
+.pg-psl-two.solo .checks { grid-template-columns: 1fr 1fr; gap: 8px 28px; }
+.pg-psl-two.lite p { max-width: none; }
+.pg-psl-two.lite p + .checks { margin-top: 16px; }
+.pg-psl-phone-note { display: none; }
+.pg-psl-fig { margin: 0; border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 3 / 2; background: var(--bg-2); box-shadow: var(--shadow-md); }
+.pg-psl-fig img { width: 100%; height: 100%; object-fit: cover; }
+.pg-psl-fig.contain { background: #fff; display: flex; align-items: center; justify-content: center; gap: 28px; padding: 24px; }
+.pg-psl-fig.contain img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+.pg-psl-tbl + .pg-psl-tbl, .pg-psl-tbl + .acc, .pg-psl-tbl + .doc-list, .acc + .doc-list { margin-top: 24px; }
+.pg-psl-doc .tbl td.num, .pg-psl-doc .tbl th.num { font-variant-numeric: lining-nums; }
+.pg-psl-foot { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; margin-top: 26px; }
+.pg-psl-foot .pill-row { margin-left: auto; align-items: center; }
+.pg-psl-foot a.tag { text-decoration: none; transition: border-color 0.25s var(--ease), color 0.25s var(--ease); }
+.pg-psl-foot a.tag:hover { border-color: var(--ink); color: var(--ink); }
+.pg-psl-side { font-size: 14.5px; }
+.pg-psl-side a:not(.btn) { color: var(--ink); font-weight: 600; text-decoration: none; padding: 0; margin: 0; border: 0; }
+.doc-nav .pg-psl-side .btn, .doc-nav .pg-psl-side .btn:hover { display: inline-flex; padding: 0 16px; margin: 4px 0 0; border: 1.5px solid transparent; color: #fff; font-size: 15px; }
+.pg-psl-cta { overflow: hidden; padding-top: 0; }
+.pg-psl-cta .cta-inline { margin-top: 0; }
+.pg-psl-cta .plan { position: absolute; left: -16%; bottom: -34%; width: clamp(460px, 48vw, 820px); opacity: 0.1; pointer-events: none; will-change: transform; }
+.pg-psl-cta .wrap { position: relative; }
+@media (max-width: 960px) { .pg-psl-doc .doc { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 900px) {
+  .pg-psl-two, .pg-psl-two.lite, .pg-psl-two.lite.rev { grid-template-columns: minmax(0, 1fr); }
+  .pg-psl-two.rev > :first-child { order: 0; }
+  .pg-psl-fig { max-width: 520px; }
+  .pg-psl-foot .pill-row { margin-left: 0; }
+}
+@media (max-width: 640px) {
+  .pg-psl-two.solo .checks { grid-template-columns: 1fr; }
+  .pg-psl-tbl.narrow .tbl table { min-width: 0; font-size: 14px; }
+  .pg-psl-tbl.narrow .tbl th, .pg-psl-tbl.narrow .tbl td { padding: 10px; }
+  .pg-psl-tbl.narrow .tbl th.num { white-space: normal; }
+  .pg-psl-tbl.narrow .tbl .num { width: 1%; }
+  .pg-psl-tbl.wide .tbl table { min-width: 0; font-size: 13.5px; }
+  .pg-psl-tbl.wide .tbl th, .pg-psl-tbl.wide .tbl td { padding: 10px 8px; }
+  .pg-psl-tbl.wide .tbl th.num { white-space: normal; }
+  .pg-psl-tbl.wide .tbl .num { width: 1%; }
+  .pg-psl-tbl.hide-c3 .tbl th:nth-child(3), .pg-psl-tbl.hide-c3 .tbl td:nth-child(3) { display: none; }
+  .pg-psl-phone-note { display: block; }
+}
+/* Paslaugų hero (.sv-) */
+.sv-hero { position: relative; padding-top: calc(var(--head-h) + clamp(36px, 5vw, 72px)); padding-bottom: clamp(48px, 6vw, 80px); overflow: clip; }
+.sv-hero .plan { position: absolute; right: -10%; top: -8%; width: clamp(520px, 56vw, 960px); opacity: 0.1; pointer-events: none; will-change: transform; }
+.sv-hero > .wrap:first-of-type { position: relative; display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+.sv-copy h1 { margin: 18px 0 18px; font-size: clamp(40px, 5.4vw, 72px); line-height: 1; letter-spacing: -0.035em; }
+.sv-copy .lead { max-width: 32em; }
+.sv-copy .btn-group { margin-top: 26px; }
+.sv-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin: 34px 0 0; max-width: 520px; }
+.sv-stats > div { padding-top: 12px; border-top: 2px solid var(--ink); }
+.sv-stats dt { order: 2; font-size: 13px; line-height: 1.35; color: var(--muted); }
+.sv-stats > div { display: flex; flex-direction: column-reverse; gap: 6px; }
+.sv-stats dd { margin: 0; font: 700 clamp(32px, 3.2vw, 44px)/1 var(--fd); letter-spacing: -0.03em; color: var(--ink); font-variant-numeric: lining-nums; }
+.sv-visual { position: relative; height: clamp(420px, 42vw, 580px); }
+.sv-main { position: absolute; inset: 0 0 12% 10%; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-lg); will-change: transform; }
+.sv-main img, .sv-sub img { width: 100%; height: 100%; object-fit: cover; }
+.sv-sub { position: absolute; left: 0; bottom: 0; width: 38%; aspect-ratio: 4 / 3; border-radius: var(--r-lg); overflow: hidden; outline: 6px solid var(--bg); box-shadow: var(--shadow-lg); will-change: transform; z-index: 2; }
+.sv-prices { position: absolute; right: -2%; top: 8%; z-index: 3; width: min(300px, 62%); padding: 16px 18px; border-radius: 16px; background: rgba(255, 255, 255, 0.92); border: 1px solid rgba(217, 223, 231, 0.8); box-shadow: var(--shadow-lg); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); will-change: transform; }
+.sv-prices .lbl { display: block; margin-bottom: 8px; font: 600 12px/1 var(--fb); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.sv-prices ul { margin: 0; padding: 0; list-style: none; }
+.sv-prices li + li { border-top: 1px solid var(--line); }
+.sv-prices a { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 9px 0; color: var(--ink); text-decoration: none; font-size: 14.5px; font-weight: 500; }
+.sv-prices a b { font: 700 15.5px/1 var(--fd); color: var(--navy-3); white-space: nowrap; font-variant-numeric: lining-nums; }
+.sv-prices a:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.sv-index { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: clamp(48px, 6vw, 80px); }
+.sv-index a { position: relative; display: grid; grid-template-columns: 40px minmax(0, 1fr); grid-template-rows: auto auto; column-gap: 12px; row-gap: 3px; align-items: center; padding: 16px 16px 14px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm); color: var(--ink); text-decoration: none; transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease); }
+.sv-index .n { position: absolute; right: 14px; top: 12px; font: 600 12px/1 var(--fb); color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
+.sv-index .ico { grid-row: 1 / 3; width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: #e8eef7; color: var(--navy-3); transition: background 0.35s var(--ease), color 0.35s var(--ease); }
+.sv-index .ico .ic { font-size: 19px; }
+.sv-index b { padding-right: 18px; font: 600 14.5px/1.25 var(--fd); }
+.sv-index small { font-size: 12.5px; color: var(--muted); }
+.sv-index a:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: transparent; }
+.sv-index a:hover .ico { background: var(--navy-3); color: #fff; }
+.sv-note { margin-top: 16px; font-size: 13.5px; color: var(--muted); }
+@media (max-width: 1100px) { .sv-index { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 960px) { .sv-hero > .wrap:first-of-type { grid-template-columns: minmax(0, 1fr); } .sv-visual { height: 440px; max-width: 600px; } }
+@media (max-width: 640px) { .sv-index { grid-template-columns: 1fr 1fr; gap: 8px; } .sv-index a { grid-template-columns: 34px minmax(0, 1fr); padding: 12px; column-gap: 10px; } .sv-index .ico { width: 34px; height: 34px; } .sv-index .n { display: none; } .sv-index b { padding-right: 0; font-size: 13.5px; } .sv-visual { height: 320px; } .sv-prices { display: none; } .sv-stats { gap: 12px; } }
+</style>{% endblock %}
+{% block content %}
+{# Atskiri puslapiai, į kuriuos veda nuoroda "Plačiau" #}
+{% set pages = {
+  'gesintuvu-patikra': ['gesintuvu-patikra.html', 'Plačiau apie gesintuvų patikrą'],
+  'gaisrine-signalizacija': ['gaisrine-signalizacija.html', 'Plačiau apie gaisrinę signalizaciją'],
+  'evakuacijos-planai': ['evakuacijos-planai.html', 'Plačiau apie evakuacijos planus'],
+  'darbuotoju-mokymai': ['saugos-centras.html', 'Plačiau apie mokymus: Saugos centras'],
+  'avariniu-sviestuvu-montavimas': ['avariniai-sviestuvai.html', 'Plačiau apie avarinius šviestuvus']
+} %}
+{# Susijusių prekių katalogo puslapiai #}
+{% set prod = {
+  'gesintuvai': ['prekes-gesintuvai.html', 'Gesintuvai'],
+  'vandentiekis': ['prekes-vandentiekis.html', 'Gaisrinio vandentiekio įranga'],
+  'zenklai': ['prekes-zenklai.html', 'Saugos ženklai'],
+  'automatika': ['prekes-automatika.html', 'Gaisrinė automatika ir įranga']
+} %}
+{# Mažos nuotraukos baltame fone ir schemų koliažas rodomi visi, netempiant ir neapkarpant (contain) #}
+{% set contain = ['gesintuvu-patikra', 'dielektriniu-priemoniu-patikra', 'gesintuvu-nuoma', 'avariniu-sviestuvu-montavimas'] %}
+{# Jei pirmoji JSON nuotrauka per maža (245x321), rodoma kita, didesnė to paties skyriaus nuotrauka #}
+{% set pick = {'gaisrine-signalizacija': 3} %}
+
+{# Hero: technikas gaisrinio vandentiekio patalpoje + piktogramų nuotrauka, kainų kortelė, skaičiai; po juo 10 paslaugų rodyklė #}
+{% set icons = {'gesintuvu-patikra': 'flame', 'gaisrine-signalizacija': 'bell', 'gaisrinis-vandentiekis': 'droplet', 'evakuacijos-planai': 'map', 'darbuotoju-mokymai': 'cap', 'dielektriniu-priemoniu-patikra': 'shield', 'medienos-impregnavimas': 'tools', 'gesintuvu-nuoma': 'truck', 'avariniu-sviestuvu-montavimas': 'bulb', 'registracijos-zurnalai': 'doc'} %}
+{% set priced = services.services | selectattr('price_from') | list %}
+<section class="sv-hero" data-parallax-root>
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.18">
+  <div class="wrap">
+    <div class="sv-copy">
+      <ol class="crumbs"><li><a href="index.html">Pradžia</a></li><li><span aria-current="page">Paslaugos</span></li></ol>
+      <h1>Paslaugos ir kainos</h1>
+      <p class="lead">Visos paslaugos ir jų kainoraščiai vienoje vietoje: nuo gesintuvų patikros iki mokymų ir dokumentų. Atvykstame į objektą visoje Lietuvoje.</p>
+      <div class="btn-group">{{ m.btn('Gauti pasiūlymą', 'kontaktai.html#forma') }}{{ m.btn('Kitos paslaugos', '#kitos-paslaugos', 'btn-line', '') }}</div>
+      <dl class="sv-stats">
+        <div><dt>Paslaugų su kainoraščiais</dt><dd data-count="{{ services.services | length }}">{{ services.services | length }}</dd></div>
+        <div><dt>Kitų paslaugų grupių</dt><dd data-count="{{ services.other_services | length }}">{{ services.other_services | length }}</dd></div>
+        <div><dt>Metų patirtis</dt><dd data-count="{{ site.years }}">{{ site.years }}</dd></div>
+      </dl>
+    </div>
+    <div class="sv-visual">
+      <div class="sv-main" data-parallax="0.06" data-reveal="scale"><img src="{{ img('foto:paslaugos-technikas') }}" alt="Specialistas su atšvaitine apranga tikrina gaisrinio vandentiekio vamzdyną" width="1880" height="1253" fetchpriority="high" sizes="(max-width: 960px) 92vw, 46vw" style="object-position: 30% 50%"></div>
+      <div class="sv-sub" data-parallax="-0.2"><img src="{{ img('foto:paslaugos-zenklai') }}" alt="Gesintuvo ir gaisrinio čiaupo ženklai ant spintelių durelių" width="1880" height="1255" sizes="(max-width: 960px) 40vw, 18vw"></div>
+      <div class="sv-prices" data-parallax="-0.12">
+        <span class="lbl">Kainos nuo</span>
+        <ul>{% for sv in priced[:3] %}<li><a href="#{{ sv.slug }}"><span>{{ sv.nav_title }}</span><b>{{ sv.price_from }}</b></a></li>{% endfor %}</ul>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <nav class="sv-index" aria-label="Paslaugų rodyklė">
+      {% for sv in services.services %}
+      <a href="#{{ sv.slug }}" data-reveal style="--i:{{ loop.index0 % 5 }}"><span class="n">{{ '%02d' % loop.index }}</span><span class="ico">{{ m.icon(icons.get(sv.slug, 'check')) }}</span><b>{{ sv.nav_title }}</b><small>{{ sv.price_from or sv.periodicity or 'Kaina pagal užklausą' }}</small></a>
+      {% endfor %}
+    </nav>
+    <p class="sv-note">{{ services.price_disclaimer }}</p>
+  </div>
+</section>
+
+<section class="sec pg-psl-doc">
+  <div class="wrap doc">
+    <nav class="doc-nav" aria-label="Paslaugų sąrašas">
+      <ul>
+        {% for s in services.services %}
+        <li><a href="#{{ s.slug }}">{{ s.nav_title }}</a></li>
+        {% endfor %}
+        <li><a href="#kitos-paslaugos">Kitos paslaugos</a></li>
+      </ul>
+      <div class="side-card pg-psl-side">
+        <strong>Reikia pasiūlymo?</strong>
+        <span class="muted">Skambinkite darbo dienomis 9:00-18:00 arba rašykite.</span>
+        <a href="tel:+37065399977">+370 653 99977</a>
+        <a href="mailto:info@geslita.lt">info@geslita.lt</a>
+        {{ m.btn('Gauti pasiūlymą', 'kontaktai.html#forma', 'btn-sm') }}
+      </div>
+    </nav>
+
+    <div class="doc-body">
+      {% for s in services.services %}
+      <section class="doc-sec pg-psl-sec" id="{{ s.slug }}" data-reveal>
+        <span class="pg-psl-n num" aria-hidden="true">{{ '%02d' % loop.index }}</span>
+        <h2>{{ s.title }}</h2>
+        {% if s.short and s.short|trim('.')|lower != s.title|lower %}<p class="lead">{{ s.short }}</p>{% endif %}
+
+        <div class="meta pg-psl-meta">
+          {% if s.price_from %}<span class="tag tag-navy">Kaina {{ s.price_from }}</span>
+          {% elif s.price_note and s.price_note.startswith('Kaina sutartinė') %}<span class="tag tag-navy">Kaina sutartinė</span>
+          {% else %}<span class="tag tag-navy">Kaina pagal užklausą</span>{% endif %}
+          {% if s.periodicity %}<span class="tag">{{ m.icon('clock') }}Periodiškumas: {{ s.periodicity }}</span>{% endif %}
+          {% if s.legal_basis and s.legal_basis|length <= 70 %}<span class="tag tag-line">{{ m.icon('doc') }}{{ s.legal_basis }}</span>{% endif %}
+        </div>
+        {% if s.legal_basis and s.legal_basis|length > 70 %}<p class="small muted pg-psl-note">Teisinis pagrindas: {{ s.legal_basis }}</p>{% endif %}
+        {# Pastaba praleidžiama tik tada, kai ji pažodžiui kartoja kainos žymą #}
+        {% if s.price_note and s.price_note|trim('.') != 'Kaina sutartinė' %}<p class="small muted pg-psl-note">{{ s.price_note }}</p>{% endif %}
+
+        {# Trumpuose skyriuose (iki 2 punktų) aprašymas dedamas šalia nuotraukos, kad šalia jos neliktų tuščio ploto; vienintelis punktas, kartojantis antraštę, nerodomas #}
+        {% set lite = s.images and s.bullets|length <= 2 %}
+        {% set show_checks = not (s.bullets|length == 1 and s.bullets[0]|lower|trim('.') == s.title|lower) %}
+        {% if not lite %}{{ m.paragraphs(s.summary) }}{% endif %}
+
+        <div class="pg-psl-two{{ ' rev' if loop.index0 % 2 else '' }}{{ ' solo' if not s.images else '' }}{{ ' lite' if lite else '' }}">
+          <div data-reveal style="--i:1">{% if lite %}{{ m.paragraphs(s.summary) }}{% endif %}{% if show_checks %}{{ m.checks(s.bullets) }}{% endif %}</div>
+          {% if s.images %}
+          <figure class="pg-psl-fig{{ ' contain' if s.slug in contain else '' }}" data-reveal="scale" style="--i:2">
+            {% set first = pick[s.slug] if s.slug in pick else 0 %}
+            {% for im in (s.images[:2] if s.slug == 'gesintuvu-nuoma' else s.images[first:first + 1]) %}<img src="{{ img(im.src) }}" alt="{{ im.alt }}" loading="lazy">{% endfor %}
+          </figure>
+          {% endif %}
+        </div>
+
+        {# Iki 3 stulpelių lentelės telefone telpa be slinkimo (kainos matomos iš karto); 5 stulpelių žurnalų lentelėje telefone slepiamas stulpelis „Reglamentuoja“, kad kainos liktų matomos #}
+        {% for t in s.tables %}{% set hide3 = t.columns|length > 3 and t.columns[2] == 'Reglamentuoja' %}<div class="pg-psl-tbl{{ ' narrow' if t.columns|length <= 3 else ' wide' }}{{ ' hide-c3' if hide3 else '' }}">{{ m.table(t) }}{% if hide3 %}<p class="tbl-note pg-psl-phone-note">Stulpelis „Reglamentuoja“ rodomas platesniame ekrane.</p>{% endif %}</div>{% endfor %}
+
+        {% if s.details %}
+        {% set body %}{{ m.paragraphs(s.details) }}{% endset %}
+        {{ m.acc('Plačiau: miltelinių, vandens putų ir angliarūgštės gesintuvų paskirtis', body) }}
+        {% endif %}
+
+        {% if s.pdfs %}
+        <ul class="doc-list">
+          {% for d in s.pdfs %}<li><a href="{{ d.url }}" target="_blank" rel="noopener">{{ m.icon('file') }}<span>{{ d.title }}<span class="sr-only"> (PDF, atsidaro naujame lange)</span></span><svg class="ic ic-out" aria-hidden="true"><use href="#i-out"/></svg></a></li>{% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if s.slug in pages or s.related_products %}
+        <div class="pg-psl-foot">
+          {% if s.slug in pages %}<a class="link" href="{{ pages[s.slug][0] }}">{{ pages[s.slug][1] }}{{ m.icon('arrow') }}</a>{% endif %}
+          {% if s.related_products %}
+          <div class="pill-row"><span class="small muted">Susijusios prekės:</span>{% for k in s.related_products %}<a class="tag tag-line" href="{{ prod[k][0] }}">{{ prod[k][1] }}</a>{% endfor %}</div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </section>
+      {% endfor %}
+
+      <section class="doc-sec pg-psl-sec" id="kitos-paslaugos" data-reveal>
+        <span class="pg-psl-n num" aria-hidden="true">{{ '%02d' % (services.services|length + 1) }}</span>
+        <h2>Kitos paslaugos verslui</h2>
+        <p class="lead">Be priešgaisrinės saugos darbų, padedame sutvarkyti ir kitus įmonės veiklai reikalingus dokumentus, leidimus ir mokymus. Išskleiskite grupę ir peržiūrėkite visą sąrašą.</p>
+        {% for g in services.other_services %}
+        {% set body %}<ul>{% for it in g['items'] %}<li>{{ it }}</li>{% endfor %}</ul>{% endset %}
+        {{ m.acc(g.group, body) }}
+        {% endfor %}
+      </section>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight pg-psl-cta" data-parallax-root>
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.18">
+  <div class="wrap">{{ m.cta_inline() }}</div>
+</section>
+{% endblock %}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) document.documentElement.classList.add('js');</script>
+<title>Apie mus | Geslita</title>
+<meta name="description" content="UAB „Geslita“, 20 metų patirtis: gesintuvų patikra ir pildymas, gaisrinė signalizacija, evakuacijos planai, darbuotojų mokymai ir priešgaisrinės prekės visoje Lietuvoje.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* Apie mus (.ab-): sluoksniuotas hero, judanti paslaugų juosta, ryškėjantis teiginys, numeruotas paslaugų sąrašas, prekių mozaika, kontaktai su žemėlapiu */
+.ab-hero { position: relative; padding-top: calc(var(--head-h) + clamp(36px, 5vw, 72px)); padding-bottom: clamp(56px, 7vw, 104px); overflow: clip; }
+.ab-hero .plan { position: absolute; right: -8%; top: -6%; width: clamp(560px, 58vw, 1000px); opacity: 0.12; pointer-events: none; will-change: transform; }
+.ab-side { position: relative; }
+.ab-num { margin-top: 18px; font: 700 clamp(150px, 17vw, 270px)/0.8 var(--fd); letter-spacing: -0.07em; color: transparent; -webkit-text-stroke: 2px rgba(37, 64, 122, 0.2); pointer-events: none; user-select: none; will-change: transform; font-variant-numeric: lining-nums; }
+.ab-copy h1 .lt-flag, .ab-statement .big .lt-flag, .ab-stats .lt-flag { width: 0.8em; height: 0.48em; vertical-align: 0.06em; }
+.ab-hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+.ab-copy h1 { margin: 18px 0 20px; font-size: clamp(38px, 5vw, 66px); line-height: 1.02; letter-spacing: -0.03em; }
+.ab-copy .lead { max-width: 34em; }
+.ab-copy .btn-group { margin-top: 30px; }
+.ab-visual { position: relative; height: clamp(420px, 44vw, 600px); }
+.ab-photo { position: absolute; inset: 4% 4% 10% 14%; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-lg); will-change: transform; }
+.ab-photo img { width: 100%; height: 100%; object-fit: cover; }
+.ab-product { position: absolute; left: -2%; bottom: -4%; height: 74%; z-index: 2; will-change: transform; }
+.ab-product img { height: 100%; width: auto; filter: drop-shadow(0 30px 30px rgba(14, 26, 43, 0.3)); }
+.ab-chip { position: absolute; right: 0; bottom: 16%; z-index: 3; display: grid; gap: 2px; padding: 14px 18px; border-radius: 14px; background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(217, 223, 231, 0.8); box-shadow: var(--shadow-lg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); will-change: transform; }
+.ab-chip b { font: 700 19px/1.2 var(--fd); color: var(--ink); }
+.ab-chip span { font-size: 13.5px; color: var(--muted); }
+
+.ab-marquee { border-block: 1px solid var(--line); background: var(--surface); overflow: hidden; padding: 18px 0; }
+.ab-marquee .track { display: flex; width: max-content; animation: ab-scroll 48s linear infinite; }
+.ab-marquee:hover .track { animation-play-state: paused; }
+.ab-marquee ul { display: flex; align-items: center; margin: 0; padding: 0; list-style: none; }
+.ab-marquee li { display: flex; align-items: center; gap: 28px; padding-right: 28px; font: 600 clamp(18px, 1.8vw, 24px)/1.2 var(--fd); color: var(--ink); white-space: nowrap; }
+.ab-marquee li .ic { font-size: 18px; color: var(--navy-3); }
+@keyframes ab-scroll { to { transform: translateX(-50%); } }
+html.is-static .ab-marquee .track { animation: none; }
+
+.ab-statement .wrap { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
+.ab-statement .big { font: 600 clamp(24px, 2.7vw, 38px)/1.3 var(--fd); letter-spacing: -0.015em; color: var(--ink); text-wrap: pretty; }
+.ab-statement .big .w { display: inline; }
+.ab-statement .more { margin-top: 22px; max-width: 46em; color: var(--text); }
+.ab-stats { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 32px); margin-top: clamp(40px, 5vw, 72px); }
+.ab-stats > div { padding-top: 18px; border-top: 2px solid var(--ink); }
+.ab-stats .num { display: block; font: 700 clamp(40px, 4.4vw, 64px)/1 var(--fd); letter-spacing: -0.03em; color: var(--ink); font-variant-numeric: lining-nums; }
+.ab-stats .num.txt { font-size: clamp(28px, 2.8vw, 40px); line-height: 1.15; }
+.ab-stats p { margin-top: 10px; font-size: 15px; color: var(--muted); }
+
+.ab-ledger .wrap { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(28px, 5vw, 80px); align-items: start; }
+.ab-ledger .lead { margin: 16px 0 26px; }
+.ledger { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line-2); }
+.ledger li { border-bottom: 1px solid var(--line-2); }
+.ledger .row { display: grid; grid-template-columns: 56px minmax(0, 1fr) 28px; align-items: center; gap: 16px; padding: 20px 14px 20px 6px; color: var(--ink); text-decoration: none; font: 500 clamp(17px, 1.5vw, 20px)/1.35 var(--fd); transition: background 0.35s var(--ease), padding 0.35s var(--ease); }
+.ledger .n { font: 600 14px/1 var(--fb); color: var(--muted); font-variant-numeric: lining-nums tabular-nums; transition: color 0.35s var(--ease); }
+.ledger .ar .ic { font-size: 18px; color: var(--muted); transition: transform 0.35s var(--ease), color 0.35s var(--ease); }
+.ledger a.row:hover { background: var(--surface); padding-left: 16px; }
+.ledger a.row:hover .n, .ledger a.row:hover .ar .ic { color: var(--navy-3); }
+.ledger a.row:hover .ar .ic { transform: translateX(4px); }
+
+.ab-sell { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; grid-template-rows: 270px 270px; gap: clamp(14px, 1.8vw, 22px); }
+.ab-sell .tile { padding: 22px; }
+.ab-sell .tile h3 { font-size: 18px; }
+.ab-sell .tile p { font-size: 14.5px; }
+.ab-sell .t-big { grid-column: 1; grid-row: 1 / 3; }
+.ab-sell .t-signs { grid-column: 2 / 4; grid-row: 2; }
+.ab-sell .t-plain { background: var(--bg-2); border-color: transparent; justify-content: space-between; }
+.ab-sell .t-plain .ic-wrap { width: 48px; height: 48px; border-radius: 12px; background: var(--surface); color: var(--navy-3); display: grid; place-items: center; }
+.ab-sell .t-plain .ic-wrap .ic { font-size: 22px; }
+.ab-sell .t-plain small { display: block; margin-top: 8px; font-size: 13px; color: var(--muted); }
+.ab-sell .tile-photo .media img { transition: transform 0.9s var(--ease); }
+.ab-sell .tile-photo:hover .media img { transform: scale(1.05); }
+.ab-sell .t-signs .media { inset: 26px 22px 42% 22px; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; align-content: center; }
+.ab-sell .t-signs .media img { padding: 6px; }
+
+.ab-center .photo.para { aspect-ratio: 4 / 3.3; }
+.ab-center .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
+.ab-center .chips a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); color: var(--ink); font-size: 14px; font-weight: 600; text-decoration: none; transition: border-color 0.3s var(--ease), transform 0.3s var(--ease); }
+.ab-center .chips a:hover { border-color: var(--ink); transform: translateY(-2px); }
+.ab-center .chips .ic { font-size: 14px; color: var(--navy-3); }
+.ab-partner { display: flex; align-items: center; gap: 16px; margin: 24px 0 28px; padding: 10px 16px 10px 18px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); width: fit-content; }
+.ab-partner img { height: 36px; width: auto; border-radius: 6px; }
+.ab-partner span { font-size: 13px; color: var(--muted); }
+
+.ab-contact .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+.ab-contact .lead { margin: 14px 0 32px; }
+.ab-clist { margin: 0; padding: 0; list-style: none; display: grid; gap: 22px; }
+.ab-clist li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; align-items: start; padding-top: 22px; border-top: 1px solid var(--line-dark); }
+.ab-clist li:first-child { padding-top: 0; border-top: 0; }
+.ab-clist .ico { width: 44px; height: 44px; border-radius: 12px; background: rgba(255, 255, 255, 0.07); border: 1px solid var(--line-dark); display: grid; place-items: center; }
+.ab-clist .ico .ic { font-size: 20px; color: var(--on-dark); }
+.ab-clist h3 { font-size: 16px; margin-bottom: 6px; color: #fff; }
+.ab-clist p { font-size: 15.5px; color: var(--on-dark); }
+.ab-clist p.note { margin-top: 6px; font-size: 13.5px; color: var(--on-dark-muted); }
+.ab-clist a { color: #fff; font-weight: 600; text-decoration: none; }
+.ab-clist a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.ab-map figcaption { margin-top: 18px; text-align: center; font-size: 14px; color: var(--on-dark-muted); }
+.ab-map .lt-map { max-width: 520px; }
+.ab-cta { padding-top: clamp(40px, 5vw, 64px); }
+
+@media (max-width: 960px) {
+  .ab-hero .wrap, .ab-statement .wrap, .ab-ledger .wrap, .ab-contact .wrap { grid-template-columns: minmax(0, 1fr); }
+  .ab-visual { height: 440px; max-width: 560px; }
+  .ab-num { display: none; }
+  .ab-stats { grid-template-columns: 1fr 1fr; }
+  .ab-sell { grid-template-columns: 1fr 1fr; grid-template-rows: 300px 230px 230px 230px; }
+  .ab-sell .t-big { grid-column: 1 / 3; grid-row: 1; }
+  .ab-sell .t-signs { grid-column: 1 / 3; grid-row: auto; }
+  .ab-sell .t-big .media { width: 30%; }
+}
+@media (max-width: 560px) {
+  .ab-visual { height: 360px; }
+  .ab-chip { bottom: 6%; padding: 10px 14px; }
+  .ab-stats { grid-template-columns: 1fr; }
+  .ab-sell { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .ab-sell .tile { min-height: 220px; }
+  .ab-sell .t-big, .ab-sell .t-signs { grid-column: auto; }
+  .ab-sell .t-big { min-height: 320px; }
+  .ab-sell .t-big .media { width: 40%; }
+  .ab-sell .t-signs .media { bottom: 46%; gap: 6px; }
+  .ledger .row { grid-template-columns: 40px minmax(0, 1fr) 22px; gap: 12px; padding: 16px 6px 16px 2px; }
+}
+</style></head>
+<body class="">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14L20 4M15 4h5v5"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3 4 5 4 9a4 4 0 0 1-8 0c0-1 .3-2 1-3 0 2 1 3 2 3 0-3-1-5 1-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V6h11v11M14 9h4l3 3v5h-2"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3H4a4 4 0 0 0 2-3v-3a7 7 0 0 1 4-6M9 17v1a3 3 0 0 0 6 0v-1"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3zM9 4v13M15 7v13"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 9L12 5 2 9l10 4 10-4zM6 10.6V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.4"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M7 10h3v11H7zM14 4l3-1 3 3-1 3-5 5-3-3 3-7zM4 20l3-3"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></symbol>
+</svg>
+<a class="skip" href="#main">Pereiti prie turinio</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Geslita, į pradžią"><img src="assets/img/logo-geslita-s.png" alt="Geslita" width="167" height="50"></a>
+    <ul class="site-nav">
+      <li><a href="index.html" >Pradžia</a></li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-paslaugos">Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-paslaugos">
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas<span>Patikra nuo 5,26 €</span></a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija<span>Patikra, remontas, įrengimas</span></a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis<span>Čiaupai, žarnos, žurnalai</span></a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai<span>Planas 70 €</span></a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai<span>Montavimas pagal EN 1838</span></a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai<span>Saugos centras</span></a></li>
+          <li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos<span>Dielektrika, nuoma, žurnalai</span></a></li>
+          <li><a class="drop-all" href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-prekes">Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-prekes">
+          <li><a href="prekes-gesintuvai.html">Gesintuvai<span>Milteliniai, CO₂, vandens putų</span></a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis<span>Spintelės, žarnos, čiaupai</span></a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai<span>102 ženklai su paieška</span></a></li>
+          <li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga<span>Detektoriai, sirenos, šviestuvai</span></a></li>
+          <li><a class="drop-all" href="prekes.html">Visos prekės</a></li>
+        </ul>
+      </li>
+      <li><a href="saugos-centras.html" >Saugos centras</a></li>
+      <li class="nav-naudinga"><a href="naudinga-informacija.html" >Naudinga</a></li>
+      <li><a href="apie-mus.html" aria-current="page">Apie mus</a></li>
+      <li><a href="kontaktai.html" >Kontaktai</a></li>
+    </ul>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>+370 653 99977</span></a>
+      <a class="btn btn-sm" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+      <button class="nav-toggle" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-nav"><svg class="ic ic-menu"><use href="#i-menu"/></svg><svg class="ic ic-x"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilus meniu">
+  <ul>
+    <li><a href="index.html">Pradžia</a></li>
+    <li><details><summary>Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li><li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas</a></li><li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li><li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li><li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li><li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li><li><a href="saugos-centras.html">Darbuotojų mokymai</a></li><li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos</a></li>
+    </ul></details></li>
+    <li><details><summary>Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="prekes.html">Visos prekės</a></li><li><a href="prekes-gesintuvai.html">Gesintuvai</a></li><li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li><li><a href="prekes-zenklai.html">Saugos ženklai</a></li><li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga</a></li>
+    </ul></details></li>
+    <li><a href="saugos-centras.html">Saugos centras</a></li>
+    <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+    <li><a href="apie-mus.html">Apie mus</a></li>
+    <li><a href="kontaktai.html">Kontaktai</a></li>
+  </ul>
+  <div class="mobile-cta">
+    <a class="btn" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+    <a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<section class="ab-hero" data-parallax-root>
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.2">
+  <div class="wrap">
+    <div class="ab-copy">
+      <ol class="crumbs"><li><a href="index.html">Pradžia</a></li><li><span aria-current="page">Apie mus</span></li></ol>
+      <h1><span class="ltx">20 metų rūpinamės priešgaisrine sauga visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span></span></h1>
+      <p class="lead">UAB „Geslita“ - priešgaisrinės įrangos priežiūros ir prekybos įmonė, tiekianti ir darbo saugos priemones.</p>
+      <div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="paslaugos.html">Paslaugos ir kainos</a></div>
+    </div>
+    <div class="ab-visual">
+      <div class="ab-photo" data-parallax="0.06" data-reveal="scale"><img src="assets/img/foto/vilnius-panorama.jpg" srcset="assets/img/foto/vilnius-panorama-640.webp 640w, assets/img/foto/vilnius-panorama-1280.webp 1280w, assets/img/foto/vilnius-panorama-1920.webp 1920w" alt="Vilniaus verslo centro panorama prie Neries" width="1733" height="1300" fetchpriority="high" sizes="(max-width: 960px) 92vw, 42vw" style="object-position: 62% 50%"></div>
+      <div class="ab-product" data-parallax="-0.14"><img src="assets/img/cutout/dsc9857.webp" alt="Gesintuvas iš Geslitos asortimento" width="560" height="1062"></div>
+      <div class="ab-chip" data-parallax="-0.26"><b><span class="ltx">Visa <span class="lt">Lietuva<span class="lt-flag" aria-hidden="true"></span></span></span></b><span>atvykstame į jūsų objektą</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ab-marquee" aria-hidden="true">
+  <div class="track">
+<ul><li>Gesintuvų patikra ir pildymas<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Gaisrinis vandentiekis<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Gaisrinių žarnų išbandymas<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Evakuacijos planai<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Gaisrinė signalizacija<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Automatinės gesinimo sistemos<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Varžų matavimas<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Dielektrinių priemonių patikra<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Aukštalipių įrangos patikra<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Priešgaisrinės saugos mokymai<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li></ul><ul><li>Gesintuvų patikra ir pildymas<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Gaisrinis vandentiekis<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Gaisrinių žarnų išbandymas<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Evakuacijos planai<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Gaisrinė signalizacija<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Automatinės gesinimo sistemos<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Varžų matavimas<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Dielektrinių priemonių patikra<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Aukštalipių įrangos patikra<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li><li>Priešgaisrinės saugos mokymai<svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></li></ul>  </div>
+</div>
+
+<section class="sec ab-statement">
+  <div class="wrap">
+    <div class="ab-side" data-parallax-root>
+      <div class="eyebrow" data-reveal>Apie įmonę</div>
+      <div class="ab-num" aria-hidden="true" data-parallax="-0.12">20</div>
+    </div>
+    <div>
+      <p class="big" data-words><span class="ltx">Atliekame visų rūšių ir tipų ugnies gesintuvų patikrą, pildymą ir techninį aptarnavimą visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>, prižiūrime gaisrinį vandentiekį ir gaisrinę signalizaciją, braižome patalpų evakuacinius planus, prižiūrime ir komplektuojame objektų gaisrinį ūkį.</span></p>
+      <div class="more" data-reveal><p>Prekiaujame gesintuvais, gaisrinio vandentiekio įranga, gaisrinės ir darbo saugos ženklais bei kitomis priešgaisrinėmis prekėmis. Įmonės saugos centras rengia priešgaisrinės ir darbų saugos mokymus, gaisrinės saugos instrukcijas ir darbuotojų saugos ir sveikatos dokumentaciją.</p></div>
+    </div>
+    <div class="ab-stats">
+      <div data-reveal style="--i:0"><span class="num" data-count="20">20</span><p>metų patirtis priešgaisrinės saugos srityje</p></div>
+      <div data-reveal style="--i:1"><span class="num" data-count="12">12</span><p>veiklos sričių: nuo gesintuvų patikros iki mokymų</p></div>
+      <div data-reveal style="--i:2"><span class="num" data-count="6">6</span><p>prekių grupės: gesintuvai, vandentiekis, ženklai ir kt.</p></div>
+      <div data-reveal style="--i:3"><span class="num txt"><span class="ltx">Visa <span class="lt">Lietuva<span class="lt-flag" aria-hidden="true"></span></span></span></span><p>darbus atliekame jūsų objekte</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tint ab-ledger">
+  <div class="wrap">
+    <div class="sticky-col" data-reveal>
+      <h2>Ką darome</h2>
+      <p class="lead">Visos įmonės veiklos sritys vienoje vietoje. Kainas ir sąlygas rasite paslaugų puslapyje.</p>
+      <a class="btn btn-navy" href="paslaugos.html">Visos paslaugos ir kainos<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <ol class="ledger">
+        <li data-reveal style="--i:0"><a class="row" href="gesintuvu-patikra.html"><span class="n">01</span><span class="t"><span class="ltx">Atliekame visų rūšių ir tipų ugnies gesintuvų patikrą, pildymą ir techninį aptarnavimą visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span></span></span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+        <li data-reveal style="--i:1"><a class="row" href="paslaugos.html#gaisrinis-vandentiekis"><span class="n">02</span><span class="t">Atliekame gaisrinių čiaupų patikrą ir gaisrinių čiaupų keitimo darbus</span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+        <li data-reveal style="--i:2"><a class="row" href="paslaugos.html#gaisrinis-vandentiekis"><span class="n">03</span><span class="t">Išbandome slėgines gaisrines žarnas, jas džioviname, įrišame, perkantuojame</span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+        <li data-reveal style="--i:3"><a class="row" href="evakuacijos-planai.html"><span class="n">04</span><span class="t">Braižome patalpų evakuacinius planus, juos rėminame ir laminuojame</span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+        <li data-reveal style="--i:0"><div class="row"><span class="n">05</span><span class="t">Prižiūrime ir komplektuojame objektų gaisrinį ūkį</span><span class="ar"></span></div></li>
+        <li data-reveal style="--i:1"><a class="row" href="gaisrine-signalizacija.html"><span class="n">06</span><span class="t">Gaisrinės signalizacijos montavimas ir aptarnavimas</span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+        <li data-reveal style="--i:2"><div class="row"><span class="n">07</span><span class="t">Automatinių gesinimo sistemų techninė priežiūra</span><span class="ar"></span></div></li>
+        <li data-reveal style="--i:3"><div class="row"><span class="n">08</span><span class="t">Varžų matavimas</span><span class="ar"></span></div></li>
+        <li data-reveal style="--i:0"><a class="row" href="paslaugos.html#dielektriniu-priemoniu-patikra"><span class="n">09</span><span class="t">Dielektrinių priemonių patikra</span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+        <li data-reveal style="--i:1"><div class="row"><span class="n">10</span><span class="t">Aukštalipių įrangos patikra</span><span class="ar"></span></div></li>
+        <li data-reveal style="--i:2"><div class="row"><span class="n">11</span><span class="t">Logotipų siuvinėjimas ant drabužių (šilkografija)</span><span class="ar"></span></div></li>
+        <li data-reveal style="--i:3"><a class="row" href="saugos-centras.html"><span class="n">12</span><span class="t">Priešgaisrinės ir darbų saugos mokymai</span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec sec-white">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2>Ką parduodame</h2>
+      <p class="lead">Prekyba vyksta elektroniniu būdu: užsakymus priimame el. paštu arba telefonu.</p>
+    </div>
+    <div class="ab-sell">
+      <a class="tile tile-big t-big" href="prekes-gesintuvai.html" data-reveal>
+        <div class="media"><img src="assets/img/cutout/dsc9858.webp" alt="" loading="lazy" width="560" height="1128"></div>
+        <h3>Gesintuvai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3><p>Visų rūšių ugnies gesintuvais</p>
+      </a>
+      <a class="tile tile-photo" href="prekes-vandentiekis.html" data-reveal style="--i:1">
+        <div class="media"><img src="assets/img/foto/vandentiekis-rite.jpg" srcset="assets/img/foto/vandentiekis-rite-640.webp 640w, assets/img/foto/vandentiekis-rite-1280.webp 1280w, assets/img/foto/vandentiekis-rite-1920.webp 1920w" alt="" loading="lazy" width="1880" height="1253" sizes="(max-width: 960px) 50vw, 22vw"></div>
+        <h3>Vandentiekis<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3><p>Gaisrinio vandentiekio įranga</p>
+      </a>
+      <a class="tile tile-photo" href="prekes-vandentiekis.html" data-reveal style="--i:2">
+        <div class="media"><img src="assets/img/foto/hv-vandentiekis.jpg" srcset="assets/img/foto/hv-vandentiekis-640.webp 640w, assets/img/foto/hv-vandentiekis-1280.webp 1280w, assets/img/foto/hv-vandentiekis-1920.webp 1920w" alt="" loading="lazy" width="1000" height="1500" sizes="(max-width: 960px) 50vw, 22vw" style="object-position: 50% 40%"></div>
+        <h3>Čiaupų komplektai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3><p>Spintelės, žarnos, čiaupai, švirkštai, armatūra</p>
+      </a>
+      <a class="tile tile-photo" href="prekes-vandentiekis.html" data-reveal style="--i:3">
+        <div class="media"><img src="assets/img/geslita/gaisrines_galvutes_gaisriniai_hidrantai.jpg" alt="" loading="lazy" width="432" height="432"></div>
+        <h3>Hidrantai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3><p>Siurbliais, hidrantais, absorbentais</p>
+      </a>
+      <a class="tile tile-signs t-signs" href="prekes-zenklai.html" data-reveal style="--i:4">
+        <div class="media"><img src="assets/img/katalogas/krzenklai--image001.png" alt="" loading="lazy"><img src="assets/img/katalogas/krzenklai--image003.png" alt="" loading="lazy"><img src="assets/img/katalogas/infzenklai--image001.gif" alt="" loading="lazy"><img src="assets/img/katalogas/infzenklai--image002.gif" alt="" loading="lazy"><img src="assets/img/katalogas/drzenklai--image001.gif" alt="" loading="lazy"><img src="assets/img/katalogas/drzenklai--image003.gif" alt="" loading="lazy"></div>
+        <h3>Saugos ženklai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3><p>Gaisrinės ir darbo saugos ženklais</p>
+      </a>
+      <div class="tile t-plain" data-reveal style="--i:5">
+        <span class="ic-wrap"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></span>
+        <div><h3>Priešgaisrinis sandarinimas</h3><p>Priešgaisriniais dažais, užpildais, priešgaisrinio sandarinimo juostomis, movomis</p><small>Teiraukitės el. paštu arba telefonu</small></div>
+      </div>
+    </div>
+    <div class="btn-group" style="margin-top:32px" data-reveal><a class="btn btn-navy" href="prekes.html">Visos prekės<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+  </div>
+</section>
+
+<section class="sec ab-center">
+  <div class="wrap split">
+    <div class="photo para" data-reveal="scale" data-parallax-root>
+      <img src="assets/img/foto/saugos-mokymai.jpg" srcset="assets/img/foto/saugos-mokymai-640.webp 640w, assets/img/foto/saugos-mokymai-1280.webp 1280w, assets/img/foto/saugos-mokymai-1920.webp 1920w" sizes="(max-width: 960px) 92vw, 50vw" alt="Lektorė prie vartomosios lentos veda mokymus darbuotojams" loading="lazy" width="1880" height="1058" data-parallax="0.15" style="object-position: 72% 50%">
+    </div>
+    <div data-reveal>
+      <div class="eyebrow">Saugos centras</div>
+      <h2 style="margin-bottom:18px">Mokymai, instrukcijos ir dokumentacija</h2>
+      <p>„Geslitos“ saugos centro specialistai turi profesinės veiklos patirtį darbuotojų saugos ir sveikatos, gaisrinės saugos ir darbo teisės srityse. Padedame darbdaviams sukurti saugias ir sveikas darbo sąlygas bei išlaikyti jas aukštame lygyje: rengiame darbuotojų priešgaisrinės saugos mokymus, gaisrinės saugos instrukcijas, darbuotojų saugos ir sveikatos dokumentaciją ir ekstremalių situacijų valdymo planus. Savo veikloje vadovaujamės tik aktualios redakcijos norminiais teisės aktais, teismų praktika ir ekspertų rekomendacijomis.</p>
+      <ul class="chips">
+        <li><a href="saugos-centras.html#mokymai">Mokymai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+<li><a href="saugos-centras.html#instrukcija">Gaisrinės saugos instrukcijos<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li><li><a href="saugos-centras.html#esvp">Ekstremalių situacijų valdymo planai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li><li><a href="saugos-centras.html#dss">DSS dokumentacija<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>      </ul>
+      <div class="ab-partner"><span>Partneris</span><img src="assets/img/katalogas/ziniumedis-logo.jpg" alt="Žinių medis" loading="lazy"></div>
+      <a class="btn btn-navy" href="saugos-centras.html">Apie saugos centrą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec band-dark ab-contact" id="kontaktai">
+  <div class="wrap">
+    <div data-reveal>
+      <h2>Kontaktai</h2>
+      <p class="lead"><span class="ltx">Skambinkite arba rašykite el. paštu darbo dienomis. Darbus objektuose atliekame visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+      <ul class="ab-clist">
+        <li><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3>Telefonai ir el. paštas</h3><p><a href="tel:+37065399977">+370 653 99977</a><br><a href="tel:+37060763109">+370 607 63109</a></p><p><a href="mailto:info@geslita.lt">info@geslita.lt</a></p></div></li>
+        <li><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span><div><h3>Darbo laikas</h3><p>I-V 9:00-18:00</p></div></li>
+        <li><span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span><div><h3>Adresas</h3><p>Fabijoniškių g. 4A, Vilnius</p><p class="note">Šis adresas nėra parduotuvės adresas - „gyvai“ neprekiaujame, prekyba vyksta tik elektroniniu būdu: užsakymus priimame el. paštu info@geslita.lt arba telefonu. Prieš atvažiuodami būtinai paskambinkite +370 653 99977 ir pasiteiraukite, ar esame vietoje.</p></div></li>
+      </ul>
+    </div>
+    <figure class="ab-map" data-reveal style="--i:1">
+<svg class="lt-map" viewBox="0 0 600 451" role="img" aria-label="Lietuvos žemėlapis: dirbame visoje Lietuvoje, būstinė Vilniuje">
+<defs><pattern id="lt-dot" width="11" height="11" patternUnits="userSpaceOnUse"><circle cx="5.5" cy="5.5" r="2.4"/></pattern></defs>
+<path class="lt-fill" d="M6,203 L0,201 L12,181 L16,167 L19,148 L22,142 L22,151 L21,165 L13,190 L6,203 Z M191,368 L186,359 L182,343 L182,331 L185,318 L197,281 L197,276 L188,265 L176,258 L170,242 L148,241 L126,242 L120,241 L99,234 L80,224 L67,218 L56,211 L50,203 L41,205 L34,205 L34,204 L31,191 L35,171 L28,142 L17,107 L16,69 L15,61 L42,40 L77,17 L85,15 L117,2 L121,1 L150,3 L172,6 L191,6 L202,3 L211,6 L219,16 L227,14 L234,8 L277,14 L287,14 L297,15 L317,21 L329,26 L354,23 L365,23 L371,21 L388,5 L396,3 L402,0 L409,2 L413,15 L426,38 L440,42 L478,50 L486,55 L508,75 L521,84 L530,92 L542,107 L550,118 L562,127 L576,132 L581,133 L581,141 L579,155 L574,172 L569,186 L568,191 L571,196 L590,198 L598,200 L600,204 L596,208 L590,212 L587,216 L582,229 L551,228 L546,230 L544,236 L543,243 L539,252 L530,259 L517,262 L506,267 L498,282 L492,303 L493,318 L493,326 L493,330 L489,336 L482,349 L477,364 L475,372 L476,376 L482,376 L490,379 L495,385 L497,392 L497,399 L495,403 L488,406 L477,406 L471,403 L469,400 L473,393 L470,384 L466,379 L457,386 L448,386 L437,393 L430,404 L423,408 L405,405 L401,410 L397,432 L395,436 L380,435 L365,444 L349,451 L341,446 L336,440 L327,441 L317,444 L311,442 L304,443 L289,447 L272,446 L264,442 L263,439 L264,430 L264,417 L261,406 L252,396 L243,388 L232,381 L223,378 L219,377 L218,373 L216,369 L212,366 L204,362 L196,361 L191,368 Z"/>
+<path class="lt-outline" d="M6,203 L0,201 L12,181 L16,167 L19,148 L22,142 L22,151 L21,165 L13,190 L6,203 Z M191,368 L186,359 L182,343 L182,331 L185,318 L197,281 L197,276 L188,265 L176,258 L170,242 L148,241 L126,242 L120,241 L99,234 L80,224 L67,218 L56,211 L50,203 L41,205 L34,205 L34,204 L31,191 L35,171 L28,142 L17,107 L16,69 L15,61 L42,40 L77,17 L85,15 L117,2 L121,1 L150,3 L172,6 L191,6 L202,3 L211,6 L219,16 L227,14 L234,8 L277,14 L287,14 L297,15 L317,21 L329,26 L354,23 L365,23 L371,21 L388,5 L396,3 L402,0 L409,2 L413,15 L426,38 L440,42 L478,50 L486,55 L508,75 L521,84 L530,92 L542,107 L550,118 L562,127 L576,132 L581,133 L581,141 L579,155 L574,172 L569,186 L568,191 L571,196 L590,198 L598,200 L600,204 L596,208 L590,212 L587,216 L582,229 L551,228 L546,230 L544,236 L543,243 L539,252 L530,259 L517,262 L506,267 L498,282 L492,303 L493,318 L493,326 L493,330 L489,336 L482,349 L477,364 L475,372 L476,376 L482,376 L490,379 L495,385 L497,392 L497,399 L495,403 L488,406 L477,406 L471,403 L469,400 L473,393 L470,384 L466,379 L457,386 L448,386 L437,393 L430,404 L423,408 L405,405 L401,410 L397,432 L395,436 L380,435 L365,444 L349,451 L341,446 L336,440 L327,441 L317,444 L311,442 L304,443 L289,447 L272,446 L264,442 L263,439 L264,430 L264,417 L261,406 L252,396 L243,388 L232,381 L223,378 L219,377 L218,373 L216,369 L212,366 L204,362 L196,361 L191,368 Z"/>
+<g class="lt-pin" transform="translate(447 308)"><circle class="pulse" r="9"/><circle class="core" r="6.5"/><text x="15" y="5">Vilnius</text></g>
+</svg>      <figcaption><span class="ltx">Būstinė Vilniuje, į objektus atvykstame visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span></span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec sec-tight ab-cta"><div class="wrap"><div class="cta-inline" data-reveal>
+  <div><h2>Reikia pasiūlymo jūsų objektui?</h2><p>Paskambinkite arba parašykite: aptarsime įrangos kiekį, terminus ir paruošime pasiūlymą.</p></div>
+  <div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a></div>
+</div></div></section>
+</main>
+
+<footer class="site-foot">
+  <img class="plan-wm" src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo-geslita-white-s.png" alt="Geslita" width="167" height="50">
+        <p><span class="ltx">20 metų priešgaisrinės saugos patirties. Įrangos priežiūra ir prekyba, darbo saugos priemonės verslui visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+      </div>
+      <div>
+        <h2 class="foot-h">Paslaugos</h2>
+        <ul>
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra</a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai</a></li>
+          <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Prekės ir informacija</h2>
+        <ul>
+          <li><a href="prekes-gesintuvai.html">Gesintuvai</a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai</a></li>
+          <li><a href="prekes-automatika.html">Automatika ir įranga</a></li>
+          <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+          <li><a href="apie-mus.html">Apie mus</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Kontaktai</h2>
+        <ul class="foot-contact">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+37065399977">+370 653 99977</a><br><a href="tel:+37060763109">+370 607 63109</a></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@geslita.lt">info@geslita.lt</a></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Fabijoniškių g. 4A, Vilnius<br><span class="muted">Ne parduotuvė: prieš atvykdami paskambinkite</span></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span>I-V 9:00-18:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2010-2026 UAB „Geslita“. Visos teisės saugomos.</span>
+      <span><a href="kontaktai.html">Kontaktai</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

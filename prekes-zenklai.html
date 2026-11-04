@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) document.documentElement.classList.add('js');</script>
+<title>Saugos ženklai | Geslita</title>
+<meta name="description" content="Saugos ženklų katalogas su paieška: evakuacijos krypties, informacijos, draudžiamieji, įspėjamieji, elektrosaugos, saugos ir sveikatos, operatyviniai ir pavojingų medžiagų ženklai. Kainos su PVM.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* Saugos ženklai: grupių apžvalga, lipni paieškos juosta ir lentelės */
+.pg-signs-over { overflow: clip; }
+.pg-signs-over .plan { position: absolute; left: -12%; bottom: -30%; width: clamp(520px, 50vw, 860px); opacity: 0.1; pointer-events: none; will-change: transform; }
+.pg-signs-over .wrap { position: relative; }
+.pg-signs-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 1.8vw, 20px); }
+.pg-signs-gcard { display: grid; gap: 14px; padding: 20px 22px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-sm); color: inherit; text-decoration: none; transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease); }
+.pg-signs-gcard:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.pg-signs-gcard .thumbs { display: flex; gap: 8px; }
+.pg-signs-gcard .thumbs img { width: 58px; height: 58px; object-fit: contain; padding: 6px; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+.pg-signs-gcard h3 { font-size: 18px; display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+.pg-signs-gcard h3 .ic { font-size: 18px; color: var(--ink); flex: none; margin-top: 3px; transition: transform 0.3s var(--ease); }
+.pg-signs-gcard:hover h3 .ic { transform: translateX(4px); }
+.pg-signs-bar { position: sticky; top: var(--head-h); z-index: 5; padding: 14px 0 12px; margin-bottom: clamp(28px, 4vw, 44px); background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.pg-signs-bar .search { margin-bottom: 10px; }
+.pg-signs-bar .pill-row a { text-decoration: none; transition: border-color 0.25s var(--ease), color 0.25s var(--ease); }
+.pg-signs-bar .pill-row a:hover { border-color: var(--ink); color: var(--ink); }
+.pg-signs-group { scroll-margin-top: 124px; }
+.pg-signs-group + .pg-signs-group { margin-top: clamp(40px, 5vw, 64px); }
+.pg-signs-ghead { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-bottom: 16px; }
+.pg-signs-ghead h2 { font-size: clamp(24px, 2.4vw, 30px); }
+.pg-signs-cat .tbl .thumb { width: 92px; }
+.pg-signs-cat .tbl th:nth-child(3) { width: 150px; }
+.pg-signs-cat .tbl th:nth-child(4) { width: 140px; }
+.pg-signs-cat .tbl .thumb img { width: 64px; height: 48px; }
+.pg-signs-cat .tbl td .code { color: var(--ink); font-weight: 700; margin-right: 6px; }
+.pg-signs-cat .tbl td .use { display: block; font-size: 13.5px; color: var(--muted); margin-top: 3px; max-width: 60ch; }
+.pg-signs-cat .tbl td.dims span, .pg-signs-cat .tbl td.num b { display: block; white-space: nowrap; }
+.pg-signs-cat .tbl td.dims { white-space: nowrap; }
+.pg-signs-cat .notice { margin-top: clamp(32px, 4vw, 48px); }
+@media (max-width: 1100px) { .pg-signs-bar .pill-row { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; } }
+@media (max-width: 900px) { .pg-signs-groups { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) {
+  .pg-signs-groups { grid-template-columns: 1fr; }
+  .pg-signs-bar .search .count { display: none; }
+  /* Lentelė telefone: kiekviena eilutė tampa kortele (tinklelis), antraštė slepiama */
+  .pg-signs-cat .tbl table, .pg-signs-cat .tbl tbody { display: block; min-width: 0; }
+  .pg-signs-cat .tbl thead { display: none; }
+  .pg-signs-cat .tbl tr { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; grid-template-areas: "thumb name name" "thumb dims price"; gap: 4px 12px; padding: 12px 14px; border-top: 1px solid var(--line); font-size: 14.5px; }
+  .pg-signs-cat .tbl tr:first-child { border-top: 0; }
+  .pg-signs-cat .tbl td { display: block; padding: 0; border: 0; width: auto; }
+  .pg-signs-cat .tbl td.thumb { grid-area: thumb; }
+  .pg-signs-cat .tbl td.name { grid-area: name; }
+  .pg-signs-cat .tbl td.dims { grid-area: dims; color: var(--muted); }
+  .pg-signs-cat .tbl td.num { grid-area: price; }
+  .pg-signs-cat .tbl .thumb img { width: 52px; height: 44px; }
+}
+</style></head>
+<body class="">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14L20 4M15 4h5v5"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3 4 5 4 9a4 4 0 0 1-8 0c0-1 .3-2 1-3 0 2 1 3 2 3 0-3-1-5 1-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V6h11v11M14 9h4l3 3v5h-2"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3H4a4 4 0 0 0 2-3v-3a7 7 0 0 1 4-6M9 17v1a3 3 0 0 0 6 0v-1"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3zM9 4v13M15 7v13"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 9L12 5 2 9l10 4 10-4zM6 10.6V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.4"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M7 10h3v11H7zM14 4l3-1 3 3-1 3-5 5-3-3 3-7zM4 20l3-3"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></symbol>
+</svg>
+<a class="skip" href="#main">Pereiti prie turinio</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Geslita, į pradžią"><img src="assets/img/logo-geslita-s.png" alt="Geslita" width="167" height="50"></a>
+    <ul class="site-nav">
+      <li><a href="index.html" >Pradžia</a></li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-paslaugos">Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-paslaugos">
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas<span>Patikra nuo 5,26 €</span></a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija<span>Patikra, remontas, įrengimas</span></a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis<span>Čiaupai, žarnos, žurnalai</span></a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai<span>Planas 70 €</span></a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai<span>Montavimas pagal EN 1838</span></a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai<span>Saugos centras</span></a></li>
+          <li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos<span>Dielektrika, nuoma, žurnalai</span></a></li>
+          <li><a class="drop-all" href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="navbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-prekes">Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="drop" id="menu-prekes">
+          <li><a href="prekes-gesintuvai.html">Gesintuvai<span>Milteliniai, CO₂, vandens putų</span></a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis<span>Spintelės, žarnos, čiaupai</span></a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai<span>102 ženklai su paieška</span></a></li>
+          <li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga<span>Detektoriai, sirenos, šviestuvai</span></a></li>
+          <li><a class="drop-all" href="prekes.html">Visos prekės</a></li>
+        </ul>
+      </li>
+      <li><a href="saugos-centras.html" >Saugos centras</a></li>
+      <li class="nav-naudinga"><a href="naudinga-informacija.html" >Naudinga</a></li>
+      <li><a href="apie-mus.html" >Apie mus</a></li>
+      <li><a href="kontaktai.html" >Kontaktai</a></li>
+    </ul>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>+370 653 99977</span></a>
+      <a class="btn btn-sm" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+      <button class="nav-toggle" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-nav"><svg class="ic ic-menu"><use href="#i-menu"/></svg><svg class="ic ic-x"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilus meniu">
+  <ul>
+    <li><a href="index.html">Pradžia</a></li>
+    <li><details><summary>Paslaugos <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li><li><a href="gesintuvu-patikra.html">Gesintuvų patikra ir pildymas</a></li><li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li><li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li><li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li><li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li><li><a href="saugos-centras.html">Darbuotojų mokymai</a></li><li><a href="paslaugos.html#kitos-paslaugos">Kitos paslaugos</a></li>
+    </ul></details></li>
+    <li><details><summary>Prekės <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><ul>
+      <li><a href="prekes.html">Visos prekės</a></li><li><a href="prekes-gesintuvai.html">Gesintuvai</a></li><li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li><li><a href="prekes-zenklai.html">Saugos ženklai</a></li><li><a href="prekes-automatika.html">Gaisrinė automatika ir įranga</a></li>
+    </ul></details></li>
+    <li><a href="saugos-centras.html">Saugos centras</a></li>
+    <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+    <li><a href="apie-mus.html">Apie mus</a></li>
+    <li><a href="kontaktai.html">Kontaktai</a></li>
+  </ul>
+  <div class="mobile-cta">
+    <a class="btn" href="kontaktai.html#forma">Gauti pasiūlymą</a>
+    <a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<section class="page-hero ">
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.2">
+  <div class="wrap">
+    <div>
+<ol class="crumbs"><li><a href="index.html">Pradžia</a></li><li><a href="prekes.html">Prekės</a></li><li><span aria-current="page">Saugos ženklai</span></li></ol>      <h1>Saugos ženklai</h1>
+<p class="lead">102 ženklai 9 grupėse: evakuacijos krypties, informacijos ir gaisrinės įrangos, draudžiamieji, įspėjamieji, elektrosaugos, saugos ir sveikatos, operatyviniai žymėjimai, pavojingų medžiagų ir kiti. Kainos su PVM.</p>    </div>
+<div class="media" data-reveal="scale"><img src="assets/img/foto/evakuacija-zenklas.jpg" srcset="assets/img/foto/evakuacija-zenklas-640.webp 640w, assets/img/foto/evakuacija-zenklas-1280.webp 1280w, assets/img/foto/evakuacija-zenklas-1920.webp 1920w" sizes="(max-width: 960px) 92vw, 50vw" alt="Žalias evakuacijos krypties ženklas, pakabintas tarp pastato inžinerinių vamzdžių" width="1200" height="900" fetchpriority="high"></div>  </div>
+</section>
+
+<section class="sec pg-signs-over" data-parallax-root>
+  <img class="plan" src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-parallax="0.15">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Katalogas</div>
+      <h2>9 ženklų grupės</h2>
+      <p class="lead">Pasirinkite grupę arba ieškokite pagal ženklo kodą ar pavadinimą. Prie kiekvieno ženklo nurodyti matmenys ir kaina su PVM, užsakymus priimame el. paštu ir telefonu.</p>
+    </div>
+    <div class="pg-signs-groups">
+      <a class="pg-signs-gcard" href="#evakuacijos-krypties-zenklai" data-reveal style="--i:0">
+        <div class="thumbs"><img src="assets/img/katalogas/krzenklai--image001.png" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/krzenklai--image003.png" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/krzenklai--image005.png" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/krzenklai--image007.png" alt="" loading="lazy" width="58" height="58"></div>
+        <h3>Evakuacijos krypties ženklai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3>
+        <span class="small muted">15 ženklų</span>
+      </a>
+      <a class="pg-signs-gcard" href="#informacijos-ir-gaisrines-irangos-zenklai" data-reveal style="--i:1">
+        <div class="thumbs"><img src="assets/img/katalogas/infzenklai--image001.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/infzenklai--image002.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/infzenklai--image003.png" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/infzenklai--image005.png" alt="" loading="lazy" width="58" height="58"></div>
+        <h3>Informacijos ir gaisrinės įrangos ženklai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3>
+        <span class="small muted">15 ženklų</span>
+      </a>
+      <a class="pg-signs-gcard" href="#draudziamieji-zenklai" data-reveal style="--i:2">
+        <div class="thumbs"><img src="assets/img/katalogas/drzenklai--image001.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/drzenklai--image003.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/drzenklai--image005.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/drzenklai--image007.gif" alt="" loading="lazy" width="58" height="58"></div>
+        <h3>Draudžiamieji ženklai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3>
+        <span class="small muted">9 ženklai</span>
+      </a>
+      <a class="pg-signs-gcard" href="#ispejamieji-zenklai" data-reveal style="--i:0">
+        <div class="thumbs"><img src="assets/img/katalogas/ispzenklai--image001.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/ispzenklai--image002.png" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/ispzenklai--image004.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/ispzenklai--image005.png" alt="" loading="lazy" width="58" height="58"></div>
+        <h3>Įspėjamieji ženklai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3>
+        <span class="small muted">12 ženklų</span>
+      </a>
+      <a class="pg-signs-gcard" href="#elektrosaugos-zenklai" data-reveal style="--i:1">
+        <div class="thumbs"><img src="assets/img/katalogas/elzenklai--image002.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/elzenklai--image003.png" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/elzenklai--image005.png" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/elzenklai--image007.png" alt="" loading="lazy" width="58" height="58"></div>
+        <h3>Elektrosaugos ženklai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3>
+        <span class="small muted">9 ženklai</span>
+      </a>
+      <a class="pg-signs-gcard" href="#saugos-ir-sveikatos-zenklai" data-reveal style="--i:2">
+        <div class="thumbs"><img src="assets/img/katalogas/saugzenklai--image001.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/saugzenklai--image002.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/saugzenklai--image003.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/saugzenklai--image004.gif" alt="" loading="lazy" width="58" height="58"></div>
+        <h3>Saugos ir sveikatos ženklai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3>
+        <span class="small muted">9 ženklai</span>
+      </a>
+      <a class="pg-signs-gcard" href="#operatyviniai-zymejimai" data-reveal style="--i:0">
+        <div class="thumbs"><img src="assets/img/katalogas/opzenklai--image001.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/opzenklai--image002.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/opzenklai--image003.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/opzenklai--image004.gif" alt="" loading="lazy" width="58" height="58"></div>
+        <h3>Operatyviniai žymėjimai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3>
+        <span class="small muted">17 pozicijų</span>
+      </a>
+      <a class="pg-signs-gcard" href="#pavojingu-medziagu-kroviniu-zenklai" data-reveal style="--i:1">
+        <div class="thumbs"><img src="assets/img/katalogas/pavzenklai--image002.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/pavzenklai--image004.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/pavzenklai--image006.gif" alt="" loading="lazy" width="58" height="58"><img src="assets/img/katalogas/pavzenklai--image008.gif" alt="" loading="lazy" width="58" height="58"></div>
+        <h3>Pavojingų medžiagų (krovinių) ženklai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3>
+        <span class="small muted">12 ženklų</span>
+      </a>
+      <a class="pg-signs-gcard" href="#kiti-zenklai-ir-uzrasai" data-reveal style="--i:2">
+        <div class="thumbs"><img src="assets/img/katalogas/kitzenklai--image044.gif" alt="" loading="lazy" width="58" height="58"></div>
+        <h3>Kiti ženklai ir užrašai<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></h3>
+        <span class="small muted">4 pozicijos</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-white pg-signs-cat" id="katalogas">
+  <div class="wrap">
+    <div class="pg-signs-bar">
+      <div class="search">
+        <input type="search" data-search aria-label="Ieškoti ženklo" placeholder="Ieškoti pagal kodą ar pavadinimą" autocomplete="off">
+        <span class="count" data-search-count>Iš viso: 102</span>
+      </div>
+      <nav class="pill-row" aria-label="Ženklų grupės">
+<a class="tag tag-line" href="#evakuacijos-krypties-zenklai">Evakuacija</a>
+<a class="tag tag-line" href="#informacijos-ir-gaisrines-irangos-zenklai">Informacija ir įranga</a>
+<a class="tag tag-line" href="#draudziamieji-zenklai">Draudžiamieji</a>
+<a class="tag tag-line" href="#ispejamieji-zenklai">Įspėjamieji</a>
+<a class="tag tag-line" href="#elektrosaugos-zenklai">Elektrosauga</a>
+<a class="tag tag-line" href="#saugos-ir-sveikatos-zenklai">Sauga ir sveikata</a>
+<a class="tag tag-line" href="#operatyviniai-zymejimai">Operatyviniai</a>
+<a class="tag tag-line" href="#pavojingu-medziagu-kroviniu-zenklai">Pavojingos medžiagos</a>
+<a class="tag tag-line" href="#kiti-zenklai-ir-uzrasai">Kiti</a>
+      </nav>
+    </div>
+
+    <section class="pg-signs-group" id="evakuacijos-krypties-zenklai" data-search-group data-reveal>
+      <div class="pg-signs-ghead">
+        <h2 id="h-evakuacijos-krypties-zenklai">Evakuacijos krypties ženklai</h2>
+        <span class="tag">15 ženklų</span>
+      </div>
+      <div class="tbl">
+        <table aria-labelledby="h-evakuacijos-krypties-zenklai">
+          <thead>
+            <tr>
+              <th class="thumb">Ženklas</th>
+              <th>Kodas ir pavadinimas</th>
+              <th>Matmenys, mm</th>
+              <th class="num">Kaina su PVM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-name="C.1d Evakuacinis išėjimas į dešinę Virš durų evakuaciniuose išėjimuose, evakuacijos keliuose">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image001.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.1d</b>Evakuacinis išėjimas į dešinę<span class="use">Virš durų evakuaciniuose išėjimuose, evakuacijos keliuose</span></td>
+              <td class="dims"><span>130x230</span></td>
+              <td class="num"><b>3,99 €</b></td>
+            </tr>
+            <tr data-name="C.1k Evakuacinis išėjimas į kairę Virš durų evakuaciniuose išėjimuose, evakuacijos keliuose">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image003.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.1k</b>Evakuacinis išėjimas į kairę<span class="use">Virš durų evakuaciniuose išėjimuose, evakuacijos keliuose</span></td>
+              <td class="dims"><span>130x230</span></td>
+              <td class="num"><b>3,99 €</b></td>
+            </tr>
+            <tr data-name="C.2kv Evakuacinis išėjimas, lipant laiptais aukštyn į kairę Virš durų evakuaciniuose išėjimuose prieš laiptines">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image005.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.2kv</b>Evakuacinis išėjimas, lipant laiptais aukštyn į kairę<span class="use">Virš durų evakuaciniuose išėjimuose prieš laiptines</span></td>
+              <td class="dims"><span>130x230</span></td>
+              <td class="num"><b>3,99 €</b></td>
+            </tr>
+            <tr data-name="C.2dv Evakuacinis išėjimas, lipant laiptais aukštyn į dešinę Virš durų evakuaciniuose išėjimuose prieš laiptines">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image007.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.2dv</b>Evakuacinis išėjimas, lipant laiptais aukštyn į dešinę<span class="use">Virš durų evakuaciniuose išėjimuose prieš laiptines</span></td>
+              <td class="dims"><span>130x230</span></td>
+              <td class="num"><b>3,99 €</b></td>
+            </tr>
+            <tr data-name="C.3kž Evakuacinis išėjimas, lipant laiptais žemyn į kairę Virš durų evakuaciniuose išėjimuose prieš laiptines">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image009.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.3kž</b>Evakuacinis išėjimas, lipant laiptais žemyn į kairę<span class="use">Virš durų evakuaciniuose išėjimuose prieš laiptines</span></td>
+              <td class="dims"><span>130x230</span></td>
+              <td class="num"><b>3,99 €</b></td>
+            </tr>
+            <tr data-name="C.3dž Evakuacinis išėjimas, lipant laiptais žemyn į dešinę Virš durų evakuaciniuose išėjimuose prieš laiptines">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image011.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.3dž</b>Evakuacinis išėjimas, lipant laiptais žemyn į dešinę<span class="use">Virš durų evakuaciniuose išėjimuose prieš laiptines</span></td>
+              <td class="dims"><span>130x230</span></td>
+              <td class="num"><b>3,99 €</b></td>
+            </tr>
+            <tr data-name="C.8 Evakuacinis išėjimas tiesiai Virš durų evakuaciniuose išėjimuose, evakuacijos keliuose">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image013.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.8</b>Evakuacinis išėjimas tiesiai<span class="use">Virš durų evakuaciniuose išėjimuose, evakuacijos keliuose</span></td>
+              <td class="dims"><span>130x230</span></td>
+              <td class="num"><b>3,99 €</b></td>
+            </tr>
+            <tr data-name="C.9 Evakuacinis išėjimas tiesiai Virš (ant) durų evakuaciniuose išėjimuose">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image015.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.9</b>Evakuacinis išėjimas tiesiai<span class="use">Virš (ant) durų evakuaciniuose išėjimuose</span></td>
+              <td class="dims"><span>130x230</span></td>
+              <td class="num"><b>3,99 €</b></td>
+            </tr>
+            <tr data-name="C.10 Įėjimas Virš (ant) durų evakuaciniuose iėjimuose">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image017.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.10</b>Įėjimas<span class="use">Virš (ant) durų evakuaciniuose iėjimuose</span></td>
+              <td class="dims"><span>130x230</span></td>
+              <td class="num"><b>3,99 €</b></td>
+            </tr>
+            <tr data-name="C.11 Avarinis išėjimas Virš (ant) evakuacinio išėjimo durų">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image019.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.11</b>Avarinis išėjimas<span class="use">Virš (ant) evakuacinio išėjimo durų</span></td>
+              <td class="dims"><span>130x230</span></td>
+              <td class="num"><b>3,99 €</b></td>
+            </tr>
+            <tr data-name="C.12 Evakuacinis išėjimas į kairę Virš durų evakuaciniuose išėjimuose">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image021.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.12</b>Evakuacinis išėjimas į kairę<span class="use">Virš durų evakuaciniuose išėjimuose</span></td>
+              <td class="dims"><span>130x130</span></td>
+              <td class="num"><b>3,03 €</b></td>
+            </tr>
+            <tr data-name="C.13 Evakuacinis išėjimas į dešinę Virš durų evakuaciniuose išėjimuose">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image023.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.13</b>Evakuacinis išėjimas į dešinę<span class="use">Virš durų evakuaciniuose išėjimuose</span></td>
+              <td class="dims"><span>130x130</span></td>
+              <td class="num"><b>3,03 €</b></td>
+            </tr>
+            <tr data-name="C.14 Krypties rodyklė (pasukimas kas 90°) Evakuacijos keliuose">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image025.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.14</b>Krypties rodyklė (pasukimas kas 90°)<span class="use">Evakuacijos keliuose</span></td>
+              <td class="dims"><span>130x130</span></td>
+              <td class="num"><b>3,03 €</b></td>
+            </tr>
+            <tr data-name="C.15 Krypties 45° rodyklė (pasukimas kas 90°) Evakuacijos keliuose">
+              <td class="thumb"><img src="assets/img/katalogas/krzenklai--image027.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">C.15</b>Krypties 45° rodyklė (pasukimas kas 90°)<span class="use">Evakuacijos keliuose</span></td>
+              <td class="dims"><span>130x130</span></td>
+              <td class="num"><b>3,03 €</b></td>
+            </tr>
+            <tr data-name=" Susirinkimo vieta Susirinkimo vietoje arba virš durų į susirinkimo vietą">
+              <td class="thumb"><img src="assets/img/katalogas/susirinkimonvieta.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Susirinkimo vieta<span class="use">Susirinkimo vietoje arba virš durų į susirinkimo vietą</span></td>
+              <td class="dims"><span>200x200</span></td>
+              <td class="num"><b>5,93 €</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="pg-signs-group" id="informacijos-ir-gaisrines-irangos-zenklai" data-search-group data-reveal>
+      <div class="pg-signs-ghead">
+        <h2 id="h-informacijos-ir-gaisrines-irangos-zenklai">Informacijos ir gaisrinės įrangos ženklai</h2>
+        <span class="tag">15 ženklų</span>
+      </div>
+      <div class="tbl">
+        <table aria-labelledby="h-informacijos-ir-gaisrines-irangos-zenklai">
+          <thead>
+            <tr>
+              <th class="thumb">Ženklas</th>
+              <th>Kodas ir pavadinimas</th>
+              <th>Matmenys, mm</th>
+              <th class="num">Kaina su PVM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-name=" Gaisrinės kopėčios Gaisrinių kopėčių įrengimo vietose">
+              <td class="thumb"><img src="assets/img/katalogas/infzenklai--image001.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Gaisrinės kopėčios<span class="use">Gaisrinių kopėčių įrengimo vietose</span></td>
+              <td class="dims"><span>130x130</span><span>200x200</span></td>
+              <td class="num"><b>3,02 €</b><b>5,99 €</b></td>
+            </tr>
+            <tr data-name=" Gaisrinio aliarmo skelbimo vieta Rankinių gaisrinių signalizatorių įrengimo vietose">
+              <td class="thumb"><img src="assets/img/katalogas/infzenklai--image002.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Gaisrinio aliarmo skelbimo vieta<span class="use">Rankinių gaisrinių signalizatorių įrengimo vietose</span></td>
+              <td class="dims"><span>130x130</span><span>200x200</span></td>
+              <td class="num"><b>3,02 €</b><b>5,99 €</b></td>
+            </tr>
+            <tr data-name="D.1 Gesintuvas Gesintuvų išdėstymo vietose (klijuojamas nuo 2 m iki 2,5 m)">
+              <td class="thumb"><img src="assets/img/katalogas/infzenklai--image003.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">D.1</b>Gesintuvas<span class="use">Gesintuvų išdėstymo vietose (klijuojamas nuo 2 m iki 2,5 m)</span></td>
+              <td class="dims"><span>130x130</span><span>200x200</span></td>
+              <td class="num"><b>3,02 €</b><b>5,99 €</b></td>
+            </tr>
+            <tr data-name="D.2 Gaisrinės žarnos ritinys Gaisrinių čiaupų įrengimo vietose">
+              <td class="thumb"><img src="assets/img/katalogas/infzenklai--image005.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">D.2</b>Gaisrinės žarnos ritinys<span class="use">Gaisrinių čiaupų įrengimo vietose</span></td>
+              <td class="dims"><span>130x130</span><span>200x200</span></td>
+              <td class="num"><b>3,02 €</b><b>5,99 €</b></td>
+            </tr>
+            <tr data-name="D.3 Gaisro avarinis telefonas Vietose, iš kurių galima pranešti ugnegesiams apie gaisrą">
+              <td class="thumb"><img src="assets/img/katalogas/infzenklai--image007.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">D.3</b>Gaisro avarinis telefonas<span class="use">Vietose, iš kurių galima pranešti ugnegesiams apie gaisrą</span></td>
+              <td class="dims"><span>130x130</span><span>200x200</span></td>
+              <td class="num"><b>3,02 €</b><b>5,99 €</b></td>
+            </tr>
+            <tr data-name="D.4 Gaisrinis hidrantas Gaisrinių hidrantų įrengimo vietoms nurodyti">
+              <td class="thumb"><img src="assets/img/katalogas/infzenklai--image008.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">D.4</b>Gaisrinis hidrantas<span class="use">Gaisrinių hidrantų įrengimo vietoms nurodyti</span></td>
+              <td class="dims"><span>200x200</span></td>
+              <td class="num"><b>6,35 €</b></td>
+            </tr>
+            <tr data-name="D.5 Pirmoji pagalba Vietose, kur suteikiama pirmoji pagalba">
+              <td class="thumb"><img src="assets/img/katalogas/infzenklai--image010.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">D.5</b>Pirmoji pagalba<span class="use">Vietose, kur suteikiama pirmoji pagalba</span></td>
+              <td class="dims"><span>130x130</span><span>200x200</span></td>
+              <td class="num"><b>3,02 €</b><b>5,99 €</b></td>
+            </tr>
+            <tr data-name="D.6 Rūkymo vieta Prie rūkymui skirtos patalpos durų arba rūkymo vietoje">
+              <td class="thumb"><img src="assets/img/katalogas/infzenklai--image011.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">D.6</b>Rūkymo vieta<span class="use">Prie rūkymui skirtos patalpos durų arba rūkymo vietoje</span></td>
+              <td class="dims"><span>200x200</span></td>
+              <td class="num"><b>6,35 €</b></td>
+            </tr>
+            <tr data-name="D.7 Patalpų ar pastatų kategorijos pagal sprogimo ir gaisro pavojų Asg, Bsg, Cg, Dg, Eg Prie įėjimo į pastatą ar patalpą „Išorinių įrenginių kategorijos pagal sprogimo ir gaisro pavojų“ Asgi, Bsgi, Cgi, Dgi, Egi">
+              <td class="thumb"><img src="assets/img/katalogas/infzenklai--d71.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">D.7</b>Patalpų ar pastatų kategorijos pagal sprogimo ir gaisro pavojų<span class="use">Asg, Bsg, Cg, Dg, Eg Prie įėjimo į pastatą ar patalpą „Išorinių įrenginių kategorijos pagal sprogimo ir gaisro pavojų“ Asgi, Bsgi, Cgi, Dgi, Egi</span></td>
+              <td class="dims"><span>200x200</span></td>
+              <td class="num"><b>5,44 €</b></td>
+            </tr>
+            <tr data-name="D.8 Vandens šaltinis Prie vandens šaltinių, įrengtų arba pritaikytų gaisrams gesinti">
+              <td class="thumb"><img src="assets/img/katalogas/infzenklai--image015.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">D.8</b>Vandens šaltinis<span class="use">Prie vandens šaltinių, įrengtų arba pritaikytų gaisrams gesinti</span></td>
+              <td class="dims"><span>200x200</span></td>
+              <td class="num"><b>5,44 €</b></td>
+            </tr>
+            <tr data-name="F.1 Krypties rodyklė (Pasukimas kas 90 laipsnių) Gaisrinės įrangos įrengimo ar išdėstymo vietoms nurodyti">
+              <td class="thumb"><img src="assets/img/katalogas/infzenklai--image017.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">F.1</b>Krypties rodyklė<span class="use">(Pasukimas kas 90 laipsnių) Gaisrinės įrangos įrengimo ar išdėstymo vietoms nurodyti</span></td>
+              <td class="dims"><span>130x130</span></td>
+              <td class="num"><b>3,02 €</b></td>
+            </tr>
+            <tr data-name="F.2 Ugniagesių iškvietimo telefono numeris Ant gaisrinio čiaupo spintelės, kartu naudojamas aiškiai pažymėtas raidžių indeksas „GČ“ arba grafinis ženklas ir gaisrinio čiaupo eilės numeris">
+              <td class="thumb"><img src="assets/img/katalogas/sk.-112.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">F.2</b>Ugniagesių iškvietimo telefono numeris<span class="use">Ant gaisrinio čiaupo spintelės, kartu naudojamas aiškiai pažymėtas raidžių indeksas „GČ“ arba grafinis ženklas ir gaisrinio čiaupo eilės numeris</span></td>
+              <td class="dims"><span>100x180</span><span>130x230</span></td>
+              <td class="num"><b>3,02 €</b><b>4,54 €</b></td>
+            </tr>
+            <tr data-name="F.3 Atsakingas už gaisrinę saugą ">
+              <td class="thumb"><img src="assets/img/katalogas/infzenklai--image020.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">F.3</b>Atsakingas už gaisrinę saugą</td>
+              <td class="dims"><span>100x290</span></td>
+              <td class="num"><b>4,54 €</b></td>
+            </tr>
+            <tr data-name=" Ženklas gaisrinis čiaupas „GČ-“ Ant gaisrinio čiaupo spintelės">
+              <td class="thumb"><img src="assets/img/katalogas/gc.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Ženklas gaisrinis čiaupas „GČ-“<span class="use">Ant gaisrinio čiaupo spintelės</span></td>
+              <td class="dims"><span>-</span></td>
+              <td class="num"><b>3,02 €</b></td>
+            </tr>
+            <tr data-name=" Ženklas skaičiai „0123456789“ Ant gaisrinio čiaupo spintelės">
+              <td class="thumb"><img src="assets/img/katalogas/skaiciai-1.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Ženklas skaičiai „0123456789“<span class="use">Ant gaisrinio čiaupo spintelės</span></td>
+              <td class="dims"><span>-</span></td>
+              <td class="num"><b>3,02 €</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="pg-signs-group" id="draudziamieji-zenklai" data-search-group data-reveal>
+      <div class="pg-signs-ghead">
+        <h2 id="h-draudziamieji-zenklai">Draudžiamieji ženklai</h2>
+        <span class="tag">9 ženklai</span>
+      </div>
+      <div class="tbl">
+        <table aria-labelledby="h-draudziamieji-zenklai">
+          <thead>
+            <tr>
+              <th class="thumb">Ženklas</th>
+              <th>Kodas ir pavadinimas</th>
+              <th>Matmenys, mm</th>
+              <th class="num">Kaina su PVM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-name="B.1 Draudžiama naudotis ugnimi, atvirais uždegimo šaltiniais ir rūkyti Prie įėjimo į teritoriją, pastatą ar patalpą kur panaudojus atvirą ugnį galimas sprogimo ar gaisro pavojus">
+              <td class="thumb"><img src="assets/img/katalogas/drzenklai--image001.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">B.1</b>Draudžiama naudotis ugnimi, atvirais uždegimo šaltiniais ir rūkyti<span class="use">Prie įėjimo į teritoriją, pastatą ar patalpą kur panaudojus atvirą ugnį galimas sprogimo ar gaisro pavojus</span></td>
+              <td class="dims"><span>Ø 150</span><span>Ø 200</span></td>
+              <td class="num"><b>3,03 €</b><b>5,32 €</b></td>
+            </tr>
+            <tr data-name="B.2 Nerūkyti ">
+              <td class="thumb"><img src="assets/img/katalogas/drzenklai--image003.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">B.2</b>Nerūkyti</td>
+              <td class="dims"><span>Ø 100</span><span>Ø 150</span><span>Ø 200</span></td>
+              <td class="num"><b>1,82 €</b><b>3,03 €</b><b>5,32 €</b></td>
+            </tr>
+            <tr data-name="B.3 Draudžiama gesinti vandeniu Prie įėjimo į teritoriją, pastatą ar patalpą, kur naudojamas ar laikomas medžiagas, draudžiama gesinti vandeniu">
+              <td class="thumb"><img src="assets/img/katalogas/drzenklai--image005.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">B.3</b>Draudžiama gesinti vandeniu<span class="use">Prie įėjimo į teritoriją, pastatą ar patalpą, kur naudojamas ar laikomas medžiagas, draudžiama gesinti vandeniu</span></td>
+              <td class="dims"><span>Ø 150</span><span>Ø 200</span></td>
+              <td class="num"><b>3,03 €</b><b>5,32 €</b></td>
+            </tr>
+            <tr data-name="B.4 Įėjimas draudžiamas Prie įėjimo į pavojingas zonas, taip pat į patalpas, kuriose nepageidaujami pašaliniai">
+              <td class="thumb"><img src="assets/img/katalogas/drzenklai--image007.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">B.4</b>Įėjimas draudžiamas<span class="use">Prie įėjimo į pavojingas zonas, taip pat į patalpas, kuriose nepageidaujami pašaliniai</span></td>
+              <td class="dims"><span>Ø 150</span><span>Ø 200</span></td>
+              <td class="num"><b>3,03 €</b><b>5,32 €</b></td>
+            </tr>
+            <tr data-name="B.5 Nesiartinti Prie pavojaus šaltinio">
+              <td class="thumb"><img src="assets/img/katalogas/drzenklai--image009.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">B.5</b>Nesiartinti<span class="use">Prie pavojaus šaltinio</span></td>
+              <td class="dims"><span>Ø 150</span><span>Ø 200</span></td>
+              <td class="num"><b>3,03 €</b><b>5,32 €</b></td>
+            </tr>
+            <tr data-name="B.6 Draudžiami veiksmai, kurie užrašomi ženklo viduryje ">
+              <td class="thumb"><img src="assets/img/katalogas/drzenklai--image011.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">B.6</b>Draudžiami veiksmai, kurie užrašomi ženklo viduryje</td>
+              <td class="dims"><span>Ø 150</span><span>Ø 200</span></td>
+              <td class="num"><b>3,03 €</b><b>5,32 €</b></td>
+            </tr>
+            <tr data-name="B.7 Neliesti ">
+              <td class="thumb"><img src="assets/img/katalogas/drzenklai--image013.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">B.7</b>Neliesti</td>
+              <td class="dims"><span>Ø 150</span><span>Ø 200</span></td>
+              <td class="num"><b>3,03 €</b><b>5,32 €</b></td>
+            </tr>
+            <tr data-name="B.8 Vanduo netinkamas gerti ">
+              <td class="thumb"><img src="assets/img/katalogas/drzenklai--image015.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">B.8</b>Vanduo netinkamas gerti</td>
+              <td class="dims"><span>Ø 150</span><span>Ø 200</span></td>
+              <td class="num"><b>3,03 €</b><b>5,32 €</b></td>
+            </tr>
+            <tr data-name="B.9 Važiuoti įmonės vidaus transporto priemonėms draudžiama ">
+              <td class="thumb"><img src="assets/img/katalogas/drzenklai--image017.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">B.9</b>Važiuoti įmonės vidaus transporto priemonėms draudžiama</td>
+              <td class="dims"><span>Ø 150</span><span>Ø 200</span></td>
+              <td class="num"><b>3,03 €</b><b>5,32 €</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="pg-signs-group" id="ispejamieji-zenklai" data-search-group data-reveal>
+      <div class="pg-signs-ghead">
+        <h2 id="h-ispejamieji-zenklai">Įspėjamieji ženklai</h2>
+        <span class="tag">12 ženklų</span>
+      </div>
+      <div class="tbl">
+        <table aria-labelledby="h-ispejamieji-zenklai">
+          <thead>
+            <tr>
+              <th class="thumb">Ženklas</th>
+              <th>Kodas ir pavadinimas</th>
+              <th>Matmenys, mm</th>
+              <th class="num">Kaina su PVM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-name="5.1 Įspėjimas. Liepsnioji medžiaga Prie įėjimo į teritoriją, pastatą ar patalpą, kur naudojamos ar laikomos liepsniosios medžiagos">
+              <td class="thumb"><img src="assets/img/katalogas/ispzenklai--image001.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">5.1</b>Įspėjimas. Liepsnioji medžiaga<span class="use">Prie įėjimo į teritoriją, pastatą ar patalpą, kur naudojamos ar laikomos liepsniosios medžiagos</span></td>
+              <td class="dims"><span>150</span><span>200</span><span>280</span></td>
+              <td class="num"><b>2,18 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="5.2 Įspėjimas apie sprogstančiąją medžiagą Susiklosčius tam tikroms aplinkybėms, patalpoje, statinyje ar teritorijoje galimas sprogimas. Statomas tiesiai prie priėjimo arba prieigose">
+              <td class="thumb"><img src="assets/img/katalogas/ispzenklai--image002.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">5.2</b>Įspėjimas apie sprogstančiąją medžiagą<span class="use">Susiklosčius tam tikroms aplinkybėms, patalpoje, statinyje ar teritorijoje galimas sprogimas. Statomas tiesiai prie priėjimo arba prieigose</span></td>
+              <td class="dims"><span>150</span><span>200</span><span>280</span></td>
+              <td class="num"><b>2,18 €</b><b>3,00 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="5.3 Įspėjimas. Sprogioji medžiaga Prie įėjimo į teritoriją, pastatą ar patalpą, kur naudojamos ar laikomos sprogiosios medžiagos">
+              <td class="thumb"><img src="assets/img/katalogas/ispzenklai--image004.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">5.3</b>Įspėjimas. Sprogioji medžiaga<span class="use">Prie įėjimo į teritoriją, pastatą ar patalpą, kur naudojamos ar laikomos sprogiosios medžiagos</span></td>
+              <td class="dims"><span>150</span><span>200</span><span>280</span></td>
+              <td class="num"><b>2,18 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="5.4 Įspėjimas apie ėdžią medžiagą Tiesiai prie įėjimo į patalpą, statinį ar atskirą teritoriją, kurioje laikomi gailieji chemikalai">
+              <td class="thumb"><img src="assets/img/katalogas/ispzenklai--image005.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">5.4</b>Įspėjimas apie ėdžią medžiagą<span class="use">Tiesiai prie įėjimo į patalpą, statinį ar atskirą teritoriją, kurioje laikomi gailieji chemikalai</span></td>
+              <td class="dims"><span>150</span><span>200</span><span>280</span></td>
+              <td class="num"><b>2,18 €</b><b>3,00 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="5.5 Įspėjimas apie radioaktyvią medžiagą Vietose, kuriose yra radioaktyviųjų medžiagų, arba spinduliavimo zonoje">
+              <td class="thumb"><img src="assets/img/katalogas/ispzenklai--image007.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">5.5</b>Įspėjimas apie radioaktyvią medžiagą<span class="use">Vietose, kuriose yra radioaktyviųjų medžiagų, arba spinduliavimo zonoje</span></td>
+              <td class="dims"><span>150</span><span>200</span><span>280</span></td>
+              <td class="num"><b>2,18 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="5.6 Įspėjimas apie pakeltą krovinį ">
+              <td class="thumb"><img src="assets/img/katalogas/ispzenklai--image008.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">5.6</b>Įspėjimas apie pakeltą krovinį</td>
+              <td class="dims"><span>150</span><span>200</span><span>280</span></td>
+              <td class="num"><b>2,18 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="5.7 Įspėjimas apie įmonės vidaus transportą ">
+              <td class="thumb"><img src="assets/img/katalogas/ispzenklai--image009.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">5.7</b>Įspėjimas apie įmonės vidaus transportą</td>
+              <td class="dims"><span>150</span><span>200</span><span>280</span></td>
+              <td class="num"><b>2,18 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="5.8 Įspėjimas apie bendrojo pobūdžio pavojų Vietoje, kurioje gali kilti kiti pavojai. Reikalui esant pridedamas papildomas skydelis">
+              <td class="thumb"><img src="assets/img/katalogas/ispzenklai--image010.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">5.8</b>Įspėjimas apie bendrojo pobūdžio pavojų<span class="use">Vietoje, kurioje gali kilti kiti pavojai. Reikalui esant pridedamas papildomas skydelis</span></td>
+              <td class="dims"><span>150</span><span>200</span><span>280</span></td>
+              <td class="num"><b>2,18 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="5.9 Įspėjimas apie kliūtį ">
+              <td class="thumb"><img src="assets/img/katalogas/ispzenklai--image011.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">5.9</b>Įspėjimas apie kliūtį</td>
+              <td class="dims"><span>150</span><span>200</span><span>280</span></td>
+              <td class="num"><b>2,18 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="5.10 Įspėjimas apie pavojų nukristi ">
+              <td class="thumb"><img src="assets/img/katalogas/ispzenklai--image012.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">5.10</b>Įspėjimas apie pavojų nukristi</td>
+              <td class="dims"><span>150</span><span>200</span><span>280</span></td>
+              <td class="num"><b>2,18 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="5.11 Įspėjimas apie kenksmingą arba dirginančią medžiagą ">
+              <td class="thumb"><img src="assets/img/katalogas/ispzenklai--image014.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">5.11</b>Įspėjimas apie kenksmingą arba dirginančią medžiagą</td>
+              <td class="dims"><span>150</span><span>200</span><span>280</span></td>
+              <td class="num"><b>2,18 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="5.12 Įspėjimas apie lazerio spindulius Patalpose arba prieigose prie vietų, kuriose naudojama lazerinė technika">
+              <td class="thumb"><img src="assets/img/katalogas/ispzenklai--image015.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">5.12</b>Įspėjimas apie lazerio spindulius<span class="use">Patalpose arba prieigose prie vietų, kuriose naudojama lazerinė technika</span></td>
+              <td class="dims"><span>150</span><span>200</span><span>280</span></td>
+              <td class="num"><b>2,18 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="pg-signs-group" id="elektrosaugos-zenklai" data-search-group data-reveal>
+      <div class="pg-signs-ghead">
+        <h2 id="h-elektrosaugos-zenklai">Elektrosaugos ženklai</h2>
+        <span class="tag">9 ženklai</span>
+      </div>
+      <div class="tbl">
+        <table aria-labelledby="h-elektrosaugos-zenklai">
+          <thead>
+            <tr>
+              <th class="thumb">Ženklas</th>
+              <th>Kodas ir pavadinimas</th>
+              <th>Matmenys, mm</th>
+              <th class="num">Kaina su PVM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-name=" Nuolatinis ženklas, įspėjantis apie elektros smūgio pavojų: „Atsargiai, elektros smūgio pavojus“ Tvirtinami ant visų turinčių įtampą elektros spintų, skydinių (išskyrus skirstyklų viduje) ir skirstyklų išorinių patalpų durų, teritorijų vartų, nuimamų aptvarų, aparatų gaubtų ir pan., už kurių yra elektros smūgio pavojus">
+              <td class="thumb"><img src="assets/img/katalogas/elzenklai--image002.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Nuolatinis ženklas, įspėjantis apie elektros smūgio pavojų: „Atsargiai, elektros smūgio pavojus“<span class="use">Tvirtinami ant visų turinčių įtampą elektros spintų, skydinių (išskyrus skirstyklų viduje) ir skirstyklų išorinių patalpų durų, teritorijų vartų, nuimamų aptvarų, aparatų gaubtų ir pan., už kurių yra elektros smūgio pavojus</span></td>
+              <td class="dims"><span>50</span><span>80</span><span>150</span><span>160</span><span>280</span></td>
+              <td class="num"><b>0,97 €</b><b>2,18 €</b><b>3,27 €</b><b>3,51 €</b><b>7,14 €</b></td>
+            </tr>
+            <tr data-name=" Nejungti! Įrenginiuose dirbama ">
+              <td class="thumb"><img src="assets/img/katalogas/elzenklai--image003.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Nejungti! Įrenginiuose dirbama</td>
+              <td class="dims"><span>50x80</span><span>180x290</span></td>
+              <td class="num"><b>0,85 €</b><b>4,60 €</b></td>
+            </tr>
+            <tr data-name=" Bandymai! Pavojinga gyvybei ">
+              <td class="thumb"><img src="assets/img/katalogas/elzenklai--image005.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Bandymai! Pavojinga gyvybei</td>
+              <td class="dims"><span>210x280</span></td>
+              <td class="num"><b>4,84 €</b></td>
+            </tr>
+            <tr data-name=" STOK! Įtampa ">
+              <td class="thumb"><img src="assets/img/katalogas/elzenklai--image007.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">STOK! Įtampa</td>
+              <td class="dims"><span>210x280</span></td>
+              <td class="num"><b>4,84 €</b></td>
+            </tr>
+            <tr data-name=" Nelipk! Užmuš ">
+              <td class="thumb"><img src="assets/img/katalogas/elzenklai--image009.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Nelipk! Užmuš</td>
+              <td class="dims"><span>210x280</span></td>
+              <td class="num"><b>4,84 €</b></td>
+            </tr>
+            <tr data-name=" Neatidaryti! Įrenginiuose dirbama ">
+              <td class="thumb"><img src="assets/img/katalogas/elzenklai--image011.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Neatidaryti! Įrenginiuose dirbama</td>
+              <td class="dims"><span>180x290</span></td>
+              <td class="num"><b>4,60 €</b></td>
+            </tr>
+            <tr data-name=" Įžeminta ">
+              <td class="thumb"><img src="assets/img/katalogas/elzenklai--image013.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Įžeminta</td>
+              <td class="dims"><span>50x80</span><span>130x240</span></td>
+              <td class="num"><b>0,85 €</b><b>3,03 €</b></td>
+            </tr>
+            <tr data-name=" Dirbti čia ">
+              <td class="thumb"><img src="assets/img/katalogas/elzenklai--image015.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Dirbti čia</td>
+              <td class="dims"><span>250x250</span></td>
+              <td class="num"><b>4,96 €</b></td>
+            </tr>
+            <tr data-name=" Lipti čia ">
+              <td class="thumb"><img src="assets/img/katalogas/elzenklai--image017.png" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Lipti čia</td>
+              <td class="dims"><span>250x250</span></td>
+              <td class="num"><b>4,96 €</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="pg-signs-group" id="saugos-ir-sveikatos-zenklai" data-search-group data-reveal>
+      <div class="pg-signs-ghead">
+        <h2 id="h-saugos-ir-sveikatos-zenklai">Saugos ir sveikatos ženklai</h2>
+        <span class="tag">9 ženklai</span>
+      </div>
+      <div class="tbl">
+        <table aria-labelledby="h-saugos-ir-sveikatos-zenklai">
+          <thead>
+            <tr>
+              <th class="thumb">Ženklas</th>
+              <th>Kodas ir pavadinimas</th>
+              <th>Matmenys, mm</th>
+              <th class="num">Kaina su PVM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-name="3.1 Nešioti apsauginius akinius ">
+              <td class="thumb"><img src="assets/img/katalogas/saugzenklai--image001.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">3.1</b>Nešioti apsauginius akinius</td>
+              <td class="dims"><span>Ø 50</span><span>Ø 150</span><span>Ø 250</span></td>
+              <td class="num"><b>0,97 €</b><b>3,07 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="3.2 Dėvėti apsauginį šalmą ">
+              <td class="thumb"><img src="assets/img/katalogas/saugzenklai--image002.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">3.2</b>Dėvėti apsauginį šalmą</td>
+              <td class="dims"><span>Ø 50</span><span>Ø 150</span><span>Ø 250</span></td>
+              <td class="num"><b>0,97 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="3.3 Naudotis klausos apsaugos priemonėmis ">
+              <td class="thumb"><img src="assets/img/katalogas/saugzenklai--image003.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">3.3</b>Naudotis klausos apsaugos priemonėmis</td>
+              <td class="dims"><span>Ø 50</span><span>Ø 150</span><span>Ø 250</span></td>
+              <td class="num"><b>0,97 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="3.4 Naudotis kvėpavimo takų apsaugos priemonėmis ">
+              <td class="thumb"><img src="assets/img/katalogas/saugzenklai--image004.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">3.4</b>Naudotis kvėpavimo takų apsaugos priemonėmis</td>
+              <td class="dims"><span>Ø 50</span><span>Ø 150</span><span>Ø 250</span></td>
+              <td class="num"><b>0,97 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="3.5 Avėti apsauginius batus ">
+              <td class="thumb"><img src="assets/img/katalogas/saugzenklai--image005.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">3.5</b>Avėti apsauginius batus</td>
+              <td class="dims"><span>Ø 50</span><span>Ø 150</span><span>Ø 250</span></td>
+              <td class="num"><b>0,97 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="3.6 Mūvėti apsaugines pirštines ">
+              <td class="thumb"><img src="assets/img/katalogas/saugzenklai--image006.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">3.6</b>Mūvėti apsaugines pirštines</td>
+              <td class="dims"><span>Ø 50</span><span>Ø 150</span><span>Ø 250</span></td>
+              <td class="num"><b>0,97 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="3.7 Vilkėti apsauginius drabužius ">
+              <td class="thumb"><img src="assets/img/katalogas/saugzenklai--image007.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">3.7</b>Vilkėti apsauginius drabužius</td>
+              <td class="dims"><span>Ø 50</span><span>Ø 150</span><span>Ø 250</span></td>
+              <td class="num"><b>0,97 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="3.8 Naudotis apsauginiu skydeliu ">
+              <td class="thumb"><img src="assets/img/katalogas/saugzenklai--image008.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">3.8</b>Naudotis apsauginiu skydeliu</td>
+              <td class="dims"><span>Ø 50</span><span>Ø 150</span><span>Ø 250</span></td>
+              <td class="num"><b>0,97 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="3.9 Būtina prisisegti apsauginį prisirišimą ">
+              <td class="thumb"><img src="assets/img/katalogas/saugzenklai--image010.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">3.9</b>Būtina prisisegti apsauginį prisirišimą</td>
+              <td class="dims"><span>Ø 50</span><span>Ø 150</span><span>Ø 250</span></td>
+              <td class="num"><b>0,97 €</b><b>3,03 €</b><b>6,05 €</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="pg-signs-group" id="operatyviniai-zymejimai" data-search-group data-reveal>
+      <div class="pg-signs-ghead">
+        <h2 id="h-operatyviniai-zymejimai">Operatyviniai žymėjimai</h2>
+        <span class="tag">17 pozicijų</span>
+      </div>
+      <div class="tbl">
+        <table aria-labelledby="h-operatyviniai-zymejimai">
+          <thead>
+            <tr>
+              <th class="thumb">Ženklas</th>
+              <th>Pavadinimas / dydis</th>
+              <th>Matmenys, mm</th>
+              <th class="num">Kaina su PVM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-name=" 7.1 ">
+              <td class="thumb"><img src="assets/img/katalogas/opzenklai--image001.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">7.1</td>
+              <td class="dims"><span>-</span></td>
+              <td class="num"><b>1,57 €</b></td>
+            </tr>
+            <tr data-name=" 20x30 ">
+              <td class="thumb"></td>
+              <td class="name">20x30</td>
+              <td class="dims"><span>1 kompl.: (10 vnt.)</span></td>
+              <td class="num"><b>1,57 €</b></td>
+            </tr>
+            <tr data-name=" 7.2 ">
+              <td class="thumb"><img src="assets/img/katalogas/opzenklai--image002.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">7.2</td>
+              <td class="dims"><span>-</span></td>
+              <td class="num"><b>1,57 €</b></td>
+            </tr>
+            <tr data-name=" 20x30 ">
+              <td class="thumb"></td>
+              <td class="name">20x30</td>
+              <td class="dims"><span>1 kompl.: (10 vnt.)</span></td>
+              <td class="num"><b>1,57 €</b></td>
+            </tr>
+            <tr data-name=" 7.3 ">
+              <td class="thumb"><img src="assets/img/katalogas/opzenklai--image003.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">7.3</td>
+              <td class="dims"><span>-</span></td>
+              <td class="num"><b>2,06 €</b></td>
+            </tr>
+            <tr data-name=" 10x40 ">
+              <td class="thumb"></td>
+              <td class="name">10x40</td>
+              <td class="dims"><span>1 kompl.: (25 vnt.)</span></td>
+              <td class="num"><b>2,06 €</b></td>
+            </tr>
+            <tr data-name=" 7.4 ">
+              <td class="thumb"><img src="assets/img/katalogas/opzenklai--image004.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">7.4</td>
+              <td class="dims"><span>-</span></td>
+              <td class="num"><b>1,63 €</b></td>
+            </tr>
+            <tr data-name=" 7.5 ">
+              <td class="thumb"></td>
+              <td class="name">7.5</td>
+              <td class="dims"><span>12V, 24V, 36V, 42V, 220V, 380V</span></td>
+              <td class="num"><b>1,82 €</b></td>
+            </tr>
+            <tr data-name=" 7.6 ">
+              <td class="thumb"><img src="assets/img/katalogas/opzenklai--image005.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">7.6</td>
+              <td class="dims"><span>-</span></td>
+              <td class="num"><b>0,48 €</b></td>
+            </tr>
+            <tr data-name=" 7.7 ">
+              <td class="thumb"><img src="assets/img/katalogas/opzenklai--image006.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">7.7</td>
+              <td class="dims"><span>-</span></td>
+              <td class="num"><b>0,48 €</b></td>
+            </tr>
+            <tr data-name=" 7.8 ">
+              <td class="thumb"><img src="assets/img/katalogas/opzenklai--image007.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">7.8</td>
+              <td class="dims"><span>-</span></td>
+              <td class="num"><b>0,48 €</b></td>
+            </tr>
+            <tr data-name=" 7.9 ">
+              <td class="thumb"><img src="assets/img/katalogas/opzenklai--image008.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">7.9</td>
+              <td class="dims"><span>-</span></td>
+              <td class="num"><b>0,61 €</b></td>
+            </tr>
+            <tr data-name=" h-15 ">
+              <td class="thumb"></td>
+              <td class="name">h-15</td>
+              <td class="dims"><span>(11 vnt.)</span></td>
+              <td class="num"><b>0,85 €</b></td>
+            </tr>
+            <tr data-name=" h-20 ">
+              <td class="thumb"></td>
+              <td class="name">h-20</td>
+              <td class="dims"><span>(10 vnt.)</span></td>
+              <td class="num"><b>0,85 €</b></td>
+            </tr>
+            <tr data-name=" h-20 ">
+              <td class="thumb"></td>
+              <td class="name">h-20</td>
+              <td class="dims"><span>(60 vnt.)</span></td>
+              <td class="num"><b>5,93 €</b></td>
+            </tr>
+            <tr data-name=" h-35 ">
+              <td class="thumb"></td>
+              <td class="name">h-35</td>
+              <td class="dims"><span>(5 vnt.)</span></td>
+              <td class="num"><b>1,09 €</b></td>
+            </tr>
+            <tr data-name=" h-50 ">
+              <td class="thumb"></td>
+              <td class="name">h-50</td>
+              <td class="dims"><span>(5 vnt.)</span></td>
+              <td class="num"><b>1,70 €</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="pg-signs-group" id="pavojingu-medziagu-kroviniu-zenklai" data-search-group data-reveal>
+      <div class="pg-signs-ghead">
+        <h2 id="h-pavojingu-medziagu-kroviniu-zenklai">Pavojingų medžiagų (krovinių) ženklai</h2>
+        <span class="tag">12 ženklų</span>
+      </div>
+      <div class="tbl">
+        <table aria-labelledby="h-pavojingu-medziagu-kroviniu-zenklai">
+          <thead>
+            <tr>
+              <th class="thumb">Ženklas</th>
+              <th>Kodas ir pavadinimas</th>
+              <th>Matmenys, mm</th>
+              <th class="num">Kaina su PVM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-name="E.1 Galintis sprogti Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių">
+              <td class="thumb"><img src="assets/img/katalogas/pavzenklai--image002.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">E.1</b>Galintis sprogti<span class="use">Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių</span></td>
+              <td class="dims"><span>100x100</span><span>250x250</span></td>
+              <td class="num"><b>1,21 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="E.2 Suslėgtosios, skystosios arba slėgimo būdu ištirpintos dujos Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių">
+              <td class="thumb"><img src="assets/img/katalogas/pavzenklai--image004.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">E.2</b>Suslėgtosios, skystosios arba slėgimo būdu ištirpintos dujos<span class="use">Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių</span></td>
+              <td class="dims"><span>100x100</span><span>250x250</span></td>
+              <td class="num"><b>1,21 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="E.3 Degieji skysčiai Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių">
+              <td class="thumb"><img src="assets/img/katalogas/pavzenklai--image006.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">E.3</b>Degieji skysčiai<span class="use">Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių</span></td>
+              <td class="dims"><span>100x100</span><span>250x250</span></td>
+              <td class="num"><b>1,21 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="E.4 Degiosios kietos medžiagos Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių">
+              <td class="thumb"><img src="assets/img/katalogas/pavzenklai--image008.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">E.4</b>Degiosios kietos medžiagos<span class="use">Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių</span></td>
+              <td class="dims"><span>100x100</span><span>250x250</span></td>
+              <td class="num"><b>1,21 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="E.5 Savaime užsideganti medžiaga Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių">
+              <td class="thumb"><img src="assets/img/katalogas/pavzenklai--image010.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">E.5</b>Savaime užsideganti medžiaga<span class="use">Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių</span></td>
+              <td class="dims"><span>100x100</span><span>250x250</span></td>
+              <td class="num"><b>1,21 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="E.6 Medžiaga, kurios reaguodamos su vandeniu išskiria degiąsias dujas Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių">
+              <td class="thumb"><img src="assets/img/katalogas/pavzenklai--image012.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">E.6</b>Medžiaga, kurios reaguodamos su vandeniu išskiria degiąsias dujas<span class="use">Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių</span></td>
+              <td class="dims"><span>100x100</span><span>250x250</span></td>
+              <td class="num"><b>1,21 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="E.7 Oksidacinės medžiagos Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių">
+              <td class="thumb"><img src="assets/img/katalogas/pavzenklai--image014.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">E.7</b>Oksidacinės medžiagos<span class="use">Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių</span></td>
+              <td class="dims"><span>100x100</span><span>250x250</span></td>
+              <td class="num"><b>1,21 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="E.8 Organiniai peroksidai Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių">
+              <td class="thumb"><img src="assets/img/katalogas/pavzenklai--image016.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">E.8</b>Organiniai peroksidai<span class="use">Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių</span></td>
+              <td class="dims"><span>100x100</span><span>250x250</span></td>
+              <td class="num"><b>1,21 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="E.9 Nuodingosios medžiagos Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių">
+              <td class="thumb"><img src="assets/img/katalogas/pavzenklai--image018.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">E.9</b>Nuodingosios medžiagos<span class="use">Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių</span></td>
+              <td class="dims"><span>100x100</span><span>250x250</span></td>
+              <td class="num"><b>1,21 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="E.10 Infekcinės medžiagos Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių">
+              <td class="thumb"><img src="assets/img/katalogas/pavzenklai--image020.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">E.10</b>Infekcinės medžiagos<span class="use">Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių</span></td>
+              <td class="dims"><span>100x100</span><span>250x250</span></td>
+              <td class="num"><b>1,21 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="E.11 Radioaktyviosios medžiagos Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių">
+              <td class="thumb"><img src="assets/img/katalogas/pavzenklai--image022.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">E.11</b>Radioaktyviosios medžiagos<span class="use">Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių</span></td>
+              <td class="dims"><span>100x100</span><span>250x250</span></td>
+              <td class="num"><b>1,21 €</b><b>6,05 €</b></td>
+            </tr>
+            <tr data-name="E.12 Korozinės medžiagos Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių">
+              <td class="thumb"><img src="assets/img/katalogas/pavzenklai--image024.jpg" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name"><b class="code">E.12</b>Korozinės medžiagos<span class="use">Ant transporto priemonių, prie įėjimų į sandėlius, ant pavojingų medžiagų pakuočių</span></td>
+              <td class="dims"><span>100x100</span><span>250x250</span></td>
+              <td class="num"><b>1,21 €</b><b>6,05 €</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="pg-signs-group" id="kiti-zenklai-ir-uzrasai" data-search-group data-reveal>
+      <div class="pg-signs-ghead">
+        <h2 id="h-kiti-zenklai-ir-uzrasai">Kiti ženklai ir užrašai</h2>
+        <span class="tag">4 pozicijos</span>
+      </div>
+      <div class="tbl">
+        <table aria-labelledby="h-kiti-zenklai-ir-uzrasai">
+          <thead>
+            <tr>
+              <th class="thumb">Ženklas</th>
+              <th>Pavadinimas / dydis</th>
+              <th>Matmenys, mm</th>
+              <th class="num">Kaina su PVM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-name=" 105x125 ">
+              <td class="thumb"></td>
+              <td class="name">105x125</td>
+              <td class="dims"><span>1 vnt.</span></td>
+              <td class="num"><b>1,69 €</b></td>
+            </tr>
+            <tr data-name=" 130x230 ">
+              <td class="thumb"></td>
+              <td class="name">130x230</td>
+              <td class="dims"><span>1 vnt.</span></td>
+              <td class="num"><b>2,90 €</b></td>
+            </tr>
+            <tr data-name=" 90x140 ">
+              <td class="thumb"></td>
+              <td class="name">90x140</td>
+              <td class="dims"><span>1 vnt.</span></td>
+              <td class="num"><b>2,06 €</b></td>
+            </tr>
+            <tr data-name=" Tik plastikinis ">
+              <td class="thumb"><img src="assets/img/katalogas/kitzenklai--image044.gif" alt="" loading="lazy" width="64" height="48"></td>
+              <td class="name">Tik plastikinis</td>
+              <td class="dims"><span>D=300</span></td>
+              <td class="num"><b>9,68 €</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="notice" data-reveal>Kainos su PVM, perkeltos iš senojo geslita.lt kainoraščio.</div>
+  </div>
+</section>
+
+<section class="sec sec-tight">
+  <div class="wrap">
+    <div class="cta-inline" data-reveal>
+  <div><h2>Reikia ženklų visam objektui?</h2><p>Atsiųskite patalpų sąrašą arba evakuacijos planą: sudarysime ženklų komplektą pagal grupes bei matmenis ir pateiksime pasiūlymą.</p></div>
+  <div class="btn-group"><a class="btn " href="kontaktai.html#forma">Gauti pasiūlymą<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="tel:+37065399977"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>+370 653 99977</a></div>
+</div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <img class="plan-wm" src="assets/img/plan-lines-white.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo-geslita-white-s.png" alt="Geslita" width="167" height="50">
+        <p><span class="ltx">20 metų priešgaisrinės saugos patirties. Įrangos priežiūra ir prekyba, darbo saugos priemonės verslui visoje <span class="lt">Lietuvoje<span class="lt-flag" aria-hidden="true"></span></span>.</span></p>
+      </div>
+      <div>
+        <h2 class="foot-h">Paslaugos</h2>
+        <ul>
+          <li><a href="gesintuvu-patikra.html">Gesintuvų patikra</a></li>
+          <li><a href="gaisrine-signalizacija.html">Gaisrinė signalizacija</a></li>
+          <li><a href="paslaugos.html#gaisrinis-vandentiekis">Gaisrinis vandentiekis</a></li>
+          <li><a href="evakuacijos-planai.html">Evakuacijos planai</a></li>
+          <li><a href="avariniai-sviestuvai.html">Avariniai šviestuvai</a></li>
+          <li><a href="saugos-centras.html">Darbuotojų mokymai</a></li>
+          <li><a href="paslaugos.html">Visos paslaugos ir kainos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Prekės ir informacija</h2>
+        <ul>
+          <li><a href="prekes-gesintuvai.html">Gesintuvai</a></li>
+          <li><a href="prekes-vandentiekis.html">Gaisrinis vandentiekis</a></li>
+          <li><a href="prekes-zenklai.html">Saugos ženklai</a></li>
+          <li><a href="prekes-automatika.html">Automatika ir įranga</a></li>
+          <li><a href="naudinga-informacija.html">Naudinga informacija</a></li>
+          <li><a href="apie-mus.html">Apie mus</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Kontaktai</h2>
+        <ul class="foot-contact">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+37065399977">+370 653 99977</a><br><a href="tel:+37060763109">+370 607 63109</a></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@geslita.lt">info@geslita.lt</a></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Fabijoniškių g. 4A, Vilnius<br><span class="muted">Ne parduotuvė: prieš atvykdami paskambinkite</span></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span>I-V 9:00-18:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2010-2026 UAB „Geslita“. Visos teisės saugomos.</span>
+      <span><a href="kontaktai.html">Kontaktai</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

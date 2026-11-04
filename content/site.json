@@ -1,0 +1,55 @@
+{
+  "company": "UAB „Geslita“",
+  "tagline": "Priešgaisrinė įranga - priežiūra, prekyba. Darbo saugos priemonės.",
+  "phones": [
+    "+370 653 99977",
+    "+370 607 63109"
+  ],
+  "email": "info@geslita.lt",
+  "address": "Fabijoniškių g. 4A, Vilnius",
+  "address_note": "Šis adresas nėra parduotuvės adresas – „gyvai“ neprekiaujame, prekyba vyksta tik elektroniniu būdu: užsakymus priimame el. paštu info@geslita.lt arba telefonu. Prieš atvažiuodami būtinai paskambinkite +370 653 99977 ir pasiteiraukite, ar esame vietoje.",
+  "hours": "I-V 9:00-18:00",
+  "facebook": "https://www.facebook.com/pages/Geslita-Prie%C5%A1gaisrin%C4%97-%C4%AFranga/145899122128560",
+  "years": 20,
+  "copyright": "© 2010-2026 UAB „Geslita“",
+  "old_site_nav": [
+    {
+      "label": "Apie mus",
+      "url": "https://www.geslita.lt/apie-mus"
+    },
+    {
+      "label": "Paslaugos (kainos)",
+      "url": "https://www.geslita.lt/paslaugos"
+    },
+    {
+      "label": "Priešgaisrinės prekės",
+      "url": "https://www.geslita.lt/"
+    },
+    {
+      "label": "Evakuacijos planai",
+      "url": "https://www.geslita.lt/evakuacijos-planu-schemu-braizymas"
+    },
+    {
+      "label": "Saugos centras",
+      "url": "https://www.geslita.lt/mokymai"
+    },
+    {
+      "label": "Naudinga informacija",
+      "url": "https://www.geslita.lt/naudinga-informacija"
+    },
+    {
+      "label": "Kontaktai",
+      "url": "https://www.geslita.lt/kontaktai"
+    },
+    {
+      "label": "Gaisrinė signalizacija (patikra, remontas), gaisrinės signalizacijos įrengimas",
+      "url": "https://www.geslita.lt/gaisrine-signalizacija-patikra-remontas-gaisrines-signalizacijos-irengimas"
+    }
+  ],
+  "price_disclaimer": "Kainoraščiuose nurodytos mažmeninės kainos. Norėdami sužinoti kainą didesniam kiekiui, skambinkite +370 653 99977, +370 607 63109 arba siųskite užklausimą el. paštu info@geslita.lt.",
+  "geo": {
+    "lat": 54.7239519,
+    "lon": 25.2437435,
+    "source": "Nominatim (OpenStreetMap), Fabijoniškių g. 4A"
+  }
+}

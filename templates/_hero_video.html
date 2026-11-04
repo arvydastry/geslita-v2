@@ -1,0 +1,30 @@
+{% import '_macros.html' as m %}
+{% set v = home.hero_variants.video %}
+{# 1 variantas: dūmų video yra pagrindinis vizualas, jame stovi tikras Geslitos gesintuvas #}
+<section class="hero hv-video" data-parallax-root>
+  <div class="hero-bg">
+    <div class="glow"></div>
+    <div class="plan" data-parallax="0.35"><img src="assets/img/plan-lines.png" alt="" aria-hidden="true" data-mouse="-22"></div>
+  </div>
+  <div class="hv-smoke" aria-hidden="true" data-parallax="-0.1">
+    <video class="hero-anim hero-fade" style="--hi:3" data-smoke data-src-lg="assets/video/dumai-1600.mp4" data-src-sm="assets/video/dumai-720.mp4" poster="assets/img/dumai-poster.webp" muted loop playsinline disablepictureinpicture preload="none" tabindex="-1"></video>
+  </div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="hero-badge hero-anim" style="--hi:0">{{ h.badge }}</p>
+      <h1 class="hero-anim" style="--hi:1">{{ h.title }}</h1>
+      <p class="lead hero-anim" style="--hi:2">{{ h.lead }}</p>
+      <div class="btn-group hero-anim" style="--hi:4">{{ m.btn(h.primary.label, h.primary.href) }}{{ m.btn(h.secondary.label, h.secondary.href, 'btn-line', '') }}</div>
+    </div>
+    <div class="hv-product hero-anim hero-zoom" style="--hi:2" data-parallax="0.08">
+      <div class="ml" data-mouse="14"><img src="{{ v.product.src }}" alt="{{ v.product.alt }}" width="{{ v.product.w }}" height="{{ v.product.h }}" fetchpriority="high"></div>
+      <span class="hv-floor" aria-hidden="true"></span>
+      <div class="hv-years-pos" data-parallax="-0.2">
+        <div class="hv-years hero-anim" style="--hi:5">
+          <span class="num" data-count="{{ site.years }}">{{ site.years }}</span>
+          <span class="txt"><b>metų patirtis</b>priešgaisrinės saugos srityje</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
